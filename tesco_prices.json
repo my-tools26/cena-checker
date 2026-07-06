@@ -1,0 +1,30 @@
+{
+ "updated": "6.7.2026",
+ "note": "Giá từ nakup.itesco.cz (quét qua Chrome). 'CC' = giá với thẻ Clubcard.",
+ "items": [
+  {"name": "Banány volné", "amount": "1 kg", "price": 26.90, "unit": "26,90 Kč/kg", "cc": false, "valid": "–32%, do 7.7."},
+  {"name": "Organic Banány", "amount": "1 kg", "price": 49.90, "unit": "49,90 Kč/kg", "cc": false, "valid": ""},
+  {"name": "Madeta trvanlivé mléko plnotučné 3,5%", "amount": "1 l", "price": 12.90, "unit": "12,90 Kč/l", "cc": false, "valid": "Super cena, do 7.7."},
+  {"name": "Tesco mléko UHT polotučné 1,5%", "amount": "1 l", "price": 21.90, "unit": "21,90 Kč/l", "cc": false, "valid": ""},
+  {"name": "Madeta trvanlivé mléko polotučné 1,5%", "amount": "1 l", "price": 24.90, "unit": "24,90 Kč/l", "cc": false, "valid": ""},
+  {"name": "Pragolaktos mléko odstředěné 0,3%", "amount": "1 l", "price": 18.90, "unit": "18,90 Kč/l", "cc": false, "valid": ""},
+  {"name": "Pragolaktos mléko bez laktózy 3,5%", "amount": "1 l", "price": 33.90, "unit": "33,90 Kč/l", "cc": false, "valid": ""},
+  {"name": "Tesco čerstvá vejce M", "amount": "10 ks", "price": 34.90, "unit": "3,49 Kč/ks", "cc": false, "valid": "–30%, do 7.7."},
+  {"name": "Tesco čerstvá vejce z podestýlky S", "amount": "30 ks", "price": 99.90, "unit": "3,33 Kč/ks", "cc": false, "valid": "–53%, do 7.7."},
+  {"name": "Tesco čerstvá vejce z halového chovu L", "amount": "10 ks", "price": 84.90, "unit": "8,49 Kč/ks", "cc": false, "valid": ""},
+  {"name": "Tesco máslo 82%", "amount": "250 g", "price": 29.90, "unit": "119,60 Kč/kg", "cc": false, "valid": ""},
+  {"name": "Eidam 30% (sýr váha)", "amount": "1 kg", "price": 119.00, "unit": "119 Kč/kg", "cc": false, "valid": "–33%, do 7.7."},
+  {"name": "Zlatý Sýr Eidam 45% (sýr váha)", "amount": "1 kg", "price": 149.00, "unit": "149 Kč/kg", "cc": true, "valid": "do 7.7."},
+  {"name": "Gouda (sýr váha)", "amount": "1 kg", "price": 159.00, "unit": "159 Kč/kg", "cc": true, "valid": "do 7.7."},
+  {"name": "Kuřecí prsní řízky volné", "amount": "1 kg", "price": 119.90, "unit": "119,90 Kč/kg", "cc": false, "valid": "–45%, do 7.7."},
+  {"name": "Tesco kuřecí stehna", "amount": "1 kg", "price": 119.90, "unit": "119,90 Kč/kg", "cc": false, "valid": ""},
+  {"name": "Tesco kuřecí spodní stehna", "amount": "1 kg", "price": 89.90, "unit": "89,90 Kč/kg", "cc": false, "valid": "–18%, do 7.7."},
+  {"name": "Tesco kuřecí horní stehna", "amount": "1 kg", "price": 79.90, "unit": "79,90 Kč/kg", "cc": false, "valid": "–27%, do 7.7."},
+  {"name": "Tesco kuřecí křídla", "amount": "1 kg", "price": 109.90, "unit": "109,90 Kč/kg", "cc": false, "valid": ""},
+  {"name": "Tesco kuřecí játra", "amount": "1 kg", "price": 89.90, "unit": "89,90 Kč/kg", "cc": false, "valid": ""},
+  {"name": "Tesco jasmínová rýže", "amount": "500 g", "price": 21.90, "unit": "43,80 Kč/kg", "cc": true, "valid": "do 14.7."},
+  {"name": "Lagris rýže jasmínová", "amount": "1,5 kg", "price": 79.90, "unit": "53,27 Kč/kg", "cc": true, "valid": "do 20.7."},
+  {"name": "Menu Gold rýže jasmínová", "amount": "2 kg", "price": 109.90, "unit": "54,95 Kč/kg", "cc": true, "valid": "do 14.7."},
+  {"name": "Giana rýže jasmínová", "amount": "5 kg", "price": 289.90, "unit": "57,98 Kč/kg", "cc": false, "valid": ""}
+ ]
+}

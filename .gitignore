@@ -1,0 +1,6 @@
+# TUYET DOI khong dua token Lidl ca nhan len repo!
+lidl_token.json
+
+__pycache__/
+*.pyc
+.venv/

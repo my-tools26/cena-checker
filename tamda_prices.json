@@ -1,0 +1,583 @@
+{
+ "letak": "Leták tuần 08.07.2026 – 14.07.2026",
+ "valid": "8. 7. – 14. 7. 2026",
+ "note": "Giá với thẻ Tamda (cena s kartou). Trích từ tờ rơi chính thức 8.–14.7.2026, đủ 20 trang.",
+ "items": [
+  {
+   "name": "Milka Waffelini oplatka",
+   "amount": "31 g",
+   "price": 9.9
+  },
+  {
+   "name": "Criximo trubičky",
+   "amount": "18 g",
+   "price": 3.3
+  },
+  {
+   "name": "Orion Kaštany tyčinka",
+   "amount": "45 g",
+   "price": 12.5
+  },
+  {
+   "name": "Polaretti vodové zmrzliny",
+   "amount": "400 ml",
+   "price": 29.9
+  },
+  {
+   "name": "Reeses Sticks oplatka",
+   "amount": "42 g",
+   "price": 20.9
+  },
+  {
+   "name": "Kinder Bueno Classic tyčinka",
+   "amount": "43 g",
+   "price": 13.9
+  },
+  {
+   "name": "Candy Can nápoj",
+   "amount": "330 ml",
+   "price": 15.9
+  },
+  {
+   "name": "Ulker Tempo sušenky",
+   "amount": "61 g",
+   "price": 8.5
+  },
+  {
+   "name": "RossoBianco Doubi Nouga tyčinka",
+   "amount": "50 g",
+   "price": 7.9
+  },
+  {
+   "name": "Lolliboni cukrová vata",
+   "amount": "50-60 g",
+   "price": 22.5
+  },
+  {
+   "name": "RossoBianco Coco Minute tyčinka",
+   "amount": "40 g",
+   "price": 7.9
+  },
+  {
+   "name": "Royal Jerky sušené maso",
+   "amount": "12-22 g",
+   "price": 30.9,
+   "note": "od"
+  },
+  {
+   "name": "FIZI Cake Strawberry",
+   "amount": "38 g",
+   "price": 9.5
+  },
+  {
+   "name": "FIZI Cake Brownie",
+   "amount": "40 g",
+   "price": 9.5
+  },
+  {
+   "name": "FIZI Cool Ice Sticks",
+   "amount": "120x40 ml",
+   "price": 525.0
+  },
+  {
+   "name": "FIZI Mystery Boris Toilet box",
+   "amount": "98 g",
+   "price": 159.0
+  },
+  {
+   "name": "Nivea Sun pleťový krém SPF50 Derma Skin",
+   "amount": "40 ml",
+   "price": 205.0
+  },
+  {
+   "name": "Nivea Sun pleťový krém SPF50 Invisible Fluid",
+   "amount": "40 ml",
+   "price": 205.0
+  },
+  {
+   "name": "Nivea Sun tónovací krém-fluid SPF50+ Světlý",
+   "amount": "40 ml",
+   "price": 205.0
+  },
+  {
+   "name": "Nivea Sun tónovací krém-fluid SPF50+ Střední",
+   "amount": "40 ml",
+   "price": 205.0
+  },
+  {
+   "name": "Nivea Sun Sensitive Protect sprej SPF50+",
+   "amount": "200 ml",
+   "price": 234.9
+  },
+  {
+   "name": "Nivea Sun Protect&Bronze sprej SPF20",
+   "amount": "200 ml",
+   "price": 199.9
+  },
+  {
+   "name": "Nivea Sun Protect&Bronze sprej SPF30",
+   "amount": "200 ml",
+   "price": 221.48
+  },
+  {
+   "name": "Nivea Sun Protect&Bronze olej SPF20",
+   "amount": "200 ml",
+   "price": 199.9
+  },
+  {
+   "name": "Nivea Sun Tropical Bronze olej SPF6",
+   "amount": "200 ml",
+   "price": 139.9
+  },
+  {
+   "name": "Nivea Sun Kids Protect&Care sprej SPF30 pumpa",
+   "amount": "270 ml",
+   "price": 254.9
+  },
+  {
+   "name": "Nivea Sun Kids sprej SPF50+ Sensitive",
+   "amount": "200 ml",
+   "price": 239.9
+  },
+  {
+   "name": "Nivea Sun Kids mléko SPF50+ Sensitive",
+   "amount": "200 ml",
+   "price": 239.9
+  },
+  {
+   "name": "Nivea Sun Kids Trigger Spray SPF50+",
+   "amount": "250 ml",
+   "price": 224.9
+  },
+  {
+   "name": "Nivea Sun Kids Sensitive Trigger Spray SPF50",
+   "amount": "250 ml",
+   "price": 224.9
+  },
+  {
+   "name": "Nivea Sun Kids sprej SPF50+ Sensitive",
+   "amount": "270 ml",
+   "price": 239.9
+  },
+  {
+   "name": "Nivea Sun pleťový krém SPF50 Alpin",
+   "amount": "50 ml",
+   "price": 164.9
+  },
+  {
+   "name": "Bamboo Tree kokosová voda (nước dừa)",
+   "amount": "330 ml",
+   "price": 25.9
+  },
+  {
+   "name": "Lotus rýže jasmínová (gạo thơm Thái)",
+   "amount": "1 kg",
+   "price": 51.9
+  },
+  {
+   "name": "Lotus rýže jasmínová (gạo thơm Thái)",
+   "amount": "4,54 kg",
+   "price": 230.0
+  },
+  {
+   "name": "Lotus rýže jasmínová (gạo thơm Thái)",
+   "amount": "9,07 kg",
+   "price": 450.0
+  },
+  {
+   "name": "Lotus rýže jasmínová (gạo thơm Thái)",
+   "amount": "18,18 kg",
+   "price": 890.0
+  },
+  {
+   "name": "Nong Shim nudle (mì Hàn Shin/Kimchi/Neoguri)",
+   "amount": "112-125 g",
+   "price": 19.9
+  },
+  {
+   "name": "Biolit elektrický odpařovač + náplň",
+   "amount": "27 ml, 45 nocí",
+   "price": 164.9
+  },
+  {
+   "name": "Biolit elektrický odpařovač Eucalyptus",
+   "amount": "30 N",
+   "price": 144.9
+  },
+  {
+   "name": "Biolit tekutá náplň Eucalyptus",
+   "amount": "21 ml, 30 N",
+   "price": 119.9
+  },
+  {
+   "name": "Biolit tekutá náplň do odpařovače",
+   "amount": "27 ml, 45 nocí",
+   "price": 139.9
+  },
+  {
+   "name": "Raid Essentials/Family tekutá náplň",
+   "amount": "21-27 ml",
+   "price": 179.9
+  },
+  {
+   "name": "Raid elektrický odpařovač s náplní Family",
+   "amount": "21 ml",
+   "price": 214.9
+  },
+  {
+   "name": "Raid Essentials elektrický odpařovač",
+   "amount": "27 ml",
+   "price": 214.9
+  },
+  {
+   "name": "Raid elektrický odpařovač + náplň",
+   "amount": "30 nocí",
+   "price": 134.9
+  },
+  {
+   "name": "Bros spray proti hmyzu Vosy+Sršně",
+   "amount": "300 ml",
+   "price": 79.9
+  },
+  {
+   "name": "Bros spray Létající+Lezoucí hmyz",
+   "amount": "400 ml",
+   "price": 64.9
+  },
+  {
+   "name": "Bros spray Lezoucí hmyz",
+   "amount": "400 ml",
+   "price": 66.9
+  },
+  {
+   "name": "Bros spray Mouchy+Komáry",
+   "amount": "400 ml",
+   "price": 62.9
+  },
+  {
+   "name": "Bros sprej Vosy a Sršně",
+   "amount": "300 ml",
+   "price": 67.9
+  },
+  {
+   "name": "Bros Zelená Síla Paralyzer sprej",
+   "amount": "300 ml",
+   "price": 65.9
+  },
+  {
+   "name": "Bros Zelená Síla Moucha+Komár",
+   "amount": "300 ml",
+   "price": 64.9
+  },
+  {
+   "name": "Bros Zelená Síla Mravenci+Šváby",
+   "amount": "300 ml",
+   "price": 68.9
+  },
+  {
+   "name": "Bros Zelená Síla Potravinový Mol",
+   "amount": "500 ml",
+   "price": 68.9
+  },
+  {
+   "name": "XP Boost funkční nápoj",
+   "amount": "0,25 l",
+   "price": 17.9
+  },
+  {
+   "name": "Lipton Ice Tea",
+   "amount": "0,5 l",
+   "price": 17.5
+  },
+  {
+   "name": "Ustronianka minerální voda",
+   "amount": "1,5 l",
+   "price": 7.2
+  },
+  {
+   "name": "Kitl Syrob sirô",
+   "amount": "0,5 l",
+   "price": 109.0
+  },
+  {
+   "name": "Vittel voda",
+   "amount": "0,75 l",
+   "price": 18.9
+  },
+  {
+   "name": "NON STOP energetický nápoj",
+   "amount": "0,5 l",
+   "price": 14.9
+  },
+  {
+   "name": "San Benedetto voda",
+   "amount": "1,5 l",
+   "price": 19.9
+  },
+  {
+   "name": "Loprais 69 energetický nápoj",
+   "amount": "0,5 l",
+   "price": 16.9
+  },
+  {
+   "name": "Dr Witt nápoj",
+   "amount": "0,75 l",
+   "price": 14.5
+  },
+  {
+   "name": "Maxi Vita bylinný elixír",
+   "amount": "200 ml",
+   "price": 45.9
+  },
+  {
+   "name": "Big Shock energetický nápoj",
+   "amount": "0,5 l",
+   "price": 19.9
+  },
+  {
+   "name": "Pfanner iceTea",
+   "amount": "0,33 l",
+   "price": 11.9
+  },
+  {
+   "name": "Arizona ice tea",
+   "amount": "0,5 l",
+   "price": 27.9
+  },
+  {
+   "name": "Rajec 321 voda",
+   "amount": "0,75 l",
+   "price": 18.5
+  },
+  {
+   "name": "Koli limonáda",
+   "amount": "2 l",
+   "price": 20.9
+  },
+  {
+   "name": "FuzeTea citron",
+   "amount": "0,5 l",
+   "price": 19.9
+  },
+  {
+   "name": "Coca Cola / Fanta / Sprite / Kinley (CC)",
+   "amount": "1,5 l",
+   "price": 28.9
+  },
+  {
+   "name": "Hell energetický nápoj",
+   "amount": "0,5 l",
+   "price": 16.9
+  },
+  {
+   "name": "Kofola",
+   "amount": "0,5 l",
+   "price": 16.9
+  },
+  {
+   "name": "Pragers soda yuzu lime",
+   "amount": "0,33 l",
+   "price": 27.9
+  },
+  {
+   "name": "Le Coq nealkoholický koktejl",
+   "amount": "0,33 l",
+   "price": 29.9
+  },
+  {
+   "name": "Pivo Staropramen 10",
+   "amount": "0,5 l",
+   "price": 14.9
+  },
+  {
+   "name": "Pivo Krušovice 12",
+   "amount": "1,5 l",
+   "price": 36.9
+  },
+  {
+   "name": "Pivo Svijanská desítka plech",
+   "amount": "0,5 l",
+   "price": 15.9
+  },
+  {
+   "name": "Birgo nealko citron limetka plech",
+   "amount": "0,5 l",
+   "price": 13.9
+  },
+  {
+   "name": "Pivo Pilsner Urquell plech",
+   "amount": "0,33 l",
+   "price": 28.9
+  },
+  {
+   "name": "Pivo Radegast Rázná 10",
+   "amount": "0,5 l",
+   "price": 19.5
+  },
+  {
+   "name": "Pivo Gambrinus 12 plech",
+   "amount": "0,5 l",
+   "price": 20.5
+  },
+  {
+   "name": "Pivo Gambrinus 10 sklo",
+   "amount": "20x0,5 l",
+   "price": 278.0
+  },
+  {
+   "name": "Pivo Kozel světlý sklo",
+   "amount": "20x0,5 l",
+   "price": 278.0
+  },
+  {
+   "name": "Pivo Kozel 11 plech",
+   "amount": "0,5 l",
+   "price": 20.9
+  },
+  {
+   "name": "Birell nealko",
+   "amount": "0,5 l",
+   "price": 20.5
+  },
+  {
+   "name": "Pivo Kozel 11 černý plech",
+   "amount": "0,5 l",
+   "price": 20.5
+  },
+  {
+   "name": "Pivo Kozel Nealko plech",
+   "amount": "0,5 l",
+   "price": 18.5
+  },
+  {
+   "name": "Frisco plech",
+   "amount": "0,33 l",
+   "price": 20.9
+  },
+  {
+   "name": "Pivo Proud Ležák plech",
+   "amount": "0,5 l",
+   "price": 26.9
+  },
+  {
+   "name": "Frisco sklo",
+   "amount": "0,33 l",
+   "price": 19.9
+  },
+  {
+   "name": "Víno Cielo",
+   "amount": "0,75 l",
+   "price": 76.9
+  },
+  {
+   "name": "Víno Zámecké box",
+   "amount": "1 l",
+   "price": 30.9
+  },
+  {
+   "name": "Riunite prosecco",
+   "amount": "0,75 l",
+   "price": 64.9
+  },
+  {
+   "name": "Chateau Valtice víno",
+   "amount": "0,75 l",
+   "price": 73.9
+  },
+  {
+   "name": "Vinium Exclusive víno",
+   "amount": "0,75 l",
+   "price": 91.9
+  },
+  {
+   "name": "Tarapaca víno",
+   "amount": "0,75 l",
+   "price": 105.0
+  },
+  {
+   "name": "Palladio prosecco Treviso",
+   "amount": "0,75 l",
+   "price": 99.9
+  },
+  {
+   "name": "Mionetto prosecco",
+   "amount": "0,75 l",
+   "price": 129.0
+  },
+  {
+   "name": "Riunite Treviso prosecco Frizzante",
+   "amount": "0,75 l",
+   "price": 99.0
+  },
+  {
+   "name": "Veselá kráva Sýr a Křup rodinné balení",
+   "amount": "140 g",
+   "price": 46.9
+  },
+  {
+   "name": "Provázky od Pepína slané (phô mai sợi)",
+   "amount": "500 g",
+   "price": 164.9
+  },
+  {
+   "name": "President tavený sýr",
+   "amount": "150 g",
+   "price": 21.5
+  },
+  {
+   "name": "Ehrmann High Protein Drink",
+   "amount": "250 ml",
+   "price": 24.9
+  },
+  {
+   "name": "Valašský jogurt bílý",
+   "amount": "150 g",
+   "price": 6.3
+  },
+  {
+   "name": "Veselá kráva Sýr a Křup",
+   "amount": "35 g",
+   "price": 12.9
+  },
+  {
+   "name": "Kostelecký buřtík (xúc xích)",
+   "amount": "600 g",
+   "price": 59.9
+  },
+  {
+   "name": "Chodura šunkový salám",
+   "amount": "100 g",
+   "price": 15.9
+  },
+  {
+   "name": "Le & Co anglická slanina (ba rọi xông khói)",
+   "amount": "200 g",
+   "price": 39.9
+  },
+  {
+   "name": "Becherovka Lemond 20%",
+   "amount": "0,5 l",
+   "price": 155.0
+  },
+  {
+   "name": "Nordic Ice vodka 37,5%",
+   "amount": "0,5 l",
+   "price": 159.0
+  },
+  {
+   "name": "Božkov vodka 37,5%",
+   "amount": "1 l",
+   "price": 299.9
+  },
+  {
+   "name": "Beefeater Pink Strawberry Gin&Tonic plech 4,9%",
+   "amount": "0,25 l",
+   "price": 37.9
+  },
+  {
+   "name": "Aperol 11%",
+   "amount": "0,7 l",
+   "price": 309.0
+  }
+ ]
+}
