@@ -446,27 +446,49 @@ def akce_html():
 
 
 # Bang ma tran gia trang chinh: (nhan VN, tu khoa kupi, don vi chuan)
-STAPLES = [
+STAPLES_ALL = [
     ("🥚 Trứng", "vejce", "ks"),
     ("🥛 Sữa hộp", "trvanlive mleko", "l"),
+    ("🥛 Sữa tươi", "cerstve mleko", "l"),
     ("🍌 Chuối", "banany", "kg"),
+    ("🍎 Táo", "jablka", "kg"),
+    ("🍊 Cam", "pomerance", "kg"),
+    ("🍉 Dưa hấu", "meloun", "kg"),
+    ("🍓 Dâu tây", "jahody", "kg"),
     ("🍗 Ức gà", "kureci prsa", "kg"),
+    ("🍗 Đùi gà", "kureci stehna", "kg"),
     ("🥩 Thịt heo", "veprove", "kg"),
+    ("🥩 Thịt bò", "hovezi", "kg"),
+    ("🌭 Xúc xích", "parky", "kg"),
+    ("🥓 Giăm bông", "sunka", "kg"),
+    ("🐟 Cá hồi", "losos", "kg"),
     ("🍚 Gạo thơm", "ryze jasminova", "kg"),
+    ("🍝 Mì ống", "testoviny", "kg"),
     ("🧈 Bơ", "maslo", "kg"),
     ("🧀 Phô mai Eidam", "eidam", "kg"),
+    ("🥛 Sữa chua", "jogurt", "kg"),
+    ("🥔 Khoai tây", "brambory", "kg"),
+    ("🍅 Cà chua", "rajcata", "kg"),
+    ("🥒 Dưa chuột", "okurky", "kg"),
+    ("🫑 Ớt chuông", "paprika", "kg"),
     ("🍺 Bia", "pivo", "l"),
+    ("🧃 Nước ép", "dzus", "l"),
+    ("💧 Nước khoáng", "mineralni voda", "l"),
+    ("☕ Cà phê", "kava", "kg"),
     ("🧻 Giấy vệ sinh", "toaletni papir", "ks"),
+    ("🧺 Bột giặt", "praci prasek", "kg"),
 ]
 _matrix_cache = {"t": 0, "rows": []}
 
 
 def build_matrix():
     import time as _t
+    import random as _rand
     if _t.time() - _matrix_cache["t"] < 3 * 3600 and _matrix_cache["rows"]:
         return _matrix_cache["rows"]
+    pick = _rand.sample(STAPLES_ALL, min(10, len(STAPLES_ALL)))
     rows = []
-    for label, qcz, unit in STAPLES:
+    for label, qcz, unit in pick:
         best = {}  # shop -> (gia/don vi, gia goi)
 
         def consider(shop, price, unitstr="", amount=""):
@@ -918,75 +940,42 @@ def search_html(query):
         body += "<p>Không tìm thấy gì. Thử từ khác hoặc tên tiếng Séc?</p>"
         return shell(body, "")
 
-    from collections import Counter
-    counts = Counter(e["shop"] for e in entries)
-    chips = ("<button class='chip on' data-f='' data-t=''>Tất cả</button>"
-             "<button class='chip' data-f='' data-t='retail'>Bán lẻ</button>"
-             "<button class='chip' data-f='' data-t='wholesale'>Bán buôn</button>")
-    for shop, n in counts.most_common(10):
-        chips += f"<button class='chip' data-f=\"{H.escape(shop)}\" data-t=''>{H.escape(shop)} ({n})</button>"
-    body += f"<div class='chipbar'>{chips}</div>"
-
     if lhits:
         body += lidl_coupon_table(lhits)
 
-    # --- Xep hang hop nhat theo gia don vi ---
-    groups = {}
+    # --- Gom theo ten mat hang, moi mat hang lay 4 sieu thi re nhat ---
+    by_name = {}
     for e in entries:
-        if e["per"]:
-            groups.setdefault(e["unit"], []).append(e)
-    for unit in ("ks", "kg", "l"):
-        if unit not in groups:
-            continue
-        rows_html = ""
-        es = sorted(groups[unit], key=lambda x: x["per"])
-        for i, e in enumerate(es[:15], 1):
-            tags = "".join(
-                f" <span class='tagb' style='background:{'#DDE6F2' if 'buôn' in t else '#E6F1FB'};"
-                f"color:{'#003B7E' if 'buôn' in t else '#0C447C'}'>{H.escape(t)}</span>"
-                for t in e["tags"])
-            sub = f"gói {e['price']:.2f} Kč"
-            if e["pct"]:
-                sub += f" · {H.escape(e['pct'])}"
-            if e["valid"]:
-                sub += f" · {H.escape(e['valid'])}"
-            rows_html += (f"<div class='rrow{' win' if i == 1 else ''}' "
-                          f"data-shop=\"{H.escape(e['shop'])}\" data-typ='{e['typ']}'>"
-                          f"<span class='rk'>{'🥇' if i == 1 else i}</span>"
-                          f"<div class='inf'><p class='pn'>{icon_for(e['name'])}{H.escape(e['name'])} "
-                          f"<span class='a'>{H.escape(e['amount'])}</span>{tags}</p>"
-                          f"<p class='pm'>{sub}</p></div>"
-                          f"{shop_badge(e['shop'])}"
-                          f"<span class='per'>{e['per']:.2f} Kč/{UNIT_SHORT[unit]}</span></div>")
-        body += (f"<h3>🏆 Rẻ nhất trên 1 {UNIT_SHORT[unit]} — mọi nguồn gộp chung</h3>"
-                 f"<div class='rlist'>{rows_html}</div>")
+        key = e["name"]
+        if key not in by_name:
+            by_name[key] = {"name": e["name"], "amount": e["amount"], "shops": []}
+        by_name[key]["shops"].append(e)
 
-    others = [e for e in entries if not e["per"]]
-    if others:
-        cards = "".join(
-            deal_card(e["name"], e["amount"], e["shop"], e["price"], e["pct"], "", e["valid"])
-            for e in others[:12])
-        body += f"<h3>Kết quả khác</h3><div class='cards'>{cards}</div>"
-
-    if products:
-        body += "<details><summary style='cursor:pointer;font-size:1.05em;margin:14px 0;color:#1a7a3a'><b>📄 Chi tiết từng sản phẩm (mọi siêu thị)</b></summary>"
-        for p in products[:8]:
-            body += product_table(p)
-        body += "</details>"
-
-    body += """<script>
-document.querySelectorAll('.chip').forEach(function(ch){
-  ch.onclick=function(){
-    document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')});
-    ch.classList.add('on');
-    var sF=ch.dataset.f, tF=ch.dataset.t;
-    document.querySelectorAll('.rrow,.card').forEach(function(c){
-      var ok=(!sF||c.dataset.shop===sF)&&(!tF||c.dataset.typ===tF);
-      c.style.display=ok?'':'none';
-    });
-  };
-});
-</script>"""
+    head_cols = ("<th style='background:#23401f;color:#9fdc8f'>✅ Rẻ nhất</th>"
+                 "<th>#2</th><th>#3</th><th>#4</th>")
+    out = (f"<h2>🏆 So sánh giá — {len(by_name)} mặt hàng, mọi nguồn gộp chung</h2>"
+           f"<table class='mx'><tr><th style='width:26%'>Mặt hàng</th>{head_cols}</tr>")
+    for key, item in by_name.items():
+        ranked = sorted(item["shops"], key=lambda e: e["per"] if e["per"] else 9999999)[:4]
+        amount = f" <span class='a'>{H.escape(item['amount'])}</span>" if item["amount"] else ""
+        out += f"<tr><td>{icon_for(item['name'])}<b>{H.escape(item['name'])}</b>{amount}</td>"
+        for i in range(4):
+            if i < len(ranked):
+                e = ranked[i]
+                tags = "".join(
+                    f" <span class='tagb' style='background:#1a3a2a;color:#9fdc8f'>{H.escape(t)}</span>"
+                    for t in e["tags"])
+                per_s = f"<span class='a'>({e['per']:.2f} Kč/{UNIT_SHORT[e['unit']]})</span>" if e["per"] else ""
+                pct_s = f" <span class='pctb'>{H.escape(e['pct'])}</span>" if e["pct"] else ""
+                cls = " class='w'" if i == 0 else ""
+                out += (f"<td{cls}>{shop_badge(e['shop'])}"
+                        f"<span class='mxp'>{e['price']:.2f} Kč{pct_s}</span>"
+                        f"{per_s}{tags}</td>")
+            else:
+                out += "<td class='a'>—</td>"
+        out += "</tr>"
+    out += "</table>"
+    body += out
     return shell(body, "")
 
 
