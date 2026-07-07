@@ -223,7 +223,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/hoaqua", "Rau quả"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v2.2 · 07.07.2026"
+APP_VERSION = "v2.3 · 08.07.2026"
 
 
 def shell(body, active="/"):
@@ -1035,6 +1035,20 @@ def ean_lookup(code):
     return None
 
 
+def ean_name_variants(name):
+    """Cac bien the tu khoa tu ten san pham EAN: bo khoi luong/dung tich, rut ngan dan."""
+    n = _re.sub(r"\b\d+[,.]?\d*\s*(g|kg|ml|l|ks|x)\b\.?", " ", name, flags=_re.I)
+    n = _re.sub(r"[()%/]", " ", n)
+    words = n.split()
+    out = []
+    for k in (len(words), 3, 2, 1):
+        if 0 < k <= len(words):
+            v = " ".join(words[:k])
+            if v and v not in out:
+                out.append(v)
+    return out
+
+
 def search_html(query):
     raw_query = query.strip()
     ean_name = None
@@ -1049,6 +1063,25 @@ def search_html(query):
     jhits = shop_matches("jip", q)
     tesco_data, tesco_hits = tesco_matches(q)
     lhits = lidl_coupon_matches(q)
+
+    # Ten EAN thuong qua chi tiet (kem 75g, 500ml...) -> khong ra gia.
+    # Thu rut gon dan cho den khi co ket qua.
+    if ean_name and not (products or thits or mhits or jhits or tesco_hits or lhits):
+        for variant in ean_name_variants(ean_name)[1:]:
+            q2 = cena.strip_accents(variant.lower())
+            try:
+                soup = cena.fetch(f"{cena.BASE}/hledej?f={urllib.parse.quote(q2)}")
+                products = cena.parse_groups(soup)
+            except Exception:
+                products = []
+            tdata, thits = tamda_matches(q2)
+            mhits = shop_matches("makro", q2)
+            jhits = shop_matches("jip", q2)
+            tesco_data, tesco_hits = tesco_matches(q2)
+            lhits = lidl_coupon_matches(q2)
+            if products or thits or mhits or jhits or tesco_hits or lhits:
+                q = q2
+                break
 
     # --- Gom MOI nguon vao 1 danh sach hop nhat ---
     entries = []
