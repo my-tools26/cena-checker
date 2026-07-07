@@ -223,7 +223,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/hoaqua", "Rau quả"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v1.6 · 07.07.2026"
+APP_VERSION = "v1.7 · 07.07.2026"
 
 
 def shell(body, active="/"):
@@ -373,7 +373,8 @@ def home_suggestions_html():
             seen.add(p["name"])
             prods.append(p)
     return product_matrix(prods[:15], "🆕 TỜ RƠI MỚI — deal sắp bắt đầu",
-                          note="Khuyến mãi của tờ rơi tuần mới, chưa/vừa bắt đầu — lên kế hoạch đi chợ trước.")
+                          note="Khuyến mãi của tờ rơi tuần mới, chưa/vừa bắt đầu — lên kế hoạch đi chợ trước.",
+                          show_exp=False)
 
 
 import re as _re
@@ -447,7 +448,8 @@ def akce_html():
             if p["name"] not in seen3:
                 seen3.add(p["name"])
                 prods.append(p)
-        body += product_matrix(prods[:30], f"🆕 TỜ RƠI MỚI — sắp bắt đầu ({len(prods)} mặt hàng)")
+        body += product_matrix(prods[:30], f"🆕 TỜ RƠI MỚI — sắp bắt đầu ({len(prods)} mặt hàng)",
+                               show_exp=False)
     if not (active or expiring or fresh):
         body += "<p>Không tải được dữ liệu — thử lại sau vài phút.</p>"
     return shell(body, "/akce")
@@ -489,27 +491,45 @@ STAPLES_ALL = [
 _matrix_cache = {"t": 0, "rows": []}
 
 
+def deal_expiring(valid):
+    """True neu deal het han hom nay/ngay mai (theo chuoi 'valid' cua kupi)."""
+    import datetime
+    v_plain = cena.strip_accents(valid or "")
+    if "dnes konci" in v_plain or "zitra konci" in v_plain:
+        return True
+    dates = _re.findall(r"(\d{1,2})\.\s*(\d{1,2})\.", valid or "")
+    if not dates:
+        return False
+    today = datetime.date.today()
+    try:
+        end = datetime.date(today.year, int(dates[-1][1]), int(dates[-1][0]))
+    except ValueError:
+        return False
+    return today <= end <= today + datetime.timedelta(days=1)
+
+
 def build_matrix():
     import time as _t
     if _t.time() - _matrix_cache["t"] < 600 and _matrix_cache["rows"]:
         return _matrix_cache["rows"]
     rows = []
     for label, qcz, unit in STAPLES_ALL:
-        best = {}  # shop -> (gia/don vi, gia goi)
+        best = {}  # shop -> (gia/don vi, gia goi, so luong, sap het han)
 
-        def consider(shop, price, unitstr="", amount=""):
+        def consider(shop, price, unitstr="", amount="", exp=False):
             pu = parse_unit_price(unitstr) if unitstr else None
             if pu is None:
                 pu = parse_amount_price(amount, price)
             if pu and pu[1] == unit:
                 if shop not in best or pu[0] < best[shop][0]:
-                    best[shop] = (pu[0], price, amount or "")
+                    best[shop] = (pu[0], price, amount or "", exp)
 
         try:
             soup = cena.fetch(f"{cena.BASE}/hledej?f={urllib.parse.quote(qcz)}")
             for p in cena.parse_groups(soup):
                 for d in p["deals"]:
-                    consider(d["shop"], d["price"], d["unit"], p["amount"])
+                    consider(d["shop"], d["price"], d["unit"], p["amount"],
+                             exp=deal_expiring(d.get("valid")))
         except Exception:
             pass
         tdata, thits = tamda_matches(qcz)
@@ -544,10 +564,11 @@ def matrix_html():
                 f"<span class='a'> /{UNIT_SHORT[unit]}</span></td>")
         for i in range(4):
             if i < len(ranked):
-                shop, (per, price, amt) = ranked[i]
+                shop, (per, price, amt, exp) = ranked[i]
                 cls = " class='w'" if i == 0 else ""
                 amt_s = f" {H.escape(amt)}" if amt else ""
-                out += (f"<td{cls}>{shop_badge(shop)}"
+                exp_s = " <span class='expb'>⏰</span>" if exp else ""
+                out += (f"<td{cls}>{shop_badge(shop)}{exp_s}"
                         f"<span class='mxp'>{price:.2f} Kč{amt_s}</span>"
                         f"<span class='a'>({per:.2f} Kč/{UNIT_SHORT[unit]})</span></td>")
             else:
@@ -557,7 +578,7 @@ def matrix_html():
     return out
 
 
-def product_matrix(products, heading, max_cols=4, note=""):
+def product_matrix(products, heading, max_cols=4, note="", show_exp=True):
     """Bang ma tran: hang = mat hang, cot = cac sieu thi re nhat (gia GOI, kem gia/don vi nho)."""
     if not products:
         return ""
@@ -581,7 +602,7 @@ def product_matrix(products, heading, max_cols=4, note=""):
         for i in range(max_cols):
             if i < len(deals):
                 d = deals[i]
-                exp = " <span class='expb'>⏰</span>" if d.get("_exp") else ""
+                exp = " <span class='expb'>⏰</span>" if show_exp and d.get("_exp") else ""
                 unit_small = f"<span class='a'>{H.escape(d['unit'])}</span>" if d["unit"] else ""
                 pct = f" <span class='pctb'>{H.escape(d['pct'])}</span>" if d["pct"] else ""
                 out += (f"<td{' class=\"w\"' if i == 0 else ''}>{shop_badge(d['shop'])}{exp}"
