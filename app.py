@@ -620,27 +620,98 @@ def home_html():
     return shell(body, "/")
 
 
+_BB_STOP = {"a", "s", "v", "z", "na", "do", "od", "po", "the", "cca", "kus", "ks",
+            "kg", "g", "l", "ml", "balení", "baleni"}
+
+
+def _bb_tokens(name):
+    """Tu khoa chinh cua ten hang (bo dau, bo so luong/don vi) de ghep hang giua cac kho."""
+    n = cena.strip_accents(name.lower())
+    n = _re.sub(r"[\d]+[,.]?\d*\s*(kg|g|l|ml|ks|%)?", " ", n)
+    return {w for w in _re.split(r"[^a-z]+", n) if len(w) >= 3 and w not in _BB_STOP}
+
+
+def _bb_match(t1, t2):
+    """2 mat hang coi la trung khi chung >=2 tu khoa (hoac tap nho nam tron trong tap lon)."""
+    if not t1 or not t2:
+        return False
+    common = t1 & t2
+    small = min(t1, t2, key=len)
+    return len(common) >= 2 or (len(common) >= 1 and common == small)
+
+
 def banbuon_html():
     body = ("<h1>📦 Bán buôn — Tamda / Makro / JIP</h1>"
-            "<p class='muted'>Giá gói · (giá/đơn vị) ghi nhỏ. Tamda = giá với thẻ, cập nhật theo tờ rơi tuần.</p>")
+            "<p class='muted'>Giá gói · (giá/đơn vị) ghi nhỏ · ô xanh ✅ = kho rẻ nhất khi có "
+            "cùng mặt hàng ở nhiều kho. Tamda = giá với thẻ, theo tờ rơi tuần.</p>")
+
+    # Gom deal 3 kho ve 1 danh sach: moi item = {name, amount, offers{col: deal}}
+    items = []
     data = load_tamda()
     if data:
-        rows = ""
         for it in data["items"]:
-            pu = parse_amount_price(it["amount"], it["price"])
-            per_s = f"<span class='a'>({pu[0]:.2f} Kč/{UNIT_SHORT[pu[1]]})</span>" if pu else ""
-            rows += (f"<tr><td>{icon_for(it['name'])}<b>{H.escape(it['name'])}</b> "
-                     f"<span class='a'>{H.escape(it['amount'])}</span></td>"
-                     f"<td>{shop_badge('Tamda Foods')}<span class='mxp'>{it['price']:.2f} Kč</span>{per_s}</td></tr>")
-        body += (f"<h2 style='background:#e8681a'>🅣 TAMDA FOODS ({len(data['items'])} mặt hàng · {H.escape(data['valid'])})</h2>"
-                 f"<table class='mx'><tr><th style='width:55%'>Mặt hàng</th><th>Giá s kartou</th></tr>{rows}</table>")
-    ps = shop_products("makro")
-    if ps:
-        body += product_matrix(ps, "Ⓜ MAKRO — deal nổi bật", max_cols=1,
-                               note="Bán sỉ, cần thẻ khách hàng Makro.")
-    ps = shop_products("jip")
-    if ps:
-        body += product_matrix(ps, "🄹 JIP Cash & Carry — deal nổi bật", max_cols=1)
+            items.append({"name": it["name"], "amount": it["amount"],
+                          "toks": _bb_tokens(it["name"]),
+                          "offers": {"tamda": {"shop": "Tamda Foods", "price": it["price"],
+                                               "pct": "", "unit": "", "amount": it["amount"]}}})
+    for col in ("makro", "jip"):
+        for p in shop_products(col):
+            d = min(p["deals"], key=lambda d: d["price"])
+            toks = _bb_tokens(p["name"])
+            offer = {"shop": d["shop"], "price": d["price"], "pct": d["pct"],
+                     "unit": d["unit"], "amount": p["amount"], "_exp": d.get("_exp")}
+            hit = next((x for x in items if col not in x["offers"] and _bb_match(x["toks"], toks)), None)
+            if hit:
+                hit["offers"][col] = offer
+            else:
+                items.append({"name": p["name"], "amount": p["amount"],
+                              "toks": toks, "offers": {col: offer}})
+
+    if not items:
+        return shell(body + "<p class='muted'>Chưa có dữ liệu bán buôn.</p>", "/banbuon")
+
+    # Hang co o >=2 kho len dau, sau do theo % giam gia
+    def sort_key(x):
+        pcts = [int(m.group(1)) for o in x["offers"].values()
+                for m in [_re.search(r"(\d+)", o["pct"] or "")] if m]
+        return (-len(x["offers"]), -(max(pcts) if pcts else 0))
+
+    items.sort(key=sort_key)
+    ncmp = sum(1 for x in items if len(x["offers"]) >= 2)
+    valid_s = f" · Tamda: {H.escape(data['valid'])}" if data else ""
+    body += (f"<h2>📦 SO SÁNH 3 KHO — {len(items)} mặt hàng, {ncmp} có ở ≥2 kho{valid_s}</h2>"
+             "<table class='mx'><tr><th style='width:30%'>Mặt hàng</th>"
+             "<th style='background:#3a2a15;color:#ffb27a'>🅣 Tamda</th>"
+             "<th style='background:#1c2940;color:#9fc0ee'>Ⓜ Makro</th>"
+             "<th style='background:#3a1c1c;color:#f0a0a0'>🄹 JIP</th></tr>")
+    for x in items:
+        amount = f" <span class='a'>{H.escape(x['amount'])}</span>" if x["amount"] else ""
+        body += f"<tr><td>{icon_for(x['name'])}<b>{H.escape(x['name'])}</b>{amount}</td>"
+        # Chon kho re nhat: uu tien so theo gia/don vi (khi cung don vi), khong thi so gia goi
+        best = None
+        if len(x["offers"]) >= 2:
+            pus = {c: parse_amount_price(o["amount"], o["price"]) for c, o in x["offers"].items()}
+            units = {pu[1] for pu in pus.values() if pu}
+            if len(units) == 1 and all(pus.values()):
+                best = min(pus, key=lambda c: pus[c][0])
+            else:
+                best = min(x["offers"], key=lambda c: x["offers"][c]["price"])
+        for col in ("tamda", "makro", "jip"):
+            o = x["offers"].get(col)
+            if not o:
+                body += "<td class='a'>—</td>"
+                continue
+            pu = parse_amount_price(o["amount"], o["price"])
+            per_s = (f"<span class='a'>({pu[0]:.2f} Kč/{UNIT_SHORT[pu[1]]})</span>" if pu
+                     else (f"<span class='a'>{H.escape(o['unit'])}</span>" if o["unit"] else ""))
+            pct = f" <span class='pctb'>{H.escape(o['pct'])}</span>" if o["pct"] else ""
+            exp = " <span class='expb'>⏰</span>" if o.get("_exp") else ""
+            win = " class='w'" if col == best else ""
+            tick = "✅ " if col == best else ""
+            body += (f"<td{win}>{exp}<span class='mxp'>{tick}{o['price']:.2f} Kč{pct}</span>{per_s}</td>")
+        body += "</tr>"
+    body += ("</table><p class='muted' style='margin-top:-4px'>"
+             "Makro/JIP: deal từ kupi.cz · ghép mặt hàng giữa các kho là tự động, có thể lệch quy cách gói.</p>")
     return shell(body, "/banbuon")
 
 
@@ -902,21 +973,34 @@ UNIT_SHORT = {"ks": "quả/cái", "kg": "kg", "l": "lít"}
 
 
 def ean_lookup(code):
-    """Tra ma vach EAN qua Open Food Facts -> ten san pham (tieng Sec hoac chung)."""
+    """Tra ma vach EAN: Open Food Facts truoc, UPCitemdb sau."""
     import requests as _req
+    # 1) Open Food Facts (khong gioi han)
     try:
         r = _req.get(f"https://world.openfoodfacts.org/api/v2/product/{code}.json",
                      headers={"User-Agent": "CenaChecker/1.0"}, timeout=10)
-        if r.status_code != 200:
-            return None
-        data = r.json()
-        if data.get("status") != 1:
-            return None
-        p = data.get("product", {})
-        return (p.get("product_name_cs") or p.get("product_name_cz")
-                or p.get("product_name") or p.get("generic_name") or None)
+        if r.status_code == 200:
+            data = r.json()
+            if data.get("status") == 1:
+                p = data.get("product", {})
+                name = (p.get("product_name_cs") or p.get("product_name_cz")
+                        or p.get("product_name") or p.get("generic_name"))
+                if name:
+                    return name
     except Exception:
-        return None
+        pass
+    # 2) UPCitemdb trial (100 req/ngay, khong can key)
+    try:
+        r = _req.get(f"https://api.upcitemdb.com/prod/trial/lookup?upc={code}",
+                     headers={"Accept": "application/json", "User-Agent": "CenaChecker/1.0"}, timeout=10)
+        if r.status_code == 200:
+            data = r.json()
+            items = data.get("items", [])
+            if items:
+                return items[0].get("title") or items[0].get("brand")
+    except Exception:
+        pass
+    return None
 
 
 def search_html(query):
