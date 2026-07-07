@@ -223,6 +223,9 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/hoaqua", "Rau quả"), ("/banbuon", "Bán buôn")]
 
 
+APP_VERSION = "v1.4 · 07.07.2026"
+
+
 def shell(body, active="/"):
     tabs = "".join(
         f'<a href="{href}"{" class=\"on\"" if href == active else ""}>{label}</a>'
@@ -236,7 +239,9 @@ def shell(body, active="/"):
     return (PAGE_TOP
             + f'<div class="appbar"><a class="logo" href="/">🛒 Cena Checker</a>'
             f'<nav class="navtabs">{tabs}</nav>{searchbar}</div>'
-            + body + "</body></html>")
+            + body
+            + f"<p style='text-align:center;color:#5a5a54;font-size:.8em;margin:30px 0 10px'>"
+              f"Cena Checker {APP_VERSION}</p></body></html>")
 
 # Mau nhan cho tung chuoi (nen, chu)
 SHOP_COLOR = [
