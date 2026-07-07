@@ -223,7 +223,41 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/hoaqua", "Rau quả"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v2.3 · 08.07.2026"
+APP_VERSION = "v2.4 · 08.07.2026"
+
+# Quet ma vach bang camera (html5-qrcode, tai khi bam nut)
+SCAN_JS = """
+<script>
+(function(){
+  var btn=document.getElementById('scanbtn'), box=document.getElementById('scanbox'),
+      closeBtn=document.getElementById('scanclose'), scanner=null;
+  if(!btn) return;
+  function stop(){ if(scanner){ scanner.stop().catch(function(){}); scanner=null; }
+                   box.style.display='none'; }
+  function start(){
+    box.style.display='block';
+    scanner=new Html5Qrcode('scanview');
+    scanner.start({facingMode:'environment'},
+      {fps:10, qrbox:{width:280,height:160},
+       formatsToSupport:[Html5QrcodeSupportedFormats.EAN_13,Html5QrcodeSupportedFormats.EAN_8,
+                         Html5QrcodeSupportedFormats.UPC_A,Html5QrcodeSupportedFormats.UPC_E,
+                         Html5QrcodeSupportedFormats.CODE_128]},
+      function(code){ stop(); window.location='/hledej?q='+encodeURIComponent(code); },
+      function(){}).catch(function(e){
+        stop(); alert('Không mở được camera: '+e+'\\nHãy cho phép quyền camera trong trình duyệt.');
+      });
+  }
+  btn.addEventListener('click',function(){
+    if(window.Html5Qrcode){ start(); return; }
+    var s=document.createElement('script');
+    s.src='https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js';
+    s.onload=start;
+    s.onerror=function(){ alert('Không tải được thư viện quét mã — kiểm tra mạng.'); };
+    document.head.appendChild(s);
+  });
+  closeBtn.addEventListener('click',stop);
+})();
+</script>"""
 
 
 def shell(body, active="/"):
@@ -232,7 +266,15 @@ def shell(body, active="/"):
         for href, label in NAV_ITEMS)
     searchbar = ('<form class="searchbox" action="/hledej" method="get">'
                  '<input type="text" name="q" placeholder="Gõ mặt hàng: sữa tươi / đùi gà / gạo thơm...">'
-                 '<button type="submit">🔍 Tìm</button></form>')
+                 '<button type="button" id="scanbtn" title="Quét mã vạch bằng camera" '
+                 'style="padding:12px 16px;background:#2b5fa7">📷</button>'
+                 '<button type="submit">🔍 Tìm</button></form>'
+                 '<div id="scanbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);'
+                 'z-index:9999;padding:16px;text-align:center">'
+                 '<p style="color:#fff;font-size:1.1em">Giơ camera vào mã vạch sản phẩm</p>'
+                 '<div id="scanview" style="max-width:480px;margin:0 auto"></div>'
+                 '<button id="scanclose" style="margin-top:14px;background:#a33">✖ Đóng</button></div>'
+                 + SCAN_JS)
     return (PAGE_TOP
             + f'<div class="appbar"><a class="logo" href="/">🛒 Cena Checker</a>'
             f'<nav class="navtabs">{tabs}</nav></div>{searchbar}'
@@ -283,7 +325,24 @@ def pairs_cards(pairs):
 
 PAGE_TOP = f"""<!doctype html><html lang="vi"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#161614">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <title>Cena Checker</title><style>{CSS}</style></head><body>"""
+
+MANIFEST = """{
+ "name": "Cena Checker",
+ "short_name": "CenaCheck",
+ "description": "So sanh gia sieu thi Sec - quet ma vach, tim tieng Viet",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#161614",
+ "theme_color": "#161614",
+ "icons": [{
+   "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23161614'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle'%3E%F0%9F%9B%92%3C/text%3E%3C/svg%3E",
+   "sizes": "any", "type": "image/svg+xml", "purpose": "any"
+ }]
+}"""
 
 
 _home_cache = {"t": 0, "expiring": [], "fresh": [], "active": []}
@@ -1242,6 +1301,13 @@ class Handler(BaseHTTPRequestHandler):
             if parsed.path == "/hledej":
                 q = urllib.parse.parse_qs(parsed.query).get("q", [""])[0]
                 self.send_page(search_html(q) if q.strip() else home_html())
+            elif parsed.path == "/manifest.json":
+                data = MANIFEST.encode("utf-8")
+                self.send_response(200)
+                self.send_header("Content-Type", "application/manifest+json")
+                self.send_header("Content-Length", str(len(data)))
+                self.end_headers()
+                self.wfile.write(data)
             elif parsed.path == "/report":
                 self.send_page(report_html())
             elif parsed.path == "/akce":
