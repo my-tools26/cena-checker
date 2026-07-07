@@ -223,7 +223,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/hoaqua", "Rau quả"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v1.7 · 07.07.2026"
+APP_VERSION = "v1.8 · 07.07.2026"
 
 
 def shell(body, active="/"):
@@ -992,9 +992,21 @@ def parse_amount_price(amount, price):
 UNIT_SHORT = {"ks": "quả/cái", "kg": "kg", "l": "lít"}
 
 
+EAN_DB_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ean_db.json")
+
+
 def ean_lookup(code):
-    """Tra ma vach EAN: Open Food Facts truoc, UPCitemdb sau."""
+    """Tra ma vach EAN: database rieng truoc, roi Open Food Facts, UPCitemdb."""
     import requests as _req
+    # 0) Database rieng (thu thap tu Makro GTIN)
+    try:
+        import json as _json
+        with open(EAN_DB_FILE, encoding="utf-8") as f:
+            it = _json.load(f)["items"].get(code)
+        if it:
+            return it["name"]
+    except Exception:
+        pass
     # 1) Open Food Facts (khong gioi han)
     try:
         r = _req.get(f"https://world.openfoodfacts.org/api/v2/product/{code}.json",
