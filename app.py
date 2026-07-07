@@ -223,7 +223,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/hoaqua", "Rau quả"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v2.0 · 07.07.2026"
+APP_VERSION = "v2.1 · 07.07.2026"
 
 
 def shell(body, active="/"):
