@@ -48,7 +48,7 @@ VI_CS = {
     "bap": "kukurice", "ngo": "kukurice", "dau hu": "tofu", "dau phu": "tofu",
     # --- Trai cay ---
     "chuoi": "banany", "tao": "jablka", "cam": "pomerance", "chanh": "citron",
-    "dua hau": "meloun", "dau tay": "jahody", "nho": "hrozny", "xoai": "mango",
+    "dua hau": "meloun", "dau tay": "jahody", "dau": "jahody", "nho": "hrozny", "xoai": "mango",
     "dua": "kokos", "trai dua": "kokos", "thom": "ananas", "khom": "ananas",
     "buoi": "grapefruit", "le": "hrusky", "dao": "broskve", "man": "svestky",
     "qua bo": "avokado", "trai bo": "avokado", "viet quat": "boruvky",
@@ -223,22 +223,19 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/hoaqua", "Rau quả"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v1.4 · 07.07.2026"
+APP_VERSION = "v1.5 · 07.07.2026"
 
 
 def shell(body, active="/"):
     tabs = "".join(
         f'<a href="{href}"{" class=\"on\"" if href == active else ""}>{label}</a>'
         for href, label in NAV_ITEMS)
-    searchbar = ("<form action='/hledej' method='get' class='searchbox' style='margin:0'>"
-                 "<input type='text' name='q' placeholder='🔍 Tìm tiếng Việt / mã vạch...' "
-                 "style='flex:1;padding:8px 12px;font-size:1em;border-radius:8px;border:1px solid #4a4a44;"
-                 "background:#232320;color:#e6e4dd'>"
-                 "<button type='submit' style='padding:8px 14px;font-size:.95em;border-radius:8px;"
-                 "background:#1a7a3a;color:#fff;border:none;cursor:pointer'>Tìm</button></form>")
+    searchbar = ('<form class="searchbox" action="/hledej" method="get">'
+                 '<input type="text" name="q" placeholder="Gõ mặt hàng: sữa tươi / đùi gà / gạo thơm...">'
+                 '<button type="submit">🔍 Tìm</button></form>')
     return (PAGE_TOP
             + f'<div class="appbar"><a class="logo" href="/">🛒 Cena Checker</a>'
-            f'<nav class="navtabs">{tabs}</nav>{searchbar}</div>'
+            f'<nav class="navtabs">{tabs}</nav></div>{searchbar}'
             + body
             + f"<p style='text-align:center;color:#5a5a54;font-size:.8em;margin:30px 0 10px'>"
               f"Cena Checker {APP_VERSION}</p></body></html>")
@@ -614,10 +611,6 @@ def home_html():
         for e, t, u in HOME_TILES)
     body = f"""
 <p class="muted">So sánh giá siêu thị Séc — gõ tiếng Việt có dấu hoặc không dấu đều được.</p>
-<form class="searchbox" action="/hledej">
-  <input type="text" name="q" placeholder="Gõ mặt hàng: sữa tươi / đùi gà / gạo thơm..." autofocus>
-  <button type="submit">🔍 Tìm</button>
-</form>
 <div class="tiles">{tiles}</div>
 {matrix_html()}
 {home_suggestions_html()}
