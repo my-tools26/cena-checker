@@ -223,7 +223,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/hoaqua", "Rau quả"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v1.5 · 07.07.2026"
+APP_VERSION = "v1.6 · 07.07.2026"
 
 
 def shell(body, active="/"):
@@ -536,6 +536,7 @@ def matrix_html():
         return ""
     rows = _rand.sample(all_rows, min(10, len(all_rows)))
     out = ("<h2 style='margin-top:14px'>💡 MUA GÌ Ở ĐÂU HÔM NAY — giá gói, xếp theo giá quy đổi</h2>"
+           "<p class='muted' style='margin:4px 0 8px'>⏰ = hết hôm nay/ngày mai · (giá/đơn vị) ghi nhỏ bên dưới.</p>"
            "<table class='mx'><tr><th style='width:24%'>Mặt hàng</th>"
            "<th style='background:#23401f;color:#9fdc8f'>✅ Rẻ nhất</th><th>#2</th><th>#3</th><th>#4</th></tr>")
     for label, qcz, unit, ranked in rows:
@@ -552,7 +553,7 @@ def matrix_html():
             else:
                 out += "<td class='a'>—</td>"
         out += "</tr>"
-    out += "</table><p class='muted' style='margin-top:-4px'>Bấm tên mặt hàng để xem đầy đủ mọi siêu thị · cập nhật mỗi 3 giờ</p>"
+    out += "</table><p class='muted' style='margin-top:-4px'>Bấm tên mặt hàng để xem đầy đủ mọi siêu thị · cập nhật mỗi 10 phút</p>"
     return out
 
 
