@@ -227,9 +227,15 @@ def shell(body, active="/"):
     tabs = "".join(
         f'<a href="{href}"{" class=\"on\"" if href == active else ""}>{label}</a>'
         for href, label in NAV_ITEMS)
+    searchbar = ("<form action='/hledej' method='get' class='searchbox' style='margin:0'>"
+                 "<input type='text' name='q' placeholder='🔍 Tìm tiếng Việt / mã vạch...' "
+                 "style='flex:1;padding:8px 12px;font-size:1em;border-radius:8px;border:1px solid #4a4a44;"
+                 "background:#232320;color:#e6e4dd'>"
+                 "<button type='submit' style='padding:8px 14px;font-size:.95em;border-radius:8px;"
+                 "background:#1a7a3a;color:#fff;border:none;cursor:pointer'>Tìm</button></form>")
     return (PAGE_TOP
             + f'<div class="appbar"><a class="logo" href="/">🛒 Cena Checker</a>'
-            f'<nav class="navtabs">{tabs}</nav></div>'
+            f'<nav class="navtabs">{tabs}</nav>{searchbar}</div>'
             + body + "</body></html>")
 
 # Mau nhan cho tung chuoi (nen, chu)
