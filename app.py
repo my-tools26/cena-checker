@@ -901,8 +901,30 @@ def parse_amount_price(amount, price):
 UNIT_SHORT = {"ks": "quả/cái", "kg": "kg", "l": "lít"}
 
 
+def ean_lookup(code):
+    """Tra ma vach EAN qua Open Food Facts -> ten san pham (tieng Sec hoac chung)."""
+    import requests as _req
+    try:
+        r = _req.get(f"https://world.openfoodfacts.org/api/v2/product/{code}.json",
+                     headers={"User-Agent": "CenaChecker/1.0"}, timeout=10)
+        if r.status_code != 200:
+            return None
+        data = r.json()
+        if data.get("status") != 1:
+            return None
+        p = data.get("product", {})
+        return (p.get("product_name_cs") or p.get("product_name_cz")
+                or p.get("product_name") or p.get("generic_name") or None)
+    except Exception:
+        return None
+
+
 def search_html(query):
-    q = cena.strip_accents(query.strip().lower())
+    raw_query = query.strip()
+    ean_name = None
+    if _re.fullmatch(r"\d{8,14}", raw_query):
+        ean_name = ean_lookup(raw_query)
+    q = cena.strip_accents((ean_name or raw_query).lower())
     q = VI_CS.get(q, q)
     soup = cena.fetch(f"{cena.BASE}/hledej?f={urllib.parse.quote(q)}")
     products = cena.parse_groups(soup)
@@ -940,7 +962,9 @@ def search_html(query):
              unitstr=it["unit"], tags=(["💳 Clubcard"] if it.get("cc") else []), typ="retail")
 
     body = f"<h1>Kết quả: {H.escape(query)}</h1>"
-    if q != cena.strip_accents(query.strip().lower()):
+    if ean_name:
+        body += f'<p class="muted">📦 Mã vạch nhận diện: <b>{H.escape(ean_name)}</b> → tìm giá <b>{H.escape(q)}</b></p>'
+    elif q != cena.strip_accents(raw_query.lower()):
         body += f'<p class="muted">(tự dịch sang tiếng Séc: <b>{H.escape(q)}</b>)</p>'
     if not entries:
         body += "<p>Không tìm thấy gì. Thử từ khác hoặc tên tiếng Séc?</p>"
