@@ -223,7 +223,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/hoaqua", "Rau quả"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v2.5 · 08.07.2026"
+APP_VERSION = "v2.6 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -235,7 +235,8 @@ SCAN_JS = """
       scanner=null, stream=null, rafId=null, torchOn=false;
   if(!btn) return;
   var FORMATS=['ean_13','ean_8','upc_a','upc_e','code_128'];
-  function found(code){ stop(); window.location='/hledej?q='+encodeURIComponent(code); }
+  function found(code){ stop();
+    window.location='/hledej?q='+encodeURIComponent(code)+(window.SCANLOC?'&loc='+window.SCANLOC:''); }
   function stop(){
     if(rafId){ cancelAnimationFrame(rafId); rafId=null; }
     if(stream){ stream.getTracks().forEach(function(t){t.stop();}); stream=null; }
@@ -322,8 +323,11 @@ def shell(body, active="/"):
     tabs = "".join(
         f'<a href="{href}"{" class=\"on\"" if href == active else ""}>{label}</a>'
         for href, label in NAV_ITEMS)
-    searchbar = ('<form class="searchbox" action="/hledej" method="get">'
-                 '<input type="text" name="q" placeholder="Gõ mặt hàng: sữa tươi / đùi gà / gạo thơm...">'
+    scanloc = "<script>window.SCANLOC='banbuon';</script>" if active == "/banbuon" else ""
+    searchbar = (scanloc
+                 + '<form class="searchbox" action="/hledej" method="get">'
+                 + ('<input type="hidden" name="loc" value="banbuon">' if active == "/banbuon" else '')
+                 + '<input type="text" name="q" placeholder="Gõ mặt hàng: sữa tươi / đùi gà / gạo thơm...">'
                  '<button type="button" id="scanbtn" title="Quét mã vạch bằng camera" '
                  'style="padding:12px 16px;background:#2b5fa7">📷</button>'
                  '<button type="submit">🔍 Tìm</button></form>'
@@ -1167,7 +1171,7 @@ def ean_name_variants(name):
     return out
 
 
-def search_html(query):
+def search_html(query, only=""):
     raw_query = query.strip()
     ean_name = None
     if _re.fullmatch(r"\d{8,14}", raw_query):
@@ -1228,14 +1232,22 @@ def search_html(query):
         addE(it["name"], it["amount"], "Tesco online", it["price"], it["valid"],
              unitstr=it["unit"], tags=(["💳 Clubcard"] if it.get("cc") else []), typ="retail")
 
+    # Tim tu trang Ban buon -> chi giu gia Tamda/Makro/JIP
+    if only == "banbuon":
+        entries = [e for e in entries if e["typ"] == "wholesale"]
+        lhits = []
+
     body = f"<h1>Kết quả: {H.escape(query)}</h1>"
+    if only == "banbuon":
+        body += ('<p class="muted">📦 Chỉ hiện giá <b>bán buôn</b> (Tamda/Makro/JIP) · '
+                 f'<a href="/hledej?q={urllib.parse.quote(raw_query)}">xem mọi siêu thị</a></p>')
     if ean_name:
         body += f'<p class="muted">📦 Mã vạch nhận diện: <b>{H.escape(ean_name)}</b> → tìm giá <b>{H.escape(q)}</b></p>'
     elif q != cena.strip_accents(raw_query.lower()):
         body += f'<p class="muted">(tự dịch sang tiếng Séc: <b>{H.escape(q)}</b>)</p>'
     if not entries:
         body += "<p>Không tìm thấy gì. Thử từ khác hoặc tên tiếng Séc?</p>"
-        return shell(body, "")
+        return shell(body, "/banbuon" if only == "banbuon" else "")
 
     if lhits:
         body += lidl_coupon_table(lhits)
@@ -1358,8 +1370,10 @@ class Handler(BaseHTTPRequestHandler):
         parsed = urllib.parse.urlparse(self.path)
         try:
             if parsed.path == "/hledej":
-                q = urllib.parse.parse_qs(parsed.query).get("q", [""])[0]
-                self.send_page(search_html(q) if q.strip() else home_html())
+                qs = urllib.parse.parse_qs(parsed.query)
+                q = qs.get("q", [""])[0]
+                loc = qs.get("loc", [""])[0]
+                self.send_page(search_html(q, only=loc) if q.strip() else home_html())
             elif parsed.path == "/manifest.json":
                 data = MANIFEST.encode("utf-8")
                 self.send_response(200)
