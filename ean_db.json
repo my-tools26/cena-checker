@@ -1,7 +1,4977 @@
 {
-  "_note": "Database ma vach rieng - thu thap tu trang san pham Makro (muc GTIN). Uu tien tra truoc Open Food Facts.",
-  "items": {
-    "5907702863221": {"name": "METRO Chef Led drť mraž. 5 kg", "source": "makro"},
-    "5902241260395": {"name": "METRO Chef Led drť mraž. 5 kg", "source": "makro"}
+ "_note": "Database ma vach rieng - thu thap tu trang san pham Makro (muc GTIN). Uu tien tra truoc Open Food Facts.",
+ "items": {
+  "5907702863221": {
+   "name": "METRO Chef Led drť mraž. 5 kg",
+   "source": "makro"
+  },
+  "5902241260395": {
+   "name": "METRO Chef Led drť mraž. 5 kg",
+   "source": "makro"
+  },
+  "42439745": {
+   "name": "Müllermilch mléčný nápoj limitovaná edice chlaz. 400 g",
+   "source": "makro"
+  },
+  "85816374": {
+   "name": "RAJEC Voda neperlivá 330 ml",
+   "source": "makro"
+  },
+  "85817456": {
+   "name": "RAJEC Voda jemně perlivá 330 ml",
+   "source": "makro"
+  },
+  "85820203": {
+   "name": "RAJEC Voda kojenecká 330 ml",
+   "source": "makro"
+  },
+  "85905979": {
+   "name": "milko Tvaroh tučný 250 g",
+   "source": "makro"
+  },
+  "90021541": {
+   "name": "Cola-Cola Zero 1 l",
+   "source": "makro"
+  },
+  "A000099": {
+   "name": "Okurka hadovka čerstvá 4,5 kg",
+   "source": "makro"
+  },
+  "A000103": {
+   "name": "Limety čerstvé 4,5 kg",
+   "source": "makro"
+  },
+  "8594006881067": {
+   "name": "aro Ocet 8 % 1 l PET",
+   "source": "makro"
+  },
+  "8594006882354": {
+   "name": "aro Ocet 8 % 1 l PET",
+   "source": "makro"
+  },
+  "20044789630007": {
+   "name": "METRO Chef Bulka sezamová na burger maxi 4 x 82,5 g",
+   "source": "makro"
+  },
+  "4337182135944": {
+   "name": "METRO Chef Bulka sezamová na burger maxi 4 x 82,5 g",
+   "source": "makro"
+  },
+  "4337182135951": {
+   "name": "METRO Chef Bulka sezamová na burger maxi 4 x 82,5 g",
+   "source": "makro"
+  },
+  "4337182135968": {
+   "name": "METRO Chef Bulka na burger maxi celozrnná 4 x 82,5 g",
+   "source": "makro"
+  },
+  "4337182276159": {
+   "name": "METRO Chef Bulka na burger maxi celozrnná 4 x 82,5 g",
+   "source": "makro"
+  },
+  "4337182135975": {
+   "name": "METRO Chef Bulka na burger maxi celozrnná 4 x 82,5 g",
+   "source": "makro"
+  },
+  "4337182276166": {
+   "name": "METRO Chef Bulka na burger maxi celozrnná 4 x 82,5 g",
+   "source": "makro"
+  },
+  "8595715300092": {
+   "name": "aro Polárkový dort s příchutí vanilky mraž. 12 x 615 ml",
+   "source": "makro"
+  },
+  "8595715300108": {
+   "name": "aro Polárkový dort čokoláda mraž. 12 x 615 ml",
+   "source": "makro"
+  },
+  "4337125013827": {
+   "name": "METRO Chef Cibule červená 50/70 čerstvá 5 kg",
+   "source": "makro"
+  },
+  "4337125011830": {
+   "name": "METRO Chef Cibule červená 50/70 čerstvá 5 kg",
+   "source": "makro"
+  },
+  "3073780965743": {
+   "name": "GERVAIS přírodní 80 g",
+   "source": "makro"
+  },
+  "3073780990363": {
+   "name": "GERVAIS přírodní 80 g",
+   "source": "makro"
+  },
+  "8595002033115": {
+   "name": "GERVAIS přírodní 80 g",
+   "source": "makro"
+  },
+  "8595002034259": {
+   "name": "GERVAIS přírodní 80 g",
+   "source": "makro"
+  },
+  "3073780990400": {
+   "name": "GERVAIS paprika rajče 80 g",
+   "source": "makro"
+  },
+  "3073780965767": {
+   "name": "GERVAIS paprika rajče 80 g",
+   "source": "makro"
+  },
+  "8595002033146": {
+   "name": "GERVAIS paprika rajče 80 g",
+   "source": "makro"
+  },
+  "3073780965750": {
+   "name": "GERVAIS pažitka 80 g",
+   "source": "makro"
+  },
+  "8595002033122": {
+   "name": "GERVAIS pažitka 80 g",
+   "source": "makro"
+  },
+  "3073780990387": {
+   "name": "GERVAIS pažitka 80 g",
+   "source": "makro"
+  },
+  "3073780986519": {
+   "name": "GERVAIS česnek bylinky 80 g",
+   "source": "makro"
+  },
+  "3073780986496": {
+   "name": "GERVAIS česnek bylinky 80 g",
+   "source": "makro"
+  },
+  "3073781030556": {
+   "name": "GERVAIS ředkvičky pažitka 80 g",
+   "source": "makro"
+  },
+  "3073781044058": {
+   "name": "GERVAIS Fit Light sýr chlaz. 80 g",
+   "source": "makro"
+  },
+  "3073781044072": {
+   "name": "GERVAIS Fit Light sýr chlaz. 80 g",
+   "source": "makro"
+  },
+  "3073781105315": {
+   "name": "GERVAIS jarní cibulka 80 g",
+   "source": "makro"
+  },
+  "3073781105292": {
+   "name": "GERVAIS jarní cibulka 80 g",
+   "source": "makro"
+  },
+  "8595072600996": {
+   "name": "Dr. Oetker Dr.Oetker Kypřící Pr. 12 g ",
+   "source": "makro"
+  },
+  "18584004041195": {
+   "name": "OPAVIA Sereď Tatranky lískooříškové 33 g",
+   "source": "makro"
+  },
+  "18584004041256": {
+   "name": "OPAVIA Tatranky 33 g Kakao",
+   "source": "makro"
+  },
+  "18584004041294": {
+   "name": "OPAVIA Tatranky 33 g Sereď Mléčné",
+   "source": "makro"
+  },
+  "8591036551687": {
+   "name": "Zlatopramen Světlý ležák 11° pivo 1,5 l",
+   "source": "makro"
+  },
+  "8591036450737": {
+   "name": "Zlatopramen Světlý ležák 11° pivo 1,5 l",
+   "source": "makro"
+  },
+  "8591036551694": {
+   "name": "Zlatopramen Světlý ležák 11° pivo 1,5 l",
+   "source": "makro"
+  },
+  "8591036550918": {
+   "name": "Zlatopramen Světlý ležák 11° pivo 1,5 l",
+   "source": "makro"
+  },
+  "8591036450829": {
+   "name": "Zlatopramen Světlý ležák 11° pivo 1,5 l",
+   "source": "makro"
+  },
+  "8594002780562": {
+   "name": "MLÉKÁRNA KUNÍN Zakysaná smetana 15% chlaz. 190 g",
+   "source": "makro"
+  },
+  "8594002781743": {
+   "name": "MLÉKÁRNA KUNÍN Zakysaná smetana 15% chlaz. 190 g",
+   "source": "makro"
+  },
+  "38594002786299": {
+   "name": "MLÉKÁRNA KUNÍN Zakysaná smetana 15% chlaz. 190 g",
+   "source": "makro"
+  },
+  "8594404001166": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo světlé výčepní 24 x 500 ml plech",
+   "source": "makro"
+  },
+  "8594404005614": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo světlé výčepní 24 x 500 ml plech",
+   "source": "makro"
+  },
+  "4009900456630": {
+   "name": "SKITTLES ŽVÝK.BONB.38g",
+   "source": "makro"
+  },
+  "4009900456647": {
+   "name": "SKITTLES ŽVÝK.BONB.38g",
+   "source": "makro"
+  },
+  "5053990101580": {
+   "name": "Pringles Ocet Sůl 165 g",
+   "source": "makro"
+  },
+  "5053990101542": {
+   "name": "Pringles Hot Spicy 165 g",
+   "source": "makro"
+  },
+  "5053990102303": {
+   "name": "Pringles Hot Spicy 165 g",
+   "source": "makro"
+  },
+  "5053990106776": {
+   "name": "Pringles Slanina 165 g",
+   "source": "makro"
+  },
+  "5053990161690": {
+   "name": "Pringles Slanina 165 g",
+   "source": "makro"
+  },
+  "5053990101573": {
+   "name": "Pringles Original 165 g",
+   "source": "makro"
+  },
+  "5053990101597": {
+   "name": "Pringles Cibule Smetana 165 g",
+   "source": "makro"
+  },
+  "5053990106868": {
+   "name": "Pringles Hot paprika 165 g",
+   "source": "makro"
+  },
+  "5053990161669": {
+   "name": "Pringles Hot paprika 165 g",
+   "source": "makro"
+  },
+  "5053990106981": {
+   "name": "Pringles Sýr Cibule 165 g",
+   "source": "makro"
+  },
+  "5053990101535": {
+   "name": "Pringles Sýr Cibule 165 g",
+   "source": "makro"
+  },
+  "8000920401347": {
+   "name": "CALIPPO Jahoda mraž. 24 x 105 ml",
+   "source": "makro"
+  },
+  "5997388544149": {
+   "name": "CALIPPO Jahoda mraž. 24 x 105 ml",
+   "source": "makro"
+  },
+  "8593869121013": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo světlé výčepní 10° 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404001401": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo světlé výčepní 10° 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404001463": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo světlé výčepní 10° 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8593869122010": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo černé 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404001418": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo černé 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404001470": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo černé 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "4008400260921": {
+   "name": "kinder Country 23.5 g ",
+   "source": "makro"
+  },
+  "8591036451284": {
+   "name": "Zlatopramen 2 l Sv.Výčepní",
+   "source": "makro"
+  },
+  "8591036550710": {
+   "name": "Zlatopramen 2 l Sv.Výčepní",
+   "source": "makro"
+  },
+  "8591036451239": {
+   "name": "Zlatopramen 2 l Sv.Výčepní",
+   "source": "makro"
+  },
+  "8591036451222": {
+   "name": "Zlatopramen 2 l Sv.Výčepní",
+   "source": "makro"
+  },
+  "18584004024303": {
+   "name": "Figaro Oplatka Attack 30 g Čokoláda",
+   "source": "makro"
+  },
+  "18584004024105": {
+   "name": "Figaro Oplatka Attack 30 g L.Oříšek",
+   "source": "makro"
+  },
+  "18584004024204": {
+   "name": "Figaro Oplatka Attack 30 g mléčná",
+   "source": "makro"
+  },
+  "18584004024815": {
+   "name": "Figaro Oplatka Attack 30 g Kokos",
+   "source": "makro"
+  },
+  "8593803326252": {
+   "name": "MADETA Jihočeský Eidam sýr 30 % plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8593803326269": {
+   "name": "MADETA Jihočeský Eidam sýr 45 % plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8593803326276": {
+   "name": "MADETA Jihočeský Eidam sýr uzený 44 % plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8593803328195": {
+   "name": "MADETA Jihočeský Eidam sýr 20 % plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594404012681": {
+   "name": "RADEGAST Rázná 10° pivo 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404012674": {
+   "name": "RADEGAST Rázná 10° pivo 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8590014639270": {
+   "name": "HELLO Svačinka malina 190 g sklo",
+   "source": "makro"
+  },
+  "8590014638006": {
+   "name": "HELLO Svačinka meruňka 190 g sklo",
+   "source": "makro"
+  },
+  "8590014638037": {
+   "name": "HELLO Svačinka broskev 190 g sklo",
+   "source": "makro"
+  },
+  "8590014638105": {
+   "name": "HELLO Svačinka jahoda 190 g sklo",
+   "source": "makro"
+  },
+  "8590014638068": {
+   "name": "HELLO Svačinka jablko 190 g sklo",
+   "source": "makro"
+  },
+  "8593893740358": {
+   "name": "Orion Kofila Latté 34 g",
+   "source": "makro"
+  },
+  "8593893112872": {
+   "name": "Orion Kofila tyčinka 35 g",
+   "source": "makro"
+  },
+  "8594009922903": {
+   "name": "KRUŠOVICE Pivo světlé výčepní 10° 24 x 500 ml plech",
+   "source": "makro"
+  },
+  "8594009922897": {
+   "name": "KRUŠOVICE Pivo světlé výčepní 10° 24 x 500 ml plech",
+   "source": "makro"
+  },
+  "8594003849602": {
+   "name": "kofola Original 2 l",
+   "source": "makro"
+  },
+  "8586011332900": {
+   "name": "kofola Original 2 l",
+   "source": "makro"
+  },
+  "8594003840678": {
+   "name": "kofola Original 2 l",
+   "source": "makro"
+  },
+  "85860011332900": {
+   "name": "kofola Original 2 l",
+   "source": "makro"
+  },
+  "8595231223424": {
+   "name": "kofola Nulka 2 l",
+   "source": "makro"
+  },
+  "8595231223448": {
+   "name": "kofola Nulka 2 l",
+   "source": "makro"
+  },
+  "7622210609229": {
+   "name": "OPAVIA Brumík Duo vanilková příchuť a jahoda 48 x 30 g",
+   "source": "makro"
+  },
+  "8606017378969": {
+   "name": "Lay's 55 g Strong Chilli/Lime",
+   "source": "makro"
+  },
+  "5900259121950": {
+   "name": "Lay's 55 g Strong Chilli/Lime",
+   "source": "makro"
+  },
+  "5900259097675": {
+   "name": "Lay's Maxx 55 g Sýr+Cibule",
+   "source": "makro"
+  },
+  "8606017379089": {
+   "name": "Lay's Maxx 55 g Sýr+Cibule",
+   "source": "makro"
+  },
+  "5900259097613": {
+   "name": "Lay's 55 g Strong Chee.Cayene",
+   "source": "makro"
+  },
+  "8606017378990": {
+   "name": "Lay's 55 g Strong Chee.Cayene",
+   "source": "makro"
+  },
+  "5900259121936": {
+   "name": "Lay's 55 g Strong Chee.Cayene",
+   "source": "makro"
+  },
+  "5900259097590": {
+   "name": "Lay's 55 g Str-Chic.Wing",
+   "source": "makro"
+  },
+  "8606017379027": {
+   "name": "Lay's 55 g Str-Chic.Wing",
+   "source": "makro"
+  },
+  "5900259113924": {
+   "name": "Lay's 60 g Solené",
+   "source": "makro"
+  },
+  "5900259097811": {
+   "name": "Lay's 60 g Solené",
+   "source": "makro"
+  },
+  "5900259097804": {
+   "name": "Lay's 60 g Jarní Cibulka",
+   "source": "makro"
+  },
+  "5900259113887": {
+   "name": "Lay's 60 g Jarní Cibulka",
+   "source": "makro"
+  },
+  "4009900532310": {
+   "name": "Skittles Smoothies Bonbony žvýkací 38 g",
+   "source": "makro"
+  },
+  "8000920461242": {
+   "name": "Algida Calippo Cola Zmrzlina mraž. 24 x 105 ml",
+   "source": "makro"
+  },
+  "8000920401286": {
+   "name": "Algida Calippo limetka mraž. 24 x 105 ml",
+   "source": "makro"
+  },
+  "5900259106582": {
+   "name": "Lay's Barbecue Ribs 60 g ",
+   "source": "makro"
+  },
+  "5900259132321": {
+   "name": "Lay's Barbecue Ribs 60 g ",
+   "source": "makro"
+  },
+  "5900259113849": {
+   "name": "Lay's Barbecue Ribs 60 g ",
+   "source": "makro"
+  },
+  "8723400755432": {
+   "name": "mentos Rainbow 37,5 g",
+   "source": "makro"
+  },
+  "8710800955555": {
+   "name": "mentos Mint/máta 38 g",
+   "source": "makro"
+  },
+  "8710800955562": {
+   "name": "mentos Fruit 38 g",
+   "source": "makro"
+  },
+  "5998711398118": {
+   "name": "TUC sýr 100 g",
+   "source": "makro"
+  },
+  "7622300579616": {
+   "name": "TUC slanina 100 g",
+   "source": "makro"
+  },
+  "8594005022003": {
+   "name": "NORDIC ICE 37,5 % 12 x 500 ml",
+   "source": "makro"
+  },
+  "8594005021990": {
+   "name": "NORDIC ICE 37,5 % 12 x 500 ml",
+   "source": "makro"
+  },
+  "5998711398125": {
+   "name": "TUC Zakys.Smet&Cibule 100 g ",
+   "source": "makro"
+  },
+  "8595231213807": {
+   "name": "KOFOLA Méně 2L Citrus",
+   "source": "makro"
+  },
+  "8595231213500": {
+   "name": "KOFOLA Méně 2L Citrus",
+   "source": "makro"
+  },
+  "8595231213814": {
+   "name": "KOFOLA Méně 2L Višeň",
+   "source": "makro"
+  },
+  "8595231213463": {
+   "name": "KOFOLA Méně 2L Višeň",
+   "source": "makro"
+  },
+  "5900259122087": {
+   "name": "Lay's Sýr 60 g",
+   "source": "makro"
+  },
+  "8606017378938": {
+   "name": "Lay's Baked Yogurt&Herb 55 g ",
+   "source": "makro"
+  },
+  "8606017377993": {
+   "name": "Lay's Baked Yogurt&Herb 55 g ",
+   "source": "makro"
+  },
+  "80686021926": {
+   "name": "JIM BEAM Black Cherry/třešeň 32,5 % 1 l",
+   "source": "makro"
+  },
+  "8606017378730": {
+   "name": "Lay's Baked Grilled Vegetables 110 g",
+   "source": "makro"
+  },
+  "8606017378723": {
+   "name": "Lay's Baked Yogurt & Herbs 110 g",
+   "source": "makro"
+  },
+  "5900259132406": {
+   "name": "Lay's Strong Cheese & Cayenne 120 g",
+   "source": "makro"
+  },
+  "5900259131799": {
+   "name": "Lay's Barbecue Ribs 130 g",
+   "source": "makro"
+  },
+  "5900259132413": {
+   "name": "Lay's Stix Ketchup chipsy 130 g",
+   "source": "makro"
+  },
+  "8594404012131": {
+   "name": "Gambrinus Patron 12 pivo 500 ml plech",
+   "source": "makro"
+  },
+  "8594404012155": {
+   "name": "Gambrinus Patron 12 pivo 500 ml plech",
+   "source": "makro"
+  },
+  "8595606210349": {
+   "name": "Bohemia Chips Špíz 130 g ",
+   "source": "makro"
+  },
+  "5900259133526": {
+   "name": "Lay's Strong Hot Wings 120 g ",
+   "source": "makro"
+  },
+  "5900259132581": {
+   "name": "Lay's Strong Hot Wings 120 g ",
+   "source": "makro"
+  },
+  "8594008271088": {
+   "name": "Lučina jarní pažitka chlaz. 120 g",
+   "source": "makro"
+  },
+  "8594008271095": {
+   "name": "Lučina čistá chlaz. 120 g",
+   "source": "makro"
+  },
+  "8594008271057": {
+   "name": "Lučina Linie s vlákninou chlaz. 120 g",
+   "source": "makro"
+  },
+  "8594008272146": {
+   "name": "Lučina Smetanová chlaz. 120 g",
+   "source": "makro"
+  },
+  "8594008278032": {
+   "name": "Lučina S bylinkami chlaz. 120 g",
+   "source": "makro"
+  },
+  "8711327661516": {
+   "name": "Twister Mallow mraž. 35 x 80 ml",
+   "source": "makro"
+  },
+  "8594405112229": {
+   "name": "BECHEROVKA Beton Original 4,5 % 250 ml",
+   "source": "makro"
+  },
+  "4014400680850": {
+   "name": "nimm2 Softies Fruit 90 g",
+   "source": "makro"
+  },
+  "8594005028821": {
+   "name": "FERNET STOCK Orange 27 % 500 ml",
+   "source": "makro"
+  },
+  "4014400382976": {
+   "name": "nimm2 Smilegummi Apple/jablko Buddies 90 g",
+   "source": "makro"
+  },
+  "4014400680867": {
+   "name": "nimm2 Smilegummi Softies Red Fruit 90 g",
+   "source": "makro"
+  },
+  "4014400680393": {
+   "name": "nimm2 Smilegummi Fruit & Yoghurt 100 g",
+   "source": "makro"
+  },
+  "4260042350594": {
+   "name": "Cubers ledové koule mraž. 1 kg",
+   "source": "makro"
+  },
+  "8594404027746": {
+   "name": "Kozel 12 pivo 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404027753": {
+   "name": "Kozel 12 pivo 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404026749": {
+   "name": "BIRELL Active Pomelo/grep nealkoholické pivo 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404026756": {
+   "name": "BIRELL Active Pomelo/grep nealkoholické pivo 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404026626": {
+   "name": "BIRELL Active Citrón zázvor 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404026633": {
+   "name": "BIRELL Active Citrón zázvor 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404026671": {
+   "name": "BIRELL Active Mango citrón 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404026688": {
+   "name": "BIRELL Active Mango citrón 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404026770": {
+   "name": "BIRELL Active Maracuja maté 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404026787": {
+   "name": "BIRELL Active Maracuja maté 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404026572": {
+   "name": "BIRELL Active Zelený čaj broskev 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404026589": {
+   "name": "BIRELL Active Zelený čaj broskev 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404026190": {
+   "name": "FRISCO Jablko 330 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404027609": {
+   "name": "FRISCO 0,33l VR",
+   "source": "makro"
+  },
+  "8594404027500": {
+   "name": "FRISCO 0,33l VR",
+   "source": "makro"
+  },
+  "8594404026176": {
+   "name": "FRISCO 0,33l VR",
+   "source": "makro"
+  },
+  "8594404026183": {
+   "name": "FRISCO Lesní ovoce 330 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404026213": {
+   "name": "FRISCO 0,33l VR",
+   "source": "makro"
+  },
+  "8594404027616": {
+   "name": "FRISCO 0,33l VR",
+   "source": "makro"
+  },
+  "8594404026220": {
+   "name": "FRISCO 0,33l VR",
+   "source": "makro"
+  },
+  "8594404026206": {
+   "name": "FRISCO 0,33l VR",
+   "source": "makro"
+  },
+  "8595736202399": {
+   "name": "FERNET STOCK Lime 27% 500 ml",
+   "source": "makro"
+  },
+  "8595736201095": {
+   "name": "AMUNDSEN Blue Lagoon 4,5 % 250 ml",
+   "source": "makro"
+  },
+  "8595736201149": {
+   "name": "AMUNDSEN Martini 4,5 % 250 ml",
+   "source": "makro"
+  },
+  "8595736201378": {
+   "name": "AMUNDSEN Mule 4,5 % 250 ml",
+   "source": "makro"
+  },
+  "8594404028156": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo nealkoholické citron bezinka 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404028163": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo nealkoholické citron bezinka 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404028217": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo nealkoholické černý rybíz třešeň 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404028224": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo nealkoholické černý rybíz třešeň 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404028187": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo nealkoholické meruňka meduňka 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8594404028194": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo nealkoholické meruňka meduňka 500 ml plech multipack",
+   "source": "makro"
+  },
+  "8595072610285": {
+   "name": "Dr. Oetker Dr.Oet.Cukr.Želé 10 g Červen",
+   "source": "makro"
+  },
+  "8595072610278": {
+   "name": "Dr. Oetker Dr.Oet.Cukr.Želé 10 g Žluté",
+   "source": "makro"
+  },
+  "3660005813615": {
+   "name": "Gambrinus Original 10 světlé pivo 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404008639": {
+   "name": "Gambrinus Original 10 světlé pivo 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404000114": {
+   "name": "Gambrinus Original 10 světlé pivo 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404008738": {
+   "name": "Gambrinus Original 10 světlé pivo 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "5906747308766": {
+   "name": "OPAVIA Figaro Čokopiškoty malina 6 x 147 g",
+   "source": "makro"
+  },
+  "5906747308735": {
+   "name": "OPAVIA Figaro Čokopiškoty meruňka 6 x 147 g",
+   "source": "makro"
+  },
+  "5906747308704": {
+   "name": "OPAVIA Figaro Čokopiškoty pomeranč 6 x 147 g",
+   "source": "makro"
+  },
+  "5906747308827": {
+   "name": "OPAVIA Figaro Čokopiškoty višeň 6 x 147 g",
+   "source": "makro"
+  },
+  "8594404005096": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo Ležák světlý 11° 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404005119": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo Ležák světlý 11° 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "A000128": {
+   "name": "Pór čerstvý 5 kg",
+   "source": "makro"
+  },
+  "A000183": {
+   "name": "Celer praný čerstvý 5 kg",
+   "source": "makro"
+  },
+  "A000195": {
+   "name": "Zelí čínské čerstvé váž. cca 1 kg",
+   "source": "makro"
+  },
+  "A000233": {
+   "name": "Jablka Gala čerstvá 6 kg",
+   "source": "makro"
+  },
+  "A000239": {
+   "name": "Salát římský zelený čerstvý 1 ks",
+   "source": "makro"
+  },
+  "A000023": {
+   "name": "Vepřová krkovice bez kosti vakuově baleno chlaz. váž. cca 2,7 kg",
+   "source": "makro"
+  },
+  "A000100": {
+   "name": "Paprika červená 70+ čerstvá 5 kg",
+   "source": "makro"
+  },
+  "A000116": {
+   "name": "Banány čerstvé 18,14 kg",
+   "source": "makro"
+  },
+  "A000142": {
+   "name": "Cibulka lahůdková čerstvá 1 ks svazek",
+   "source": "makro"
+  },
+  "A000151": {
+   "name": "Mandarinky velké čerstvé 10 kg",
+   "source": "makro"
+  },
+  "A000160": {
+   "name": "Citrony čerstvé 10 kg",
+   "source": "makro"
+  },
+  "A000169": {
+   "name": "Pomeranče 3/5 čerstvé 10 kg",
+   "source": "makro"
+  },
+  "A000177": {
+   "name": "Kedlubna čerstvá 1 ks",
+   "source": "makro"
+  },
+  "A000197": {
+   "name": "Rajčata červená 47+ čerstvá 6 kg karton",
+   "source": "makro"
+  },
+  "A000199": {
+   "name": "Cuketa zelená čerstvá 5 kg",
+   "source": "makro"
+  },
+  "A000207": {
+   "name": "Pomeranče 1/3 čerstvé cca 10 kg",
+   "source": "makro"
+  },
+  "A000227": {
+   "name": "Mrkev karotka čerstvá 5 kg",
+   "source": "makro"
+  },
+  "8592373024278": {
+   "name": "Rajčata Cherry 30+ I. čerstvá 250 g",
+   "source": "makro"
+  },
+  "8435409304916": {
+   "name": "Rajčata Cherry 30+ I. čerstvá 250 g",
+   "source": "makro"
+  },
+  "8592373024261": {
+   "name": "Rajčata Cherry 30+ I. čerstvá 250 g",
+   "source": "makro"
+  },
+  "8435409304923": {
+   "name": "Rajčata Cherry 30+ I. čerstvá 250 g",
+   "source": "makro"
+  },
+  "18595139745414": {
+   "name": "aro Džem 260 g Meruňka",
+   "source": "makro"
+  },
+  "18595139745407": {
+   "name": "aro Džem 260 g Borůvka",
+   "source": "makro"
+  },
+  "18595139745391": {
+   "name": "aro Džem 260 g Jahoda",
+   "source": "makro"
+  },
+  "8594001404957": {
+   "name": "aro Cola 2 l",
+   "source": "makro"
+  },
+  "8594001340156": {
+   "name": "aro Cola 2 l",
+   "source": "makro"
+  },
+  "8594001345427": {
+   "name": "aro Cola 2 l",
+   "source": "makro"
+  },
+  "4337185324413": {
+   "name": "aro Cola 2 l",
+   "source": "makro"
+  },
+  "8594001404940": {
+   "name": "aro Cola 2 l",
+   "source": "makro"
+  },
+  "8594001404896": {
+   "name": "aro Pomeranč 2 l",
+   "source": "makro"
+  },
+  "8594001346035": {
+   "name": "aro Pomeranč 2 l",
+   "source": "makro"
+  },
+  "8594001340149": {
+   "name": "aro Pomeranč 2 l",
+   "source": "makro"
+  },
+  "8594001404889": {
+   "name": "aro Pomeranč 2 l",
+   "source": "makro"
+  },
+  "8594001345410": {
+   "name": "aro Pomeranč 2 l",
+   "source": "makro"
+  },
+  "8594001341757": {
+   "name": "aro Pomeranč 2 l",
+   "source": "makro"
+  },
+  "8594001404858": {
+   "name": "aro Citron 2 l",
+   "source": "makro"
+  },
+  "8594001345403": {
+   "name": "aro Citron 2 l",
+   "source": "makro"
+  },
+  "8594001340132": {
+   "name": "aro Citron 2 l",
+   "source": "makro"
+  },
+  "8594001404865": {
+   "name": "aro Citron 2 l",
+   "source": "makro"
+  },
+  "8594001340767": {
+   "name": "aro Malina 2 l",
+   "source": "makro"
+  },
+  "8594001343195": {
+   "name": "aro Malina 2 l",
+   "source": "makro"
+  },
+  "8594002152178": {
+   "name": "aro Špagety Bezvaječ. 500 g",
+   "source": "makro"
+  },
+  "5901456006903": {
+   "name": "aro Vřetena bezvaječné 500 g",
+   "source": "makro"
+  },
+  "8594002157715": {
+   "name": "aro Vřetena bezvaječné 500 g",
+   "source": "makro"
+  },
+  "5901456006507": {
+   "name": "aro Vřetena bezvaječné 500 g",
+   "source": "makro"
+  },
+  "8594002157708": {
+   "name": "aro Kolínka bezvaječná 500 g",
+   "source": "makro"
+  },
+  "8594002157739": {
+   "name": "aro Vlas.Nudle Bezvaj.500 g",
+   "source": "makro"
+  },
+  "8594060910260": {
+   "name": "Fine Life Krupička jemná dehydrovaná 500 g",
+   "source": "makro"
+  },
+  "8594013180061": {
+   "name": "aro Vejce čerstvá vel. M chlaz. 10 ks",
+   "source": "makro"
+  },
+  "8594013180122": {
+   "name": "aro Vejce čerstvá vel. M chlaz. 10 ks",
+   "source": "makro"
+  },
+  "8594013180559": {
+   "name": "aro Vejce čerstvá vel. M chlaz. 10 ks",
+   "source": "makro"
+  },
+  "8594002152482": {
+   "name": "aro Fleky Bezvaječné 500 g",
+   "source": "makro"
+  },
+  "8595241517261": {
+   "name": "aro Širo.Nudle Bezvaj.500 g",
+   "source": "makro"
+  },
+  "8594002157746": {
+   "name": "aro Širo.Nudle Bezvaj.500 g",
+   "source": "makro"
+  },
+  "38586000136169": {
+   "name": "OLANDO Tuzemák 37,5 % 16 x 200 ml",
+   "source": "makro"
+  },
+  "38586000136978": {
+   "name": "FJOROWKA Vodka 37,5 % 16 x 200 ml",
+   "source": "makro"
+  },
+  "4333465054278": {
+   "name": "VALMARONE Frizzante Prosseco 6 x 750 ml",
+   "source": "makro"
+  },
+  "4018905471081": {
+   "name": "VALMARONE Frizzante Prosseco 6 x 750 ml",
+   "source": "makro"
+  },
+  "4018905471074": {
+   "name": "VALMARONE Frizzante Prosseco 6 x 750 ml",
+   "source": "makro"
+  },
+  "4333465053776": {
+   "name": "VALMARONE Frizzante Prosseco 6 x 750 ml",
+   "source": "makro"
+  },
+  "8033087772173": {
+   "name": "aro Gnocchi Con Patate 40 % chlaz. 500 g",
+   "source": "makro"
+  },
+  "8033087772197": {
+   "name": "aro Gnocchi Con Patate Spinaci 40 % chlaz. 500 g",
+   "source": "makro"
+  },
+  "28586019220173": {
+   "name": "FJOROWKA VODKA 37,5% 0,1l",
+   "source": "makro"
+  },
+  "28586019220166": {
+   "name": "OLANDO TUZEMÁK 37,5% 0,1l",
+   "source": "makro"
+  },
+  "8595241526584": {
+   "name": "aro Rajčata Kráj.Loup. 400 g",
+   "source": "makro"
+  },
+  "8594001345724": {
+   "name": "aro Voda neperlivá 1,5 l",
+   "source": "makro"
+  },
+  "8594001345700": {
+   "name": "aro Voda jemně perlivá 1,5 l",
+   "source": "makro"
+  },
+  "8595190714414": {
+   "name": "Fine Life Pařížský salát chlaz. 140 g",
+   "source": "makro"
+  },
+  "8595190714438": {
+   "name": "Fine Life Vlašský salát chlaz. 140 g",
+   "source": "makro"
+  },
+  "8594001447763": {
+   "name": "FJOROWKA VODKA 37,5% 0,04l",
+   "source": "makro"
+  },
+  "8594001447756": {
+   "name": "FJOROWKA VODKA 37,5% 0,04l",
+   "source": "makro"
+  },
+  "8594001447787": {
+   "name": "OLANDO TUZEMÁK 37,5% 0,04l",
+   "source": "makro"
+  },
+  "8594001447770": {
+   "name": "OLANDO TUZEMÁK 37,5% 0,04l",
+   "source": "makro"
+  },
+  "8588000053667": {
+   "name": "Fine Life Vanilinový Cukr 20 g",
+   "source": "makro"
+  },
+  "8588000053674": {
+   "name": "Fine Life Skořicový Cukr 20 g",
+   "source": "makro"
+  },
+  "8588000276165": {
+   "name": "Fine Life Jedlá soda 15 g",
+   "source": "makro"
+  },
+  "8588000053681": {
+   "name": "Fine Life Kypříc.Práš.Do Peč.13 g",
+   "source": "makro"
+  },
+  "98594013327117": {
+   "name": "METRO Chef Vepřový bok s kostí chlaz. váž. cca 1,3 kg",
+   "source": "makro"
+  },
+  "2825790000003": {
+   "name": "METRO Chef Vepřový bok s kostí chlaz. váž. cca 1,3 kg",
+   "source": "makro"
+  },
+  "98594013327230": {
+   "name": "METRO Chef Vepřová žebírka chlaz. váž. cca 1,5 kg",
+   "source": "makro"
+  },
+  "2826410000007": {
+   "name": "METRO Chef Vepřová žebírka chlaz. váž. cca 1,5 kg",
+   "source": "makro"
+  },
+  "8034073876691": {
+   "name": "METRO Chef Špenát baby praný čerstvý 200 g sáček",
+   "source": "makro"
+  },
+  "4337125009707": {
+   "name": "METRO Chef Špenát baby praný čerstvý 200 g sáček",
+   "source": "makro"
+  },
+  "8034073876707": {
+   "name": "METRO Chef Špenát baby praný čerstvý 200 g sáček",
+   "source": "makro"
+  },
+  "8594052745795": {
+   "name": "Fine Life Máslo 82 % chlaz. 250 g",
+   "source": "makro"
+  },
+  "5907616902665": {
+   "name": "Fine Life Máslo 82 % chlaz. 250 g",
+   "source": "makro"
+  },
+  "4337125009479": {
+   "name": "METRO Chef Klíčky mungo NL čerstvé 500 g sáček",
+   "source": "makro"
+  },
+  "8594007643725": {
+   "name": "Fine Life Eidam 30 % plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594007643831": {
+   "name": "Fine Life Eidam 30 % plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8595019540811": {
+   "name": "Fine Life Majoránka 8 g",
+   "source": "makro"
+  },
+  "8595019540897": {
+   "name": "Fine Life Nové Koř. Celé 15 g",
+   "source": "makro"
+  },
+  "8595019540774": {
+   "name": "Fine Life Hřebíček Celý 15 g",
+   "source": "makro"
+  },
+  "5901135047036": {
+   "name": "Fine Life Bobkový List 5 g",
+   "source": "makro"
+  },
+  "8594002114008": {
+   "name": "Fine Life Dresink Jalapeňo 250 ml",
+   "source": "makro"
+  },
+  "8594002114350": {
+   "name": "Fine Life Dresink pepřový 250 ml",
+   "source": "makro"
+  },
+  "8594002110031": {
+   "name": "Fine Life Dresink pikantní 250 ml",
+   "source": "makro"
+  },
+  "8594002112103": {
+   "name": "Fine Life Dresink kebab 250 ml",
+   "source": "makro"
+  },
+  "8594002110161": {
+   "name": "Fine Life Dresink francouzský 250 ml",
+   "source": "makro"
+  },
+  "8594002114206": {
+   "name": "Fine Life Dresink Tzatziky 250 ml",
+   "source": "makro"
+  },
+  "8594002111113": {
+   "name": "Fine Life Dresink hamburger 250 ml",
+   "source": "makro"
+  },
+  "8594002112523": {
+   "name": "Fine Life Dresink Chipotle - BBQ 250 ml",
+   "source": "makro"
+  },
+  "98590764012357": {
+   "name": "Fine Life Vepřová plec bez kosti kuch. úprava ochranná atmos. chlaz. cca 500 g",
+   "source": "makro"
+  },
+  "2803930000007": {
+   "name": "Fine Life Vepřová plec bez kosti kuch. úprava ochranná atmos. chlaz. cca 500 g",
+   "source": "makro"
+  },
+  "98590764012395": {
+   "name": "Fine Life Vepřový bok bez kosti s kůží ochranná atmos. chlaz. váž. 500 g",
+   "source": "makro"
+  },
+  "2837900000001": {
+   "name": "Fine Life Vepřový bok bez kosti s kůží ochranná atmos. chlaz. váž. 500 g",
+   "source": "makro"
+  },
+  "2806690000003": {
+   "name": "Fine Life Vepřový bok bez kosti s kůží ochranná atmos. chlaz. váž. 500 g",
+   "source": "makro"
+  },
+  "20032488063875": {
+   "name": "Fine Life Paprika sladká mletá 25 g",
+   "source": "makro"
+  },
+  "8595019538900": {
+   "name": "Fine Life Paprika sladká mletá 25 g",
+   "source": "makro"
+  },
+  "20031348617265": {
+   "name": "Fine Life Paprika pálivá mletá 25 g",
+   "source": "makro"
+  },
+  "8595019538924": {
+   "name": "Fine Life Paprika pálivá mletá 25 g",
+   "source": "makro"
+  },
+  "20055298681770": {
+   "name": "Fine Life Pepř černý celý 14 g",
+   "source": "makro"
+  },
+  "8595019538948": {
+   "name": "Fine Life Pepř černý celý 14 g",
+   "source": "makro"
+  },
+  "20023108323448": {
+   "name": "Fine Life Skořice mletá 15 g",
+   "source": "makro"
+  },
+  "8595019538986": {
+   "name": "Fine Life Skořice mletá 15 g",
+   "source": "makro"
+  },
+  "8595019539044": {
+   "name": "Fine Life Grilovací koření 20 g",
+   "source": "makro"
+  },
+  "20054212058414": {
+   "name": "Fine Life Grilovací koření 20 g",
+   "source": "makro"
+  },
+  "8595019540873": {
+   "name": "Fine Life Oregáno 8 g",
+   "source": "makro"
+  },
+  "20086099066961": {
+   "name": "Fine Life Oregáno 8 g",
+   "source": "makro"
+  },
+  "8595019540835": {
+   "name": "Fine Life Pepř černý mletý 20 g",
+   "source": "makro"
+  },
+  "20019721663443": {
+   "name": "Fine Life Pepř černý mletý 20 g",
+   "source": "makro"
+  },
+  "20056921151530": {
+   "name": "Fine Life Česnek granulovaný 20 g",
+   "source": "makro"
+  },
+  "8595019540859": {
+   "name": "Fine Life Česnek granulovaný 20 g",
+   "source": "makro"
+  },
+  "8594218670053": {
+   "name": "METRO Chef Česnek České pole 500 g",
+   "source": "makro"
+  },
+  "2895660000006": {
+   "name": "METRO Chef Vepřová krkovice mraž. cca 2,5 kg",
+   "source": "makro"
+  },
+  "8594001343461": {
+   "name": "aro Voda pitná neperlivá 5 l",
+   "source": "makro"
+  },
+  "8594001346004": {
+   "name": "aro Voda pitná neperlivá 5 l",
+   "source": "makro"
+  },
+  "8594001341498": {
+   "name": "aro Voda pitná neperlivá 5 l",
+   "source": "makro"
+  },
+  "8594001343935": {
+   "name": "aro Voda pitná neperlivá 5 l",
+   "source": "makro"
+  },
+  "8594001345007": {
+   "name": "aro Voda pitná neperlivá 5 l",
+   "source": "makro"
+  },
+  "8593894904308": {
+   "name": "OPAVIA Zlaté polomáčené mléčné sušenky 36 x 100 g",
+   "source": "makro"
+  },
+  "8593894901314": {
+   "name": "OPAVIA Zlaté polomáčené sušenky 36 x 100 g",
+   "source": "makro"
+  },
+  "8593894903936": {
+   "name": "OPAVIA Zlaté polomáčené sušenky 36 x 100 g",
+   "source": "makro"
+  },
+  "8593803313047": {
+   "name": "MADETA Romadur 100 g",
+   "source": "makro"
+  },
+  "8593803313030": {
+   "name": "MADETA Romadur 100 g",
+   "source": "makro"
+  },
+  "8593803313160": {
+   "name": "MADETA Romadur chilli 100 g",
+   "source": "makro"
+  },
+  "8593803313153": {
+   "name": "MADETA Romadur chilli 100 g",
+   "source": "makro"
+  },
+  "8593803313184": {
+   "name": "MADETA Romadur česnek bylinky 100 g",
+   "source": "makro"
+  },
+  "8593803313191": {
+   "name": "MADETA Romadur česnek bylinky 100 g",
+   "source": "makro"
+  },
+  "8593803421261": {
+   "name": "MADETA Jihočeské máslo 82 % chlaz. 40 x 250 g",
+   "source": "makro"
+  },
+  "8593803421223": {
+   "name": "MADETA Jihočeské máslo 82 % chlaz. 40 x 250 g",
+   "source": "makro"
+  },
+  "8593803421216": {
+   "name": "MADETA Jihočeské máslo 82 % chlaz. 40 x 250 g",
+   "source": "makro"
+  },
+  "4008400223612": {
+   "name": "kinder Choco Maxi 21 g",
+   "source": "makro"
+  },
+  "8593807234713": {
+   "name": "OLMA Mléko 1,5% čerstvé 1 l PET",
+   "source": "makro"
+  },
+  "8593807234218": {
+   "name": "OLMA Mléko 1,5% čerstvé 1 l PET",
+   "source": "makro"
+  },
+  "8594002711504": {
+   "name": "PRAŽSKÁ vodka 37,5% 6 x 1 l",
+   "source": "makro"
+  },
+  "8594002711498": {
+   "name": "PRAŽSKÁ vodka 37,5% 6 x 1 l",
+   "source": "makro"
+  },
+  "8594005012035": {
+   "name": "BOŽKOV Original 37,5 % 15 x 500 ml",
+   "source": "makro"
+  },
+  "8594005012028": {
+   "name": "BOŽKOV Original 37,5 % 15 x 500 ml",
+   "source": "makro"
+  },
+  "8594005010383": {
+   "name": "BOŽKOV Vodka 37,5 % 15 x 500 ml",
+   "source": "makro"
+  },
+  "8594005010130": {
+   "name": "BOŽKOV Vodka 37,5 % 15 x 500 ml",
+   "source": "makro"
+  },
+  "8595002101128": {
+   "name": "ACTIVIA Jogurt 120 g Jahoda",
+   "source": "makro"
+  },
+  "8595002104594": {
+   "name": "ACTIVIA Jogurt 120 g Jahoda",
+   "source": "makro"
+  },
+  "18595002011028": {
+   "name": "ACTIVIA Jogurt 120 g Jahoda",
+   "source": "makro"
+  },
+  "8595002104730": {
+   "name": "Danone Activia Jogurt meruňka chlaz. 120 g",
+   "source": "makro"
+  },
+  "8595002101166": {
+   "name": "Danone Activia Jogurt meruňka chlaz. 120 g",
+   "source": "makro"
+  },
+  "18595002011059": {
+   "name": "Danone Activia Jogurt meruňka chlaz. 120 g",
+   "source": "makro"
+  },
+  "8595002108554": {
+   "name": "ACTIVIA Jogurt 120 g Bor/Višeň",
+   "source": "makro"
+  },
+  "18595002033617": {
+   "name": "ACTIVIA Jogurt 120 g Bor/Višeň",
+   "source": "makro"
+  },
+  "8595002110731": {
+   "name": "ACTIVIA Jogurt cereální chlaz. 120 g",
+   "source": "makro"
+  },
+  "18595002100791": {
+   "name": "ACTIVIA Jogurt cereální chlaz. 120 g",
+   "source": "makro"
+  },
+  "4001686372012": {
+   "name": "HARIBO Rulička 25G Ovocná",
+   "source": "makro"
+  },
+  "4001686383018": {
+   "name": "HARIBO Rulička 25G Ovocná",
+   "source": "makro"
+  },
+  "5908310286587": {
+   "name": "Tofínek vafle karamel 40 g",
+   "source": "makro"
+  },
+  "3249386204979": {
+   "name": "BRISE de FRANCE Cabernet Sauvignon 6 x 750 ml",
+   "source": "makro"
+  },
+  "3249386504970": {
+   "name": "BRISE de FRANCE Cabernet Sauvignon 6 x 750 ml",
+   "source": "makro"
+  },
+  "3249386004975": {
+   "name": "BRISE de FRANCE Cabernet Sauvignon 6 x 750 ml",
+   "source": "makro"
+  },
+  "3249386304976": {
+   "name": "BRISE de FRANCE Cabernet Sauvignon 6 x 750 ml",
+   "source": "makro"
+  },
+  "3249386404973": {
+   "name": "BRISE de FRANCE Cabernet Sauvignon 6 x 750 ml",
+   "source": "makro"
+  },
+  "3249381004970": {
+   "name": "BRISE de FRANCE Cabernet Sauvignon 6 x 750 ml",
+   "source": "makro"
+  },
+  "3249386116708": {
+   "name": "BRISE de FRANCE Merlot 6 x 750 ml",
+   "source": "makro"
+  },
+  "3249386216705": {
+   "name": "BRISE de FRANCE Merlot 6 x 750 ml",
+   "source": "makro"
+  },
+  "3249386416709": {
+   "name": "BRISE de FRANCE Merlot 6 x 750 ml",
+   "source": "makro"
+  },
+  "3249386816707": {
+   "name": "BRISE de FRANCE Merlot 6 x 750 ml",
+   "source": "makro"
+  },
+  "3249386316702": {
+   "name": "BRISE de FRANCE Merlot 6 x 750 ml",
+   "source": "makro"
+  },
+  "3249386016701": {
+   "name": "BRISE de FRANCE Merlot 6 x 750 ml",
+   "source": "makro"
+  },
+  "3249381016706": {
+   "name": "BRISE de FRANCE Merlot 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594404110110": {
+   "name": "Pilsner Urquell Pivo světlý ležák pivo 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404000480": {
+   "name": "Pilsner Urquell Pivo světlý ležák pivo 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "3800020422243": {
+   "name": "KitKat Chunky 40 g",
+   "source": "makro"
+  },
+  "3800020434307": {
+   "name": "KitKat Chunky 40 g",
+   "source": "makro"
+  },
+  "3800020423592": {
+   "name": "KitKat Chunky 40 g",
+   "source": "makro"
+  },
+  "3800020436707": {
+   "name": "KitKat Chunky bílý 40 g",
+   "source": "makro"
+  },
+  "7613037251890": {
+   "name": "KitKat Chunky bílý 40 g",
+   "source": "makro"
+  },
+  "3800020446447": {
+   "name": "KitKat Chunky bílý 40 g",
+   "source": "makro"
+  },
+  "3800020416112": {
+   "name": "KitKat Chunky bílý 40 g",
+   "source": "makro"
+  },
+  "8593894909334": {
+   "name": "OPAVIA Zlaté oplatky nugátové 14 x 146 g",
+   "source": "makro"
+  },
+  "8593894910958": {
+   "name": "OPAVIA Zlaté oplatky nugátové 14 x 146 g",
+   "source": "makro"
+  },
+  "8593894911115": {
+   "name": "OPAVIA Zlaté oplatky citronové 14 x 146 g",
+   "source": "makro"
+  },
+  "8593894911085": {
+   "name": "OPAVIA Zlaté oplatky čokoládové 14 x 146 g",
+   "source": "makro"
+  },
+  "8593894911054": {
+   "name": "OPAVIA Zlaté oplatky lískooříškové 14 x 146 g",
+   "source": "makro"
+  },
+  "8584002200917": {
+   "name": "Dr. Oetker Cukr vanilínový 20 x 20 g",
+   "source": "makro"
+  },
+  "8595072600040": {
+   "name": "Dr. Oetker Cukr vanilínový 20 x 20 g",
+   "source": "makro"
+  },
+  "8595072600989": {
+   "name": "Dr. Oetker Cukr vanilínový 20 x 20 g",
+   "source": "makro"
+  },
+  "8595072622776": {
+   "name": "Dr. Oetker Cukr vanilínový 20 x 20 g",
+   "source": "makro"
+  },
+  "38595072601024": {
+   "name": "Dr. Oetker Cukr vanilínový 20 x 20 g",
+   "source": "makro"
+  },
+  "4000177407424": {
+   "name": "Capri-Sun Nápoj Orange 200 ml",
+   "source": "makro"
+  },
+  "8595004003475": {
+   "name": "Capri-Sun Nápoj Orange 200 ml",
+   "source": "makro"
+  },
+  "8595004003543": {
+   "name": "Capri-Sun Nápoj Orange 200 ml",
+   "source": "makro"
+  },
+  "8595004003529": {
+   "name": "Capri-Sun Nápoj Orange 200 ml",
+   "source": "makro"
+  },
+  "8595004003482": {
+   "name": "Capri-Sun Multivitamin 200 ml",
+   "source": "makro"
+  },
+  "4000177407523": {
+   "name": "Capri-Sun Multivitamin 200 ml",
+   "source": "makro"
+  },
+  "4000177408124": {
+   "name": "Capri-Sun Mystic Dragon 200 ml",
+   "source": "makro"
+  },
+  "4000177407622": {
+   "name": "Capri-Sun Safari Fruits 200 ml",
+   "source": "makro"
+  },
+  "4000177019252": {
+   "name": "Capri-Sun 0,2L Fun Alarm",
+   "source": "makro"
+  },
+  "4000177033500": {
+   "name": "Capri-Sun Fairy Drink 200 ml",
+   "source": "makro"
+  },
+  "4000177030042": {
+   "name": "Capri-Sun Zero 200 ml",
+   "source": "makro"
+  },
+  "8595011147841": {
+   "name": "Capri-Sun Třešeň 200 ml",
+   "source": "makro"
+  },
+  "8594404001005": {
+   "name": "Gambrinus světlé výčepní pivo se sníženým obsahem cukru 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404000633": {
+   "name": "Gambrinus světlé výčepní pivo se sníženým obsahem cukru 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594405102305": {
+   "name": "BECHEROVKA 38% 9 x 1 l",
+   "source": "makro"
+  },
+  "8594405101063": {
+   "name": "BECHEROVKA 38% 9 x 1 l",
+   "source": "makro"
+  },
+  "5449000051646": {
+   "name": "Coca-Cola 330 ml plech",
+   "source": "makro"
+  },
+  "5449000000279": {
+   "name": "Coca-Cola 330 ml plech",
+   "source": "makro"
+  },
+  "5449000131812": {
+   "name": "Coca-Cola Zero 330 ml plech",
+   "source": "makro"
+  },
+  "5000112657074": {
+   "name": "Coca-Cola Zero 330 ml plech",
+   "source": "makro"
+  },
+  "5000112680683": {
+   "name": "Coca-Cola Cherry 330 ml plech",
+   "source": "makro"
+  },
+  "5449000344953": {
+   "name": "Coca-Cola Zero Zero 330 ml plech",
+   "source": "makro"
+  },
+  "8594001020621": {
+   "name": "AQUILA Voda kojenecká 1,5 l",
+   "source": "makro"
+  },
+  "8594001020638": {
+   "name": "AQUILA Voda jemně perlivá 1,5 l",
+   "source": "makro"
+  },
+  "8594001020102": {
+   "name": "AQUILA Voda jemně perlivá 500 ml",
+   "source": "makro"
+  },
+  "8594001020874": {
+   "name": "AQUILA Voda jemně perlivá 500 ml",
+   "source": "makro"
+  },
+  "8594001020829": {
+   "name": "AQUILA Voda neperlivá 500 ml",
+   "source": "makro"
+  },
+  "8594001020072": {
+   "name": "AQUILA Voda neperlivá 500 ml",
+   "source": "makro"
+  },
+  "8594001021475": {
+   "name": "MATTONI jemně perlivá voda 500 ml",
+   "source": "makro"
+  },
+  "8594001020706": {
+   "name": "MATTONI jemně perlivá voda 500 ml",
+   "source": "makro"
+  },
+  "8594001020515": {
+   "name": "MATTONI Voda perlivá 500 ml",
+   "source": "makro"
+  },
+  "8594001020713": {
+   "name": "MATTONI Voda perlivá 500 ml",
+   "source": "makro"
+  },
+  "8594001020584": {
+   "name": "MATTONI Voda neperlivá 500 ml",
+   "source": "makro"
+  },
+  "8594001020782": {
+   "name": "MATTONI Voda neperlivá 500 ml",
+   "source": "makro"
+  },
+  "8594001020720": {
+   "name": "MATTONI Ochucená citron 1,5 l",
+   "source": "makro"
+  },
+  "8594001020522": {
+   "name": "MATTONI Ochucená citron 1,5 l",
+   "source": "makro"
+  },
+  "8594001020539": {
+   "name": "MATTONI Voda ochucená pomeranč 500 ml",
+   "source": "makro"
+  },
+  "8594001020737": {
+   "name": "MATTONI Voda ochucená pomeranč 500 ml",
+   "source": "makro"
+  },
+  "8594001020607": {
+   "name": "MATTONI Voda ochucená bílé hrozny 500 ml",
+   "source": "makro"
+  },
+  "8594001020805": {
+   "name": "MATTONI Voda ochucená bílé hrozny 500 ml",
+   "source": "makro"
+  },
+  "8594001029860": {
+   "name": "MATTONI Och 0,5L Multi",
+   "source": "makro"
+  },
+  "8594001029853": {
+   "name": "MATTONI Och 0,5L Multi",
+   "source": "makro"
+  },
+  "8594001029877": {
+   "name": "MATTONI Cedrata Voda minerální ochucená 500 ml",
+   "source": "makro"
+  },
+  "8594001029884": {
+   "name": "MATTONI Cedrata Voda minerální ochucená 500 ml",
+   "source": "makro"
+  },
+  "8595723201916": {
+   "name": "MATTONI Mango Alphonso 500 ml",
+   "source": "makro"
+  },
+  "8595723201909": {
+   "name": "MATTONI Mango Alphonso 500 ml",
+   "source": "makro"
+  },
+  "8594001022014": {
+   "name": "MATTONI 0,75L Neperlivá",
+   "source": "makro"
+  },
+  "8594001022021": {
+   "name": "MATTONI 0,75L Neperlivá",
+   "source": "makro"
+  },
+  "8594001021918": {
+   "name": "MATTONI 0,75L Neperlivá",
+   "source": "makro"
+  },
+  "5900334123121": {
+   "name": "Caprio nápoj mulivitamin 2 l",
+   "source": "makro"
+  },
+  "5900334129826": {
+   "name": "Caprio nápoj mulivitamin 2 l",
+   "source": "makro"
+  },
+  "5900334129796": {
+   "name": "Caprio Nápoj 2L Pomeranč",
+   "source": "makro"
+  },
+  "5900334123091": {
+   "name": "Caprio Jablko nápoj 2 l",
+   "source": "makro"
+  },
+  "5900334129802": {
+   "name": "Caprio Nápoj 2L Jablko/Malin",
+   "source": "makro"
+  },
+  "5900334121028": {
+   "name": "Caprio Nápoj 2L Hruška",
+   "source": "makro"
+  },
+  "5900334000842": {
+   "name": "Caprio Nápoj 2L Ananas",
+   "source": "makro"
+  },
+  "8594057638948": {
+   "name": "Caprio Nápoj 2L Ananas/Mango",
+   "source": "makro"
+  },
+  "8595646210927": {
+   "name": "Caprio jablko liči nápoj 2 l",
+   "source": "makro"
+  },
+  "8595646210934": {
+   "name": "Caprio jablko limetka kaktus nápoj 2 l",
+   "source": "makro"
+  },
+  "8594008550152": {
+   "name": "Habánské sklepy Modrý Portugal jakostní 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594008550145": {
+   "name": "Habánské sklepy Modrý Portugal jakostní 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594008556352": {
+   "name": "Habánské sklepy Svatovavřinecké jakostní 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594008556017": {
+   "name": "Habánské sklepy Svatovavřinecké jakostní 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594008555317": {
+   "name": "Habánské sklepy Frankovka jakostní 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594008555515": {
+   "name": "Habánské sklepy Frankovka jakostní 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594008556253": {
+   "name": "Habánské sklepy Zweigeltrebe jakostní 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594008556260": {
+   "name": "Habánské sklepy Zweigeltrebe jakostní 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594008553566": {
+   "name": "Habánské sklepy Rulandské modré jakostní 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594008553559": {
+   "name": "Habánské sklepy Rulandské modré jakostní 6 x 750 ml",
+   "source": "makro"
+  },
+  "8595072615235": {
+   "name": "Dr. Oetker Dr.O. Želatin.Ztužovač 50 g ",
+   "source": "makro"
+  },
+  "8593837226689": {
+   "name": "BASK Knedlíky bramborové 400 g",
+   "source": "makro"
+  },
+  "8593837243631": {
+   "name": "BASK Knedlíky bramborové 400 g",
+   "source": "makro"
+  },
+  "8593837243518": {
+   "name": "BASK TĚSTO BRAMBOROVÉ 400g",
+   "source": "makro"
+  },
+  "8593837226696": {
+   "name": "BASK TĚSTO BRAMBOROVÉ 400g",
+   "source": "makro"
+  },
+  "8593807519100": {
+   "name": "OLMA Klasik jogurt bílý 2,7% 150 g",
+   "source": "makro"
+  },
+  "8594002783006": {
+   "name": "MLÉKÁRNA KUNÍN Smetana 31% chlaz. 200 g",
+   "source": "makro"
+  },
+  "8594002788308": {
+   "name": "MLÉKÁRNA KUNÍN Smetana 31% chlaz. 200 g",
+   "source": "makro"
+  },
+  "38594002788880": {
+   "name": "MLÉKÁRNA KUNÍN Mléko 3,5 % trvanlivé 12 x 1 l",
+   "source": "makro"
+  },
+  "8594002780449": {
+   "name": "MLÉKÁRNA KUNÍN Mléko polotučné 1,5 % trvanlivé 4 x 1 l",
+   "source": "makro"
+  },
+  "8594002780081": {
+   "name": "MLÉKÁRNA KUNÍN Mléko polotučné 1,5 % trvanlivé 4 x 1 l",
+   "source": "makro"
+  },
+  "8594002780784": {
+   "name": "MLÉKÁRNA KUNÍN Mléko trvanlivé 1,5% 1 l",
+   "source": "makro"
+  },
+  "8594002780432": {
+   "name": "MLÉKÁRNA KUNÍN Mléko trvanlivé 1,5% 1 l",
+   "source": "makro"
+  },
+  "8594002780418": {
+   "name": "MLÉKÁRNA KUNÍN Mléko trvanlivé 1,5% 1 l",
+   "source": "makro"
+  },
+  "58584004030005": {
+   "name": "SEDITA Mila řezy 50 g",
+   "source": "makro"
+  },
+  "5901067475150": {
+   "name": "KUBÍK Waterrr citron 500 ml",
+   "source": "makro"
+  },
+  "5901067461153": {
+   "name": "KUBÍK Waterr 0,5L Z.Jablko",
+   "source": "makro"
+  },
+  "5901067474153": {
+   "name": "KUBÍK Waterrr jahoda 500 ml",
+   "source": "makro"
+  },
+  "8586010871202": {
+   "name": "KUBÍK Waterrr jahoda 500 ml",
+   "source": "makro"
+  },
+  "5901067400466": {
+   "name": "KUBÍK Waterrr malina 500 ml",
+   "source": "makro"
+  },
+  "5901067499828": {
+   "name": "KUBÍK Waterrr malina 500 ml",
+   "source": "makro"
+  },
+  "5901067475273": {
+   "name": "KUBÍK Waterrr hruška 500 ml",
+   "source": "makro"
+  },
+  "8595646203851": {
+   "name": "KUBÍK Waterr 0,5L Sum.Meloun",
+   "source": "makro"
+  },
+  "8595646203899": {
+   "name": "KUBÍK Waterr 0,5L Sum.Mango",
+   "source": "makro"
+  },
+  "8595646201390": {
+   "name": "KUBÍK Waterrr višeň 500 ml",
+   "source": "makro"
+  },
+  "6410107400414": {
+   "name": "BONB.TUTTI FRUTTI 15g",
+   "source": "makro"
+  },
+  "6420256404218": {
+   "name": "Tutti Frutti srdce bonbóny 48 x 15 g",
+   "source": "makro"
+  },
+  "8595134500226": {
+   "name": "VÁŽKA Standard cigaretové papírky 100 ks",
+   "source": "makro"
+  },
+  "8595134500219": {
+   "name": "VÁŽKA Standard cigaretové papírky 100 ks",
+   "source": "makro"
+  },
+  "8595134500134": {
+   "name": "VÁŽKA Standard cigaretové papírky 100 ks",
+   "source": "makro"
+  },
+  "8586011330319": {
+   "name": "RAJEC Ochucený mateřídouška 1,5 l",
+   "source": "makro"
+  },
+  "8586011330357": {
+   "name": "RAJEC Ochucený pampeliška 1,5 l",
+   "source": "makro"
+  },
+  "8586011331095": {
+   "name": "RAJEC Ochucený brusinka 1,5 l",
+   "source": "makro"
+  },
+  "8586011331644": {
+   "name": "RAJEC Voda ochucená bezový květ 1,5 l",
+   "source": "makro"
+  },
+  "8586011331668": {
+   "name": "RAJEC Voda ochucená bezový květ 1,5 l",
+   "source": "makro"
+  },
+  "8594001402670": {
+   "name": "DOBRÁ VODA Perlivá 1,5 l",
+   "source": "makro"
+  },
+  "8594001400041": {
+   "name": "DOBRÁ VODA Perlivá 1,5 l",
+   "source": "makro"
+  },
+  "8594001402663": {
+   "name": "DOBRÁ VODA Neperlivá 1,5 l",
+   "source": "makro"
+  },
+  "8594001400034": {
+   "name": "DOBRÁ VODA Neperlivá 1,5 l",
+   "source": "makro"
+  },
+  "8594001400775": {
+   "name": "DOBRÁ VODA jemně perlivá 1,5 l",
+   "source": "makro"
+  },
+  "8594001402687": {
+   "name": "DOBRÁ VODA jemně perlivá 1,5 l",
+   "source": "makro"
+  },
+  "18595002012100": {
+   "name": "Danone Actimel jogurtové mléko jahoda chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "18595002004051": {
+   "name": "Danone Actimel jogurtové mléko jahoda chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "8595002055445": {
+   "name": "Danone Actimel jogurtové mléko jahoda chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "8595002100268": {
+   "name": "Danone Actimel jogurtové mléko jahoda chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "8595002033320": {
+   "name": "Danone Actimel jogurtové mléko jahoda chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "18595002012094": {
+   "name": "Danone Actimel Jogurtové mléko lesní plody chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "8595002055599": {
+   "name": "Danone Actimel Jogurtové mléko lesní plody chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "8595002011137": {
+   "name": "Danone Actimel Jogurtové mléko lesní plody chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "8595002101210": {
+   "name": "Danone Actimel Jogurtové mléko lesní plody chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "8595002100220": {
+   "name": "Danone Actimel Jogurtové mléko lesní plody chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "8595002101050": {
+   "name": "Danone Actimel Jogurtové mléko lesní plody chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "15410146410588": {
+   "name": "Danone Actimel Jogurtové mléko lesní plody chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "18590020044027": {
+   "name": "Danone Actimel Jogurtové mléko lesní plody chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "18595002027326": {
+   "name": "Danone Actimel Jogurtové mléko lesní plody chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "5997536112558": {
+   "name": "Danone Actimel Jogurtové mléko lesní plody chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "5990031647006": {
+   "name": "Danone Actimel Jogurtové mléko lesní plody chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "8595002100749": {
+   "name": "Danone Actimel Jogurtové mléko lesní plody chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "5410146410581": {
+   "name": "Danone Actimel Jogurtové mléko lesní plody chlaz. 3 x (8 x 100 g)",
+   "source": "makro"
+  },
+  "25990031646973": {
+   "name": "Danone Actimel jahoda granátové jablko chlaz. 3 x (8 x 100 ml)",
+   "source": "makro"
+  },
+  "5990031646979": {
+   "name": "Danone Actimel jahoda granátové jablko chlaz. 3 x (8 x 100 ml)",
+   "source": "makro"
+  },
+  "8594005011298": {
+   "name": "BOŽKOV Vodka 37,5 % 14 x 200 ml",
+   "source": "makro"
+  },
+  "8593868002030": {
+   "name": "BRANÍK světlé výčepní pivo 6 x 2 l",
+   "source": "makro"
+  },
+  "5998817526613": {
+   "name": "BRANÍK světlé výčepní pivo 6 x 2 l",
+   "source": "makro"
+  },
+  "5998817526606": {
+   "name": "BRANÍK světlé výčepní pivo 6 x 2 l",
+   "source": "makro"
+  },
+  "8593868002047": {
+   "name": "BRANÍK světlé výčepní pivo 6 x 2 l",
+   "source": "makro"
+  },
+  "5060166692605": {
+   "name": "MONSTER Energy energetický nápoj 500 ml plech",
+   "source": "makro"
+  },
+  "5060335633590": {
+   "name": "MONSTER The Doctor energetický nápoj 500 ml plech",
+   "source": "makro"
+  },
+  "5060896627144": {
+   "name": "MONSTER The Doctor energetický nápoj 500 ml plech",
+   "source": "makro"
+  },
+  "28586000132478": {
+   "name": "JUBILEJNÁ Hruška s medem 30 % 6 x 700 ml",
+   "source": "makro"
+  },
+  "8586000132474": {
+   "name": "JUBILEJNÁ Hruška s medem 30 % 6 x 700 ml",
+   "source": "makro"
+  },
+  "8594060910017": {
+   "name": "RAMILL Pš.Mouka 1Kg Hladká",
+   "source": "makro"
+  },
+  "8594060910031": {
+   "name": "RAMILL Pš.Mouka 1Kg Hrubá",
+   "source": "makro"
+  },
+  "8594060910048": {
+   "name": "RAMILL Pš.Mouka 1Kg Polohr.",
+   "source": "makro"
+  },
+  "8594001406203": {
+   "name": "DOBRÁ VODA Ochucená bílé hrozny 1,5 l",
+   "source": "makro"
+  },
+  "8594001406036": {
+   "name": "DOBRÁ VODA Ochucená malina 1,5 l",
+   "source": "makro"
+  },
+  "3412247020234": {
+   "name": "DOBRÁ VODA Ochucená pomeranč 1,5 l",
+   "source": "makro"
+  },
+  "8594001400645": {
+   "name": "DOBRÁ VODA Ochucená pomeranč 1,5 l",
+   "source": "makro"
+  },
+  "8594001406814": {
+   "name": "DOBRÁ VODA Ochucená jahoda 1,5 l",
+   "source": "makro"
+  },
+  "8594001406753": {
+   "name": "DOBRÁ VODA Ochucená lesní plody 1,5 l",
+   "source": "makro"
+  },
+  "8594001400553": {
+   "name": "DOBRÁ VODA Ochucená citron 1,5 l",
+   "source": "makro"
+  },
+  "8594001407798": {
+   "name": "DOBRÁ VODA Ochucená jahoda malina 1,5 l",
+   "source": "makro"
+  },
+  "20099038444379": {
+   "name": "DOBRÁ VODA Och 1,5L Nep.Mandar.",
+   "source": "makro"
+  },
+  "8594001406784": {
+   "name": "DOBRÁ VODA Och 1,5L Nep.Mandar.",
+   "source": "makro"
+  },
+  "8594001405886": {
+   "name": "DOBRÁ VODA Och 1,5L Nep.Bezinka",
+   "source": "makro"
+  },
+  "20052216481269": {
+   "name": "DOBRÁ VODA Och 1,5L Nep.Bezinka",
+   "source": "makro"
+  },
+  "8594060910185": {
+   "name": "BABIČČINA VOLBA Pš.Mouka 1Kg Hladká",
+   "source": "makro"
+  },
+  "8594060910192": {
+   "name": "BABIČČINA VOLBA Pš.Mouka 1Kg Hrubá",
+   "source": "makro"
+  },
+  "8594060910208": {
+   "name": "BABIČČINA VOLBA Pš.Mouka 1Kg Polohr.",
+   "source": "makro"
+  },
+  "8594005014695": {
+   "name": "AMUNDSEN Melon/meloun 15 % 15 x 500 ml",
+   "source": "makro"
+  },
+  "8594005014688": {
+   "name": "AMUNDSEN Melon/meloun 15 % 15 x 500 ml",
+   "source": "makro"
+  },
+  "8593893766990": {
+   "name": "Zora Sojové řezy 50 g",
+   "source": "makro"
+  },
+  "8593893728271": {
+   "name": "Zora Sojové řezy 50 g",
+   "source": "makro"
+  },
+  "8594002880477": {
+   "name": "VÍNO MIKULOV Motýl Rulandské bílé jakostní 6 x 750 ml",
+   "source": "makro"
+  },
+  "20026600400006": {
+   "name": "VÍNO MIKULOV Motýl Rulandské bílé jakostní 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594002881023": {
+   "name": "VÍNO MIKULOV Motýl Rulandské bílé jakostní 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594000206941": {
+   "name": "HANÁCKÁ Vodka 37,5 % 15 x 500 ml",
+   "source": "makro"
+  },
+  "8594000206934": {
+   "name": "HANÁCKÁ Vodka 37,5 % 15 x 500 ml",
+   "source": "makro"
+  },
+  "8595005001029": {
+   "name": "SOLNÉ MLÝNY Sůl Kamen.1Kg",
+   "source": "makro"
+  },
+  "8595005013053": {
+   "name": "SOLNÉ MLÝNY Sůl Kamen.1Kg",
+   "source": "makro"
+  },
+  "8595005003849": {
+   "name": "SOLNÉ MLÝNY Sůl Kamen.1Kg",
+   "source": "makro"
+  },
+  "8595005001043": {
+   "name": "SOLNÉ MLÝNY Sůl Kamen.1Kg",
+   "source": "makro"
+  },
+  "8594003845659": {
+   "name": "TOP TOPIC Limonáda hrozen 1,5 l",
+   "source": "makro"
+  },
+  "8595231213920": {
+   "name": "TOP TOPIC Limonáda hrozen 1,5 l",
+   "source": "makro"
+  },
+  "8595231203723": {
+   "name": "TOP TOPIC Limonáda hrozen 1,5 l",
+   "source": "makro"
+  },
+  "8594003848407": {
+   "name": "TOP TOPIC Limonáda malina 1,5 l",
+   "source": "makro"
+  },
+  "8595231206724": {
+   "name": "TOP TOPIC Limonáda malina 1,5 l",
+   "source": "makro"
+  },
+  "8595231213951": {
+   "name": "TOP TOPIC Limonáda malina 1,5 l",
+   "source": "makro"
+  },
+  "8595231222793": {
+   "name": "TOP TOPIC Mango 1,5 l",
+   "source": "makro"
+  },
+  "8595231222809": {
+   "name": "TOP TOPIC Mango 1,5 l",
+   "source": "makro"
+  },
+  "8594003845642": {
+   "name": "RC Cola 1,5 l",
+   "source": "makro"
+  },
+  "8595231203716": {
+   "name": "RC Cola 1,5 l",
+   "source": "makro"
+  },
+  "8594009921579": {
+   "name": "KRUŠOVICE Královský ležák Pivo 1,5 l",
+   "source": "makro"
+  },
+  "8594009921562": {
+   "name": "KRUŠOVICE Královský ležák Pivo 1,5 l",
+   "source": "makro"
+  },
+  "8594009923207": {
+   "name": "KRUŠOVICE Královský ležák Pivo 1,5 l",
+   "source": "makro"
+  },
+  "8594009924785": {
+   "name": "KRUŠOVICE Královský ležák Pivo 1,5 l",
+   "source": "makro"
+  },
+  "8594009923191": {
+   "name": "KRUŠOVICE Královský ležák Pivo 1,5 l",
+   "source": "makro"
+  },
+  "8594009924778": {
+   "name": "KRUŠOVICE Královský ležák Pivo 1,5 l",
+   "source": "makro"
+  },
+  "8594404005560": {
+   "name": "Gambrinus Original 10 pivo 24 x 500 ml plech",
+   "source": "makro"
+  },
+  "8594404008684": {
+   "name": "Gambrinus Original 10 pivo 24 x 500 ml plech",
+   "source": "makro"
+  },
+  "8594001406234": {
+   "name": "DOBRÁ VODA Neperlivá 2 l",
+   "source": "makro"
+  },
+  "8594071650292": {
+   "name": "MARLENKA medové kuličky 235 g",
+   "source": "makro"
+  },
+  "8594071650308": {
+   "name": "MARLENKA kakaové kuličky 235 g",
+   "source": "makro"
+  },
+  "8594071650896": {
+   "name": "MARLENKA Medové kuličky bezlepkové 235 g",
+   "source": "makro"
+  },
+  "8594003845987": {
+   "name": "KOFOLA 1,5L Original",
+   "source": "makro"
+  },
+  "8595231204478": {
+   "name": "KOFOLA 1,5L Original",
+   "source": "makro"
+  },
+  "8595231222854": {
+   "name": "KOFOLA 1,5L Original",
+   "source": "makro"
+  },
+  "8595231222878": {
+   "name": "KOFOLA 1,5L Original",
+   "source": "makro"
+  },
+  "8595231223417": {
+   "name": "kofola Nulka 1,5 l",
+   "source": "makro"
+  },
+  "8595231223394": {
+   "name": "kofola Nulka 1,5 l",
+   "source": "makro"
+  },
+  "8594005016453": {
+   "name": "AMUNDSEN Peach/broskev 15 % 15 x 500 ml",
+   "source": "makro"
+  },
+  "8594005016460": {
+   "name": "AMUNDSEN Peach/broskev 15 % 15 x 500 ml",
+   "source": "makro"
+  },
+  "7622300786632": {
+   "name": "Milka Chocominis 24 x 37,5 g",
+   "source": "makro"
+  },
+  "8594005016767": {
+   "name": "BOŽKOV Peprmint 19 % 15 x 500 ml",
+   "source": "makro"
+  },
+  "8594005016750": {
+   "name": "BOŽKOV Peprmint 19 % 15 x 500 ml",
+   "source": "makro"
+  },
+  "8594003215131": {
+   "name": "Choceňská mlékárna jogurt smetanový Mix 150 g",
+   "source": "makro"
+  },
+  "8594003214646": {
+   "name": "Choceňská mlékárna jogurt smetanový čokoláda oříšky chlaz. 150 g",
+   "source": "makro"
+  },
+  "8594003215001": {
+   "name": "Choceňská mlékárna jogurt smetanový čokoláda oříšky chlaz. 150 g",
+   "source": "makro"
+  },
+  "8594003214592": {
+   "name": "Choceňská mlékárna Jogurt smetanový jahoda chlaz. 150 g",
+   "source": "makro"
+  },
+  "8594003214998": {
+   "name": "Choceňská mlékárna Jogurt smetanový jahoda chlaz. 150 g",
+   "source": "makro"
+  },
+  "8594003214615": {
+   "name": "Choceňská mlékárna Jogurt smetanový borůvka chlaz. 150 g",
+   "source": "makro"
+  },
+  "8594003214974": {
+   "name": "Choceňská mlékárna Jogurt smetanový borůvka chlaz. 150 g",
+   "source": "makro"
+  },
+  "8594003214578": {
+   "name": "Choceňská mlékarna Choc.Smet.Jogurt 150 g Bro.",
+   "source": "makro"
+  },
+  "8594003214981": {
+   "name": "Choceňská mlékarna Choc.Smet.Jogurt 150 g Bro.",
+   "source": "makro"
+  },
+  "8594003216305": {
+   "name": "Choceňská mlékárna jogurt smetanový čokoládový chlaz. 150 g",
+   "source": "makro"
+  },
+  "8594003214653": {
+   "name": "Choceňská mlékárna jogurt smetanový čokoládový chlaz. 150 g",
+   "source": "makro"
+  },
+  "8594047136225": {
+   "name": "Choceňský Jogurt smetanový Mix I chlaz. 150 g",
+   "source": "makro"
+  },
+  "8594047136249": {
+   "name": "Choceňský Jogurt smetanový Mix II chlaz. 150 g",
+   "source": "makro"
+  },
+  "8594003219627": {
+   "name": "Choceňská mlékárna Jogurt smetanový mango chlaz. 150 g",
+   "source": "makro"
+  },
+  "8594057637095": {
+   "name": "Caprio Hustý jahoda 700 ml",
+   "source": "makro"
+  },
+  "8594057637071": {
+   "name": "Caprio Hustý malina 700 ml",
+   "source": "makro"
+  },
+  "8594057637552": {
+   "name": "Caprio Hustý pomeranč 700 ml",
+   "source": "makro"
+  },
+  "8594057637538": {
+   "name": "Caprio Hustý jablko 700 ml",
+   "source": "makro"
+  },
+  "8594057638702": {
+   "name": "Caprio Hustý lesní ovoce 700 ml",
+   "source": "makro"
+  },
+  "8594057639945": {
+   "name": "Caprio Hustý mango 700 ml",
+   "source": "makro"
+  },
+  "8595646210644": {
+   "name": "Caprio Hustý Aloe Vera 700 ml",
+   "source": "makro"
+  },
+  "8586002549874": {
+   "name": "BOŽKOV Original 37,5 % 12 x (20 x 40 ml)",
+   "source": "makro"
+  },
+  "8586002549867": {
+   "name": "BOŽKOV Original 37,5 % 12 x (20 x 40 ml)",
+   "source": "makro"
+  },
+  "8586002549843": {
+   "name": "BOŽKOV Vodka 37,5 % 12 x (20 x 40 ml)",
+   "source": "makro"
+  },
+  "8586002549836": {
+   "name": "BOŽKOV Vodka 37,5 % 12 x (20 x 40 ml)",
+   "source": "makro"
+  },
+  "8595231219380": {
+   "name": "Jupík Aqua jahoda 500 ml",
+   "source": "makro"
+  },
+  "8594003843822": {
+   "name": "Jupík Aqua jahoda 500 ml",
+   "source": "makro"
+  },
+  "8595231219373": {
+   "name": "Jupík Aqua jahoda 500 ml",
+   "source": "makro"
+  },
+  "8595231201729": {
+   "name": "Jupík Aqua jahoda 500 ml",
+   "source": "makro"
+  },
+  "8595231201743": {
+   "name": "Jupík Aqua jablko 500 ml",
+   "source": "makro"
+  },
+  "8595231219397": {
+   "name": "Jupík Aqua jablko 500 ml",
+   "source": "makro"
+  },
+  "8595231219403": {
+   "name": "Jupík Aqua jablko 500 ml",
+   "source": "makro"
+  },
+  "8594003843808": {
+   "name": "Jupík Aqua jablko 500 ml",
+   "source": "makro"
+  },
+  "8595231219458": {
+   "name": "Jupík Aqua malina 500 ml",
+   "source": "makro"
+  },
+  "8594003847684": {
+   "name": "Jupík Aqua malina 500 ml",
+   "source": "makro"
+  },
+  "8595231219465": {
+   "name": "Jupík Aqua malina 500 ml",
+   "source": "makro"
+  },
+  "8595231205857": {
+   "name": "Jupík Aqua malina 500 ml",
+   "source": "makro"
+  },
+  "8595231214095": {
+   "name": "Jupík Aqua malina 500 ml",
+   "source": "makro"
+  },
+  "8595231219502": {
+   "name": "JUPÍK Aqua 0,5L Pomeranč",
+   "source": "makro"
+  },
+  "8595231219496": {
+   "name": "JUPÍK Aqua 0,5L Pomeranč",
+   "source": "makro"
+  },
+  "8594002880101": {
+   "name": "VÍNO MIKULOV Motýl Ryzlink vlašský 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594002880385": {
+   "name": "VÍNO MIKULOV Motýl Ryzlink vlašský 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594002881061": {
+   "name": "VÍNO MIKULOV Motýl Ryzlink vlašský 6 x 750 ml",
+   "source": "makro"
+  },
+  "15099873128425": {
+   "name": "JACK DANIEL'S Tennessee Honey 35% 12 x 1 l",
+   "source": "makro"
+  },
+  "5099873046968": {
+   "name": "JACK DANIEL'S Tennessee Honey 35% 12 x 1 l",
+   "source": "makro"
+  },
+  "9120026525286": {
+   "name": "Cheers! Víno červené ovocné 12 x 1 l",
+   "source": "makro"
+  },
+  "8594026121051": {
+   "name": "LE & CO Anglická slanina Shaved plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594404001302": {
+   "name": "BIRELL Světlý Pivo nealkoholické 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594000241614": {
+   "name": "BIRELL Světlý Pivo nealkoholické 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404000947": {
+   "name": "BIRELL Světlý Pivo nealkoholické 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594057631963": {
+   "name": "River Tonic 6 x 2 l PET",
+   "source": "makro"
+  },
+  "8594003970078": {
+   "name": "River Tonic 6 x 2 l PET",
+   "source": "makro"
+  },
+  "8594003970191": {
+   "name": "River Tonic 6 x 2 l PET",
+   "source": "makro"
+  },
+  "8595165215397": {
+   "name": "River Tonic 6 x 2 l PET",
+   "source": "makro"
+  },
+  "8594057633325": {
+   "name": "River Ginger Ale 6 x 2 l",
+   "source": "makro"
+  },
+  "8594026127008": {
+   "name": "LE & CO Šunka pro děti výběrová plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594026121020": {
+   "name": "LE & CO Šunka Bohemia výběrová plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594026121488": {
+   "name": "LE & CO Šunka kuřecí zauzená výběrová chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594026122072": {
+   "name": "LE & CO Šunka krůtí pro děti výběrová plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594026124632": {
+   "name": "LE & CO Šunka pro děti nejvyšší jakosti plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594026124830": {
+   "name": "LE & CO Šunka nejvyšší jakosti plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594026123369": {
+   "name": "LE & CO Šunka nejvyšší jakosti plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594026124649": {
+   "name": "LE & CO Kuřecí šunka pro děti nejvyšší jakost plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594026123079": {
+   "name": "LE & CO Šunka Zvonařka nejvyšší jakosti plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594007480887": {
+   "name": "Kmotr Vysočina salám plátky chlaz. 75 g",
+   "source": "makro"
+  },
+  "8594007480849": {
+   "name": "Kmotr Poličan salám plátky chlaz. 75 g",
+   "source": "makro"
+  },
+  "8594007480870": {
+   "name": "Kmotr Herkules salám plátky chlaz. 75 g",
+   "source": "makro"
+  },
+  "8594007480856": {
+   "name": "Kmotr Paprikáš salám plátky chlaz. 75 g",
+   "source": "makro"
+  },
+  "8594007480719": {
+   "name": "Kmotr Lovecký salám plátky chlaz. 75 g",
+   "source": "makro"
+  },
+  "8594007480863": {
+   "name": "Kmotr Duo salám plátky chlaz. 75 g",
+   "source": "makro"
+  },
+  "8594007487633": {
+   "name": "Kmotr Selský salám plátky chlaz. 75 g",
+   "source": "makro"
+  },
+  "8594007480313": {
+   "name": "Kmotr Salám v pepři plátky chlaz. 75 g",
+   "source": "makro"
+  },
+  "8594007486834": {
+   "name": "Kmotr Salám Flamender plátky chlaz. 75 g",
+   "source": "makro"
+  },
+  "8593868003396": {
+   "name": "BRANÍK světlý ležák 11 pivo 6 x 2 l",
+   "source": "makro"
+  },
+  "8593868003402": {
+   "name": "BRANÍK světlý ležák 11 pivo 6 x 2 l",
+   "source": "makro"
+  },
+  "8593893788398": {
+   "name": "Orion Margot tyčinka 80 g",
+   "source": "makro"
+  },
+  "8593893727618": {
+   "name": "Orion Margot tyčinka 80 g",
+   "source": "makro"
+  },
+  "8593893761858": {
+   "name": "Orion Margot tyčinka 80 g",
+   "source": "makro"
+  },
+  "8594017310075": {
+   "name": "Vrbátky Cukr moučka 1 kg",
+   "source": "makro"
+  },
+  "8594002279172": {
+   "name": "adriana Bucatini semolinové těstoviny 500 g",
+   "source": "makro"
+  },
+  "8594002270704": {
+   "name": "adriana Bucatini semolinové těstoviny 500 g",
+   "source": "makro"
+  },
+  "8594002278656": {
+   "name": "adriana Funghetto Spirály semolinové těstoviny 500 g",
+   "source": "makro"
+  },
+  "8594002279165": {
+   "name": "adriana Funghetto Spirály semolinové těstoviny 500 g",
+   "source": "makro"
+  },
+  "8594002270506": {
+   "name": "adriana Špagety semolinové těstoviny 500 g",
+   "source": "makro"
+  },
+  "8594002279011": {
+   "name": "adriana Špagety semolinové těstoviny 500 g",
+   "source": "makro"
+  },
+  "8594002271169": {
+   "name": "adriana Farfalle semolinové těstoviny 500 g",
+   "source": "makro"
+  },
+  "8594001022427": {
+   "name": "MAGNESIA RED Voda minerální jemně perlivá malina 1,5 l",
+   "source": "makro"
+  },
+  "8594001022441": {
+   "name": "MAGNESIA RED jahoda 1,5 l",
+   "source": "makro"
+  },
+  "8594001028764": {
+   "name": "MAGNESIA RED Brusinka 1,5 l",
+   "source": "makro"
+  },
+  "8594001028528": {
+   "name": "MAGNESIA RED granátové jablko 1,5 l",
+   "source": "makro"
+  },
+  "8594001027095": {
+   "name": "MAGNESIA RED granátové jablko 1,5 l",
+   "source": "makro"
+  },
+  "8595723202227": {
+   "name": "MAGNESIA RED Červený pomeranč 1,5 l",
+   "source": "makro"
+  },
+  "8594404010311": {
+   "name": "RADEGAST Ryze hořká pivo 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404010304": {
+   "name": "RADEGAST Ryze hořká pivo 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594005012059": {
+   "name": "BOŽKOV Original 37,5 % 14 x 200 ml",
+   "source": "makro"
+  },
+  "8594005012042": {
+   "name": "BOŽKOV Original 37,5 % 14 x 200 ml",
+   "source": "makro"
+  },
+  "8000500036310": {
+   "name": "tic tac Mint/máta bonbóny 18 g",
+   "source": "makro"
+  },
+  "8000500039014": {
+   "name": "tic tac 18 g Orange",
+   "source": "makro"
+  },
+  "8594055961017": {
+   "name": "Medovina Zlatá 18% 12 x 500 ml",
+   "source": "makro"
+  },
+  "8594055960010": {
+   "name": "Medovina Zlatá 18% 12 x 500 ml",
+   "source": "makro"
+  },
+  "8594055960218": {
+   "name": "Medovina Zlatá 18% 12 x 500 ml",
+   "source": "makro"
+  },
+  "8000500033784": {
+   "name": "kinder čokoláda 20 x 50 g",
+   "source": "makro"
+  },
+  "8594003963803": {
+   "name": "milko Tvaroh tučný 250 g",
+   "source": "makro"
+  },
+  "8594405101933": {
+   "name": "BECHEROVKA 38% 12 x 500 ml",
+   "source": "makro"
+  },
+  "8594405101537": {
+   "name": "BECHEROVKA 38% 12 x 500 ml",
+   "source": "makro"
+  },
+  "18584004510004": {
+   "name": "SEDITA Vesna oplatky 50 g",
+   "source": "makro"
+  },
+  "18584004010719": {
+   "name": "SEDITA Vesna Oplatky 50 g Citronová",
+   "source": "makro"
+  },
+  "8595237401604": {
+   "name": "Gold Menu Bulgur 500 g",
+   "source": "makro"
+  },
+  "8594009924143": {
+   "name": "DESPERADOS Original Beer 24 x 500 ml",
+   "source": "makro"
+  },
+  "8594009922538": {
+   "name": "DESPERADOS Original Beer 24 x 500 ml",
+   "source": "makro"
+  },
+  "9028800727362": {
+   "name": "DESPERADOS Original Beer 24 x 500 ml",
+   "source": "makro"
+  },
+  "8586000986510": {
+   "name": "DESPERADOS Original Beer 24 x 500 ml",
+   "source": "makro"
+  },
+  "8594009922521": {
+   "name": "DESPERADOS Original Beer 24 x 500 ml",
+   "source": "makro"
+  },
+  "8594009924136": {
+   "name": "DESPERADOS Original Beer 24 x 500 ml",
+   "source": "makro"
+  },
+  "8586000986558": {
+   "name": "DESPERADOS Original Beer 24 x 500 ml",
+   "source": "makro"
+  },
+  "9028800627365": {
+   "name": "DESPERADOS Original Beer 24 x 500 ml",
+   "source": "makro"
+  },
+  "8586000988033": {
+   "name": "DESPERADOS Mojito Beer 24 x 500 ml",
+   "source": "makro"
+  },
+  "8594009924341": {
+   "name": "DESPERADOS Mojito Beer 24 x 500 ml",
+   "source": "makro"
+  },
+  "8586000986930": {
+   "name": "DESPERADOS Mojito Beer 24 x 500 ml",
+   "source": "makro"
+  },
+  "8586000986923": {
+   "name": "DESPERADOS Mojito Beer 24 x 500 ml",
+   "source": "makro"
+  },
+  "8586000988323": {
+   "name": "DESPERADOS Mojito Beer 24 x 500 ml",
+   "source": "makro"
+  },
+  "8594009924334": {
+   "name": "DESPERADOS Mojito Beer 24 x 500 ml",
+   "source": "makro"
+  },
+  "5900699110545": {
+   "name": "DESPERADOS Red 24 x 500 ml",
+   "source": "makro"
+  },
+  "8594009924716": {
+   "name": "DESPERADOS Red 24 x 500 ml",
+   "source": "makro"
+  },
+  "5900699110538": {
+   "name": "DESPERADOS Red 24 x 500 ml",
+   "source": "makro"
+  },
+  "8594009924709": {
+   "name": "DESPERADOS Red 24 x 500 ml",
+   "source": "makro"
+  },
+  "8595023706968": {
+   "name": "Chodura Šunka snídaňová standard plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8595023706814": {
+   "name": "Chodura Bohemia Šunka výběrová plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8595023706791": {
+   "name": "Chodura Šunka Excellent nejvyšší jakosti shaved chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594001028351": {
+   "name": "MAGNESIA RED malina 500 ml",
+   "source": "makro"
+  },
+  "8594001028368": {
+   "name": "MAGNESIA RED malina 500 ml",
+   "source": "makro"
+  },
+  "8594001027101": {
+   "name": "MAGNESIA RED granátové jablko 500 ml",
+   "source": "makro"
+  },
+  "8594001027118": {
+   "name": "MAGNESIA RED granátové jablko 500 ml",
+   "source": "makro"
+  },
+  "8594001028542": {
+   "name": "MAGNESIA RED granátové jablko 500 ml",
+   "source": "makro"
+  },
+  "8594010692635": {
+   "name": "DZ KLATOVY Párky jemné kuřecí chlaz. 250 g",
+   "source": "makro"
+  },
+  "8594404011288": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo světlé výčepní 24 x 550 ml plech",
+   "source": "makro"
+  },
+  "8586011330920": {
+   "name": "RAJEC Voda jemně perlivá 330 ml",
+   "source": "makro"
+  },
+  "8586011330425": {
+   "name": "RAJEC Voda neperlivá 330 ml",
+   "source": "makro"
+  },
+  "8586011331927": {
+   "name": "RAJEC Voda kojenecká 330 ml",
+   "source": "makro"
+  },
+  "8594005530454": {
+   "name": "KORUNNÍ Och 1,5L Citron",
+   "source": "makro"
+  },
+  "8595231213746": {
+   "name": "KORUNNÍ Och 1,5L Citron",
+   "source": "makro"
+  },
+  "8594005530485": {
+   "name": "KORUNNÍ Ochucená pomeranč 1,5 l",
+   "source": "makro"
+  },
+  "8595231213753": {
+   "name": "KORUNNÍ Ochucená pomeranč 1,5 l",
+   "source": "makro"
+  },
+  "8594005530546": {
+   "name": "KORUNNÍ Ochucená mango 1,5 l",
+   "source": "makro"
+  },
+  "8594005530935": {
+   "name": "KORUNNÍ Och 1,5L Bílé Hrozny",
+   "source": "makro"
+  },
+  "8594005530942": {
+   "name": "KORUNNÍ Och 1,5L Bílé Hrozny",
+   "source": "makro"
+  },
+  "8594005531437": {
+   "name": "KORUNNÍ Och 1,5L Malina",
+   "source": "makro"
+  },
+  "8594005532427": {
+   "name": "KORUNNÍ Och 1,5L Limeta/Máta",
+   "source": "makro"
+  },
+  "8595231214811": {
+   "name": "KORUNNÍ Ochucená meruňka 1,5 l",
+   "source": "makro"
+  },
+  "98590764004901": {
+   "name": "Vepřové sádlo kostky chlaz. váž. cca 1 kg",
+   "source": "makro"
+  },
+  "2890270000002": {
+   "name": "Vepřové sádlo kostky chlaz. váž. cca 1 kg",
+   "source": "makro"
+  },
+  "8594012795242": {
+   "name": "Giana Protlak rajčatový 10 x 140 g",
+   "source": "makro"
+  },
+  "3268840001008": {
+   "name": "CRISTALINE Voda neperlivá 500 ml",
+   "source": "makro"
+  },
+  "8000500189030": {
+   "name": "nutella 200 g",
+   "source": "makro"
+  },
+  "8595072600897": {
+   "name": "Dr. Oetker Dr.O.Prášek Do Perník.20 g ",
+   "source": "makro"
+  },
+  "5060896627281": {
+   "name": "MONSTER Mango Loco energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5060639121809": {
+   "name": "MONSTER Mango Loco energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5060896621241": {
+   "name": "MONSTER Juiced Monarch energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5060896627267": {
+   "name": "MONSTER Pipeline Punch energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5060896625324": {
+   "name": "MONSTER Energy Nitro energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5060896625737": {
+   "name": "MONSTER Lewis Hamilton Zero energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5060947549869": {
+   "name": "MONSTER Energy Zero energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5061013943956": {
+   "name": "MONSTER Juiced Aussie Style Lemonade energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5061013941853": {
+   "name": "MONSTER Rosa Ultra energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5056784900505": {
+   "name": "MONSTER Zero Strawberry/jahoda energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5056784907450": {
+   "name": "MONSTER Lando Norris Zero energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5056784908976": {
+   "name": "MONSTER Zero energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5056784912638": {
+   "name": "MONSTER Viking Berry sycený energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5056784912010": {
+   "name": "MONSTER Bad Apple 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5056784910733": {
+   "name": "MONSTER Ruby Red 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "8594057639556": {
+   "name": "Relax Víčko Jablko 100 % džus 24 x 250 ml",
+   "source": "makro"
+  },
+  "8594057639570": {
+   "name": "Relax Víčko Pomeranč 100 % džus 24 x 250 ml",
+   "source": "makro"
+  },
+  "8594057639594": {
+   "name": "Relax Víčko Meloun 20 % nápoj 24 x 250 ml",
+   "source": "makro"
+  },
+  "8594057639631": {
+   "name": "Relax Víčko Kaktus 40 % nápoj 24 x 250 ml",
+   "source": "makro"
+  },
+  "8594057639655": {
+   "name": "Relax Víčko Mango 25 % nápoj 24 x 250 ml",
+   "source": "makro"
+  },
+  "8595646200355": {
+   "name": "Relax Víčko Jahoda 25 % nápoj 24 x 250 ml",
+   "source": "makro"
+  },
+  "8595646203226": {
+   "name": "Relax Víčko Multivitamin 100 % 24 x 250 ml",
+   "source": "makro"
+  },
+  "8595646204575": {
+   "name": "Relax jablko pomeranč liči s víčkem 24 x 250 ml sklo",
+   "source": "makro"
+  },
+  "8594001400508": {
+   "name": "DOBRÁ VODA Neperlivá 500 ml",
+   "source": "makro"
+  },
+  "859400140058": {
+   "name": "DOBRÁ VODA Neperlivá 500 ml",
+   "source": "makro"
+  },
+  "85940014000508": {
+   "name": "DOBRÁ VODA Neperlivá 500 ml",
+   "source": "makro"
+  },
+  "85940014000515": {
+   "name": "DOBRÁ VODA Neperlivá 500 ml",
+   "source": "makro"
+  },
+  "8594001400799": {
+   "name": "DOBRÁ VODA jemně perlivá 500 ml",
+   "source": "makro"
+  },
+  "8594001400898": {
+   "name": "DOBRÁ VODA jemně perlivá 500 ml",
+   "source": "makro"
+  },
+  "8594404000121": {
+   "name": "Gambrinus Patron 12 pivo 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404012094": {
+   "name": "Gambrinus Patron 12 pivo 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8594404012100": {
+   "name": "Gambrinus Patron 12 pivo 20 x 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "3800020487655": {
+   "name": "KitKat Chunky Peanut 42 g",
+   "source": "makro"
+  },
+  "4000177162323": {
+   "name": "Capri-Sun Multivitamin 330 ml",
+   "source": "makro"
+  },
+  "4000177033722": {
+   "name": "Capri-Sun Multivitamin 330 ml",
+   "source": "makro"
+  },
+  "4000177172636": {
+   "name": "Capri-sun Kirsche 330 ml",
+   "source": "makro"
+  },
+  "4000177172667": {
+   "name": "Capri-Sun 0,33L Mango&Maracuja",
+   "source": "makro"
+  },
+  "4000177155448": {
+   "name": "Capri-Sun Orange/pomeranč & Peach/broskev 330 ml",
+   "source": "makro"
+  },
+  "8590014639133": {
+   "name": "HELLO Ovocná kapsa jahoda 12 x 100 g",
+   "source": "makro"
+  },
+  "8590014639102": {
+   "name": "HELLO Ovocná kapsa banán 12 x 100 g",
+   "source": "makro"
+  },
+  "8590014639126": {
+   "name": "HELLO Ovocná kapsa meruňka 12 x 100 g",
+   "source": "makro"
+  },
+  "8590014639119": {
+   "name": "HELLO Ovocná kapsa jablko 12 x 100 g",
+   "source": "makro"
+  },
+  "8590014639096": {
+   "name": "HELLO Ovocná kapsa broskev 12 x 100 g",
+   "source": "makro"
+  },
+  "8590014639089": {
+   "name": "HELLO Ovocná kapsa mango 12 x 100 g",
+   "source": "makro"
+  },
+  "8590014639461": {
+   "name": "HELLO Ovocná kapsa hruška 12 x 100 g",
+   "source": "makro"
+  },
+  "8594007487664": {
+   "name": "Kmotr Čertova klobása chlaz. 180 g",
+   "source": "makro"
+  },
+  "8594007487671": {
+   "name": "Kmotr Ohnivá klobása chlaz. 180 g",
+   "source": "makro"
+  },
+  "8594007487732": {
+   "name": "Kmotr Klobása s ořechy chlaz. 180 g",
+   "source": "makro"
+  },
+  "8594007480016": {
+   "name": "Kmotr Klobása Uherákova chlaz. 180 g",
+   "source": "makro"
+  },
+  "4067700015754": {
+   "name": "Jägermeister 35% 6 x 700 ml",
+   "source": "makro"
+  },
+  "4067700014931": {
+   "name": "Jägermeister 35% 6 x 700 ml",
+   "source": "makro"
+  },
+  "8594017310242": {
+   "name": "Vrbátky Cukr krystal 10 x 1 kg",
+   "source": "makro"
+  },
+  "8594017130154": {
+   "name": "Emco Vločky ovesné jemné 500 g",
+   "source": "makro"
+  },
+  "8594004231468": {
+   "name": "Emco Vločky ovesné 450 g",
+   "source": "makro"
+  },
+  "8594017144588": {
+   "name": "Emco Vločky ovesné s vlákninou 500 g",
+   "source": "makro"
+  },
+  "8594045603057": {
+   "name": "DELASHERAS Brick Trubičky kakao 150 g",
+   "source": "makro"
+  },
+  "8594045603071": {
+   "name": "DELASHERAS Brick Trubičky vanilka 150 g",
+   "source": "makro"
+  },
+  "8594045603095": {
+   "name": "DELASHERAS Brick Trubičky lískový oříšek 150 g",
+   "source": "makro"
+  },
+  "8594008040202": {
+   "name": "PEPSI Cola 6 x 2,25 l",
+   "source": "makro"
+  },
+  "8594008041865": {
+   "name": "PEPSI Cola 6 x 2,25 l",
+   "source": "makro"
+  },
+  "8595723300718": {
+   "name": "PEPSI Zero Lemon 6 x 2,25 ml",
+   "source": "makro"
+  },
+  "8595723300701": {
+   "name": "PEPSI Zero Lemon 6 x 2,25 ml",
+   "source": "makro"
+  },
+  "8595723300602": {
+   "name": "PEPSI Zero Cherry 6 x 2,25 ml",
+   "source": "makro"
+  },
+  "8595723300619": {
+   "name": "PEPSI Zero Cherry 6 x 2,25 ml",
+   "source": "makro"
+  },
+  "8595723301449": {
+   "name": "PEPSI Twist Lemon 6 x 2,25 l",
+   "source": "makro"
+  },
+  "8595723301494": {
+   "name": "PEPSI Twist Lemon 6 x 2,25 l",
+   "source": "makro"
+  },
+  "20092842565087": {
+   "name": "PEPSI Raspberry/malina 6 x 2,25 l",
+   "source": "makro"
+  },
+  "8595723301890": {
+   "name": "PEPSI Raspberry/malina 6 x 2,25 l",
+   "source": "makro"
+  },
+  "8595723301838": {
+   "name": "PEPSI Raspberry/malina 6 x 2,25 l",
+   "source": "makro"
+  },
+  "8594008359571": {
+   "name": "Pribináček dezert vanilka chlaz. 15 x 125 g",
+   "source": "makro"
+  },
+  "8594008359588": {
+   "name": "Pribináček dezert kakao chlaz. 15 x 125 g",
+   "source": "makro"
+  },
+  "8594008359618": {
+   "name": "Pribináček dezert vanilka-kakao chlaz. 15 x 125 g",
+   "source": "makro"
+  },
+  "8594008359595": {
+   "name": "Pribináček dezert smetanový chlaz. 15 x 125 g",
+   "source": "makro"
+  },
+  "3263288312365": {
+   "name": "JP. CHENET Merlot 6 x 750 ml",
+   "source": "makro"
+  },
+  "3263281740981": {
+   "name": "JP. CHENET Merlot 6 x 750 ml",
+   "source": "makro"
+  },
+  "20033758000002": {
+   "name": "JP. CHENET Merlot 6 x 750 ml",
+   "source": "makro"
+  },
+  "3263286328993": {
+   "name": "JP. CHENET Merlot 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594185450016": {
+   "name": "CASSONADE Třtinový cukr 500 g",
+   "source": "makro"
+  },
+  "4008400300313": {
+   "name": "Duplo bílé Oplatka s polevou z bílé čokolády a náplní 40 x 18,2 g",
+   "source": "makro"
+  },
+  "4008400304014": {
+   "name": "Duplo Oplatka s polevou z mléčné čokolády a náplní 40 x 18,2 g",
+   "source": "makro"
+  },
+  "5391516891530": {
+   "name": "TULLAMORE DEW 40 % 12 x 500 ml",
+   "source": "makro"
+  },
+  "5391516891523": {
+   "name": "TULLAMORE DEW 40 % 12 x 500 ml",
+   "source": "makro"
+  },
+  "8595241523132": {
+   "name": "Giana Fazole červené 6 x 425 ml",
+   "source": "makro"
+  },
+  "8595241523149": {
+   "name": "Giana Fazole v tomatové omáčce 6 x 425 ml",
+   "source": "makro"
+  },
+  "8595241523163": {
+   "name": "Giana Fazole v chilli omáčce 6 x 425 ml",
+   "source": "makro"
+  },
+  "8595241523170": {
+   "name": "Giana Fazole máslové bílé 6 x 425 ml",
+   "source": "makro"
+  },
+  "5060896627106": {
+   "name": "MONSTER Energy 553 ml plech",
+   "source": "makro"
+  },
+  "8594404012728": {
+   "name": "RADEGAST Rázná 10° pivo světlé výčepní 500 ml plech",
+   "source": "makro"
+  },
+  "8593894904131": {
+   "name": "OPAVIA Zlaté věnečky kakaové 12 x 150 g",
+   "source": "makro"
+  },
+  "8593894902861": {
+   "name": "OPAVIA Zlaté věnečky žloutkové 12 x 150 g",
+   "source": "makro"
+  },
+  "8593894904124": {
+   "name": "OPAVIA Zlaté věnečky žloutkové 12 x 150 g",
+   "source": "makro"
+  },
+  "8594002278984": {
+   "name": "Rosické těstoviny Kolínka bezvaječná 12 x 500 g",
+   "source": "makro"
+  },
+  "8594002278991": {
+   "name": "Rosické těstoviny Fleky zvlněné bezvaječné 12 x 500 g",
+   "source": "makro"
+  },
+  "8595568525703": {
+   "name": "Rosické těstoviny Vývrtky bezvaječné 10 x 500 g",
+   "source": "makro"
+  },
+  "8594003465123": {
+   "name": "Zátkovy těstoviny Kolínka malá vaječná 12 x 500 g",
+   "source": "makro"
+  },
+  "8593912015788": {
+   "name": "Zátkovy těstoviny Kolínka malá vaječná 12 x 500 g",
+   "source": "makro"
+  },
+  "8594003465147": {
+   "name": "Zátkovy těstoviny Penne vaječné 10 x 500 g",
+   "source": "makro"
+  },
+  "8593912015856": {
+   "name": "Zátkovy těstoviny Penne vaječné 10 x 500 g",
+   "source": "makro"
+  },
+  "8594003465161": {
+   "name": "Zátkovy těstoviny Nudle široké vaječné 10 x 500 g",
+   "source": "makro"
+  },
+  "8593912015832": {
+   "name": "Zátkovy těstoviny Nudle široké vaječné 10 x 500 g",
+   "source": "makro"
+  },
+  "8593912015870": {
+   "name": "Zátkovy těstoviny Špagety vaječné 24 x 500 g",
+   "source": "makro"
+  },
+  "8594003465178": {
+   "name": "Zátkovy těstoviny Špagety vaječné 24 x 500 g",
+   "source": "makro"
+  },
+  "8594003465116": {
+   "name": "Zátkovy těstoviny Fleky zvlněné vaječné 12 x 500 g",
+   "source": "makro"
+  },
+  "8593912015771": {
+   "name": "Zátkovy těstoviny Fleky zvlněné vaječné 12 x 500 g",
+   "source": "makro"
+  },
+  "8593912015795": {
+   "name": "Zátkovy těstoviny Vřetena vaječná 10 x 500 g",
+   "source": "makro"
+  },
+  "8594003465185": {
+   "name": "Zátkovy těstoviny Vřetena vaječná 10 x 500 g",
+   "source": "makro"
+  },
+  "8594005011939": {
+   "name": "AMUNDSEN 37,5 % 15 x 500 ml",
+   "source": "makro"
+  },
+  "8594005011922": {
+   "name": "AMUNDSEN 37,5 % 15 x 500 ml",
+   "source": "makro"
+  },
+  "8590014639287": {
+   "name": "HELLO Svačinka višeň 190 g sklo",
+   "source": "makro"
+  },
+  "8590014639249": {
+   "name": "HELLO Ovocná kapsa malina 12 x 100 g",
+   "source": "makro"
+  },
+  "8590014639256": {
+   "name": "HELLO Ovocná kapsa višeň 12 x 100 g",
+   "source": "makro"
+  },
+  "8594001021512": {
+   "name": "MATTONI Voda minerální perlivá 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594001021567": {
+   "name": "MATTONI Voda minerální perlivá 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594001024261": {
+   "name": "MATTONI Voda minerální perlivá 6 x 1,5 l",
+   "source": "makro"
+  },
+  "3017620690969": {
+   "name": "kinder Bueno 5 x 43 g",
+   "source": "makro"
+  },
+  "8000500059661": {
+   "name": "kinder Bueno 5 x 43 g",
+   "source": "makro"
+  },
+  "8593893744585": {
+   "name": "Orion ORION KOKO tyčinka 35 g",
+   "source": "makro"
+  },
+  "18593893000206": {
+   "name": "Orion ORION KOKO tyčinka 35 g",
+   "source": "makro"
+  },
+  "18593893110196": {
+   "name": "Orion Milena mléčná 32 g",
+   "source": "makro"
+  },
+  "18593893410258": {
+   "name": "Orion Milena mléčná 32 g",
+   "source": "makro"
+  },
+  "5900269201314": {
+   "name": "Droždí pekařské čerstvé chlaz. 24 x 42 g",
+   "source": "makro"
+  },
+  "4025500135614": {
+   "name": "Müllermilch mléčný nápoj s banánovou příchutí chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500135645": {
+   "name": "Müllermilch mléčný nápoj s jahodovou příchutí chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500204259": {
+   "name": "Müllermilch mléčný nápoj s příchutí lískový oříšek chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500293482": {
+   "name": "Müllermilch mléčný nápoj s příchutí lískový oříšek chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500132446": {
+   "name": "Müllermilch mléčný nápoj s pistáciovo-kokosovou příchutí chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500132477": {
+   "name": "Müllermilch mléčný nápoj s čokoládovou příchutí chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500239497": {
+   "name": "Müllermilch mléčný nápoj limitovaná edice chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500273156": {
+   "name": "Müllermilch mléčný nápoj limitovaná edice chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500278878": {
+   "name": "Müllermilch mléčný nápoj limitovaná edice chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500281762": {
+   "name": "Müllermilch mléčný nápoj limitovaná edice chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500228712": {
+   "name": "Müllermilch mléčný nápoj limitovaná edice chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500298241": {
+   "name": "Müllermilch mléčný nápoj limitovaná edice chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500257828": {
+   "name": "Müllermilch mléčný nápoj limitovaná edice chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500292621": {
+   "name": "Müllermilch mléčný nápoj limitovaná edice chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500294120": {
+   "name": "Müllermilch mléčný nápoj limitovaná edice chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500299392": {
+   "name": "Müllermilch mléčný nápoj limitovaná edice chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500289522": {
+   "name": "Müllermilch mléčný nápoj limitovaná edice chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500306533": {
+   "name": "Müllermilch mléčný nápoj limitovaná edice chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500253905": {
+   "name": "Müllermilch mléčný nápoj s příchutí čokoláda karamel cookie chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500262211": {
+   "name": "Müllermilch mléčný nápoj s příchutí kakaa chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500268121": {
+   "name": "Müllermilch mléčný nápoj s příchutí bílá čokoláda chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500292164": {
+   "name": "Müllermilch Party mléčný nápoj příchuť malina chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500292607": {
+   "name": "Müllermilch Mléčný nápoj bílá čokoláda makadamový ořech 400 g",
+   "source": "makro"
+  },
+  "4025500306519": {
+   "name": "Müllermilch Mléčný nápoj limitovaná edice II. chlaz. 400 g",
+   "source": "makro"
+  },
+  "4025500299415": {
+   "name": "Müllermilch Mléčný nápoj limitovaná edice II. chlaz. 400 g",
+   "source": "makro"
+  },
+  "5900862215701": {
+   "name": "MAGGI KOŘENÍ 160ml",
+   "source": "makro"
+  },
+  "8594001052776": {
+   "name": "STRONGBOW Cider Apple/jablko 440 ml multipack",
+   "source": "makro"
+  },
+  "8586000988095": {
+   "name": "STRONGBOW Cider Apple/jablko 440 ml multipack",
+   "source": "makro"
+  },
+  "8586000986381": {
+   "name": "STRONGBOW Cider Apple/jablko 440 ml multipack",
+   "source": "makro"
+  },
+  "8586000988385": {
+   "name": "STRONGBOW Cider Apple/jablko 440 ml multipack",
+   "source": "makro"
+  },
+  "8586000984493": {
+   "name": "STRONGBOW Cider Apple/jablko 440 ml multipack",
+   "source": "makro"
+  },
+  "8594001052769": {
+   "name": "STRONGBOW Cider Apple/jablko 440 ml multipack",
+   "source": "makro"
+  },
+  "8586000987005": {
+   "name": "STRONGBOW 0,44L Mp Dark Fruit",
+   "source": "makro"
+  },
+  "8586000988118": {
+   "name": "STRONGBOW 0,44L Mp Dark Fruit",
+   "source": "makro"
+  },
+  "8594001052752": {
+   "name": "STRONGBOW 0,44L Mp Dark Fruit",
+   "source": "makro"
+  },
+  "8586000984585": {
+   "name": "STRONGBOW 0,44L Mp Dark Fruit",
+   "source": "makro"
+  },
+  "8594001052745": {
+   "name": "STRONGBOW 0,44L Mp Dark Fruit",
+   "source": "makro"
+  },
+  "8586000988408": {
+   "name": "STRONGBOW 0,44L Mp Dark Fruit",
+   "source": "makro"
+  },
+  "8586000984530": {
+   "name": "STRONGBOW 0,44L Mp Redberries",
+   "source": "makro"
+  },
+  "8586000988101": {
+   "name": "STRONGBOW 0,44L Mp Redberries",
+   "source": "makro"
+  },
+  "8586000988392": {
+   "name": "STRONGBOW 0,44L Mp Redberries",
+   "source": "makro"
+  },
+  "8586000984523": {
+   "name": "STRONGBOW 0,44L Mp Redberries",
+   "source": "makro"
+  },
+  "8586000989368": {
+   "name": "STRONGBOW 0,44L Mp Tropical",
+   "source": "makro"
+  },
+  "8586000989351": {
+   "name": "STRONGBOW 0,44L Mp Tropical",
+   "source": "makro"
+  },
+  "8586028180143": {
+   "name": "STRONGBOW ananas granátové jablko 440 ml multipack",
+   "source": "makro"
+  },
+  "8586028180136": {
+   "name": "STRONGBOW ananas granátové jablko 440 ml multipack",
+   "source": "makro"
+  },
+  "8586028180112": {
+   "name": "STRONGBOW kiwi dračí ovoce 440 ml multipack",
+   "source": "makro"
+  },
+  "8586028180105": {
+   "name": "STRONGBOW kiwi dračí ovoce 440 ml multipack",
+   "source": "makro"
+  },
+  "8000500127544": {
+   "name": "kinder Bueno White Oplatka s bílou čokoládou 5 x 39 g",
+   "source": "makro"
+  },
+  "8593894904223": {
+   "name": "OPAVIA Club sušenky máslové 12 x 140 g",
+   "source": "makro"
+  },
+  "8595139713065": {
+   "name": "Znojmia Okur.7-9Cm 680 g ",
+   "source": "makro"
+  },
+  "8595198820575": {
+   "name": "R. JELÍNEK Moravská švestka 38 % 12 x 500 ml",
+   "source": "makro"
+  },
+  "8595198854181": {
+   "name": "R. JELÍNEK Moravská švestka 38 % 12 x 500 ml",
+   "source": "makro"
+  },
+  "18590074028028": {
+   "name": "Knorr Jíška hotová tmavá 16 x 250 g",
+   "source": "makro"
+  },
+  "8593837245666": {
+   "name": "Vitana Bujón slepičí 60 g",
+   "source": "makro"
+  },
+  "8593837247639": {
+   "name": "Vitana Bujón zeleninový 60 g",
+   "source": "makro"
+  },
+  "8593837245673": {
+   "name": "Vitana Bujón hovězí 60 g",
+   "source": "makro"
+  },
+  "8593837251353": {
+   "name": "Vitana Omáčka boloňská 75 g",
+   "source": "makro"
+  },
+  "8593837238149": {
+   "name": "Vitana Omáčka sýrová 41 g",
+   "source": "makro"
+  },
+  "8593837223480": {
+   "name": "Vitana Omáčka koprová 83 g",
+   "source": "makro"
+  },
+  "8595072627047": {
+   "name": "Dr. Oetker Aroma vanilka 38 ml",
+   "source": "makro"
+  },
+  "8593837860678": {
+   "name": "Vitana Omáčka svíčková 75 g",
+   "source": "makro"
+  },
+  "8593893767423": {
+   "name": "Orion Kaštany hořké 45 g",
+   "source": "makro"
+  },
+  "8593893767409": {
+   "name": "Orion Ledové kaštany Tyčinka v hořké čokoládě s náplní 45 g",
+   "source": "makro"
+  },
+  "8588003842435": {
+   "name": "Sunol olej slunečnicový 15 x 1 l",
+   "source": "makro"
+  },
+  "8588003371119": {
+   "name": "Strouhanka z pečiva 500 g",
+   "source": "makro"
+  },
+  "8593893738218": {
+   "name": "JOJO kyselé žížalky 80 g",
+   "source": "makro"
+  },
+  "8595646203547": {
+   "name": "NESTEA Ledový čaj citron 1,5 l",
+   "source": "makro"
+  },
+  "8595646203585": {
+   "name": "NESTEA Ledový čaj broskev 1,5 l",
+   "source": "makro"
+  },
+  "8595646203622": {
+   "name": "NESTEA Ledový čaj zelený citron 1,5 l ",
+   "source": "makro"
+  },
+  "8595646203660": {
+   "name": "NESTEA Ledový čaj Strawberry/jahoda 1,5 l",
+   "source": "makro"
+  },
+  "8595646204902": {
+   "name": "NESTEA Ledový čaj mango Pineapple/ananas 1,5 l",
+   "source": "makro"
+  },
+  "8595646207354": {
+   "name": "NESTEA Ledový čaj lesní ovoce 1,5 l",
+   "source": "makro"
+  },
+  "8595646212198": {
+   "name": "NESTEA Ledový čaj zelený Apple/jablko 1,5 l",
+   "source": "makro"
+  },
+  "6858400404010": {
+   "name": "Horalky Sedita 50 g",
+   "source": "makro"
+  },
+  "68584004040100": {
+   "name": "Horalky Sedita 50 g",
+   "source": "makro"
+  },
+  "8593868005994": {
+   "name": "BRANÍK Výčepní světlé pivo 24 x 550 ml plech",
+   "source": "makro"
+  },
+  "5060337500173": {
+   "name": "MONSTER Energy Ultra Zero sycený energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5060896627304": {
+   "name": "MONSTER Energy Ultra Zero sycený energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5056784902806": {
+   "name": "MONSTER Rio Punch energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "5056784900819": {
+   "name": "MONSTER Peachy Keen energetický nápoj 12 x 500 ml plech",
+   "source": "makro"
+  },
+  "8594001401598": {
+   "name": "DOBRÁ VODA Jemně perlivá 250 ml",
+   "source": "makro"
+  },
+  "8594001401536": {
+   "name": "DOBRÁ VODA Neperlivá 250 ml",
+   "source": "makro"
+  },
+  "8594001401529": {
+   "name": "DOBRÁ VODA Neperlivá 250 ml",
+   "source": "makro"
+  },
+  "8595606207417": {
+   "name": "Bohemia Křupky arašídové 100 g",
+   "source": "makro"
+  },
+  "8594009923238": {
+   "name": "KRUŠOVICE Pivo světlý ležák 12° 24 x 500 ml plech",
+   "source": "makro"
+  },
+  "8594009923221": {
+   "name": "KRUŠOVICE Pivo světlý ležák 12° 24 x 500 ml plech",
+   "source": "makro"
+  },
+  "7622201123055": {
+   "name": "OPAVIA Disko Kak.S Mléč.N. 169 g",
+   "source": "makro"
+  },
+  "8594008048369": {
+   "name": "PEPSI Zero Sugar 6 x 2,25 l",
+   "source": "makro"
+  },
+  "8594008045214": {
+   "name": "PEPSI Zero Sugar 6 x 2,25 l",
+   "source": "makro"
+  },
+  "4014400923377": {
+   "name": "TOFFIFEE 125G Akč.Bal.",
+   "source": "makro"
+  },
+  "8594017310266": {
+   "name": "Vrbátky Cukr krupice 10 x 1 kg",
+   "source": "makro"
+  },
+  "18594001698629": {
+   "name": "Hamé Džem Rybíz 260 g",
+   "source": "makro"
+  },
+  "4067700026392": {
+   "name": "Jägermeister 35 % 500 ml",
+   "source": "makro"
+  },
+  "4067700015761": {
+   "name": "Jägermeister 35 % 500 ml",
+   "source": "makro"
+  },
+  "4740098094494": {
+   "name": "Le COQ Mojito 4,7% 330 ml",
+   "source": "makro"
+  },
+  "4740098094975": {
+   "name": "Le COQ Mojito 4,7% 330 ml",
+   "source": "makro"
+  },
+  "4740098094500": {
+   "name": "Le COQ Blue Lagoon 4,7 % 330 ml",
+   "source": "makro"
+  },
+  "4740098094951": {
+   "name": "Le COQ Blue Lagoon 4,7 % 330 ml",
+   "source": "makro"
+  },
+  "8594003463662": {
+   "name": "Rosice Vřetena Bezvaj. 500G",
+   "source": "makro"
+  },
+  "8594003463709": {
+   "name": "Rosice Vlas.Nudle Bezv.500G",
+   "source": "makro"
+  },
+  "8594002272494": {
+   "name": "adriana Těstoviny vřetena torti semolinové 500 g",
+   "source": "makro"
+  },
+  "8594002271800": {
+   "name": "adriana Těstoviny kolena semolinové 500 g",
+   "source": "makro"
+  },
+  "8594002278557": {
+   "name": "adriana Těstoviny penne semolinové 500 g",
+   "source": "makro"
+  },
+  "8594003464591": {
+   "name": "adriana Těstoviny vřetena semolinové 2 minuty 500 g",
+   "source": "makro"
+  },
+  "8594002274085": {
+   "name": "adriana Těstoviny vřetena semolinové 2 minuty 500 g",
+   "source": "makro"
+  },
+  "4820060040022": {
+   "name": "Olej Majola slunečnicový 1 l",
+   "source": "makro"
+  },
+  "4820060040060": {
+   "name": "Olej Majola slunečnicový 1 l",
+   "source": "makro"
+  },
+  "8594008276748": {
+   "name": "LUČINA TERMIZOVANÁ 62,5g",
+   "source": "makro"
+  },
+  "8000500176726": {
+   "name": "tic tac Bonbóny Strawberry/jahoda 18 g",
+   "source": "makro"
+  },
+  "7613035511743": {
+   "name": "KitKat 4F bílý 41,5 g",
+   "source": "makro"
+  },
+  "8445290552181": {
+   "name": "KitKat 4F bílý 41,5 g",
+   "source": "makro"
+  },
+  "8594008277929": {
+   "name": "Pribináček Kapsík jahoda chlaz. 70 g",
+   "source": "makro"
+  },
+  "48594008278146": {
+   "name": "Pribináček Kapsík jahoda chlaz. 70 g",
+   "source": "makro"
+  },
+  "8594008277509": {
+   "name": "Pribináček Kapsík vanilka chlaz. 70 g",
+   "source": "makro"
+  },
+  "88594008278144": {
+   "name": "Pribináček Kapsík vanilka chlaz. 70 g",
+   "source": "makro"
+  },
+  "4001724037606": {
+   "name": "Ristorante Pizza Prosciutto mraž. 340 g",
+   "source": "makro"
+  },
+  "4001724037613": {
+   "name": "Ristorante Pizza Prosciutto mraž. 340 g",
+   "source": "makro"
+  },
+  "4001724037637": {
+   "name": "Ristorante Pizza Mozzarella mraž. 355 g",
+   "source": "makro"
+  },
+  "4001724037644": {
+   "name": "Ristorante Pizza Mozzarella mraž. 355 g",
+   "source": "makro"
+  },
+  "4001724037729": {
+   "name": "Ristorante Pizza Hawaii mraž. 355 g",
+   "source": "makro"
+  },
+  "4001724037736": {
+   "name": "Ristorante Pizza Hawaii mraž. 355 g",
+   "source": "makro"
+  },
+  "4001724037545": {
+   "name": "Ristorante Pizza Salame mraž. 320 g",
+   "source": "makro"
+  },
+  "4001724037552": {
+   "name": "Ristorante Pizza Salame mraž. 320 g",
+   "source": "makro"
+  },
+  "4001724037576": {
+   "name": "Ristorante Pizza Funghi mraž. 365 g",
+   "source": "makro"
+  },
+  "4001724037583": {
+   "name": "Ristorante Pizza Funghi mraž. 365 g",
+   "source": "makro"
+  },
+  "4001724037811": {
+   "name": "Ristorante Pizza Diavola mraž. 350 g",
+   "source": "makro"
+  },
+  "4001724037828": {
+   "name": "Ristorante Pizza Diavola mraž. 350 g",
+   "source": "makro"
+  },
+  "4001724037781": {
+   "name": "Ristorante Pizza Margherita mraž. 295 g",
+   "source": "makro"
+  },
+  "4001724037798": {
+   "name": "Ristorante Pizza Margherita mraž. 295 g",
+   "source": "makro"
+  },
+  "4001724037514": {
+   "name": "Ristorante Pizza Quattro Formaggi mraž. 340 g",
+   "source": "makro"
+  },
+  "4001724037521": {
+   "name": "Ristorante Pizza Quattro Formaggi mraž. 340 g",
+   "source": "makro"
+  },
+  "4001724037965": {
+   "name": "Ristorante Pizza Salame mozzarella pesto mraž. 360 g",
+   "source": "makro"
+  },
+  "4001724037972": {
+   "name": "Ristorante Pizza Salame mozzarella pesto mraž. 360 g",
+   "source": "makro"
+  },
+  "4001724047933": {
+   "name": "Ristorante Pepperoni Salame mraž. 320 g",
+   "source": "makro"
+  },
+  "4001724047940": {
+   "name": "Ristorante Pepperoni Salame mraž. 320 g",
+   "source": "makro"
+  },
+  "4001724037699": {
+   "name": "Ristorante Speciale mraž. 345 g",
+   "source": "makro"
+  },
+  "4001724037705": {
+   "name": "Ristorante Speciale mraž. 345 g",
+   "source": "makro"
+  },
+  "4014400580174": {
+   "name": "nimm2 Soft Bonbóny 90 g",
+   "source": "makro"
+  },
+  "8595231219366": {
+   "name": "kofola Meloun méně cukru 500 ml",
+   "source": "makro"
+  },
+  "8595231219359": {
+   "name": "kofola Meloun méně cukru 500 ml",
+   "source": "makro"
+  },
+  "8595231213425": {
+   "name": "kofola Meloun méně cukru 500 ml",
+   "source": "makro"
+  },
+  "8720182023131": {
+   "name": "HELLMANN'S Omáčka Chunky Burger 250 ml",
+   "source": "makro"
+  },
+  "8720182806987": {
+   "name": "HELLMANN´S Omáčka na hranolky 250 ml",
+   "source": "makro"
+  },
+  "8710522981313": {
+   "name": "HELLMANN'S Original Omáčka BBQ 250 ml",
+   "source": "makro"
+  },
+  "8594731850185": {
+   "name": "Ondrášovka Citron ochucená voda minerální 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731134759": {
+   "name": "Ondrášovka Citron ochucená voda minerální 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731134858": {
+   "name": "Ondrášovka Citron ochucená voda minerální 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731309188": {
+   "name": "Ondrášovka Pomeranč ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731409758": {
+   "name": "Ondrášovka Pomeranč ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731409857": {
+   "name": "Ondrášovka Pomeranč ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731230086": {
+   "name": "Ondrášovka Lesní plody ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731230185": {
+   "name": "Ondrášovka Lesní plody ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731131758": {
+   "name": "Ondrášovka Tonic ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731131857": {
+   "name": "Ondrášovka Tonic ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731580082": {
+   "name": "Ondrášovka Malina ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731580181": {
+   "name": "Ondrášovka Malina ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731250084": {
+   "name": "Ondrášovka Limetka a citron ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731250183": {
+   "name": "Ondrášovka Limetka a citron ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731290080": {
+   "name": "Ondrášovka Kiwano a jablko ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731290189": {
+   "name": "Ondrášovka Kiwano a jablko ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731450088": {
+   "name": "Ondrášovka Máta a citron ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731450187": {
+   "name": "Ondrášovka Máta a citron ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731190083": {
+   "name": "Ondrášovka Zahradní směs ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594731190182": {
+   "name": "Ondrášovka Zahradní směs ochucená minerální voda 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8595231214606": {
+   "name": "Ondrášovka Grapefruit ochucená jemně perlivá 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8595231214590": {
+   "name": "Ondrášovka Grapefruit ochucená jemně perlivá 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8595231216488": {
+   "name": "Ondrášovka Hruška ochucená 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8595231216495": {
+   "name": "Ondrášovka Hruška ochucená 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8445290140074": {
+   "name": "Orion Granko Original Instantní kakaový nápoj 200 g",
+   "source": "makro"
+  },
+  "8445290140067": {
+   "name": "Orion Granko Original Instantní kakaový nápoj 200 g",
+   "source": "makro"
+  },
+  "4740098094517": {
+   "name": "LE COQ Margarita 4,7 % 330 ml",
+   "source": "makro"
+  },
+  "4740098094968": {
+   "name": "LE COQ Margarita 4,7 % 330 ml",
+   "source": "makro"
+  },
+  "4740098094531": {
+   "name": "Le COQ Sex on Beach 4,7% 330 ml",
+   "source": "makro"
+  },
+  "4740098094999": {
+   "name": "Le COQ Sex on Beach 4,7% 330 ml",
+   "source": "makro"
+  },
+  "8595680003905": {
+   "name": "LE & CO Anglická slanina speciál 98 % plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8595231214248": {
+   "name": "SEMTEX Original energetický nápoj 500 ml plech",
+   "source": "makro"
+  },
+  "8586011332825": {
+   "name": "SEMTEX Original energetický nápoj 500 ml plech",
+   "source": "makro"
+  },
+  "8595231214187": {
+   "name": "SEMTEX 0,5L Pl Mp Cactus",
+   "source": "makro"
+  },
+  "8586011332849": {
+   "name": "SEMTEX 0,5L Pl Mp Cactus",
+   "source": "makro"
+  },
+  "8595231224032": {
+   "name": "SEMTEX Extrem energetický nápoj 500 ml plech",
+   "source": "makro"
+  },
+  "8595231216754": {
+   "name": "SEMTEX Extrem energetický nápoj 500 ml plech",
+   "source": "makro"
+  },
+  "8595231216686": {
+   "name": "SEMTEX Extrem energetický nápoj 500 ml plech",
+   "source": "makro"
+  },
+  "8595231224001": {
+   "name": "SEMTEX Extrem energetický nápoj 500 ml plech",
+   "source": "makro"
+  },
+  "8595231224025": {
+   "name": "SEMTEX Extrem energetický nápoj 500 ml plech",
+   "source": "makro"
+  },
+  "8595231223967": {
+   "name": "SEMTEX 0,5L Pl Mp Extrem Passion",
+   "source": "makro"
+  },
+  "8595231217768": {
+   "name": "SEMTEX 0,5L Pl Mp Extrem Passion",
+   "source": "makro"
+  },
+  "8595231223936": {
+   "name": "SEMTEX 0,5L Pl Mp Extrem Passion",
+   "source": "makro"
+  },
+  "8595231217775": {
+   "name": "SEMTEX 0,5L Pl Mp Extrem Passion",
+   "source": "makro"
+  },
+  "8595231217690": {
+   "name": "SEMTEX Air energetický nápoj 500 ml plech",
+   "source": "makro"
+  },
+  "5449000006516": {
+   "name": "FANTA Orange 1 l",
+   "source": "makro"
+  },
+  "5449000137531": {
+   "name": "Cola-Cola Zero 1 l",
+   "source": "makro"
+  },
+  "5449000053060": {
+   "name": "Coca-Cola 1 l",
+   "source": "makro"
+  },
+  "5449000055255": {
+   "name": "Coca-Cola 1 l",
+   "source": "makro"
+  },
+  "5449000261731": {
+   "name": "Coca-Cola Zero Zero 1 l",
+   "source": "makro"
+  },
+  "18584004042154": {
+   "name": "SEDITA Horalky Peanut Butter 50 g",
+   "source": "makro"
+  },
+  "5000112530414": {
+   "name": "Coca-Cola 1,5 l",
+   "source": "makro"
+  },
+  "20091548714256": {
+   "name": "Coca-Cola 1,5 l",
+   "source": "makro"
+  },
+  "5449000051684": {
+   "name": "Coca-Cola 1,5 l",
+   "source": "makro"
+  },
+  "5449000134578": {
+   "name": "Coca-Cola 1,5L Zero",
+   "source": "makro"
+  },
+  "20045496415611": {
+   "name": "Coca-Cola 1,5L Zero",
+   "source": "makro"
+  },
+  "5000112530193": {
+   "name": "Coca-Cola Vanilla 1,5 l",
+   "source": "makro"
+  },
+  "5000112680645": {
+   "name": "Coca-Cola Cherry 1,5 l",
+   "source": "makro"
+  },
+  "5449000178756": {
+   "name": "Coca-Cola Zero Zero 1,5 l",
+   "source": "makro"
+  },
+  "5449000348159": {
+   "name": "Coca-Cola Lime/limetka 1,5 l",
+   "source": "makro"
+  },
+  "20056231914023": {
+   "name": "Coca-Cola 2 l",
+   "source": "makro"
+  },
+  "5449000008862": {
+   "name": "Coca-Cola 2 l",
+   "source": "makro"
+  },
+  "20096297078048": {
+   "name": "Coca-Cola 2L Zero",
+   "source": "makro"
+  },
+  "5449000134561": {
+   "name": "Coca-Cola 2L Zero",
+   "source": "makro"
+  },
+  "5449000127389": {
+   "name": "FANTA Orange 1,5 l",
+   "source": "makro"
+  },
+  "20052122973261": {
+   "name": "FANTA Orange 1,5 l",
+   "source": "makro"
+  },
+  "5000112530308": {
+   "name": "FANTA Shokata 1,5 L",
+   "source": "makro"
+  },
+  "5000112669473": {
+   "name": "FANTA Orange Zero 1,5 l",
+   "source": "makro"
+  },
+  "5000112680621": {
+   "name": "FANTA Zero jablko liči 1,5 l",
+   "source": "makro"
+  },
+  "5000112469509": {
+   "name": "FANTA Zero jablko liči 1,5 l",
+   "source": "makro"
+  },
+  "5449000017475": {
+   "name": "FANTA Exotic 1,5 l",
+   "source": "makro"
+  },
+  "5449000347794": {
+   "name": "FANTA Crimson Cherry 1,5 l",
+   "source": "makro"
+  },
+  "5000112532104": {
+   "name": "Sprite 1,5L",
+   "source": "makro"
+  },
+  "5000112677508": {
+   "name": "Sprite Zero 1,5 l",
+   "source": "makro"
+  },
+  "20063717976048": {
+   "name": "FANTA Orange 2 l",
+   "source": "makro"
+  },
+  "5449000014412": {
+   "name": "FANTA Orange 2 l",
+   "source": "makro"
+  },
+  "8594000202790": {
+   "name": "BLEND 42 42% 500 ml",
+   "source": "makro"
+  },
+  "20046459791056": {
+   "name": "BLEND 42 42% 500 ml",
+   "source": "makro"
+  },
+  "8594001449095": {
+   "name": "BLEND 42 42% 500 ml",
+   "source": "makro"
+  },
+  "18595236903823": {
+   "name": "Pribináček 70 g Vanilka",
+   "source": "makro"
+  },
+  "38594008278774": {
+   "name": "Pribináček 70 g Vanilka",
+   "source": "makro"
+  },
+  "18595236903946": {
+   "name": "Pribináček dezert kakaový chlaz. 70 g",
+   "source": "makro"
+  },
+  "18594008278770": {
+   "name": "Pribináček dezert smetanový chlaz. 70 g",
+   "source": "makro"
+  },
+  "18595236903847": {
+   "name": "Pribináček dezert kakao vanilka chlaz. 70 g",
+   "source": "makro"
+  },
+  "8435409343564": {
+   "name": "Mrkev karotka fialová 100/300 I. čerstvá 1 kg",
+   "source": "makro"
+  },
+  "8435409341942": {
+   "name": "Kurkuma čerstvá 125 g",
+   "source": "makro"
+  },
+  "8435409339376": {
+   "name": "Kurkuma čerstvá 125 g",
+   "source": "makro"
+  },
+  "8435409357394": {
+   "name": "Zelí špičaté bílé 500+ čerstvé 1 ks",
+   "source": "makro"
+  },
+  "8435409344578": {
+   "name": "Zelí špičaté bílé 500+ čerstvé 1 ks",
+   "source": "makro"
+  },
+  "8435409339789": {
+   "name": "Hrozny bílé bezsemenné I. čerstvé 500 g vanička",
+   "source": "makro"
+  },
+  "8435409362152": {
+   "name": "Hrozny bílé bezsemenné I. čerstvé 500 g vanička",
+   "source": "makro"
+  },
+  "8435409362169": {
+   "name": "Hrozny bílé bezsemenné I. čerstvé 500 g vanička",
+   "source": "makro"
+  },
+  "8435409355581": {
+   "name": "Hrozny bílé bezsemenné I. čerstvé 500 g vanička",
+   "source": "makro"
+  },
+  "8435409323993": {
+   "name": "Hrozny bílé bezsemenné I. čerstvé 500 g vanička",
+   "source": "makro"
+  },
+  "8435409369441": {
+   "name": "Hrozny bílé bezsemenné I. čerstvé 500 g vanička",
+   "source": "makro"
+  },
+  "8435409339765": {
+   "name": "Hrozny bílé bezsemenné I. čerstvé 500 g vanička",
+   "source": "makro"
+  },
+  "8435409354645": {
+   "name": "Hrozny bílé bezsemenné I. čerstvé 500 g vanička",
+   "source": "makro"
+  },
+  "8435409350128": {
+   "name": "Hrozny bílé bezsemenné I. čerstvé 500 g vanička",
+   "source": "makro"
+  },
+  "8594030013236": {
+   "name": "Svijany Svijanský Máz 11°světlý ležák 500 ml plech",
+   "source": "makro"
+  },
+  "20085030960290": {
+   "name": "Svijany Svijanský Máz 11°světlý ležák 500 ml plech",
+   "source": "makro"
+  },
+  "8594030016190": {
+   "name": "Svijany Svijanský Máz 11°světlý ležák 500 ml plech",
+   "source": "makro"
+  },
+  "8594404007670": {
+   "name": "BIRELL Světlý Pivo nealkoholické 500 ml plech",
+   "source": "makro"
+  },
+  "8594404007939": {
+   "name": "BIRELL Světlý Pivo nealkoholické 500 ml plech",
+   "source": "makro"
+  },
+  "5907702863016": {
+   "name": "Led kostky mraž. 2 kg",
+   "source": "makro"
+  },
+  "8593837270248": {
+   "name": "Vitana Masox 8 + 2 110 g",
+   "source": "makro"
+  },
+  "5900259132369": {
+   "name": "Lay's Max Sýr + cibule 120 g",
+   "source": "makro"
+  },
+  "8594002880491": {
+   "name": "VÍNO MIKULOV Motýl Tramín 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594002881047": {
+   "name": "VÍNO MIKULOV Motýl Tramín 6 x 750 ml",
+   "source": "makro"
+  },
+  "20026600700007": {
+   "name": "VÍNO MIKULOV Motýl Tramín 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594002880484": {
+   "name": "VÍNO MIKULOV Motýl Sauvignon 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594002881054": {
+   "name": "VÍNO MIKULOV Motýl Sauvignon 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594002880446": {
+   "name": "VÍNO MIKULOV Motýl Veltlínské zelené 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594002881078": {
+   "name": "VÍNO MIKULOV Motýl Veltlínské zelené 6 x 750 ml",
+   "source": "makro"
+  },
+  "20026599700002": {
+   "name": "VÍNO MIKULOV Motýl Veltlínské zelené 6 x 750 ml",
+   "source": "makro"
+  },
+  "8435409346596": {
+   "name": "Klíčky mungo NL čestvé 1 kg sáček",
+   "source": "makro"
+  },
+  "8595198857786": {
+   "name": "R. JELÍNEK Moravská meruňka 30 % 500 ml",
+   "source": "makro"
+  },
+  "8606017379140": {
+   "name": "Lay's 60 g Stix Ketchup",
+   "source": "makro"
+  },
+  "8593868007332": {
+   "name": "Staropramen 10° Pivo světlé výčepní 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "20064773120413": {
+   "name": "Staropramen 10° Pivo světlé výčepní 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8593868007325": {
+   "name": "Staropramen 10° Pivo světlé výčepní 500 ml vratná láhev",
+   "source": "makro"
+  },
+  "8593837269785": {
+   "name": "Vitana Gulášová polévka 95 g",
+   "source": "makro"
+  },
+  "8594005023642": {
+   "name": "FERNET STOCK Standard 30 % 500 ml",
+   "source": "makro"
+  },
+  "8594005023659": {
+   "name": "FERNET STOCK Standard 30 % 500 ml",
+   "source": "makro"
+  },
+  "8593868003365": {
+   "name": "BRANÍK Pivo světlé výčepní 500 ml plech",
+   "source": "makro"
+  },
+  "8593868003563": {
+   "name": "BRANÍK Pivo světlé výčepní 500 ml plech",
+   "source": "makro"
+  },
+  "5449000310040": {
+   "name": "Coca-Cola 330 ml",
+   "source": "makro"
+  },
+  "5449000310132": {
+   "name": "Coca-Cola 330 ml",
+   "source": "makro"
+  },
+  "5449000310057": {
+   "name": "Coca-Cola Zero 330 ml",
+   "source": "makro"
+  },
+  "5449000310149": {
+   "name": "Coca-Cola Zero 330 ml",
+   "source": "makro"
+  },
+  "3263288309853": {
+   "name": "JP. CHENET Medium Sweet Blanc 6 x 750 ml",
+   "source": "makro"
+  },
+  "3263286321284": {
+   "name": "JP. CHENET Medium Sweet Blanc 6 x 750 ml",
+   "source": "makro"
+  },
+  "3500611048844": {
+   "name": "JP. CHENET Chardnonnay 6 x 750 ml",
+   "source": "makro"
+  },
+  "3263289990203": {
+   "name": "JP. CHENET Chardnonnay 6 x 750 ml",
+   "source": "makro"
+  },
+  "3263288300393": {
+   "name": "JP. CHENET Rosé 6 x 750 ml",
+   "source": "makro"
+  },
+  "3263286301385": {
+   "name": "JP. CHENET Rosé 6 x 750 ml",
+   "source": "makro"
+  },
+  "8594404008714": {
+   "name": "Gambrinus Original 10 pivo 500 ml plech",
+   "source": "makro"
+  },
+  "8594404008721": {
+   "name": "Gambrinus Original 10 pivo 500 ml plech",
+   "source": "makro"
+  },
+  "8594404008080": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo světlé výčepní 500 ml plech",
+   "source": "makro"
+  },
+  "8594404008097": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo světlé výčepní 500 ml plech",
+   "source": "makro"
+  },
+  "8594404007458": {
+   "name": "Pilsner Urquell Pivo světlý ležák 500 ml plech",
+   "source": "makro"
+  },
+  "8594404007465": {
+   "name": "Pilsner Urquell Pivo světlý ležák 500 ml plech",
+   "source": "makro"
+  },
+  "8594404012711": {
+   "name": "RADEGAST 0,5L Pl Mp Rázná 10",
+   "source": "makro"
+  },
+  "8594404012704": {
+   "name": "RADEGAST 0,5L Pl Mp Rázná 10",
+   "source": "makro"
+  },
+  "8594404012483": {
+   "name": "RADEGAST Ryze hořká 12 pivo 500 ml plech",
+   "source": "makro"
+  },
+  "8594404012490": {
+   "name": "RADEGAST Ryze hořká 12 pivo 500 ml plech",
+   "source": "makro"
+  },
+  "98590764011947": {
+   "name": "Vepřové kůže CZ chlaz. váž. cca 1 kg",
+   "source": "makro"
+  },
+  "2899200000006": {
+   "name": "Vepřové kůže CZ chlaz. váž. cca 1 kg",
+   "source": "makro"
+  },
+  "8595606210288": {
+   "name": "Bohemia Chips Slanina 60 g ",
+   "source": "makro"
+  },
+  "8595606210295": {
+   "name": "Bohemia Chips Slanina 130 g ",
+   "source": "makro"
+  },
+  "8595606210233": {
+   "name": "Bohemia Chips Solené 60 g ",
+   "source": "makro"
+  },
+  "8595606210240": {
+   "name": "Bohemia Chips solené 130 g",
+   "source": "makro"
+  },
+  "8595606210332": {
+   "name": "Bohemia Chips Špíz 60 g ",
+   "source": "makro"
+  },
+  "8593837269778": {
+   "name": "Vitana Polévka francouzská 45 g",
+   "source": "makro"
+  },
+  "80686000389": {
+   "name": "JIM BEAM White 40 % 700 ml",
+   "source": "makro"
+  },
+  "10080686000386": {
+   "name": "JIM BEAM White 40 % 700 ml",
+   "source": "makro"
+  },
+  "8445291218482": {
+   "name": "KitKat 4F lískový ořech 41,5 g",
+   "source": "makro"
+  },
+  "8593837269754": {
+   "name": "Vitana Čočková polévka 86 g",
+   "source": "makro"
+  },
+  "8593837269815": {
+   "name": "Vitana Hovězí polévka 58 g",
+   "source": "makro"
+  },
+  "8593837269860": {
+   "name": "Vitana Rajská polévka 73 g",
+   "source": "makro"
+  },
+  "8595646208320": {
+   "name": "DR WITT Drwitt Active 0,75L Růž. g rep",
+   "source": "makro"
+  },
+  "8595646208344": {
+   "name": "DR WITT Drwitt Active 0,75L Bílá Bros",
+   "source": "makro"
+  },
+  "8594002782993": {
+   "name": "MLÉKÁRNA KUNÍN Smetana 31% 200 g",
+   "source": "makro"
+  },
+  "8594002788933": {
+   "name": "MLÉKÁRNA KUNÍN Smetana 31% 200 g",
+   "source": "makro"
+  },
+  "8594005026315": {
+   "name": "AMUNDSEN Mule 6% 0,25L",
+   "source": "makro"
+  },
+  "7312040323012": {
+   "name": "ABSOLUT Passion Fruit/maracuja 5 % 250 ml",
+   "source": "makro"
+  },
+  "8586011330050": {
+   "name": "RAJEC Voda jemně perlivá 1,5 l",
+   "source": "makro"
+  },
+  "8586011330043": {
+   "name": "RAJEC Voda jemně perlivá 1,5 l",
+   "source": "makro"
+  },
+  "8586011330067": {
+   "name": "RAJEC Voda neperlivá 1,5 l",
+   "source": "makro"
+  },
+  "8586011331118": {
+   "name": "RAJEC Voda kojenecká 1,5 l",
+   "source": "makro"
+  },
+  "8593894000369": {
+   "name": "OPAVIA Dětské piškoty 110 g",
+   "source": "makro"
+  },
+  "8593894000338": {
+   "name": "OPAVIA Piškoty dětské 220 g",
+   "source": "makro"
+  },
+  "18595139763579": {
+   "name": "Znojmia Okurky 5-7 520 g ",
+   "source": "makro"
+  },
+  "8593837270811": {
+   "name": "Vitana Francouzský dressing 270 g",
+   "source": "makro"
+  },
+  "8000500434130": {
+   "name": "kinder Crispy 34 g",
+   "source": "makro"
+  },
+  "8000500380642": {
+   "name": "nutella Biscuits 41,4 g",
+   "source": "makro"
+  },
+  "8594005027824": {
+   "name": "BOŽKOV Standard 30 % 350 ml",
+   "source": "makro"
+  },
+  "8594005027909": {
+   "name": "BOŽKOV Standard 30 % 350 ml",
+   "source": "makro"
+  },
+  "5202795120030": {
+   "name": "METAXA 5* 38 % 500 ml",
+   "source": "makro"
+  },
+  "35202795120031": {
+   "name": "METAXA 5* 38 % 500 ml",
+   "source": "makro"
+  },
+  "20016114412657": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo 11° 500 ml plech",
+   "source": "makro"
+  },
+  "8594404005805": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo 11° 500 ml plech",
+   "source": "makro"
+  },
+  "20034667418636": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo 11° 500 ml plech",
+   "source": "makro"
+  },
+  "8594404010601": {
+   "name": "VELKOPOPOVICKÝ Kozel Pivo 11° 500 ml plech",
+   "source": "makro"
+  },
+  "8594006322072": {
+   "name": "BOHEMILK Farmářský sýr uzený 30 % plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594006326261": {
+   "name": "BOHEMILK Selský sýr 48 % plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594006326582": {
+   "name": "BOHEMILK Excelent sýr 48 % pepř/chilli plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594006326605": {
+   "name": "BOHEMILK Excelent Gold 48% rajčata bazalka plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594006322058": {
+   "name": "BOHEMILK Horácký sýr 30 % plátky chlaz. 100 g",
+   "source": "makro"
+  },
+  "8594001021499": {
+   "name": "MATTONI Voda minerální jemně perlivá 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8594001021505": {
+   "name": "MATTONI Voda minerální jemně perlivá 6 x 1,5 l",
+   "source": "makro"
+  },
+  "8593894806701": {
+   "name": "OPAVIA Brumík s čokoládovou náplní 48 x 30 g",
+   "source": "makro"
+  },
+  "8593894506724": {
+   "name": "OPAVIA Brumík s mléčnou náplní 48 x 30 g",
+   "source": "makro"
+  },
+  "7622210068835": {
+   "name": "OPAVIA Brumík Jahůdka 48 x 30 g",
+   "source": "makro"
+  },
+  "8593894507899": {
+   "name": "OPAVIA Brumík Jahůdka 48 x 30 g",
+   "source": "makro"
+  },
+  "8000500020685": {
+   "name": "kinder Happy Hippo 20,7 g",
+   "source": "makro"
+  },
+  "8000500019160": {
+   "name": "kinder Happy Hippo 20,7 g",
+   "source": "makro"
+  },
+  "2894450000004": {
+   "name": "Vepřový jazyk chlaz. váž. cca 1 kg",
+   "source": "makro"
+  },
+  "98594013323607": {
+   "name": "Vepřový jazyk chlaz. váž. cca 1 kg",
+   "source": "makro"
+  },
+  "8594176393063": {
+   "name": "VINOBOX VINOSPOL Pinot Gris 5 l BiB",
+   "source": "makro"
+  },
+  "8594176393162": {
+   "name": "VINOBOX VINOSPOL Pinot Gris 5 l BiB",
+   "source": "makro"
+  },
+  "8594000942023": {
+   "name": "BOHEMIA Mini 250 ml plech",
+   "source": "makro"
+  },
+  "8594000942092": {
+   "name": "BOHEMIA Mini 250 ml plech",
+   "source": "makro"
+  },
+  "8594000942085": {
+   "name": "BOHEMIA Mini 250 ml plech",
+   "source": "makro"
+  },
+  "8594176392752": {
+   "name": "VINOBOX VINOSPOL Chardonnay 5 l BiB",
+   "source": "makro"
+  },
+  "8594176393643": {
+   "name": "VINOBOX VINOSPOL Chardonnay 5 l BiB",
+   "source": "makro"
+  },
+  "8595682193901": {
+   "name": "VELO Icy Berries Mini 6 mg kolek R sáčky 1 ks",
+   "source": "makro"
+  },
+  "8595682193000": {
+   "name": "VELO Icy Berries Mini 6 mg kolek R sáčky 1 ks",
+   "source": "makro"
+  },
+  "8595682193512": {
+   "name": "VELO Icy Berries Mini 6 mg kolek R sáčky 1 ks",
+   "source": "makro"
+  },
+  "8595682193567": {
+   "name": "VELO Icy Berries Mini 6 mg kolek R sáčky 1 ks",
+   "source": "makro"
+  },
+  "4740098094524": {
+   "name": "Le COQ Pina Colada 4,7 % 330 ml",
+   "source": "makro"
+  },
+  "4740098094982": {
+   "name": "Le COQ Pina Colada 4,7 % 330 ml",
+   "source": "makro"
+  },
+  "8594027771132": {
+   "name": "Sójový suk klasik 50 g",
+   "source": "makro"
+  },
+  "8000500384770": {
+   "name": "kinder Tronky 18 g",
+   "source": "makro"
+  },
+  "8594404023953": {
+   "name": "BIRELL 0,5L Pl Mp Za St. Chmelený",
+   "source": "makro"
+  },
+  "8594404023960": {
+   "name": "BIRELL 0,5L Pl Mp Za St. Chmelený",
+   "source": "makro"
+  },
+  "4014400680713": {
+   "name": "nimm2 Smile Gummi Fruit 24 x 100 g",
+   "source": "makro"
   }
+ }
 }
