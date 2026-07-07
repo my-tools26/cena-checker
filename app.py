@@ -223,7 +223,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/hoaqua", "Rau quả"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v2.6 · 08.07.2026"
+APP_VERSION = "v2.7 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -234,6 +234,9 @@ SCAN_JS = """
       closeBtn=document.getElementById('scanclose'), torchBtn=document.getElementById('scantorch'),
       scanner=null, stream=null, rafId=null, torchOn=false;
   if(!btn) return;
+  // May tinh (khong cam ung) -> an nut camera: dung may quet ma vach USB ban thang vao o tim kiem
+  var isTouch=('ontouchstart' in window)||navigator.maxTouchPoints>0;
+  if(!isTouch){ btn.style.display='none'; return; }
   var FORMATS=['ean_13','ean_8','upc_a','upc_e','code_128'];
   function found(code){ stop();
     window.location='/hledej?q='+encodeURIComponent(code)+(window.SCANLOC?'&loc='+window.SCANLOC:''); }
