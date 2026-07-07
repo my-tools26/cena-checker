@@ -483,12 +483,10 @@ _matrix_cache = {"t": 0, "rows": []}
 
 def build_matrix():
     import time as _t
-    import random as _rand
-    if _t.time() - _matrix_cache["t"] < 3 * 3600 and _matrix_cache["rows"]:
+    if _t.time() - _matrix_cache["t"] < 600 and _matrix_cache["rows"]:
         return _matrix_cache["rows"]
-    pick = _rand.sample(STAPLES_ALL, min(10, len(STAPLES_ALL)))
     rows = []
-    for label, qcz, unit in pick:
+    for label, qcz, unit in STAPLES_ALL:
         best = {}  # shop -> (gia/don vi, gia goi)
 
         def consider(shop, price, unitstr="", amount=""):
@@ -521,12 +519,14 @@ def build_matrix():
 
 
 def matrix_html():
+    import random as _rand
     try:
-        rows = build_matrix()
+        all_rows = build_matrix()
     except Exception:
         return ""
-    if not rows:
+    if not all_rows:
         return ""
+    rows = _rand.sample(all_rows, min(10, len(all_rows)))
     out = ("<h2 style='margin-top:14px'>💡 MUA GÌ Ở ĐÂU HÔM NAY — giá gói, xếp theo giá quy đổi</h2>"
            "<table class='mx'><tr><th style='width:24%'>Mặt hàng</th>"
            "<th style='background:#23401f;color:#9fdc8f'>✅ Rẻ nhất</th><th>#2</th><th>#3</th><th>#4</th></tr>")
