@@ -223,37 +223,95 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/hoaqua", "Rau quả"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v2.4 · 08.07.2026"
+APP_VERSION = "v2.5 · 08.07.2026"
 
-# Quet ma vach bang camera (html5-qrcode, tai khi bam nut)
+# Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
+# khong co thi dung html5-qrcode. Camera FullHD + den flash.
 SCAN_JS = """
 <script>
 (function(){
   var btn=document.getElementById('scanbtn'), box=document.getElementById('scanbox'),
-      closeBtn=document.getElementById('scanclose'), scanner=null;
+      closeBtn=document.getElementById('scanclose'), torchBtn=document.getElementById('scantorch'),
+      scanner=null, stream=null, rafId=null, torchOn=false;
   if(!btn) return;
-  function stop(){ if(scanner){ scanner.stop().catch(function(){}); scanner=null; }
-                   box.style.display='none'; }
-  function start(){
-    box.style.display='block';
+  var FORMATS=['ean_13','ean_8','upc_a','upc_e','code_128'];
+  function found(code){ stop(); window.location='/hledej?q='+encodeURIComponent(code); }
+  function stop(){
+    if(rafId){ cancelAnimationFrame(rafId); rafId=null; }
+    if(stream){ stream.getTracks().forEach(function(t){t.stop();}); stream=null; }
+    if(scanner){ scanner.stop().catch(function(){}); scanner=null; }
+    torchOn=false; box.style.display='none';
+  }
+  function setupTorch(track){
+    try{
+      var caps=track.getCapabilities?track.getCapabilities():{};
+      if(!caps.torch){ torchBtn.style.display='none'; return; }
+      torchBtn.style.display='inline-block';
+      torchBtn.onclick=function(){
+        torchOn=!torchOn;
+        track.applyConstraints({advanced:[{torch:torchOn}]}).catch(function(){});
+        torchBtn.textContent=torchOn?'🔦 Tắt đèn':'🔦 Bật đèn';
+      };
+    }catch(e){ torchBtn.style.display='none'; }
+  }
+  // Duong 1: BarcodeDetector native (Android Chrome) - nhay nhat
+  function startNative(){
+    var det=new BarcodeDetector({formats:FORMATS});
+    var v=document.createElement('video');
+    v.setAttribute('playsinline',''); v.style.width='100%'; v.style.borderRadius='10px';
+    document.getElementById('scanview').innerHTML=''; document.getElementById('scanview').appendChild(v);
+    navigator.mediaDevices.getUserMedia({video:{facingMode:'environment',
+        width:{ideal:1920},height:{ideal:1080},focusMode:'continuous'}})
+      .then(function(s){
+        stream=s; v.srcObject=s; v.play();
+        setupTorch(s.getVideoTracks()[0]);
+        var busy=false;
+        (function loop(){
+          rafId=requestAnimationFrame(loop);
+          if(busy||v.readyState<2) return;
+          busy=true;
+          det.detect(v).then(function(codes){
+            busy=false;
+            if(codes.length) found(codes[0].rawValue);
+          }).catch(function(){busy=false;});
+        })();
+      })
+      .catch(function(e){ stop(); alert('Không mở được camera: '+e.message+'\\nHãy cho phép quyền camera.'); });
+  }
+  // Duong 2: html5-qrcode fallback (iPhone Safari...)
+  function startLib(){
     scanner=new Html5Qrcode('scanview');
     scanner.start({facingMode:'environment'},
-      {fps:10, qrbox:{width:280,height:160},
+      {fps:15, qrbox:{width:300,height:180}, disableFlip:true,
+       videoConstraints:{facingMode:'environment',width:{ideal:1920},height:{ideal:1080}},
        formatsToSupport:[Html5QrcodeSupportedFormats.EAN_13,Html5QrcodeSupportedFormats.EAN_8,
                          Html5QrcodeSupportedFormats.UPC_A,Html5QrcodeSupportedFormats.UPC_E,
                          Html5QrcodeSupportedFormats.CODE_128]},
-      function(code){ stop(); window.location='/hledej?q='+encodeURIComponent(code); },
-      function(){}).catch(function(e){
+      function(code){ found(code); },
+      function(){}).then(function(){
+        try{
+          var v=document.querySelector('#scanview video');
+          if(v&&v.srcObject) setupTorch(v.srcObject.getVideoTracks()[0]);
+        }catch(e){}
+      }).catch(function(e){
         stop(); alert('Không mở được camera: '+e+'\\nHãy cho phép quyền camera trong trình duyệt.');
       });
   }
   btn.addEventListener('click',function(){
-    if(window.Html5Qrcode){ start(); return; }
-    var s=document.createElement('script');
-    s.src='https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js';
-    s.onload=start;
-    s.onerror=function(){ alert('Không tải được thư viện quét mã — kiểm tra mạng.'); };
-    document.head.appendChild(s);
+    box.style.display='block'; torchBtn.style.display='none';
+    if('BarcodeDetector' in window){
+      BarcodeDetector.getSupportedFormats().then(function(fs){
+        if(fs.indexOf('ean_13')>=0) startNative(); else loadLib();
+      }).catch(loadLib);
+    } else loadLib();
+    function loadLib(){
+      if(window.Html5Qrcode){ startLib(); return; }
+      var s=document.createElement('script');
+      s.src='https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js';
+      s.onload=startLib;
+      s.onerror=function(){ stop(); alert('Không tải được thư viện quét mã — kiểm tra mạng.'); };
+      document.head.appendChild(s);
+    }
   });
   closeBtn.addEventListener('click',stop);
 })();
@@ -273,6 +331,7 @@ def shell(body, active="/"):
                  'z-index:9999;padding:16px;text-align:center">'
                  '<p style="color:#fff;font-size:1.1em">Giơ camera vào mã vạch sản phẩm</p>'
                  '<div id="scanview" style="max-width:480px;margin:0 auto"></div>'
+                 '<button id="scantorch" style="margin-top:14px;margin-right:10px;background:#7a6a1a;display:none">🔦 Bật đèn</button>'
                  '<button id="scanclose" style="margin-top:14px;background:#a33">✖ Đóng</button></div>'
                  + SCAN_JS)
     return (PAGE_TOP
