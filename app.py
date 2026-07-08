@@ -231,12 +231,20 @@ CSS = """
  .viewtabs{display:flex;gap:6px;margin:2px 0 14px}
  .viewtabs button{flex:0 0 auto;font-size:.9em;padding:7px 16px;border-radius:20px;border:1px solid var(--input-border);background:var(--card);color:var(--muted);cursor:pointer}
  .viewtabs button.on{background:var(--accent);color:var(--btn-txt);border-color:var(--accent);font-weight:bold}
+ .storefilter{display:none;margin:-8px 0 14px;padding:10px 12px;border:1px solid var(--input-border);border-radius:12px;background:var(--card)}
+ .storefilter.open{display:block}
+ .strow{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-bottom:6px}
+ .stg{font-size:.82em;color:var(--muted);margin-right:4px;min-width:64px}
+ .stp{font-size:.8em;padding:3px 10px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--accent);cursor:pointer}
+ .stp.off{opacity:.45;text-decoration:line-through;color:var(--muted)}
+ .stact{margin-top:2px}
+ .stact button{font-size:.78em;padding:3px 10px;margin-right:6px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--muted);cursor:pointer}
 """
 
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v3.7 · 08.07.2026"
+APP_VERSION = "v3.8 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -373,6 +381,81 @@ VIEWTABS_JS = """<script>
 </script>"""
 
 
+STORE_GROUPS = [
+    ("🏪 Bán lẻ", [("lidl", "Lidl"), ("kaufland", "Kaufland"), ("billa", "Billa"),
+                   ("penny", "Penny"), ("tesco", "Tesco"), ("albert", "Albert"),
+                   ("globus", "Globus"), ("coop", "COOP"), ("hruska", "Hruška"),
+                   ("flop", "Flop"), ("ratio", "Ratio"), ("kosik", "Košík")]),
+    ("📦 Bán buôn", [("makro", "Makro"), ("jip", "JIP"), ("tamda", "Tamda"),
+                     ("bidfood", "Bidfood"), ("dathang", "dathang"),
+                     ("linsan", "Linsan"), ("bombacena", "Bombacena")]),
+]
+
+
+def _store_filter_html():
+    rows = ""
+    for grp, stores in STORE_GROUPS:
+        pills = "".join(
+            f'<button class="stp" data-k="{k}">{H.escape(lbl)}</button>' for k, lbl in stores)
+        rows += f'<div class="strow"><span class="stg">{grp}</span>{pills}</div>'
+    return ('<div id="storefilter" class="storefilter">'
+            + rows
+            + '<div class="stact"><button id="stall">✓ Chọn hết</button>'
+              '<button id="stnone">✗ Bỏ hết</button></div></div>')
+
+
+STORE_FILTER_HTML = _store_filter_html()
+
+STOREFILTER_JS = """<script>
+(function(){
+  var KEY='cc_hidden_shops';
+  var panel=document.getElementById('storefilter');
+  var input=document.querySelector('form.searchbox input[type=text]');
+  if(!panel||!input) return;
+  function norm(s){ return (s||'').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,''); }
+  function hidden(){ try{return JSON.parse(localStorage.getItem(KEY)||'[]');}catch(e){return [];} }
+  function save(a){ localStorage.setItem(KEY, JSON.stringify(a)); }
+  function apply(){
+    var h=hidden();
+    document.querySelectorAll('td[data-shop]').forEach(function(td){
+      var s=norm(td.getAttribute('data-shop'));
+      var hide=h.some(function(k){ return s.indexOf(k)>=0; });
+      if(hide){ if(!td.dataset.orig) td.dataset.orig=td.innerHTML; td.innerHTML="<span class='a'>ẩn</span>"; }
+      else if(td.dataset.orig){ td.innerHTML=td.dataset.orig; td.removeAttribute('data-orig'); }
+    });
+  }
+  function paint(){
+    var h=hidden();
+    panel.querySelectorAll('.stp').forEach(function(b){
+      b.classList.toggle('off', h.indexOf(b.getAttribute('data-k'))>=0);
+    });
+  }
+  panel.querySelectorAll('.stp').forEach(function(b){
+    b.addEventListener('click',function(){
+      var k=b.getAttribute('data-k'); var h=hidden(); var i=h.indexOf(k);
+      if(i>=0) h.splice(i,1); else h.push(k);
+      save(h); paint(); apply();
+    });
+  });
+  document.getElementById('stall').addEventListener('click',function(){ save([]); paint(); apply(); });
+  document.getElementById('stnone').addEventListener('click',function(){
+    var all=[]; panel.querySelectorAll('.stp').forEach(function(b){ all.push(b.getAttribute('data-k')); });
+    save(all); paint(); apply();
+  });
+  function show(){ panel.classList.add('open'); }
+  function hide(){ panel.classList.remove('open'); }
+  input.addEventListener('focus', show);
+  input.addEventListener('click', show);
+  document.addEventListener('click', function(e){
+    if(!panel.contains(e.target) && e.target!==input) hide();
+  });
+  paint();
+  window.addEventListener('load', apply);
+  setTimeout(apply, 300);
+})();
+</script>"""
+
+
 def shell(body, active="/"):
     tabs = "".join(
         f'<a href="{href}"{" class=\"on\"" if href == active else ""}>{label}</a>'
@@ -389,7 +472,7 @@ def shell(body, active="/"):
                  '<button data-v="all">Tất cả</button>'
                  '<button data-v="retail">🏪 Siêu thị</button>'
                  '<button data-v="wholesale">📦 Bán buôn</button></div>'
-                 + VIEWTABS_JS
+                 + STORE_FILTER_HTML + VIEWTABS_JS + STOREFILTER_JS
                  + '<div id="scanbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);'
                  'z-index:9999;padding:16px;text-align:center">'
                  '<p style="color:#fff;font-size:1.1em">Giơ camera vào mã vạch sản phẩm</p>'
