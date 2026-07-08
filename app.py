@@ -228,12 +228,16 @@ CSS = """
  .mx .mxp{display:block;font-weight:bold;color:var(--text-strong);white-space:nowrap}
  .mx a.it{color:var(--text-strong);text-decoration:none;font-weight:bold}
  .mx a.it:hover{color:var(--accent)}
+ .shopfilter{margin:10px 0 4px;line-height:2}
+ .shopfilter .sf-label{color:var(--muted);font-size:.9em;margin-right:4px}
+ .sf-chip{font-size:.82em;padding:3px 10px;border-radius:16px;border:1px solid var(--input-border);background:var(--card);color:var(--accent);cursor:pointer;margin:2px 3px}
+ .sf-chip.off{opacity:.5;text-decoration:line-through;color:var(--muted)}
 """
 
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v3.4 · 08.07.2026"
+APP_VERSION = "v3.5 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -381,6 +385,7 @@ SHOP_COLOR = [
     ("globus", "#FAEEDA", "#633806"), ("tamda", "#FFE3CC", "#8A4B00"),
     ("makro", "#DDE6F2", "#003B7E"), ("jip", "#FCEBEB", "#C8102E"),
     ("coop", "#EAF3DE", "#3B6D11"), ("dm", "#EEEDFE", "#3C3489"), ("bidfood", "#E1F5E9", "#0F6E3B"),
+    ("dathang", "#FDEEE0", "#9A4B10"), ("linsan", "#FCEBEB", "#B01818"), ("bombacena", "#FBEAF0", "#93264A"),
     ("hru", "#FAEEDA", "#854F0B"), ("flop", "#FBEAF0", "#993556"),
 ]
 
@@ -999,6 +1004,52 @@ def bidfood_matches(query_cs):
     return data, hits
 
 
+# Cac shop Viet/chau A: file JSON {shop, items:[{name, price, amount, unit}]}.
+# Ten hang co the la tieng Viet (bun, banh trang...) hoac tieng Sec.
+VN_SHOPS = [
+    ("dathang", "dathang.cz"),
+    ("linsan", "Linsan24h"),
+    ("bombacena", "Bombacena"),
+]
+_vnshop_cache = {}
+
+
+def load_vnshop(slug):
+    import json
+    import time as _t
+    c = _vnshop_cache.get(slug)
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), f"{slug}_prices.json")
+    if c and _t.time() - c[0] < 600:
+        return c[1]
+    data = None
+    if os.path.exists(path):
+        try:
+            with open(path, encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception:
+            data = None
+    _vnshop_cache[slug] = (_t.time(), data)
+    return data
+
+
+def vnshop_matches(slug, query_raw, query_cs):
+    """Khop ca tu khoa goc (tieng Viet khong dau) lan ban dich tieng Sec."""
+    data = load_vnshop(slug)
+    if not data:
+        return None, []
+    terms = []
+    for qq in (query_raw, query_cs):
+        w = [x for x in cena.strip_accents(qq.lower()).split() if x]
+        if w:
+            terms.append(w)
+    hits = []
+    for it in data["items"]:
+        n = cena.strip_accents(it["name"].lower())
+        if any(all(x in n for x in ws) for ws in terms):
+            hits.append(it)
+    return data, hits
+
+
 def tamda_table(data, items):
     cards = "".join(
         deal_card(it["name"], it["amount"], "Tamda Foods", it["price"],
@@ -1191,6 +1242,51 @@ def ean_lookup(code):
     return None
 
 
+SHOPFILTER_JS = """<script>
+(function(){
+  var KEY='cc_hidden_shops';
+  function hidden(){ try{return JSON.parse(localStorage.getItem(KEY)||'[]');}catch(e){return [];} }
+  function save(a){ localStorage.setItem(KEY, JSON.stringify(a)); }
+  function apply(){
+    var h=hidden();
+    document.querySelectorAll('td[data-shop]').forEach(function(td){
+      var s=td.getAttribute('data-shop');
+      if(h.indexOf(s)>=0){
+        if(!td.dataset.orig){ td.dataset.orig=td.innerHTML; }
+        td.innerHTML="<span class='a'>ẩn</span>";
+      } else if(td.dataset.orig){
+        td.innerHTML=td.dataset.orig; td.removeAttribute('data-orig');
+      }
+    });
+  }
+  function build(){
+    var box=document.getElementById('shopfilter'); if(!box) return;
+    var shops={};
+    document.querySelectorAll('td[data-shop]').forEach(function(td){ shops[td.getAttribute('data-shop')]=1; });
+    var h=hidden();
+    var names=Object.keys(shops).sort();
+    if(!names.length){ box.style.display='none'; return; }
+    box.innerHTML='<span class=\"sf-label\">Lọc siêu thị (bấm để ẩn/hiện):</span> '+
+      names.map(function(n){
+        var off=h.indexOf(n)>=0;
+        return '<button class=\"sf-chip'+(off?' off':'')+'\" data-s=\"'+n.replace(/\"/g,'')+'\">'+
+               (off?'☐ ':'☑ ')+n+'</button>';
+      }).join('');
+    box.querySelectorAll('.sf-chip').forEach(function(b){
+      b.addEventListener('click',function(){
+        var s=b.getAttribute('data-s'); var h=hidden(); var i=h.indexOf(s);
+        if(i>=0) h.splice(i,1); else h.push(s);
+        save(h); apply(); build();
+      });
+    });
+  }
+  function go(){ apply(); build(); }
+  window.addEventListener('load', go);
+  setTimeout(go, 300);
+})();
+</script>"""
+
+
 def ean_name_variants(name):
     """Cac bien the tu khoa tu ten san pham EAN: bo khoi luong/dung tich, rut ngan dan."""
     n = _re.sub(r"\b\d+[,.]?\d*\s*(g|kg|ml|l|ks|x)\b\.?", " ", name, flags=_re.I)
@@ -1220,10 +1316,13 @@ def search_html(query, only=""):
     tesco_data, tesco_hits = tesco_matches(q)
     lhits = lidl_coupon_matches(q)
     bdata, bhits = bidfood_matches(q)
+    raw_norm = cena.strip_accents(raw_query.lower())
+    vnhits = {slug: vnshop_matches(slug, raw_norm, q)[1] for slug, _ in VN_SHOPS}
+    any_vn = any(vnhits.values())
 
     # Ten EAN thuong qua chi tiet (kem 75g, 500ml...) -> khong ra gia.
     # Thu rut gon dan cho den khi co ket qua.
-    if ean_name and not (products or thits or mhits or jhits or tesco_hits or lhits or bhits):
+    if ean_name and not (products or thits or mhits or jhits or tesco_hits or lhits or bhits or any_vn):
         for variant in ean_name_variants(ean_name)[1:]:
             q2 = cena.strip_accents(variant.lower())
             try:
@@ -1237,7 +1336,9 @@ def search_html(query, only=""):
             tesco_data, tesco_hits = tesco_matches(q2)
             lhits = lidl_coupon_matches(q2)
             bdata, bhits = bidfood_matches(q2)
-            if products or thits or mhits or jhits or tesco_hits or lhits or bhits:
+            vnhits = {slug: vnshop_matches(slug, raw_norm, q2)[1] for slug, _ in VN_SHOPS}
+            any_vn = any(vnhits.values())
+            if products or thits or mhits or jhits or tesco_hits or lhits or bhits or any_vn:
                 q = q2
                 break
 
@@ -1270,6 +1371,10 @@ def search_html(query, only=""):
     for it in bhits[:20]:
         addE(it["name"], it.get("amount", ""), "Bidfood", it["price"],
              pct=it.get("pct", ""), tags=["bán buôn"], typ="wholesale")
+    for slug, shopname in VN_SHOPS:
+        for it in vnhits.get(slug, [])[:20]:
+            addE(it["name"], it.get("amount", ""), shopname, it["price"],
+                 unitstr=it.get("unit", ""), tags=["hàng Việt"], typ="wholesale")
 
     # Tim tu trang Ban buon -> chi giu gia Tamda/Makro/JIP
     if only == "banbuon":
@@ -1290,6 +1395,8 @@ def search_html(query, only=""):
 
     if lhits:
         body += lidl_coupon_table(lhits)
+
+    body += ('<div id="shopfilter" class="shopfilter"></div>' + SHOPFILTER_JS)
 
     # --- Gom theo ten mat hang, moi mat hang lay 4 sieu thi re nhat ---
     by_name = {}
@@ -1317,7 +1424,7 @@ def search_html(query, only=""):
                     per_s = f"<span class='a'>({e['per']:.2f} Kč/{UNIT_SHORT[e['unit']]})</span>" if e["per"] else ""
                     pct_s = f" <span class='pctb'>{H.escape(e['pct'])}</span>" if e["pct"] else ""
                     cls = " class='w'" if i == 0 else ""
-                    out += (f"<td{cls}>{shop_badge(e['shop'])}"
+                    out += (f"<td{cls} data-shop=\"{H.escape(e['shop'])}\">{shop_badge(e['shop'])}"
                             f"<span class='mxp'>{e['price']:.2f} Kč{pct_s}</span>"
                             f"{per_s}{tags}</td>")
                 else:
