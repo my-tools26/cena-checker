@@ -228,16 +228,15 @@ CSS = """
  .mx .mxp{display:block;font-weight:bold;color:var(--text-strong);white-space:nowrap}
  .mx a.it{color:var(--text-strong);text-decoration:none;font-weight:bold}
  .mx a.it:hover{color:var(--accent)}
- .shopfilter{margin:10px 0 4px;line-height:2}
- .shopfilter .sf-label{color:var(--muted);font-size:.9em;margin-right:4px}
- .sf-chip{font-size:.82em;padding:3px 10px;border-radius:16px;border:1px solid var(--input-border);background:var(--card);color:var(--accent);cursor:pointer;margin:2px 3px}
- .sf-chip.off{opacity:.5;text-decoration:line-through;color:var(--muted)}
+ .viewtabs{display:flex;gap:6px;margin:2px 0 14px}
+ .viewtabs button{flex:0 0 auto;font-size:.9em;padding:7px 16px;border-radius:20px;border:1px solid var(--input-border);background:var(--card);color:var(--muted);cursor:pointer}
+ .viewtabs button.on{background:var(--accent);color:var(--btn-txt);border-color:var(--accent);font-weight:bold}
 """
 
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v3.5 · 08.07.2026"
+APP_VERSION = "v3.6 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -253,7 +252,7 @@ SCAN_JS = """
   if(!isTouch){ btn.style.display='none'; return; }
   var FORMATS=['ean_13','ean_8','upc_a','upc_e','code_128'];
   function found(code){ stop();
-    window.location='/hledej?q='+encodeURIComponent(code)+(window.SCANLOC?'&loc='+window.SCANLOC:''); }
+    window.location='/hledej?q='+encodeURIComponent(code)+(window.SCANLOC?'&loc='+window.SCANLOC:'')+(window.SCANVIEW&&window.SCANVIEW!=='all'?'&view='+window.SCANVIEW:''); }
   function stop(){
     if(rafId){ cancelAnimationFrame(rafId); rafId=null; }
     if(stream){ stream.getTracks().forEach(function(t){t.stop();}); stream=null; }
@@ -349,6 +348,31 @@ THEME_JS = """<script>
 </script>"""
 
 
+VIEWTABS_JS = """<script>
+(function(){
+  var KEY='cc_view';
+  var params=new URLSearchParams(location.search);
+  var urlView=params.get('view');
+  var view=urlView || localStorage.getItem(KEY) || 'all';
+  if(urlView) localStorage.setItem(KEY, urlView);
+  window.SCANVIEW=view;
+  var form=document.querySelector('form.searchbox');
+  if(form){ var h=document.createElement('input'); h.type='hidden'; h.name='view'; h.value=view; form.appendChild(h); }
+  var box=document.getElementById('viewtabs');
+  if(!box) return;
+  box.querySelectorAll('button').forEach(function(b){
+    if(b.getAttribute('data-v')===view) b.classList.add('on');
+    b.addEventListener('click',function(){
+      var v=b.getAttribute('data-v'); localStorage.setItem(KEY, v);
+      var p=new URLSearchParams(location.search);
+      if(p.get('q')){ p.set('view', v); location.search=p.toString(); }
+      else { box.querySelectorAll('button').forEach(function(x){x.classList.remove('on');}); b.classList.add('on'); window.SCANVIEW=v; if(form){ [...form.elements].forEach(function(e){if(e.name==='view')e.value=v;}); } }
+    });
+  });
+})();
+</script>"""
+
+
 def shell(body, active="/"):
     tabs = "".join(
         f'<a href="{href}"{" class=\"on\"" if href == active else ""}>{label}</a>'
@@ -361,7 +385,12 @@ def shell(body, active="/"):
                  '<button type="button" id="scanbtn" title="Quét mã vạch bằng camera" '
                  'style="padding:12px 16px;background:#2b5fa7">📷</button>'
                  '<button type="submit">🔍 Tìm</button></form>'
-                 '<div id="scanbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);'
+                 '<div class="viewtabs" id="viewtabs">'
+                 '<button data-v="all">Tất cả</button>'
+                 '<button data-v="retail">🏪 Siêu thị</button>'
+                 '<button data-v="wholesale">📦 Bán buôn</button></div>'
+                 + VIEWTABS_JS
+                 + '<div id="scanbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);'
                  'z-index:9999;padding:16px;text-align:center">'
                  '<p style="color:#fff;font-size:1.1em">Giơ camera vào mã vạch sản phẩm</p>'
                  '<div id="scanview" style="max-width:480px;margin:0 auto"></div>'
@@ -1061,7 +1090,7 @@ def tamda_table(data, items):
 
 
 # Cac chuoi BAN BUON: tach khoi cot ban le
-WHOLESALE_KEYWORDS = ("jip", "makro")
+WHOLESALE_KEYWORDS = ("jip", "makro", "tamda", "bidfood")
 _shop_cache = {}
 
 
@@ -1242,49 +1271,6 @@ def ean_lookup(code):
     return None
 
 
-SHOPFILTER_JS = """<script>
-(function(){
-  var KEY='cc_hidden_shops';
-  function hidden(){ try{return JSON.parse(localStorage.getItem(KEY)||'[]');}catch(e){return [];} }
-  function save(a){ localStorage.setItem(KEY, JSON.stringify(a)); }
-  function apply(){
-    var h=hidden();
-    document.querySelectorAll('td[data-shop]').forEach(function(td){
-      var s=td.getAttribute('data-shop');
-      if(h.indexOf(s)>=0){
-        if(!td.dataset.orig){ td.dataset.orig=td.innerHTML; }
-        td.innerHTML="<span class='a'>ẩn</span>";
-      } else if(td.dataset.orig){
-        td.innerHTML=td.dataset.orig; td.removeAttribute('data-orig');
-      }
-    });
-  }
-  function build(){
-    var box=document.getElementById('shopfilter'); if(!box) return;
-    var shops={};
-    document.querySelectorAll('td[data-shop]').forEach(function(td){ shops[td.getAttribute('data-shop')]=1; });
-    var h=hidden();
-    var names=Object.keys(shops).sort();
-    if(!names.length){ box.style.display='none'; return; }
-    box.innerHTML='<span class=\"sf-label\">Lọc siêu thị (bấm để ẩn/hiện):</span> '+
-      names.map(function(n){
-        var off=h.indexOf(n)>=0;
-        return '<button class=\"sf-chip'+(off?' off':'')+'\" data-s=\"'+n.replace(/\"/g,'')+'\">'+
-               (off?'☐ ':'☑ ')+n+'</button>';
-      }).join('');
-    box.querySelectorAll('.sf-chip').forEach(function(b){
-      b.addEventListener('click',function(){
-        var s=b.getAttribute('data-s'); var h=hidden(); var i=h.indexOf(s);
-        if(i>=0) h.splice(i,1); else h.push(s);
-        save(h); apply(); build();
-      });
-    });
-  }
-  function go(){ apply(); build(); }
-  window.addEventListener('load', go);
-  setTimeout(go, 300);
-})();
-</script>"""
 
 
 def ean_name_variants(name):
@@ -1301,7 +1287,9 @@ def ean_name_variants(name):
     return out
 
 
-def search_html(query, only=""):
+def search_html(query, only="", view="all"):
+    if only == "banbuon":
+        view = "wholesale"
     raw_query = query.strip()
     ean_name = None
     if _re.fullmatch(r"\d{8,14}", raw_query):
@@ -1376,15 +1364,24 @@ def search_html(query, only=""):
             addE(it["name"], it.get("amount", ""), shopname, it["price"],
                  unitstr=it.get("unit", ""), tags=["hàng Việt"], typ="wholesale")
 
-    # Tim tu trang Ban buon -> chi giu gia Tamda/Makro/JIP
-    if only == "banbuon":
+    # Loc theo view: retail (sieu thi ban le) / wholesale (ban buon) / all
+    if view == "retail":
+        entries = [e for e in entries if e["typ"] == "retail"]
+    elif view == "wholesale":
         entries = [e for e in entries if e["typ"] == "wholesale"]
         lhits = []
+    else:
+        # che do Tat ca: gan nhan phan biet le/buon
+        for e in entries:
+            lbl = "📦 buôn" if e["typ"] == "wholesale" else "🏪 lẻ"
+            if lbl not in e["tags"]:
+                e["tags"] = [lbl] + [t for t in e["tags"] if t not in ("bán buôn", "hàng Việt")]
 
     body = f"<h1>Kết quả: {H.escape(query)}</h1>"
-    if only == "banbuon":
-        body += ('<p class="muted">📦 Chỉ hiện giá <b>bán buôn</b> (Tamda/Makro/JIP) · '
-                 f'<a href="/hledej?q={urllib.parse.quote(raw_query)}">xem mọi siêu thị</a></p>')
+    if view == "retail":
+        body += '<p class="muted">🏪 Đang hiện <b>giá siêu thị (bán lẻ)</b> — đổi bằng nút phía trên.</p>'
+    elif view == "wholesale":
+        body += '<p class="muted">📦 Đang hiện <b>giá bán buôn</b> (Makro/JIP/Tamda/Bidfood/dathang/Linsan) — đổi bằng nút phía trên.</p>'
     if ean_name:
         body += f'<p class="muted">📦 Mã vạch nhận diện: <b>{H.escape(ean_name)}</b> → tìm giá <b>{H.escape(q)}</b></p>'
     elif q != cena.strip_accents(raw_query.lower()):
@@ -1395,8 +1392,6 @@ def search_html(query, only=""):
 
     if lhits:
         body += lidl_coupon_table(lhits)
-
-    body += ('<div id="shopfilter" class="shopfilter"></div>' + SHOPFILTER_JS)
 
     # --- Gom theo ten mat hang, moi mat hang lay 4 sieu thi re nhat ---
     by_name = {}
@@ -1558,7 +1553,8 @@ class Handler(BaseHTTPRequestHandler):
                 qs = urllib.parse.parse_qs(parsed.query)
                 q = qs.get("q", [""])[0]
                 loc = qs.get("loc", [""])[0]
-                self.send_page(search_html(q, only=loc) if q.strip() else home_html())
+                view = qs.get("view", ["all"])[0]
+                self.send_page(search_html(q, only=loc, view=view) if q.strip() else home_html())
             elif parsed.path == "/manifest.json":
                 data = MANIFEST.encode("utf-8")
                 self.send_response(200)
