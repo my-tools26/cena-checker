@@ -156,23 +156,24 @@ def icon_for(name: str) -> str:
 
 CSS = """
  body{font-family:Segoe UI,Arial,sans-serif;max-width:1100px;margin:20px auto;padding:0 16px;background:#161614;color:#e6e4dd}
- a{color:#7ac68f}
- h1{color:#7ac68f;margin-bottom:4px} h2{background:#1a7a3a;color:#fff;padding:8px 12px;border-radius:6px;margin-top:28px}
- h3{margin:24px 0 8px;color:#7ac68f}
+ a{color:#f0a35e}
+ h1{color:#f0a35e;margin-bottom:4px} h2{background:#3a2a15;color:#f0a35e;padding:8px 12px;border-radius:6px;margin-top:28px}
+ h3{margin:24px 0 8px;color:#f0a35e}
  table{border-collapse:collapse;width:100%;background:#232320;margin-bottom:12px;border-radius:10px;overflow:hidden}
- th{background:#2b3a2f;text-align:left;padding:8px;color:#cfe8d6} td{padding:8px;border-top:1px solid #35352f;vertical-align:top}
+ th{background:#2f2a22;text-align:left;padding:8px;color:#d8c4a8} td{padding:8px;border-top:1px solid #35352f;vertical-align:top}
  tr.best{background:#41381c}
- .p{font-weight:bold;color:#ff8a7a;white-space:nowrap} .s{font-weight:bold}
- .d{color:#8fd6a4;font-weight:bold;white-space:nowrap} .a{color:#8f8f88;font-size:.9em}
+ .p{font-weight:bold;color:#f0a35e;white-space:nowrap} .s{font-weight:bold}
+ .d{color:#f0a35e;font-weight:bold;white-space:nowrap} .a{color:#8f8f88;font-size:.9em}
  .o{color:#8f8f88;font-size:.85em} .n{max-width:260px}
- .searchbox{display:flex;gap:8px;margin:16px 0}
- input[type=text]{flex:1;font-size:1.3em;padding:12px;border:2px solid #2f7a46;border-radius:8px;background:#232320;color:#e6e4dd}
+ .searchbox{display:flex;gap:6px;margin:16px 0}
+ input[type=text]{flex:1;min-width:0;font-size:1.1em;padding:10px;border:2px solid #7a5a30;border-radius:8px;background:#232320;color:#e6e4dd}
+ @media(max-width:600px){.searchbox button{padding:10px 12px;font-size:1em;white-space:nowrap}}
  select{background:#232320;color:#e6e4dd;border:1px solid #555;border-radius:6px;padding:3px 6px}
- button,.bigbtn{font-size:1.1em;padding:12px 20px;background:#1a7a3a;color:#fff;border:none;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-block}
- button:hover,.bigbtn:hover{background:#239b4d}
- .chips{margin:10px 0} .chips a{display:inline-block;margin:4px 6px 0 0;padding:6px 14px;background:#232320;border:1px solid #2f7a46;color:#7ac68f;border-radius:20px;text-decoration:none;font-size:.95em}
- .chips a:hover{background:#203327}
- .muted{color:#8f8f88} .muted a{color:#7ac68f}
+ button,.bigbtn{font-size:1.1em;padding:12px 20px;background:#f0a35e;color:#161614;border:none;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-block}
+ button:hover,.bigbtn:hover{background:#ffbe82}
+ .chips{margin:10px 0} .chips a{display:inline-block;margin:4px 6px 0 0;padding:6px 14px;background:#232320;border:1px solid #7a5a30;color:#f0a35e;border-radius:20px;text-decoration:none;font-size:.95em}
+ .chips a:hover{background:#2e2418}
+ .muted{color:#8f8f88} .muted a{color:#f0a35e}
  .back{margin-bottom:12px;display:inline-block}
  .cols{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
  .col{flex:1;min-width:340px}
@@ -185,21 +186,21 @@ CSS = """
  .vald{font-size:.72em;color:#8f8f88;white-space:nowrap}
  .card .nm{font-weight:bold;font-size:.93em;margin:0 0 2px;line-height:1.3;color:#f0efe8}
  .card .sub{color:#9a9a92;font-size:.78em;margin:0 0 8px;min-height:1.1em}
- .card .pr{font-size:1.45em;font-weight:bold;color:#ff8a7a;white-space:nowrap}
- .pctb{background:#23401f;color:#9fdc8f;border-radius:6px;padding:1px 7px;font-size:.78em;font-weight:bold}
+ .card .pr{font-size:1.45em;font-weight:bold;color:#f0a35e;white-space:nowrap}
+ .pctb{background:#3a2a15;color:#f0a35e;border-radius:6px;padding:1px 7px;font-size:.78em;font-weight:bold}
  .chipbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;align-items:center}
  .chipbar label{color:#bdbdb4}
  .chip{border:1px solid #4a4a44;border-radius:20px;padding:6px 14px;font-size:.88em;cursor:pointer;background:#232320;color:#bdbdb4}
- .chip.on{background:#1a7a3a;color:#fff;border-color:#1a7a3a}
+ .chip.on{background:#3a2a15;color:#f0a35e;border-color:#3a2a15}
  .appbar{display:flex;align-items:center;gap:10px;border-bottom:1px solid #35352f;padding:8px 0;margin-bottom:14px;flex-wrap:wrap}
- .appbar .logo{font-size:1.15em;font-weight:bold;color:#7ac68f;text-decoration:none}
+ .appbar .logo{font-size:1.15em;font-weight:bold;color:#f0a35e;text-decoration:none}
  .navtabs{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
  .navtabs a{padding:6px 13px;border-radius:8px;font-size:.92em;color:#bdbdb4;text-decoration:none}
- .navtabs a.on{background:#1a7a3a;color:#fff}
- .navtabs a:hover{background:#203327;color:#7ac68f}
+ .navtabs a.on{background:#3a2a15;color:#f0a35e}
+ .navtabs a:hover{background:#2e2418;color:#f0a35e}
  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:8px;margin:14px 0}
  .tile{background:#232320;border:1px solid #35352f;border-radius:12px;padding:12px 6px;text-align:center;text-decoration:none;color:#d8d6cf;font-size:.85em}
- .tile:hover{border-color:#2f7a46;background:#203327}
+ .tile:hover{border-color:#7a5a30;background:#2e2418}
  .tile .em{font-size:1.6em;display:block;margin-bottom:4px}
  .rlist{border:1px solid #35352f;border-radius:12px;overflow:hidden;background:#232320;margin-bottom:16px}
  .rrow{display:flex;align-items:center;gap:10px;padding:10px 14px;border-top:1px solid #35352f}
@@ -211,19 +212,19 @@ CSS = """
  .rrow .inf p{margin:0}
  .rrow .pn{font-size:.95em;font-weight:bold;line-height:1.3;color:#f0efe8}
  .rrow .pm{font-size:.8em;color:#9a9a92}
- .rrow .per{font-size:1.15em;font-weight:bold;color:#ff8a7a;white-space:nowrap}
+ .rrow .per{font-size:1.15em;font-weight:bold;color:#f0a35e;white-space:nowrap}
  .tagb{border-radius:6px;padding:1px 6px;font-size:.72em;font-weight:normal;white-space:nowrap;vertical-align:1px}
- .mx td.w{background:#23401f}
- .mx td.w .mxp{color:#ff8a7a;font-size:1.1em}
+ .mx td.w{background:#3a2a15}
+ .mx td.w .mxp{color:#f0a35e;font-size:1.1em}
  .mx .mxp{display:block;font-weight:bold;color:#d8d6cf;white-space:nowrap}
  .mx a.it{color:#f0efe8;text-decoration:none;font-weight:bold}
- .mx a.it:hover{color:#7ac68f}
+ .mx a.it:hover{color:#f0a35e}
 """
 
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v3.1 · 08.07.2026"
+APP_VERSION = "v3.2 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -355,7 +356,7 @@ SHOP_COLOR = [
     ("tesco", "#DBE4F7", "#0B2E6B"), ("albert", "#E1F5EE", "#0F6E56"),
     ("globus", "#FAEEDA", "#633806"), ("tamda", "#FFE3CC", "#8A4B00"),
     ("makro", "#DDE6F2", "#003B7E"), ("jip", "#FCEBEB", "#C8102E"),
-    ("coop", "#EAF3DE", "#3B6D11"), ("dm", "#EEEDFE", "#3C3489"),
+    ("coop", "#EAF3DE", "#3B6D11"), ("dm", "#EEEDFE", "#3C3489"), ("bidfood", "#E1F5E9", "#0F6E3B"),
     ("hru", "#FAEEDA", "#854F0B"), ("flop", "#FBEAF0", "#993556"),
 ]
 
@@ -686,7 +687,7 @@ def product_matrix(products, heading, max_cols=4, note="", show_exp=True):
     head_cols = "".join(
         f"<th>{'✅ Rẻ nhất' if i == 0 else '#%d' % (i + 1)}</th>" for i in range(max_cols))
     head_cols = head_cols.replace("<th>✅ Rẻ nhất</th>",
-                                  "<th style='background:#23401f;color:#9fdc8f'>✅ Rẻ nhất</th>")
+                                  "<th style='background:#3a2a15;color:#f0a35e'>✅ Rẻ nhất</th>")
     out = (f"<h2>{heading}</h2>"
            + (f"<p class='muted'>{note}</p>" if note else "")
            + f"<table class='mx'><tr><th style='width:26%'>Mặt hàng</th>{head_cols}</tr>")
@@ -755,9 +756,9 @@ def _bb_match(t1, t2):
 
 
 def banbuon_html():
-    body = ("<h1>📦 Bán buôn — Tamda / Makro / JIP</h1>"
+    body = ("<h1>📦 Bán buôn — Tamda / Makro / JIP" + (" / Bidfood" if load_bidfood() else "") + "</h1>"
             "<p class='muted'>Giá gói · (giá/đơn vị) ghi nhỏ · ô xanh ✅ = kho rẻ nhất khi có "
-            "cùng mặt hàng ở nhiều kho. Tamda = giá với thẻ, theo tờ rơi tuần.</p>")
+            "cùng mặt hàng ở nhiều kho. Tamda = giá với thẻ, theo tờ rơi tuần · Bidfood = giá s DPH.</p>")
 
     # Gom deal 3 kho ve 1 danh sach: moi item = {name, amount, offers{col: deal}}
     items = []
@@ -780,6 +781,16 @@ def banbuon_html():
             else:
                 items.append({"name": p["name"], "amount": p["amount"],
                               "toks": toks, "offers": {col: offer}})
+    # Bidfood: chi ghep vao mat hang da co (4300+ items, khong liet ke rieng)
+    bdata = load_bidfood()
+    if bdata:
+        for it in bdata["items"]:
+            toks = _bb_tokens(it["name"])
+            hit = next((x for x in items if "bidfood" not in x["offers"] and _bb_match(x["toks"], toks)), None)
+            if hit:
+                hit["offers"]["bidfood"] = {"shop": "Bidfood", "price": it["price"],
+                                            "pct": it.get("pct", ""), "unit": "",
+                                            "amount": it.get("amount", "")}
 
     if not items:
         return shell(body + "<p class='muted'>Chưa có dữ liệu bán buôn.</p>", "/banbuon")
@@ -793,11 +804,13 @@ def banbuon_html():
     items.sort(key=sort_key)
     ncmp = sum(1 for x in items if len(x["offers"]) >= 2)
     valid_s = f" · Tamda: {H.escape(data['valid'])}" if data else ""
-    body += (f"<h2>📦 SO SÁNH 3 KHO — {len(items)} mặt hàng, {ncmp} có ở ≥2 kho{valid_s}</h2>"
-             "<table class='mx'><tr><th style='width:30%'>Mặt hàng</th>"
+    body += (f"<h2>📦 SO SÁNH KHO BÁN BUÔN — {len(items)} mặt hàng, {ncmp} có ở ≥2 kho{valid_s}</h2>"
+             "<table class='mx'><tr><th style='width:28%'>Mặt hàng</th>"
              "<th style='background:#3a2a15;color:#ffb27a'>🅣 Tamda</th>"
              "<th style='background:#1c2940;color:#9fc0ee'>Ⓜ Makro</th>"
-             "<th style='background:#3a1c1c;color:#f0a0a0'>🄹 JIP</th></tr>")
+             "<th style='background:#3a1c1c;color:#f0a0a0'>🄹 JIP</th>"
+             + ("<th style='background:#1c3a2a;color:#9fdc9f'>🅑 Bidfood</th>" if bdata else "")
+             + "</tr>")
     for x in items:
         amount = f" <span class='a'>{H.escape(x['amount'])}</span>" if x["amount"] else ""
         body += f"<tr><td>{icon_for(x['name'])}<b>{H.escape(x['name'])}</b>{amount}</td>"
@@ -810,7 +823,7 @@ def banbuon_html():
                 best = min(pus, key=lambda c: pus[c][0])
             else:
                 best = min(x["offers"], key=lambda c: x["offers"][c]["price"])
-        for col in ("tamda", "makro", "jip"):
+        for col in (("tamda", "makro", "jip", "bidfood") if bdata else ("tamda", "makro", "jip")):
             o = x["offers"].get(col)
             if not o:
                 body += "<td class='a'>—</td>"
@@ -929,6 +942,27 @@ def load_tamda():
 
 def tamda_matches(query_cs):
     data = load_tamda()
+    if not data:
+        return None, []
+    q = cena.strip_accents(query_cs.lower())
+    hits = [it for it in data["items"]
+            if all(w in cena.strip_accents(it["name"].lower()) for w in q.split())]
+    return data, hits
+
+
+BIDFOOD_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bidfood_prices.json")
+
+
+def load_bidfood():
+    import json
+    if not os.path.exists(BIDFOOD_FILE):
+        return None
+    with open(BIDFOOD_FILE, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def bidfood_matches(query_cs):
+    data = load_bidfood()
     if not data:
         return None, []
     q = cena.strip_accents(query_cs.lower())
@@ -1157,10 +1191,11 @@ def search_html(query, only=""):
     jhits = shop_matches("jip", q)
     tesco_data, tesco_hits = tesco_matches(q)
     lhits = lidl_coupon_matches(q)
+    bdata, bhits = bidfood_matches(q)
 
     # Ten EAN thuong qua chi tiet (kem 75g, 500ml...) -> khong ra gia.
     # Thu rut gon dan cho den khi co ket qua.
-    if ean_name and not (products or thits or mhits or jhits or tesco_hits or lhits):
+    if ean_name and not (products or thits or mhits or jhits or tesco_hits or lhits or bhits):
         for variant in ean_name_variants(ean_name)[1:]:
             q2 = cena.strip_accents(variant.lower())
             try:
@@ -1173,7 +1208,8 @@ def search_html(query, only=""):
             jhits = shop_matches("jip", q2)
             tesco_data, tesco_hits = tesco_matches(q2)
             lhits = lidl_coupon_matches(q2)
-            if products or thits or mhits or jhits or tesco_hits or lhits:
+            bdata, bhits = bidfood_matches(q2)
+            if products or thits or mhits or jhits or tesco_hits or lhits or bhits:
                 q = q2
                 break
 
@@ -1203,6 +1239,9 @@ def search_html(query, only=""):
     for it in tesco_hits:
         addE(it["name"], it["amount"], "Tesco online", it["price"], it["valid"],
              unitstr=it["unit"], tags=(["💳 Clubcard"] if it.get("cc") else []), typ="retail")
+    for it in bhits[:20]:
+        addE(it["name"], it.get("amount", ""), "Bidfood", it["price"],
+             pct=it.get("pct", ""), tags=["bán buôn"], typ="wholesale")
 
     # Tim tu trang Ban buon -> chi giu gia Tamda/Makro/JIP
     if only == "banbuon":
@@ -1233,7 +1272,7 @@ def search_html(query, only=""):
         by_name[key]["shops"].append(e)
 
     def render_table(items, heading):
-        head_cols = ("<th style='background:#23401f;color:#9fdc8f'>✅ Rẻ nhất</th>"
+        head_cols = ("<th style='background:#3a2a15;color:#f0a35e'>✅ Rẻ nhất</th>"
                      "<th>#2</th><th>#3</th><th>#4</th>")
         out = (f"<h2>{heading}</h2>"
                f"<table class='mx'><tr><th style='width:26%'>Mặt hàng</th>{head_cols}</tr>")
@@ -1245,7 +1284,7 @@ def search_html(query, only=""):
                 if i < len(ranked):
                     e = ranked[i]
                     tags = "".join(
-                        f" <span class='tagb' style='background:#1a3a2a;color:#9fdc8f'>{H.escape(t)}</span>"
+                        f" <span class='tagb' style='background:#3a2a15;color:#f0a35e'>{H.escape(t)}</span>"
                         for t in e["tags"])
                     per_s = f"<span class='a'>({e['per']:.2f} Kč/{UNIT_SHORT[e['unit']]})</span>" if e["per"] else ""
                     pct_s = f" <span class='pctb'>{H.escape(e['pct'])}</span>" if e["pct"] else ""
