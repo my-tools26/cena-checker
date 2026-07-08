@@ -223,7 +223,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/hoaqua", "Rau quả"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v2.7 · 08.07.2026"
+APP_VERSION = "v2.8 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1263,32 +1263,71 @@ def search_html(query, only=""):
             by_name[key] = {"name": e["name"], "amount": e["amount"], "shops": []}
         by_name[key]["shops"].append(e)
 
-    head_cols = ("<th style='background:#23401f;color:#9fdc8f'>✅ Rẻ nhất</th>"
-                 "<th>#2</th><th>#3</th><th>#4</th>")
-    out = (f"<h2>🏆 So sánh giá — {len(by_name)} mặt hàng, mọi nguồn gộp chung</h2>"
-           f"<table class='mx'><tr><th style='width:26%'>Mặt hàng</th>{head_cols}</tr>")
-    for key, item in by_name.items():
-        ranked = sorted(item["shops"], key=lambda e: e["per"] if e["per"] else 9999999)[:4]
-        amount = f" <span class='a'>{H.escape(item['amount'])}</span>" if item["amount"] else ""
-        out += f"<tr><td>{icon_for(item['name'])}<b>{H.escape(item['name'])}</b>{amount}</td>"
-        for i in range(4):
-            if i < len(ranked):
-                e = ranked[i]
-                tags = "".join(
-                    f" <span class='tagb' style='background:#1a3a2a;color:#9fdc8f'>{H.escape(t)}</span>"
-                    for t in e["tags"])
-                per_s = f"<span class='a'>({e['per']:.2f} Kč/{UNIT_SHORT[e['unit']]})</span>" if e["per"] else ""
-                pct_s = f" <span class='pctb'>{H.escape(e['pct'])}</span>" if e["pct"] else ""
-                cls = " class='w'" if i == 0 else ""
-                out += (f"<td{cls}>{shop_badge(e['shop'])}"
-                        f"<span class='mxp'>{e['price']:.2f} Kč{pct_s}</span>"
-                        f"{per_s}{tags}</td>")
-            else:
-                out += "<td class='a'>—</td>"
-        out += "</tr>"
-    out += "</table>"
-    body += out
-    return shell(body, "")
+    def render_table(items, heading):
+        head_cols = ("<th style='background:#23401f;color:#9fdc8f'>✅ Rẻ nhất</th>"
+                     "<th>#2</th><th>#3</th><th>#4</th>")
+        out = (f"<h2>{heading}</h2>"
+               f"<table class='mx'><tr><th style='width:26%'>Mặt hàng</th>{head_cols}</tr>")
+        for item in items:
+            ranked = sorted(item["shops"], key=lambda e: e["per"] if e["per"] else 9999999)[:4]
+            amount = f" <span class='a'>{H.escape(item['amount'])}</span>" if item["amount"] else ""
+            out += f"<tr><td>{icon_for(item['name'])}<b>{H.escape(item['name'])}</b>{amount}</td>"
+            for i in range(4):
+                if i < len(ranked):
+                    e = ranked[i]
+                    tags = "".join(
+                        f" <span class='tagb' style='background:#1a3a2a;color:#9fdc8f'>{H.escape(t)}</span>"
+                        for t in e["tags"])
+                    per_s = f"<span class='a'>({e['per']:.2f} Kč/{UNIT_SHORT[e['unit']]})</span>" if e["per"] else ""
+                    pct_s = f" <span class='pctb'>{H.escape(e['pct'])}</span>" if e["pct"] else ""
+                    cls = " class='w'" if i == 0 else ""
+                    out += (f"<td{cls}>{shop_badge(e['shop'])}"
+                            f"<span class='mxp'>{e['price']:.2f} Kč{pct_s}</span>"
+                            f"{per_s}{tags}</td>")
+                else:
+                    out += "<td class='a'>—</td>"
+            out += "</tr>"
+        return out + "</table>"
+
+    items = list(by_name.values())
+    if ean_name:
+        # Tach: dung san pham quet (ten chua du tu khoa chinh) / hang tuong tu
+        _STOP = {"a", "s", "v", "z", "the", "и"}
+        toks = [w for w in cena.strip_accents(
+                    _re.sub(r"\b\d+[,.]?\d*\s*(g|kg|ml|l|ks|x)\b\.?", " ", ean_name, flags=_re.I).lower()
+                ).split() if len(w) >= 3 and w not in _STOP]
+
+        def hits(nm):
+            n = cena.strip_accents(nm.lower())
+            return sum(1 for t in toks if t in n)
+
+        # "Dung san pham" = nhom khop nhieu tu khoa nhat (it nhat 2 tu,
+        # hoac khop het khi ten chi co 1 tu)
+        scores = {it["name"]: hits(it["name"]) for it in items}
+        max_hit = max(scores.values()) if scores else 0
+        threshold_ok = toks and (max_hit >= 2 or max_hit == len(toks))
+        ean_norm = cena.strip_accents(ean_name.lower())
+
+        def rev_contained(nm):
+            # ten nhom hang (vd "Kofola") nam tron trong ten san pham quet
+            n = cena.strip_accents(nm.lower()).strip()
+            return len(n) >= 4 and n in ean_norm
+
+        exact = [it for it in items
+                 if (threshold_ok and scores[it["name"]] == max_hit) or rev_contained(it["name"])]
+        similar = [it for it in items if it not in exact]
+        if exact:
+            body += render_table(exact, f"✅ Đúng sản phẩm quét — {len(exact)} kết quả")
+            if similar:
+                body += render_table(similar, f"🔍 Sản phẩm tương tự — {len(similar)} mặt hàng")
+        else:
+            body += ("<p style='background:#3a2a15;padding:10px 14px;border-radius:8px'>"
+                     f"⚠️ <b>{H.escape(ean_name)}</b> hiện <b>không có khuyến mãi</b> ở siêu thị nào "
+                     "trong dữ liệu — dưới đây là sản phẩm tương tự cùng hãng/loại.</p>")
+            body += render_table(similar, f"🔍 Sản phẩm tương tự — {len(similar)} mặt hàng")
+    else:
+        body += render_table(items, f"🏆 So sánh giá — {len(items)} mặt hàng, mọi nguồn gộp chung")
+    return shell(body, "/banbuon" if only == "banbuon" else "")
 
 
 def report_html():
