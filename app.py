@@ -117,10 +117,10 @@ ICON_RULES = [
     ("meloun", "🍉"), ("jahod", "🍓"), ("hrozn", "🍇"), ("broskv", "🍑"),
     ("merunk", "🍑"), ("tresn", "🍒"), ("visn", "🍒"), ("svestk", "🟣"),
     ("mandarin", "🍊"), ("kiwi", "🥝"), ("ananas", "🍍"), ("mango", "🥭"),
-    ("hrusk", "🍐"), ("boruvk", "🫐"), ("malin", "🍓"),
+    ("hrusk", "🍐"), ("boruvk", "🔵"), ("malin", "🍓"),
     ("avokad", "🥑"), ("rajc", "🍅"), ("brambor", "🥔"), ("mrkev", "🥕"),
     ("cibul", "🧅"), ("cesnek", "🧄"), ("okurk", "🥒"), ("salat", "🥬"),
-    ("paprik", "🫑"), ("kukuric", "🌽"),
+    ("paprik", "🌶️"), ("kukuric", "🌽"),
     ("mleko", "🥛"), ("jogurt", "🥛"), ("smetana", "🥛"), ("maslo", "🧈"),
     ("syr", "🧀"), ("eidam", "🧀"), ("mozzarel", "🧀"), ("vejce", "🥚"), ("vajec", "🥚"),
     ("kurec", "🍗"), ("kure", "🍗"), ("veprov", "🥩"), ("hovez", "🥩"),
@@ -135,7 +135,7 @@ ICON_RULES = [
     ("kava", "☕"), ("caj", "🍵"), ("dzus", "🧃"), ("limonad", "🥤"),
     ("cola", "🥤"), ("miner", "💧"), ("voda", "💧"), ("energ", "⚡"),
     ("ryze", "🍚"), ("testovin", "🍝"), ("spaget", "🍝"), ("mouka", "🌾"),
-    ("cukr", "🍬"), ("olej", "🫒"), ("kecup", "🍅"), ("majonez", "🥫"),
+    ("cukr", "🍬"), ("olej", "🌻"), ("kecup", "🍅"), ("majonez", "🥫"),
     ("konzerv", "🥫"), ("polevk", "🍲"), ("pizza", "🍕"),
     ("toaletni", "🧻"), ("papir", "🧻"), ("praci", "🧺"), ("gel", "🧴"),
     ("sampon", "🧴"), ("sprchov", "🧴"), ("mydlo", "🧼"), ("zubni", "🦷"),
@@ -220,10 +220,10 @@ CSS = """
  .mx a.it:hover{color:#7ac68f}
 """
 
-NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/hoaqua", "Rau quả"), ("/banbuon", "Bán buôn")]
+NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v3.0 · 08.07.2026"
+APP_VERSION = "v3.1 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -605,7 +605,7 @@ STAPLES_ALL = [
     ("🥔 Khoai tây", "brambory", "kg"),
     ("🍅 Cà chua", "rajcata", "kg"),
     ("🥒 Dưa chuột", "okurky", "kg"),
-    ("🫑 Ớt chuông", "paprika", "kg"),
+    ("🌶️ Ớt chuông", "paprika", "kg"),
     ("🍺 Bia", "pivo", "l"),
     ("🧃 Nước ép", "dzus", "l"),
     ("💧 Nước khoáng", "mineralni voda", "l"),
@@ -637,7 +637,7 @@ def build_matrix():
     """Moi hang = 1 san pham cu the (nhu TO ROI MOI): ten day du + quy cach,
     cot = cac sieu thi ban dung san pham do (kupi da gom nhom san pham)."""
     import time as _t
-    if _t.time() - _matrix_cache["t"] < 600 and _matrix_cache["rows"]:
+    if _t.time() - _matrix_cache["t"] < 86400 and _matrix_cache["rows"]:
         return _matrix_cache["rows"]
     prods, seen = [], set()
     for label, qcz, unit in STAPLES_ALL:
@@ -669,7 +669,7 @@ def matrix_html():
     out = product_matrix(
         rows, "💡 MUA GÌ Ở ĐÂU HÔM NAY — 10 deal ngẫu nhiên từ nhóm hàng thiết yếu",
         note="⏰ = hết hôm nay/ngày mai · (giá/đơn vị) ghi nhỏ bên dưới · F5 để đổi 10 mặt hàng khác.")
-    out += "<p class='muted' style='margin-top:-4px'>Cập nhật mỗi 10 phút</p>"
+    out += "<p class='muted' style='margin-top:-4px'>Cập nhật 1 lần mỗi ngày</p>"
     return out
 
 
@@ -718,7 +718,6 @@ HOME_TILES = [
     ("🥤", "Đồ uống", "/kategorie/nealko-napoje"),
     ("🧴", "Drogerie", "/kategorie/drogerie"),
     ("🐶", "Thú cưng", "/kategorie/mazlicci"),
-    ("📦", "Bán buôn", "/banbuon"),
 ]
 
 
