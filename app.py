@@ -228,11 +228,12 @@ CSS = """
  .mx .mxp{display:block;font-weight:bold;color:var(--text-strong);white-space:nowrap}
  .mx a.it{color:var(--text-strong);text-decoration:none;font-weight:bold}
  .mx a.it:hover{color:var(--accent)}
- .viewtabs{display:flex;gap:6px;margin:2px 0 14px}
+ .viewtabs{display:flex;gap:6px;margin:0}
  .viewtabs button{flex:0 0 auto;font-size:.9em;padding:7px 16px;border-radius:20px;border:1px solid var(--input-border);background:var(--card);color:var(--muted);cursor:pointer}
  .viewtabs button.on{background:var(--accent);color:var(--btn-txt);border-color:var(--accent);font-weight:bold}
- .storefilter{display:none;margin:-8px 0 14px;padding:10px 12px;border:1px solid var(--input-border);border-radius:12px;background:var(--card)}
- .storefilter.open{display:block}
+ .filterwrap{display:none;margin:2px 0 14px}
+ .filterwrap.open{display:block}
+ .storefilter{margin:8px 0 0;padding:10px 12px;border:1px solid var(--input-border);border-radius:12px;background:var(--card)}
  .strow{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-bottom:6px}
  .stg{font-size:.82em;color:var(--muted);margin-right:4px;min-width:64px}
  .stp{font-size:.8em;padding:3px 10px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--accent);cursor:pointer}
@@ -244,7 +245,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v3.8 · 08.07.2026"
+APP_VERSION = "v3.9 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -409,7 +410,7 @@ STORE_FILTER_HTML = _store_filter_html()
 STOREFILTER_JS = """<script>
 (function(){
   var KEY='cc_hidden_shops';
-  var panel=document.getElementById('storefilter');
+  var panel=document.getElementById('filterwrap');
   var input=document.querySelector('form.searchbox input[type=text]');
   if(!panel||!input) return;
   function norm(s){ return (s||'').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,''); }
@@ -464,15 +465,19 @@ def shell(body, active="/"):
     searchbar = (scanloc
                  + '<form class="searchbox" action="/hledej" method="get">'
                  + ('<input type="hidden" name="loc" value="banbuon">' if active == "/banbuon" else '')
-                 + '<input type="text" name="q" placeholder="Gõ mặt hàng: sữa tươi / đùi gà / gạo thơm...">'
+                 + '<input type="text" name="q" autocomplete="off" autocorrect="off" '
+                 'autocapitalize="off" spellcheck="false" '
+                 'placeholder="Gõ mặt hàng: sữa tươi / đùi gà / gạo thơm...">'
                  '<button type="button" id="scanbtn" title="Quét mã vạch bằng camera" '
                  'style="padding:12px 16px;background:#2b5fa7">📷</button>'
                  '<button type="submit">🔍 Tìm</button></form>'
+                 '<div id="filterwrap" class="filterwrap">'
                  '<div class="viewtabs" id="viewtabs">'
                  '<button data-v="all">Tất cả</button>'
                  '<button data-v="retail">🏪 Siêu thị</button>'
                  '<button data-v="wholesale">📦 Bán buôn</button></div>'
-                 + STORE_FILTER_HTML + VIEWTABS_JS + STOREFILTER_JS
+                 + STORE_FILTER_HTML + '</div>'
+                 + VIEWTABS_JS + STOREFILTER_JS
                  + '<div id="scanbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);'
                  'z-index:9999;padding:16px;text-align:center">'
                  '<p style="color:#fff;font-size:1.1em">Giơ camera vào mã vạch sản phẩm</p>'
