@@ -233,7 +233,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v3.3 · 08.07.2026"
+APP_VERSION = "v3.4 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -758,7 +758,7 @@ def home_html():
 <div class="tiles">{tiles}</div>
 {matrix_html()}
 {home_suggestions_html()}
-<p class="muted" style="margin-top:24px">Nguồn tham khảo: kupi.cz, tamdafoods.eu · <a href="/gioithieu">Giới thiệu &amp; miễn trừ trách nhiệm</a></p>"""
+<p class="muted" style="margin-top:24px">Nguồn tham khảo: kupi.cz, tamdafoods.eu, makro.cz, jip-eshop.cz, mujbidfood.cz · <a href="/gioithieu">Giới thiệu &amp; miễn trừ trách nhiệm</a></p>"""
     return shell(body, "/")
 
 
@@ -873,12 +873,13 @@ GIOITHIEU_BODY = """
 <h1>ℹ️ Giới thiệu</h1>
 <p><b>Cena Checker</b> là công cụ phi lợi nhuận giúp cộng đồng người Việt tại Séc so sánh
 giá khuyến mãi giữa các siêu thị bán lẻ (Kaufland, Lidl, Billa, Penny, Tesco, Albert, Globus...)
-và bán buôn (Tamda Foods, Makro, JIP). Hỗ trợ tìm kiếm bằng tiếng Việt có dấu hoặc không dấu.</p>
+và bán buôn (Tamda Foods, Makro, JIP, Bidfood). Hỗ trợ tìm kiếm bằng tiếng Việt có dấu hoặc
+không dấu, và quét mã vạch sản phẩm bằng camera điện thoại.</p>
 <h2>Miễn trừ trách nhiệm</h2>
 <p>· Dữ liệu giá được tổng hợp tự động từ các nguồn công khai (kupi.cz, tờ rơi chính thức của
 các chuỗi) và <b>chỉ mang tính tham khảo</b> — giá thực tế tại cửa hàng có thể khác.<br>
-· Trang này <b>không liên kết, không đại diện</b> cho Kupi.cz, Tamda Foods, Makro, Lidl
-hay bất kỳ chuỗi siêu thị nào.<br>
+· Trang này <b>không liên kết, không đại diện</b> cho Kupi.cz, Tamda Foods, Makro, JIP,
+Bidfood, Lidl hay bất kỳ chuỗi siêu thị nào.<br>
 · Chúng tôi không chịu trách nhiệm cho quyết định mua sắm dựa trên thông tin tại đây.<br>
 · Dữ liệu Tamda cập nhật thủ công theo tuần từ tờ rơi chính thức, có thể chậm vài ngày.</p>
 <p class="muted">Góp ý / báo lỗi: liên hệ người quản trị trang.</p>"""
