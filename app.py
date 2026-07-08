@@ -223,7 +223,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/hoaqua", "Rau quả"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v2.8 · 08.07.2026"
+APP_VERSION = "v2.9 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -634,41 +634,27 @@ def deal_expiring(valid):
 
 
 def build_matrix():
+    """Moi hang = 1 san pham cu the (nhu TO ROI MOI): ten day du + quy cach,
+    cot = cac sieu thi ban dung san pham do (kupi da gom nhom san pham)."""
     import time as _t
     if _t.time() - _matrix_cache["t"] < 600 and _matrix_cache["rows"]:
         return _matrix_cache["rows"]
-    rows = []
+    prods, seen = [], set()
     for label, qcz, unit in STAPLES_ALL:
-        best = {}  # shop -> (gia/don vi, gia goi, so luong, sap het han)
-
-        def consider(shop, price, unitstr="", amount="", exp=False):
-            pu = parse_unit_price(unitstr) if unitstr else None
-            if pu is None:
-                pu = parse_amount_price(amount, price)
-            if pu and pu[1] == unit:
-                if shop not in best or pu[0] < best[shop][0]:
-                    best[shop] = (pu[0], price, amount or "", exp)
-
         try:
             soup = cena.fetch(f"{cena.BASE}/hledej?f={urllib.parse.quote(qcz)}")
-            for p in cena.parse_groups(soup):
-                for d in p["deals"]:
-                    consider(d["shop"], d["price"], d["unit"], p["amount"],
-                             exp=deal_expiring(d.get("valid")))
         except Exception:
-            pass
-        tdata, thits = tamda_matches(qcz)
-        for it in thits:
-            consider("Tamda", it["price"], amount=it["amount"])
-        _d, tesco_hits = tesco_matches(qcz)
-        for it in tesco_hits:
-            consider("Tesco online", it["price"], unitstr=it["unit"])
-        ranked = sorted(best.items(), key=lambda kv: kv[1][0])[:4]
-        if ranked:
-            rows.append((label, qcz, unit, ranked))
+            continue
+        for p in cena.parse_groups(soup):
+            if p["name"] in seen or not p["deals"]:
+                continue
+            seen.add(p["name"])
+            for d in p["deals"]:
+                d["_exp"] = deal_expiring(d.get("valid"))
+            prods.append(p)
         _t.sleep(1)
-    _matrix_cache.update({"t": _t.time(), "rows": rows})
-    return rows
+    _matrix_cache.update({"t": _t.time(), "rows": prods})
+    return prods
 
 
 def matrix_html():
@@ -680,26 +666,10 @@ def matrix_html():
     if not all_rows:
         return ""
     rows = _rand.sample(all_rows, min(10, len(all_rows)))
-    out = ("<h2 style='margin-top:14px'>💡 MUA GÌ Ở ĐÂU HÔM NAY — giá gói, xếp theo giá quy đổi</h2>"
-           "<p class='muted' style='margin:4px 0 8px'>⏰ = hết hôm nay/ngày mai · (giá/đơn vị) ghi nhỏ bên dưới.</p>"
-           "<table class='mx'><tr><th style='width:24%'>Mặt hàng</th>"
-           "<th style='background:#23401f;color:#9fdc8f'>✅ Rẻ nhất</th><th>#2</th><th>#3</th><th>#4</th></tr>")
-    for label, qcz, unit, ranked in rows:
-        out += (f"<tr><td><a class='it' href='/hledej?q={urllib.parse.quote(qcz)}'>{H.escape(label)}</a>"
-                f"<span class='a'> /{UNIT_SHORT[unit]}</span></td>")
-        for i in range(4):
-            if i < len(ranked):
-                shop, (per, price, amt, exp) = ranked[i]
-                cls = " class='w'" if i == 0 else ""
-                amt_s = f" {H.escape(amt)}" if amt else ""
-                exp_s = " <span class='expb'>⏰</span>" if exp else ""
-                out += (f"<td{cls}>{shop_badge(shop)}{exp_s}"
-                        f"<span class='mxp'>{price:.2f} Kč{amt_s}</span>"
-                        f"<span class='a'>({per:.2f} Kč/{UNIT_SHORT[unit]})</span></td>")
-            else:
-                out += "<td class='a'>—</td>"
-        out += "</tr>"
-    out += "</table><p class='muted' style='margin-top:-4px'>Bấm tên mặt hàng để xem đầy đủ mọi siêu thị · cập nhật mỗi 10 phút</p>"
+    out = product_matrix(
+        rows, "💡 MUA GÌ Ở ĐÂU HÔM NAY — 10 deal ngẫu nhiên từ nhóm hàng thiết yếu",
+        note="⏰ = hết hôm nay/ngày mai · (giá/đơn vị) ghi nhỏ bên dưới · F5 để đổi 10 mặt hàng khác.")
+    out += "<p class='muted' style='margin-top:-4px'>Cập nhật mỗi 10 phút</p>"
     return out
 
 
