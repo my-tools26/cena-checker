@@ -262,9 +262,9 @@ SCAN_JS = """
       closeBtn=document.getElementById('scanclose'), torchBtn=document.getElementById('scantorch'),
       scanner=null, stream=null, rafId=null, torchOn=false;
   if(!btn) return;
-  // May tinh (khong cam ung) -> an nut camera: dung may quet ma vach USB ban thang vao o tim kiem
-  var isTouch=('ontouchstart' in window)||navigator.maxTouchPoints>0;
-  if(!isTouch){ btn.style.display='none'; return; }
+  // Chi hien nut camera tren dien thoai/di dong; web-may tinh an di
+  var isMobile=/Android|iPhone|iPad|iPod|Mobile|Windows Phone|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navigator.userAgent);
+  if(!isMobile){ btn.style.display='none'; return; }
   var FORMATS=['ean_13','ean_8','upc_a','upc_e','code_128'];
   function found(code){ stop();
     window.location='/hledej?q='+encodeURIComponent(code)+(window.SCANLOC?'&loc='+window.SCANLOC:'')+(window.SCANVIEW&&window.SCANVIEW!=='all'?'&view='+window.SCANVIEW:''); }
