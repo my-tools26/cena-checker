@@ -251,7 +251,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v4.0 · 08.07.2026"
+APP_VERSION = "v4.1 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -639,21 +639,33 @@ def suggest_table(pairs, heading, color):
 
 
 def home_suggestions_html():
-    import random
     try:
         expiring, fresh = build_home_suggestions()
     except Exception:
         return ""
-    if not fresh:
-        return ""
-    prods, seen = [], set()
-    for p, _ in fresh:
-        if p["name"] not in seen:
-            seen.add(p["name"])
-            prods.append(p)
-    return product_matrix(prods[:15], "🆕 TỜ RƠI MỚI — deal sắp bắt đầu",
-                          note="Khuyến mãi của tờ rơi tuần mới, chưa/vừa bắt đầu — lên kế hoạch đi chợ trước.",
-                          show_exp=False)
+    out = ""
+    # ⏰ Hang sap het akce (het hom nay/ngay mai) — hien truoc, uu tien nhat
+    if expiring:
+        eprods, seen = [], set()
+        for p, _ in expiring:
+            if p["name"] not in seen:
+                seen.add(p["name"])
+                eprods.append(p)
+        out += product_matrix(
+            eprods[:15], "⏰ SẮP HẾT AKCE — mua gấp, hết hôm nay/ngày mai",
+            note="Khuyến mãi các mặt hàng này kết thúc hôm nay hoặc ngày mai — ⏰ = deal sắp hết.")
+    # 🆕 To roi moi — deal sap bat dau
+    if fresh:
+        fprods, seen2 = [], set()
+        for p, _ in fresh:
+            if p["name"] not in seen2:
+                seen2.add(p["name"])
+                fprods.append(p)
+        out += product_matrix(
+            fprods[:15], "🆕 TỜ RƠI MỚI — deal sắp bắt đầu",
+            note="Khuyến mãi của tờ rơi tuần mới, chưa/vừa bắt đầu — lên kế hoạch đi chợ trước.",
+            show_exp=False)
+    return out
 
 
 import re as _re
