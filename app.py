@@ -251,7 +251,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v4.1 · 08.07.2026"
+APP_VERSION = "v4.2 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -639,33 +639,22 @@ def suggest_table(pairs, heading, color):
 
 
 def home_suggestions_html():
+    # Chi con "TO ROI MOI" — hang sap het akce da don vao "Mua gi o dau hom nay"
     try:
-        expiring, fresh = build_home_suggestions()
+        _expiring, fresh = build_home_suggestions()
     except Exception:
         return ""
-    out = ""
-    # ⏰ Hang sap het akce (het hom nay/ngay mai) — hien truoc, uu tien nhat
-    if expiring:
-        eprods, seen = [], set()
-        for p, _ in expiring:
-            if p["name"] not in seen:
-                seen.add(p["name"])
-                eprods.append(p)
-        out += product_matrix(
-            eprods[:15], "⏰ SẮP HẾT AKCE — mua gấp, hết hôm nay/ngày mai",
-            note="Khuyến mãi các mặt hàng này kết thúc hôm nay hoặc ngày mai — ⏰ = deal sắp hết.")
-    # 🆕 To roi moi — deal sap bat dau
-    if fresh:
-        fprods, seen2 = [], set()
-        for p, _ in fresh:
-            if p["name"] not in seen2:
-                seen2.add(p["name"])
-                fprods.append(p)
-        out += product_matrix(
-            fprods[:15], "🆕 TỜ RƠI MỚI — deal sắp bắt đầu",
-            note="Khuyến mãi của tờ rơi tuần mới, chưa/vừa bắt đầu — lên kế hoạch đi chợ trước.",
-            show_exp=False)
-    return out
+    if not fresh:
+        return ""
+    fprods, seen = [], set()
+    for p, _ in fresh:
+        if p["name"] not in seen:
+            seen.add(p["name"])
+            fprods.append(p)
+    return product_matrix(
+        fprods[:15], "🆕 TỜ RƠI MỚI — deal sắp bắt đầu",
+        note="Khuyến mãi của tờ rơi tuần mới, chưa/vừa bắt đầu — lên kế hoạch đi chợ trước.",
+        show_exp=False)
 
 
 import re as _re
@@ -800,6 +789,29 @@ def deal_expiring(valid):
     return today <= end <= today + datetime.timedelta(days=1)
 
 
+def exp_short_date(valid):
+    """Ngay het han ngan gon de hien canh ⏰: 'hôm nay' / 'ngày mai' / 'DD.M.'."""
+    import datetime
+    v_plain = cena.strip_accents(valid or "")
+    if "dnes konci" in v_plain:
+        return "hôm nay"
+    if "zitra konci" in v_plain:
+        return "ngày mai"
+    dates = _re.findall(r"(\d{1,2})\.\s*(\d{1,2})\.", valid or "")
+    if not dates:
+        return ""
+    today = datetime.date.today()
+    try:
+        end = datetime.date(today.year, int(dates[-1][1]), int(dates[-1][0]))
+    except ValueError:
+        return ""
+    if end == today:
+        return "hôm nay"
+    if end == today + datetime.timedelta(days=1):
+        return "ngày mai"
+    return f"{end.day}.{end.month}."
+
+
 def build_matrix():
     """Moi hang = 1 san pham cu the (nhu TO ROI MOI): ten day du + quy cach,
     cot = cac sieu thi ban dung san pham do (kupi da gom nhom san pham)."""
@@ -832,10 +844,24 @@ def matrix_html():
         return ""
     if not all_rows:
         return ""
-    rows = _rand.sample(all_rows, min(10, len(all_rows)))
+    # Hang SAP HET akce (moi danh muc) -> don chung, product_matrix se xep len dau
+    exp_prods = []
+    try:
+        expiring, _f = build_home_suggestions()
+        eseen = set()
+        for p, _d in expiring:
+            if p["name"] not in eseen:
+                eseen.add(p["name"])
+                exp_prods.append(p)
+    except Exception:
+        pass
+    exp_names = {p["name"] for p in exp_prods}
+    staples = [r for r in all_rows if r["name"] not in exp_names]
+    picks = _rand.sample(staples, min(10, len(staples)))
+    combined = exp_prods[:8] + picks
     out = product_matrix(
-        rows, "💡 MUA GÌ Ở ĐÂU HÔM NAY — 10 deal ngẫu nhiên từ nhóm hàng thiết yếu",
-        note="⏰ = hết hôm nay/ngày mai · (giá/đơn vị) ghi nhỏ bên dưới · F5 để đổi 10 mặt hàng khác.")
+        combined, "💡 MUA GÌ Ở ĐÂU HÔM NAY — sắp hết akce xếp lên đầu",
+        note="⏰ = hết hôm nay/ngày mai (kèm ngày) · (giá/đơn vị) ghi nhỏ · F5 để đổi mặt hàng.")
     out += "<p class='muted' style='margin-top:-4px'>Cập nhật 1 lần mỗi ngày</p>"
     return out
 
@@ -849,7 +875,14 @@ def product_matrix(products, heading, max_cols=4, note="", show_exp=True):
         m = _re.search(r"(\d+)", p["deals"][0]["pct"] or "")
         return int(m.group(1)) if m else 0
 
-    products = sorted(products, key=best_pct, reverse=True)
+    def sort_key(p):
+        # Uu tien hang SAP HET akce len dau (chi tinh khi ⏰ that su hien trong
+        # cac cot re nhat), roi den % giam manh nhat
+        shown = sorted(p["deals"], key=lambda d: d["price"])[:max_cols]
+        has_exp = show_exp and any(d.get("_exp") for d in shown)
+        return (0 if has_exp else 1, -best_pct(p))
+
+    products = sorted(products, key=sort_key)
     head_cols = "".join(
         f"<th>{'✅ Rẻ nhất' if i == 0 else '#%d' % (i + 1)}</th>" for i in range(max_cols))
     head_cols = head_cols.replace("<th>✅ Rẻ nhất</th>",
@@ -864,7 +897,10 @@ def product_matrix(products, heading, max_cols=4, note="", show_exp=True):
         for i in range(max_cols):
             if i < len(deals):
                 d = deals[i]
-                exp = " <span class='expb'>⏰</span>" if show_exp and d.get("_exp") else ""
+                exp = ""
+                if show_exp and d.get("_exp"):
+                    _dt = exp_short_date(d.get("valid"))
+                    exp = f" <span class='expb'>⏰ {H.escape(_dt)}</span>" if _dt else " <span class='expb'>⏰</span>"
                 unit_small = f"<span class='a'>{H.escape(d['unit'])}</span>" if d["unit"] else ""
                 pct = f" <span class='pctb'>{H.escape(d['pct'])}</span>" if d["pct"] else ""
                 out += (f"<td{' class=\"w\"' if i == 0 else ''}>{shop_badge(d['shop'])}{exp}"
