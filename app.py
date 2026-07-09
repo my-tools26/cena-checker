@@ -251,7 +251,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v4.2 · 08.07.2026"
+APP_VERSION = "v4.3 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -857,11 +857,15 @@ def matrix_html():
         pass
     exp_names = {p["name"] for p in exp_prods}
     staples = [r for r in all_rows if r["name"] not in exp_names]
-    picks = _rand.sample(staples, min(10, len(staples)))
-    combined = exp_prods[:8] + picks
+    # Hang sap het akce luon co mat (uu tien 8 mon) + do them mat hang thiet yeu
+    # ngau nhien cho du ~14 dong; product_matrix xep theo % giam (khong ghim dau)
+    keep_exp = exp_prods[:8]
+    fill = max(0, 14 - len(keep_exp))
+    picks = _rand.sample(staples, min(fill, len(staples)))
+    combined = keep_exp + picks
     out = product_matrix(
-        combined, "💡 MUA GÌ Ở ĐÂU HÔM NAY — sắp hết akce xếp lên đầu",
-        note="⏰ = hết hôm nay/ngày mai (kèm ngày) · (giá/đơn vị) ghi nhỏ · F5 để đổi mặt hàng.")
+        combined, "💡 MUA GÌ Ở ĐÂU HÔM NAY",
+        note="⏰ = sắp hết akce (hôm nay/ngày mai, kèm ngày) · (giá/đơn vị) ghi nhỏ · F5 đổi mặt hàng.")
     out += "<p class='muted' style='margin-top:-4px'>Cập nhật 1 lần mỗi ngày</p>"
     return out
 
@@ -875,14 +879,9 @@ def product_matrix(products, heading, max_cols=4, note="", show_exp=True):
         m = _re.search(r"(\d+)", p["deals"][0]["pct"] or "")
         return int(m.group(1)) if m else 0
 
-    def sort_key(p):
-        # Uu tien hang SAP HET akce len dau (chi tinh khi ⏰ that su hien trong
-        # cac cot re nhat), roi den % giam manh nhat
-        shown = sorted(p["deals"], key=lambda d: d["price"])[:max_cols]
-        has_exp = show_exp and any(d.get("_exp") for d in shown)
-        return (0 if has_exp else 1, -best_pct(p))
-
-    products = sorted(products, key=sort_key)
+    # Xep theo % giam gia manh nhat (hang sap het akce KHONG ghim len dau,
+    # nam xen theo giam gia binh thuong — chi khac la co ⏰ + ngay)
+    products = sorted(products, key=best_pct, reverse=True)
     head_cols = "".join(
         f"<th>{'✅ Rẻ nhất' if i == 0 else '#%d' % (i + 1)}</th>" for i in range(max_cols))
     head_cols = head_cols.replace("<th>✅ Rẻ nhất</th>",
@@ -891,7 +890,14 @@ def product_matrix(products, heading, max_cols=4, note="", show_exp=True):
            + (f"<p class='muted'>{note}</p>" if note else "")
            + f"<table class='mx'><tr><th style='width:26%'>Mặt hàng</th>{head_cols}</tr>")
     for p in products:
-        deals = sorted(p["deals"], key=lambda d: d["price"])[:max_cols]
+        by_price = sorted(p["deals"], key=lambda d: d["price"])
+        deals = by_price[:max_cols]
+        # Dam bao deal SAP HET akce co mat trong cot hien thi (de ⏰ hien nhieu hon);
+        # cot 1 van la re nhat, deal sap het chen vao cot cuoi neu chua co
+        if show_exp and not any(d.get("_exp") for d in deals):
+            ed = next((d for d in by_price if d.get("_exp")), None)
+            if ed is not None and len(deals) == max_cols:
+                deals = sorted(deals[:max_cols - 1] + [ed], key=lambda d: d["price"])
         amount = f" <span class='a'>{H.escape(p['amount'])}</span>" if p["amount"] else ""
         out += (f"<tr><td>{icon_for(p['name'])}<b>{H.escape(p['name'])}</b>{amount}</td>")
         for i in range(max_cols):
