@@ -208,6 +208,12 @@ CSS = """
  .navtabs a:hover{background:var(--acc-bg2);color:var(--accent)}
  #themebtn{background:none;border:1px solid var(--chip-border);color:var(--muted);border-radius:16px;padding:4px 12px;font-size:.9em;cursor:pointer}
  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:8px;margin:14px 0}
+ .catbtn{display:none;width:100%;text-align:left;background:var(--card);color:var(--accent);border:1px solid var(--input-border);border-radius:10px;padding:11px 14px;margin:14px 0 0;font-size:1em;font-weight:bold}
+ @media(max-width:600px){
+  .catbtn{display:flex;justify-content:space-between;align-items:center}
+  .tiles{display:none;margin:8px 0 0}
+  .tiles.show{display:grid;grid-template-columns:repeat(3,1fr)}
+ }
  .tile{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 6px;text-align:center;text-decoration:none;color:var(--text);font-size:.85em}
  .tile:hover{border-color:var(--input-border);background:var(--acc-bg2)}
  .tile .em{font-size:1.6em;display:block;margin-bottom:4px}
@@ -245,7 +251,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v3.9 · 08.07.2026"
+APP_VERSION = "v4.0 · 08.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -877,7 +883,17 @@ def home_html():
         for e, t, u in HOME_TILES)
     body = f"""
 <p class="muted">So sánh giá siêu thị Séc — gõ tiếng Việt có dấu hoặc không dấu đều được.</p>
-<div class="tiles">{tiles}</div>
+<button type="button" id="catbtn" class="catbtn">☰ Danh mục <span id="catarrow">▾</span></button>
+<div class="tiles" id="tiles">{tiles}</div>
+<script>
+(function(){{
+  var b=document.getElementById('catbtn'),t=document.getElementById('tiles'),ar=document.getElementById('catarrow');
+  if(!b||!t)return;
+  b.addEventListener('click',function(){{
+    var open=t.classList.toggle('show'); ar.textContent=open?'▴':'▾';
+  }});
+}})();
+</script>
 {matrix_html()}
 {home_suggestions_html()}
 <p class="muted" style="margin-top:24px">Nguồn tham khảo: kupi.cz, tamdafoods.eu, makro.cz, jip-eshop.cz, mujbidfood.cz · <a href="/gioithieu">Giới thiệu &amp; miễn trừ trách nhiệm</a></p>"""
