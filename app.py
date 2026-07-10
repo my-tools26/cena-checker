@@ -251,7 +251,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v4.7 · 09.07.2026"
+APP_VERSION = "v4.8 · 10.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -486,8 +486,7 @@ SHOP_COLOR = [
     ("lidl", "#E6F1FB", "#0C447C"), ("kaufland", "#FAECE7", "#712B13"),
     ("billa", "#E1F5EE", "#085041"), ("penny", "#FBEAF0", "#72243E"),
     ("tesco", "#DBE4F7", "#0B2E6B"), ("albert", "#E1F5EE", "#0F6E56"),
-    ("globus", "#FAEEDA", "#633806"),
-    ("tamda express", "#FFE9CC", "#B85C00"), ("tamda", "#FFE3CC", "#8A4B00"),
+    ("globus", "#FAEEDA", "#633806"), ("tamda", "#FFE3CC", "#8A4B00"),
     ("makro", "#DDE6F2", "#003B7E"), ("jip", "#FCEBEB", "#C8102E"),
     ("coop", "#EAF3DE", "#3B6D11"), ("dm", "#EEEDFE", "#3C3489"), ("bidfood", "#E1F5E9", "#0F6E3B"),
     ("dathang", "#FDEEE0", "#9A4B10"), ("linsan", "#FCEBEB", "#B01818"), ("bombacena", "#FBEAF0", "#93264A"),
@@ -957,10 +956,10 @@ def _bb_match(t1, t2):
 
 
 def banbuon_html():
-    body = ("<h1>📦 Bán buôn — Tamda / Makro / JIP / Bidfood / dathang / Linsan / Bombacena / Tamda Express</h1>"
+    body = ("<h1>📦 Bán buôn — Tamda / Makro / JIP / Bidfood / dathang / Linsan / Bombacena</h1>"
             "<p class='muted'>Giá gói · (giá/đơn vị) ghi nhỏ · ô xanh ✅ = kho rẻ nhất khi có "
-            "cùng mặt hàng ở nhiều kho. Tamda = giá với thẻ, theo tờ rơi tuần · Bidfood = giá s DPH · "
-            "dathang/Linsan/Bombacena/Tamda Express = hàng châu Á.</p>")
+            "cùng mặt hàng ở nhiều kho. Tamda = giá với thẻ (tờ rơi tuần), hoặc giá thường từ Tamda Express "
+            "khi hàng không có trong tờ rơi · Bidfood = giá s DPH · dathang/Linsan/Bombacena = hàng châu Á.</p>")
 
     # Gom deal 3 kho ve 1 danh sach: moi item = {name, amount, offers{col: deal}}
     items = []
@@ -1015,21 +1014,22 @@ def banbuon_html():
                                   "shop": shopname, "price": it["price"], "pct": "",
                                   "unit": it.get("unit", ""), "amount": it.get("amount", "")}}})
 
-    # Tamda Express: catalog day du (can dang nhap), gia THUONG khong chi tuan flyer
+    # Tamda Express: catalog day du (can dang nhap), gia THUONG khong chi tuan flyer.
+    # GOP vao cot "tamda" co san (khong tao cot moi) - chi dien vao khi hang do
+    # chua co gia flyer, va chi tao hang moi neu khong khop voi hang nao co san.
     tfdata = load_tamda_full()
     if tfdata:
-        vn_extra_cols.append(("tamda_full", "Tamda Express"))
         for it in tfdata["items"]:
             toks = _bb_tokens(it["name"])
-            hit = next((x for x in items if "tamda_full" not in x["offers"] and _bb_match(x["toks"], toks)), None)
+            hit = next((x for x in items if "tamda" not in x["offers"] and _bb_match(x["toks"], toks)), None)
             if hit:
-                hit["offers"]["tamda_full"] = {"shop": "Tamda Express", "price": it["price"],
-                                               "pct": "", "unit": it.get("unit", ""),
-                                               "amount": it.get("amount", "")}
+                hit["offers"]["tamda"] = {"shop": "Tamda Foods", "price": it["price"],
+                                          "pct": "", "unit": it.get("unit", ""),
+                                          "amount": it.get("amount", "")}
             else:
                 items.append({"name": it["name"], "amount": it.get("amount", ""),
-                              "toks": toks, "offers": {"tamda_full": {
-                                  "shop": "Tamda Express", "price": it["price"], "pct": "",
+                              "toks": toks, "offers": {"tamda": {
+                                  "shop": "Tamda Foods", "price": it["price"], "pct": "",
                                   "unit": it.get("unit", ""), "amount": it.get("amount", "")}}})
 
     if not items:
@@ -1048,8 +1048,7 @@ def banbuon_html():
                 ("jip", "🄹 JIP", "#c8102e")]
     if bdata:
         all_cols.append(("bidfood", "🅑 Bidfood", "#1d9e75"))
-    vn_icons = {"dathang": "🇻🇳 dathang", "linsan": "🇻🇳 Linsan", "bombacena": "🇻🇳 Bombacena",
-                "tamda_full": "🅣 Tamda Express"}
+    vn_icons = {"dathang": "🇻🇳 dathang", "linsan": "🇻🇳 Linsan", "bombacena": "🇻🇳 Bombacena"}
     for slug, shopname in vn_extra_cols:
         all_cols.append((slug, vn_icons.get(slug, shopname), "#c8102e"))
     col_keys = [c[0] for c in all_cols]
@@ -1605,13 +1604,13 @@ def search_html(query, only="", view="all"):
                  unitstr=it.get("unit", ""), tags=["hàng Việt"], typ="wholesale")
     tf_names_added = set()
     for it in tfhits[:20]:
-        addE(it["name"], it.get("amount", ""), "Tamda Express", it["price"],
-             unitstr=it.get("unit", ""), tags=["hàng Việt"], typ="wholesale")
+        addE(it["name"], it.get("amount", ""), "Tamda Foods", it["price"],
+             unitstr=it.get("unit", ""), tags=["bán buôn"], typ="wholesale")
         tf_names_added.add(it["name"])
     if ean_price_hit and ean_price_hit["name"] not in tf_names_added:
-        addE(ean_price_hit["name"], ean_price_hit.get("amount", ""), "Tamda Express",
+        addE(ean_price_hit["name"], ean_price_hit.get("amount", ""), "Tamda Foods",
              ean_price_hit["price"], unitstr=ean_price_hit.get("unit", ""),
-             tags=["hàng Việt"], typ="wholesale")
+             tags=["bán buôn"], typ="wholesale")
 
     # Loc theo view: retail (sieu thi ban le) / wholesale (ban buon) / all
     if view == "retail":
