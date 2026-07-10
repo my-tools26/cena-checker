@@ -251,7 +251,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v4.5 · 09.07.2026"
+APP_VERSION = "v4.6 · 09.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -956,9 +956,10 @@ def _bb_match(t1, t2):
 
 
 def banbuon_html():
-    body = ("<h1>📦 Bán buôn — Tamda / Makro / JIP" + (" / Bidfood" if load_bidfood() else "") + "</h1>"
+    body = ("<h1>📦 Bán buôn — Tamda / Makro / JIP / Bidfood / dathang / Linsan / Bombacena</h1>"
             "<p class='muted'>Giá gói · (giá/đơn vị) ghi nhỏ · ô xanh ✅ = kho rẻ nhất khi có "
-            "cùng mặt hàng ở nhiều kho. Tamda = giá với thẻ, theo tờ rơi tuần · Bidfood = giá s DPH.</p>")
+            "cùng mặt hàng ở nhiều kho. Tamda = giá với thẻ, theo tờ rơi tuần · Bidfood = giá s DPH · "
+            "dathang/Linsan/Bombacena = hàng châu Á.</p>")
 
     # Gom deal 3 kho ve 1 danh sach: moi item = {name, amount, offers{col: deal}}
     items = []
@@ -992,6 +993,27 @@ def banbuon_html():
                                             "pct": it.get("pct", ""), "unit": "",
                                             "amount": it.get("amount", "")}
 
+    # 3 nha do hang Viet (dathang, Linsan, Bombacena): liet ke rieng cac mat hang
+    # cua ho (khong chi ghep vao hang co san) vi day la nguon hang chau A dac thu
+    vn_extra_cols = []
+    for slug, shopname in VN_SHOPS:
+        vdata = load_vnshop(slug)
+        if not vdata:
+            continue
+        vn_extra_cols.append((slug, shopname))
+        for it in vdata["items"]:
+            toks = _bb_tokens(it["name"])
+            hit = next((x for x in items if slug not in x["offers"] and _bb_match(x["toks"], toks)), None)
+            if hit:
+                hit["offers"][slug] = {"shop": shopname, "price": it["price"],
+                                       "pct": "", "unit": it.get("unit", ""),
+                                       "amount": it.get("amount", "")}
+            else:
+                items.append({"name": it["name"], "amount": it.get("amount", ""),
+                              "toks": toks, "offers": {slug: {
+                                  "shop": shopname, "price": it["price"], "pct": "",
+                                  "unit": it.get("unit", ""), "amount": it.get("amount", "")}}})
+
     if not items:
         return shell(body + "<p class='muted'>Chưa có dữ liệu bán buôn.</p>", "/banbuon")
 
@@ -1004,12 +1026,17 @@ def banbuon_html():
     items.sort(key=sort_key)
     ncmp = sum(1 for x in items if len(x["offers"]) >= 2)
     valid_s = f" · Tamda: {H.escape(data['valid'])}" if data else ""
+    all_cols = [("tamda", "🅣 Tamda", "#e8681a"), ("makro", "Ⓜ Makro", "#3a7bc0"),
+                ("jip", "🄹 JIP", "#c8102e")]
+    if bdata:
+        all_cols.append(("bidfood", "🅑 Bidfood", "#1d9e75"))
+    vn_icons = {"dathang": "🇻🇳 dathang", "linsan": "🇻🇳 Linsan", "bombacena": "🇻🇳 Bombacena"}
+    for slug, shopname in vn_extra_cols:
+        all_cols.append((slug, vn_icons.get(slug, shopname), "#c8102e"))
+    col_keys = [c[0] for c in all_cols]
     body += (f"<h2>📦 SO SÁNH KHO BÁN BUÔN — {len(items)} mặt hàng, {ncmp} có ở ≥2 kho{valid_s}</h2>"
-             "<table class='mx'><tr><th style='width:28%'>Mặt hàng</th>"
-             "<th style='background:var(--card2);color:#e8681a'>🅣 Tamda</th>"
-             "<th style='background:var(--card2);color:#3a7bc0'>Ⓜ Makro</th>"
-             "<th style='background:var(--card2);color:#c8102e'>🄹 JIP</th>"
-             + ("<th style='background:var(--card2);color:#1d9e75'>🅑 Bidfood</th>" if bdata else "")
+             "<table class='mx'><tr><th style='width:22%'>Mặt hàng</th>"
+             + "".join(f"<th style='background:var(--card2);color:{c[2]}'>{c[1]}</th>" for c in all_cols)
              + "</tr>")
     for x in items:
         amount = f" <span class='a'>{H.escape(x['amount'])}</span>" if x["amount"] else ""
@@ -1023,7 +1050,7 @@ def banbuon_html():
                 best = min(pus, key=lambda c: pus[c][0])
             else:
                 best = min(x["offers"], key=lambda c: x["offers"][c]["price"])
-        for col in (("tamda", "makro", "jip", "bidfood") if bdata else ("tamda", "makro", "jip")):
+        for col in col_keys:
             o = x["offers"].get(col)
             if not o:
                 body += "<td class='a'>—</td>"
