@@ -251,7 +251,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v4.4 · 09.07.2026"
+APP_VERSION = "v4.5 · 09.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -259,8 +259,8 @@ SCAN_JS = """
 <script>
 (function(){
   var btn=document.getElementById('scanbtn'), box=document.getElementById('scanbox'),
-      closeBtn=document.getElementById('scanclose'), torchBtn=document.getElementById('scantorch'),
-      scanner=null, stream=null, rafId=null, torchOn=false;
+      closeBtn=document.getElementById('scanclose'),
+      scanner=null, stream=null, rafId=null;
   if(!btn) return;
   // Chi hien nut camera tren dien thoai/di dong; web-may tinh an di
   var isMobile=/Android|iPhone|iPad|iPod|Mobile|Windows Phone|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navigator.userAgent);
@@ -272,19 +272,7 @@ SCAN_JS = """
     if(rafId){ cancelAnimationFrame(rafId); rafId=null; }
     if(stream){ stream.getTracks().forEach(function(t){t.stop();}); stream=null; }
     if(scanner){ scanner.stop().catch(function(){}); scanner=null; }
-    torchOn=false; box.style.display='none';
-  }
-  function setupTorch(track){
-    try{
-      var caps=track.getCapabilities?track.getCapabilities():{};
-      if(!caps.torch){ torchBtn.style.display='none'; return; }
-      torchBtn.style.display='inline-block';
-      torchBtn.onclick=function(){
-        torchOn=!torchOn;
-        track.applyConstraints({advanced:[{torch:torchOn}]}).catch(function(){});
-        torchBtn.textContent=torchOn?'🔦 Tắt đèn':'🔦 Bật đèn';
-      };
-    }catch(e){ torchBtn.style.display='none'; }
+    box.style.display='none';
   }
   // Duong 1: BarcodeDetector native (Android Chrome) - nhay nhat
   function startNative(){
@@ -296,7 +284,6 @@ SCAN_JS = """
         width:{ideal:1920},height:{ideal:1080},focusMode:'continuous'}})
       .then(function(s){
         stream=s; v.srcObject=s; v.play();
-        setupTorch(s.getVideoTracks()[0]);
         var busy=false;
         (function loop(){
           rafId=requestAnimationFrame(loop);
@@ -320,17 +307,12 @@ SCAN_JS = """
                          Html5QrcodeSupportedFormats.UPC_A,Html5QrcodeSupportedFormats.UPC_E,
                          Html5QrcodeSupportedFormats.CODE_128]},
       function(code){ found(code); },
-      function(){}).then(function(){
-        try{
-          var v=document.querySelector('#scanview video');
-          if(v&&v.srcObject) setupTorch(v.srcObject.getVideoTracks()[0]);
-        }catch(e){}
-      }).catch(function(e){
+      function(){}).catch(function(e){
         stop(); alert('Không mở được camera: '+e+'\\nHãy cho phép quyền camera trong trình duyệt.');
       });
   }
   btn.addEventListener('click',function(){
-    box.style.display='block'; torchBtn.style.display='none';
+    box.style.display='block';
     if('BarcodeDetector' in window){
       BarcodeDetector.getSupportedFormats().then(function(fs){
         if(fs.indexOf('ean_13')>=0) startNative(); else loadLib();
@@ -488,7 +470,6 @@ def shell(body, active="/"):
                  'z-index:9999;padding:16px;text-align:center">'
                  '<p style="color:#fff;font-size:1.1em">Giơ camera vào mã vạch sản phẩm</p>'
                  '<div id="scanview" style="max-width:480px;margin:0 auto"></div>'
-                 '<button id="scantorch" style="margin-top:14px;margin-right:10px;background:#7a6a1a;display:none">🔦 Bật đèn</button>'
                  '<button id="scanclose" style="margin-top:14px;background:#a33">✖ Đóng</button></div>'
                  + SCAN_JS)
     return (PAGE_TOP
