@@ -111,6 +111,30 @@ def load_tudien():
 
 load_tudien()
 
+
+def vi_translate(q):
+    """Dich tieng Viet (da bo dau) sang tieng Sec theo tu dien.
+    Khong chi tra nguyen cum: neu ca cum khong co trong tu dien thi ghep tham lam
+    tung cum con dai nhat (toi da 4 tu), tu nao khong dich duoc giu nguyen.
+    Vi du: 'sua tuoi 1l' -> 'cerstve mleko 1l', 'gao thom lidl' -> 'ryze jasminova lidl'."""
+    if q in VI_CS:
+        return VI_CS[q]
+    words = q.split()
+    out, i, changed = [], 0, False
+    while i < len(words):
+        for k in range(min(4, len(words) - i), 0, -1):
+            phrase = " ".join(words[i:i + k])
+            if phrase in VI_CS:
+                out.append(VI_CS[phrase])
+                i += k
+                changed = True
+                break
+        else:
+            out.append(words[i])
+            i += 1
+    return " ".join(out) if changed else q
+
+
 # Icon tu dong theo tu khoa trong ten san pham (tieng Sec, khong dau)
 ICON_RULES = [
     ("banan", "🍌"), ("jablk", "🍎"), ("pomeranc", "🍊"), ("citron", "🍋"),
@@ -251,7 +275,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v4.9 · 10.07.2026"
+APP_VERSION = "v5.0 · 10.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1015,23 +1039,38 @@ def banbuon_html():
                                   "shop": shopname, "price": it["price"], "pct": "",
                                   "unit": it.get("unit", ""), "amount": it.get("amount", "")}}})
 
-    # Tamda Express: catalog day du (can dang nhap), gia THUONG khong chi tuan flyer.
-    # GOP vao cot "tamda" co san (khong tao cot moi) - chi dien vao khi hang do
-    # chua co gia flyer, va chi tao hang moi neu khong khop voi hang nao co san.
-    tfdata = load_tamda_full()
-    if tfdata:
-        for it in tfdata["items"]:
-            toks = _bb_tokens(it["name"])
-            hit = next((x for x in items if "tamda" not in x["offers"] and _bb_match(x["toks"], toks)), None)
-            if hit:
-                hit["offers"]["tamda"] = {"shop": "Tamda Foods", "price": it["price"],
-                                          "pct": "", "unit": it.get("unit", ""),
-                                          "amount": it.get("amount", "")}
-            else:
-                items.append({"name": it["name"], "amount": it.get("amount", ""),
-                              "toks": toks, "offers": {"tamda": {
-                                  "shop": "Tamda Foods", "price": it["price"], "pct": "",
-                                  "unit": it.get("unit", ""), "amount": it.get("amount", "")}}})
+    # Catalog day du (Tamda Express ~17k, Makro sortiment ~19k): gia THUONG s DPH.
+    # Chi DIEN vao cot con trong cua hang da co deal (khong them chuc nghin hang moi
+    # lam nang trang) - muon xem mat hang bat ky thi dung o tim kiem, da tra du catalog.
+    def fill_from_catalog(data, col, shopname):
+        if not data:
+            return
+        idx = data.get("_tok_index")
+        if idx is None:
+            idx = {}
+            for it in data["items"]:
+                it["_toks"] = _bb_tokens(it["name"])
+                for t in it["_toks"]:
+                    idx.setdefault(t, []).append(it)
+            data["_tok_index"] = idx
+        def norm_amt(a):
+            return (a or "").lower().replace(" ", "").replace(",", ".")
+
+        for x in items:
+            if col in x["offers"]:
+                continue
+            cands = {id(it): it for t in x["toks"] for it in idx.get(t, [])}
+            matches = [it for it in cands.values() if _bb_match(x["toks"], it["_toks"])]
+            if not matches:
+                continue
+            # uu tien mat hang cung quy cach (1 kg vs 1 kg), tranh ghep 1kg voi 3kg
+            xa = norm_amt(x.get("amount"))
+            it = next((m for m in matches if xa and norm_amt(m.get("amount")) == xa), matches[0])
+            x["offers"][col] = {"shop": shopname, "price": it["price"], "pct": "",
+                                "unit": it.get("unit", ""), "amount": it.get("amount", "")}
+
+    fill_from_catalog(load_tamda_full(), "tamda", "Tamda Foods")
+    fill_from_catalog(load_makro_full(), "makro", "Makro")
 
     if not items:
         return shell(body + "<p class='muted'>Chưa có dữ liệu bán buôn.</p>", "/banbuon")
@@ -1296,8 +1335,7 @@ def tamda_full_ean_price(code):
     return data.get("_ean_index", {}).get(code)
 
 
-def tamda_full_matches(query_raw, query_cs):
-    data = load_tamda_full()
+def _catalog_matches(data, query_raw, query_cs):
     if not data:
         return None, []
     terms = []
@@ -1311,6 +1349,45 @@ def tamda_full_matches(query_raw, query_cs):
         if any(all(x in n for x in ws) for ws in terms):
             hits.append(it)
     return data, hits
+
+
+def tamda_full_matches(query_raw, query_cs):
+    return _catalog_matches(load_tamda_full(), query_raw, query_cs)
+
+
+_makro_full_cache = {"t": 0, "data": None}
+
+
+def load_makro_full():
+    """Catalog day du sortiment.makro.cz (~19k mat hang) - gia THUONG s DPH
+    (API tra gia net, script thu_gia_makro.py da tinh 12%/21%). Co truong 'ean'."""
+    import json
+    import time as _t
+    if _makro_full_cache["data"] and _t.time() - _makro_full_cache["t"] < 600:
+        return _makro_full_cache["data"]
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "makro_full_prices.json")
+    data = None
+    if os.path.exists(path):
+        try:
+            with open(path, encoding="utf-8") as f:
+                data = json.load(f)
+            data["_ean_index"] = {it["ean"]: it for it in data["items"] if it.get("ean")}
+        except Exception:
+            data = None
+    _makro_full_cache["t"] = _t.time()
+    _makro_full_cache["data"] = data
+    return data
+
+
+def makro_full_ean_price(code):
+    data = load_makro_full()
+    if not data:
+        return None
+    return data.get("_ean_index", {}).get(code)
+
+
+def makro_full_matches(query_raw, query_cs):
+    return _catalog_matches(load_makro_full(), query_raw, query_cs)
 
 
 def tamda_table(data, items):
@@ -1529,7 +1606,7 @@ def search_html(query, only="", view="all"):
     if _re.fullmatch(r"\d{8,14}", raw_query):
         ean_name = ean_lookup(raw_query)
     q = cena.strip_accents((ean_name or raw_query).lower())
-    q = VI_CS.get(q, q)
+    q = vi_translate(q)
     soup = cena.fetch(f"{cena.BASE}/hledej?f={urllib.parse.quote(q)}")
     products = cena.parse_groups(soup)
     tdata, thits = tamda_matches(q)
@@ -1542,14 +1619,17 @@ def search_html(query, only="", view="all"):
     vnhits = {slug: vnshop_matches(slug, raw_norm, q)[1] for slug, _ in VN_SHOPS}
     any_vn = any(vnhits.values())
     tfdata, tfhits = tamda_full_matches(raw_norm, q)
-    # Tra CHINH XAC theo ma vach trong catalog Tamda Express (khong phu thuoc ten
+    mfdata, mfhits = makro_full_matches(raw_norm, q)
+    # Tra CHINH XAC theo ma vach trong catalog day du (khong phu thuoc ten
     # rut gon co khop hay khong) - giai quyet ca truong hop ten EAN qua chi tiet/la.
-    ean_price_hit = tamda_full_ean_price(raw_query) if _re.fullmatch(r"\d{8,14}", raw_query) else None
+    is_ean = bool(_re.fullmatch(r"\d{8,14}", raw_query))
+    ean_price_hit = tamda_full_ean_price(raw_query) if is_ean else None
+    makro_ean_hit = makro_full_ean_price(raw_query) if is_ean else None
 
     # Ten EAN thuong qua chi tiet (kem 75g, 500ml...) -> khong ra gia.
     # Thu rut gon dan cho den khi co ket qua.
     if ean_name and not (products or thits or mhits or jhits or tesco_hits or lhits or bhits
-                         or any_vn or tfhits or ean_price_hit):
+                         or any_vn or tfhits or mfhits or ean_price_hit or makro_ean_hit):
         for variant in ean_name_variants(ean_name)[1:]:
             q2 = cena.strip_accents(variant.lower())
             try:
@@ -1566,7 +1646,9 @@ def search_html(query, only="", view="all"):
             vnhits = {slug: vnshop_matches(slug, raw_norm, q2)[1] for slug, _ in VN_SHOPS}
             any_vn = any(vnhits.values())
             tfdata, tfhits = tamda_full_matches(raw_norm, q2)
-            if products or thits or mhits or jhits or tesco_hits or lhits or bhits or any_vn or tfhits:
+            mfdata, mfhits = makro_full_matches(raw_norm, q2)
+            if (products or thits or mhits or jhits or tesco_hits or lhits or bhits
+                    or any_vn or tfhits or mfhits):
                 q = q2
                 break
 
@@ -1623,6 +1705,15 @@ def search_html(query, only="", view="all"):
     if ean_price_hit and ean_price_hit["name"] not in tf_names_added:
         addE(ean_price_hit["name"], ean_price_hit.get("amount", ""), "Tamda Foods",
              ean_price_hit["price"], unitstr=ean_price_hit.get("unit", ""),
+             tags=["bán buôn"], typ="wholesale")
+    mf_names_added = set()
+    for it in mfhits[:20]:
+        addE(it["name"], it.get("amount", ""), "Makro", it["price"],
+             unitstr=it.get("unit", ""), tags=["bán buôn"], typ="wholesale")
+        mf_names_added.add(it["name"])
+    if makro_ean_hit and makro_ean_hit["name"] not in mf_names_added:
+        addE(makro_ean_hit["name"], makro_ean_hit.get("amount", ""), "Makro",
+             makro_ean_hit["price"], unitstr=makro_ean_hit.get("unit", ""),
              tags=["bán buôn"], typ="wholesale")
 
     # Loc theo view: retail (sieu thi ban le) / wholesale (ban buon) / all
