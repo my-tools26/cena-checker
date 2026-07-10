@@ -275,7 +275,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v5.1 · 11.07.2026"
+APP_VERSION = "v5.2 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -685,9 +685,18 @@ CAT_PAGES = {
 }
 
 
+_KAVA_RE = _re.compile(r"kava|kavov|caffe|espresso|cappuccino|nescafe|tchibo|jacobs|"
+                       r"douwe|jihlavanka|dolce gusto|\bcaj\b|cajov|teekanne|pickwick", _re.I)
+
+
 def category_html(slug):
     em, title = CAT_PAGES.get(slug, ("🛒", slug))
     products = list(shop_products(slug))
+    # Kupi xep ca phe/tra vao nhom nealko-napoje -> don sang trang "Ca phe & tra"
+    # (trang /kategorie/kava da co du), khoi lan 2 nhom
+    if slug == "nealko-napoje":
+        products = [p for p in products
+                    if not _KAVA_RE.search(cena.strip_accents(p["name"]))]
 
     def best_pct(p):
         m = _re.search(r"(\d+)", p["deals"][0]["pct"] or "")
