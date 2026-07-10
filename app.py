@@ -251,7 +251,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v4.6 · 09.07.2026"
+APP_VERSION = "v4.7 · 09.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -486,7 +486,8 @@ SHOP_COLOR = [
     ("lidl", "#E6F1FB", "#0C447C"), ("kaufland", "#FAECE7", "#712B13"),
     ("billa", "#E1F5EE", "#085041"), ("penny", "#FBEAF0", "#72243E"),
     ("tesco", "#DBE4F7", "#0B2E6B"), ("albert", "#E1F5EE", "#0F6E56"),
-    ("globus", "#FAEEDA", "#633806"), ("tamda", "#FFE3CC", "#8A4B00"),
+    ("globus", "#FAEEDA", "#633806"),
+    ("tamda express", "#FFE9CC", "#B85C00"), ("tamda", "#FFE3CC", "#8A4B00"),
     ("makro", "#DDE6F2", "#003B7E"), ("jip", "#FCEBEB", "#C8102E"),
     ("coop", "#EAF3DE", "#3B6D11"), ("dm", "#EEEDFE", "#3C3489"), ("bidfood", "#E1F5E9", "#0F6E3B"),
     ("dathang", "#FDEEE0", "#9A4B10"), ("linsan", "#FCEBEB", "#B01818"), ("bombacena", "#FBEAF0", "#93264A"),
@@ -956,10 +957,10 @@ def _bb_match(t1, t2):
 
 
 def banbuon_html():
-    body = ("<h1>📦 Bán buôn — Tamda / Makro / JIP / Bidfood / dathang / Linsan / Bombacena</h1>"
+    body = ("<h1>📦 Bán buôn — Tamda / Makro / JIP / Bidfood / dathang / Linsan / Bombacena / Tamda Express</h1>"
             "<p class='muted'>Giá gói · (giá/đơn vị) ghi nhỏ · ô xanh ✅ = kho rẻ nhất khi có "
             "cùng mặt hàng ở nhiều kho. Tamda = giá với thẻ, theo tờ rơi tuần · Bidfood = giá s DPH · "
-            "dathang/Linsan/Bombacena = hàng châu Á.</p>")
+            "dathang/Linsan/Bombacena/Tamda Express = hàng châu Á.</p>")
 
     # Gom deal 3 kho ve 1 danh sach: moi item = {name, amount, offers{col: deal}}
     items = []
@@ -1014,6 +1015,23 @@ def banbuon_html():
                                   "shop": shopname, "price": it["price"], "pct": "",
                                   "unit": it.get("unit", ""), "amount": it.get("amount", "")}}})
 
+    # Tamda Express: catalog day du (can dang nhap), gia THUONG khong chi tuan flyer
+    tfdata = load_tamda_full()
+    if tfdata:
+        vn_extra_cols.append(("tamda_full", "Tamda Express"))
+        for it in tfdata["items"]:
+            toks = _bb_tokens(it["name"])
+            hit = next((x for x in items if "tamda_full" not in x["offers"] and _bb_match(x["toks"], toks)), None)
+            if hit:
+                hit["offers"]["tamda_full"] = {"shop": "Tamda Express", "price": it["price"],
+                                               "pct": "", "unit": it.get("unit", ""),
+                                               "amount": it.get("amount", "")}
+            else:
+                items.append({"name": it["name"], "amount": it.get("amount", ""),
+                              "toks": toks, "offers": {"tamda_full": {
+                                  "shop": "Tamda Express", "price": it["price"], "pct": "",
+                                  "unit": it.get("unit", ""), "amount": it.get("amount", "")}}})
+
     if not items:
         return shell(body + "<p class='muted'>Chưa có dữ liệu bán buôn.</p>", "/banbuon")
 
@@ -1030,7 +1048,8 @@ def banbuon_html():
                 ("jip", "🄹 JIP", "#c8102e")]
     if bdata:
         all_cols.append(("bidfood", "🅑 Bidfood", "#1d9e75"))
-    vn_icons = {"dathang": "🇻🇳 dathang", "linsan": "🇻🇳 Linsan", "bombacena": "🇻🇳 Bombacena"}
+    vn_icons = {"dathang": "🇻🇳 dathang", "linsan": "🇻🇳 Linsan", "bombacena": "🇻🇳 Bombacena",
+                "tamda_full": "🅣 Tamda Express"}
     for slug, shopname in vn_extra_cols:
         all_cols.append((slug, vn_icons.get(slug, shopname), "#c8102e"))
     col_keys = [c[0] for c in all_cols]
@@ -1230,6 +1249,55 @@ def load_vnshop(slug):
 def vnshop_matches(slug, query_raw, query_cs):
     """Khop ca tu khoa goc (tieng Viet khong dau) lan ban dich tieng Sec."""
     data = load_vnshop(slug)
+    if not data:
+        return None, []
+    terms = []
+    for qq in (query_raw, query_cs):
+        w = [x for x in cena.strip_accents(qq.lower()).split() if x]
+        if w:
+            terms.append(w)
+    hits = []
+    for it in data["items"]:
+        n = cena.strip_accents(it["name"].lower())
+        if any(all(x in n for x in ws) for ws in terms):
+            hits.append(it)
+    return data, hits
+
+
+_tamda_full_cache = {"t": 0, "data": None}
+
+
+def load_tamda_full():
+    """Catalog day du Tamda Express (tamdaexpress.eu, can dang nhap) - gia thuong,
+    khong chi tuan flyer. File nay co truong 'ean' de tra chinh xac theo ma vach."""
+    import json
+    import time as _t
+    if _tamda_full_cache["data"] and _t.time() - _tamda_full_cache["t"] < 600:
+        return _tamda_full_cache["data"]
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tamda_full_prices.json")
+    data = None
+    if os.path.exists(path):
+        try:
+            with open(path, encoding="utf-8") as f:
+                data = json.load(f)
+            data["_ean_index"] = {it["ean"]: it for it in data["items"] if it.get("ean")}
+        except Exception:
+            data = None
+    _tamda_full_cache["t"] = _t.time()
+    _tamda_full_cache["data"] = data
+    return data
+
+
+def tamda_full_ean_price(code):
+    """Tra gia CHINH XAC theo ma vach tu catalog Tamda Express (khong qua fuzzy-match ten)."""
+    data = load_tamda_full()
+    if not data:
+        return None
+    return data.get("_ean_index", {}).get(code)
+
+
+def tamda_full_matches(query_raw, query_cs):
+    data = load_tamda_full()
     if not data:
         return None, []
     terms = []
@@ -1473,10 +1541,15 @@ def search_html(query, only="", view="all"):
     raw_norm = cena.strip_accents(raw_query.lower())
     vnhits = {slug: vnshop_matches(slug, raw_norm, q)[1] for slug, _ in VN_SHOPS}
     any_vn = any(vnhits.values())
+    tfdata, tfhits = tamda_full_matches(raw_norm, q)
+    # Tra CHINH XAC theo ma vach trong catalog Tamda Express (khong phu thuoc ten
+    # rut gon co khop hay khong) - giai quyet ca truong hop ten EAN qua chi tiet/la.
+    ean_price_hit = tamda_full_ean_price(raw_query) if _re.fullmatch(r"\d{8,14}", raw_query) else None
 
     # Ten EAN thuong qua chi tiet (kem 75g, 500ml...) -> khong ra gia.
     # Thu rut gon dan cho den khi co ket qua.
-    if ean_name and not (products or thits or mhits or jhits or tesco_hits or lhits or bhits or any_vn):
+    if ean_name and not (products or thits or mhits or jhits or tesco_hits or lhits or bhits
+                         or any_vn or tfhits or ean_price_hit):
         for variant in ean_name_variants(ean_name)[1:]:
             q2 = cena.strip_accents(variant.lower())
             try:
@@ -1492,7 +1565,8 @@ def search_html(query, only="", view="all"):
             bdata, bhits = bidfood_matches(q2)
             vnhits = {slug: vnshop_matches(slug, raw_norm, q2)[1] for slug, _ in VN_SHOPS}
             any_vn = any(vnhits.values())
-            if products or thits or mhits or jhits or tesco_hits or lhits or bhits or any_vn:
+            tfdata, tfhits = tamda_full_matches(raw_norm, q2)
+            if products or thits or mhits or jhits or tesco_hits or lhits or bhits or any_vn or tfhits:
                 q = q2
                 break
 
@@ -1529,6 +1603,15 @@ def search_html(query, only="", view="all"):
         for it in vnhits.get(slug, [])[:20]:
             addE(it["name"], it.get("amount", ""), shopname, it["price"],
                  unitstr=it.get("unit", ""), tags=["hàng Việt"], typ="wholesale")
+    tf_names_added = set()
+    for it in tfhits[:20]:
+        addE(it["name"], it.get("amount", ""), "Tamda Express", it["price"],
+             unitstr=it.get("unit", ""), tags=["hàng Việt"], typ="wholesale")
+        tf_names_added.add(it["name"])
+    if ean_price_hit and ean_price_hit["name"] not in tf_names_added:
+        addE(ean_price_hit["name"], ean_price_hit.get("amount", ""), "Tamda Express",
+             ean_price_hit["price"], unitstr=ean_price_hit.get("unit", ""),
+             tags=["hàng Việt"], typ="wholesale")
 
     # Loc theo view: retail (sieu thi ban le) / wholesale (ban buon) / all
     if view == "retail":
