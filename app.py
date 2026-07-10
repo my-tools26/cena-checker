@@ -275,7 +275,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v5.0 · 10.07.2026"
+APP_VERSION = "v5.1 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -979,7 +979,26 @@ def _bb_match(t1, t2):
     return len(common) >= 2 or (len(common) >= 1 and common == small)
 
 
-def banbuon_html():
+def _amt_ok(a1, a2):
+    """Quy cach goi phai khop moi cho ghep (1 kg = 1000 g; '2 ks' vs '0,5 l' = khac hang).
+    Ben nao thieu thong tin thi cho qua (giu hanh vi cu)."""
+    def parse(a):
+        m = _re.search(r"(\d+[.,]?\d*)\s*(kg|g|l|ml|ks)\b", (a or "").lower().replace(",", "."))
+        if not m:
+            return None
+        v, u = float(m.group(1)), m.group(2)
+        if u == "kg":
+            v, u = v * 1000, "g"
+        elif u == "l":
+            v, u = v * 1000, "ml"
+        return (v, u)
+    p1, p2 = parse(a1), parse(a2)
+    if p1 is None or p2 is None:
+        return True
+    return p1 == p2
+
+
+def banbuon_html(page=1):
     body = ("<h1>📦 Bán buôn — Tamda / Makro / JIP / Bidfood / dathang / Linsan / Bombacena</h1>"
             "<p class='muted'>Giá gói · (giá/đơn vị) ghi nhỏ · ô xanh ✅ = kho rẻ nhất khi có "
             "cùng mặt hàng ở nhiều kho. <b>Tất cả giá đã gồm DPH (s DPH)</b>. "
@@ -1001,7 +1020,8 @@ def banbuon_html():
             toks = _bb_tokens(p["name"])
             offer = {"shop": d["shop"], "price": d["price"], "pct": d["pct"],
                      "unit": d["unit"], "amount": p["amount"], "_exp": d.get("_exp")}
-            hit = next((x for x in items if col not in x["offers"] and _bb_match(x["toks"], toks)), None)
+            hit = next((x for x in items if col not in x["offers"] and _bb_match(x["toks"], toks)
+                        and _amt_ok(x["amount"], p["amount"])), None)
             if hit:
                 hit["offers"][col] = offer
             else:
@@ -1012,7 +1032,8 @@ def banbuon_html():
     if bdata:
         for it in bdata["items"]:
             toks = _bb_tokens(it["name"])
-            hit = next((x for x in items if "bidfood" not in x["offers"] and _bb_match(x["toks"], toks)), None)
+            hit = next((x for x in items if "bidfood" not in x["offers"] and _bb_match(x["toks"], toks)
+                        and _amt_ok(x["amount"], it.get("amount", ""))), None)
             if hit:
                 hit["offers"]["bidfood"] = {"shop": "Bidfood", "price": it["price"],
                                             "pct": it.get("pct", ""), "unit": "",
@@ -1028,7 +1049,8 @@ def banbuon_html():
         vn_extra_cols.append((slug, shopname))
         for it in vdata["items"]:
             toks = _bb_tokens(it["name"])
-            hit = next((x for x in items if slug not in x["offers"] and _bb_match(x["toks"], toks)), None)
+            hit = next((x for x in items if slug not in x["offers"] and _bb_match(x["toks"], toks)
+                        and _amt_ok(x["amount"], it.get("amount", ""))), None)
             if hit:
                 hit["offers"][slug] = {"shop": shopname, "price": it["price"],
                                        "pct": "", "unit": it.get("unit", ""),
@@ -1053,19 +1075,16 @@ def banbuon_html():
                 for t in it["_toks"]:
                     idx.setdefault(t, []).append(it)
             data["_tok_index"] = idx
-        def norm_amt(a):
-            return (a or "").lower().replace(" ", "").replace(",", ".")
-
         for x in items:
             if col in x["offers"]:
                 continue
             cands = {id(it): it for t in x["toks"] for it in idx.get(t, [])}
             matches = [it for it in cands.values() if _bb_match(x["toks"], it["_toks"])]
-            if not matches:
+            # CHI dien khi trung quy cach (1 kg = 1000 g): ghep lech co (1kg vs 3kg)
+            # hay lech loai (qua xoai vs nuoc ep xoai 0,5l) lam so sanh gia sai het.
+            it = next((m for m in matches if _amt_ok(x.get("amount"), m.get("amount"))), None)
+            if it is None:
                 continue
-            # uu tien mat hang cung quy cach (1 kg vs 1 kg), tranh ghep 1kg voi 3kg
-            xa = norm_amt(x.get("amount"))
-            it = next((m for m in matches if xa and norm_amt(m.get("amount")) == xa), matches[0])
             x["offers"][col] = {"shop": shopname, "price": it["price"], "pct": "",
                                 "unit": it.get("unit", ""), "amount": it.get("amount", "")}
 
@@ -1083,6 +1102,33 @@ def banbuon_html():
 
     items.sort(key=sort_key)
     ncmp = sum(1 for x in items if len(x["offers"]) >= 2)
+    # Phan trang: 30 mat hang/trang, day so trang de mo tiep
+    PER_PAGE = 30
+    npages = max(1, (len(items) + PER_PAGE - 1) // PER_PAGE)
+    page = max(1, min(page, npages))
+    page_items = items[(page - 1) * PER_PAGE: page * PER_PAGE]
+
+    def pager():
+        if npages <= 1:
+            return ""
+        nums = sorted({1, 2, npages - 1, npages,
+                       page - 2, page - 1, page, page + 1, page + 2}
+                      & set(range(1, npages + 1)))
+        parts, prev = [], 0
+        for n in nums:
+            if n - prev > 1:
+                parts.append("<span class='a'>…</span>")
+            if n == page:
+                parts.append(f"<b style='padding:6px 10px'>{n}</b>")
+            else:
+                parts.append(f"<a href='/banbuon?p={n}' style='padding:6px 10px'>{n}</a>")
+            prev = n
+        return ("<p style='text-align:center;font-size:1.1em'>"
+                + ("" if page == 1 else f"<a href='/banbuon?p={page - 1}' style='padding:6px 10px'>‹ Trước</a>")
+                + "".join(parts)
+                + ("" if page == npages else f"<a href='/banbuon?p={page + 1}' style='padding:6px 10px'>Sau ›</a>")
+                + "</p>")
+
     valid_s = f" · Tamda: {H.escape(data['valid'])}" if data else ""
     all_cols = [("tamda", "🅣 Tamda", "#e8681a"), ("makro", "Ⓜ Makro", "#3a7bc0"),
                 ("jip", "🄹 JIP", "#c8102e")]
@@ -1092,11 +1138,12 @@ def banbuon_html():
     for slug, shopname in vn_extra_cols:
         all_cols.append((slug, vn_icons.get(slug, shopname), "#c8102e"))
     col_keys = [c[0] for c in all_cols]
-    body += (f"<h2>📦 SO SÁNH KHO BÁN BUÔN — {len(items)} mặt hàng, {ncmp} có ở ≥2 kho{valid_s}</h2>"
-             "<table class='mx'><tr><th style='width:22%'>Mặt hàng</th>"
+    body += (f"<h2>📦 SO SÁNH KHO BÁN BUÔN — {len(items)} mặt hàng, {ncmp} có ở ≥2 kho{valid_s}"
+             f" · trang {page}/{npages}</h2>" + pager()
+             + "<table class='mx'><tr><th style='width:22%'>Mặt hàng</th>"
              + "".join(f"<th style='background:var(--card2);color:{c[2]}'>{c[1]}</th>" for c in all_cols)
              + "</tr>")
-    for x in items:
+    for x in page_items:
         amount = f" <span class='a'>{H.escape(x['amount'])}</span>" if x["amount"] else ""
         body += f"<tr><td>{icon_for(x['name'])}<b>{H.escape(x['name'])}</b>{amount}</td>"
         # Chon kho re nhat: uu tien so theo gia/don vi (khi cung don vi), khong thi so gia goi
@@ -1123,7 +1170,7 @@ def banbuon_html():
             body += (f"<td{win}>{exp}<span class='mxp'>{tick}{o['price']:.2f} Kč{pct}</span>{per_s}</td>")
         body += "</tr>"
     body += ("</table><p class='muted' style='margin-top:-4px'>"
-             "Makro/JIP: deal từ kupi.cz · ghép mặt hàng giữa các kho là tự động, có thể lệch quy cách gói.</p>")
+             "Makro/JIP: deal từ kupi.cz · chỉ ghép khi trùng quy cách gói.</p>") + pager()
     return shell(body, "/banbuon")
 
 
@@ -1923,7 +1970,8 @@ class Handler(BaseHTTPRequestHandler):
             elif parsed.path.startswith("/kategorie/"):
                 self.send_page(category_html(parsed.path.split("/kategorie/", 1)[1]))
             elif parsed.path == "/banbuon":
-                self.send_page(banbuon_html())
+                bp = urllib.parse.parse_qs(parsed.query).get("p", ["1"])[0]
+                self.send_page(banbuon_html(int(bp) if bp.isdigit() else 1))
             elif parsed.path == "/gioithieu":
                 self.send_page(shell(GIOITHIEU_BODY, ""))
             elif parsed.path == "/kupony":
