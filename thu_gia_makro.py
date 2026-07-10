@@ -24,7 +24,7 @@ OUT = os.path.join(HERE, "makro_full_prices.json")
 H = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) CenaChecker/1.0",
      "Accept": "application/json", "CallTreeId": "cena-checker"}
 RE_AMOUNT = re.compile(r"(\d+[,.]?\d*)\s*(kg|g|ml|l|ks)\b", re.I)
-MAX_SEARCH = 9000  # duoi nguong chan phan trang
+MAX_SEARCH = 3000  # search co filter danh muc bi chan o 3000 ket qua (do duoc 10.7.2026)
 
 
 def get(url, params, tries=4):
@@ -50,16 +50,22 @@ def search(cat_path, rows, page):
 
 
 def cat_tree():
+    """Danh sach danh muc de quet. Search co filter danh muc bi chan o 3000 ket qua,
+    nen phai dung danh muc cap 3 (moi cai nho); cap 2 chi khi khong co cap con."""
     d = get(f"{BASE}/searchdiscover/navigationmenu/menu_structure/"
             f"country/CZ/locale/cs-CZ/store/{STORE}", {})
-    cats = []  # (duong dan category, depth)
+    cats = []
 
     def walk(nodes, depth):
         for n in nodes:
             rel = n.get("relativeURL", "")
-            if rel.startswith("/category/") and depth == 2:
-                cats.append(rel[len("/category/"):])
-            if n.get("children") and depth < 2:
+            kids = [c for c in (n.get("children") or [])
+                    if c.get("relativeURL", "").startswith("/category/")]
+            if rel.startswith("/category/"):
+                if depth >= 3 or not kids:
+                    cats.append(rel[len("/category/"):])
+                    continue
+            if n.get("children"):
                 walk(n["children"], depth + 1)
 
     walk(d["shop"], 0)
@@ -72,13 +78,7 @@ def collect_category(cat_path, prices, depth=0):
     total = (d or {}).get("amount", 0)
     if not total:
         return
-    if total > MAX_SEARCH and depth < 3:
-        # lay danh sach cap con tu facet categories cua trang dau
-        d1 = search(cat_path, 1, 1)
-        subs = set()
-        for rid, info in (d1 or {}).get("results", {}).items():
-            pass  # search khong tra path con -> chia thu cong theo menu khong kha thi o day
-        # fallback: van quet toi da 9000 dau tien
+    if total > MAX_SEARCH:
         print(f"  ! {cat_path}: {total} > {MAX_SEARCH}, chi lay duoc 1 phan")
     pages = min((total + 499) // 500, MAX_SEARCH // 500)
     got = 0
