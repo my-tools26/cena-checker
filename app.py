@@ -251,7 +251,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v4.8 · 10.07.2026"
+APP_VERSION = "v4.9 · 10.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -958,8 +958,9 @@ def _bb_match(t1, t2):
 def banbuon_html():
     body = ("<h1>📦 Bán buôn — Tamda / Makro / JIP / Bidfood / dathang / Linsan / Bombacena</h1>"
             "<p class='muted'>Giá gói · (giá/đơn vị) ghi nhỏ · ô xanh ✅ = kho rẻ nhất khi có "
-            "cùng mặt hàng ở nhiều kho. Tamda = giá với thẻ (tờ rơi tuần), hoặc giá thường từ Tamda Express "
-            "khi hàng không có trong tờ rơi · Bidfood = giá s DPH · dathang/Linsan/Bombacena = hàng châu Á.</p>")
+            "cùng mặt hàng ở nhiều kho. <b>Tất cả giá đã gồm DPH (s DPH)</b>. "
+            "Tamda = giá với thẻ (tờ rơi tuần), hoặc giá thường từ Tamda Express "
+            "khi hàng không có trong tờ rơi · dathang/Linsan/Bombacena = hàng châu Á.</p>")
 
     # Gom deal 3 kho ve 1 danh sach: moi item = {name, amount, offers{col: deal}}
     items = []
@@ -1048,7 +1049,7 @@ def banbuon_html():
                 ("jip", "🄹 JIP", "#c8102e")]
     if bdata:
         all_cols.append(("bidfood", "🅑 Bidfood", "#1d9e75"))
-    vn_icons = {"dathang": "🇻🇳 dathang", "linsan": "🇻🇳 Linsan", "bombacena": "🇻🇳 Bombacena"}
+    vn_icons = {"dathang": "🅳 dathang", "linsan": "🅻 Linsan", "bombacena": "🅱 Bombacena"}
     for slug, shopname in vn_extra_cols:
         all_cols.append((slug, vn_icons.get(slug, shopname), "#c8102e"))
     col_keys = [c[0] for c in all_cols]
@@ -1571,11 +1572,23 @@ def search_html(query, only="", view="all"):
 
     # --- Gom MOI nguon vao 1 danh sach hop nhat ---
     entries = []
+    _seenE = set()
 
     def addE(name, amount, shop, price, valid="", pct="", unitstr="", tags=(), typ="retail"):
+        # khu trung lap: cung shop + cung gia + cung ten thi chi hien 1 lan
+        try:
+            key = (shop.lower(), round(float(price), 2), cena.strip_accents(name.lower()))
+        except (ValueError, TypeError):
+            key = (shop.lower(), str(price), cena.strip_accents(name.lower()))
+        if key in _seenE:
+            return
+        _seenE.add(key)
         pu = parse_unit_price(unitstr) if unitstr else None
         if pu is None:
             pu = parse_amount_price(amount, price)
+        tags = list(tags)
+        if typ == "wholesale" and "s DPH" not in tags:
+            tags.append("s DPH")
         entries.append({"per": pu[0] if pu else None, "unit": pu[1] if pu else None,
                         "name": name, "amount": amount, "shop": shop, "price": price,
                         "valid": valid, "pct": pct, "tags": list(tags), "typ": typ})
