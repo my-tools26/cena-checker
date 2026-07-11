@@ -289,7 +289,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v6.6 · 11.07.2026"
+APP_VERSION = "v6.7 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -978,7 +978,7 @@ def _shop_slug(shop):
     return ""
 
 
-def product_matrix(products, heading, max_cols=4, note="", show_exp=True):
+def product_matrix(products, heading, max_cols=3, note="", show_exp=True):
     """Bang ma tran: hang = mat hang, cot = cac sieu thi re nhat (gia GOI, kem gia/don vi nho)."""
     if not products:
         return ""
