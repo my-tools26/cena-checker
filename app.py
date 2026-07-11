@@ -275,7 +275,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v5.5 · 11.07.2026"
+APP_VERSION = "v5.6 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1062,11 +1062,14 @@ def _merge_ok(t1, a1, t2, a2):
 
 
 def banbuon_html(page=1):
-    body = ("<h1>📦 Bán buôn — Tamda / Makro / JIP / Bidfood / dathang / Linsan / Bombacena</h1>"
-            "<p class='muted'>Giá gói · (giá/đơn vị) ghi nhỏ · ô xanh ✅ = kho rẻ nhất khi có "
-            "cùng mặt hàng ở nhiều kho. <b>Tất cả giá đã gồm DPH (s DPH)</b>. "
-            "Tamda = giá với thẻ (tờ rơi tuần), hoặc giá thường từ Tamda Express "
-            "khi hàng không có trong tờ rơi · dathang/Linsan/Bombacena = hàng châu Á.</p>")
+    # Khoi gioi thieu chuyen xuong CUOI trang (yeu cau nguoi dung) - dau trang
+    # danh cho nut chon kho + bang, mo trang la thay hang ngay.
+    intro = ("<h1 style='font-size:1.15em'>📦 Bán buôn — Tamda / Makro / JIP / Bidfood / dathang / Linsan / Bombacena</h1>"
+             "<p class='muted'>Giá gói · (giá/đơn vị) ghi nhỏ · ô xanh ✅ = kho rẻ nhất khi có "
+             "cùng mặt hàng ở nhiều kho. <b>Tất cả giá đã gồm DPH (s DPH)</b>. "
+             "Tamda = giá với thẻ (tờ rơi tuần), hoặc giá thường từ Tamda Express "
+             "khi hàng không có trong tờ rơi · dathang/Linsan/Bombacena = hàng châu Á.</p>")
+    body = ""
 
     # Gom deal 3 kho ve 1 danh sach: moi item = {name, amount, offers{col: deal}}
     items = []
@@ -1201,10 +1204,10 @@ def banbuon_html(page=1):
     col_keys = [c[0] for c in all_cols]
     # Nut loc kho: bat/tat cot truc tiep tren trang, khong can qua khung tim.
     # Lua chon luu localStorage (bb_cols_off) - lan sau mo lai van giu.
-    filter_html = ("<div style='margin:6px 0 10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center'>"
-                   "<span class='a'>Chọn kho:</span>"
+    filter_html = ("<div style='margin:4px 0 8px;display:flex;gap:4px;flex-wrap:wrap;align-items:center'>"
                    + "".join(f"<button class='stp' data-bbcol='{c[0]}' "
-                             f"style='color:{c[2]}'>{c[1]}</button>" for c in all_cols)
+                             f"style='color:{c[2]};font-size:.72em;padding:2px 7px'>{c[1]}</button>"
+                             for c in all_cols)
                    + "</div>")
     filter_js = """<script>
 (function(){
@@ -1229,8 +1232,8 @@ def banbuon_html(page=1):
   apply();
 })();
 </script>"""
-    body += (f"<h2>📦 SO SÁNH KHO BÁN BUÔN — {len(items)} mặt hàng, {ncmp} có ở ≥2 kho{valid_s}"
-             f" · trang {page}/{npages}</h2>" + filter_html + pager()
+    body += (f"<p class='muted' style='font-size:.8em;margin:2px 0'>📦 {len(items)} mặt hàng"
+             f" · {ncmp} có ở ≥2 kho{valid_s} · trang {page}/{npages}</p>" + filter_html + pager()
              + "<table class='mx'><tr><th style='width:22%'>Mặt hàng</th>"
              + "".join(f"<th data-col='{c[0]}' style='background:var(--card2);color:{c[2]}'>{c[1]}</th>"
                        for c in all_cols)
@@ -1262,7 +1265,7 @@ def banbuon_html(page=1):
             body += (f"<td{win} data-col='{col}'>{exp}<span class='mxp'>{tick}{o['price']:.2f} Kč{pct}</span>{per_s}</td>")
         body += "</tr>"
     body += ("</table><p class='muted' style='margin-top:-4px'>"
-             "Makro/JIP: deal từ kupi.cz · chỉ ghép khi trùng quy cách gói.</p>") + pager() + filter_js
+             "Makro/JIP: deal từ kupi.cz · chỉ ghép khi trùng quy cách gói.</p>") + pager() + intro + filter_js
     return shell(body, "/banbuon")
 
 
