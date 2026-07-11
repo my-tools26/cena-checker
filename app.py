@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v7.4 · 11.07.2026"
+APP_VERSION = "v7.5 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1941,8 +1941,6 @@ def search_html(query, only="", view="all"):
         if pu is None:
             pu = parse_amount_price(amount, price)
         tags = list(tags)
-        if typ == "wholesale" and "s DPH" not in tags:
-            tags.append("s DPH")
         entries.append({"per": pu[0] if pu else None, "unit": pu[1] if pu else None,
                         "name": name, "amount": amount, "shop": shop, "price": price,
                         "valid": valid, "pct": pct, "tags": list(tags), "typ": typ})
@@ -2049,8 +2047,9 @@ def search_html(query, only="", view="all"):
                     per_s = f"<span class='a'>({e['per']:.2f} Kč/{UNIT_SHORT[e['unit']]})</span>" if e["per"] else ""
                     pct_s = f" <span class='pctb'>{H.escape(e['pct'])}</span>" if e["pct"] else ""
                     cls = " class='w'" if i == 0 else ""
+                    dph = " <span class='a' style='font-weight:normal;font-size:.75em'>s DPH</span>"                         if e["typ"] == "wholesale" else ""
                     out += (f"<td{cls} data-shop=\"{H.escape(e['shop'])}\">{shop_badge(e['shop'])}"
-                            f"<span class='mxp'>{e['price']:.2f} Kč{pct_s}</span>"
+                            f"<span class='mxp'>{e['price']:.2f} Kč{dph}{pct_s}</span>"
                             f"{per_s}{tags}</td>")
                 else:
                     out += "<td class='a'>—</td>"
