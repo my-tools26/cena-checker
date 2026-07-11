@@ -284,7 +284,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v6.3 · 11.07.2026"
+APP_VERSION = "v6.4 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -713,13 +713,15 @@ def category_html(slug):
         return int(m.group(1)) if m else 0
 
     products.sort(key=best_pct, reverse=True)
-    body = f"<h1>{em} {H.escape(title)} — khuyến mãi tuần này</h1>"
+    body = (f"<h1 style='font-size:1.15em'>{em} {H.escape(title)} — khuyến mãi tuần này</h1>"
+            + ALLSHOP_FILTER_HTML)
     if not products:
         body += "<p>Không tải được dữ liệu — thử lại sau vài phút.</p>"
     else:
         body += product_matrix(
             products, f"{em} {len(products)} mặt hàng",
             note="Giá gói · cột ✅ = nơi rẻ nhất · (giá/đơn vị) ghi nhỏ · xếp theo mức giảm sâu nhất.")
+    body += RETAIL_FILTER_JS
     active = "/hoaqua" if slug == "ovoce-a-zelenina" else ""
     return shell(body, active)
 
@@ -910,6 +912,10 @@ def _two_rows(buttons):
 
 RETAIL_FILTER_HTML = _two_rows([f"<button class='stp' data-rshop='{k}'>{lbl}</button>"
                                 for k, lbl in STORE_GROUPS[0][1]])
+# Trang danh muc (Rau qua ... Thu cung): ca ban le lan ban buon
+ALLSHOP_FILTER_HTML = (RETAIL_FILTER_HTML
+                       + _two_rows([f"<button class='stp' data-rshop='{k}'>{lbl}</button>"
+                                    for k, lbl in STORE_GROUPS[1][1]]))
 RETAIL_FILTER_JS = """<script>
 (function(){
   var KEY='retail_off';
@@ -936,7 +942,8 @@ RETAIL_FILTER_JS = """<script>
 
 
 _RETAIL_KEYS = ("lidl", "kaufland", "billa", "penny", "tesco", "albert", "globus",
-                "coop", "hruska", "flop", "ratio", "kosik", "makro", "jip", "tamda", "bidfood")
+                "coop", "hruska", "flop", "ratio", "kosik", "makro", "jip", "tamda",
+                "bidfood", "dathang", "linsan", "bombacena")
 
 
 def _shop_slug(shop):
