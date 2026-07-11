@@ -276,7 +276,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v5.8 · 11.07.2026"
+APP_VERSION = "v5.9 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -493,9 +493,10 @@ def shell(body, active="/"):
                  + VIEWTABS_JS + STOREFILTER_JS
                  + '<div id="scanbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);'
                  'z-index:9999;padding:16px;text-align:center">'
-                 '<p style="color:#fff;font-size:1.1em">Giơ camera vào mã vạch sản phẩm</p>'
-                 '<div id="scanview" style="max-width:480px;margin:0 auto"></div>'
-                 '<button id="scanclose" style="margin-top:14px;background:#a33">✖ Đóng</button></div>'
+                 '<p style="color:#fff;font-size:1em;margin:6px 0">Giơ camera vào mã vạch sản phẩm</p>'
+                 '<div id="scanview" style="max-width:480px;margin:0 auto;max-height:65vh;overflow:hidden"></div>'
+                 '<style>#scanview video{width:100%;max-height:65vh;object-fit:cover;border-radius:10px}</style>'
+                 '<button id="scanclose" style="margin-top:12px;background:#a33;padding:10px 26px">✖ Đóng</button></div>'
                  + SCAN_JS)
     return (PAGE_TOP
             + f'<div class="appbar"><a class="logo" href="/">🛒 Cena Checker</a>'
@@ -904,7 +905,7 @@ def product_matrix(products, heading, max_cols=4, note="", show_exp=True):
         f"<th>{'✅ Rẻ nhất' if i == 0 else '#%d' % (i + 1)}</th>" for i in range(max_cols))
     head_cols = head_cols.replace("<th>✅ Rẻ nhất</th>",
                                   "<th style='background:var(--acc-bg);color:var(--acc-strong)'>✅ Rẻ nhất</th>")
-    out = (f"<h2>{heading}</h2>"
+    out = (f"<h2 style='font-size:.95em'>{heading}</h2>"
            + f"<table class='mx'><tr><th style='width:26%'>Mặt hàng</th>{head_cols}</tr>")
     for p in products:
         by_price = sorted(p["deals"], key=lambda d: d["price"])
@@ -1226,8 +1227,9 @@ def banbuon_html(page=1):
   apply();
 })();
 </script>"""
-    body += (f"<p class='muted' style='font-size:.8em;margin:2px 0'>📦 {len(items)} mặt hàng"
-             f" · {ncmp} có ở ≥2 kho{valid_s} · trang {page}/{npages}</p>" + filter_html + pager()
+    stats = (f"<p class='muted' style='font-size:.8em;margin:2px 0'>📦 {len(items)} mặt hàng"
+             f" · {ncmp} có ở ≥2 kho{valid_s} · trang {page}/{npages}</p>")
+    body += (filter_html + pager()
              + "<table class='mx'><tr><th style='width:22%'>Mặt hàng</th>"
              + "".join(f"<th data-col='{c[0]}' style='background:var(--card2);color:{c[2]}'>{c[1]}</th>"
                        for c in all_cols)
@@ -1259,7 +1261,7 @@ def banbuon_html(page=1):
             body += (f"<td{win} data-col='{col}'>{exp}<span class='mxp'>{tick}{o['price']:.2f} Kč{pct}</span>{per_s}</td>")
         body += "</tr>"
     body += ("</table><p class='muted' style='margin-top:-4px'>"
-             "Makro/JIP: deal từ kupi.cz · chỉ ghép khi trùng quy cách gói.</p>") + pager() + intro + filter_js
+             "Makro/JIP: deal từ kupi.cz · chỉ ghép khi trùng quy cách gói.</p>") + pager() + stats + intro + filter_js
     return shell(body, "/banbuon")
 
 
