@@ -271,7 +271,7 @@ CSS = """
  .stp.off{opacity:.45;text-decoration:line-through;color:var(--muted)}
  .mxwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
  .mxwrap table.mx{min-width:100%}
- .sfrow{margin:4px 0 8px;display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+ .sfrow{margin:4px 0;display:flex;gap:4px;flex-wrap:nowrap;align-items:center}
  .sfrow .stp{font-size:.72em;padding:2px 7px}
  @media(max-width:640px){
   .sfrow{gap:3px}
@@ -284,7 +284,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v6.2 · 11.07.2026"
+APP_VERSION = "v6.3 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -901,10 +901,15 @@ def matrix_html():
 # Nut loc sieu thi BAN LE tren Trang chu / Akce: an/hien o gia cua sieu thi do
 # trong cac bang product_matrix; hidden -> cac gia con lai tu don sang trai.
 # Lua chon luu localStorage (retail_off).
-RETAIL_FILTER_HTML = ("<div class='sfrow'>"
-                      + "".join(f"<button class='stp' data-rshop='{k}'>{lbl}</button>"
-                                for k, lbl in STORE_GROUPS[0][1])
-                      + "</div>")
+def _two_rows(buttons):
+    """Chia day nut thanh dung 2 hang can nhau: le thi hang tren it hon 1 (3+4), chan chia deu."""
+    half = len(buttons) // 2
+    return ("<div class='sfrow'>" + "".join(buttons[:half]) + "</div>"
+            "<div class='sfrow' style='margin-top:0'>" + "".join(buttons[half:]) + "</div>")
+
+
+RETAIL_FILTER_HTML = _two_rows([f"<button class='stp' data-rshop='{k}'>{lbl}</button>"
+                                for k, lbl in STORE_GROUPS[0][1]])
 RETAIL_FILTER_JS = """<script>
 (function(){
   var KEY='retail_off';
@@ -1255,10 +1260,8 @@ def banbuon_html(page=1):
     col_keys = [c[0] for c in all_cols]
     # Nut loc kho: bat/tat cot truc tiep tren trang, khong can qua khung tim.
     # Lua chon luu localStorage (bb_cols_off) - lan sau mo lai van giu.
-    filter_html = ("<div class='sfrow'>"
-                   + "".join(f"<button class='stp' data-bbcol='{c[0]}'>{c[1]}</button>"
-                             for c in all_cols)
-                   + "</div>")
+    filter_html = _two_rows([f"<button class='stp' data-bbcol='{c[0]}'>{c[1]}</button>"
+                             for c in all_cols])
     filter_js = """<script>
 (function(){
   var KEY='bb_cols_off';
