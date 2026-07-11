@@ -280,7 +280,9 @@ CSS = """
   .mx{font-size:.74em}
   .mx td, .mx th{padding:5px 3px}
   .mx td.w .mxp{font-size:1em}
-  .sbadge{font-size:.85em;padding:1px 4px;display:inline-block}
+  /* badge ten sieu thi PHAI duoc xuong dong ("Penny Market" -> 2 dong):
+     nowrap la thu pham chinh lam bang rong 423px > man 390px */
+  .sbadge{font-size:.85em;padding:1px 4px;display:inline-block;white-space:normal;line-height:1.2}
   /* trong o gia: badge / ⏰ / gia xep DOC nhu ben Ban buon -> cot hep lai */
   .mx td .expb{display:block;width:fit-content;margin:2px 0;font-size:.65em}
   .mx td .pctb{display:block;width:fit-content;font-size:.7em;padding:1px 4px;margin-top:2px}
@@ -293,7 +295,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v6.9 · 11.07.2026"
+APP_VERSION = "v7.0 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
