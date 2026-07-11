@@ -275,7 +275,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v5.3 · 11.07.2026"
+APP_VERSION = "v5.4 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -975,7 +975,8 @@ _BB_STOP = {"a", "s", "v", "z", "na", "do", "od", "po", "the", "cca", "kus", "ks
             "sugar", "free", "zero", "light", "bez", "cukru", "original", "classic",
             "edition", "style", "plech", "sklo", "pet", "mini", "maxi", "extra",
             "premium", "fresh", "new", "novy", "nova", "mraz", "mrazene", "cerstve",
-            "cerstvy", "vaz", "susene", "instantni"}
+            "cerstvy", "vaz", "susene", "instantni", "svetly", "lezak", "vycepni",
+            "tmavy", "polotmavy", "nealko", "nealkoholicke"}
 
 
 def _bb_tokens(name):
@@ -985,32 +986,79 @@ def _bb_tokens(name):
     return {w for w in _re.split(r"[^a-z]+", n) if len(w) >= 3 and w not in _BB_STOP}
 
 
+# Tu "chung chung" theo du lieu: xuat hien trong >=150 san pham thi khong du
+# dac trung de ghep 2 mat hang (pivo, kava, praci, prasek, mango, ice...).
+_bb_df_cache = {"built": False, "generic": set()}
+
+
+def _bb_generic():
+    if _bb_df_cache["built"]:
+        return _bb_df_cache["generic"]
+    import collections
+    import json
+    cnt = collections.Counter()
+    here = os.path.dirname(os.path.abspath(__file__))
+    for fn in ("tamda_full_prices.json", "makro_full_prices.json", "bidfood_prices.json",
+               "dathang_prices.json", "linsan_prices.json", "bombacena_prices.json"):
+        try:
+            with open(os.path.join(here, fn), encoding="utf-8") as f:
+                for it in json.load(f)["items"]:
+                    for t in _bb_tokens(it["name"]):
+                        cnt[t] += 1
+        except Exception:
+            pass
+    _bb_df_cache["generic"] = {t for t, c in cnt.items() if c >= 150}
+    _bb_df_cache["counts"] = dict(cnt)
+    _bb_df_cache["built"] = True
+    return _bb_df_cache["generic"]
+
+
 def _bb_match(t1, t2):
-    """2 mat hang coi la trung khi chung >=2 tu khoa (hoac tap nho nam tron trong tap lon)."""
+    """2 mat hang coi la trung khi chung >=2 tu khoa (hoac tap nho nam tron trong
+    tap lon), TRONG DO it nhat 1 tu phai la tu dac trung hiem (ten hang/san pham),
+    khong tinh tu chung chung nhu pivo/kava/praci/mango (xem _bb_generic)."""
     if not t1 or not t2:
         return False
     common = t1 & t2
+    if not common - _bb_generic():
+        return False
+    # luat "mo neo": tu hiem nhat cua ten (thuong la ten hang) phai trung -
+    # chan kieu Nivea Sun spray ghep Airwick Sun spray (chi trung tu phu)
+    cnt = _bb_df_cache.get("counts", {})
+    a1 = min(t1, key=lambda t: cnt.get(t, 0))
+    a2 = min(t2, key=lambda t: cnt.get(t, 0))
+    if a1 not in common and a2 not in common:
+        return False
     small = min(t1, t2, key=len)
     return len(common) >= 2 or (len(common) >= 1 and common == small)
 
 
-def _amt_ok(a1, a2):
-    """Quy cach goi phai khop moi cho ghep (1 kg = 1000 g; '2 ks' vs '0,5 l' = khac hang).
-    Ben nao thieu thong tin thi cho qua (giu hanh vi cu)."""
-    def parse(a):
-        m = _re.search(r"(\d+[.,]?\d*)\s*(kg|g|l|ml|ks)\b", (a or "").lower().replace(",", "."))
-        if not m:
-            return None
-        v, u = float(m.group(1)), m.group(2)
-        if u == "kg":
-            v, u = v * 1000, "g"
-        elif u == "l":
-            v, u = v * 1000, "ml"
-        return (v, u)
-    p1, p2 = parse(a1), parse(a2)
-    if p1 is None or p2 is None:
-        return True
-    return p1 == p2
+def _amt_parse(a):
+    """Doc quy cach: '1 kg' -> (1000,'g'); ho tro loc/thung 'N x ...' ('6 x 1 l' -> (6000,'ml'))."""
+    s = (a or "").lower().replace(",", ".")
+    m = _re.search(r"(?:(\d+)\s*[x×]\s*)?(\d+[.]?\d*)\s*(kg|g|l|ml|ks)\b", s)
+    if not m:
+        return None
+    mult = int(m.group(1)) if m.group(1) else 1
+    v, u = float(m.group(2)) * mult, m.group(3)
+    if u == "kg":
+        v, u = v * 1000, "g"
+    elif u == "l":
+        v, u = v * 1000, "ml"
+    return (v, u)
+
+
+def _merge_ok(t1, a1, t2, a2):
+    """Dieu kien ghep 2 mat hang giua 2 kho: ten trung (_bb_match) + quy cach khop
+    (ke ca loc/thung: 6 x 1 l != 1 l). Neu 1 trong 2 ben KHONG doc duoc quy cach
+    (vape, '5 davek', 'dle vahy'...) thi chi ghep khi ten trung RAT manh
+    (>=2 tu dac trung hiem chung) - tha de trong con hon ghep sai gia."""
+    if not _bb_match(t1, t2):
+        return False
+    p1, p2 = _amt_parse(a1), _amt_parse(a2)
+    if p1 and p2:
+        return p1 == p2
+    return len((t1 & t2) - _bb_generic()) >= 2
 
 
 def banbuon_html(page=1):
@@ -1035,8 +1083,8 @@ def banbuon_html(page=1):
             toks = _bb_tokens(p["name"])
             offer = {"shop": d["shop"], "price": d["price"], "pct": d["pct"],
                      "unit": d["unit"], "amount": p["amount"], "_exp": d.get("_exp")}
-            hit = next((x for x in items if col not in x["offers"] and _bb_match(x["toks"], toks)
-                        and _amt_ok(x["amount"], p["amount"])), None)
+            hit = next((x for x in items if col not in x["offers"]
+                        and _merge_ok(x["toks"], x["amount"], toks, p["amount"])), None)
             if hit:
                 hit["offers"][col] = offer
             else:
@@ -1047,8 +1095,8 @@ def banbuon_html(page=1):
     if bdata:
         for it in bdata["items"]:
             toks = _bb_tokens(it["name"])
-            hit = next((x for x in items if "bidfood" not in x["offers"] and _bb_match(x["toks"], toks)
-                        and _amt_ok(x["amount"], it.get("amount", ""))), None)
+            hit = next((x for x in items if "bidfood" not in x["offers"]
+                        and _merge_ok(x["toks"], x["amount"], toks, it.get("amount", ""))), None)
             if hit:
                 hit["offers"]["bidfood"] = {"shop": "Bidfood", "price": it["price"],
                                             "pct": it.get("pct", ""), "unit": "",
@@ -1064,8 +1112,8 @@ def banbuon_html(page=1):
         vn_extra_cols.append((slug, shopname))
         for it in vdata["items"]:
             toks = _bb_tokens(it["name"])
-            hit = next((x for x in items if slug not in x["offers"] and _bb_match(x["toks"], toks)
-                        and _amt_ok(x["amount"], it.get("amount", ""))), None)
+            hit = next((x for x in items if slug not in x["offers"]
+                        and _merge_ok(x["toks"], x["amount"], toks, it.get("amount", ""))), None)
             if hit:
                 hit["offers"][slug] = {"shop": shopname, "price": it["price"],
                                        "pct": "", "unit": it.get("unit", ""),
@@ -1094,10 +1142,8 @@ def banbuon_html(page=1):
             if col in x["offers"]:
                 continue
             cands = {id(it): it for t in x["toks"] for it in idx.get(t, [])}
-            matches = [it for it in cands.values() if _bb_match(x["toks"], it["_toks"])]
-            # CHI dien khi trung quy cach (1 kg = 1000 g): ghep lech co (1kg vs 3kg)
-            # hay lech loai (qua xoai vs nuoc ep xoai 0,5l) lam so sanh gia sai het.
-            it = next((m for m in matches if _amt_ok(x.get("amount"), m.get("amount"))), None)
+            it = next((m for m in cands.values()
+                       if _merge_ok(x["toks"], x.get("amount"), m["_toks"], m.get("amount"))), None)
             if it is None:
                 continue
             x["offers"][col] = {"shop": shopname, "price": it["price"], "pct": "",
