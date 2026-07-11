@@ -275,7 +275,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v5.4 · 11.07.2026"
+APP_VERSION = "v5.5 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1199,10 +1199,41 @@ def banbuon_html(page=1):
     for slug, shopname in vn_extra_cols:
         all_cols.append((slug, vn_icons.get(slug, shopname), "#c8102e"))
     col_keys = [c[0] for c in all_cols]
+    # Nut loc kho: bat/tat cot truc tiep tren trang, khong can qua khung tim.
+    # Lua chon luu localStorage (bb_cols_off) - lan sau mo lai van giu.
+    filter_html = ("<div style='margin:6px 0 10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center'>"
+                   "<span class='a'>Chọn kho:</span>"
+                   + "".join(f"<button class='stp' data-bbcol='{c[0]}' "
+                             f"style='color:{c[2]}'>{c[1]}</button>" for c in all_cols)
+                   + "</div>")
+    filter_js = """<script>
+(function(){
+  var KEY='bb_cols_off';
+  var off; try{ off=JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(e){ off=[]; }
+  function apply(){
+    document.querySelectorAll('[data-bbcol]').forEach(function(b){
+      b.classList.toggle('off', off.indexOf(b.dataset.bbcol)>=0);
+    });
+    document.querySelectorAll('th[data-col],td[data-col]').forEach(function(c){
+      c.style.display = off.indexOf(c.dataset.col)>=0 ? 'none' : '';
+    });
+  }
+  document.querySelectorAll('[data-bbcol]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var k=b.dataset.bbcol, i=off.indexOf(k);
+      if(i>=0) off.splice(i,1); else off.push(k);
+      localStorage.setItem(KEY, JSON.stringify(off));
+      apply();
+    });
+  });
+  apply();
+})();
+</script>"""
     body += (f"<h2>📦 SO SÁNH KHO BÁN BUÔN — {len(items)} mặt hàng, {ncmp} có ở ≥2 kho{valid_s}"
-             f" · trang {page}/{npages}</h2>" + pager()
+             f" · trang {page}/{npages}</h2>" + filter_html + pager()
              + "<table class='mx'><tr><th style='width:22%'>Mặt hàng</th>"
-             + "".join(f"<th style='background:var(--card2);color:{c[2]}'>{c[1]}</th>" for c in all_cols)
+             + "".join(f"<th data-col='{c[0]}' style='background:var(--card2);color:{c[2]}'>{c[1]}</th>"
+                       for c in all_cols)
              + "</tr>")
     for x in page_items:
         amount = f" <span class='a'>{H.escape(x['amount'])}</span>" if x["amount"] else ""
@@ -1219,7 +1250,7 @@ def banbuon_html(page=1):
         for col in col_keys:
             o = x["offers"].get(col)
             if not o:
-                body += "<td class='a'>—</td>"
+                body += f"<td class='a' data-col='{col}'>—</td>"
                 continue
             pu = parse_amount_price(o["amount"], o["price"])
             per_s = (f"<span class='a'>({pu[0]:.2f} Kč/{UNIT_SHORT[pu[1]]})</span>" if pu
@@ -1228,10 +1259,10 @@ def banbuon_html(page=1):
             exp = " <span class='expb'>⏰</span>" if o.get("_exp") else ""
             win = " class='w'" if col == best else ""
             tick = "✅ " if col == best else ""
-            body += (f"<td{win}>{exp}<span class='mxp'>{tick}{o['price']:.2f} Kč{pct}</span>{per_s}</td>")
+            body += (f"<td{win} data-col='{col}'>{exp}<span class='mxp'>{tick}{o['price']:.2f} Kč{pct}</span>{per_s}</td>")
         body += "</tr>"
     body += ("</table><p class='muted' style='margin-top:-4px'>"
-             "Makro/JIP: deal từ kupi.cz · chỉ ghép khi trùng quy cách gói.</p>") + pager()
+             "Makro/JIP: deal từ kupi.cz · chỉ ghép khi trùng quy cách gói.</p>") + pager() + filter_js
     return shell(body, "/banbuon")
 
 
