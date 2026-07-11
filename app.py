@@ -283,7 +283,7 @@ CSS = """
   .sbadge{font-size:.85em;padding:1px 4px;display:inline-block}
   /* trong o gia: badge / ⏰ / gia xep DOC nhu ben Ban buon -> cot hep lai */
   .mx td .expb{display:block;width:fit-content;margin:2px 0;font-size:.65em}
-  .mx td .pctb{font-size:.7em;padding:1px 4px}
+  .mx td .pctb{display:block;width:fit-content;font-size:.7em;padding:1px 4px;margin-top:2px}
   .mx td .vald{display:none}
  }
  .stact{margin-top:2px}
@@ -293,7 +293,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v6.8 · 11.07.2026"
+APP_VERSION = "v6.9 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1981,14 +1981,14 @@ def search_html(query, only="", view="all"):
 
     def render_table(items, heading):
         head_cols = ("<th style='background:var(--acc-bg);color:var(--acc-strong)'>✅ Rẻ nhất</th>"
-                     "<th>#2</th><th>#3</th><th>#4</th>")
+                     "<th>#2</th><th>#3</th>")
         out = (f"<h2>{heading}</h2>"
-               f"<table class='mx'><tr><th style='width:26%'>Mặt hàng</th>{head_cols}</tr>")
+               f"<div class='mxwrap'><table class='mx'><tr><th style='width:26%'>Mặt hàng</th>{head_cols}</tr>")
         for item in items:
-            ranked = sorted(item["shops"], key=lambda e: e["per"] if e["per"] else 9999999)[:4]
+            ranked = sorted(item["shops"], key=lambda e: e["per"] if e["per"] else 9999999)[:3]
             amount = f" <span class='a'>{H.escape(item['amount'])}</span>" if item["amount"] else ""
             out += f"<tr><td>{icon_for(item['name'])}<b>{H.escape(item['name'])}</b>{amount}</td>"
-            for i in range(4):
+            for i in range(3):
                 if i < len(ranked):
                     e = ranked[i]
                     tags = "".join(
@@ -2003,7 +2003,7 @@ def search_html(query, only="", view="all"):
                 else:
                     out += "<td class='a'>—</td>"
             out += "</tr>"
-        return out + "</table>"
+        return out + "</table></div>"
 
     items = list(by_name.values())
     if ean_name:
