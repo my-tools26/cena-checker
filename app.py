@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v7.1 · 11.07.2026"
+APP_VERSION = "v7.2 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -962,6 +962,13 @@ RETAIL_FILTER_JS = """<script>
     document.querySelectorAll('td[data-shop]').forEach(function(c){
       c.style.display = c.dataset.shop && off.indexOf(c.dataset.shop)>=0 ? 'none' : '';
     });
+    // mat hang het noi ban (moi o gia deu bi an) -> an ca hang
+    document.querySelectorAll('tr').forEach(function(r){
+      var cells=r.querySelectorAll('td[data-shop]');
+      if(!cells.length) return;
+      var vis=0; cells.forEach(function(c){ if(c.style.display!=='none') vis++; });
+      r.style.display = vis ? '' : 'none';
+    });
   }
   document.querySelectorAll('[data-rshop]').forEach(function(b){
     b.addEventListener('click', function(){
@@ -1314,6 +1321,13 @@ def banbuon_html(page=1):
     });
     document.querySelectorAll('td[data-shop]').forEach(function(c){
       c.style.display = off.indexOf(c.dataset.shop)>=0 ? 'none' : '';
+    });
+    // mat hang het noi ban (moi o gia deu bi an) -> an ca hang
+    document.querySelectorAll('tr').forEach(function(r){
+      var cells=r.querySelectorAll('td[data-shop]');
+      if(!cells.length) return;
+      var vis=0; cells.forEach(function(c){ if(c.style.display!=='none') vis++; });
+      r.style.display = vis ? '' : 'none';
     });
   }
   document.querySelectorAll('[data-bbcol]').forEach(function(b){
