@@ -275,7 +275,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v5.2 · 11.07.2026"
+APP_VERSION = "v5.3 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -969,7 +969,13 @@ def home_html():
 
 
 _BB_STOP = {"a", "s", "v", "z", "na", "do", "od", "po", "the", "cca", "kus", "ks",
-            "kg", "g", "l", "ml", "balení", "baleni"}
+            "kg", "g", "l", "ml", "balení", "baleni",
+            # tu mo ta chung chung - khong duoc tinh la "trung ten" khi ghep hang
+            # (vd "Red Bull sugar free" tung ghep nham "Mizu guarana sugar free")
+            "sugar", "free", "zero", "light", "bez", "cukru", "original", "classic",
+            "edition", "style", "plech", "sklo", "pet", "mini", "maxi", "extra",
+            "premium", "fresh", "new", "novy", "nova", "mraz", "mrazene", "cerstve",
+            "cerstvy", "vaz", "susene", "instantni"}
 
 
 def _bb_tokens(name):
