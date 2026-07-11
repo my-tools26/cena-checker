@@ -234,9 +234,10 @@ CSS = """
  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:8px;margin:14px 0}
  .catbtn{display:none;width:100%;text-align:left;background:var(--card);color:var(--accent);border:1px solid var(--input-border);border-radius:10px;padding:11px 14px;margin:14px 0 0;font-size:1em;font-weight:bold}
  @media(max-width:600px){
-  .catbtn{display:flex;justify-content:space-between;align-items:center}
-  .tiles{display:none;margin:8px 0 0}
-  .tiles.show{display:grid;grid-template-columns:repeat(3,1fr)}
+  .catbtn{display:none}
+  .tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin:8px 0 0}
+  .tiles .tile{padding:8px 2px;font-size:.7em}
+  .tiles .tile .em{font-size:1.4em;margin-bottom:2px}
  }
  .tile{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 6px;text-align:center;text-decoration:none;color:var(--text);font-size:.85em}
  .tile:hover{border-color:var(--input-border);background:var(--acc-bg2)}
@@ -275,7 +276,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v5.6 · 11.07.2026"
+APP_VERSION = "v5.7 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -719,8 +720,9 @@ def akce_html():
     active = _home_cache["active"]
     expiring = _home_cache["expiring"]
     fresh = _home_cache["fresh"]
-    body = ("<h1>📢 Tổng hợp AKCE</h1>"
-            "<p class='muted'>Quét từ 7 nhóm hàng chính trên Kupi, xếp theo mức giảm sâu nhất trong từng phần.</p>")
+    tiles = "".join(f'<a class="tile" href="{u}"><span class="em">{e}</span>{t}</a>'
+                    for e, t, u in HOME_TILES)
+    body = f'<div class="tiles">{tiles}</div>'
     running = expiring + active
 
     def pct_of(pair):
@@ -747,6 +749,8 @@ def akce_html():
                                show_exp=False)
     if not (active or expiring or fresh):
         body += "<p>Không tải được dữ liệu — thử lại sau vài phút.</p>"
+    body += ("<h1 style='font-size:1.15em'>📢 Tổng hợp AKCE</h1>"
+             "<p class='muted'>Quét từ 7 nhóm hàng chính trên Kupi, xếp theo mức giảm sâu nhất trong từng phần.</p>")
     return shell(body, "/akce")
 
 
@@ -901,7 +905,6 @@ def product_matrix(products, heading, max_cols=4, note="", show_exp=True):
     head_cols = head_cols.replace("<th>✅ Rẻ nhất</th>",
                                   "<th style='background:var(--acc-bg);color:var(--acc-strong)'>✅ Rẻ nhất</th>")
     out = (f"<h2>{heading}</h2>"
-           + (f"<p class='muted'>{note}</p>" if note else "")
            + f"<table class='mx'><tr><th style='width:26%'>Mặt hàng</th>{head_cols}</tr>")
     for p in products:
         by_price = sorted(p["deals"], key=lambda d: d["price"])
@@ -928,7 +931,7 @@ def product_matrix(products, heading, max_cols=4, note="", show_exp=True):
             else:
                 out += "<td class='a'>—</td>"
         out += "</tr>"
-    return out + "</table>"
+    return out + "</table>" + (f"<p class='muted' style='font-size:.85em'>{note}</p>" if note else "")
 
 
 HOME_TILES = [
@@ -950,21 +953,10 @@ def home_html():
         f'<a class="tile" href="{u}"><span class="em">{e}</span>{t}</a>'
         for e, t, u in HOME_TILES)
     body = f"""
-<p class="muted">So sánh giá siêu thị Séc — gõ tiếng Việt có dấu hoặc không dấu đều được.</p>
-<button type="button" id="catbtn" class="catbtn">☰ Danh mục <span id="catarrow">▾</span></button>
-<div class="tiles" id="tiles">{tiles}</div>
-<script>
-(function(){{
-  var b=document.getElementById('catbtn'),t=document.getElementById('tiles'),ar=document.getElementById('catarrow');
-  if(!b||!t)return;
-  b.addEventListener('click',function(){{
-    var open=t.classList.toggle('show'); ar.textContent=open?'▴':'▾';
-  }});
-}})();
-</script>
+<div class="tiles">{tiles}</div>
 {matrix_html()}
 {home_suggestions_html()}
-<p class="muted" style="margin-top:24px">Nguồn tham khảo: kupi.cz, tamdafoods.eu, makro.cz, jip-eshop.cz, mujbidfood.cz · <a href="/gioithieu">Giới thiệu &amp; miễn trừ trách nhiệm</a></p>"""
+<p class="muted" style="margin-top:24px">So sánh giá siêu thị Séc — gõ tiếng Việt có dấu hoặc không dấu đều được.<br>Nguồn tham khảo: kupi.cz, tamdafoods.eu, makro.cz, jip-eshop.cz, mujbidfood.cz · <a href="/gioithieu">Giới thiệu &amp; miễn trừ trách nhiệm</a></p>"""
     return shell(body, "/")
 
 
