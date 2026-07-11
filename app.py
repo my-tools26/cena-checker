@@ -269,6 +269,8 @@ CSS = """
  .stg{font-size:.82em;color:var(--muted);margin-right:4px;min-width:64px}
  .stp{font-size:.8em;padding:3px 10px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--accent);cursor:pointer}
  .stp.off{opacity:.45;text-decoration:line-through;color:var(--muted)}
+ .mxwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+ .mxwrap table.mx{min-width:100%}
  .sfrow{margin:4px 0 8px;display:flex;gap:4px;flex-wrap:wrap;align-items:center}
  .sfrow .stp{font-size:.72em;padding:2px 7px}
  @media(max-width:640px){
@@ -282,7 +284,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v6.1 · 11.07.2026"
+APP_VERSION = "v6.2 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -956,7 +958,7 @@ def product_matrix(products, heading, max_cols=4, note="", show_exp=True):
         f"<th>{'✅ Rẻ nhất' if i == 0 else '#%d' % (i + 1)}</th>" for i in range(max_cols))
     head_cols = head_cols.replace("<th>✅ Rẻ nhất</th>",
                                   "<th style='background:var(--acc-bg);color:var(--acc-strong)'>✅ Rẻ nhất</th>")
-    out = (f"<h2 style='font-size:.95em'>{heading}</h2>"
+    out = (f"<h2 style='font-size:.95em'>{heading}</h2><div class='mxwrap'>"
            + f"<table class='mx'><tr><th style='width:26%'>Mặt hàng</th>{head_cols}</tr>")
     for p in products:
         by_price = sorted(p["deals"], key=lambda d: d["price"])
@@ -984,7 +986,7 @@ def product_matrix(products, heading, max_cols=4, note="", show_exp=True):
             else:
                 out += "<td class='a'>—</td>"
         out += "</tr>"
-    return out + "</table>" + (f"<p class='muted' style='font-size:.85em'>{note}</p>" if note else "")
+    return out + "</table></div>" + (f"<p class='muted' style='font-size:.85em'>{note}</p>" if note else "")
 
 
 HOME_TILES = [
@@ -1283,7 +1285,7 @@ def banbuon_html(page=1):
     stats = (f"<p class='muted' style='font-size:.8em;margin:2px 0'>📦 {len(items)} mặt hàng"
              f" · {ncmp} có ở ≥2 kho{valid_s} · trang {page}/{npages}</p>")
     body += (filter_html + pager()
-             + "<table class='mx'><tr><th style='width:22%'>Mặt hàng</th>"
+             + "<div class='mxwrap'><table class='mx'><tr><th style='width:22%'>Mặt hàng</th>"
              + "".join(f"<th data-col='{c[0]}' style='background:var(--card2);color:{c[2]}'>{c[1]}</th>"
                        for c in all_cols)
              + "</tr>")
@@ -1313,7 +1315,7 @@ def banbuon_html(page=1):
             tick = "✅ " if col == best else ""
             body += (f"<td{win} data-col='{col}'>{exp}<span class='mxp'>{tick}{o['price']:.2f} Kč{pct}</span>{per_s}</td>")
         body += "</tr>"
-    body += ("</table><p class='muted' style='margin-top:-4px'>"
+    body += ("</table></div><p class='muted' style='margin-top:-4px'>"
              "Makro/JIP: deal từ kupi.cz · chỉ ghép khi trùng quy cách gói.</p>") + pager() + stats + intro + filter_js
     return shell(body, "/banbuon")
 
