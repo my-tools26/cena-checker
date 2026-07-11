@@ -269,6 +269,12 @@ CSS = """
  .stg{font-size:.82em;color:var(--muted);margin-right:4px;min-width:64px}
  .stp{font-size:.8em;padding:3px 10px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--accent);cursor:pointer}
  .stp.off{opacity:.45;text-decoration:line-through;color:var(--muted)}
+ .sfrow{margin:4px 0 8px;display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+ .sfrow .stp{font-size:.72em;padding:2px 7px}
+ @media(max-width:640px){
+  .sfrow{gap:3px}
+  .sfrow .stp{flex:1 1 auto;text-align:center;padding:4px 2px}
+ }
  .stact{margin-top:2px}
  .stact button{font-size:.78em;padding:3px 10px;margin-right:6px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--muted);cursor:pointer}
 """
@@ -276,7 +282,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v6.0 · 11.07.2026"
+APP_VERSION = "v6.1 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -893,9 +899,8 @@ def matrix_html():
 # Nut loc sieu thi BAN LE tren Trang chu / Akce: an/hien o gia cua sieu thi do
 # trong cac bang product_matrix; hidden -> cac gia con lai tu don sang trai.
 # Lua chon luu localStorage (retail_off).
-RETAIL_FILTER_HTML = ("<div style='margin:4px 0 8px;display:flex;gap:4px;flex-wrap:wrap;align-items:center'>"
-                      + "".join(f"<button class='stp' data-rshop='{k}' "
-                                f"style='font-size:.72em;padding:2px 7px'>{lbl}</button>"
+RETAIL_FILTER_HTML = ("<div class='sfrow'>"
+                      + "".join(f"<button class='stp' data-rshop='{k}'>{lbl}</button>"
                                 for k, lbl in STORE_GROUPS[0][1])
                       + "</div>")
 RETAIL_FILTER_JS = """<script>
@@ -1248,9 +1253,8 @@ def banbuon_html(page=1):
     col_keys = [c[0] for c in all_cols]
     # Nut loc kho: bat/tat cot truc tiep tren trang, khong can qua khung tim.
     # Lua chon luu localStorage (bb_cols_off) - lan sau mo lai van giu.
-    filter_html = ("<div style='margin:4px 0 8px;display:flex;gap:4px;flex-wrap:wrap;align-items:center'>"
-                   + "".join(f"<button class='stp' data-bbcol='{c[0]}' "
-                             f"style='color:{c[2]};font-size:.72em;padding:2px 7px'>{c[1]}</button>"
+    filter_html = ("<div class='sfrow'>"
+                   + "".join(f"<button class='stp' data-bbcol='{c[0]}'>{c[1]}</button>"
                              for c in all_cols)
                    + "</div>")
     filter_js = """<script>
