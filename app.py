@@ -276,7 +276,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v5.7 · 11.07.2026"
+APP_VERSION = "v5.8 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1061,7 +1061,9 @@ def banbuon_html(page=1):
              "cùng mặt hàng ở nhiều kho. <b>Tất cả giá đã gồm DPH (s DPH)</b>. "
              "Tamda = giá với thẻ (tờ rơi tuần), hoặc giá thường từ Tamda Express "
              "khi hàng không có trong tờ rơi · dathang/Linsan/Bombacena = hàng châu Á.</p>")
-    body = ""
+    tiles = "".join(f'<a class="tile" href="{u}"><span class="em">{e}</span>{t}</a>'
+                    for e, t, u in HOME_TILES)
+    body = f'<div class="tiles">{tiles}</div>'
 
     # Gom deal 3 kho ve 1 danh sach: moi item = {name, amount, offers{col: deal}}
     items = []
