@@ -271,10 +271,12 @@ CSS = """
  .stp.off{opacity:.45;text-decoration:line-through;color:var(--muted)}
  .mxwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
  .mxwrap table.mx{min-width:100%}
- .sfrow{margin:4px 0;display:flex;gap:4px;flex-wrap:nowrap;align-items:center}
+ .sfgroup{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0;align-items:center}
+ .sfgroup .sfrow{display:contents}
  .sfrow .stp{font-size:.72em;padding:2px 7px}
  @media(max-width:640px){
-  .sfrow{gap:3px}
+  .sfgroup{display:block}
+  .sfgroup .sfrow{display:flex;margin:3px 0;gap:3px;flex-wrap:nowrap;align-items:center}
   .sfrow .stp{flex:1 1 auto;text-align:center;padding:4px 2px}
   /* bang gia gon lai de 5 cot gan lot man dien thoai - can chi tiet thi zoom 2 ngon */
   .mx{font-size:.74em}
@@ -295,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v7.0 · 11.07.2026"
+APP_VERSION = "v7.1 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -934,10 +936,13 @@ def matrix_html():
 # trong cac bang product_matrix; hidden -> cac gia con lai tu don sang trai.
 # Lua chon luu localStorage (retail_off).
 def _two_rows(buttons):
-    """Chia day nut thanh dung 2 hang can nhau: le thi hang tren it hon 1 (3+4), chan chia deu."""
+    """May tinh: tat ca nut 1 hang ngang. Di dong: chia dung 2 hang can nhau
+    (le thi hang tren it hon 1, vd 3+4; chan chia deu, vd 6+6)."""
     half = len(buttons) // 2
-    return ("<div class='sfrow'>" + "".join(buttons[:half]) + "</div>"
-            "<div class='sfrow' style='margin-top:0'>" + "".join(buttons[half:]) + "</div>")
+    return ("<div class='sfgroup'>"
+            "<div class='sfrow'>" + "".join(buttons[:half]) + "</div>"
+            "<div class='sfrow'>" + "".join(buttons[half:]) + "</div>"
+            "</div>")
 
 
 RETAIL_FILTER_HTML = _two_rows([f"<button class='stp' data-rshop='{k}'>{lbl}</button>"
