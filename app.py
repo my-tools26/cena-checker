@@ -276,6 +276,11 @@ CSS = """
  @media(max-width:640px){
   .sfrow{gap:3px}
   .sfrow .stp{flex:1 1 auto;text-align:center;padding:4px 2px}
+  /* bang gia gon lai de 5 cot gan lot man dien thoai - can chi tiet thi zoom 2 ngon */
+  .mx{font-size:.74em}
+  .mx td, .mx th{padding:5px 3px}
+  .mx td.w .mxp{font-size:1em}
+  .sbadge{font-size:.85em;padding:1px 4px}
  }
  .stact{margin-top:2px}
  .stact button{font-size:.78em;padding:3px 10px;margin-right:6px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--muted);cursor:pointer}
@@ -284,7 +289,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v6.4 · 11.07.2026"
+APP_VERSION = "v6.5 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
