@@ -280,7 +280,11 @@ CSS = """
   .mx{font-size:.74em}
   .mx td, .mx th{padding:5px 3px}
   .mx td.w .mxp{font-size:1em}
-  .sbadge{font-size:.85em;padding:1px 4px}
+  .sbadge{font-size:.85em;padding:1px 4px;display:inline-block}
+  /* trong o gia: badge / ⏰ / gia xep DOC nhu ben Ban buon -> cot hep lai */
+  .mx td .expb{display:block;width:fit-content;margin:2px 0;font-size:.65em}
+  .mx td .pctb{font-size:.7em;padding:1px 4px}
+  .mx td .vald{display:none}
  }
  .stact{margin-top:2px}
  .stact button{font-size:.78em;padding:3px 10px;margin-right:6px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--muted);cursor:pointer}
@@ -289,7 +293,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v6.7 · 11.07.2026"
+APP_VERSION = "v6.8 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
