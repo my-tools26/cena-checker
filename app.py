@@ -276,7 +276,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v5.9 · 11.07.2026"
+APP_VERSION = "v6.0 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -723,7 +723,7 @@ def akce_html():
     fresh = _home_cache["fresh"]
     tiles = "".join(f'<a class="tile" href="{u}"><span class="em">{e}</span>{t}</a>'
                     for e, t, u in HOME_TILES)
-    body = f'<div class="tiles">{tiles}</div>'
+    body = f'<div class="tiles">{tiles}</div>' + RETAIL_FILTER_HTML
     running = expiring + active
 
     def pct_of(pair):
@@ -752,6 +752,7 @@ def akce_html():
         body += "<p>Không tải được dữ liệu — thử lại sau vài phút.</p>"
     body += ("<h1 style='font-size:1.15em'>📢 Tổng hợp AKCE</h1>"
              "<p class='muted'>Quét từ 7 nhóm hàng chính trên Kupi, xếp theo mức giảm sâu nhất trong từng phần.</p>")
+    body += RETAIL_FILTER_JS
     return shell(body, "/akce")
 
 
@@ -889,6 +890,51 @@ def matrix_html():
     return out
 
 
+# Nut loc sieu thi BAN LE tren Trang chu / Akce: an/hien o gia cua sieu thi do
+# trong cac bang product_matrix; hidden -> cac gia con lai tu don sang trai.
+# Lua chon luu localStorage (retail_off).
+RETAIL_FILTER_HTML = ("<div style='margin:4px 0 8px;display:flex;gap:4px;flex-wrap:wrap;align-items:center'>"
+                      + "".join(f"<button class='stp' data-rshop='{k}' "
+                                f"style='font-size:.72em;padding:2px 7px'>{lbl}</button>"
+                                for k, lbl in STORE_GROUPS[0][1])
+                      + "</div>")
+RETAIL_FILTER_JS = """<script>
+(function(){
+  var KEY='retail_off';
+  var off; try{ off=JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(e){ off=[]; }
+  function apply(){
+    document.querySelectorAll('[data-rshop]').forEach(function(b){
+      b.classList.toggle('off', off.indexOf(b.dataset.rshop)>=0);
+    });
+    document.querySelectorAll('td[data-shop]').forEach(function(c){
+      c.style.display = c.dataset.shop && off.indexOf(c.dataset.shop)>=0 ? 'none' : '';
+    });
+  }
+  document.querySelectorAll('[data-rshop]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var k=b.dataset.rshop, i=off.indexOf(k);
+      if(i>=0) off.splice(i,1); else off.push(k);
+      localStorage.setItem(KEY, JSON.stringify(off));
+      apply();
+    });
+  });
+  apply();
+})();
+</script>"""
+
+
+_RETAIL_KEYS = ("lidl", "kaufland", "billa", "penny", "tesco", "albert", "globus",
+                "coop", "hruska", "flop", "ratio", "kosik", "makro", "jip", "tamda", "bidfood")
+
+
+def _shop_slug(shop):
+    s = cena.strip_accents(shop.lower())
+    for k in _RETAIL_KEYS:
+        if k in s:
+            return k
+    return ""
+
+
 def product_matrix(products, heading, max_cols=4, note="", show_exp=True):
     """Bang ma tran: hang = mat hang, cot = cac sieu thi re nhat (gia GOI, kem gia/don vi nho)."""
     if not products:
@@ -927,7 +973,8 @@ def product_matrix(products, heading, max_cols=4, note="", show_exp=True):
                     exp = f" <span class='expb'>⏰ {H.escape(_dt)}</span>" if _dt else " <span class='expb'>⏰</span>"
                 unit_small = f"<span class='a'>{H.escape(d['unit'])}</span>" if d["unit"] else ""
                 pct = f" <span class='pctb'>{H.escape(d['pct'])}</span>" if d["pct"] else ""
-                out += (f"<td{' class=\"w\"' if i == 0 else ''}>{shop_badge(d['shop'])}{exp}"
+                out += (f"<td{' class=\"w\"' if i == 0 else ''} data-shop='{_shop_slug(d['shop'])}'>"
+                        f"{shop_badge(d['shop'])}{exp}"
                         f"<span class='mxp'>{d['price']:.2f} Kč{pct}</span>{unit_small}</td>")
             else:
                 out += "<td class='a'>—</td>"
@@ -955,9 +1002,11 @@ def home_html():
         for e, t, u in HOME_TILES)
     body = f"""
 <div class="tiles">{tiles}</div>
+{RETAIL_FILTER_HTML}
 {matrix_html()}
 {home_suggestions_html()}
-<p class="muted" style="margin-top:24px">So sánh giá siêu thị Séc — gõ tiếng Việt có dấu hoặc không dấu đều được.<br>Nguồn tham khảo: kupi.cz, tamdafoods.eu, makro.cz, jip-eshop.cz, mujbidfood.cz · <a href="/gioithieu">Giới thiệu &amp; miễn trừ trách nhiệm</a></p>"""
+<p class="muted" style="margin-top:24px">So sánh giá siêu thị Séc — gõ tiếng Việt có dấu hoặc không dấu đều được.<br>Nguồn tham khảo: kupi.cz, tamdafoods.eu, makro.cz, jip-eshop.cz, mujbidfood.cz · <a href="/gioithieu">Giới thiệu &amp; miễn trừ trách nhiệm</a></p>
+{RETAIL_FILTER_JS}"""
     return shell(body, "/")
 
 
