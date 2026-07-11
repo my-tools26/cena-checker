@@ -289,7 +289,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v6.5 · 11.07.2026"
+APP_VERSION = "v6.6 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -658,6 +658,19 @@ def suggest_table(pairs, heading, color):
             f"<div class='cards'>{pairs_cards(pairs)}</div>")
 
 
+def _retail_only(prods):
+    """Trang chu chi hien gia ban le: bo deal Makro/JIP/Tamda/Bidfood khoi tung san pham."""
+    out = []
+    for p in prods:
+        deals = [d for d in p["deals"]
+                 if not any(k in d["shop"].lower() for k in WHOLESALE_KEYWORDS)]
+        if deals:
+            q = dict(p)
+            q["deals"] = deals
+            out.append(q)
+    return out
+
+
 def home_suggestions_html():
     # Chi con "TO ROI MOI" — hang sap het akce da don vao "Mua gi o dau hom nay"
     try:
@@ -672,7 +685,7 @@ def home_suggestions_html():
             seen.add(p["name"])
             fprods.append(p)
     return product_matrix(
-        fprods[:15], "🆕 TỜ RƠI MỚI — deal sắp bắt đầu",
+        _retail_only(fprods)[:15], "🆕 TỜ RƠI MỚI — deal sắp bắt đầu",
         note="Khuyến mãi của tờ rơi tuần mới, chưa/vừa bắt đầu — lên kế hoạch đi chợ trước.",
         show_exp=False)
 
@@ -863,6 +876,12 @@ def build_matrix():
             if p["name"] in seen or not p["deals"]:
                 continue
             seen.add(p["name"])
+            # Trang chu chi hien gia BAN LE - deal Makro/JIP/Tamda/Bidfood bo ra
+            # (xem ban buon o trang /banbuon)
+            p["deals"] = [d for d in p["deals"]
+                          if not any(k in d["shop"].lower() for k in WHOLESALE_KEYWORDS)]
+            if not p["deals"]:
+                continue
             for d in p["deals"]:
                 d["_exp"] = deal_expiring(d.get("valid"))
             prods.append(p)
@@ -899,7 +918,7 @@ def matrix_html():
     picks = _rand.sample(staples, min(fill, len(staples)))
     combined = keep_exp + picks
     out = product_matrix(
-        combined, "💡 MUA GÌ Ở ĐÂU HÔM NAY",
+        _retail_only(combined), "💡 MUA GÌ Ở ĐÂU HÔM NAY",
         note="⏰ = sắp hết akce (hôm nay/ngày mai, kèm ngày) · (giá/đơn vị) ghi nhỏ · F5 đổi mặt hàng.")
     out += "<p class='muted' style='margin-top:-4px'>Cập nhật 1 lần mỗi ngày</p>"
     return out
@@ -1282,8 +1301,8 @@ def banbuon_html(page=1):
     document.querySelectorAll('[data-bbcol]').forEach(function(b){
       b.classList.toggle('off', off.indexOf(b.dataset.bbcol)>=0);
     });
-    document.querySelectorAll('th[data-col],td[data-col]').forEach(function(c){
-      c.style.display = off.indexOf(c.dataset.col)>=0 ? 'none' : '';
+    document.querySelectorAll('td[data-shop]').forEach(function(c){
+      c.style.display = off.indexOf(c.dataset.shop)>=0 ? 'none' : '';
     });
   }
   document.querySelectorAll('[data-bbcol]').forEach(function(b){
@@ -1299,36 +1318,31 @@ def banbuon_html(page=1):
 </script>"""
     stats = (f"<p class='muted' style='font-size:.8em;margin:2px 0'>📦 {len(items)} mặt hàng"
              f" · {ncmp} có ở ≥2 kho{valid_s} · trang {page}/{npages}</p>")
+    MAXC = 3  # giong Trang chu/Akce nhung 3 cot: ✅ Re nhat / #2 / #3
+    head_cols = ("<th style='background:var(--acc-bg);color:var(--acc-strong)'>✅ Rẻ nhất</th>"
+                 + "".join(f"<th>#{i + 2}</th>" for i in range(MAXC - 1)))
+    shop_of = {"tamda": "Tamda Foods", "makro": "Makro", "jip": "JIP", "bidfood": "Bidfood",
+               "dathang": "dathang", "linsan": "Linsan", "bombacena": "Bombacena"}
     body += (filter_html + pager()
-             + "<div class='mxwrap'><table class='mx'><tr><th style='width:22%'>Mặt hàng</th>"
-             + "".join(f"<th data-col='{c[0]}' style='background:var(--card2);color:{c[2]}'>{c[1]}</th>"
-                       for c in all_cols)
-             + "</tr>")
+             + "<div class='mxwrap'><table class='mx'><tr><th style='width:26%'>Mặt hàng</th>"
+             + head_cols + "</tr>")
     for x in page_items:
         amount = f" <span class='a'>{H.escape(x['amount'])}</span>" if x["amount"] else ""
         body += f"<tr><td>{icon_for(x['name'])}<b>{H.escape(x['name'])}</b>{amount}</td>"
-        # Chon kho re nhat: uu tien so theo gia/don vi (khi cung don vi), khong thi so gia goi
-        best = None
-        if len(x["offers"]) >= 2:
-            pus = {c: parse_amount_price(o["amount"], o["price"]) for c, o in x["offers"].items()}
-            units = {pu[1] for pu in pus.values() if pu}
-            if len(units) == 1 and all(pus.values()):
-                best = min(pus, key=lambda c: pus[c][0])
-            else:
-                best = min(x["offers"], key=lambda c: x["offers"][c]["price"])
-        for col in col_keys:
-            o = x["offers"].get(col)
-            if not o:
-                body += f"<td class='a' data-col='{col}'>—</td>"
+        ranked = sorted(x["offers"].items(), key=lambda co: co[1]["price"])[:MAXC]
+        for i in range(MAXC):
+            if i >= len(ranked):
+                body += "<td class='a'>—</td>"
                 continue
+            col, o = ranked[i]
             pu = parse_amount_price(o["amount"], o["price"])
             per_s = (f"<span class='a'>({pu[0]:.2f} Kč/{UNIT_SHORT[pu[1]]})</span>" if pu
                      else (f"<span class='a'>{H.escape(o['unit'])}</span>" if o["unit"] else ""))
             pct = f" <span class='pctb'>{H.escape(o['pct'])}</span>" if o["pct"] else ""
             exp = " <span class='expb'>⏰</span>" if o.get("_exp") else ""
-            win = " class='w'" if col == best else ""
-            tick = "✅ " if col == best else ""
-            body += (f"<td{win} data-col='{col}'>{exp}<span class='mxp'>{tick}{o['price']:.2f} Kč{pct}</span>{per_s}</td>")
+            win = " class='w'" if i == 0 else ""
+            body += (f"<td{win} data-shop='{col}'>{shop_badge(shop_of.get(col, o['shop']))}{exp}"
+                     f"<span class='mxp'>{o['price']:.2f} Kč{pct}</span>{per_s}</td>")
         body += "</tr>"
     body += ("</table></div><p class='muted' style='margin-top:-4px'>"
              "Makro/JIP: deal từ kupi.cz · chỉ ghép khi trùng quy cách gói.</p>") + pager() + stats + intro + filter_js
