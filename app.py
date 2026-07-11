@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v7.2 · 11.07.2026"
+APP_VERSION = "v7.3 · 11.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1579,7 +1579,11 @@ def tamda_full_ean_price(code):
     data = load_tamda_full()
     if not data:
         return None
-    return data.get("_ean_index", {}).get(code)
+    idx = data.get("_ean_index", {})
+    for c in ean_variants(code):
+        if c in idx:
+            return idx[c]
+    return None
 
 
 def _catalog_matches(data, query_raw, query_cs):
@@ -1630,7 +1634,11 @@ def makro_full_ean_price(code):
     data = load_makro_full()
     if not data:
         return None
-    return data.get("_ean_index", {}).get(code)
+    idx = data.get("_ean_index", {})
+    for c in ean_variants(code):
+        if c in idx:
+            return idx[c]
+    return None
 
 
 def makro_full_matches(query_raw, query_cs):
@@ -1789,6 +1797,21 @@ UNIT_SHORT = {"ks": "quả/cái", "kg": "kg", "l": "lít"}
 EAN_DB_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ean_db.json")
 
 
+def ean_variants(code):
+    """Cac bien the cua ma vach go tay: 12 so co the la EAN-13 thieu so kiem tra
+    (tu tinh va them vao) hoac UPC-A (them so 0 dau); 14 so GTIN bo so 0 dau."""
+    out = [code]
+    if len(code) == 12:
+        s = sum(int(c) * (1 if i % 2 == 0 else 3) for i, c in enumerate(code))
+        out.append(code + str((10 - s % 10) % 10))  # EAN-13 = 12 so + so kiem tra
+        out.append("0" + code)                       # UPC-A -> EAN-13
+    if len(code) == 14 and code[0] == "0":
+        out.append(code[1:])
+    if len(code) == 13 and code[0] == "0":
+        out.append(code[1:])
+    return out
+
+
 def ean_lookup(code):
     """Tra ma vach EAN: database rieng truoc, roi Open Food Facts, UPCitemdb."""
     import requests as _req
@@ -1796,9 +1819,11 @@ def ean_lookup(code):
     try:
         import json as _json
         with open(EAN_DB_FILE, encoding="utf-8") as f:
-            it = _json.load(f)["items"].get(code)
-        if it:
-            return it["name"]
+            items = _json.load(f)["items"]
+        for c in ean_variants(code):
+            it = items.get(c)
+            if it:
+                return it["name"]
     except Exception:
         pass
     # 1) Open Food Facts (khong gioi han)
@@ -1954,14 +1979,20 @@ def search_html(query, only="", view="all"):
              ean_price_hit["price"], unitstr=ean_price_hit.get("unit", ""),
              tags=["bán buôn"], typ="wholesale")
     mf_names_added = set()
+
+    def _mf_tags(it):
+        # DPH Makro co ngoai le 12/21% kho doan chinh xac -> hien kem gia net de doi chieu
+        net = it.get("price_net")
+        return ["bán buôn"] + ([f"bez DPH {net:.2f}"] if net else [])
+
     for it in mfhits[:20]:
         addE(it["name"], it.get("amount", ""), "Makro", it["price"],
-             unitstr=it.get("unit", ""), tags=["bán buôn"], typ="wholesale")
+             unitstr=it.get("unit", ""), tags=_mf_tags(it), typ="wholesale")
         mf_names_added.add(it["name"])
     if makro_ean_hit and makro_ean_hit["name"] not in mf_names_added:
         addE(makro_ean_hit["name"], makro_ean_hit.get("amount", ""), "Makro",
              makro_ean_hit["price"], unitstr=makro_ean_hit.get("unit", ""),
-             tags=["bán buôn"], typ="wholesale")
+             tags=_mf_tags(makro_ean_hit), typ="wholesale")
 
     # Loc theo view: retail (sieu thi ban le) / wholesale (ban buon) / all
     if view == "retail":
