@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v7.9 · 13.07.2026"
+APP_VERSION = "v8.0 · 13.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -2042,6 +2042,13 @@ def search_html(query, only="", view="all"):
         addE(ean_price_hit["name"], ean_price_hit.get("amount", ""), "Tamda Foods",
              ean_price_hit["price"], unitstr=ean_price_hit.get("unit", ""),
              tags=["bán buôn"], typ="wholesale")
+    _codes = set(ean_variants(raw_query)) if is_ean else set()
+    ean_exact_names = set()
+    if ean_price_hit:
+        ean_exact_names.add(ean_price_hit["name"])
+    for _it in tfhits[:20]:
+        if _it.get("ean") and _it["ean"] in _codes:
+            ean_exact_names.add(_it["name"])
     mf_names_added = set()
 
     def _mf_tags(it):
@@ -2054,10 +2061,14 @@ def search_html(query, only="", view="all"):
              unitstr=it.get("unit", ""), tags=_mf_tags(it), typ="wholesale",
              pack=it.get("pack", 1))
         mf_names_added.add(it["name"])
-    if makro_ean_hit and makro_ean_hit["name"] not in mf_names_added:
-        addE(makro_ean_hit["name"], makro_ean_hit.get("amount", ""), "Makro",
-             makro_ean_hit["price"], unitstr=makro_ean_hit.get("unit", ""),
-             tags=_mf_tags(makro_ean_hit), typ="wholesale", pack=makro_ean_hit.get("pack", 1))
+        if _codes & set(it.get("eans") or ([it["ean"]] if it.get("ean") else [])):
+            ean_exact_names.add(it["name"])
+    if makro_ean_hit:
+        ean_exact_names.add(makro_ean_hit["name"])
+        if makro_ean_hit["name"] not in mf_names_added:
+            addE(makro_ean_hit["name"], makro_ean_hit.get("amount", ""), "Makro",
+                 makro_ean_hit["price"], unitstr=makro_ean_hit.get("unit", ""),
+                 tags=_mf_tags(makro_ean_hit), typ="wholesale", pack=makro_ean_hit.get("pack", 1))
 
     # Loc theo view: retail (sieu thi ban le) / wholesale (ban buon) / all
     if view == "retail":
@@ -2156,11 +2167,16 @@ def search_html(query, only="", view="all"):
             n = cena.strip_accents(nm.lower()).strip()
             return len(n) >= 4 and n in ean_norm
 
-        exact = [it for it in items
-                 if (threshold_ok and scores[it["name"]] == max_hit) or rev_contained(it["name"])]
+        # UU TIEN 1: mat hang TRUNG MA VACH (khong phai chi trung ten)
+        if ean_exact_names:
+            exact = [it for it in items if it["name"] in ean_exact_names]
+        else:
+            exact = [it for it in items
+                     if (threshold_ok and scores[it["name"]] == max_hit) or rev_contained(it["name"])]
         similar = [it for it in items if it not in exact]
         if exact:
-            body += render_table(exact, f"✅ Đúng sản phẩm quét — {len(exact)} kết quả")
+            head_exact = ("✅ Đúng mã vạch quét" if ean_exact_names else "✅ Đúng sản phẩm quét")
+            body += render_table(exact, f"{head_exact} — {len(exact)} kết quả")
             if similar:
                 body += render_table(similar, f"🔍 Sản phẩm tương tự — {len(similar)} mặt hàng")
         else:
