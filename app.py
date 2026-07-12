@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v7.6 · 13.07.2026"
+APP_VERSION = "v7.7 · 13.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1980,7 +1980,7 @@ def search_html(query, only="", view="all"):
     entries = []
     _seenE = set()
 
-    def addE(name, amount, shop, price, valid="", pct="", unitstr="", tags=(), typ="retail"):
+    def addE(name, amount, shop, price, valid="", pct="", unitstr="", tags=(), typ="retail", pack=1):
         # khu trung lap: cung shop + cung gia + cung ten thi chi hien 1 lan
         try:
             key = (shop.lower(), round(float(price), 2), cena.strip_accents(name.lower()))
@@ -1995,7 +1995,8 @@ def search_html(query, only="", view="all"):
         tags = list(tags)
         entries.append({"per": pu[0] if pu else None, "unit": pu[1] if pu else None,
                         "name": name, "amount": amount, "shop": shop, "price": price,
-                        "valid": valid, "pct": pct, "tags": list(tags), "typ": typ})
+                        "valid": valid, "pct": pct, "tags": list(tags), "typ": typ,
+                        "pack": int(pack or 1)})
 
     for p in products:
         for d in p["deals"]:
@@ -2037,12 +2038,13 @@ def search_html(query, only="", view="all"):
 
     for it in mfhits[:20]:
         addE(it["name"], it.get("amount", ""), "Makro", it["price"],
-             unitstr=it.get("unit", ""), tags=_mf_tags(it), typ="wholesale")
+             unitstr=it.get("unit", ""), tags=_mf_tags(it), typ="wholesale",
+             pack=it.get("pack", 1))
         mf_names_added.add(it["name"])
     if makro_ean_hit and makro_ean_hit["name"] not in mf_names_added:
         addE(makro_ean_hit["name"], makro_ean_hit.get("amount", ""), "Makro",
              makro_ean_hit["price"], unitstr=makro_ean_hit.get("unit", ""),
-             tags=_mf_tags(makro_ean_hit), typ="wholesale")
+             tags=_mf_tags(makro_ean_hit), typ="wholesale", pack=makro_ean_hit.get("pack", 1))
 
     # Loc theo view: retail (sieu thi ban le) / wholesale (ban buon) / all
     if view == "retail":
@@ -2103,9 +2105,11 @@ def search_html(query, only="", view="all"):
                     pct_s = f" <span class='pctb'>{H.escape(e['pct'])}</span>" if e["pct"] else ""
                     cls = " class='w'" if i == 0 else ""
                     dph = " <span class='a' style='font-weight:normal;font-size:.75em'>s DPH</span>"                         if e["typ"] == "wholesale" else ""
+                    npk = int(e.get("pack") or 1)
+                    ks_s = f"<span class='a'>{e['price'] / npk:.2f} Kč/ks</span>" if npk > 1 else ""
                     out += (f"<td{cls} data-shop=\"{_shop_slug(e['shop'])}\">{shop_badge(e['shop'])}"
                             f"<span class='mxp'>{e['price']:.2f} Kč{dph}{pct_s}</span>"
-                            f"{per_s}{tags}</td>")
+                            f"{per_s}{ks_s}{tags}</td>")
                 else:
                     out += "<td class='a'>—</td>"
             out += "</tr>"
