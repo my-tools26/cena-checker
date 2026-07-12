@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v7.5 · 11.07.2026"
+APP_VERSION = "v7.6 · 13.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1255,7 +1255,8 @@ def banbuon_html(page=1):
             if it is None:
                 continue
             x["offers"][col] = {"shop": shopname, "price": it["price"], "pct": "",
-                                "unit": it.get("unit", ""), "amount": it.get("amount", "")}
+                                "unit": it.get("unit", ""), "amount": it.get("amount", ""),
+                                "pack": it.get("pack", 1)}
 
     fill_from_catalog(load_tamda_full(), "tamda", "Tamda Foods")
     fill_from_catalog(load_makro_full(), "makro", "Makro")
@@ -1361,13 +1362,18 @@ def banbuon_html(page=1):
                 continue
             col, o = ranked[i]
             pu = parse_amount_price(o["amount"], o["price"])
-            per_s = (f"<span class='a'>({pu[0]:.2f} Kč/{UNIT_SHORT[pu[1]]})</span>" if pu
+            per_s = (f"<span class='a'>{pu[0]:.2f} Kč/{UNIT_SHORT[pu[1]]}</span>" if pu
                      else (f"<span class='a'>{H.escape(o['unit'])}</span>" if o["unit"] else ""))
+            # goi nhieu chiec: them dong gia moi chiec (Kč/ks) - CHI khi du lieu
+            # ghi ro so chiec (pack tu catalog Makro), khong doan tu ten hang
+            npk = int(o.get("pack") or 1)
+            ks_s = (f"<span class='a'>{o['price'] / npk:.2f} Kč/ks</span>" if npk > 1 else "")
             pct = f" <span class='pctb'>{H.escape(o['pct'])}</span>" if o["pct"] else ""
             exp = " <span class='expb'>⏰</span>" if o.get("_exp") else ""
             win = " class='w'" if i == 0 else ""
             body += (f"<td{win} data-shop='{col}'>{shop_badge(shop_of.get(col, o['shop']))}{exp}"
-                     f"<span class='mxp'>{o['price']:.2f} Kč{pct}</span>{per_s}</td>")
+                     f"<span class='mxp'>{o['price']:.2f} Kč <span class='a' "
+                     f"style='font-weight:normal;font-size:.75em'>s DPH</span>{pct}</span>{per_s}{ks_s}</td>")
         body += "</tr>"
     body += ("</table></div><p class='muted' style='margin-top:-4px'>"
              "Makro/JIP: deal từ kupi.cz · chỉ ghép khi trùng quy cách gói.</p>") + pager() + stats + intro + filter_js
@@ -1622,7 +1628,11 @@ def load_makro_full():
         try:
             with open(path, encoding="utf-8") as f:
                 data = json.load(f)
-            data["_ean_index"] = {it["ean"]: it for it in data["items"] if it.get("ean")}
+            idx = {}
+            for it in data["items"]:
+                for e in (it.get("eans") or ([it["ean"]] if it.get("ean") else [])):
+                    idx.setdefault(e, it)
+            data["_ean_index"] = idx
         except Exception:
             data = None
     _makro_full_cache["t"] = _t.time()
@@ -1643,6 +1653,46 @@ def makro_full_ean_price(code):
 
 def makro_full_matches(query_raw, query_cs):
     return _catalog_matches(load_makro_full(), query_raw, query_cs)
+
+
+_makro_fb_cache = {}
+
+
+def makro_ean_fallback(code):
+    """Ma vach khong co trong catalog (vd ma lon le chi may tim kiem Makro biet,
+    khong nam trong du lieu san pham): hoi articlesearch -> id -> cac ma khac
+    cua cung san pham -> tra nguoc vao catalog. Cache de khong hoi lai."""
+    if code in _makro_fb_cache:
+        return _makro_fb_cache[code]
+    result = None
+    try:
+        import requests as _req
+        h = {"User-Agent": "Mozilla/5.0", "Accept": "application/json", "CallTreeId": "cc"}
+        r = _req.get("https://sortiment.makro.cz/searchdiscover/articlesearch/search",
+                     params={"storeId": "00006", "language": "cs-CZ", "country": "CZ",
+                             "query": code, "rows": 1, "page": 1}, headers=h, timeout=4)
+        ids = r.json().get("resultIds") or []
+        if ids:
+            r2 = _req.get("https://sortiment.makro.cz/evaluate.article.v1/betty-variants",
+                          params={"storeIds": "00006", "country": "CZ", "locale": "cs-CZ",
+                                  "ids": ids[0]}, headers=h, timeout=4)
+            data = load_makro_full()
+            idx = (data or {}).get("_ean_index", {})
+            for art in r2.json().get("result", {}).values():
+                for v in art.get("variants", {}).values():
+                    for b in v.get("bundles", {}).values():
+                        for g in (b.get("gtins") or []) + (b.get("eanNumber") or []):
+                            e = _re.sub(r"\D", "", str(g.get("number", g) if isinstance(g, dict) else g))
+                            e = e.lstrip("0") if len(e) == 14 else e
+                            if e in idx:
+                                result = idx[e]
+                                raise StopIteration
+    except StopIteration:
+        pass
+    except Exception:
+        result = None
+    _makro_fb_cache[code] = result
+    return result
 
 
 def tamda_table(data, items):
@@ -1897,6 +1947,8 @@ def search_html(query, only="", view="all"):
     is_ean = bool(_re.fullmatch(r"\d{8,14}", raw_query))
     ean_price_hit = tamda_full_ean_price(raw_query) if is_ean else None
     makro_ean_hit = makro_full_ean_price(raw_query) if is_ean else None
+    if is_ean and makro_ean_hit is None:
+        makro_ean_hit = makro_ean_fallback(raw_query)
 
     # Ten EAN thuong qua chi tiet (kem 75g, 500ml...) -> khong ra gia.
     # Thu rut gon dan cho den khi co ket qua.
@@ -2005,7 +2057,10 @@ def search_html(query, only="", view="all"):
             if lbl not in e["tags"]:
                 e["tags"] = [lbl] + [t for t in e["tags"] if t not in ("bán buôn", "hàng Việt")]
 
-    body = f"<h1>Kết quả: {H.escape(query)}</h1>"
+    tiles = "".join(f'<a class="tile" href="{u}"><span class="em">{e}</span>{t}</a>'
+                    for e, t, u in HOME_TILES)
+    body = (f'<div class="tiles">{tiles}</div>' + ALLSHOP_FILTER_HTML
+            + f"<h1 style='font-size:1.15em'>Kết quả: {H.escape(query)}</h1>")
     if view == "retail":
         body += '<p class="muted">🏪 Đang hiện <b>giá siêu thị (bán lẻ)</b> — đổi bằng nút phía trên.</p>'
     elif view == "wholesale":
@@ -2048,7 +2103,7 @@ def search_html(query, only="", view="all"):
                     pct_s = f" <span class='pctb'>{H.escape(e['pct'])}</span>" if e["pct"] else ""
                     cls = " class='w'" if i == 0 else ""
                     dph = " <span class='a' style='font-weight:normal;font-size:.75em'>s DPH</span>"                         if e["typ"] == "wholesale" else ""
-                    out += (f"<td{cls} data-shop=\"{H.escape(e['shop'])}\">{shop_badge(e['shop'])}"
+                    out += (f"<td{cls} data-shop=\"{_shop_slug(e['shop'])}\">{shop_badge(e['shop'])}"
                             f"<span class='mxp'>{e['price']:.2f} Kč{dph}{pct_s}</span>"
                             f"{per_s}{tags}</td>")
                 else:
@@ -2094,6 +2149,7 @@ def search_html(query, only="", view="all"):
             body += render_table(similar, f"🔍 Sản phẩm tương tự — {len(similar)} mặt hàng")
     else:
         body += render_table(items, f"🏆 So sánh giá — {len(items)} mặt hàng, mọi nguồn gộp chung")
+    body += RETAIL_FILTER_JS
     return shell(body, "/banbuon" if only == "banbuon" else "")
 
 
