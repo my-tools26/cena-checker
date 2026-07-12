@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v8.1 · 13.07.2026"
+APP_VERSION = "v8.2 · 13.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1975,8 +1975,11 @@ def search_html(query, only="", view="all"):
 
     # Ten EAN thuong qua chi tiet (kem 75g, 500ml...) -> khong ra gia.
     # Thu rut gon dan cho den khi co ket qua.
+    # Rut gon ten de tim tiep o cac nguon BAN LE (kupi/tesco/lidl...) ke ca khi
+    # ma vach da khop kho ban buon - khong thi quet bia Gambrinus chi ra Tamda/Makro
+    # ma khong co gia sieu thi nao.
     if ean_name and not (products or thits or mhits or jhits or tesco_hits or lhits or bhits
-                         or any_vn or tfhits or mfhits or ean_price_hit or makro_ean_hit):
+                         or any_vn):
         for variant in ean_name_variants(ean_name)[1:]:
             q2 = cena.strip_accents(variant.lower())
             try:
@@ -1992,10 +1995,15 @@ def search_html(query, only="", view="all"):
             bdata, bhits = bidfood_matches(q2)
             vnhits = {slug: vnshop_matches(slug, raw_norm, q2)[1] for slug, _ in VN_SHOPS}
             any_vn = any(vnhits.values())
-            tfdata, tfhits = tamda_full_matches(raw_norm, q2)
-            mfdata, mfhits = makro_full_matches(raw_norm, q2)
-            if (products or thits or mhits or jhits or tesco_hits or lhits or bhits
-                    or any_vn or tfhits or mfhits):
+            tfdata2, tfhits2 = tamda_full_matches(raw_norm, q2)
+            mfdata2, mfhits2 = makro_full_matches(raw_norm, q2)
+            if tfhits2:
+                tfdata, tfhits = tfdata2, tfhits2
+            if mfhits2:
+                mfdata, mfhits = mfdata2, mfhits2
+            # dung lai khi nguon ban le co ket qua (kho ban buon khong tinh -
+            # ho da co the khop bang ma vach roi)
+            if products or thits or mhits or jhits or tesco_hits or lhits or bhits or any_vn:
                 q = q2
                 break
 
