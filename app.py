@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v7.8 · 13.07.2026"
+APP_VERSION = "v7.9 · 13.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1361,7 +1361,11 @@ def banbuon_html(page=1):
                 body += "<td class='a'>—</td>"
                 continue
             col, o = ranked[i]
-            pu = parse_amount_price(o["amount"], o["price"])
+            _pk = int(o.get("pack") or 1)
+            if _pk <= 1:
+                _mks = _re.search(r"(\d+)\s*[x×]\s*[\d(]", o.get("amount") or "")
+                _pk = int(_mks.group(1)) if _mks else 1
+            pu = parse_amount_price(o["amount"], o["price"] / max(_pk, 1))
             per_s = (f"<span class='a'>{pu[0]:.2f} Kč/{UNIT_SHORT[pu[1]]}</span>" if pu
                      else (f"<span class='a'>{H.escape(o['unit'])}</span>" if o["unit"] else ""))
             # goi nhieu chiec: them dong gia moi chiec (Kč/ks) - CHI khi du lieu
@@ -1994,7 +1998,13 @@ def search_html(query, only="", view="all"):
         _seenE.add(key)
         pu = parse_unit_price(unitstr) if unitstr else None
         if pu is None:
-            pu = parse_amount_price(amount, price)
+            # goi N chiec: amount la quy cach 1 chiec -> gia/don vi phai dung gia MOI CHIEC
+            # (349.64 Kc thung 12x1l voi amount "1 l" -> 29.14 Kc/lit, khong phai 349.64)
+            npk = max(int(pack or 1), 1)
+            if npk == 1:
+                mks = _re.search(r"(\d+)\s*[x×]\s*[\d(]", amount or "")
+                npk = int(mks.group(1)) if mks else 1
+            pu = parse_amount_price(amount, price / npk)
         tags = list(tags)
         entries.append({"per": pu[0] if pu else None, "unit": pu[1] if pu else None,
                         "name": name, "amount": amount, "shop": shop, "price": price,
