@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v7.7 · 13.07.2026"
+APP_VERSION = "v7.8 · 13.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1367,7 +1367,10 @@ def banbuon_html(page=1):
             # goi nhieu chiec: them dong gia moi chiec (Kč/ks) - CHI khi du lieu
             # ghi ro so chiec (pack tu catalog Makro), khong doan tu ten hang
             npk = int(o.get("pack") or 1)
-            ks_s = (f"<span class='a'>{o['price'] / npk:.2f} Kč/ks</span>" if npk > 1 else "")
+            if npk <= 1:
+                mks = _re.search(r"(\d+)\s*[x×]\s*[\d(]", o.get("amount") or "")
+                npk = int(mks.group(1)) if mks else 1
+            ks_s = (f"<span class='a'> · {o['price'] / npk:.2f} Kč/ks</span>" if npk > 1 else "")
             pct = f" <span class='pctb'>{H.escape(o['pct'])}</span>" if o["pct"] else ""
             exp = " <span class='expb'>⏰</span>" if o.get("_exp") else ""
             win = " class='w'" if i == 0 else ""
@@ -2101,12 +2104,16 @@ def search_html(query, only="", view="all"):
                     tags = "".join(
                         f" <span class='tagb' style='background:var(--acc-bg);color:var(--acc-strong)'>{H.escape(t)}</span>"
                         for t in e["tags"])
-                    per_s = f"<span class='a'>({e['per']:.2f} Kč/{UNIT_SHORT[e['unit']]})</span>" if e["per"] else ""
+                    per_s = f"<span class='a'>{e['per']:.2f} Kč/{UNIT_SHORT[e['unit']]}</span>" if e["per"] else ""
                     pct_s = f" <span class='pctb'>{H.escape(e['pct'])}</span>" if e["pct"] else ""
                     cls = " class='w'" if i == 0 else ""
                     dph = " <span class='a' style='font-weight:normal;font-size:.75em'>s DPH</span>"                         if e["typ"] == "wholesale" else ""
                     npk = int(e.get("pack") or 1)
-                    ks_s = f"<span class='a'>{e['price'] / npk:.2f} Kč/ks</span>" if npk > 1 else ""
+                    if npk <= 1:
+                        mks = _re.search(r"(\d+)\s*[x×]\s*[\d(]", e.get("amount") or "")
+                        npk = int(mks.group(1)) if mks else 1
+                    ks_s = (f"<span class='a'> · {e['price'] / npk:.2f} Kč/ks</span>"
+                            if npk > 1 else "")
                     out += (f"<td{cls} data-shop=\"{_shop_slug(e['shop'])}\">{shop_badge(e['shop'])}"
                             f"<span class='mxp'>{e['price']:.2f} Kč{dph}{pct_s}</span>"
                             f"{per_s}{ks_s}{tags}</td>")
