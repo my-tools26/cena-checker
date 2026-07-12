@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v8.0 · 13.07.2026"
+APP_VERSION = "v8.1 · 13.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1854,18 +1854,34 @@ UNIT_SHORT = {"ks": "quả/cái", "kg": "kg", "l": "lít"}
 EAN_DB_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ean_db.json")
 
 
+def _gtin_check(d):
+    """So kiem tra GS1 cho chuoi so bat ky (tinh tu phai sang, trong so 3-1)."""
+    s = sum(int(c) * (3 if i % 2 == 0 else 1) for i, c in enumerate(reversed(d)))
+    return str((10 - s % 10) % 10)
+
+
 def ean_variants(code):
-    """Cac bien the cua ma vach go tay: 12 so co the la EAN-13 thieu so kiem tra
-    (tu tinh va them vao) hoac UPC-A (them so 0 dau); 14 so GTIN bo so 0 dau."""
+    """Cac bien the cua ma vach:
+    - 12 so: EAN-13 thieu so kiem tra (tu tinh) hoac UPC-A (them 0 dau)
+    - 14 so (GTIN-14 ma thung/bich): bo 0 dau, va suy nguoc ma LE EAN-13
+      (bo chu so indicator dau + tinh lai so kiem tra) - quet ma bich van ra hang le
+    - 13 so: sinh 8 ma BICH ung vien GTIN-14 (indicator 1-8 + 12 so dau + checksum)
+      de khop voi nguon nao luu ma thung"""
     out = [code]
     if len(code) == 12:
-        s = sum(int(c) * (1 if i % 2 == 0 else 3) for i, c in enumerate(code))
-        out.append(code + str((10 - s % 10) % 10))  # EAN-13 = 12 so + so kiem tra
-        out.append("0" + code)                       # UPC-A -> EAN-13
-    if len(code) == 14 and code[0] == "0":
-        out.append(code[1:])
-    if len(code) == 13 and code[0] == "0":
-        out.append(code[1:])
+        out.append(code + _gtin_check(code))
+        out.append("0" + code)
+    if len(code) == 14:
+        if code[0] == "0":
+            out.append(code[1:])
+        base12 = code[1:13]
+        out.append(base12 + _gtin_check(base12))  # ma le tu ma thung
+    if len(code) == 13:
+        if code[0] == "0":
+            out.append(code[1:])
+        base12 = code[:12]
+        for i in "12345678":  # ma thung ung vien tu ma le
+            out.append(i + base12 + _gtin_check(i + base12))
     return out
 
 
