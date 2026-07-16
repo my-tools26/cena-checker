@@ -1,7 +1,241 @@
 {
- "date": "2026-07-08",
+ "date": "2026-07-16",
  "shop": "dathang",
  "items": [
+  {
+   "name": "E-LIQUID SYX WATERMELON ICE 10ML 20MG",
+   "price": 176.0,
+   "amount": "10 ml",
+   "unit": ""
+  },
+  {
+   "name": "E-LIQUID SYX STRAWBERRY ICE 10ML 20MG",
+   "price": 176.0,
+   "amount": "10 ml",
+   "unit": ""
+  },
+  {
+   "name": "E-LIQUID SYX PEACH ICE 10ML 20MG",
+   "price": 176.0,
+   "amount": "10 ml",
+   "unit": ""
+  },
+  {
+   "name": "OXVA XLIM GO LITE STARTER KIT MIST WHITE 1000mAh",
+   "price": 180.0,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "OXVA XLIM GO LITE STARTER KIT MIST BLUE 1000mAh",
+   "price": 180.0,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "OXVA XLIM GO LITE STARTER KIT LIGHT PURPLE 1000mAh",
+   "price": 180.0,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "OXVA XLIM GO LITE STARTER KIT LIGHT PINK 1000mAh",
+   "price": 180.0,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "OXVA XLIM GO LITE STARTER KIT LIGHT BLUE 1000mAh",
+   "price": 180.0,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "OXVA XLIM GO LITE STARTER KIT BLACK CARBON 1000mAh",
+   "price": 180.0,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "OXVA XLIM GO LITE STARTER KIT BLACK 1000mAh",
+   "price": 180.0,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "OKF 350ml Sparkling – Coconut",
+   "price": 18.9,
+   "amount": "350 ml",
+   "unit": ""
+  },
+  {
+   "name": "OKF 350ml Sparkling – Cherry Blossom",
+   "price": 18.9,
+   "amount": "350 ml",
+   "unit": ""
+  },
+  {
+   "name": "OKF 350ml Sparkling – Peach",
+   "price": 18.9,
+   "amount": "350 ml",
+   "unit": ""
+  },
+  {
+   "name": "OKF 350ml Sparkling – Grape fruit",
+   "price": 18.9,
+   "amount": "350 ml",
+   "unit": ""
+  },
+  {
+   "name": "OXVA XLIM GO LITE STARTER KIT BROWN 1000mAh",
+   "price": 180.0,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Habánské 0,75L Chardonnay",
+   "price": 89.9,
+   "amount": "0,75 l",
+   "unit": ""
+  },
+  {
+   "name": "Habánské 0,75L Rulandské Modré Rosé",
+   "price": 89.9,
+   "amount": "0,75 l",
+   "unit": ""
+  },
+  {
+   "name": "Red Bull 0,25L Dragon Fruit",
+   "price": 32.9,
+   "amount": "0,25 l",
+   "unit": ""
+  },
+  {
+   "name": "Chupa Chups Mads 45g Fruits",
+   "price": 24.9,
+   "amount": "45 g",
+   "unit": ""
+  },
+  {
+   "name": "Chupa Chups Mads 45g Berries",
+   "price": 24.9,
+   "amount": "45 g",
+   "unit": ""
+  },
+  {
+   "name": "Proud 0,5L plech Limetka",
+   "price": 27.9,
+   "amount": "0,5 l",
+   "unit": ""
+  },
+  {
+   "name": "UA Non stop 500ml – Stalker Red",
+   "price": 19.9,
+   "amount": "500 ml",
+   "unit": ""
+  },
+  {
+   "name": "TABÁK PUEBLO PINK 30G",
+   "price": 230.0,
+   "amount": "30 g",
+   "unit": ""
+  },
+  {
+   "name": "GLO HILO RUBY BURGUNDY 1.0 1P",
+   "price": 745.0,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "GLO HILO ONYX BLACK 1.0 1P",
+   "price": 745.0,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "FJK Broskve půlky 425ml – 12ks/kart",
+   "price": 26.9,
+   "amount": "425 ml",
+   "unit": ""
+  },
+  {
+   "name": "Giana Šproty uzené v rostlinném oleji 160g – 24ks/kart",
+   "price": 41.9,
+   "amount": "160 g",
+   "unit": ""
+  },
+  {
+   "name": "Delissa 30g – Kokos",
+   "price": 7.9,
+   "amount": "30 g",
+   "unit": ""
+  },
+  {
+   "name": "Hell energy 0,5L Classic",
+   "price": 21.9,
+   "amount": "0,5 l",
+   "unit": ""
+  },
+  {
+   "name": "Allini Secco Frizzante 0,2L Rosato",
+   "price": 15.9,
+   "amount": "0,2 l",
+   "unit": ""
+  },
+  {
+   "name": "Allini Secco Frizzante 0,2L Bianco blue",
+   "price": 15.9,
+   "amount": "0,2 l",
+   "unit": ""
+  },
+  {
+   "name": "Allini Secco Frizzante 0,2L Bianco black",
+   "price": 15.9,
+   "amount": "0,2 l",
+   "unit": ""
+  },
+  {
+   "name": "Hell energy 0,5L Strawberry – Banana",
+   "price": 21.9,
+   "amount": "0,5 l",
+   "unit": ""
+  },
+  {
+   "name": "Hell energy 0,5L Peach – Lemon",
+   "price": 21.9,
+   "amount": "0,5 l",
+   "unit": ""
+  },
+  {
+   "name": "Hell energy 0,5L Green Apple",
+   "price": 21.9,
+   "amount": "0,5 l",
+   "unit": ""
+  },
+  {
+   "name": "Hell energy 0,5L Goji Berry",
+   "price": 21.9,
+   "amount": "0,5 l",
+   "unit": ""
+  },
+  {
+   "name": "Hell energy 0,5L Black Cherry",
+   "price": 21.9,
+   "amount": "0,5 l",
+   "unit": ""
+  },
+  {
+   "name": "AA Squid game energy drink 250ml Watermelon",
+   "price": 7.9,
+   "amount": "250 ml",
+   "unit": ""
+  },
+  {
+   "name": "AA Squid game energy drink 250ml Mango",
+   "price": 7.9,
+   "amount": "250 ml",
+   "unit": ""
+  },
   {
    "name": "Lays 120g Wavy BBQ Brisket – 24ks/kart",
    "price": 28.9,
@@ -16,7 +250,7 @@
   },
   {
    "name": "UA Nautilus Seafood Jerky Calamari Crab 36g(1/130)",
-   "price": 34.9,
+   "price": 33.9,
    "amount": "36 g",
    "unit": ""
   },
@@ -261,7 +495,7 @@
    "unit": ""
   },
   {
-   "name": "ALZZIN. ZAP. CLIPPER CP11 HOLLYWOOD ANIMALS 2 24/BAL269805)",
+   "name": "ALZZIN. ZAP. CLIPPER CP11 HOLLYWOOD ANIMALS 2 24/BAL(269805)",
    "price": 14.5,
    "amount": "",
    "unit": ""
@@ -441,13 +675,13 @@
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO 2 POD STARTER KIT BLACK CARBON 1500 mAh",
+   "name": "OXVA XLIM GO 2 STARTER KIT BLACK CARBON 1500 mAh",
    "price": 210.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO 2 POD STARTER KIT PINK RIPPLE 1500 mAh",
+   "name": "OXVA XLIM GO 2 STARTER KIT PINK RIPPLE 1500 mAh",
    "price": 210.0,
    "amount": "",
    "unit": ""
@@ -580,7 +814,7 @@
   },
   {
    "name": "CA – Snack Sashimi 30g",
-   "price": 15.0,
+   "price": 12.0,
    "amount": "30 g",
    "unit": ""
   },
@@ -724,13 +958,13 @@
   },
   {
    "name": "UA Lay´s Bramborové chipsy Argentinský Steak 95g – 21ks/kart",
-   "price": 44.9,
+   "price": 48.9,
    "amount": "95 g",
    "unit": ""
   },
   {
    "name": "UA Lay´s Bramborové chipsy Španělský charakter 95g – 21ks/kart",
-   "price": 44.9,
+   "price": 48.9,
    "amount": "95 g",
    "unit": ""
   },
@@ -855,8 +1089,8 @@
    "unit": ""
   },
   {
-   "name": "AA Trolli 150g Pingummi",
-   "price": 21.9,
+   "name": "Trolli 150g Pingummi",
+   "price": 24.9,
    "amount": "150 g",
    "unit": ""
   },
@@ -994,13 +1228,13 @@
   },
   {
    "name": "VUSE POD LEMON LIME 20MG(U)",
-   "price": 205.0,
+   "price": 208.76,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE POD BLUEBERRYRASPBERRY 20MG(U)",
-   "price": 205.0,
+   "price": 208.76,
    "amount": "",
    "unit": ""
   },
@@ -1120,19 +1354,19 @@
   },
   {
    "name": "CA – Snack Bò Kobe",
-   "price": 15.0,
+   "price": 12.0,
    "amount": "",
    "unit": ""
   },
   {
    "name": "CA – Snack Nem nướng bà tuyết",
-   "price": 15.0,
+   "price": 12.0,
    "amount": "",
    "unit": ""
   },
   {
    "name": "CA – Snack gân rồng hấp sả",
-   "price": 29.9,
+   "price": 27.9,
    "amount": "",
    "unit": ""
   },
@@ -1342,7 +1576,7 @@
   },
   {
    "name": "SB- Vafle Srdce 165g – 6ks/krt",
-   "price": 39.9,
+   "price": 37.9,
    "amount": "165 g",
    "unit": ""
   },
@@ -1354,7 +1588,7 @@
   },
   {
    "name": "UA Lay´s Bramborové chipsy Slanina 120g – 21ks/kart",
-   "price": 44.9,
+   "price": 48.9,
    "amount": "120 g",
    "unit": ""
   },
@@ -1474,7 +1708,7 @@
   },
   {
    "name": "Giana Hrušky půlky 425ml – 12ks/kart",
-   "price": 26.9,
+   "price": 24.9,
    "amount": "425 ml",
    "unit": ""
   },
@@ -1731,91 +1965,91 @@
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO POD STARTER KIT STRIPED ORANGE 1000mAh",
+   "name": "OXVA XLIM GO STARTER KIT STRIPED ORANGE 1000mAh",
    "price": 180.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO POD STARTER KIT STRIPED BLUE 1000mAh",
+   "name": "OXVA XLIM GO STARTER KIT STRIPED BLUE 1000mAh",
    "price": 180.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO POD STARTER KIT PINK 1000mAh",
+   "name": "OXVA XLIM GO STARTER KIT PINK 1000mAh",
    "price": 180.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO POD STARTER KIT LUXE BROWN 1000mAh",
+   "name": "OXVA XLIM GO STARTER KIT LUXE BROWN 1000mAh",
    "price": 180.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO POD STARTER KIT LUXE BLACK 1000mAh",
+   "name": "OXVA XLIM GO STARTER KIT LUXE BLACK 1000mAh",
    "price": 180.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO POD STARTER KIT LIGHT GREEN 1000mAh",
+   "name": "OXVA XLIM GO STARTER KIT LIGHT GREEN 1000mAh",
    "price": 180.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO POD STARTER KIT LIGHT BROWN 1000mAh",
+   "name": "OXVA XLIM GO STARTER KIT LIGHT BROWN 1000mAh",
    "price": 180.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO POD STARTER KIT DARK GREY 1000mAh",
+   "name": "OXVA XLIM GO STARTER KIT DARK GREY 1000mAh",
    "price": 180.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO POD STARTER KIT DARK BROWN 1000mAh",
+   "name": "OXVA XLIM GO STARTER KIT DARK BROWN 1000mAh",
    "price": 180.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO POD STARTER KIT BLACK 1000mAh",
+   "name": "OXVA XLIM GO STARTER KIT BLACK 1000mAh",
    "price": 180.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO 2 POD STARTER KIT METAL SLIVER 1500 mAh",
+   "name": "OXVA XLIM GO 2 STARTER KIT METAL SLIVER 1500 mAh",
    "price": 210.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO 2 POD STARTER KIT BLUE RIPPLE 1500 mAh",
+   "name": "OXVA XLIM GO 2 STARTER KIT BLUE RIPPLE 1500 mAh",
    "price": 210.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO 2 POD STARTER KIT LIGHT BROWN SHADOW 1500 mAh",
+   "name": "OXVA XLIM GO 2 STARTER KIT LIGHT BROWN SHADOW 1500 mAh",
    "price": 210.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO 2 POD STARTER KIT GREEN RIPPLE 1500 mAh",
+   "name": "OXVA XLIM GO 2 STARTER KIT GREEN RIPPLE 1500 mAh",
    "price": 210.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO 2 POD STARTER KIT METAL BLUE 1500 mAh",
+   "name": "OXVA XLIM GO 2 STARTER KIT METAL BLUE 1500 mAh",
    "price": 210.0,
    "amount": "",
    "unit": ""
@@ -1977,19 +2211,19 @@
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO POD STARTER KIT WHITE 1000mAh",
+   "name": "OXVA XLIM GO STARTER KIT WHITE 1000mAh",
    "price": 180.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO POD STARTER KIT RED 1000mAh",
+   "name": "OXVA XLIM GO STARTER KIT RED 1000mAh",
    "price": 180.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "OXVA XLIM GO POD STARTER KIT GRAFFITI BLACK 1000mAh",
+   "name": "OXVA XLIM GO STARTER KIT GRAFFITI BLACK 1000mAh",
    "price": 180.0,
    "amount": "",
    "unit": ""
@@ -2242,7 +2476,7 @@
   },
   {
    "name": "Fresh Air vlhčené ubrousky 120ks Aroma Therapy – 12ks/kart",
-   "price": 26.9,
+   "price": 27.9,
    "amount": "120 ks",
    "unit": ""
   },
@@ -2625,7 +2859,7 @@
    "unit": ""
   },
   {
-   "name": "TABÁK KILLA COLD MINT 14G",
+   "name": "KILLA COLD MINT 14G",
    "price": 107.0,
    "amount": "14 g",
    "unit": ""
@@ -2638,13 +2872,13 @@
   },
   {
    "name": "VUSE POD DARK CHERRY 18MG(U)",
-   "price": 205.0,
+   "price": 208.76,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE POD PEPPERMINT18MG(U)",
-   "price": 205.0,
+   "price": 208.76,
    "amount": "",
    "unit": ""
   },
@@ -3130,7 +3364,7 @@
   },
   {
    "name": "ZYN MINI SPEARMINT 6MG",
-   "price": 115.0,
+   "price": 128.0,
    "amount": "",
    "unit": ""
   },
@@ -3154,7 +3388,7 @@
   },
   {
    "name": "ZYN MINI BALCK CHERRY 6MG",
-   "price": 115.0,
+   "price": 128.0,
    "amount": "",
    "unit": ""
   },
@@ -3166,7 +3400,7 @@
   },
   {
    "name": "ZYN COOL MINT 9MG",
-   "price": 123.0,
+   "price": 128.0,
    "amount": "",
    "unit": ""
   },
@@ -3345,8 +3579,8 @@
    "unit": ""
   },
   {
-   "name": "MARK ADAMS 100 BLACK 149.00 U",
-   "price": 1422.75,
+   "name": "MARK ADAMS 100 BLACK 154.00 U",
+   "price": 1460.45,
    "amount": "",
    "unit": ""
   },
@@ -3561,43 +3795,43 @@
    "unit": ""
   },
   {
-   "name": "TABÁK KILLA COLA 14G",
+   "name": "KILLA COLA 14G",
    "price": 107.0,
    "amount": "14 g",
    "unit": ""
   },
   {
-   "name": "TABÁK KILLA MINI COLD MINT 14G",
+   "name": "KILLA MINI COLD MINT 14G",
    "price": 107.0,
    "amount": "14 g",
    "unit": ""
   },
   {
-   "name": "TABÁK KILLA WATERMELON 14G",
+   "name": "KILLA WATERMELON 14G",
    "price": 107.0,
    "amount": "14 g",
    "unit": ""
   },
   {
-   "name": "TABÁK KILLA BLUEBERRY 14G",
+   "name": "KILLA BLUEBERRY 14G",
    "price": 107.0,
    "amount": "14 g",
    "unit": ""
   },
   {
-   "name": "TABÁK KILLA MINI MANGO 14G",
+   "name": "KILLA MINI MANGO 14G",
    "price": 107.0,
    "amount": "14 g",
    "unit": ""
   },
   {
-   "name": "TABÁK PABLO MINI ICE COLD 14G",
+   "name": "PABLO MINI ICE COLD 14G",
    "price": 116.0,
    "amount": "14 g",
    "unit": ""
   },
   {
-   "name": "TABÁK PABLO ICE COLD 14G",
+   "name": "PABLO ICE COLD 14G",
    "price": 116.0,
    "amount": "14 g",
    "unit": ""
@@ -4198,7 +4432,7 @@
   },
   {
    "name": "UA Lay´s Bramborové chipsy Zakysaná smetana 120g – 21ks/kart",
-   "price": 44.9,
+   "price": 48.9,
    "amount": "120 g",
    "unit": ""
   },
@@ -4492,25 +4726,25 @@
   },
   {
    "name": "UA Flint Do bochkovogo Chipsy 100g Slanina – 16ks/kart",
-   "price": 27.9,
+   "price": 26.9,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "UA Flint Do bochkovogo Chipsy 100g Zakysané smetany a bylinek – 16ks/kart",
-   "price": 27.9,
+   "price": 26.9,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "UA Flint Do bochkovogo Chipsy 100g Sýr – 16ks/kart",
-   "price": 27.9,
+   "price": 26.9,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "UA Flint Do bochkovogo Chipsy 100g Krab – 16ks/kart",
-   "price": 27.9,
+   "price": 26.9,
    "amount": "100 g",
    "unit": ""
   },
@@ -4882,13 +5116,13 @@
   },
   {
    "name": "NEOS MINI ORIGINAL FILTER 50KS",
-   "price": 630.0,
+   "price": 640.0,
    "amount": "50 ks",
    "unit": ""
   },
   {
    "name": "NEOS MINI RED FILTER 50KS",
-   "price": 630.0,
+   "price": 640.0,
    "amount": "50 ks",
    "unit": ""
   },
@@ -5548,7 +5782,7 @@
   },
   {
    "name": "Pringles 165g Mystery – 19ks/kart",
-   "price": 44.9,
+   "price": 41.9,
    "amount": "165 g",
    "unit": ""
   },
@@ -6015,7 +6249,7 @@
    "unit": ""
   },
   {
-   "name": "Seicha Jahoda 330ml x 20",
+   "name": "Seicha Matcha 330ml Jahoda",
    "price": 38.9,
    "amount": "330 ml",
    "unit": ""
@@ -6640,7 +6874,7 @@
   },
   {
    "name": "UA Lay´s Bramborové chipsy Krab 120g – 21ks/kart",
-   "price": 44.9,
+   "price": 48.9,
    "amount": "120 g",
    "unit": ""
   },
@@ -7155,8 +7389,8 @@
    "unit": ""
   },
   {
-   "name": "AA Long Chips 75g Kebab – 20ks/kart",
-   "price": 14.9,
+   "name": "Long Chips 75g Kebab – 20ks/kart",
+   "price": 20.9,
    "amount": "75 g",
    "unit": ""
   },
@@ -7360,25 +7594,25 @@
   },
   {
    "name": "Fresh Air vlhčené ubrousky 120ks Rose – 12ks/kart",
-   "price": 26.9,
+   "price": 27.9,
    "amount": "120 ks",
    "unit": ""
   },
   {
    "name": "Fresh Air vlhčené ubrousky 120ks Lavender – 12ks/kart",
-   "price": 26.9,
+   "price": 27.9,
    "amount": "120 ks",
    "unit": ""
   },
   {
    "name": "Fresh Air vlhčené ubrousky 120ks Citrus – 12ks/kart",
-   "price": 26.9,
+   "price": 27.9,
    "amount": "120 ks",
    "unit": ""
   },
   {
    "name": "Fresh Air vlhčené ubrousky 120ks Gerbera – 12ks/kart",
-   "price": 26.9,
+   "price": 27.9,
    "amount": "120 ks",
    "unit": ""
   },
@@ -7389,9 +7623,9 @@
    "unit": ""
   },
   {
-   "name": "Habánské Rulandské Bílé 750ml x 6ks",
+   "name": "Habánské 0,75L Rulandské Bílé",
    "price": 89.9,
-   "amount": "750 ml",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
@@ -7401,8 +7635,8 @@
    "unit": ""
   },
   {
-   "name": "Bonduelle Creátif 150g Mexická zelenina – 12ks/kart",
-   "price": 17.9,
+   "name": "AA Bonduelle Creátif 150g Mexická zelenina – 12ks/kart",
+   "price": 12.9,
    "amount": "150 g",
    "unit": ""
   },
@@ -7629,18 +7863,6 @@
    "unit": ""
   },
   {
-   "name": "AA Vinut Aloe Vera 0,5L Liči",
-   "price": 17.9,
-   "amount": "0,5 l",
-   "unit": ""
-  },
-  {
-   "name": "AA Vinut Aloe Vera 0,5L Jahoda",
-   "price": 17.9,
-   "amount": "0,5 l",
-   "unit": ""
-  },
-  {
    "name": "AA Vinut Aloe Vera 0,5L Granatové Jablko",
    "price": 17.9,
    "amount": "0,5 l",
@@ -7779,7 +8001,7 @@
    "unit": ""
   },
   {
-   "name": "Bonduelle Creatif 425ml olive – 12ks/kart",
+   "name": "AA Bonduelle Creatif 425ml olive – 12ks/kart",
    "price": 14.9,
    "amount": "425 ml",
    "unit": ""
@@ -8074,49 +8296,49 @@
   },
   {
    "name": "VUSE POD GREEN APPLE 20MG(U)",
-   "price": 205.0,
+   "price": 208.76,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE POD MANGO MINT 20MG(U)",
-   "price": 205.0,
+   "price": 208.76,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE POD STRAWBERRY ICE 18MG(U)",
-   "price": 205.0,
+   "price": 208.76,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE POD WATERMELON MINT 20MG(U)",
-   "price": 205.0,
+   "price": 208.76,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE POD GRAPE MINT 18MG(U)",
-   "price": 205.0,
+   "price": 208.76,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE POD MILD TOBACCO 18MG(U)",
-   "price": 205.0,
+   "price": 208.76,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE POD BLUEBERRY MINT 18MG(U)",
-   "price": 205.0,
+   "price": 208.76,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE GO P1000 MANGO(U)",
-   "price": 160.0,
+   "price": 156.65,
    "amount": "",
    "unit": ""
   },
@@ -8931,18 +9153,6 @@
    "unit": ""
   },
   {
-   "name": "AA Bonsu 330ml sparkling – Mango",
-   "price": 12.9,
-   "amount": "330 ml",
-   "unit": ""
-  },
-  {
-   "name": "AA Bonsu 330ml sparkling – Lychee",
-   "price": 12.9,
-   "amount": "330 ml",
-   "unit": ""
-  },
-  {
    "name": "Majola olej 1L slunečnicový – 15ks/kart",
    "price": 39.9,
    "amount": "1 l",
@@ -9477,7 +9687,7 @@
    "unit": ""
   },
   {
-   "name": "Proud sv.ležák 0,5l plech",
+   "name": "Proud 0,5L plech sv.ležák",
    "price": 27.9,
    "amount": "0,5 l",
    "unit": ""
@@ -12513,9 +12723,9 @@
    "unit": ""
   },
   {
-   "name": "Habanské Zweigeltrebe Rosé 750ml",
+   "name": "Habánské 0,75L Zweigeltrebe Rosé",
    "price": 89.9,
-   "amount": "750 ml",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
@@ -12633,26 +12843,26 @@
    "unit": ""
   },
   {
-   "name": "AA Long Chips 75g BBQ – 20ks/kart",
-   "price": 18.9,
+   "name": "Long Chips 75g BBQ – 20ks/kart",
+   "price": 20.9,
    "amount": "75 g",
    "unit": ""
   },
   {
-   "name": "AA Long Chips 75g Grilled Paprika – 20ks/kart",
-   "price": 14.9,
+   "name": "Long Chips 75g Grilled Paprika – 20ks/kart",
+   "price": 20.9,
    "amount": "75 g",
    "unit": ""
   },
   {
-   "name": "AA Long Chips 75g Med a BBQ – 20ks/kart",
-   "price": 18.9,
+   "name": "Long Chips 75g Med a BBQ – 20ks/kart",
+   "price": 20.9,
    "amount": "75 g",
    "unit": ""
   },
   {
-   "name": "AA Long Chips 75g Sea salt & Vinegar – 20ks/kart",
-   "price": 18.9,
+   "name": "Long Chips 75g Sea salt & Vinegar – 20ks/kart",
+   "price": 20.9,
    "amount": "75 g",
    "unit": ""
   },
@@ -12693,7 +12903,7 @@
    "unit": ""
   },
   {
-   "name": "VELO CHERRY ICE MINI 4MG",
+   "name": "VELO MINI CHERRY ICE 4MG",
    "price": 593.0,
    "amount": "",
    "unit": ""
@@ -12813,7 +13023,7 @@
    "unit": ""
   },
   {
-   "name": "AA Long Chips 75g Originál – 20ks/kart",
+   "name": "Long Chips 75g Originál – 20ks/kart",
    "price": 18.9,
    "amount": "75 g",
    "unit": ""
@@ -13077,7 +13287,7 @@
    "unit": ""
   },
   {
-   "name": "Vidlička EKO kompozit dřevo/plast (WPC) 18cm 100ks",
+   "name": "EKO Vidlička kompozit dřevo/plast (WPC) 18cm 100ks",
    "price": 74.9,
    "amount": "100 ks",
    "unit": ""
@@ -13269,7 +13479,7 @@
    "unit": ""
   },
   {
-   "name": "Seicha Matcha Yuzu 330ml x 20",
+   "name": "Seicha Matcha 330ml Yuzu",
    "price": 37.9,
    "amount": "330 ml",
    "unit": ""
@@ -13504,19 +13714,19 @@
   },
   {
    "name": "CANDLELIGHT FILTR WHITE 50KS",
-   "price": 630.0,
+   "price": 650.0,
    "amount": "50 ks",
    "unit": ""
   },
   {
    "name": "CANDLELIGHT FILTER RED 50KS(U)",
-   "price": 630.0,
+   "price": 650.0,
    "amount": "50 ks",
    "unit": ""
   },
   {
    "name": "CANDLELIGHT FILTR BLACK 50KS",
-   "price": 630.0,
+   "price": 650.0,
    "amount": "50 ks",
    "unit": ""
   },
@@ -13677,13 +13887,13 @@
    "unit": ""
   },
   {
-   "name": "Whiskas kap 4pack x85g Tasty mix",
+   "name": "Whiskas kapsa 4pack 4x85g Tasty mix – 13ks/kart",
    "price": 41.9,
    "amount": "85 g",
    "unit": ""
   },
   {
-   "name": "Whiskas kap 4pack x85g Pure Delight Drůbeží",
+   "name": "Whiskas kapsa 4pack 4x85g Pure Delight – 13ks/kart",
    "price": 41.9,
    "amount": "85 g",
    "unit": ""
@@ -13893,7 +14103,7 @@
    "unit": ""
   },
   {
-   "name": "Lžička EKO plast (WPC) 13,5cm 100ks",
+   "name": "EKO Lžička plast (WPC) 13,5cm 100ks",
    "price": 46.9,
    "amount": "100 ks",
    "unit": ""
@@ -14224,7 +14434,7 @@
   },
   {
    "name": "CANDLELIGHT FILTER GOLD 50KS(U)",
-   "price": 630.0,
+   "price": 650.0,
    "amount": "50 ks",
    "unit": ""
   },
@@ -14254,79 +14464,79 @@
   },
   {
    "name": "VUSE GO P1000 STRABERRY MINT(U)",
-   "price": 160.0,
+   "price": 156.65,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE GO P1000 CLASSIC PEACH(U)",
-   "price": 160.0,
+   "price": 156.65,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE GO P1000 DARK CHERRY(U)",
-   "price": 160.0,
+   "price": 156.65,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE GO P1000 STRAWBERRY KIWI(U)",
-   "price": 160.0,
+   "price": 156.65,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE GO P1000 BERRY BLEND(U)",
-   "price": 160.0,
+   "price": 156.65,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE GO P1000 WATERMELON MINT(U)",
-   "price": 160.0,
+   "price": 156.65,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE GO P1000 BLUEBERRY RASPBERRY(U)",
-   "price": 160.0,
+   "price": 156.65,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE GO P1000 PEPERMINT (U)",
-   "price": 160.0,
+   "price": 156.65,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE GO P1000 BANANA MINT(U)",
-   "price": 160.0,
+   "price": 156.65,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE GO P1000 GREEN APPLE(U)",
-   "price": 160.0,
+   "price": 156.65,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE GO P1000 MILD TOBACCO (U)",
-   "price": 160.0,
+   "price": 156.65,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE GO P1000 BLUEBERRY MINT(U)",
-   "price": 160.0,
+   "price": 156.65,
    "amount": "",
    "unit": ""
   },
   {
    "name": "VUSE GO P1000 GRAPE MINT(U)",
-   "price": 160.0,
+   "price": 156.65,
    "amount": "",
    "unit": ""
   },
@@ -14962,13 +15172,13 @@
   },
   {
    "name": "Fresh air vlhčené ubrousky 100ks Strawberry – 12ks/kart",
-   "price": 25.9,
+   "price": 26.9,
    "amount": "100 ks",
    "unit": ""
   },
   {
    "name": "Fresh air vlhčené ubrousky 100ks Aloe vera – 12ks/kart",
-   "price": 25.9,
+   "price": 26.9,
    "amount": "100 ks",
    "unit": ""
   },
@@ -16017,7 +16227,7 @@
    "unit": ""
   },
   {
-   "name": "CA – Brand Rýže jasmínová 1kg",
+   "name": "CA – Brand Rýže jasmínová 1kg – 12ks/kart",
    "price": 62.9,
    "amount": "1 kg",
    "unit": ""
@@ -16372,7 +16582,7 @@
   },
   {
    "name": "Samyang Budak CREAM Carbonara hot chicken 140g",
-   "price": 34.9,
+   "price": 30.5,
    "amount": "140 g",
    "unit": ""
   },
@@ -18273,7 +18483,7 @@
    "unit": ""
   },
   {
-   "name": "Seicha Matcha limetka 330ml x 20",
+   "name": "Seicha Matcha 330ml Limetka",
    "price": 38.9,
    "amount": "330 ml",
    "unit": ""
@@ -19125,7 +19335,7 @@
    "unit": ""
   },
   {
-   "name": "CA – Bánh bông lan vuông 100g – Coffee",
+   "name": "CA – Bánh bông lan vuông 100g Coffee – 32ks/kart",
    "price": 21.9,
    "amount": "100 g",
    "unit": ""
@@ -20362,7 +20572,7 @@
   },
   {
    "name": "Pringles 165g Pizza",
-   "price": 44.9,
+   "price": 41.9,
    "amount": "165 g",
    "unit": ""
   },
@@ -21351,12 +21561,6 @@
    "unit": ""
   },
   {
-   "name": "Habánské rullanske modre ROSE 750ml",
-   "price": 85.5,
-   "amount": "750 ml",
-   "unit": ""
-  },
-  {
    "name": "TIC TAC Strawberry 24x54g",
    "price": 29.9,
    "amount": "54 g",
@@ -21382,7 +21586,7 @@
   },
   {
    "name": "Fresh air vlhčené ubrousky 100ks Watermelon – 12ks/kart",
-   "price": 25.9,
+   "price": 26.9,
    "amount": "100 ks",
    "unit": ""
   },
@@ -21615,8 +21819,8 @@
    "unit": ""
   },
   {
-   "name": "LM 100 BLUE LABEL 161.00 U",
-   "price": 1523.86,
+   "name": "LM 100 BLUE LABEL 166.00 U",
+   "price": 1568.96,
    "amount": "",
    "unit": ""
   },
@@ -21807,13 +22011,13 @@
    "unit": ""
   },
   {
-   "name": "Whiskas kap 4pack drubezi hody",
+   "name": "Whiskas kapsa 4pack 4x85g Drůbeží ve šťávě – 13ks/kart",
    "price": 41.9,
-   "amount": "",
+   "amount": "85 g",
    "unit": ""
   },
   {
-   "name": "Whiskas gran junior kuře 300g",
+   "name": "Whiskas gran 300g Junior – 6ks/kart",
    "price": 36.9,
    "amount": "300 g",
    "unit": ""
@@ -22042,13 +22246,13 @@
   },
   {
    "name": "Samyang Buldak ROSE hot chiken 140g",
-   "price": 34.9,
+   "price": 30.5,
    "amount": "140 g",
    "unit": ""
   },
   {
    "name": "Samyang Buldak QUATTRO CHEESE hot chicken 140g",
-   "price": 34.9,
+   "price": 30.5,
    "amount": "140 g",
    "unit": ""
   },
@@ -22791,25 +22995,25 @@
    "unit": ""
   },
   {
-   "name": "CA – Bánh bông lan tam giác 100g – Dâu",
-   "price": 19.9,
-   "amount": "100 g",
-   "unit": ""
-  },
-  {
-   "name": "CA – Bánh bông lan tam giác 100g – Chocolate",
-   "price": 19.9,
-   "amount": "100 g",
-   "unit": ""
-  },
-  {
-   "name": "CA – Bánh bông lan tam giác 100g – Matcha",
+   "name": "CA – Bánh bông lan tam giác 100g Strawberry – 28ks/kart",
    "price": 21.9,
    "amount": "100 g",
    "unit": ""
   },
   {
-   "name": "CA – Bánh bông lan vuông 100g – original",
+   "name": "CA – Bánh bông lan tam giác 100g Chocolate – 28ks/kart",
+   "price": 21.9,
+   "amount": "100 g",
+   "unit": ""
+  },
+  {
+   "name": "CA – Bánh bông lan tam giác 100g Matcha – 28ks/kart",
+   "price": 21.9,
+   "amount": "100 g",
+   "unit": ""
+  },
+  {
+   "name": "CA – Bánh bông lan vuông 100g Original – 32ks/kart",
    "price": 21.9,
    "amount": "100 g",
    "unit": ""
@@ -22852,7 +23056,7 @@
   },
   {
    "name": "Samyang Habanero Lime 140g",
-   "price": 33.9,
+   "price": 30.5,
    "amount": "140 g",
    "unit": ""
   },
@@ -23458,7 +23662,7 @@
   },
   {
    "name": "Monster 0,5L Aussie lemonade",
-   "price": 18.9,
+   "price": 23.9,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -24712,7 +24916,7 @@
   },
   {
    "name": "Samyang Hot flavor ramen stew (5x145g) x8",
-   "price": 33.9,
+   "price": 30.5,
    "amount": "145 g",
    "unit": ""
   },
@@ -25521,13 +25725,13 @@
    "unit": ""
   },
   {
-   "name": "Seicha Black peach 330ml x 20",
+   "name": "Seicha Matcha 330ml Black Peach",
    "price": 38.9,
    "amount": "330 ml",
    "unit": ""
   },
   {
-   "name": "Seicha Matcha Grep 330ml x 20",
+   "name": "Seicha Matcha 330ml Grep",
    "price": 38.9,
    "amount": "330 ml",
    "unit": ""
@@ -25924,7 +26128,7 @@
   },
   {
    "name": "Olz toust sandwich 750g – 6ks/kart",
-   "price": 49.9,
+   "price": 54.9,
    "amount": "750 g",
    "unit": ""
   },
@@ -26283,13 +26487,13 @@
    "unit": ""
   },
   {
-   "name": "VELO BRIGHT SPEARMINT MINI 6MG",
+   "name": "VELO MINI BRIGHT SPEARMINT 6MG",
    "price": 593.0,
    "amount": "",
    "unit": ""
   },
   {
-   "name": "VELO ICE BERRIES MINI",
+   "name": "VELO MINI ICE BERRIES",
    "price": 593.0,
    "amount": "",
    "unit": ""
@@ -26776,19 +26980,19 @@
   },
   {
    "name": "Linteo Toaletní papír classic 4ks vrst. bílý x 20",
-   "price": 23.9,
+   "price": 24.9,
    "amount": "4 ks",
    "unit": ""
   },
   {
    "name": "Linteo Toaletní papír classic 4ks 2vrst. zelený x 20",
-   "price": 23.9,
+   "price": 24.9,
    "amount": "4 ks",
    "unit": ""
   },
   {
    "name": "Linteo Toaletní papír 4ks 2 vrst.růžový x 20 ( hồng)",
-   "price": 23.9,
+   "price": 24.9,
    "amount": "4 ks",
    "unit": ""
   },
@@ -27010,31 +27214,31 @@
   },
   {
    "name": "Fresh air vlhčené ubrousky 100ks Rose – 12ks/kart",
-   "price": 25.9,
+   "price": 26.9,
    "amount": "100 ks",
    "unit": ""
   },
   {
    "name": "Fresh air vlhčené ubrousky 100ks Lavender – 12ks/kart",
-   "price": 25.9,
+   "price": 26.9,
    "amount": "100 ks",
    "unit": ""
   },
   {
    "name": "Fresh air vlhčené ubrousky 100ks Chamomile – 12ks/kart",
-   "price": 25.9,
+   "price": 26.9,
    "amount": "100 ks",
    "unit": ""
   },
   {
    "name": "Fresh air vlhčené ubrousky 100ks Grep – 12ks/kart",
-   "price": 25.9,
+   "price": 26.9,
    "amount": "100 ks",
    "unit": ""
   },
   {
    "name": "Fresh Air vlhčené ubrousky 120ks Aloe vera – 12ks/kart",
-   "price": 26.9,
+   "price": 27.9,
    "amount": "120 ks",
    "unit": ""
   },
@@ -28120,7 +28324,7 @@
   },
   {
    "name": "Fresh Air vlhčené ubrousky 120ks Chamomile – 12ks/kart",
-   "price": 26.9,
+   "price": 27.9,
    "amount": "120 ks",
    "unit": ""
   },
@@ -28323,9 +28527,9 @@
    "unit": ""
   },
   {
-   "name": "Habanské Tramin červený 750m x 6",
+   "name": "Habánské 0,75L Tramin červený",
    "price": 89.9,
-   "amount": "",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
@@ -28504,7 +28708,7 @@
   },
   {
    "name": "Mirinda 330ml x 24 CZ (lon cao)",
-   "price": 12.9,
+   "price": 13.5,
    "amount": "330 ml",
    "unit": ""
   },
@@ -28611,39 +28815,39 @@
    "unit": ""
   },
   {
-   "name": "Whiskas gran 300g hovezi",
+   "name": "Whiskas gran 300g Hovězí – 6ks/kart",
    "price": 36.9,
    "amount": "300 g",
    "unit": ""
   },
   {
-   "name": "Whiskas gran 300g kureci",
+   "name": "Whiskas gran 300g Kuřecí – 6ks/kart",
    "price": 36.9,
    "amount": "300 g",
    "unit": ""
   },
   {
-   "name": "Whiskas kap 4pack výber stava",
+   "name": "Whiskas kapsa 4pack 4x85g Výber stava – 13ks/kart",
    "price": 41.9,
-   "amount": "",
+   "amount": "85 g",
    "unit": ""
   },
   {
-   "name": "Whiskas kap 4pack rybí",
+   "name": "Whiskas kapsa 4pack 4x85g Rybí – 13ks/kart",
    "price": 41.9,
-   "amount": "",
+   "amount": "85 g",
    "unit": ""
   },
   {
-   "name": "Whiskas kap 4pack Drůbeží želé",
+   "name": "Whiskas kapsa 4pack 4x85g Drůbeží želé – 13ks/kart",
    "price": 41.9,
-   "amount": "",
+   "amount": "85 g",
    "unit": ""
   },
   {
-   "name": "Whiskas kap 4pack Junior",
+   "name": "Whiskas kapsa 4pack 4x85g Junior – 13ks/kart",
    "price": 41.9,
-   "amount": "",
+   "amount": "85 g",
    "unit": ""
   },
   {
@@ -29002,7 +29206,7 @@
   },
   {
    "name": "Linteo Toaletní papír satin bílý 8 rolí 3 vrstvy",
-   "price": 52.9,
+   "price": 54.9,
    "amount": "",
    "unit": ""
   },
@@ -29476,7 +29680,7 @@
   },
   {
    "name": "7Days Croissant 60g Lískooříšek",
-   "price": 9.9,
+   "price": 11.5,
    "amount": "60 g",
    "unit": ""
   },
@@ -29811,7 +30015,7 @@
    "unit": ""
   },
   {
-   "name": "TABÁK SIBERIA SLIM WHITE DRY 13G",
+   "name": "SIBERIA SLIM WHITE DRY 13G",
    "price": 147.5,
    "amount": "13 g",
    "unit": ""
@@ -30183,7 +30387,7 @@
    "unit": ""
   },
   {
-   "name": "TABÁK SIBERIA 80 DEGREES WHITE DRY 13G",
+   "name": "SIBERIA 80 DEGREES WHITE DRY 13G",
    "price": 143.0,
    "amount": "13 g",
    "unit": ""
@@ -30646,7 +30850,7 @@
   },
   {
    "name": "SB- Vafle 250g – 12ks/krt",
-   "price": 41.9,
+   "price": 39.9,
    "amount": "250 g",
    "unit": ""
   },
@@ -31150,19 +31354,19 @@
   },
   {
    "name": "Samyang smažené nudle HOT Chicken (5x140g) x8 (màu đen)",
-   "price": 33.9,
+   "price": 30.5,
    "amount": "140 g",
    "unit": ""
   },
   {
    "name": "Samyang nudle Chicken Cheese (5x140g) x8",
-   "price": 33.9,
+   "price": 30.5,
    "amount": "140 g",
    "unit": ""
   },
   {
    "name": "Samyang nudle Chicken Carbonara (5x130g) x8",
-   "price": 33.9,
+   "price": 30.5,
    "amount": "130 g",
    "unit": ""
   },
@@ -31180,25 +31384,25 @@
   },
   {
    "name": "Sirup Jupí černý rybíz 700ml x 6",
-   "price": 37.9,
+   "price": 34.9,
    "amount": "700 ml",
    "unit": ""
   },
   {
-   "name": "AA – Sirup Jupí citron 700ml x 6",
-   "price": 19.9,
+   "name": "Sirup Jupí citron 700ml x 6",
+   "price": 34.9,
    "amount": "700 ml",
    "unit": ""
   },
   {
-   "name": "AA – Sirup Jupí Aloe vera 700ml x 6",
-   "price": 19.9,
+   "name": "Sirup Jupí Aloe vera 700ml x 6",
+   "price": 34.9,
    "amount": "700 ml",
    "unit": ""
   },
   {
    "name": "Sirup Jupí Borůvka 700ml x 6",
-   "price": 37.9,
+   "price": 34.9,
    "amount": "700 ml",
    "unit": ""
   },
@@ -31690,7 +31894,7 @@
   },
   {
    "name": "AA FJK Olivový olej 500ml extra virgin – 12ks/kart",
-   "price": 139.9,
+   "price": 129.9,
    "amount": "500 ml",
    "unit": ""
   },
@@ -31869,32 +32073,32 @@
    "unit": ""
   },
   {
-   "name": "AA – Sirup Jupí Pomeranč 700ml x 6",
-   "price": 19.9,
+   "name": "Sirup Jupí Pomeranč 700ml x 6",
+   "price": 34.9,
    "amount": "700 ml",
    "unit": ""
   },
   {
    "name": "Sirup Jupí Multivit. 700ml x 6",
-   "price": 37.9,
+   "price": 34.9,
    "amount": "700 ml",
    "unit": ""
   },
   {
    "name": "Sirup Jupí Malina 700ml x 6",
-   "price": 37.9,
+   "price": 34.9,
    "amount": "700 ml",
    "unit": ""
   },
   {
    "name": "Sirup Jupí Lesní směs PET 0,7L x 6",
-   "price": 37.9,
+   "price": 34.9,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Sirup Jupí Jahoda 700ml x 6",
-   "price": 37.9,
+   "price": 34.9,
    "amount": "700 ml",
    "unit": ""
   },
@@ -32211,69 +32415,69 @@
    "unit": ""
   },
   {
-   "name": "Habánské Zweigeltrebe 750ml x 6ks",
+   "name": "Habánské 0,75L Zweigeltrebe",
    "price": 89.9,
-   "amount": "750 ml",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
-   "name": "Habanské Veltlínské Zelené 750ml x 6ks",
+   "name": "Habánské 0,75L Veltlínské Zelené",
    "price": 89.9,
-   "amount": "750 ml",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
-   "name": "Habanské Svatovavřinecké 750ml x 6ks",
+   "name": "Habánské 0,75L Svatovavřinecké",
    "price": 85.5,
-   "amount": "750 ml",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
-   "name": "Habanské Sauvignon 750ml x 6ks",
+   "name": "Habánské 0,75L Sauvignon",
    "price": 89.9,
-   "amount": "750 ml",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
-   "name": "Habanské Ryzlink Vlašský 750ml x 6ks",
+   "name": "Habánské 0,75L Ryzlink Vlašský",
    "price": 85.5,
-   "amount": "750 ml",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
-   "name": "Habánské Ryzlink Rýnský 750ml x 6ks",
+   "name": "Habánské 0,75L Ryzlink Rýnský",
    "price": 89.9,
-   "amount": "750 ml",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
-   "name": "Habánské Rulandské Modré 750ml x 6ks",
+   "name": "Habánské 0,75L Rulandské Modré",
    "price": 89.9,
-   "amount": "750 ml",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
-   "name": "Habánské Rulandské Šedé 750ml x 6ks",
+   "name": "Habánské 0,75L Rulandské Šedé",
    "price": 89.9,
-   "amount": "750 ml",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
-   "name": "Habánské Svatovavřinecké Rosé 750ml x 6ks",
+   "name": "Habánské 0,75L Svatovavřinecké Rosé",
    "price": 85.5,
-   "amount": "750 ml",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
-   "name": "Habánské Muller Thurgau 750ml x 6ks",
+   "name": "Habánské 0,75L Muller Thurgau",
    "price": 89.9,
-   "amount": "750 ml",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
-   "name": "Habánské Modrý Portugal 750ml x 6ks",
+   "name": "Habánské 0,75L Modrý Portugal",
    "price": 89.9,
-   "amount": "750 ml",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
@@ -32283,9 +32487,9 @@
    "unit": ""
   },
   {
-   "name": "Habánské Frankovka 750ml x 6ks",
+   "name": "Habánské 0,75L Frankovka",
    "price": 85.5,
-   "amount": "750 ml",
+   "amount": "0,75 l",
    "unit": ""
   },
   {
@@ -32949,8 +33153,8 @@
    "unit": ""
   },
   {
-   "name": "LM LINK SSL 100 VIOLET 162.00 U",
-   "price": 1533.24,
+   "name": "LM LINK 100 VIOLET 167.00 U",
+   "price": 1578.41,
    "amount": "",
    "unit": ""
   },
@@ -33045,8 +33249,8 @@
    "unit": ""
   },
   {
-   "name": "LD PINK 162.00 U",
-   "price": 1526.25,
+   "name": "LD PINK 167.00 U",
+   "price": 1572.67,
    "amount": "",
    "unit": ""
   },
@@ -33135,8 +33339,8 @@
    "unit": ""
   },
   {
-   "name": "DAVIDOFF SLIM GOLD 183.00 U",
-   "price": 1730.54,
+   "name": "DAVIDOFF SLIM GOLD 188.00 U",
+   "price": 1777.04,
    "amount": "",
    "unit": ""
   },
@@ -34402,7 +34606,7 @@
   },
   {
    "name": "Samyang Buldak 2x Spicy (5 x140g) x8",
-   "price": 33.9,
+   "price": 30.5,
    "amount": "140 g",
    "unit": ""
   },
@@ -35943,8 +36147,8 @@
    "unit": ""
   },
   {
-   "name": "Kinder joy 20g x 36ks",
-   "price": 38.25,
+   "name": "Kinder joy Mario 20g x 24ks",
+   "price": 27.9,
    "amount": "20 g",
    "unit": ""
   },
@@ -36184,19 +36388,19 @@
   },
   {
    "name": "CA – Sušený lívanec (Bánh đa trắng) 454g",
-   "price": 41.9,
+   "price": 46.9,
    "amount": "454 g",
    "unit": ""
   },
   {
    "name": "CA – Sušený lívanec (Bánh đa tôm) 454g",
-   "price": 41.9,
+   "price": 46.9,
    "amount": "454 g",
    "unit": ""
   },
   {
    "name": "CA – Sušený lívanec (Bánh đa đen) 454g",
-   "price": 41.89,
+   "price": 46.9,
    "amount": "454 g",
    "unit": ""
   },
