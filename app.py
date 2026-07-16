@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v8.2 · 13.07.2026"
+APP_VERSION = "v8.3 · 15.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1527,6 +1527,19 @@ VN_SHOPS = [
 _vnshop_cache = {}
 
 
+def _load_manual(slug):
+    """Gia tu nhap tay (manual_prices.json) - khong bi ghi de khi cao lai."""
+    import json
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "manual_prices.json")
+    if not os.path.exists(path):
+        return []
+    try:
+        with open(path, encoding="utf-8") as f:
+            return [it for it in json.load(f)["items"] if it.get("slug") == slug]
+    except Exception:
+        return []
+
+
 def load_vnshop(slug):
     import json
     import time as _t
@@ -1541,6 +1554,13 @@ def load_vnshop(slug):
                 data = json.load(f)
         except Exception:
             data = None
+    manual = _load_manual(slug)
+    if manual:
+        if data is None:
+            data = {"shop": slug, "items": []}
+        # them muc tu nhap (bo trung ten neu file cao da co)
+        have = {it["name"] for it in data["items"]}
+        data = {**data, "items": data["items"] + [m for m in manual if m["name"] not in have]}
     _vnshop_cache[slug] = (_t.time(), data)
     return data
 
