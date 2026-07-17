@@ -1,5 +1,5 @@
 {
- "date": "2026-07-16",
+ "date": "2026-07-17",
  "shop": "bombacena",
  "items": [
   {
@@ -4473,7 +4473,7 @@
    "unit": ""
   },
   {
-   "name": "Lemon Beer 1L Nealko nápoj s…",
+   "name": "Lemon Beer 1L Limonáda s příchutí…",
    "price": 20.49,
    "amount": "1 l",
    "unit": ""
@@ -15087,6 +15087,24 @@
    "unit": ""
   },
   {
+   "name": "Kozel 0,5L Nealko Černý rybíz…",
+   "price": 17.9,
+   "amount": "0,5 l",
+   "unit": ""
+  },
+  {
+   "name": "Kozel 0,5L Nealko Citron-Benzinka…",
+   "price": 17.9,
+   "amount": "0,5 l",
+   "unit": ""
+  },
+  {
+   "name": "Kozel 0,5L Nealko Meruňka-Meduňka…",
+   "price": 17.9,
+   "amount": "0,5 l",
+   "unit": ""
+  },
+  {
    "name": "Královský Hrozen 2L Bílé (6/64)",
    "price": 55.7,
    "amount": "2 l",
@@ -15100,7 +15118,7 @@
   },
   {
    "name": "Krušovice 0,5L 10° Plech (24/72)",
-   "price": 14.7,
+   "price": 15.2,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -15112,7 +15130,7 @@
   },
   {
    "name": "Krušovice 0,5L 12° Plech (4*6/72)",
-   "price": 16.72,
+   "price": 17.2,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -28618,7 +28636,7 @@
   },
   {
    "name": "Kinder 43g CZ Bueno Standard (30ks)",
-   "price": 14.5,
+   "price": 15.5,
    "amount": "43 g",
    "unit": ""
   },
@@ -45190,7 +45208,7 @@
   },
   {
    "name": "Viva 400g Texaský guláš (8/180)",
-   "price": 39.83,
+   "price": 44.44,
    "amount": "400 g",
    "unit": ""
   },
