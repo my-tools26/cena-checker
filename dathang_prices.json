@@ -1,7 +1,25 @@
 {
- "date": "2026-07-16",
+ "date": "2026-07-20",
  "shop": "dathang",
  "items": [
+  {
+   "name": "VELO MINI ICE BERRIES 10MG",
+   "price": 593.0,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "ALZZIN. ZAP. CLIPPER CP11 Z-BUNNYS 24/BAL(280640)",
+   "price": 14.5,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "ALZZIN. ZAP. CLIPPER CP11 LOL FOOD 24/BAL(269775)",
+   "price": 14.5,
+   "amount": "",
+   "unit": ""
+  },
   {
    "name": "E-LIQUID SYX WATERMELON ICE 10ML 20MG",
    "price": 176.0,
@@ -5098,19 +5116,19 @@
   },
   {
    "name": "UA DOBROBUT trubičky 350g Raffaello",
-   "price": 52.9,
+   "price": 46.9,
    "amount": "350 g",
    "unit": ""
   },
   {
    "name": "UA DOBROBUT trubičky 350g Karamel",
-   "price": 52.9,
+   "price": 46.9,
    "amount": "350 g",
    "unit": ""
   },
   {
    "name": "UA DOBROBUT trubičky 350g Malina – jogurt",
-   "price": 52.9,
+   "price": 46.9,
    "amount": "350 g",
    "unit": ""
   },
@@ -5397,36 +5415,6 @@
    "unit": ""
   },
   {
-   "name": "AA Haribo 175g EU Harry Potter oranžový",
-   "price": 14.9,
-   "amount": "175 g",
-   "unit": ""
-  },
-  {
-   "name": "AA Haribo 175g EU Harry Potter modrý",
-   "price": 14.9,
-   "amount": "175 g",
-   "unit": ""
-  },
-  {
-   "name": "AA Haribo 175g EU Harry Potter fialový",
-   "price": 14.9,
-   "amount": "175 g",
-   "unit": ""
-  },
-  {
-   "name": "AA Haribo 175g EU Harry Potter zelený",
-   "price": 14.9,
-   "amount": "175 g",
-   "unit": ""
-  },
-  {
-   "name": "AA Haribo 175g EU Harry Potter zlutý",
-   "price": 14.9,
-   "amount": "175 g",
-   "unit": ""
-  },
-  {
    "name": "Haribo 175g EU Sube Waffeln",
    "price": 23.9,
    "amount": "175 g",
@@ -5668,7 +5656,7 @@
   },
   {
    "name": "Giana Slunečnicový olej 1l – 15ks/kart",
-   "price": 59.9,
+   "price": 64.9,
    "amount": "1 l",
    "unit": ""
   },
@@ -5944,19 +5932,19 @@
   },
   {
    "name": "Maitre Fancy Gold Truffles 200g Hazelnuts – 15ks/kart",
-   "price": 62.9,
+   "price": 64.9,
    "amount": "200 g",
    "unit": ""
   },
   {
    "name": "Maitre Fancy Gold Truffles 200g Orange – 15ks/kart",
-   "price": 62.9,
+   "price": 64.9,
    "amount": "200 g",
    "unit": ""
   },
   {
    "name": "Maitre Fancy Gold Truffles 200g Classic – 15ks/kart",
-   "price": 62.9,
+   "price": 64.9,
    "amount": "200 g",
    "unit": ""
   },
@@ -6328,7 +6316,7 @@
   },
   {
    "name": "CA – Chin-su Dầu hào sò điệp 820g",
-   "price": 89.9,
+   "price": 110.0,
    "amount": "820 g",
    "unit": ""
   },
@@ -6580,7 +6568,7 @@
   },
   {
    "name": "Fizi 80g bonbon Ultra Boris – 18ks/kart",
-   "price": 9.9,
+   "price": 16.9,
    "amount": "80 g",
    "unit": ""
   },
@@ -7216,7 +7204,7 @@
   },
   {
    "name": "Mrs.Muffin 200g Borůvka – 12ks/kart",
-   "price": 34.9,
+   "price": 44.9,
    "amount": "200 g",
    "unit": ""
   },
@@ -7468,19 +7456,19 @@
   },
   {
    "name": "Fizi 80g bonbon Tropical – 18ks/kart",
-   "price": 9.9,
+   "price": 16.9,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Fizi 80g bonbon Malina – 18ks/kart",
-   "price": 9.9,
+   "price": 16.9,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Fizi 80g bonbon Galaxy – 18ks/kart",
-   "price": 9.9,
+   "price": 16.9,
    "amount": "80 g",
    "unit": ""
   },
@@ -7876,7 +7864,7 @@
   },
   {
    "name": "Max sport Protein 60g Nut",
-   "price": 23.5,
+   "price": 21.9,
    "amount": "60 g",
    "unit": ""
   },
@@ -8446,7 +8434,7 @@
   },
   {
    "name": "Maitre Fancy Gold Truffles 200g Coffee – 15ks/kart",
-   "price": 62.9,
+   "price": 64.9,
    "amount": "200 g",
    "unit": ""
   },
@@ -12897,7 +12885,7 @@
    "unit": ""
   },
   {
-   "name": "VELO SIMPLY SPEARMINT MINI 4MG",
+   "name": "VELO MINI SIMPLY SPEARMINT 4MG",
    "price": 593.0,
    "amount": "",
    "unit": ""
@@ -13324,7 +13312,7 @@
   },
   {
    "name": "Carla Laguna Mořské plody Premium 125g",
-   "price": 44.9,
+   "price": 53.9,
    "amount": "125 g",
    "unit": ""
   },
@@ -13582,19 +13570,19 @@
   },
   {
    "name": "Max sport Protein 60g Caramel",
-   "price": 21.9,
+   "price": 23.5,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Max sport Protein 60g Kokos",
-   "price": 21.9,
+   "price": 23.5,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Max sport Protein 60g Nougat",
-   "price": 21.9,
+   "price": 23.5,
    "amount": "60 g",
    "unit": ""
   },
@@ -16396,13 +16384,13 @@
   },
   {
    "name": "Lindt Lindor Pistachio 200g",
-   "price": 114.9,
+   "price": 119.9,
    "amount": "200 g",
    "unit": ""
   },
   {
    "name": "Lindt Lindor milk 200g",
-   "price": 114.9,
+   "price": 119.9,
    "amount": "200 g",
    "unit": ""
   },
@@ -16420,7 +16408,7 @@
   },
   {
    "name": "Lindt Lindor Assorted 200g",
-   "price": 114.9,
+   "price": 119.9,
    "amount": "200 g",
    "unit": ""
   },
@@ -18274,13 +18262,13 @@
   },
   {
    "name": "Carla Laguna Mořské plody bonboniéra 50g",
-   "price": 22.9,
+   "price": 24.9,
    "amount": "50 g",
    "unit": ""
   },
   {
    "name": "Carla Laguna Mořské plody bonboniéra 125g",
-   "price": 47.9,
+   "price": 49.9,
    "amount": "125 g",
    "unit": ""
   },
@@ -18544,12 +18532,6 @@
   },
   {
    "name": "Arizona Mucho Meloun 500ml x 12",
-   "price": 33.9,
-   "amount": "500 ml",
-   "unit": ""
-  },
-  {
-   "name": "AriZona 500ml plech Mucho Mango Fruit Juice Coctail",
    "price": 33.9,
    "amount": "500 ml",
    "unit": ""
@@ -19048,7 +19030,7 @@
   },
   {
    "name": "Max sport Protein 60g Borůvka",
-   "price": 21.9,
+   "price": 23.5,
    "amount": "60 g",
    "unit": ""
   },
@@ -19072,7 +19054,7 @@
   },
   {
    "name": "Max sport Protein 60g Mango",
-   "price": 21.9,
+   "price": 23.5,
    "amount": "60 g",
    "unit": ""
   },
@@ -21183,12 +21165,6 @@
    "unit": ""
   },
   {
-   "name": "CA – TOKPOKKI HQ vị Tương Đen 105g",
-   "price": 36.9,
-   "amount": "105 g",
-   "unit": ""
-  },
-  {
    "name": "CA – TOKPOKKI HQ vị Truyền Thống 105g",
    "price": 36.9,
    "amount": "105 g",
@@ -22788,12 +22764,6 @@
    "name": "CA Hải Sản MIX 1kg",
    "price": 199.9,
    "amount": "1 kg",
-   "unit": ""
-  },
-  {
-   "name": "CA – Nước tương Phú Sĩ Nhật Bản 500ml",
-   "price": 34.9,
-   "amount": "500 ml",
    "unit": ""
   },
   {
@@ -26493,7 +26463,7 @@
    "unit": ""
   },
   {
-   "name": "VELO MINI ICE BERRIES",
+   "name": "VELO MINI ICE BERRIES 6MG",
    "price": 593.0,
    "amount": "",
    "unit": ""
@@ -30304,7 +30274,7 @@
   },
   {
    "name": "Švéda Madarsky gulas 320g – 6ks/kart",
-   "price": 68.9,
+   "price": 72.9,
    "amount": "320 g",
    "unit": ""
   },
@@ -34276,7 +34246,7 @@
   },
   {
    "name": "Švéda hovězí guláš 320g – 6ks/kart",
-   "price": 68.9,
+   "price": 72.9,
    "amount": "320 g",
    "unit": ""
   },
