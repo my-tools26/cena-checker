@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v8.7 · 20.07.2026"
+APP_VERSION = "v8.8 · 20.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1212,25 +1212,7 @@ def banbuon_html(page=1):
 
     # 3 nha do hang Viet (dathang, Linsan, Bombacena): liet ke rieng cac mat hang
     # cua ho (khong chi ghep vao hang co san) vi day la nguon hang chau A dac thu
-    vn_extra_cols = []
-    for slug, shopname in VN_SHOPS:
-        vdata = load_vnshop(slug)
-        if not vdata:
-            continue
-        vn_extra_cols.append((slug, shopname))
-        for it in vdata["items"]:
-            toks = _bb_tokens(it["name"])
-            hit = next((x for x in items if slug not in x["offers"]
-                        and _merge_ok(x["toks"], x["amount"], toks, it.get("amount", ""))), None)
-            if hit:
-                hit["offers"][slug] = {"shop": shopname, "price": it["price"],
-                                       "pct": "", "unit": it.get("unit", ""),
-                                       "amount": it.get("amount", "")}
-            else:
-                items.append({"name": it["name"], "amount": it.get("amount", ""),
-                              "toks": toks, "offers": {slug: {
-                                  "shop": shopname, "price": it["price"], "pct": "",
-                                  "unit": it.get("unit", ""), "amount": it.get("amount", "")}}})
+    vn_extra_cols = [(slug, shopname) for slug, shopname in VN_SHOPS if load_vnshop(slug)]
 
     # Catalog day du (Tamda Express ~17k, Makro sortiment ~19k): gia THUONG s DPH.
     # Chi DIEN vao cot con trong cua hang da co deal (khong them chuc nghin hang moi
@@ -1260,6 +1242,8 @@ def banbuon_html(page=1):
 
     fill_from_catalog(load_tamda_full(), "tamda", "Tamda Foods")
     fill_from_catalog(load_makro_full(), "makro", "Makro")
+    for _slug, _shopname in vn_extra_cols:
+        fill_from_catalog(load_vnshop(_slug), _slug, _shopname)
 
     if not items:
         return shell(body + "<p class='muted'>Chưa có dữ liệu bán buôn.</p>", "/banbuon")
