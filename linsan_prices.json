@@ -1,5 +1,5 @@
 {
- "date": "2026-07-16",
+ "date": "2026-07-22",
  "shop": "linsan",
  "items": [
   {
@@ -53,28 +53,28 @@
   },
   {
    "name": "Coca 1L Sprite",
-   "price": 24.55,
+   "price": 23.98,
    "amount": "1 l",
    "unit": "",
    "ean": "5000112652482"
   },
   {
    "name": "Coca 1L Zero",
-   "price": 24.55,
+   "price": 23.98,
    "amount": "1 l",
    "unit": "",
    "ean": "5449000133328"
   },
   {
    "name": "Coca 1L Červený",
-   "price": 24.55,
+   "price": 23.98,
    "amount": "1 l",
    "unit": "",
    "ean": "5449000054227"
   },
   {
    "name": "Coca 1L Fanta Pomeranč",
-   "price": 24.55,
+   "price": 23.98,
    "amount": "1 l",
    "unit": "",
    "ean": "5449000006271"
@@ -522,21 +522,21 @@
   },
   {
    "name": "Nestea 0,5L BLACK TEA - LEMON",
-   "price": 14.99,
+   "price": 13.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646203516"
   },
   {
    "name": "Nestea 0,5L GREEN TEA - CITRUS",
-   "price": 14.99,
+   "price": 13.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646203592"
   },
   {
    "name": "Nestea 0,5L BLACK TEA - PEACH",
-   "price": 14.99,
+   "price": 13.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646203554"
@@ -1047,14 +1047,14 @@
   },
   {
    "name": "Croissant 7days 60g Kakao",
-   "price": 10.55,
+   "price": 9.98,
    "amount": "60 g",
    "unit": "",
    "ean": "5201360521210"
   },
   {
    "name": "Croissant 7days 60g Hazelnut",
-   "price": 10.55,
+   "price": 9.98,
    "amount": "60 g",
    "unit": "",
    "ean": "5201360527205"
@@ -1411,35 +1411,35 @@
   },
   {
    "name": "Corny Banany 50g/24ks",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "50 g",
    "unit": "",
    "ean": "4011800548513"
   },
   {
    "name": "Corny Kokos 50g/24ks",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "50 g",
    "unit": "",
    "ean": "8592084405892"
   },
   {
    "name": "Corny Dark chocolate 50g/24ks",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "50 g",
    "unit": "",
    "ean": "4011800573515"
   },
   {
    "name": "Corny Nuts 50g/24ks",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "50 g",
    "unit": "",
    "ean": "4011800547516"
   },
   {
    "name": "Corny Cranberry 50g/24ks",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "50 g",
    "unit": "",
    "ean": "4011800567514"
@@ -1684,7 +1684,7 @@
   },
   {
    "name": "ArRashid 100g arašídy solené",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "100 g",
    "unit": "",
    "ean": "8594002070908"
@@ -1698,14 +1698,14 @@
   },
   {
    "name": "ArRashid 100g arašídy pražené nesolene",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "100 g",
    "unit": "",
    "ean": "8594002070830"
   },
   {
    "name": "ArRashid 60g mandle pražené solené",
-   "price": 22.55,
+   "price": 21.98,
    "amount": "60 g",
    "unit": "",
    "ean": "8594002071820"
@@ -1726,7 +1726,7 @@
   },
   {
    "name": "ArRashid 100g směs student",
-   "price": 19.98,
+   "price": 18.55,
    "amount": "100 g",
    "unit": "",
    "ean": "8594002073107"
@@ -2153,7 +2153,7 @@
   },
   {
    "name": "Douwe Aroma 100g",
-   "price": 41.98,
+   "price": 39.98,
    "amount": "100 g",
    "unit": "",
    "ean": "8594001661220"
@@ -2237,21 +2237,21 @@
   },
   {
    "name": "Zlaté Oplatky 146g Citron",
-   "price": 28.98,
+   "price": 26.98,
    "amount": "146 g",
    "unit": "",
    "ean": "8593894911092"
   },
   {
    "name": "Zlaté Oplatky 146g Čokoladové",
-   "price": 28.98,
+   "price": 26.98,
    "amount": "146 g",
    "unit": "",
    "ean": "8593894911061"
   },
   {
    "name": "Zlaté Oplatky 146g Ořechy",
-   "price": 28.98,
+   "price": 26.98,
    "amount": "146 g",
    "unit": "",
    "ean": "8593894911030"
@@ -2370,7 +2370,7 @@
   },
   {
    "name": "Corny Chocolate 50g/24ks",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "50 g",
    "unit": "",
    "ean": "4011800546519"
@@ -2419,14 +2419,14 @@
   },
   {
    "name": "Big Shock 0,5L Original 24ks/b",
-   "price": 20.98,
+   "price": 20.56,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8594033170028"
   },
   {
    "name": "Big Shock 0,5L Gold 4x6ks/b",
-   "price": 20.98,
+   "price": 20.56,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8594033170974"
@@ -2804,7 +2804,7 @@
   },
   {
    "name": "Nestea 0,5L GREEN TEA - STRAWBERRY & ALOE VERA",
-   "price": 14.99,
+   "price": 13.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646203639"
@@ -3202,14 +3202,14 @@
   },
   {
    "name": "Caprio 2L Pomeranč 6ks/b",
-   "price": 28.99,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "ean": "5900334007377"
   },
   {
    "name": "Caprio 2L Multivitamin 6ks/b",
-   "price": 28.99,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "ean": "5900334007407"
@@ -3230,7 +3230,7 @@
   },
   {
    "name": "Zlatopramen 1,5L 6ks/b",
-   "price": 34.98,
+   "price": 38.55,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8591036550918"
@@ -3348,7 +3348,7 @@
   },
   {
    "name": "Braník Pet 2L 6ks/b 10°",
-   "price": 37.98,
+   "price": 39.98,
    "amount": "2 l",
    "unit": "",
    "ean": "8593868002030"
@@ -3389,7 +3389,7 @@
   },
   {
    "name": "Caprio 2L Apple 6ks/b",
-   "price": 28.99,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "ean": "5900334013545"
@@ -3731,7 +3731,7 @@
   },
   {
    "name": "Corny Brownie 50g/24ks",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "50 g",
    "unit": "",
    "ean": "8592084408961"
@@ -3899,7 +3899,7 @@
   },
   {
    "name": "Caprio 2L Ananas",
-   "price": 28.99,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "ean": "5900334130778"
@@ -4025,28 +4025,28 @@
   },
   {
    "name": "Figaro Čoko Piškoty 147g - Meruňková",
-   "price": 35.98,
+   "price": 34.98,
    "amount": "147 g",
    "unit": "",
    "ean": "5906747308711"
   },
   {
    "name": "Figaro Čoko Piškoty 147g - Malina",
-   "price": 35.98,
+   "price": 34.98,
    "amount": "147 g",
    "unit": "",
    "ean": "5906747308742"
   },
   {
    "name": "Figaro Čoko Piškoty 147g - Lesní ovoce",
-   "price": 35.98,
+   "price": 34.98,
    "amount": "147 g",
    "unit": "",
    "ean": "5906747319892"
   },
   {
    "name": "Figaro Čoko Piškoty 147g - Višňová",
-   "price": 35.98,
+   "price": 34.98,
    "amount": "147 g",
    "unit": "",
    "ean": "5906747308803"
@@ -4914,56 +4914,56 @@
   },
   {
    "name": "Caprio Hustý 0,7L Jablko",
-   "price": 18.98,
+   "price": 17.98,
    "amount": "0,7 l",
    "unit": "",
    "ean": "8594057637521"
   },
   {
    "name": "Caprio Hustý 0,7L Malina",
-   "price": 18.98,
+   "price": 17.98,
    "amount": "0,7 l",
    "unit": "",
    "ean": "8594057637064"
   },
   {
    "name": "Caprio Hustý 0,7L Jahoda",
-   "price": 18.98,
+   "price": 17.98,
    "amount": "0,7 l",
    "unit": "",
    "ean": "8594057637088"
   },
   {
    "name": "Caprio Hustý 0,7L Pomeranč",
-   "price": 18.98,
+   "price": 17.98,
    "amount": "0,7 l",
    "unit": "",
    "ean": "8594057637545"
   },
   {
    "name": "Caprio Hustý 0,7L Mango Jablko",
-   "price": 18.98,
+   "price": 17.98,
    "amount": "0,7 l",
    "unit": "",
    "ean": "8594057639938"
   },
   {
    "name": "Caprio 2L Jablko, LIČI",
-   "price": 28.99,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "ean": "8594057637279"
   },
   {
    "name": "Caprio 2L Jablko Malina",
-   "price": 28.99,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "ean": "5900334007384"
   },
   {
    "name": "Caprio 2L Hruška - Pear",
-   "price": 28.99,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "ean": "5900334000101"
@@ -5621,7 +5621,7 @@
   },
   {
    "name": "Big Shock 0,5L APPLE - Jablko 4x6ks/b",
-   "price": 20.98,
+   "price": 20.56,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8594033174859"
@@ -6789,7 +6789,7 @@
   },
   {
    "name": "SEDITA Horalky 50g",
-   "price": 12.71,
+   "price": 12.55,
    "amount": "50 g",
    "unit": "",
    "ean": "68584004040100"
@@ -6824,7 +6824,7 @@
   },
   {
    "name": "Big Shock 0,5L Watermelon 4x6ks/b",
-   "price": 20.98,
+   "price": 20.56,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8594033175207"
@@ -7076,7 +7076,7 @@
   },
   {
    "name": "Big Shock 0,5L Cherry 4x6ks/b",
-   "price": 23.98,
+   "price": 20.56,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8594033175306"
@@ -7174,7 +7174,7 @@
   },
   {
    "name": "Corny White choco 40g/24ks",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "40 g",
    "unit": "",
    "ean": "8592084411138"
@@ -8307,7 +8307,7 @@
   },
   {
    "name": "Corny Marshmallow Chocolate Bícuit 50g/24ks",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "50 g",
    "unit": "",
    "ean": "8592084411732"
@@ -8545,7 +8545,7 @@
   },
   {
    "name": "Corny Slaný Caramel 40g",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "40 g",
    "unit": "",
    "ean": "4011800403805"
@@ -8573,7 +8573,7 @@
   },
   {
    "name": "Caprio 2L Party Mix Ananas Mango",
-   "price": 28.99,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "ean": "8594057638931"
@@ -8783,7 +8783,7 @@
   },
   {
    "name": "Big Shock 0,5L Plum Cinnamon - Limited Edition 4x6ks/b",
-   "price": 20.98,
+   "price": 20.56,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8594033176051"
@@ -8944,7 +8944,7 @@
   },
   {
    "name": "Big Shock 0,5L Blueberry Raspberry 4x6ks",
-   "price": 20.98,
+   "price": 20.56,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8594033176143"
@@ -11655,7 +11655,7 @@
   },
   {
    "name": "Airwaves Dóza - Lo 24b*6ks*64g Extréme",
-   "price": 29.98,
+   "price": 24.9,
    "amount": "6 ks",
    "unit": "",
    "ean": "4009900509985"
@@ -12003,7 +12003,7 @@
   },
   {
    "name": "Relax 1L PET!!! Pomeranc 100%",
-   "price": 41.99,
+   "price": 54.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646200607"
@@ -12108,7 +12108,7 @@
   },
   {
    "name": "Relax 1L PET!!! Jablko 100%",
-   "price": 29.98,
+   "price": 34.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646200621"
@@ -12192,7 +12192,7 @@
   },
   {
    "name": "Corny Chocolate Jahoda 50g/24ks",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "50 g",
    "unit": "",
    "ean": "8592084413521"
@@ -13896,7 +13896,7 @@
   },
   {
    "name": "Caprio 2L Jablko,Limetka, KAKTUS",
-   "price": 28.99,
+   "price": 27.98,
    "amount": "2 l",
    "unit": ""
   },
@@ -14062,28 +14062,28 @@
   },
   {
    "name": "Dr Witt 0,75L Granatové jablko a Acai - ruzove",
-   "price": 16.98,
+   "price": 16.55,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8595646202861"
   },
   {
    "name": "Dr Witt 0,75L Mango, Citron a zelený čaj - zluty",
-   "price": 16.98,
+   "price": 16.55,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8595646202847"
   },
   {
    "name": "Dr Witt 0,75L Černý rybíz, brusinka a ibišek",
-   "price": 16.98,
+   "price": 16.55,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8595646202885"
   },
   {
    "name": "Dr Witt 0,75L Pomeranč, Pomelo - oranzovy",
-   "price": 16.98,
+   "price": 16.55,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8595646204001"
@@ -14153,7 +14153,7 @@
   },
   {
    "name": "Big Shock 0,5L Mango - Orange",
-   "price": 20.98,
+   "price": 20.56,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595681004130"
@@ -14342,7 +14342,7 @@
   },
   {
    "name": "Nestea 0,5L BLACK TEA - MANGO & PINEAPPLE",
-   "price": 14.99,
+   "price": 13.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646204896"
@@ -14663,7 +14663,7 @@
   },
   {
    "name": "Dr Witt 0,75L Collagen - Jahoda",
-   "price": 16.98,
+   "price": 16.55,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8595646204773"
@@ -14740,14 +14740,14 @@
   },
   {
    "name": "Relax 1L PET!!! Kaktus",
-   "price": 24.98,
+   "price": 25.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646202274"
   },
   {
    "name": "Relax 1L PET!!! Mango",
-   "price": 24.98,
+   "price": 25.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646201659"
@@ -14815,7 +14815,7 @@
   },
   {
    "name": "Croissant 7days MAX 80g Vanilla Strawberry",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "80 g",
    "unit": "",
    "ean": "5201360552412"
@@ -15788,7 +15788,7 @@
   },
   {
    "name": "Nestea 0,5L BLACK TEA - FOREST FRUITS",
-   "price": 14.99,
+   "price": 13.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646207323"
@@ -15893,7 +15893,7 @@
   },
   {
    "name": "Relax 1L PET!!! Multivitamin",
-   "price": 39.98,
+   "price": 41.99,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646200645"
@@ -16460,7 +16460,7 @@
   },
   {
    "name": "Caprio Hustý 0,7L Lesní Ovoce",
-   "price": 18.98,
+   "price": 17.98,
    "amount": "0,7 l",
    "unit": "",
    "ean": "8594057638696"
@@ -16474,21 +16474,21 @@
   },
   {
    "name": "Croissant 7days MAX 80g Vanilla Kacao",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "80 g",
    "unit": "",
    "ean": "7622201389420"
   },
   {
    "name": "Croissant 7days MAX 80g Cherry - Vanila",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "80 g",
    "unit": "",
    "ean": "7622202010019"
   },
   {
    "name": "Croissant 7days MAX 80g Coconut - Cacao",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "80 g",
    "unit": "",
    "ean": "7622201391997"
@@ -16628,7 +16628,7 @@
   },
   {
    "name": "Pedro Mini MIX 150g Pendreky",
-   "price": 22.98,
+   "price": 4.98,
    "amount": "150 g",
    "unit": "",
    "ean": "8594044243926"
@@ -17307,21 +17307,21 @@
   },
   {
    "name": "Dr Witt Vital 0.75L RECOVER",
-   "price": 16.98,
+   "price": 16.55,
    "amount": "0.75 l",
    "unit": "",
    "ean": "8595646208276"
   },
   {
    "name": "Dr Witt Vital 0.75L IMMUNO",
-   "price": 16.98,
+   "price": 16.55,
    "amount": "0.75 l",
    "unit": "",
    "ean": "8595646208290"
   },
   {
    "name": "Dr Witt Vital 0.75L ANTI-STRESS",
-   "price": 16.98,
+   "price": 16.55,
    "amount": "0.75 l",
    "unit": "",
    "ean": "8595646208689"
@@ -17622,7 +17622,7 @@
   },
   {
    "name": "Dr Witt 0,75 Bílá broskev",
-   "price": 16.98,
+   "price": 16.55,
    "amount": "",
    "unit": "",
    "ean": "8595646208337"
@@ -20372,98 +20372,98 @@
   },
   {
    "name": "UKR ES Norsu Halva slunečnicová 70g Mléčná 6x25ks BOX",
-   "price": 8.55,
+   "price": 3.98,
    "amount": "70 g",
    "unit": "",
    "ean": "4820122996281"
   },
   {
    "name": "UKR ES Norsu Halva slunečnicová 70g S Arašídy 70g/25ks BOX",
-   "price": 8.55,
+   "price": 3.98,
    "amount": "70 g",
    "unit": "",
    "ean": "4823108402974"
   },
   {
    "name": "UKR ES Norsu Halva slunečnicová 70g 6x25ks BOX",
-   "price": 8.55,
+   "price": 3.98,
    "amount": "70 g",
    "unit": "",
    "ean": "4823108402981"
   },
   {
    "name": "UKR ES Norsu Halva slunečnicová 70g Zebra s kakaem 6x25ks",
-   "price": 8.55,
+   "price": 3.98,
    "amount": "70 g",
    "unit": "",
    "ean": "4820122994577"
   },
   {
    "name": "UKR ES Norsu Halva slunečnicová 85g Vanilková glazovaná 24ks",
-   "price": 9.55,
+   "price": 3.98,
    "amount": "85 g",
    "unit": "",
    "ean": "4820122995185"
   },
   {
    "name": "UKR ES Norsu Halva slunečnicová 210g Mléčná",
-   "price": 19.98,
+   "price": 4.98,
    "amount": "210 g",
    "unit": "",
    "ean": "4820122994645"
   },
   {
    "name": "UKR ES Norsu Halva slunečnicová 210g S Arašídy",
-   "price": 19.98,
+   "price": 4.98,
    "amount": "210 g",
    "unit": "",
    "ean": "4820122994683"
   },
   {
    "name": "UKR ES Norsu Halva slunečnicová 210g S rozinkami a Arašidy",
-   "price": 19.98,
+   "price": 4.98,
    "amount": "210 g",
    "unit": "",
    "ean": "4820122994737"
   },
   {
    "name": "UKR ES Norsu Halva slunečnicová 210g S rozinkami",
-   "price": 19.98,
+   "price": 4.98,
    "amount": "210 g",
    "unit": "",
    "ean": "4820122994850"
   },
   {
    "name": "UKR ES Norsu Halva slunečnicová 210g Zebra s kakaem",
-   "price": 19.98,
+   "price": 4.98,
    "amount": "210 g",
    "unit": "",
    "ean": "4820122996175"
   },
   {
    "name": "UKR ES Norsu Halva slunečnicová 210g/20ks",
-   "price": 19.98,
+   "price": 4.98,
    "amount": "210 g",
    "unit": "",
    "ean": "4820122996434"
   },
   {
    "name": "UKR ES Norsu Halva slunečnicová 400g Zebra s kakaem 12ks",
-   "price": 36.98,
+   "price": 9.98,
    "amount": "400 g",
    "unit": "",
    "ean": "4820122994591"
   },
   {
    "name": "UKR ES Norsu Halva slunečnicová 400g S Arašídy 12ks",
-   "price": 36.98,
+   "price": 9.98,
    "amount": "400 g",
    "unit": "",
    "ean": "4820122994690"
   },
   {
    "name": "UKR ES Norsu Halva slunečnicová 400g Vanilková 12ks",
-   "price": 36.98,
+   "price": 9.98,
    "amount": "400 g",
    "unit": "",
    "ean": "4820122994928"
@@ -20519,56 +20519,56 @@
   },
   {
    "name": "UKR Fishfood Sušené kalamáry 30g Proužky",
-   "price": 29.98,
+   "price": 7.98,
    "amount": "30 g",
    "unit": "",
    "ean": "8594221070017"
   },
   {
    "name": "UKR Fishfood Sušené kalamáry 30g Filety",
-   "price": 29.98,
+   "price": 7.98,
    "amount": "30 g",
    "unit": "",
    "ean": "8594221070604"
   },
   {
    "name": "UKR Fishfood Sušené filety z putasu 30g S Chilli",
-   "price": 24.98,
+   "price": 7.98,
    "amount": "30 g",
    "unit": "",
    "ean": "8594221070154"
   },
   {
    "name": "UKR Fishfood Sušené kalamáry 30g Kroužky",
-   "price": 29.98,
+   "price": 7.98,
    "amount": "30 g",
    "unit": "",
    "ean": "8594221070000"
   },
   {
    "name": "UKR Fishfood Sušené filety z putasu 30g Pásky",
-   "price": 24.98,
+   "price": 7.98,
    "amount": "30 g",
    "unit": "",
    "ean": "8594221070161"
   },
   {
    "name": "UKR Fishfood Sušené proužky z putasu 30g Bez Kůže",
-   "price": 24.98,
+   "price": 7.98,
    "amount": "30 g",
    "unit": "",
    "ean": "8594221070697"
   },
   {
    "name": "UKR Fishfood Sušené proužky z putasu 30g S Chilli",
-   "price": 24.98,
+   "price": 7.98,
    "amount": "30 g",
    "unit": "",
    "ean": "8594221070727"
   },
   {
    "name": "UKR Fishfood Sušený kalamár červený 30g Proužky",
-   "price": 29.98,
+   "price": 7.98,
    "amount": "30 g",
    "unit": "",
    "ean": "8594221070741"
@@ -20854,7 +20854,7 @@
   },
   {
    "name": "Coca 1,5L Fanta Exotic CZ",
-   "price": 32.98,
+   "price": 29.98,
    "amount": "1,5 l",
    "unit": "",
    "ean": "5449000015594"
@@ -21316,21 +21316,21 @@
   },
   {
    "name": "Big Shock 0,5L Smart - Pineapple & Passionfruit",
-   "price": 20.98,
+   "price": 20.56,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595681009715"
   },
   {
    "name": "Big Shock 0,5L Smart - Mango & Lychee",
-   "price": 20.98,
+   "price": 20.56,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595681009746"
   },
   {
    "name": "Big Shock 0,5L Smart - Wild Cherry",
-   "price": 20.98,
+   "price": 20.56,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595681009777"
@@ -21519,21 +21519,21 @@
   },
   {
    "name": "Dr Witt Balance Jemně Perlivá 1,5L Citrón",
-   "price": 16.98,
+   "price": 16.55,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8595646212167"
   },
   {
    "name": "Dr Witt Balance Jemně Perlivá 1,5L Grep",
-   "price": 16.98,
+   "price": 16.55,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8595646212129"
   },
   {
    "name": "Dr Witt Balance Jemně Perlivá 1,5L Máta",
-   "price": 16.98,
+   "price": 16.55,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8595646212143"
@@ -21561,7 +21561,7 @@
   },
   {
    "name": "Corny Cinnamon Roll 40g/24ks",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "40 g",
    "unit": "",
    "ean": "8592084422806"
@@ -21827,28 +21827,28 @@
   },
   {
    "name": "Flipz 70g Salted Caramel",
-   "price": 32.98,
+   "price": 31.98,
    "amount": "70 g",
    "unit": "",
    "ean": "8690504160304"
   },
   {
    "name": "Flipz 70g Peanut Butter 70 g",
-   "price": 32.98,
+   "price": 31.98,
    "amount": "70 g",
    "unit": "",
    "ean": "8690504160311"
   },
   {
    "name": "Flipz 70g Strawberry Cheesecake",
-   "price": 32.98,
+   "price": 31.98,
    "amount": "70 g",
    "unit": "",
    "ean": "8690504117223"
   },
   {
    "name": "Flipz 70g Milk Chocolate",
-   "price": 32.98,
+   "price": 31.98,
    "amount": "70 g",
    "unit": "",
    "ean": "8690504160328"
