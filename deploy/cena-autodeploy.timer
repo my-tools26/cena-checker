@@ -1,0 +1,10 @@
+[Unit]
+Description=Chay auto-deploy Cena Checker moi 2 phut
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=2min
+Unit=cena-autodeploy.service
+
+[Install]
+WantedBy=timers.target

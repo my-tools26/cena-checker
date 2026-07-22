@@ -1,0 +1,9 @@
+[Unit]
+Description=Cena Checker auto-deploy (git pull + restart neu co commit moi)
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/home/ubuntu/cena-checker
+ExecStart=/usr/bin/env bash /home/ubuntu/cena-checker/deploy/autodeploy.sh

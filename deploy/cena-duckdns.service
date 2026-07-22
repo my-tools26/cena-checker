@@ -1,0 +1,7 @@
+[Unit]
+Description=Cap nhat IP DuckDNS cho Cena Checker
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/env bash /home/ubuntu/cena-checker/deploy/duckdns-update.sh

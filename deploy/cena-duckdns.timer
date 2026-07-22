@@ -1,0 +1,10 @@
+[Unit]
+Description=Cap nhat IP DuckDNS moi 5 phut
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+Unit=cena-duckdns.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,19 @@
+[Unit]
+Description=Cena Checker web server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/cena-checker
+Environment=PORT=8765
+Environment=CENA_PUBLIC=1
+Environment=TZ=Europe/Prague
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 /home/ubuntu/cena-checker/app.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,6 @@
+# Caddy tu cap + gia han HTTPS (Let's Encrypt) cho domain DuckDNS.
+# {$CENA_DOMAIN} duoc bootstrap.sh dien tu tham so dong lenh.
+{$CENA_DOMAIN} {
+	reverse_proxy localhost:8765
+	encode gzip
+}

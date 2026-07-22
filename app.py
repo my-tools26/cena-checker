@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v8.9 · 22.07.2026"
+APP_VERSION = "v9.0 · 22.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -2367,11 +2367,27 @@ def get_lan_ip():
         return None
 
 
+def _warmup():
+    # Ham nong cache truoc (build_matrix + build_home_suggestions fetch kupi ~20-60s)
+    # de request DAU TIEN vao Trang chu/Akce khong phai cho. Chay nen luc khoi dong.
+    try:
+        build_matrix()
+        build_home_suggestions()
+    except Exception:
+        pass
+
+
 def main():
     # 0.0.0.0 = cho phep dien thoai cung WiFi truy cap
     server = ThreadingHTTPServer(("0.0.0.0", PORT), Handler)
+    threading.Thread(target=_warmup, daemon=True).start()
     if not PUBLIC:
-        threading.Timer(0.5, lambda: webbrowser.open(f"http://127.0.0.1:{PORT}")).start()
+        def _open():
+            try:
+                webbrowser.open(f"http://127.0.0.1:{PORT}")
+            except Exception:
+                pass  # server headless (Oracle/Linux) khong co trinh duyet
+        threading.Timer(0.5, _open).start()
     print(f"Cena Checker dang chay tai http://127.0.0.1:{PORT}")
     ip = get_lan_ip()
     if ip:

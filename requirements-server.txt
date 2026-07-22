@@ -1,0 +1,8 @@
+# Thu vien runtime CHI de PHUC VU trang (Oracle/host).
+# App dung http.server thuan stdlib; chi can may thu vien nay cho:
+#   - cena.py: fetch kupi.cz (requests + beautifulsoup4)
+#   - load_tudien(): doc tudien.xlsx (openpyxl)
+# (Cac script cao gia chay tren may Windows cua user dung requirements.txt day du.)
+requests
+beautifulsoup4
+openpyxl
