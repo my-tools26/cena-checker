@@ -1,0 +1,6 @@
+# Ep LF cho cac file chay tren Linux (Oracle VM) - CRLF se lam hong bash/systemd.
+deploy/*.sh        text eol=lf
+deploy/*.service   text eol=lf
+deploy/*.timer     text eol=lf
+deploy/Caddyfile   text eol=lf
+requirements-server.txt text eol=lf
