@@ -1,583 +1,114 @@
 {
- "letak": "Leták tuần 08.07.2026 – 14.07.2026",
- "valid": "8. 7. – 14. 7. 2026",
- "note": "Giá với thẻ Tamda (cena s kartou). Trích từ tờ rơi chính thức 8.–14.7.2026, đủ 20 trang.",
- "items": [
-  {
-   "name": "Milka Waffelini oplatka",
-   "amount": "31 g",
-   "price": 9.9
-  },
-  {
-   "name": "Criximo trubičky",
-   "amount": "18 g",
-   "price": 3.3
-  },
-  {
-   "name": "Orion Kaštany tyčinka",
-   "amount": "45 g",
-   "price": 12.5
-  },
-  {
-   "name": "Polaretti vodové zmrzliny",
-   "amount": "400 ml",
-   "price": 29.9
-  },
-  {
-   "name": "Reeses Sticks oplatka",
-   "amount": "42 g",
-   "price": 20.9
-  },
-  {
-   "name": "Kinder Bueno Classic tyčinka",
-   "amount": "43 g",
-   "price": 13.9
-  },
-  {
-   "name": "Candy Can nápoj",
-   "amount": "330 ml",
-   "price": 15.9
-  },
-  {
-   "name": "Ulker Tempo sušenky",
-   "amount": "61 g",
-   "price": 8.5
-  },
-  {
-   "name": "RossoBianco Doubi Nouga tyčinka",
-   "amount": "50 g",
-   "price": 7.9
-  },
-  {
-   "name": "Lolliboni cukrová vata",
-   "amount": "50-60 g",
-   "price": 22.5
-  },
-  {
-   "name": "RossoBianco Coco Minute tyčinka",
-   "amount": "40 g",
-   "price": 7.9
-  },
-  {
-   "name": "Royal Jerky sušené maso",
-   "amount": "12-22 g",
-   "price": 30.9,
-   "note": "od"
-  },
-  {
-   "name": "FIZI Cake Strawberry",
-   "amount": "38 g",
-   "price": 9.5
-  },
-  {
-   "name": "FIZI Cake Brownie",
-   "amount": "40 g",
-   "price": 9.5
-  },
-  {
-   "name": "FIZI Cool Ice Sticks",
-   "amount": "120x40 ml",
-   "price": 525.0
-  },
-  {
-   "name": "FIZI Mystery Boris Toilet box",
-   "amount": "98 g",
-   "price": 159.0
-  },
-  {
-   "name": "Nivea Sun pleťový krém SPF50 Derma Skin",
-   "amount": "40 ml",
-   "price": 205.0
-  },
-  {
-   "name": "Nivea Sun pleťový krém SPF50 Invisible Fluid",
-   "amount": "40 ml",
-   "price": 205.0
-  },
-  {
-   "name": "Nivea Sun tónovací krém-fluid SPF50+ Světlý",
-   "amount": "40 ml",
-   "price": 205.0
-  },
-  {
-   "name": "Nivea Sun tónovací krém-fluid SPF50+ Střední",
-   "amount": "40 ml",
-   "price": 205.0
-  },
-  {
-   "name": "Nivea Sun Sensitive Protect sprej SPF50+",
-   "amount": "200 ml",
-   "price": 234.9
-  },
-  {
-   "name": "Nivea Sun Protect&Bronze sprej SPF20",
-   "amount": "200 ml",
-   "price": 199.9
-  },
-  {
-   "name": "Nivea Sun Protect&Bronze sprej SPF30",
-   "amount": "200 ml",
-   "price": 221.48
-  },
-  {
-   "name": "Nivea Sun Protect&Bronze olej SPF20",
-   "amount": "200 ml",
-   "price": 199.9
-  },
-  {
-   "name": "Nivea Sun Tropical Bronze olej SPF6",
-   "amount": "200 ml",
-   "price": 139.9
-  },
-  {
-   "name": "Nivea Sun Kids Protect&Care sprej SPF30 pumpa",
-   "amount": "270 ml",
-   "price": 254.9
-  },
-  {
-   "name": "Nivea Sun Kids sprej SPF50+ Sensitive",
-   "amount": "200 ml",
-   "price": 239.9
-  },
-  {
-   "name": "Nivea Sun Kids mléko SPF50+ Sensitive",
-   "amount": "200 ml",
-   "price": 239.9
-  },
-  {
-   "name": "Nivea Sun Kids Trigger Spray SPF50+",
-   "amount": "250 ml",
-   "price": 224.9
-  },
-  {
-   "name": "Nivea Sun Kids Sensitive Trigger Spray SPF50",
-   "amount": "250 ml",
-   "price": 224.9
-  },
-  {
-   "name": "Nivea Sun Kids sprej SPF50+ Sensitive",
-   "amount": "270 ml",
-   "price": 239.9
-  },
-  {
-   "name": "Nivea Sun pleťový krém SPF50 Alpin",
-   "amount": "50 ml",
-   "price": 164.9
-  },
-  {
-   "name": "Bamboo Tree kokosová voda (nước dừa)",
-   "amount": "330 ml",
-   "price": 25.9
-  },
-  {
-   "name": "Lotus rýže jasmínová (gạo thơm Thái)",
-   "amount": "1 kg",
-   "price": 51.9
-  },
-  {
-   "name": "Lotus rýže jasmínová (gạo thơm Thái)",
-   "amount": "4,54 kg",
-   "price": 230.0
-  },
-  {
-   "name": "Lotus rýže jasmínová (gạo thơm Thái)",
-   "amount": "9,07 kg",
-   "price": 450.0
-  },
-  {
-   "name": "Lotus rýže jasmínová (gạo thơm Thái)",
-   "amount": "18,18 kg",
-   "price": 890.0
-  },
-  {
-   "name": "Nong Shim nudle (mì Hàn Shin/Kimchi/Neoguri)",
-   "amount": "112-125 g",
-   "price": 19.9
-  },
-  {
-   "name": "Biolit elektrický odpařovač + náplň",
-   "amount": "27 ml, 45 nocí",
-   "price": 164.9
-  },
-  {
-   "name": "Biolit elektrický odpařovač Eucalyptus",
-   "amount": "30 N",
-   "price": 144.9
-  },
-  {
-   "name": "Biolit tekutá náplň Eucalyptus",
-   "amount": "21 ml, 30 N",
-   "price": 119.9
-  },
-  {
-   "name": "Biolit tekutá náplň do odpařovače",
-   "amount": "27 ml, 45 nocí",
-   "price": 139.9
-  },
-  {
-   "name": "Raid Essentials/Family tekutá náplň",
-   "amount": "21-27 ml",
-   "price": 179.9
-  },
-  {
-   "name": "Raid elektrický odpařovač s náplní Family",
-   "amount": "21 ml",
-   "price": 214.9
-  },
-  {
-   "name": "Raid Essentials elektrický odpařovač",
-   "amount": "27 ml",
-   "price": 214.9
-  },
-  {
-   "name": "Raid elektrický odpařovač + náplň",
-   "amount": "30 nocí",
-   "price": 134.9
-  },
-  {
-   "name": "Bros spray proti hmyzu Vosy+Sršně",
-   "amount": "300 ml",
-   "price": 79.9
-  },
-  {
-   "name": "Bros spray Létající+Lezoucí hmyz",
-   "amount": "400 ml",
-   "price": 64.9
-  },
-  {
-   "name": "Bros spray Lezoucí hmyz",
-   "amount": "400 ml",
-   "price": 66.9
-  },
-  {
-   "name": "Bros spray Mouchy+Komáry",
-   "amount": "400 ml",
-   "price": 62.9
-  },
-  {
-   "name": "Bros sprej Vosy a Sršně",
-   "amount": "300 ml",
-   "price": 67.9
-  },
-  {
-   "name": "Bros Zelená Síla Paralyzer sprej",
-   "amount": "300 ml",
-   "price": 65.9
-  },
-  {
-   "name": "Bros Zelená Síla Moucha+Komár",
-   "amount": "300 ml",
-   "price": 64.9
-  },
-  {
-   "name": "Bros Zelená Síla Mravenci+Šváby",
-   "amount": "300 ml",
-   "price": 68.9
-  },
-  {
-   "name": "Bros Zelená Síla Potravinový Mol",
-   "amount": "500 ml",
-   "price": 68.9
-  },
-  {
-   "name": "XP Boost funkční nápoj",
-   "amount": "0,25 l",
-   "price": 17.9
-  },
-  {
-   "name": "Lipton Ice Tea",
-   "amount": "0,5 l",
-   "price": 17.5
-  },
-  {
-   "name": "Ustronianka minerální voda",
-   "amount": "1,5 l",
-   "price": 7.2
-  },
-  {
-   "name": "Kitl Syrob sirô",
-   "amount": "0,5 l",
-   "price": 109.0
-  },
-  {
-   "name": "Vittel voda",
-   "amount": "0,75 l",
-   "price": 18.9
-  },
-  {
-   "name": "NON STOP energetický nápoj",
-   "amount": "0,5 l",
-   "price": 14.9
-  },
-  {
-   "name": "San Benedetto voda",
-   "amount": "1,5 l",
-   "price": 19.9
-  },
-  {
-   "name": "Loprais 69 energetický nápoj",
-   "amount": "0,5 l",
-   "price": 16.9
-  },
-  {
-   "name": "Dr Witt nápoj",
-   "amount": "0,75 l",
-   "price": 14.5
-  },
-  {
-   "name": "Maxi Vita bylinný elixír",
-   "amount": "200 ml",
-   "price": 45.9
-  },
-  {
-   "name": "Big Shock energetický nápoj",
-   "amount": "0,5 l",
-   "price": 19.9
-  },
-  {
-   "name": "Pfanner iceTea",
-   "amount": "0,33 l",
-   "price": 11.9
-  },
-  {
-   "name": "Arizona ice tea",
-   "amount": "0,5 l",
-   "price": 27.9
-  },
-  {
-   "name": "Rajec 321 voda",
-   "amount": "0,75 l",
-   "price": 18.5
-  },
-  {
-   "name": "Koli limonáda",
-   "amount": "2 l",
-   "price": 20.9
-  },
-  {
-   "name": "FuzeTea citron",
-   "amount": "0,5 l",
-   "price": 19.9
-  },
-  {
-   "name": "Coca Cola / Fanta / Sprite / Kinley (CC)",
-   "amount": "1,5 l",
-   "price": 28.9
-  },
-  {
-   "name": "Hell energetický nápoj",
-   "amount": "0,5 l",
-   "price": 16.9
-  },
-  {
-   "name": "Kofola",
-   "amount": "0,5 l",
-   "price": 16.9
-  },
-  {
-   "name": "Pragers soda yuzu lime",
-   "amount": "0,33 l",
-   "price": 27.9
-  },
-  {
-   "name": "Le Coq nealkoholický koktejl",
-   "amount": "0,33 l",
-   "price": 29.9
-  },
-  {
-   "name": "Pivo Staropramen 10",
-   "amount": "0,5 l",
-   "price": 14.9
-  },
-  {
-   "name": "Pivo Krušovice 12",
-   "amount": "1,5 l",
-   "price": 36.9
-  },
-  {
-   "name": "Pivo Svijanská desítka plech",
-   "amount": "0,5 l",
-   "price": 15.9
-  },
-  {
-   "name": "Birgo nealko citron limetka plech",
-   "amount": "0,5 l",
-   "price": 13.9
-  },
-  {
-   "name": "Pivo Pilsner Urquell plech",
-   "amount": "0,33 l",
-   "price": 28.9
-  },
-  {
-   "name": "Pivo Radegast Rázná 10",
-   "amount": "0,5 l",
-   "price": 19.5
-  },
-  {
-   "name": "Pivo Gambrinus 12 plech",
-   "amount": "0,5 l",
-   "price": 20.5
-  },
-  {
-   "name": "Pivo Gambrinus 10 sklo",
-   "amount": "20x0,5 l",
-   "price": 278.0
-  },
-  {
-   "name": "Pivo Kozel světlý sklo",
-   "amount": "20x0,5 l",
-   "price": 278.0
-  },
-  {
-   "name": "Pivo Kozel 11 plech",
-   "amount": "0,5 l",
-   "price": 20.9
-  },
-  {
-   "name": "Birell nealko",
-   "amount": "0,5 l",
-   "price": 20.5
-  },
-  {
-   "name": "Pivo Kozel 11 černý plech",
-   "amount": "0,5 l",
-   "price": 20.5
-  },
-  {
-   "name": "Pivo Kozel Nealko plech",
-   "amount": "0,5 l",
-   "price": 18.5
-  },
-  {
-   "name": "Frisco plech",
-   "amount": "0,33 l",
-   "price": 20.9
-  },
-  {
-   "name": "Pivo Proud Ležák plech",
-   "amount": "0,5 l",
-   "price": 26.9
-  },
-  {
-   "name": "Frisco sklo",
-   "amount": "0,33 l",
-   "price": 19.9
-  },
-  {
-   "name": "Víno Cielo",
-   "amount": "0,75 l",
-   "price": 76.9
-  },
-  {
-   "name": "Víno Zámecké box",
-   "amount": "1 l",
-   "price": 30.9
-  },
-  {
-   "name": "Riunite prosecco",
-   "amount": "0,75 l",
-   "price": 64.9
-  },
-  {
-   "name": "Chateau Valtice víno",
-   "amount": "0,75 l",
-   "price": 73.9
-  },
-  {
-   "name": "Vinium Exclusive víno",
-   "amount": "0,75 l",
-   "price": 91.9
-  },
-  {
-   "name": "Tarapaca víno",
-   "amount": "0,75 l",
-   "price": 105.0
-  },
-  {
-   "name": "Palladio prosecco Treviso",
-   "amount": "0,75 l",
-   "price": 99.9
-  },
-  {
-   "name": "Mionetto prosecco",
-   "amount": "0,75 l",
-   "price": 129.0
-  },
-  {
-   "name": "Riunite Treviso prosecco Frizzante",
-   "amount": "0,75 l",
-   "price": 99.0
-  },
-  {
-   "name": "Veselá kráva Sýr a Křup rodinné balení",
-   "amount": "140 g",
-   "price": 46.9
-  },
-  {
-   "name": "Provázky od Pepína slané (phô mai sợi)",
-   "amount": "500 g",
-   "price": 164.9
-  },
-  {
-   "name": "President tavený sýr",
-   "amount": "150 g",
-   "price": 21.5
-  },
-  {
-   "name": "Ehrmann High Protein Drink",
-   "amount": "250 ml",
-   "price": 24.9
-  },
-  {
-   "name": "Valašský jogurt bílý",
-   "amount": "150 g",
-   "price": 6.3
-  },
-  {
-   "name": "Veselá kráva Sýr a Křup",
-   "amount": "35 g",
-   "price": 12.9
-  },
-  {
-   "name": "Kostelecký buřtík (xúc xích)",
-   "amount": "600 g",
-   "price": 59.9
-  },
-  {
-   "name": "Chodura šunkový salám",
-   "amount": "100 g",
-   "price": 15.9
-  },
-  {
-   "name": "Le & Co anglická slanina (ba rọi xông khói)",
-   "amount": "200 g",
-   "price": 39.9
-  },
-  {
-   "name": "Becherovka Lemond 20%",
-   "amount": "0,5 l",
-   "price": 155.0
-  },
-  {
-   "name": "Nordic Ice vodka 37,5%",
-   "amount": "0,5 l",
-   "price": 159.0
-  },
-  {
-   "name": "Božkov vodka 37,5%",
-   "amount": "1 l",
-   "price": 299.9
-  },
-  {
-   "name": "Beefeater Pink Strawberry Gin&Tonic plech 4,9%",
-   "amount": "0,25 l",
-   "price": 37.9
-  },
-  {
-   "name": "Aperol 11%",
-   "amount": "0,7 l",
-   "price": 309.0
-  }
- ]
+  "letak": "Leták tuần 22/07/2026 - 28/07/2026",
+  "valid": "22.07.2026 - 28.07.2026",
+  "note": "Giá là cena s kartou (giá với thẻ Tamda). Trang mražené (Algida/Ice cream, Tisk_20) trong leták không hiển thị giá cụ thể nên không được đưa vào items. Các mục ghi giá 'od' là giá khởi điểm cho nhiều biến thể/kích cỡ trong cùng khung giá.",
+  "items": [
+    {"name": "Birell nealko pivo", "amount": "0,5l", "price": 19.90},
+    {"name": "Kinder Bueno White tyčinka", "amount": "39g", "price": 13.90},
+    {"name": "Kinder Chocolate čokoláda", "amount": "100g", "price": 28.90},
+    {"name": "Mars, Snickers, Twix tyčinka", "amount": "70-75g", "price": 15.90},
+    {"name": "Bros elektrický odpařovač + náplň proti komárům dospělý", "amount": "", "price": 119.90},
+    {"name": "Forestina kapalné hnojivo", "amount": "1L", "price": 42.90},
+    {"name": "Lacalut zubní pasta Aktiv + Lipstick", "amount": "75ml", "price": 64.90},
+    {"name": "Raid Essentials Freeze spray proti lezoucímu hmyzu", "amount": "350ml", "price": 91.90},
+    {"name": "DE Omnia káva Classic mletá", "amount": "250g", "price": 82.90},
+    {"name": "DE Omnia káva Silk mletá", "amount": "250g", "price": 78.90},
+    {"name": "DE Omnia káva Classic zrnková", "amount": "1kg", "price": 325.00},
+    {"name": "DE Omnia káva Classic mletá", "amount": "1kg", "price": 340.00},
+    {"name": "DE Omnia káva Silk mletá", "amount": "1kg", "price": 325.00},
+    {"name": "DE Omnia káva Silk zrnková", "amount": "1kg", "price": 279.00},
+    {"name": "DE Omnia káva Espresso zrnková", "amount": "1kg", "price": 325.00},
+    {"name": "DE Omnia káva Gold mletá", "amount": "250g", "price": 79.90},
+    {"name": "DE Omnia káva Crema Gold zrnková", "amount": "1kg", "price": 325.00},
+    {"name": "DE Omnia káva Fusion Brazil+Colombia zrnková", "amount": "900g", "price": 325.00},
+    {"name": "Paloma káva Classic zrnková", "amount": "1kg", "price": 265.00},
+    {"name": "DE Omnia káva Fusion Uganda+Kenya zrnková", "amount": "900g", "price": 325.00},
+    {"name": "Paloma káva Classic mletá", "amount": "225g", "price": 69.90},
+    {"name": "Paloma káva Classic mletá", "amount": "900g", "price": 269.00},
+    {"name": "DE Omnia káva 3in1 bag10", "amount": "111g", "price": 31.90},
+    {"name": "MaxiNutrition hydratační tablety (green apple/blackcurrant/pink grapefruit/watermelon/lemon lime/strawberry lemonade)", "amount": "40g", "price": 44.90},
+    {"name": "MaxiNutrition proteinová tyčinka (peanut caramel/hazelnut nougat/strawberry yoghurt/blueberry muffin/white chocolate coconut/chocolate cookie milk/salted pistachio/soft banana caramel/soft peanut caramel/soft chocolate caramel)", "amount": "45g", "price": 39.90},
+    {"name": "Vanelli Isabella cake milky", "amount": "35g", "price": 5.50},
+    {"name": "Eras MonaLisa cake pistachio", "amount": "35g", "price": 5.50},
+    {"name": "Eras MonaLisa souffle cake chocolate", "amount": "45g", "price": 5.50},
+    {"name": "Vanelli Isabella cake cocoa", "amount": "35g", "price": 5.50},
+    {"name": "Vanelli Souffle cake pistachio", "amount": "40g", "price": 5.90},
+    {"name": "Vanelli bear cake cocoa cream", "amount": "40g", "price": 5.90},
+    {"name": "Vanelli Souffle cake cherry", "amount": "40g", "price": 5.90},
+    {"name": "Vanelli bear cake honey chocolate", "amount": "40g", "price": 5.90},
+    {"name": "Vanelli Souffle cake chocolate", "amount": "40g", "price": 5.90},
+    {"name": "Vanelli Truffels pralines fondant caramel", "amount": "150g", "price": 38.90},
+    {"name": "Sour Patch Kids candy Hearts box", "amount": "88g", "price": 38.90},
+    {"name": "Nerds Gummy Clusters candy very berry USA", "amount": "85g", "price": 41.90},
+    {"name": "Nerds Gummy Clusters candy rainbow", "amount": "85g", "price": 41.90},
+    {"name": "Nerds Rope candy Tropical USA", "amount": "26g", "price": 22.90},
+    {"name": "Nerds Rope candy Very Berry USA", "amount": "26g", "price": 22.90},
+    {"name": "MrBrownie brownies galactic", "amount": "50g", "price": 11.50},
+    {"name": "MrBrownie brownies chocolate", "amount": "50g", "price": 11.50},
+    {"name": "MrBrownie brownies white chocolate", "amount": "50g", "price": 11.50},
+    {"name": "Criximo trubičky Cocoa", "amount": "18g", "price": 3.30},
+    {"name": "Criximo trubičky Coconut", "amount": "18g", "price": 3.30},
+    {"name": "Criximo trubičky Hazelnut", "amount": "18g", "price": 3.30},
+    {"name": "Criximo trubičky Milk", "amount": "18g", "price": 3.30},
+    {"name": "Criximo trubičky Strawberry", "amount": "18g", "price": 3.30},
+    {"name": "Mieszko bonboniéra s taškou Cherrissimo", "amount": "285g", "price": 115.00},
+    {"name": "Mieszko bonboniéra s taškou Cherrissimo Exclusive", "amount": "285g", "price": 115.00},
+    {"name": "Lukas Sharzan tyčinky toffy with peanuts", "amount": "200g", "price": 21.90},
+    {"name": "Lotus rýže jasmínová New Crorp 2026", "amount": "1kg", "price": 51.90},
+    {"name": "Lotus rýže jasmínová New Crorp 2026", "amount": "4,54kg", "price": 230.00},
+    {"name": "Lotus rýže jasmínová New Crorp 2026", "amount": "9,07kg", "price": 450.00},
+    {"name": "Lotus rýže jasmínová New Crorp 2026", "amount": "18,18kg", "price": 890.00},
+    {"name": "Jinro Soju (peach/strawberry/green grape/plum/grapefruit)", "amount": "350ml", "price": 66.90},
+    {"name": "Kimchoo instantní nudle (tofu/chicken curry/shrimp/chicken)", "amount": "80g", "price": 10.90},
+    {"name": "Vifon inst. nudle (Mi Bo beef/Mi Ga chicken)", "amount": "85g", "price": 22.90},
+    {"name": "Birgo nealko Mango-Limetka", "amount": "0,5L", "price": 12.90},
+    {"name": "Clash energetický nápoj", "amount": "0,5L", "price": 22.90},
+    {"name": "Hello ovocná svačinka s broskvemi", "amount": "190g", "price": 10.90},
+    {"name": "OKF Sparkling Blue Lemonade", "amount": "0,35L", "price": 16.90},
+    {"name": "Korunní Etera", "amount": "1,5L", "price": 13.90},
+    {"name": "Grappa Green", "amount": "1,5L", "price": 14.90},
+    {"name": "Hanácká kyselka Kolagen Zinek", "amount": "0,7L", "price": 13.50},
+    {"name": "To The Moon dětský nápoj", "amount": "", "price": 14.90},
+    {"name": "Guarana plech (Cactus/Melimba Pineapple/Aphrodisiac)", "amount": "0,5L", "price": 14.90},
+    {"name": "Relax Exotica džus (kokos/liči/kaktus)", "amount": "1L", "price": 19.50},
+    {"name": "Capri Sun", "amount": "0,33L", "price": 16.90},
+    {"name": "Big Shock ledová káva (espresso milk/irish coffee/hazelnut coffee/vanilla latte)", "amount": "250ml", "price": 28.90},
+    {"name": "Bon Voyage - MOL", "amount": "1L", "price": 72.90},
+    {"name": "Semtex", "amount": "0,5L", "price": 15.50},
+    {"name": "RIO Cold Press 100%", "amount": "1L", "price": 52.90},
+    {"name": "Brise", "amount": "0,75L", "price": 81.90},
+    {"name": "Augustiniánský sklep", "amount": "0,75L", "price": 63.90},
+    {"name": "Koli sirup Extra husté", "amount": "0,7L", "price": 36.90},
+    {"name": "Natura", "amount": "0,5L", "price": 9.90},
+    {"name": "Monster", "amount": "0,5L", "price": 23.50},
+    {"name": "Hell energetický nápoj", "amount": "0,25L", "price": 12.30},
+    {"name": "365 red wine Primitivo - ITA", "amount": "0,75L", "price": 319.00},
+    {"name": "Znovin Znojmo Cabernet Sauvignon", "amount": "0,75L", "price": 75.90},
+    {"name": "Mucha sekt Demi", "amount": "0,75L", "price": 99.90},
+    {"name": "La Piazzetta prosecco", "amount": "0,75L", "price": 94.90},
+    {"name": "Fantasy vino", "amount": "1L", "price": 79.90},
+    {"name": "Brise nealko 0%", "amount": "0,75L", "price": 129.00},
+    {"name": "Ostravar pivo Mustang světlý plech", "amount": "0,5L", "price": 16.90},
+    {"name": "Heineken sklo", "amount": "20x0,4L", "price": 298.00},
+    {"name": "RIO UP+ vitamínová voda (Lychee/Lime)", "amount": "0,4L", "price": 32.90},
+    {"name": "Božkov (Vaječný likér/Peprmint/Vaječný lískový oříšek)", "amount": "0,5L", "price": 129.00},
+    {"name": "Božkov originál tuzemský", "amount": "0,5L", "price": 165.00},
+    {"name": "Kafer", "amount": "0,75L", "price": 84.90},
+    {"name": "Karban Australia (Shiraz Cabernet/Chardonnay)", "amount": "0,75L", "price": 69.90},
+    {"name": "The Standard vodka 40%", "amount": "0,7L", "price": 349.00},
+    {"name": "Fizz cider (Blueberry/Apple/Pear)", "amount": "0,5L", "price": 27.90},
+    {"name": "San Benedetto", "amount": "0,5L", "price": 9.90},
+    {"name": "San Benedetto", "amount": "1,5L", "price": 19.90},
+    {"name": "Perrier", "amount": "1L", "price": 30.90},
+    {"name": "Tatra tuby Piknik", "amount": "75g", "price": 14.90},
+    {"name": "Pribináček Vanilkový", "amount": "125g", "price": 18.50},
+    {"name": "Activia lesní plody", "amount": "270-280g", "price": 21.90},
+    {"name": "Brick čerstvé listové těsto", "amount": "275g", "price": 24.50},
+    {"name": "Ehrmann LactoZero řecký jogurt", "amount": "135g", "price": 13.90},
+    {"name": "Chodura grilovací klobása", "amount": "240g", "price": 41.90},
+    {"name": "Chodura šunka Bohemia", "amount": "100g", "price": 18.50},
+    {"name": "Prantl klobása Ostravská", "amount": "260g", "price": 29.90},
+    {"name": "Gervais Originál", "amount": "80g", "price": 15.90},
+    {"name": "Galbani Mozzarella", "amount": "100g", "price": 16.90}
+  ]
 }
