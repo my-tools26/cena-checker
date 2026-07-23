@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v9.5 · 23.07.2026"
+APP_VERSION = "v9.6 · 23.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -627,39 +627,6 @@ def _akce_section_head(title, n_total, n_show):
             f"({n_total} mặt hàng · hiện {n_show})</span></h2>")
 
 
-def _akce_grouped(title, prods, total=20, nonfood_max=8, show_exp=True, note=""):
-    """1 muc akce ban le: chia 2 nhom Do an / Drogerie-Gia dung, cap tong `total`
-    (uu tien danh cho non-food it nhat vai slot de luon co mat)."""
-    if not prods:
-        return ""
-    food = [p for p in prods if not _is_nonfood(p)]
-    non = [p for p in prods if _is_nonfood(p)]
-    nshow = min(len(non), nonfood_max)
-    fshow = max(0, total - nshow)
-    out = _akce_section_head(title, len(prods), min(len(prods), total))
-    if food[:fshow]:
-        out += product_matrix(food[:fshow], "🍎 Đồ ăn", show_exp=show_exp)
-    if non[:nshow]:
-        out += product_matrix(non[:nshow], "🧴 Drogerie / Gia dụng", show_exp=show_exp)
-    if note:
-        out += f"<p class='muted' style='font-size:.8em'>{note}</p>"
-    return out
-
-
-def _wh_akce_table(items):
-    rows = ""
-    for it in items:
-        amount = f" <span class='a'>{H.escape(it['amount'])}</span>" if it["amount"] else ""
-        pct = f" <span class='pctb'>{H.escape(it['pct'])}</span>" if it["pct"] else ""
-        valid = f"<span class='a'>{H.escape(it['valid'])}</span>" if it["valid"] else ""
-        rows += (f"<tr data-shop='{_shop_slug(it['shop'])}'>"
-                 f"<td>{icon_for(it['name'])}<b>{H.escape(it['name'])}</b>{amount}</td>"
-                 f"<td>{shop_badge(it['shop'])}</td>"
-                 f"<td class='w'><span class='mxp'>{it['price']:.2f} Kč "
-                 f"<span class='a' style='font-weight:normal;font-size:.75em'>s DPH</span>{pct}</span></td>"
-                 f"<td>{valid}</td></tr>")
-    return ("<div class='mxwrap'><table class='mx'><tr><th style='width:50%'>Mặt hàng</th>"
-            "<th>Kho</th><th>Giá</th><th>Hiệu lực</th></tr>" + rows + "</table></div>")
 
 
 def build_home_suggestions():
@@ -819,7 +786,7 @@ def category_html(slug):
     return shell(body, active)
 
 
-def akce_html():
+def akce_html(page=1):
     build_home_suggestions()  # dam bao cache day du
     active = _home_cache["active"]
     expiring = _home_cache["expiring"]
@@ -827,65 +794,85 @@ def akce_html():
     tiles = "".join(f'<a class="tile" href="{u}"><span class="em">{e}</span>{t}</a>'
                     for e, t, u in HOME_TILES)
     body = f'<div class="tiles">{tiles}</div>' + ALLSHOP_FILTER_HTML
-    running = expiring + active
 
-    def pct_of(pair):
-        m = _re.search(r"(\d+)", pair[1]["pct"] or "")
-        return int(m.group(1)) if m else 0
+    # --- GOP TAT CA akce vao 1 danh sach: ban le (kupi, moi nhom ke ca drogerie/
+    # gia dung) + ban buon (Tamda to roi + Makro/JIP). Xen ke, xep theo % giam. ---
+    by_name = {}
 
-    running.sort(key=pct_of, reverse=True)
-    if running:
-        prods, seen2 = [], set()
-        for p, _ in running:
-            if p["name"] not in seen2:
-                seen2.add(p["name"])
-                prods.append(p)
-        body += _akce_grouped(
-            "🔥 AKCE ĐANG DIỄN RA", prods, total=20,
-            note="Giá gói, cột ✅ = nơi rẻ nhất; ⏰ = hết hôm nay/ngày mai; (giá/đơn vị) ghi nhỏ.")
-    if fresh:
-        prods, seen3 = [], set()
-        for p, _ in fresh:
-            if p["name"] not in seen3:
-                seen3.add(p["name"])
-                prods.append(p)
-        body += _akce_grouped("🆕 TỜ RƠI MỚI — sắp bắt đầu", prods, total=20, show_exp=False)
-    # --- AKCE BAN BUON: chi nha co khuyen mai that (Tamda to roi + Makro/JIP deal
-    # kupi). Bidfood/dathang/Linsan/Bombacena/PTT la gia phang -> khong co akce. ---
-    wh = []
+    def add_prod(name, amount, deals):
+        e = by_name.get(name)
+        if e:
+            e["deals"].extend(deals)
+        else:
+            by_name[name] = {"name": name, "amount": amount, "deals": list(deals)}
+
+    for p, _ in (expiring + active):
+        add_prod(p["name"], p.get("amount", ""), p["deals"])
+    for col in ("makro", "jip"):
+        for p in shop_products(col):
+            add_prod(p["name"], p.get("amount", ""), p["deals"])
     td = load_tamda()
     if td:
         for it in td["items"]:
-            wh.append({"name": it["name"], "amount": it.get("amount", ""), "shop": "Tamda Foods",
-                       "price": it["price"], "pct": "", "valid": td.get("valid", "")})
-    for col in ("makro", "jip"):
-        for p in shop_products(col):
-            d = min(p["deals"], key=lambda x: x["price"])
-            wh.append({"name": p["name"], "amount": p.get("amount", ""), "shop": d["shop"],
-                       "price": d["price"], "pct": d.get("pct", ""), "valid": d.get("valid", "")})
+            add_prod(it["name"], it.get("amount", ""),
+                     [{"shop": "Tamda Foods", "price": it["price"], "pct": "",
+                       "unit": "", "valid": td.get("valid", "")}])
 
-    def _pctnum(it):
-        m = _re.search(r"(\d+)", it["pct"] or "")
-        return int(m.group(1)) if m else 0
-    wh.sort(key=_pctnum, reverse=True)
-    if wh:
-        wfood = [it for it in wh if not _is_nonfood(it)]
-        wnon = [it for it in wh if _is_nonfood(it)]
-        nshow = min(len(wnon), 8)
-        fshow = max(0, 20 - nshow)
-        body += (_akce_section_head("🏭 AKCE BÁN BUÔN", len(wh), min(len(wh), 20))
-                 + "<p class='muted' style='font-size:.8em'>Tamda = tờ rơi tuần (giá thẻ) · "
-                 "Makro/JIP = deal đang chạy trên Kupi. Các nhà giá phẳng (Bidfood/dathang/"
-                 "Linsan/Bombacena/PTT) không có akce.</p>")
-        if wfood[:fshow]:
-            body += "<h2 style='font-size:.95em'>🍎 Đồ ăn</h2>" + _wh_akce_table(wfood[:fshow])
-        if wnon[:nshow]:
-            body += "<h2 style='font-size:.95em'>🧴 Drogerie / Gia dụng</h2>" + _wh_akce_table(wnon[:nshow])
+    def best_pct(p):
+        return max((int(m.group(1)) for d in p["deals"]
+                    for m in [_re.search(r"(\d+)", d.get("pct") or "")] if m), default=0)
 
-    if not (active or expiring or fresh):
+    # Xao tron de ban le + ban buon + do an + phi-thuc-pham XEN KE nhau (khong
+    # xep theo % de khac trang chu). Seed theo ngay -> phan trang on dinh trong ngay.
+    import datetime as _dt
+    import random as _rnd
+    allp = list(by_name.values())
+    _rnd.Random(str(_dt.date.today())).shuffle(allp)
+
+    total = len(allp)
+    PER = 20
+    npages = max(1, (total + PER - 1) // PER)
+    page = max(1, min(page, npages))
+    page_items = allp[(page - 1) * PER: page * PER]
+
+    def pager():
+        if npages <= 1:
+            return ""
+        nums = sorted({1, 2, npages - 1, npages, page - 1, page, page + 1}
+                      & set(range(1, npages + 1)))
+        parts, prev = [], 0
+        for n in nums:
+            if n - prev > 1:
+                parts.append("<span class='a'>…</span>")
+            parts.append(f"<b style='padding:6px 10px'>{n}</b>" if n == page
+                         else f"<a href='/akce?p={n}' style='padding:6px 10px'>{n}</a>")
+            prev = n
+        return ("<p style='text-align:center;font-size:1.1em'>"
+                + ("" if page == 1 else f"<a href='/akce?p={page - 1}' style='padding:6px 10px'>‹ Trước</a>")
+                + "".join(parts)
+                + ("" if page == npages else f"<a href='/akce?p={page + 1}' style='padding:6px 10px'>Sau ›</a>")
+                + "</p>")
+
+    if allp:
+        body += _akce_section_head("🔥 AKCE ĐANG DIỄN RA", total, len(page_items))
+        body += ("<p class='muted' style='font-size:.8em'>Bán lẻ (siêu thị) + bán buôn "
+                 "(Tamda tờ rơi · Makro/JIP) gộp chung, xếp theo % giảm sâu nhất · "
+                 "⏰ = hết hôm nay/ngày mai · lọc theo shop ở trên.</p>")
+        body += pager() + product_matrix(page_items, "") + pager()
+    else:
         body += "<p>Không tải được dữ liệu — thử lại sau vài phút.</p>"
-    body += ("<h1 style='font-size:1.15em'>📢 Tổng hợp AKCE</h1>"
-             "<p class='muted'>Quét từ 7 nhóm hàng chính trên Kupi, xếp theo mức giảm sâu nhất trong từng phần.</p>")
+
+    # --- TO ROI MOI: tach rieng, nam duoi (top 20, xen ke, khong phan nhom) ---
+    if fresh:
+        fprods, seen3 = [], set()
+        for p, _ in fresh:
+            if p["name"] not in seen3:
+                seen3.add(p["name"])
+                fprods.append(p)
+        fprods.sort(key=best_pct, reverse=True)
+        body += (_akce_section_head("🆕 TỜ RƠI MỚI — sắp bắt đầu", len(fprods), min(len(fprods), 20))
+                 + product_matrix(fprods[:20], "", show_exp=False))
+
     body += RETAIL_FILTER_JS
     return shell(body, "/akce")
 
@@ -1114,7 +1101,7 @@ def product_matrix(products, heading, max_cols=3, note="", show_exp=True):
         f"<th>{'✅ Rẻ nhất' if i == 0 else '#%d' % (i + 1)}</th>" for i in range(max_cols))
     head_cols = head_cols.replace("<th>✅ Rẻ nhất</th>",
                                   "<th style='background:var(--acc-bg);color:var(--acc-strong)'>✅ Rẻ nhất</th>")
-    out = (f"<h2 style='font-size:.95em'>{heading}</h2><div class='mxwrap'>"
+    out = ((f"<h2 style='font-size:.95em'>{heading}</h2>" if heading else "") + "<div class='mxwrap'>"
            + f"<table class='mx'><tr><th style='width:26%'>Mặt hàng</th>{head_cols}</tr>")
     for p in products:
         by_price = sorted(p["deals"], key=lambda d: d["price"])
@@ -2704,7 +2691,8 @@ class Handler(BaseHTTPRequestHandler):
             elif parsed.path == "/report":
                 self.send_page(report_html())
             elif parsed.path == "/akce":
-                self.send_page(akce_html())
+                _ap = urllib.parse.parse_qs(parsed.query).get("p", ["1"])[0]
+                self.send_page(akce_html(int(_ap) if _ap.isdigit() else 1))
             elif parsed.path == "/hoaqua":
                 self.send_page(category_html("ovoce-a-zelenina"))
             elif parsed.path.startswith("/kategorie/"):
