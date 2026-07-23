@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v9.6 · 23.07.2026"
+APP_VERSION = "v9.7 · 23.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -800,11 +800,14 @@ def akce_html(page=1):
     by_name = {}
 
     def add_prod(name, amount, deals):
-        e = by_name.get(name)
+        # Gop theo TEN + KHOI LUONG: tranh gop nham 2 kich co khac nhau cung ten
+        # (vd Paloma mleta 225g@69.90 vs 900g@269) thanh 1 dong 2 gia.
+        key = (name, (amount or "").replace(" ", "").lower())
+        e = by_name.get(key)
         if e:
             e["deals"].extend(deals)
         else:
-            by_name[name] = {"name": name, "amount": amount, "deals": list(deals)}
+            by_name[key] = {"name": name, "amount": amount, "deals": list(deals)}
 
     for p, _ in (expiring + active):
         add_prod(p["name"], p.get("amount", ""), p["deals"])
