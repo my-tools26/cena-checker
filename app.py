@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v9.9 · 24.07.2026"
+APP_VERSION = "v10.0 · 24.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -858,9 +858,6 @@ def akce_html(page=1):
 
     if allp:
         body += _akce_section_head("🔥 AKCE ĐANG DIỄN RA", total, len(page_items))
-        body += ("<p class='muted' style='font-size:.8em'>Bán lẻ (siêu thị) + bán buôn "
-                 "(Tamda tờ rơi · Makro/JIP) gộp chung, xếp theo % giảm sâu nhất · "
-                 "⏰ = hết hôm nay/ngày mai · lọc theo shop ở trên.</p>")
         body += pager() + product_matrix(page_items, "") + pager()
     else:
         body += "<p>Không tải được dữ liệu — thử lại sau vài phút.</p>"
