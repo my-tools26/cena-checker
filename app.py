@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v9.1 · 23.07.2026"
+APP_VERSION = "v9.2 · 23.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -1166,6 +1166,74 @@ def _merge_ok(t1, a1, t2, a2):
     return len((t1 & t2) - _bb_generic()) >= 2
 
 
+def ptt_html(page=1, q=""):
+    """Trang rieng liet ke toan bo catalog PTT Global (~26k mat hang), co o tim
+    trong catalog + phan trang. Gia da gom DPH (s DPH), kem gia net (bez DPH)."""
+    data = load_pttglobal()
+    if not data or not data.get("items"):
+        return shell("<h1>🅿 PTT Global</h1><p class='muted'>Chưa có dữ liệu PTT Global. "
+                     "Chạy <code>python thu_gia_pttglobal.py</code> để cào giá.</p>", "/banbuon")
+    items = data["items"]
+    q = (q or "").strip()
+    if q:
+        qn = cena.strip_accents(q.lower())
+        terms = [t for t in qn.split() if t]
+        items = [it for it in items
+                 if all(t in cena.strip_accents(it["name"].lower())
+                        or t in (it.get("ean") or "") or t in (it.get("code") or "").lower()
+                        for t in terms)]
+    total = len(items)
+    PER_PAGE = 60
+    npages = max(1, (total + PER_PAGE - 1) // PER_PAGE)
+    page = max(1, min(page, npages))
+    page_items = items[(page - 1) * PER_PAGE: page * PER_PAGE]
+
+    qesc = H.escape(q)
+    body = ("<h1 style='font-size:1.15em'>🅿 PTT Global — bán buôn</h1>"
+            "<p class='muted'>Toàn bộ catalog pttglobal.eu · <b>giá đã gồm DPH</b> "
+            "(kèm giá bez DPH nhỏ) · cập nhật hàng tháng.</p>"
+            "<form action='/ptt' method='get' class='searchbox' style='margin:10px 0'>"
+            f"<input type='text' name='q' value=\"{qesc}\" autocomplete='off' "
+            "placeholder='Tìm trong PTT Global: tên / mã PTT / EAN...'>"
+            "<button type='submit'>🔍 Tìm</button></form>")
+
+    def pager():
+        if npages <= 1:
+            return ""
+        qp = f"&q={urllib.parse.quote(q)}" if q else ""
+        nums = sorted({1, 2, npages - 1, npages, page - 1, page, page + 1}
+                      & set(range(1, npages + 1)))
+        parts, prev = [], 0
+        for n in nums:
+            if n - prev > 1:
+                parts.append("<span class='a'>…</span>")
+            parts.append(f"<b style='padding:6px 10px'>{n}</b>" if n == page
+                         else f"<a href='/ptt?p={n}{qp}' style='padding:6px 10px'>{n}</a>")
+            prev = n
+        return ("<p style='text-align:center;font-size:1.1em'>"
+                + ("" if page == 1 else f"<a href='/ptt?p={page - 1}{qp}' style='padding:6px 10px'>‹ Trước</a>")
+                + "".join(parts)
+                + ("" if page == npages else f"<a href='/ptt?p={page + 1}{qp}' style='padding:6px 10px'>Sau ›</a>")
+                + "</p>")
+
+    body += (f"<p class='muted' style='font-size:.8em'>📦 {total} mặt hàng"
+             + (f" khớp \"{qesc}\"" if q else "") + f" · trang {page}/{npages}</p>")
+    body += pager()
+    body += ("<div class='mxwrap'><table class='mx'><tr>"
+             "<th style='width:52%'>Mặt hàng</th><th>Giá (s DPH)</th>"
+             "<th>bez DPH</th><th>Mã / EAN</th></tr>")
+    for it in page_items:
+        amount = f" <span class='a'>{H.escape(it.get('amount') or '')}</span>" if it.get("amount") else ""
+        net = f"{it['price_net']:.2f} Kč" if it.get("price_net") else "—"
+        codes = H.escape(" · ".join(x for x in (it.get("code") or "", it.get("ean") or "") if x))
+        body += (f"<tr><td>{icon_for(it['name'])}<b>{H.escape(it['name'])}</b>{amount}</td>"
+                 f"<td class='w'><span class='mxp'>{it['price']:.2f} Kč</span></td>"
+                 f"<td class='a'>{net}</td>"
+                 f"<td class='a' style='font-size:.8em'>{codes}</td></tr>")
+    body += "</table></div>" + pager()
+    return shell(body, "/banbuon")
+
+
 def banbuon_html(page=1):
     # Khoi gioi thieu chuyen xuong CUOI trang (yeu cau nguoi dung) - dau trang
     # danh cho nut chon kho + bang, mo trang la thay hang ngay.
@@ -1173,7 +1241,9 @@ def banbuon_html(page=1):
              "<p class='muted'>Giá gói · (giá/đơn vị) ghi nhỏ · ô xanh ✅ = kho rẻ nhất khi có "
              "cùng mặt hàng ở nhiều kho. <b>Tất cả giá đã gồm DPH (s DPH)</b>. "
              "Tamda = giá với thẻ (tờ rơi tuần), hoặc giá thường từ Tamda Express "
-             "khi hàng không có trong tờ rơi · dathang/Linsan/Bombacena = hàng châu Á.</p>")
+             "khi hàng không có trong tờ rơi · dathang/Linsan/Bombacena = hàng châu Á.</p>"
+             "<p style='margin:8px 0'><a class='bigbtn' href='/ptt' style='font-size:1em;padding:8px 16px'>"
+             "🅿 Xem toàn bộ mặt hàng PTT Global →</a></p>")
     tiles = "".join(f'<a class="tile" href="{u}"><span class="em">{e}</span>{t}</a>'
                     for e, t, u in HOME_TILES)
     body = f'<div class="tiles">{tiles}</div>'
@@ -2391,6 +2461,11 @@ class Handler(BaseHTTPRequestHandler):
             elif parsed.path == "/banbuon":
                 bp = urllib.parse.parse_qs(parsed.query).get("p", ["1"])[0]
                 self.send_page(banbuon_html(int(bp) if bp.isdigit() else 1))
+            elif parsed.path == "/ptt":
+                _qs = urllib.parse.parse_qs(parsed.query)
+                _pp = _qs.get("p", ["1"])[0]
+                self.send_page(ptt_html(int(_pp) if _pp.isdigit() else 1,
+                                        _qs.get("q", [""])[0]))
             elif parsed.path == "/gioithieu":
                 self.send_page(shell(GIOITHIEU_BODY, ""))
             elif parsed.path == "/kupony":
