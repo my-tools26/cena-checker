@@ -554,6 +554,21 @@ E = [
  ("pho", "phở", "pho ryzove nudle", "Đồ châu Á"),
  ("bun bo", "bún bò", "hovezi pho", "Đồ châu Á"),
  ("mien mang", "miến măng", "sklenene nudle", "Đồ châu Á"),
+ # --- Do gia dung / bep (Makro gastro) ---
+ ("chong ri", "chống rỉ", "nerez", "Gia dụng & khác"),
+ ("inox", "inox", "nerez", "Gia dụng & khác"),
+ ("thep khong gi", "thép không gỉ", "nerez", "Gia dụng & khác"),
+ ("do su", "đồ sứ", "porcelan", "Gia dụng & khác"),
+ ("bat su", "bát sứ", "porcelanova miska", "Gia dụng & khác"),
+ ("dia", "đĩa", "talir", "Gia dụng & khác"),
+ ("dia su", "đĩa sứ", "porcelanovy talir", "Gia dụng & khác"),
+ ("bat", "bát", "miska", "Gia dụng & khác"),
+ ("to", "tô", "miska", "Gia dụng & khác"),
+ ("khay", "khay", "podnos", "Gia dụng & khác"),
+ ("ly", "ly", "sklenice", "Gia dụng & khác"),
+ ("coc", "cốc", "hrnek", "Gia dụng & khác"),
+ ("dao", "dao", "nuz", "Gia dụng & khác"),
+ ("thot", "thớt", "prkenko", "Gia dụng & khác"),
 ]
 
 wb = openpyxl.Workbook()
