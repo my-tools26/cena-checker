@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v9.4 · 23.07.2026"
+APP_VERSION = "v9.5 · 23.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -597,6 +597,71 @@ MANIFEST = """{
 _home_cache = {"t": 0, "expiring": [], "fresh": [], "active": []}
 
 
+import re as _re
+# Nhom hang phi-thuc-pham them vao quet akce (ngoai 7 nhom cua cena.CATEGORIES
+# da co san drogerie + mazlicci). Chi dung cho trang Akce, khong dung global.
+AKCE_EXTRA_CATS = ["domacnost", "pro-deti", "elektro"]
+NONFOOD_CATS = {"drogerie", "mazlicci", "domacnost", "pro-deti", "elektro"}
+# Nhan dien hang phi-thuc-pham theo TEN (cho nguon khong biet category: akce buon)
+NONFOOD_RE = _re.compile(
+    r"prac[ií]|praci|aviv|sampon|šampon|mydl|mýdl|sprchov|zubn|kartac|kartáč|"
+    r"cistic|čistič|savo|domestos|lenor|ariel|persil|silan|calgon|jar\b|pur\b|"
+    r"pampers|plen[ky]|ubrous|utěrk|uterk|toaletn|papir|papír|houb|folie|osvez|"
+    r"osvěž|deodor|holen|holení|vata|tampon|vlozk|vložk|baterie|zarov|žárov|"
+    r"svíčk|svick|hrack|hrač|drogerie|kosmetik|pasta zubn|pelin|pleny",
+    _re.IGNORECASE)
+
+
+def _is_nonfood(p):
+    """p co the la dict san pham (co _cat) hoac dict akce buon (chi co name)."""
+    c = p.get("_cat")
+    if c is not None:
+        return c in NONFOOD_CATS
+    return bool(NONFOOD_RE.search(cena.strip_accents(p["name"])))
+
+
+def _akce_section_head(title, n_total, n_show):
+    return (f"<h2 style='font-size:1.05em;border-bottom:2px solid var(--acc-bg);"
+            f"padding-bottom:4px;margin-top:26px'>{title} "
+            f"<span style='font-weight:normal;font-size:.75em;color:var(--muted)'>"
+            f"({n_total} mặt hàng · hiện {n_show})</span></h2>")
+
+
+def _akce_grouped(title, prods, total=20, nonfood_max=8, show_exp=True, note=""):
+    """1 muc akce ban le: chia 2 nhom Do an / Drogerie-Gia dung, cap tong `total`
+    (uu tien danh cho non-food it nhat vai slot de luon co mat)."""
+    if not prods:
+        return ""
+    food = [p for p in prods if not _is_nonfood(p)]
+    non = [p for p in prods if _is_nonfood(p)]
+    nshow = min(len(non), nonfood_max)
+    fshow = max(0, total - nshow)
+    out = _akce_section_head(title, len(prods), min(len(prods), total))
+    if food[:fshow]:
+        out += product_matrix(food[:fshow], "🍎 Đồ ăn", show_exp=show_exp)
+    if non[:nshow]:
+        out += product_matrix(non[:nshow], "🧴 Drogerie / Gia dụng", show_exp=show_exp)
+    if note:
+        out += f"<p class='muted' style='font-size:.8em'>{note}</p>"
+    return out
+
+
+def _wh_akce_table(items):
+    rows = ""
+    for it in items:
+        amount = f" <span class='a'>{H.escape(it['amount'])}</span>" if it["amount"] else ""
+        pct = f" <span class='pctb'>{H.escape(it['pct'])}</span>" if it["pct"] else ""
+        valid = f"<span class='a'>{H.escape(it['valid'])}</span>" if it["valid"] else ""
+        rows += (f"<tr data-shop='{_shop_slug(it['shop'])}'>"
+                 f"<td>{icon_for(it['name'])}<b>{H.escape(it['name'])}</b>{amount}</td>"
+                 f"<td>{shop_badge(it['shop'])}</td>"
+                 f"<td class='w'><span class='mxp'>{it['price']:.2f} Kč "
+                 f"<span class='a' style='font-weight:normal;font-size:.75em'>s DPH</span>{pct}</span></td>"
+                 f"<td>{valid}</td></tr>")
+    return ("<div class='mxwrap'><table class='mx'><tr><th style='width:50%'>Mặt hàng</th>"
+            "<th>Kho</th><th>Giá</th><th>Hiệu lực</th></tr>" + rows + "</table></div>")
+
+
 def build_home_suggestions():
     """Quet cac nhom hang kupi, phan loai: het akce hom nay / deal moi bat dau."""
     import datetime
@@ -605,7 +670,7 @@ def build_home_suggestions():
         return _home_cache["expiring"], _home_cache["fresh"]
     today = datetime.date.today()
     expiring, fresh, active, seen = [], [], [], set()
-    for slug in cena.CATEGORIES.values():
+    for slug in list(cena.CATEGORIES.values()) + AKCE_EXTRA_CATS:
         try:
             soup = cena.fetch(f"{cena.BASE}/slevy/{slug}")
         except Exception:
@@ -614,6 +679,7 @@ def build_home_suggestions():
             if p["name"] in seen:
                 continue
             seen.add(p["name"])
+            p["_cat"] = slug
             # quet TAT CA cac deal (moi sieu thi), khong chi deal re nhat
             exp_deal, fresh_deal, act_deal = None, None, None
             tomorrow = today + datetime.timedelta(days=1)
@@ -774,17 +840,16 @@ def akce_html():
             if p["name"] not in seen2:
                 seen2.add(p["name"])
                 prods.append(p)
-        body += product_matrix(
-            prods, f"🔥 AKCE ĐANG DIỄN RA ({len(prods)} mặt hàng)",
-            note="Giá gói, cột ✅ = nơi rẻ nhất; ⏰ = hết hôm nay/ngày mai; (giá/đơn vị) ghi nhỏ bên dưới.")
+        body += _akce_grouped(
+            "🔥 AKCE ĐANG DIỄN RA", prods, total=20,
+            note="Giá gói, cột ✅ = nơi rẻ nhất; ⏰ = hết hôm nay/ngày mai; (giá/đơn vị) ghi nhỏ.")
     if fresh:
         prods, seen3 = [], set()
         for p, _ in fresh:
             if p["name"] not in seen3:
                 seen3.add(p["name"])
                 prods.append(p)
-        body += product_matrix(prods[:30], f"🆕 TỜ RƠI MỚI — sắp bắt đầu ({len(prods)} mặt hàng)",
-                               show_exp=False)
+        body += _akce_grouped("🆕 TỜ RƠI MỚI — sắp bắt đầu", prods, total=20, show_exp=False)
     # --- AKCE BAN BUON: chi nha co khuyen mai that (Tamda to roi + Makro/JIP deal
     # kupi). Bidfood/dathang/Linsan/Bombacena/PTT la gia phang -> khong co akce. ---
     wh = []
@@ -804,23 +869,18 @@ def akce_html():
         return int(m.group(1)) if m else 0
     wh.sort(key=_pctnum, reverse=True)
     if wh:
-        rows = ""
-        for it in wh:
-            amount = f" <span class='a'>{H.escape(it['amount'])}</span>" if it["amount"] else ""
-            pct = f" <span class='pctb'>{H.escape(it['pct'])}</span>" if it["pct"] else ""
-            valid = f"<span class='a'>{H.escape(it['valid'])}</span>" if it["valid"] else ""
-            rows += (f"<tr data-shop='{_shop_slug(it['shop'])}'>"
-                     f"<td>{icon_for(it['name'])}<b>{H.escape(it['name'])}</b>{amount}</td>"
-                     f"<td>{shop_badge(it['shop'])}</td>"
-                     f"<td class='w'><span class='mxp'>{it['price']:.2f} Kč "
-                     f"<span class='a' style='font-weight:normal;font-size:.75em'>s DPH</span>{pct}</span></td>"
-                     f"<td>{valid}</td></tr>")
-        body += (f"<h2 style='font-size:.95em'>🏭 AKCE BÁN BUÔN ({len(wh)} mặt hàng)</h2>"
-                 "<p class='muted' style='font-size:.8em'>Tamda = tờ rơi tuần (giá thẻ) · "
+        wfood = [it for it in wh if not _is_nonfood(it)]
+        wnon = [it for it in wh if _is_nonfood(it)]
+        nshow = min(len(wnon), 8)
+        fshow = max(0, 20 - nshow)
+        body += (_akce_section_head("🏭 AKCE BÁN BUÔN", len(wh), min(len(wh), 20))
+                 + "<p class='muted' style='font-size:.8em'>Tamda = tờ rơi tuần (giá thẻ) · "
                  "Makro/JIP = deal đang chạy trên Kupi. Các nhà giá phẳng (Bidfood/dathang/"
-                 "Linsan/Bombacena/PTT) không có akce.</p>"
-                 "<div class='mxwrap'><table class='mx'><tr><th style='width:50%'>Mặt hàng</th>"
-                 "<th>Kho</th><th>Giá</th><th>Hiệu lực</th></tr>" + rows + "</table></div>")
+                 "Linsan/Bombacena/PTT) không có akce.</p>")
+        if wfood[:fshow]:
+            body += "<h2 style='font-size:.95em'>🍎 Đồ ăn</h2>" + _wh_akce_table(wfood[:fshow])
+        if wnon[:nshow]:
+            body += "<h2 style='font-size:.95em'>🧴 Drogerie / Gia dụng</h2>" + _wh_akce_table(wnon[:nshow])
 
     if not (active or expiring or fresh):
         body += "<p>Không tải được dữ liệu — thử lại sau vài phút.</p>"
