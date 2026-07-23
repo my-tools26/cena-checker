@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v9.3 · 23.07.2026"
+APP_VERSION = "v9.4 · 23.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -492,12 +492,12 @@ STOREFILTER_JS = """<script>
 </script>"""
 
 
-def shell(body, active="/"):
+def shell(body, active="/", searchbar=True):
     tabs = "".join(
         f'<a href="{href}"{" class=\"on\"" if href == active else ""}>{label}</a>'
         for href, label in NAV_ITEMS)
     scanloc = "<script>window.SCANLOC='banbuon';</script>" if active == "/banbuon" else ""
-    searchbar = (scanloc
+    searchbar = ("" if not searchbar else scanloc
                  + '<form class="searchbox" action="/hledej" method="get">'
                  + ('<input type="hidden" name="loc" value="banbuon">' if active == "/banbuon" else '')
                  + '<input type="text" name="q" autocomplete="off" autocorrect="off" '
@@ -1272,7 +1272,7 @@ def ptt_html(page=1, q=""):
                  f"<td class='a'>{net}</td>"
                  f"<td class='a' style='font-size:.8em'>{codes}</td></tr>")
     body += "</table></div>" + pager()
-    return shell(body, "/banbuon")
+    return shell(body, "/banbuon", searchbar=False)
 
 
 def banbuon_html(page=1):
@@ -1969,7 +1969,7 @@ def hangbuon_html(page=1, q="", shop=""):
                  f"<td class='w'><span class='mxp'>{it['price']:.2f} Kč</span></td>"
                  f"<td class='a'>{per_s}</td></tr>")
     body += "</table></div>" + pager() + filter_js
-    return shell(body, "/banbuon")
+    return shell(body, "/banbuon", searchbar=False)
 
 
 _makro_fb_cache = {}
