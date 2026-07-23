@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v9.2 · 23.07.2026"
+APP_VERSION = "v9.3 · 23.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -760,7 +760,7 @@ def akce_html():
     fresh = _home_cache["fresh"]
     tiles = "".join(f'<a class="tile" href="{u}"><span class="em">{e}</span>{t}</a>'
                     for e, t, u in HOME_TILES)
-    body = f'<div class="tiles">{tiles}</div>' + RETAIL_FILTER_HTML
+    body = f'<div class="tiles">{tiles}</div>' + ALLSHOP_FILTER_HTML
     running = expiring + active
 
     def pct_of(pair):
@@ -785,6 +785,43 @@ def akce_html():
                 prods.append(p)
         body += product_matrix(prods[:30], f"🆕 TỜ RƠI MỚI — sắp bắt đầu ({len(prods)} mặt hàng)",
                                show_exp=False)
+    # --- AKCE BAN BUON: chi nha co khuyen mai that (Tamda to roi + Makro/JIP deal
+    # kupi). Bidfood/dathang/Linsan/Bombacena/PTT la gia phang -> khong co akce. ---
+    wh = []
+    td = load_tamda()
+    if td:
+        for it in td["items"]:
+            wh.append({"name": it["name"], "amount": it.get("amount", ""), "shop": "Tamda Foods",
+                       "price": it["price"], "pct": "", "valid": td.get("valid", "")})
+    for col in ("makro", "jip"):
+        for p in shop_products(col):
+            d = min(p["deals"], key=lambda x: x["price"])
+            wh.append({"name": p["name"], "amount": p.get("amount", ""), "shop": d["shop"],
+                       "price": d["price"], "pct": d.get("pct", ""), "valid": d.get("valid", "")})
+
+    def _pctnum(it):
+        m = _re.search(r"(\d+)", it["pct"] or "")
+        return int(m.group(1)) if m else 0
+    wh.sort(key=_pctnum, reverse=True)
+    if wh:
+        rows = ""
+        for it in wh:
+            amount = f" <span class='a'>{H.escape(it['amount'])}</span>" if it["amount"] else ""
+            pct = f" <span class='pctb'>{H.escape(it['pct'])}</span>" if it["pct"] else ""
+            valid = f"<span class='a'>{H.escape(it['valid'])}</span>" if it["valid"] else ""
+            rows += (f"<tr data-shop='{_shop_slug(it['shop'])}'>"
+                     f"<td>{icon_for(it['name'])}<b>{H.escape(it['name'])}</b>{amount}</td>"
+                     f"<td>{shop_badge(it['shop'])}</td>"
+                     f"<td class='w'><span class='mxp'>{it['price']:.2f} Kč "
+                     f"<span class='a' style='font-weight:normal;font-size:.75em'>s DPH</span>{pct}</span></td>"
+                     f"<td>{valid}</td></tr>")
+        body += (f"<h2 style='font-size:.95em'>🏭 AKCE BÁN BUÔN ({len(wh)} mặt hàng)</h2>"
+                 "<p class='muted' style='font-size:.8em'>Tamda = tờ rơi tuần (giá thẻ) · "
+                 "Makro/JIP = deal đang chạy trên Kupi. Các nhà giá phẳng (Bidfood/dathang/"
+                 "Linsan/Bombacena/PTT) không có akce.</p>"
+                 "<div class='mxwrap'><table class='mx'><tr><th style='width:50%'>Mặt hàng</th>"
+                 "<th>Kho</th><th>Giá</th><th>Hiệu lực</th></tr>" + rows + "</table></div>")
+
     if not (active or expiring or fresh):
         body += "<p>Không tải được dữ liệu — thử lại sau vài phút.</p>"
     body += ("<h1 style='font-size:1.15em'>📢 Tổng hợp AKCE</h1>"
@@ -963,8 +1000,12 @@ RETAIL_FILTER_JS = """<script>
     document.querySelectorAll('td[data-shop]').forEach(function(c){
       c.style.display = c.dataset.shop && off.indexOf(c.dataset.shop)>=0 ? 'none' : '';
     });
+    // dong ca hang gan cho 1 kho (bang akce ban buon) -> an/hien theo kho do
+    document.querySelectorAll('tr[data-shop]').forEach(function(r){
+      r.style.display = off.indexOf(r.dataset.shop)>=0 ? 'none' : '';
+    });
     // mat hang het noi ban (moi o gia deu bi an) -> an ca hang
-    document.querySelectorAll('tr').forEach(function(r){
+    document.querySelectorAll('tr:not([data-shop])').forEach(function(r){
       var cells=r.querySelectorAll('td[data-shop]');
       if(!cells.length) return;
       var vis=0; cells.forEach(function(c){ if(c.style.display!=='none') vis++; });
@@ -1242,8 +1283,9 @@ def banbuon_html(page=1):
              "cùng mặt hàng ở nhiều kho. <b>Tất cả giá đã gồm DPH (s DPH)</b>. "
              "Tamda = giá với thẻ (tờ rơi tuần), hoặc giá thường từ Tamda Express "
              "khi hàng không có trong tờ rơi · dathang/Linsan/Bombacena = hàng châu Á.</p>"
-             "<p style='margin:8px 0'><a class='bigbtn' href='/ptt' style='font-size:1em;padding:8px 16px'>"
-             "🅿 Xem toàn bộ mặt hàng PTT Global →</a></p>")
+             "<div class='viewtabs' style='margin:8px 0'>"
+             "<a href='/banbuon' class='on' style='padding:8px 16px'>⚖️ So sánh giá</a>"
+             "<a href='/hangbuon' style='padding:8px 16px'>📦 Toàn bộ hàng buôn</a></div>")
     tiles = "".join(f'<a class="tile" href="{u}"><span class="em">{e}</span>{t}</a>'
                     for e, t, u in HOME_TILES)
     body = f'<div class="tiles">{tiles}</div>'
@@ -1779,6 +1821,155 @@ def pttglobal_ean_price(code):
 
 def pttglobal_matches(query_raw, query_cs):
     return _catalog_matches(load_pttglobal(), query_raw, query_cs)
+
+
+# --- Gop TOAN BO hang ban buon (moi nha do buon) de duyet ngau nhien ---
+# JIP khong co catalog day du (chi co deal kupi) nen khong nam trong day.
+WHOLESALE_CATALOG_SOURCES = [
+    ("tamda", "Tamda Foods", "🅣 Tamda", load_tamda_full),
+    ("makro", "Makro", "Ⓜ Makro", load_makro_full),
+    ("bidfood", "Bidfood", "🅑 Bidfood", load_bidfood),
+    ("dathang", "dathang", "🅳 dathang", lambda: load_vnshop("dathang")),
+    ("linsan", "Linsan", "🅻 Linsan", lambda: load_vnshop("linsan")),
+    ("bombacena", "Bombacena", "🅱 Bombacena", lambda: load_vnshop("bombacena")),
+    ("ptt", "PTT Global", "🅿 PTT Global", load_pttglobal),
+]
+_wholesale_all_cache = {"t": 0, "items": None}
+
+
+def load_wholesale_all():
+    """Gop mat hang cua moi nha ban buon (~100k), xao NGAU NHIEN 1 lan, cache 10'.
+    Moi item: shop(slug), shopname, name, amount, price, unit, price_net, ean, code."""
+    import time as _t
+    import random as _rand
+    if _wholesale_all_cache["items"] is not None and _t.time() - _wholesale_all_cache["t"] < 600:
+        return _wholesale_all_cache["items"]
+    out = []
+    for slug, shopname, _label, loader in WHOLESALE_CATALOG_SOURCES:
+        try:
+            data = loader()
+        except Exception:
+            data = None
+        if not data or not data.get("items"):
+            continue
+        for it in data["items"]:
+            p = it.get("price")
+            if not p or p <= 0:
+                continue
+            out.append({"shop": slug, "shopname": shopname, "name": it["name"],
+                        "amount": it.get("amount", ""), "price": p,
+                        "unit": it.get("unit", ""), "price_net": it.get("price_net"),
+                        "ean": it.get("ean", ""), "code": it.get("code", "")})
+    _rand.shuffle(out)
+    _wholesale_all_cache["t"] = _t.time()
+    _wholesale_all_cache["items"] = out
+    return out
+
+
+def hangbuon_html(page=1, q="", shop=""):
+    """Toan bo hang ban buon gop chung, xao ngau nhien, loc theo tung nha + tim."""
+    allitems = load_wholesale_all()
+    if not allitems:
+        return shell("<h1>📦 Toàn bộ hàng bán buôn</h1><p class='muted'>Chưa có dữ liệu.</p>", "/banbuon")
+    items = allitems
+    q = (q or "").strip()
+    if q:
+        terms = [t for t in cena.strip_accents(q.lower()).split() if t]
+        items = [it for it in items
+                 if all(t in cena.strip_accents(it["name"].lower())
+                        or t in (it.get("ean") or "") or t in (it.get("code") or "").lower()
+                        for t in terms)]
+    if shop:
+        items = [it for it in items if it["shop"] == shop]
+    total = len(items)
+    PER_PAGE = 60
+    npages = max(1, (total + PER_PAGE - 1) // PER_PAGE)
+    page = max(1, min(page, npages))
+    page_items = items[(page - 1) * PER_PAGE: page * PER_PAGE]
+    qesc = H.escape(q)
+
+    body = ("<h1 style='font-size:1.15em'>📦 Toàn bộ hàng bán buôn</h1>"
+            "<p class='muted'>Gộp tất cả nhà đổ buôn (Tamda · Makro · Bidfood · dathang · "
+            "Linsan · Bombacena · PTT Global), xáo ngẫu nhiên · <b>giá đã gồm DPH</b> · "
+            "bấm nút để lọc theo từng nhà.</p>"
+            "<p style='margin:6px 0'><a href='/banbuon'>↔ Xem bảng SO SÁNH giá nhiều kho</a></p>"
+            "<form action='/hangbuon' method='get' class='searchbox' style='margin:10px 0'>"
+            f"<input type='text' name='q' value=\"{qesc}\" autocomplete='off' "
+            "placeholder='Tìm trong hàng bán buôn: tên / mã / EAN...'>"
+            "<button type='submit'>🔍 Tìm</button></form>")
+
+    # Nut loc theo nha (2 hang), toggle an dong theo data-shop, luu localStorage
+    btns = "".join(f"<button class='stp' data-hbcol='{slug}'>{lbl}</button>"
+                   for slug, _sn, lbl, _ld in WHOLESALE_CATALOG_SOURCES)
+    half = len(WHOLESALE_CATALOG_SOURCES) // 2 + len(WHOLESALE_CATALOG_SOURCES) % 2
+    btns_list = [f"<button class='stp' data-hbcol='{slug}'>{lbl}</button>"
+                 for slug, _sn, lbl, _ld in WHOLESALE_CATALOG_SOURCES]
+    filter_html = ("<div class='sfgroup'><div class='sfrow'>" + "".join(btns_list[:half])
+                   + "</div><div class='sfrow'>" + "".join(btns_list[half:]) + "</div></div>")
+
+    def pager():
+        if npages <= 1:
+            return ""
+        qp = (f"&q={urllib.parse.quote(q)}" if q else "") + (f"&shop={shop}" if shop else "")
+        nums = sorted({1, 2, npages - 1, npages, page - 1, page, page + 1}
+                      & set(range(1, npages + 1)))
+        parts, prev = [], 0
+        for n in nums:
+            if n - prev > 1:
+                parts.append("<span class='a'>…</span>")
+            parts.append(f"<b style='padding:6px 10px'>{n}</b>" if n == page
+                         else f"<a href='/hangbuon?p={n}{qp}' style='padding:6px 10px'>{n}</a>")
+            prev = n
+        return ("<p style='text-align:center;font-size:1.1em'>"
+                + ("" if page == 1 else f"<a href='/hangbuon?p={page - 1}{qp}' style='padding:6px 10px'>‹ Trước</a>")
+                + "".join(parts)
+                + ("" if page == npages else f"<a href='/hangbuon?p={page + 1}{qp}' style='padding:6px 10px'>Sau ›</a>")
+                + "</p>")
+
+    filter_js = """<script>
+(function(){
+  var KEY='hb_shops_off';
+  var off; try{ off=JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(e){ off=[]; }
+  function apply(){
+    document.querySelectorAll('[data-hbcol]').forEach(function(b){
+      b.classList.toggle('off', off.indexOf(b.dataset.hbcol)>=0);
+    });
+    document.querySelectorAll('tr[data-shop]').forEach(function(r){
+      r.style.display = off.indexOf(r.dataset.shop)>=0 ? 'none' : '';
+    });
+  }
+  document.querySelectorAll('[data-hbcol]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var k=b.dataset.hbcol, i=off.indexOf(k);
+      if(i>=0) off.splice(i,1); else off.push(k);
+      localStorage.setItem(KEY, JSON.stringify(off));
+      apply();
+    });
+  });
+  apply();
+})();
+</script>"""
+
+    body += filter_html
+    body += (f"<p class='muted' style='font-size:.8em'>📦 {total} mặt hàng"
+             + (f" khớp \"{qesc}\"" if q else "") + f" · trang {page}/{npages}</p>")
+    body += pager()
+    body += ("<div class='mxwrap'><table class='mx'><tr>"
+             "<th style='width:50%'>Mặt hàng</th><th>Kho</th>"
+             "<th>Giá (s DPH)</th><th>Giá/đơn vị</th></tr>")
+    for it in page_items:
+        amount = f" <span class='a'>{H.escape(it.get('amount') or '')}</span>" if it.get("amount") else ""
+        pu = parse_amount_price(it.get("amount"), it["price"]) if it.get("amount") else None
+        if not pu and it.get("unit"):
+            per_s = H.escape(it["unit"])
+        else:
+            per_s = f"{pu[0]:.2f} Kč/{UNIT_SHORT[pu[1]]}" if pu else "—"
+        body += (f"<tr data-shop='{it['shop']}'><td>{icon_for(it['name'])}<b>{H.escape(it['name'])}</b>{amount}</td>"
+                 f"<td>{shop_badge(it['shopname'])}</td>"
+                 f"<td class='w'><span class='mxp'>{it['price']:.2f} Kč</span></td>"
+                 f"<td class='a'>{per_s}</td></tr>")
+    body += "</table></div>" + pager() + filter_js
+    return shell(body, "/banbuon")
 
 
 _makro_fb_cache = {}
@@ -2466,6 +2657,11 @@ class Handler(BaseHTTPRequestHandler):
                 _pp = _qs.get("p", ["1"])[0]
                 self.send_page(ptt_html(int(_pp) if _pp.isdigit() else 1,
                                         _qs.get("q", [""])[0]))
+            elif parsed.path == "/hangbuon":
+                _qs = urllib.parse.parse_qs(parsed.query)
+                _pp = _qs.get("p", ["1"])[0]
+                self.send_page(hangbuon_html(int(_pp) if _pp.isdigit() else 1,
+                                             _qs.get("q", [""])[0], _qs.get("shop", [""])[0]))
             elif parsed.path == "/gioithieu":
                 self.send_page(shell(GIOITHIEU_BODY, ""))
             elif parsed.path == "/kupony":
