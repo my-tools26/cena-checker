@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v9.0 · 22.07.2026"
+APP_VERSION = "v9.1 · 23.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -423,7 +423,8 @@ STORE_GROUPS = [
                    ("flop", "Flop"), ("ratio", "Ratio"), ("kosik", "Košík")]),
     ("📦 Bán buôn", [("makro", "Makro"), ("jip", "JIP"), ("tamda", "Tamda"),
                      ("bidfood", "Bidfood"), ("dathang", "dathang"),
-                     ("linsan", "Linsan"), ("bombacena", "Bombacena")]),
+                     ("linsan", "Linsan"), ("bombacena", "Bombacena"),
+                     ("ptt", "PTT Global")]),
 ]
 
 
@@ -985,7 +986,7 @@ RETAIL_FILTER_JS = """<script>
 
 _RETAIL_KEYS = ("lidl", "kaufland", "billa", "penny", "tesco", "albert", "globus",
                 "coop", "hruska", "flop", "ratio", "kosik", "makro", "jip", "tamda",
-                "bidfood", "dathang", "linsan", "bombacena")
+                "bidfood", "dathang", "linsan", "bombacena", "ptt")
 
 
 def _shop_slug(shop):
@@ -1102,7 +1103,8 @@ def _bb_generic():
     cnt = collections.Counter()
     here = os.path.dirname(os.path.abspath(__file__))
     for fn in ("tamda_full_prices.json", "makro_full_prices.json", "bidfood_prices.json",
-               "dathang_prices.json", "linsan_prices.json", "bombacena_prices.json"):
+               "dathang_prices.json", "linsan_prices.json", "bombacena_prices.json",
+               "pttglobal_prices.json"):
         try:
             with open(os.path.join(here, fn), encoding="utf-8") as f:
                 for it in json.load(f)["items"]:
@@ -1666,6 +1668,49 @@ def makro_full_matches(query_raw, query_cs):
     return _catalog_matches(load_makro_full(), query_raw, query_cs)
 
 
+_pttglobal_cache = {"t": 0, "data": None}
+
+
+def load_pttglobal():
+    """Catalog day du pttglobal.eu (~26k mat hang, cao qua thu_gia_pttglobal.py)
+    - gia s DPH, co truong 'ean' va 'price_net' (bez DPH)."""
+    import json
+    import time as _t
+    if _pttglobal_cache["data"] and _t.time() - _pttglobal_cache["t"] < 600:
+        return _pttglobal_cache["data"]
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pttglobal_prices.json")
+    data = None
+    if os.path.exists(path):
+        try:
+            with open(path, encoding="utf-8") as f:
+                data = json.load(f)
+            idx = {}
+            for it in data["items"]:
+                if it.get("ean"):
+                    idx.setdefault(it["ean"], it)
+            data["_ean_index"] = idx
+        except Exception:
+            data = None
+    _pttglobal_cache["t"] = _t.time()
+    _pttglobal_cache["data"] = data
+    return data
+
+
+def pttglobal_ean_price(code):
+    data = load_pttglobal()
+    if not data:
+        return None
+    idx = data.get("_ean_index", {})
+    for c in ean_variants(code):
+        if c in idx:
+            return idx[c]
+    return None
+
+
+def pttglobal_matches(query_raw, query_cs):
+    return _catalog_matches(load_pttglobal(), query_raw, query_cs)
+
+
 _makro_fb_cache = {}
 
 
@@ -1969,6 +2014,7 @@ def search_html(query, only="", view="all"):
     any_vn = any(vnhits.values())
     tfdata, tfhits = tamda_full_matches(raw_norm, q)
     mfdata, mfhits = makro_full_matches(raw_norm, q)
+    pgdata, pghits = pttglobal_matches(raw_norm, q)
     # Tra CHINH XAC theo ma vach trong catalog day du (khong phu thuoc ten
     # rut gon co khop hay khong) - giai quyet ca truong hop ten EAN qua chi tiet/la.
     is_ean = bool(_re.fullmatch(r"\d{8,14}", raw_query))
@@ -1976,6 +2022,7 @@ def search_html(query, only="", view="all"):
     makro_ean_hit = makro_full_ean_price(raw_query) if is_ean else None
     if is_ean and makro_ean_hit is None:
         makro_ean_hit = makro_ean_fallback(raw_query)
+    pttglobal_ean_hit = pttglobal_ean_price(raw_query) if is_ean else None
 
     # Ten EAN thuong qua chi tiet (kem 75g, 500ml...) -> khong ra gia.
     # Thu rut gon dan cho den khi co ket qua.
@@ -2001,10 +2048,13 @@ def search_html(query, only="", view="all"):
             any_vn = any(vnhits.values())
             tfdata2, tfhits2 = tamda_full_matches(raw_norm, q2)
             mfdata2, mfhits2 = makro_full_matches(raw_norm, q2)
+            pgdata2, pghits2 = pttglobal_matches(raw_norm, q2)
             if tfhits2:
                 tfdata, tfhits = tfdata2, tfhits2
             if mfhits2:
                 mfdata, mfhits = mfdata2, mfhits2
+            if pghits2:
+                pgdata, pghits = pgdata2, pghits2
             # dung lai khi nguon ban le co ket qua (kho ban buon khong tinh -
             # ho da co the khop bang ma vach roi)
             if products or thits or mhits or jhits or tesco_hits or lhits or bhits or any_vn:
@@ -2097,6 +2147,24 @@ def search_html(query, only="", view="all"):
             addE(makro_ean_hit["name"], makro_ean_hit.get("amount", ""), "Makro",
                  makro_ean_hit["price"], unitstr=makro_ean_hit.get("unit", ""),
                  tags=_mf_tags(makro_ean_hit), typ="wholesale", pack=makro_ean_hit.get("pack", 1))
+
+    pg_names_added = set()
+
+    def _pg_tags(it):
+        net = it.get("price_net")
+        return ["bán buôn"] + ([f"bez DPH {net:.2f}"] if net else [])
+
+    for it in pghits[:20]:
+        addE(it["name"], it.get("amount", ""), "PTT Global", it["price"],
+             tags=_pg_tags(it), typ="wholesale")
+        pg_names_added.add(it["name"])
+        if it.get("ean") and it["ean"] in _codes:
+            ean_exact_names.add(it["name"])
+    if pttglobal_ean_hit:
+        ean_exact_names.add(pttglobal_ean_hit["name"])
+        if pttglobal_ean_hit["name"] not in pg_names_added:
+            addE(pttglobal_ean_hit["name"], pttglobal_ean_hit.get("amount", ""), "PTT Global",
+                 pttglobal_ean_hit["price"], tags=_pg_tags(pttglobal_ean_hit), typ="wholesale")
 
     # Loc theo view: retail (sieu thi ban le) / wholesale (ban buon) / all
     if view == "retail":

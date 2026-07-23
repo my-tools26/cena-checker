@@ -1,6 +1,9 @@
 # TUYET DOI khong dua token Lidl ca nhan len repo!
 lidl_token.json
 
+# TUYET DOI khong dua cookie phien PTT Global ca nhan len repo!
+pttglobal_cookie.json
+
 __pycache__/
 *.pyc
 .venv/
