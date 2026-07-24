@@ -55,7 +55,7 @@ netfilter-persistent save
 # --- 4. Repo: clone/pull ---
 if [ ! -d "$REPO/.git" ]; then
 	echo "==> Clone repo..."
-	sudo -u ubuntu git clone https://github.com/T-Q-Tuan/cena-checker.git "$REPO"
+	sudo -u ubuntu git clone https://github.com/my-tools26/cena-checker.git "$REPO"
 else
 	echo "==> Repo da co, pull ban moi..."
 	sudo -u ubuntu git -C "$REPO" pull --ff-only origin master

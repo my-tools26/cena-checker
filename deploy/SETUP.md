@@ -36,7 +36,7 @@ ssh -i duong-dan-private-key ubuntu@<PUBLIC-IP>
 ```
 Rồi chạy (thay domain + token của bạn):
 ```
-git clone https://github.com/T-Q-Tuan/cena-checker.git \
+git clone https://github.com/my-tools26/cena-checker.git \
   && cd cena-checker \
   && sudo bash deploy/bootstrap.sh cena-checker.duckdns.org <DUCKDNS-TOKEN>
 ```
