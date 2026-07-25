@@ -8,3 +8,10 @@ __pycache__/
 *.pyc
 .venv/
 tamda_urls_done.txt
+
+# file rác/tạm không thuộc web
+bao-cao-tuan.html
+dathang_prices2.md
+freshtab_test.txt
+makro_gtins_batch2*.json
+.claude/
