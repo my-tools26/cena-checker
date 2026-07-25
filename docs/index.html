@@ -31,6 +31,19 @@
     <button type="submit">🔍 Tìm</button>
   </form>
 
+  <div id="filterwrap" class="filterwrap">
+    <div class="viewtabs" id="viewtabs">
+      <button data-v="all">Tất cả</button>
+      <button data-v="retail">🏪 Siêu thị</button>
+      <button data-v="wholesale">📦 Bán buôn</button>
+    </div>
+    <div id="storefilter" class="storefilter">
+      <div class="strow"><span class="stg">🏪 Bán lẻ</span><button class="stp" data-k="lidl">Lidl</button><button class="stp" data-k="kaufland">Kaufland</button><button class="stp" data-k="billa">Billa</button><button class="stp" data-k="penny">Penny</button><button class="stp" data-k="tesco">Tesco</button><button class="stp" data-k="albert">Albert</button><button class="stp" data-k="globus">Globus</button><button class="stp" data-k="coop">COOP</button><button class="stp" data-k="hruska">Hruška</button><button class="stp" data-k="flop">Flop</button><button class="stp" data-k="ratio">Ratio</button><button class="stp" data-k="kosik">Košík</button></div>
+      <div class="strow"><span class="stg">📦 Bán buôn</span><button class="stp" data-k="makro">Makro</button><button class="stp" data-k="jip">JIP</button><button class="stp" data-k="tamda">Tamda</button><button class="stp" data-k="bidfood">Bidfood</button><button class="stp" data-k="dathang">dathang</button><button class="stp" data-k="linsan">Linsan</button><button class="stp" data-k="bombacena">Bombacena</button><button class="stp" data-k="ptt">PTT Global</button></div>
+      <div class="stact"><button id="stall">✓ Chọn hết</button><button id="stnone">✗ Bỏ hết</button></div>
+    </div>
+  </div>
+
   <div id="main"><p class="muted">Đang tải…</p></div>
   <p style="text-align:center;color:var(--muted2);font-size:.8em;margin:30px 0 10px">
     Cena Checker <span id="appver"></span></p>
