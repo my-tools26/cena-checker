@@ -345,11 +345,16 @@ function pageHome() {
   loadRetail().then(function (d) {
     var off = offSet('retail_off'), lower = new Set();
     off.forEach(function (x) { lower.add(stripAccents(x)); });
-    // Giong Railway: CHI gia ban le, uu tien hang sap het akce (8) + hang khac
-    // cho du 14, roi xep theo % giam sau nhat.
+    // Giong Railway: CHI gia ban le, uu tien 8 hang sap het akce + BOC NGAU NHIEN
+    // du 14 (moi F5 doi mat hang -> khong lap loai). Sap xep theo % giam sau nhat.
     var all = retailOnly(d.items || []);
     var exp = all.filter(hasExpiring).slice(0, 8);
     var rest = all.filter(function (p) { return exp.indexOf(p) < 0; });
+    // shuffle Fisher-Yates
+    for (var i = rest.length - 1; i > 0; i--) {
+      var j = (Math.random() * (i + 1)) | 0;
+      var t = rest[i]; rest[i] = rest[j]; rest[j] = t;
+    }
     var pick = exp.concat(rest.slice(0, Math.max(0, 14 - exp.length)));
     pick.sort(function (a, b) { return bestPct(b) - bestPct(a); });
     var rows = retailRows(pick, lower);
