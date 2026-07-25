@@ -14,12 +14,12 @@
 
 <div class="appbar">
   <a class="logo" href="#/">🛒 Cena Checker</a>
-  <nav class="nav">
+  <nav class="navtabs">
     <a href="#/" data-nav="/">Trang chủ</a>
     <a href="#/akce" data-nav="/akce">Akce</a>
     <a href="#/banbuon" data-nav="/banbuon">Bán buôn</a>
-    <button id="themebtn" class="themebtn" title="Sáng/tối">🌙</button>
   </nav>
+  <button id="themebtn" title="Đổi nền sáng/tối">🌙</button>
 </div>
 
 <div class="wrap">
@@ -32,6 +32,8 @@
   </form>
 
   <div id="main"><p class="muted">Đang tải…</p></div>
+  <p style="text-align:center;color:var(--muted2);font-size:.8em;margin:30px 0 10px">
+    Cena Checker <span id="appver"></span></p>
 </div>
 
 <div id="scanbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;padding:16px;text-align:center">
