@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<script>if(localStorage.getItem('cctheme')==='dark')document.documentElement.classList.add('dark');</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#161614">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Cena Checker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="appbar">
+  <a class="logo" href="#/">🛒 Cena Checker</a>
+  <nav class="nav">
+    <a href="#/" data-nav="/">Trang chủ</a>
+    <a href="#/akce" data-nav="/akce">Akce</a>
+    <a href="#/banbuon" data-nav="/banbuon">Bán buôn</a>
+    <button id="themebtn" class="themebtn" title="Sáng/tối">🌙</button>
+  </nav>
+</div>
+
+<div class="wrap">
+  <form class="searchbox" id="searchform">
+    <input type="text" id="q" autocomplete="off" autocorrect="off" autocapitalize="off"
+           spellcheck="false" placeholder="Gõ mặt hàng: sữa tươi / đùi gà / gạo thơm...">
+    <button type="button" id="scanbtn" title="Quét mã vạch bằng camera"
+            style="padding:12px 16px;background:#2b5fa7">📷</button>
+    <button type="submit">🔍 Tìm</button>
+  </form>
+
+  <div id="main"><p class="muted">Đang tải…</p></div>
+</div>
+
+<div id="scanbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;padding:16px;text-align:center">
+  <p style="color:#fff;font-size:1em;margin:6px 0">Giơ camera vào mã vạch sản phẩm</p>
+  <div id="scanview" style="max-width:480px;margin:0 auto;max-height:65vh;overflow:hidden"></div>
+  <style>#scanview video{width:100%;max-height:65vh;object-fit:cover;border-radius:10px}</style>
+  <button id="scanclose" style="margin-top:12px;background:#a33;padding:10px 26px">✖ Đóng</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
