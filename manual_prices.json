@@ -1,6 +1,7 @@
 {
   "note": "Gia tu nhap tay - KHONG bi ghi de khi cao lai. Moi muc: slug shop + item.",
   "items": [
-    {"slug": "dathang", "name": "Folie na palet 4ks", "price": 120, "amount": "4 ks", "unit": "", "pack": 4}
+    {"slug": "dathang", "name": "Folie na palet 4ks", "price": 120, "amount": "4 ks", "unit": "", "pack": 4},
+    {"slug": "dathang", "name": "CA – Jelly Straws 300g Sour", "price": 49.9, "amount": "300 g", "unit": "", "ean": "8720812773153"}
   ]
 }
