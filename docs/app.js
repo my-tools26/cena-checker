@@ -664,8 +664,74 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 
 window.addEventListener('hashchange', route);
 initScanner();
-getJSON('data/meta.json').then(function (m) {
-  var el = document.getElementById('appver');
-  if (el && m.built) el.textContent = 'cập nhật ' + m.built;
-}).catch(function () {});
+var el = document.getElementById('appver');
+if (el) el.textContent = 'v0.1';
+
+/* ---------- filter panel (focus search -> open) ---------- */
+(function () {
+  var KEY = 'cc_hidden_shops';
+  var panel = document.getElementById('filterwrap');
+  var input = document.getElementById('q');
+  if (!panel || !input) return;
+  function norm(s) { return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+  function hidden() { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { return []; } }
+  function save(a) { localStorage.setItem(KEY, JSON.stringify(a)); }
+  function apply() {
+    var h = hidden();
+    document.querySelectorAll('td[data-shop]').forEach(function (td) {
+      var s = norm(td.getAttribute('data-shop'));
+      var hide = h.some(function (k) { return s.indexOf(k) >= 0; });
+      if (hide) { if (!td.dataset.orig) td.dataset.orig = td.innerHTML; td.innerHTML = "<span class='a'>ẩn</span>"; }
+      else if (td.dataset.orig) { td.innerHTML = td.dataset.orig; td.removeAttribute('data-orig'); }
+    });
+  }
+  function paint() {
+    var h = hidden();
+    panel.querySelectorAll('.stp').forEach(function (b) {
+      b.classList.toggle('off', h.indexOf(b.getAttribute('data-k')) >= 0);
+    });
+  }
+  panel.querySelectorAll('.stp').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var k = b.getAttribute('data-k'); var h = hidden(); var i = h.indexOf(k);
+      if (i >= 0) h.splice(i, 1); else h.push(k);
+      save(h); paint(); apply();
+    });
+  });
+  document.getElementById('stall').addEventListener('click', function () { save([]); paint(); apply(); });
+  document.getElementById('stnone').addEventListener('click', function () {
+    var all = []; panel.querySelectorAll('.stp').forEach(function (b) { all.push(b.getAttribute('data-k')); });
+    save(all); paint(); apply();
+  });
+  function show() { panel.classList.add('open'); }
+  function hide() { panel.classList.remove('open'); }
+  input.addEventListener('focus', show);
+  input.addEventListener('click', show);
+  document.addEventListener('click', function (e) {
+    if (!panel.contains(e.target) && e.target !== input) hide();
+  });
+  paint();
+  window.addEventListener('load', apply);
+  setTimeout(apply, 300);
+})();
+
+/* ---------- viewtabs (Tat ca / Sieu thi / Ban buon) ---------- */
+(function () {
+  var KEY = 'cc_view';
+  var tabs = document.getElementById('viewtabs');
+  var form = document.getElementById('searchform');
+  if (!tabs) return;
+  var saved = localStorage.getItem(KEY) || 'all';
+  tabs.querySelectorAll('button').forEach(function (b) {
+    if (b.getAttribute('data-v') === saved) b.classList.add('on');
+    b.addEventListener('click', function () {
+      var v = b.getAttribute('data-v');
+      localStorage.setItem(KEY, v);
+      tabs.querySelectorAll('button').forEach(function (x) { x.classList.remove('on'); });
+      b.classList.add('on');
+      window.SCANVIEW = v;
+    });
+  });
+})();
+
 loadDict().then(route);
