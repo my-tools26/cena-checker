@@ -175,6 +175,60 @@ function shopBadge(name) {
   return "<span class='sbadge' style='background:" + bg + ";color:" + fg + "'>" +
     esc(name) + '</span>';
 }
+/* Icon theo tu khoa trong ten (giong ICON_RULES ben Python) */
+var ICON_RULES = [
+  ['banan', '🍌'], ['jablk', '🍎'], ['pomeranc', '🍊'], ['citron', '🍋'],
+  ['meloun', '🍉'], ['jahod', '🍓'], ['hrozn', '🍇'], ['broskv', '🍑'],
+  ['merunk', '🍑'], ['tresn', '🍒'], ['visn', '🍒'], ['svestk', '🟣'],
+  ['mandarin', '🍊'], ['kiwi', '🥝'], ['ananas', '🍍'], ['mango', '🥭'],
+  ['hrusk', '🍐'], ['boruvk', '🔵'], ['malin', '🍓'], ['avokad', '🥑'],
+  ['rajc', '🍅'], ['brambor', '🥔'], ['mrkev', '🥕'], ['cibul', '🧅'],
+  ['cesnek', '🧄'], ['okurk', '🥒'], ['salat', '🥬'], ['paprik', '🌶️'],
+  ['kukuric', '🌽'], ['mleko', '🥛'], ['jogurt', '🥛'], ['smetana', '🥛'],
+  ['maslo', '🧈'], ['syr', '🧀'], ['eidam', '🧀'], ['mozzarel', '🧀'],
+  ['vejce', '🥚'], ['vajec', '🥚'], ['kurec', '🍗'], ['kure', '🍗'],
+  ['veprov', '🥩'], ['hovez', '🥩'], ['sunka', '🥓'], ['slanin', '🥓'],
+  ['salam', '🥓'], ['klobas', '🌭'], ['parky', '🌭'], ['ryb', '🐟'],
+  ['losos', '🐟'], ['tunak', '🐟'], ['krevet', '🦐'], ['chleb', '🍞'],
+  ['rohlik', '🥖'], ['bageta', '🥖'], ['croissant', '🥐'], ['kobliha', '🍩'],
+  ['kolac', '🍰'], ['dort', '🍰'], ['cokolad', '🍫'], ['bonbon', '🍬'],
+  ['zele', '🍬'], ['lizatk', '🍭'], ['susenk', '🍪'], ['oplatk', '🍪'],
+  ['tycink', '🍫'], ['chips', '🍟'], ['krekry', '🍘'], ['zmrzlin', '🍦'],
+  ['nanuk', '🍦'], ['pivo', '🍺'], ['lezak', '🍺'], ['radler', '🍺'],
+  ['vino', '🍷'], ['kava', '☕'], ['caj', '🍵'], ['dzus', '🧃'],
+  ['limonad', '🥤'], ['cola', '🥤'], ['miner', '💧'], ['voda', '💧'],
+  ['energ', '⚡'], ['ryze', '🍚'], ['testovin', '🍝'], ['spaget', '🍝'],
+  ['mouka', '🌾'], ['cukr', '🍬'], ['olej', '🌻'], ['kecup', '🍅'],
+  ['majonez', '🥫'], ['konzerv', '🥫'], ['polevk', '🍲'], ['pizza', '🍕'],
+  ['toaletni', '🧻'], ['papir', '🧻'], ['praci', '🧺'], ['gel', '🧴'],
+  ['sampon', '🧴'], ['sprchov', '🧴'], ['mydlo', '🧼'], ['zubni', '🦷'],
+  ['plenky', '👶'], ['cistic', '🧽'], ['wc', '🚽'], ['osvezovac', '🌸'],
+  ['deodorant', '🧴'], ['kremy', '🧴'], ['ubrousk', '🧻'], ['pes', '🐶'],
+  ['psy', '🐶'], ['granule', '🐶'], ['kocic', '🐱']
+];
+function iconFor(name) {
+  var n = stripAccents(name);
+  for (var i = 0; i < ICON_RULES.length; i++)
+    if (n.indexOf(ICON_RULES[i][0]) >= 0) return ICON_RULES[i][1] + ' ';
+  return '🛒 ';
+}
+
+/* Deal sap het han (hom nay/ngay mai) -> nhan ⏰ (giong deal_expiring ben Python) */
+function expShort(valid) {
+  var v = stripAccents(valid || '');
+  if (v.indexOf('dnes konci') >= 0) return 'hôm nay';
+  if (v.indexOf('zitra konci') >= 0) return 'ngày mai';
+  var m = (valid || '').match(/(\d{1,2})\.\s*(\d{1,2})\./g);
+  if (!m || !m.length) return null;
+  var last = /(\d{1,2})\.\s*(\d{1,2})\./.exec(m[m.length - 1]);
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  var end = new Date(today.getFullYear(), +last[2] - 1, +last[1]);
+  var diff = Math.round((end - today) / 86400000);
+  if (diff === 0) return 'hôm nay';
+  if (diff === 1) return 'ngày mai';
+  return null;   // con han dai -> khong canh bao
+}
+
 function unitPrice(amount, price, pack) {
   var m = /(\d+[.,]?\d*)\s*(kg|g|l|ml|ks)\b/i.exec((amount || '').replace(',', '.'));
   if (!m) return '';
@@ -191,6 +245,17 @@ function unitPrice(amount, price, pack) {
 /* 1 hang bang: ten + toi da 3 o gia re nhat */
 function rowHTML(name, amount, offers) {
   offers = offers.slice().sort(function (a, b) { return a.price - b.price; });
+  // Dam bao deal SAP HET akce co mat trong 3 cot hien thi (giong ben Python):
+  // cot 1 van la re nhat, deal sap het chen vao cot cuoi neu chua co
+  var shown = offers.slice(0, 3);
+  if (shown.length === 3 && !shown.some(function (o) { return o.valid && expShort(o.valid); })) {
+    var ed = offers.find(function (o) { return o.valid && expShort(o.valid); });
+    if (ed) {
+      shown = shown.slice(0, 2).concat([ed])
+        .sort(function (a, b) { return a.price - b.price; });
+    }
+  }
+  offers = shown;
   var tds = '';
   for (var i = 0; i < 3; i++) {
     var o = offers[i];
@@ -199,11 +264,13 @@ function rowHTML(name, amount, offers) {
     var ks = (o.pack > 1) ? "<span class='a'> · " + (o.price / o.pack).toFixed(2) + ' Kč/ks</span>' : '';
     var dph = o.wholesale ? " <span class='a' style='font-weight:normal;font-size:.75em'>s DPH</span>" : '';
     var pct = o.pct ? " <span class='pctb'>" + esc(o.pct) + '</span>' : '';
+    var d = o.valid ? expShort(o.valid) : null;
+    var exp = d ? " <span class='expb'>⏰ " + esc(d) + '</span>' : '';
     tds += "<td" + (i === 0 ? " class='w'" : '') + " data-shop='" + esc(o.slug || '') + "'>" +
-      shopBadge(o.shop) + "<span class='mxp'>" + o.price.toFixed(2) + ' Kč' + dph + pct +
+      shopBadge(o.shop) + exp + "<span class='mxp'>" + o.price.toFixed(2) + ' Kč' + dph + pct +
       '</span>' + (per ? "<span class='a'>" + esc(per) + '</span>' : '') + ks + '</td>';
   }
-  return '<tr><td><b>' + esc(name) + '</b>' +
+  return '<tr><td>' + iconFor(name) + '<b>' + esc(name) + '</b>' +
     (amount ? " <span class='a'>" + esc(amount) + '</span>' : '') + '</td>' + tds + '</tr>';
 }
 function tableHTML(rows) {
@@ -222,13 +289,49 @@ function catalogOffers(item) {
   return { shop: SHOP[item[3]], slug: SHOP_SLUG[item[3]], price: item[1],
            amount: item[2], pack: item[4] || 1, wholesale: true };
 }
+/* Trang chu chi hien gia BAN LE: bo deal cua kho ban buon (giong WHOLESALE_KEYWORDS) */
+var WHOLESALE_KW = ['jip', 'makro', 'tamda', 'bidfood'];
+function retailOnly(items) {
+  var out = [];
+  items.forEach(function (p) {
+    var deals = p[2].filter(function (d) {
+      var s = stripAccents(d[0]);
+      return !WHOLESALE_KW.some(function (k) { return s.indexOf(k) >= 0; });
+    });
+    if (deals.length) out.push([p[0], p[1], deals]);
+  });
+  return out;
+}
+/* % giam sau nhat cua mat hang (de xep thu tu nhu ben Python) */
+function bestPct(p) {
+  var mx = 0;
+  p[2].forEach(function (d) {
+    var m = /(\d+)/.exec(d[3] || ''); if (m && +m[1] > mx) mx = +m[1];
+  });
+  return mx;
+}
+function hasExpiring(p) {
+  return p[2].some(function (d) { return d[4] && expShort(d[4]); });
+}
+/* Deal "to roi moi": ngay BAT DAU nam trong tuong lai (giong build_home_suggestions) */
+function isFresh(p) {
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  return p[2].some(function (d) {
+    var m = (d[4] || '').match(/(\d{1,2})\.\s*(\d{1,2})\./g);
+    if (!m || m.length < 2) return false;
+    var f = /(\d{1,2})\.\s*(\d{1,2})\./.exec(m[0]);
+    var start = new Date(today.getFullYear(), +f[2] - 1, +f[1]);
+    return start > today;
+  });
+}
+
 function retailRows(items, offFilter) {
   return items.map(function (p) {
     var offers = p[2].filter(function (d) {
       return !offFilter.has(stripAccents(d[0]).split(' ')[0]);
     }).map(function (d) {
       return { shop: d[0], slug: stripAccents(d[0]).split(' ')[0], price: d[1],
-               unit: d[2], pct: d[3], wholesale: false };
+               unit: d[2], pct: d[3], valid: d[4], wholesale: false };
     });
     return offers.length ? rowHTML(p[0], p[1], offers) : '';
   }).filter(Boolean);
@@ -242,17 +345,37 @@ function pageHome() {
   loadRetail().then(function (d) {
     var off = offSet('retail_off'), lower = new Set();
     off.forEach(function (x) { lower.add(stripAccents(x)); });
-    var rows = retailRows((d.items || []).slice(0, 40), lower);
+    // Giong Railway: CHI gia ban le, uu tien hang sap het akce (8) + hang khac
+    // cho du 14, roi xep theo % giam sau nhat.
+    var all = retailOnly(d.items || []);
+    var exp = all.filter(hasExpiring).slice(0, 8);
+    var rest = all.filter(function (p) { return exp.indexOf(p) < 0; });
+    var pick = exp.concat(rest.slice(0, Math.max(0, 14 - exp.length)));
+    pick.sort(function (a, b) { return bestPct(b) - bestPct(a); });
+    var rows = retailRows(pick, lower);
     el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop') +
       "<h2 style='font-size:.95em'>💡 MUA GÌ Ở ĐÂU HÔM NAY</h2>" +
       (rows.length ? tableHTML(rows) : "<p class='muted'>Chưa có dữ liệu giá bán lẻ.</p>") +
-      "<p class='muted' style='font-size:.85em'>Giá khuyến mãi siêu thị · cập nhật " +
-      esc(d.date || '') + '</p>' +
+      "<p class='muted' style='font-size:.85em'>⏰ = sắp hết akce (hôm nay/ngày mai) · " +
+      '(giá/đơn vị) ghi nhỏ · cập nhật ' + esc(d.date || '') + '</p>' +
+      freshHTML(all, lower) +
       "<p class='muted' style='margin-top:20px'>So sánh giá siêu thị Séc — gõ tiếng Việt " +
       'có dấu hoặc không dấu đều được.<br>Nguồn: kupi.cz, tamdafoods.eu, makro.cz, ' +
       'mujbidfood.cz · dữ liệu chỉ mang tính tham khảo.</p>';
     wireFilters('retail_off', 'data-rshop', pageHome);
   });
+}
+
+/* Bang "TO ROI MOI - deal sap bat dau" (giong home_suggestions_html ben Python) */
+function freshHTML(all, lower) {
+  var fresh = all.filter(isFresh).slice(0, 15);
+  if (!fresh.length) return '';
+  var rows = retailRows(fresh, lower);
+  if (!rows.length) return '';
+  return "<h2 style='font-size:.95em'>🆕 TỜ RƠI MỚI — deal sắp bắt đầu</h2>" +
+    tableHTML(rows) +
+    "<p class='muted' style='font-size:.85em'>Khuyến mãi của tờ rơi tuần mới, " +
+    'chưa/vừa bắt đầu — lên kế hoạch đi chợ trước.</p>';
 }
 
 function pageAkce() {
@@ -262,14 +385,9 @@ function pageAkce() {
   loadRetail().then(function (d) {
     var off = offSet('retail_off'), lower = new Set();
     off.forEach(function (x) { lower.add(stripAccents(x)); });
+    // Akce: ban le + ban buon GOP CHUNG (giong Railway), xep theo % giam sau nhat
     var items = (d.items || []).slice();
-    // xep theo % giam sau nhat
-    items.sort(function (a, b) {
-      function pct(p) {
-        var m = /(\d+)/.exec((p[2][0] && p[2][0][3]) || ''); return m ? +m[1] : 0;
-      }
-      return pct(b) - pct(a);
-    });
+    items.sort(function (a, b) { return bestPct(b) - bestPct(a); });
     var rows = retailRows(items.slice(0, 60), lower);
     el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop') +
       "<h2 style='font-size:.95em'>🔥 AKCE ĐANG DIỄN RA — " + items.length + ' mặt hàng</h2>' +
@@ -541,4 +659,8 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 
 window.addEventListener('hashchange', route);
 initScanner();
+getJSON('data/meta.json').then(function (m) {
+  var el = document.getElementById('appver');
+  if (el && m.built) el.textContent = 'cập nhật ' + m.built;
+}).catch(function () {});
 loadDict().then(route);
