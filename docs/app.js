@@ -160,13 +160,14 @@ function eanLookupAll(code) {
       return getJSON('data/ean/' + p + '.json').catch(function () { return {}; })
         .then(function (m) { return { p: p, m: m }; });
     })).then(function (parts) {
-      var name = '', byShop = {}, hitCode = null;
+      var name = '', byShop = {}, hitCode = null, byName = false, exact = false;
       parts.forEach(function (part) {
         need[part.p].forEach(function (c) {
           var rec = part.m[c];
           if (!rec) return;
           if (!hitCode) hitCode = c;
           if (!name && rec[0]) name = rec[0];
+          if (rec[2] === 1) byName = true; else if (rec[1] && rec[1].length) exact = true;
           (rec[1] || []).forEach(function (o) {
             var ex = byShop[o[0]];
             if (!ex || o[1] < ex[1]) byShop[o[0]] = o;
@@ -175,7 +176,8 @@ function eanLookupAll(code) {
       });
       if (!hitCode) return null;
       var offers = Object.keys(byShop).map(function (k) { return byShop[k]; });
-      return { code: hitCode, rec: [name, offers] };
+      // nameMatched = gia suy theo ten (build-time), khong phai trung ma vach that
+      return { code: hitCode, rec: [name, offers], nameMatched: byName && !exact };
     });
   });
 }
@@ -632,8 +634,11 @@ function searchByEan(code, head, el) {
     });
     var html = head + "<p class='muted'>📦 Mã vạch: <b>" + esc(name) + '</b></p>';
     if (offers.length) {
-      html += "<h2 style='font-size:.95em'>✅ Đúng mã vạch quét</h2>" +
-        tableHTML([rowHTML(name, offers[0].amount, offers)]);
+      html += "<h2 style='font-size:.95em'>" + (hit.nameMatched
+        ? "≈ Cùng tên & dung tích ở các kho" : "✅ Đúng mã vạch quét") + '</h2>' +
+        tableHTML([rowHTML(name, offers[0].amount, offers)]) +
+        (hit.nameMatched ? "<p class='muted' style='font-size:.8em'>Mã vạch này chỉ " +
+          'có ở một nơi; các kho khác ghép theo tên + đúng dung tích.</p>' : '');
     } else {
       html += "<p class='muted'>Nhận diện được tên nhưng chưa có giá kho nào.</p>";
     }
@@ -940,7 +945,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.3';
+if (el) el.textContent = 'v1.4';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
