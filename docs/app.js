@@ -6,12 +6,12 @@
 'use strict';
 
 var SHOP = ['Tamda Foods', 'Tamda Foods', 'Makro', 'Bidfood', 'dathang.cz',
-            'Linsan24h', 'Bombacena', 'PTT Global'];
+            'Linsan24h', 'Bombacena', 'PTT Global', 'JIP'];
 var SHOP_SLUG = ['tamda', 'tamda', 'makro', 'bidfood', 'dathang', 'linsan',
-                 'bombacena', 'ptt'];
+                 'bombacena', 'ptt', 'jip'];
 var WHOLESALE_FILTERS = [['tamda', '🅣 Tamda'], ['makro', 'Ⓜ Makro'],
-  ['bidfood', '🅑 Bidfood'], ['dathang', '🅳 dathang'], ['linsan', '🅻 Linsan'],
-  ['bombacena', '🅱 Bombacena'], ['ptt', '🅟 PTT Global']];
+  ['jip', '🄹 JIP'], ['bidfood', '🅑 Bidfood'], ['dathang', '🅳 dathang'],
+  ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena'], ['ptt', '🅟 PTT Global']];
 /* Loc ban buon hien tren trang Akce (co JIP vi JIP co deal akce tu kupi) */
 var AKCE_WS_FILTERS = [['makro', 'Ⓜ Makro'], ['jip', '🄹 JIP'], ['tamda', '🅣 Tamda'],
   ['bidfood', '🅑 Bidfood'], ['dathang', '🅳 dathang'], ['linsan', '🅻 Linsan'],
@@ -728,7 +728,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v0.2';
+if (el) el.textContent = 'v0.3';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
