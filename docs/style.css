@@ -94,10 +94,17 @@
  .sfgroup{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0;align-items:center}
  .sfgroup .sfrow{display:contents}
  .sfrow .stp{font-size:.72em;padding:2px 7px}
+ /* May tinh: du cho hien HET cua hang -> an nut "..." va bung san nhom con lai.
+    !important de thang inline style display:none do JS dat. */
+ @media(min-width:641px){
+  .morebtn{display:none !important}
+  .moreshops{display:contents !important}
+ }
  @media(max-width:640px){
   .sfgroup{display:block}
-  .sfgroup .sfrow{display:flex;margin:3px 0;gap:3px;flex-wrap:nowrap;align-items:center}
-  .sfrow .stp{flex:1 1 auto;text-align:center;padding:4px 2px}
+  /* PHAI wrap: khi bam "..." cac nut con lai xuong dong, khong tran ra ngoai man hinh */
+  .sfgroup .sfrow{display:flex;margin:3px 0;gap:3px;flex-wrap:wrap;align-items:center}
+  .sfrow .stp{flex:0 1 auto;text-align:center;padding:4px 6px;min-width:0}
   /* bang gia gon lai de 5 cot gan lot man dien thoai - can chi tiet thi zoom 2 ngon */
   .mx{font-size:.74em}
   .mx td, .mx th{padding:5px 3px}
