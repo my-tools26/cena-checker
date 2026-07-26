@@ -1,5 +1,5 @@
 {
- "date": "2026-07-17",
+ "date": "2026-07-25",
  "shop": "bombacena",
  "items": [
   {
@@ -448,19 +448,19 @@
   },
   {
    "name": "HET HAN Fructal First voda 0,5L…",
-   "price": 9.8,
+   "price": 5.63,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "HET HAN Fructal First voda 0,5L…",
-   "price": 9.8,
+   "price": 5.63,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "HET HAN Fructal First voda 0,5L…",
-   "price": 9.8,
+   "price": 5.63,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -700,7 +700,7 @@
   },
   {
    "name": "HET HAN Milka 100g Wholenuts (17ks…",
-   "price": 9.0,
+   "price": 22.9,
    "amount": "100 g",
    "unit": ""
   },
@@ -730,13 +730,13 @@
   },
   {
    "name": "HET HAN Mirinda 0,5L CZ Strawberry…",
-   "price": 6.0,
+   "price": 3.0,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "HET HAN Mirinda 1,5L CZ…",
-   "price": 10.0,
+   "price": 6.0,
    "amount": "1,5 l",
    "unit": ""
   },
@@ -1372,13 +1372,13 @@
   },
   {
    "name": "Popstar Tea 0,5L Jahoda&Máta ZERO …",
-   "price": 25.12,
+   "price": 25.9,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "7UP 0,33L CZ Zero Sugar (24/100)",
-   "price": 11.64,
+   "price": 12.0,
    "amount": "0,33 l",
    "unit": ""
   },
@@ -1503,6 +1503,12 @@
    "unit": ""
   },
   {
+   "name": "Aloe King 0,5L OKF Pineapple (20ks)",
+   "price": 24.9,
+   "amount": "0,5 l",
+   "unit": ""
+  },
+  {
    "name": "Aloe King 0,5L OKF Pomegranate (20…",
    "price": 15.0,
    "amount": "0,5 l",
@@ -1527,7 +1533,19 @@
    "unit": ""
   },
   {
+   "name": "Aloe King 1,5L OKF Mango (12/40)",
+   "price": 60.0,
+   "amount": "1,5 l",
+   "unit": ""
+  },
+  {
    "name": "Aloe King 1,5L OKF Original (12/40)",
+   "price": 60.0,
+   "amount": "1,5 l",
+   "unit": ""
+  },
+  {
+   "name": "Aloe King 1,5L OKF Strawberry (12…",
    "price": 60.0,
    "amount": "1,5 l",
    "unit": ""
@@ -2122,31 +2140,31 @@
   },
   {
    "name": "Bob 360ml Bubble Tea Blue Lime …",
-   "price": 49.8,
+   "price": 48.32,
    "amount": "360 ml",
    "unit": ""
   },
   {
    "name": "Bob 360ml Bubble Tea Fruit Berry …",
-   "price": 49.8,
+   "price": 48.32,
    "amount": "360 ml",
    "unit": ""
   },
   {
    "name": "Bob 360ml Bubble Tea Marshmallow …",
-   "price": 49.8,
+   "price": 48.32,
    "amount": "360 ml",
    "unit": ""
   },
   {
    "name": "Bob 360ml Bubble Tea Sakura Peach …",
-   "price": 49.8,
+   "price": 48.32,
    "amount": "360 ml",
    "unit": ""
   },
   {
    "name": "Bob 360ml Bubble Tea Tropical Mix …",
-   "price": 49.8,
+   "price": 48.32,
    "amount": "360 ml",
    "unit": ""
   },
@@ -2278,13 +2296,13 @@
   },
   {
    "name": "Candy Can 0,33L Toxic Waste Blue…",
-   "price": 16.8,
+   "price": 16.3,
    "amount": "0,33 l",
    "unit": ""
   },
   {
    "name": "Candy Can 0,33L Toxic Waste Sour…",
-   "price": 16.8,
+   "price": 16.3,
    "amount": "0,33 l",
    "unit": ""
   },
@@ -2362,91 +2380,91 @@
   },
   {
    "name": "Caprio 0,7L koncentrát Aloe Vera …",
-   "price": 16.8,
+   "price": 16.3,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Caprio 0,7L koncentrát Jablko (6ks)",
-   "price": 16.8,
+   "price": 16.3,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Caprio 0,7L koncentrát Jahoda (6ks)",
-   "price": 16.8,
+   "price": 16.3,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Caprio 0,7L koncentrát Lesní ovoce…",
-   "price": 16.8,
+   "price": 16.3,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Caprio 0,7L koncentrát Malina (6ks)",
-   "price": 16.8,
+   "price": 16.3,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Caprio 0,7L koncentrát Mango (6ks)",
-   "price": 16.8,
+   "price": 16.3,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Caprio 0,7L koncentrát Pomeranč …",
-   "price": 16.8,
+   "price": 16.3,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Caprio 2L Ananas (6/64)",
-   "price": 26.5,
+   "price": 25.7,
    "amount": "2 l",
    "unit": ""
   },
   {
    "name": "Caprio 2L Ananas-Mango (Party mix)…",
-   "price": 26.5,
+   "price": 25.7,
    "amount": "2 l",
    "unit": ""
   },
   {
    "name": "Caprio 2L Hruška (6/64)",
-   "price": 26.5,
+   "price": 25.7,
    "amount": "2 l",
    "unit": ""
   },
   {
    "name": "Caprio 2L Jablko (6/64)",
-   "price": 26.5,
+   "price": 25.7,
    "amount": "2 l",
    "unit": ""
   },
   {
    "name": "Caprio 2L Jablko-Liči (6/64)",
-   "price": 26.5,
+   "price": 25.7,
    "amount": "2 l",
    "unit": ""
   },
   {
    "name": "Caprio 2L Jablko-Limetka-Kaktus (6…",
-   "price": 26.5,
+   "price": 25.7,
    "amount": "2 l",
    "unit": ""
   },
   {
    "name": "Caprio 2L Jablko-Malina (6/64)",
-   "price": 26.5,
+   "price": 25.7,
    "amount": "2 l",
    "unit": ""
   },
   {
    "name": "Caprio 2L Multivitamín (6/64)",
-   "price": 26.5,
+   "price": 25.7,
    "amount": "2 l",
    "unit": ""
   },
@@ -2680,7 +2698,7 @@
   },
   {
    "name": "Cozy 455ml Tra Xanh 0 Do (Nulový…",
-   "price": 16.9,
+   "price": 16.4,
    "amount": "455 ml",
    "unit": ""
   },
@@ -3538,7 +3556,7 @@
   },
   {
    "name": "HAN NGAN Fructal First voda 0,5L…",
-   "price": 9.8,
+   "price": 5.8,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -3580,13 +3598,13 @@
   },
   {
    "name": "Hell 0,25L Energy Apple Strong (24…",
-   "price": 12.9,
+   "price": 12.5,
    "amount": "0,25 l",
    "unit": ""
   },
   {
    "name": "Hell 0,25L Energy Cherry (24/120)",
-   "price": 12.9,
+   "price": 12.5,
    "amount": "0,25 l",
    "unit": ""
   },
@@ -3628,25 +3646,25 @@
   },
   {
    "name": "Hell 0,25L Energy Original (24/120)",
-   "price": 12.9,
+   "price": 12.5,
    "amount": "0,25 l",
    "unit": ""
   },
   {
    "name": "Hell 0,25L Energy Red Grape Strong…",
-   "price": 12.9,
+   "price": 12.5,
    "amount": "0,25 l",
    "unit": ""
   },
   {
    "name": "Hell 0,25L Energy Watermelon…",
-   "price": 12.9,
+   "price": 12.5,
    "amount": "0,25 l",
    "unit": ""
   },
   {
    "name": "Hell 0,25L Energy Zero White Peach…",
-   "price": 12.9,
+   "price": 12.5,
    "amount": "0,25 l",
    "unit": ""
   },
@@ -3808,19 +3826,19 @@
   },
   {
    "name": "HET HAN Fructal First voda 0,5L…",
-   "price": 9.8,
+   "price": 5.63,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "HET HAN Fructal First voda 0,5L…",
-   "price": 9.8,
+   "price": 5.63,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "HET HAN Fructal First voda 0,5L…",
-   "price": 9.8,
+   "price": 5.63,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -3862,13 +3880,13 @@
   },
   {
    "name": "HET HAN Mirinda 0,5L CZ Strawberry…",
-   "price": 6.0,
+   "price": 3.0,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "HET HAN Mirinda 1,5L CZ…",
-   "price": 10.0,
+   "price": 6.0,
    "amount": "1,5 l",
    "unit": ""
   },
@@ -4209,13 +4227,25 @@
    "unit": ""
   },
   {
-   "name": "Kofola 2L Bez cukru Pet (6/64)",
+   "name": "Kofola 2L Citrus Pet (6/64)",
+   "price": 26.6,
+   "amount": "2 l",
+   "unit": ""
+  },
+  {
+   "name": "Kofola 2L Nulka Bez cukru Pet (6…",
    "price": 26.6,
    "amount": "2 l",
    "unit": ""
   },
   {
    "name": "Kofola 2L Original Pet (6/64)",
+   "price": 26.6,
+   "amount": "2 l",
+   "unit": ""
+  },
+  {
+   "name": "Kofola 2L Vánoční Punč (6/64)",
    "price": 26.6,
    "amount": "2 l",
    "unit": ""
@@ -4654,31 +4684,31 @@
   },
   {
    "name": "Magnesia 1,5L Red Brusinka (6/84)",
-   "price": 20.9,
+   "price": 19.9,
    "amount": "1,5 l",
    "unit": ""
   },
   {
    "name": "Magnesia 1,5L Red Červený Pomeranč…",
-   "price": 20.9,
+   "price": 19.9,
    "amount": "1,5 l",
    "unit": ""
   },
   {
    "name": "Magnesia 1,5L Red Gran. jablko (6…",
-   "price": 20.9,
+   "price": 19.9,
    "amount": "1,5 l",
    "unit": ""
   },
   {
    "name": "Magnesia 1,5L Red Jahoda (6/84)",
-   "price": 20.9,
+   "price": 19.9,
    "amount": "1,5 l",
    "unit": ""
   },
   {
    "name": "Magnesia 1,5L Red Malina (6/84)",
-   "price": 20.9,
+   "price": 19.9,
    "amount": "1,5 l",
    "unit": ""
   },
@@ -4888,25 +4918,25 @@
   },
   {
    "name": "Maxx 0,25L Original (den) Plech …",
-   "price": 6.88,
+   "price": 7.1,
    "amount": "0,25 l",
    "unit": ""
   },
   {
    "name": "Maxx 0,5L Citrus Plech (24/72)",
-   "price": 11.83,
+   "price": 12.2,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Maxx 0,5L Mellooo Plech (24/72)",
-   "price": 11.83,
+   "price": 12.2,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Maxx 0,5L Original Plech (24/72)",
-   "price": 11.83,
+   "price": 12.2,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -4936,7 +4966,7 @@
   },
   {
    "name": "Mirinda 0,5L CZ Pet (12/108)",
-   "price": 19.0,
+   "price": 18.43,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -4954,6 +4984,12 @@
   },
   {
    "name": "Mirinda 1,5L CZ Pet (6ks)",
+   "price": 26.9,
+   "amount": "1,5 l",
+   "unit": ""
+  },
+  {
+   "name": "Mirinda 1,5L EU Pet (6/76)",
    "price": 26.9,
    "amount": "1,5 l",
    "unit": ""
@@ -5632,37 +5668,37 @@
   },
   {
    "name": "Nestea 1,5L Black Forest Fruits (6…",
-   "price": 23.9,
+   "price": 23.18,
    "amount": "1,5 l",
    "unit": ""
   },
   {
    "name": "Nestea 1,5L Black Lemon (6/84)",
-   "price": 23.9,
+   "price": 23.18,
    "amount": "1,5 l",
    "unit": ""
   },
   {
    "name": "Nestea 1,5L Black Mango&Pineapple …",
-   "price": 23.9,
+   "price": 23.18,
    "amount": "1,5 l",
    "unit": ""
   },
   {
    "name": "Nestea 1,5L Black Peach (6/84)",
-   "price": 23.9,
+   "price": 23.18,
    "amount": "1,5 l",
    "unit": ""
   },
   {
    "name": "Nestea 1,5L Black Peach Zero (6/84)",
-   "price": 22.7,
+   "price": 22.02,
    "amount": "1,5 l",
    "unit": ""
   },
   {
    "name": "Nestea 1,5L Green Apple (6/84)",
-   "price": 23.9,
+   "price": 23.18,
    "amount": "1,5 l",
    "unit": ""
   },
@@ -5674,7 +5710,7 @@
   },
   {
    "name": "Nestea 1,5L Green Strawberry&Aloe…",
-   "price": 23.9,
+   "price": 23.18,
    "amount": "1,5 l",
    "unit": ""
   },
@@ -5748,6 +5784,108 @@
    "name": "OKF 0,24L Caramel Macchiato (30ks)",
    "price": 18.9,
    "amount": "0,24 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Apple Cinnamon…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Banana Cream…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Berry Blast…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Cherry Orange…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Cherry Vanilla…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Cream Soda…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Forrest Drop…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Ginger Ale…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Honey…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Lemon Lime…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Mint Green…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Peach Cream…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Pineapple…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Strawberry…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Sweety Apple…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Tropical Punch…",
+   "price": 15.9,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "OKF 0,35L PostLacto Watermelon &…",
+   "price": 15.9,
+   "amount": "0,35 l",
    "unit": ""
   },
   {
@@ -5830,19 +5968,19 @@
   },
   {
    "name": "Oravská 0,75L Imunita Citrus Mix …",
-   "price": 20.27,
+   "price": 20.9,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Oravská 0,75L Vitalita Lesní Plody…",
-   "price": 20.27,
+   "price": 20.9,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Oravská 1,5L Red Brusinka Jemně…",
-   "price": 12.12,
+   "price": 12.5,
    "amount": "1,5 l",
    "unit": ""
   },
@@ -5854,13 +5992,13 @@
   },
   {
    "name": "Oravská 1,5L Red Malina Jemně…",
-   "price": 12.12,
+   "price": 12.25,
    "amount": "1,5 l",
    "unit": ""
   },
   {
    "name": "Oravská 1,5L Red Pomeranč Jemně…",
-   "price": 12.12,
+   "price": 12.25,
    "amount": "1,5 l",
    "unit": ""
   },
@@ -5872,7 +6010,7 @@
   },
   {
    "name": "Pepsi 0,25L CZ Original Plech (6*4…",
-   "price": 10.9,
+   "price": 10.58,
    "amount": "0,25 l",
    "unit": ""
   },
@@ -5890,13 +6028,13 @@
   },
   {
    "name": "Pepsi 0,33L CZ Original Plech (24…",
-   "price": 11.64,
+   "price": 12.0,
    "amount": "0,33 l",
    "unit": ""
   },
   {
    "name": "Pepsi 0,33L CZ Raspberry Plech (24…",
-   "price": 11.64,
+   "price": 12.0,
    "amount": "0,33 l",
    "unit": ""
   },
@@ -6004,6 +6142,12 @@
   },
   {
    "name": "Pepsi 1,5L CZ Zero Maxx (6/84)",
+   "price": 26.9,
+   "amount": "1,5 l",
+   "unit": ""
+  },
+  {
+   "name": "Pepsi 1,5L EU Original (6/76)",
    "price": 26.9,
    "amount": "1,5 l",
    "unit": ""
@@ -6214,19 +6358,19 @@
   },
   {
    "name": "Popstar Tea 0,5L Broskev&Vanilka …",
-   "price": 25.12,
+   "price": 25.9,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Popstar Tea 0,5L Citron&Yuzu (8ks)",
-   "price": 25.12,
+   "price": 25.9,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Popstar Tea 0,5L Jahoda&Máta (8ks)",
-   "price": 25.12,
+   "price": 25.9,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -6238,13 +6382,13 @@
   },
   {
    "name": "Power Energy 0,5L Mango (24ks)",
-   "price": 12.51,
+   "price": 12.9,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Power Energy 0,5L Original (24ks)",
-   "price": 12.51,
+   "price": 12.9,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -6352,19 +6496,19 @@
   },
   {
    "name": "Rajec 321 0,75L Broskev Medunka (8…",
-   "price": 20.4,
+   "price": 19.8,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Rajec 321 0,75L Červený Rybíz…",
-   "price": 20.4,
+   "price": 19.8,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Rajec 321 0,75L Mango Limeta (8…",
-   "price": 20.4,
+   "price": 19.8,
    "amount": "0,75 l",
    "unit": ""
   },
@@ -6424,43 +6568,43 @@
   },
   {
    "name": "Red Bull 0,25L CZ (24/108)",
-   "price": 27.4,
+   "price": 26.58,
    "amount": "0,25 l",
    "unit": ""
   },
   {
    "name": "Red Bull 0,25L CZ Blue Edition…",
-   "price": 28.6,
+   "price": 27.75,
    "amount": "0,25 l",
    "unit": ""
   },
   {
    "name": "Red Bull 0,25L CZ Green Edition…",
-   "price": 28.6,
+   "price": 27.75,
    "amount": "0,25 l",
    "unit": ""
   },
   {
    "name": "Red Bull 0,25L CZ Ice Edition…",
-   "price": 28.6,
+   "price": 27.75,
    "amount": "0,25 l",
    "unit": ""
   },
   {
    "name": "Red Bull 0,25L CZ Peach Edition…",
-   "price": 28.6,
+   "price": 27.75,
    "amount": "0,25 l",
    "unit": ""
   },
   {
    "name": "Red Bull 0,25L CZ Pink Edition…",
-   "price": 28.6,
+   "price": 27.75,
    "amount": "0,25 l",
    "unit": ""
   },
   {
    "name": "Red Bull 0,25L CZ Sea Blue Edition…",
-   "price": 28.6,
+   "price": 27.75,
    "amount": "0,25 l",
    "unit": ""
   },
@@ -6472,7 +6616,7 @@
   },
   {
    "name": "Red Bull 0,25L CZ Summer Edition…",
-   "price": 28.6,
+   "price": 27.75,
    "amount": "0,25 l",
    "unit": ""
   },
@@ -6580,13 +6724,13 @@
   },
   {
    "name": "Red Bull 0,355L CZ (24/88)",
-   "price": 43.9,
+   "price": 42.58,
    "amount": "0,355 l",
    "unit": ""
   },
   {
    "name": "Red Bull 0,355L CZ Blue Edition…",
-   "price": 43.9,
+   "price": 42.58,
    "amount": "0,355 l",
    "unit": ""
   },
@@ -6598,7 +6742,7 @@
   },
   {
    "name": "Red Bull 0,473L CZ (12/108)",
-   "price": 51.9,
+   "price": 50.34,
    "amount": "0,473 l",
    "unit": ""
   },
@@ -7144,13 +7288,13 @@
   },
   {
    "name": "San Pellegrino 0,33L Aranciata (24…",
-   "price": 21.73,
+   "price": 22.4,
    "amount": "0,33 l",
    "unit": ""
   },
   {
    "name": "San Pellegrino 0,33L Limonata (24…",
-   "price": 21.73,
+   "price": 22.4,
    "amount": "0,33 l",
    "unit": ""
   },
@@ -7305,6 +7449,12 @@
    "unit": ""
   },
   {
+   "name": "Sparkling 0,35L OKF Lime (24ks)",
+   "price": 17.0,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
    "name": "Sparkling 0,35L OKF Lychee (24ks)",
    "price": 17.0,
    "amount": "0,35 l",
@@ -7414,13 +7564,7 @@
   },
   {
    "name": "Sparkling Baby Shark 0,35L OKF…",
-   "price": 16.49,
-   "amount": "0,35 l",
-   "unit": ""
-  },
-  {
-   "name": "Sparkling Baby Shark 0,35L OKF…",
-   "price": 16.49,
+   "price": 17.0,
    "amount": "0,35 l",
    "unit": ""
   },
@@ -7432,7 +7576,13 @@
   },
   {
    "name": "Sparkling Baby Shark 0,35L OKF…",
-   "price": 16.49,
+   "price": 17.0,
+   "amount": "0,35 l",
+   "unit": ""
+  },
+  {
+   "name": "Sparkling Baby Shark 0,35L OKF…",
+   "price": 17.0,
    "amount": "0,35 l",
    "unit": ""
   },
@@ -7792,25 +7942,25 @@
   },
   {
    "name": "Toxic Waste 0,5L Blue Razz (12/120)",
-   "price": 24.9,
+   "price": 24.15,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Toxic Waste 0,5L Cherry (12/120)",
-   "price": 24.9,
+   "price": 24.15,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Toxic Waste 0,5L Sour Apple (12…",
-   "price": 24.9,
+   "price": 24.15,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Toxic Waste 0,5L Watermelon (12…",
-   "price": 24.9,
+   "price": 24.15,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -8199,19 +8349,7 @@
    "unit": ""
   },
   {
-   "name": "USA Dr.Pepper 0,355L Cherry (12ks)…",
-   "price": 22.9,
-   "amount": "0,355 l",
-   "unit": ""
-  },
-  {
    "name": "USA Dr.Pepper 0,355L Classic (12ks)",
-   "price": 22.9,
-   "amount": "0,355 l",
-   "unit": ""
-  },
-  {
-   "name": "USA Dr.Pepper 0,355L Cream Soda …",
    "price": 22.9,
    "amount": "0,355 l",
    "unit": ""
@@ -8266,6 +8404,18 @@
   },
   {
    "name": "Vitamin Well 0,5L Recover/Bezový…",
+   "price": 32.5,
+   "amount": "0,5 l",
+   "unit": ""
+  },
+  {
+   "name": "Vitamin Well 0,5L Reload (12/126)",
+   "price": 32.5,
+   "amount": "0,5 l",
+   "unit": ""
+  },
+  {
+   "name": "Vitamin Well 0,5L Reload/Lemon…",
    "price": 32.5,
    "amount": "0,5 l",
    "unit": ""
@@ -8554,13 +8704,13 @@
   },
   {
    "name": "Absolut Vodka 0,05L Mini 40% (12…",
-   "price": 48.6,
+   "price": 48.11,
    "amount": "0,05 l",
    "unit": ""
   },
   {
    "name": "Absolut Vodka 0,2L 40% (24ks)",
-   "price": 144.0,
+   "price": 142.56,
    "amount": "0,2 l",
    "unit": ""
   },
@@ -8572,79 +8722,79 @@
   },
   {
    "name": "Absolut Vodka 0,35L 40% (12ks)",
-   "price": 229.0,
+   "price": 226.71,
    "amount": "0,35 l",
    "unit": ""
   },
   {
    "name": "Absolut Vodka 0,5L 40% (6ks)",
-   "price": 259.0,
+   "price": 256.41,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Absolut Vodka 0,7L 40% (6/90)",
-   "price": 339.16,
+   "price": 335.78,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Absolut Vodka 0,7L Citron 40% (6…",
-   "price": 405.0,
+   "price": 400.95,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Absolut Vodka 0,7L Vanilia 38% (6…",
-   "price": 399.8,
+   "price": 395.8,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Absolut Vodka 1L 40% (12/64)",
-   "price": 404.0,
+   "price": 399.97,
    "amount": "1 l",
    "unit": ""
   },
   {
    "name": "Absolut Vodka 1L Citron 40% (12/32)",
-   "price": 460.0,
+   "price": 455.4,
    "amount": "1 l",
    "unit": ""
   },
   {
    "name": "Absolut Vodka 1L Grapefruit 40% …",
-   "price": 460.0,
+   "price": 455.4,
    "amount": "1 l",
    "unit": ""
   },
   {
    "name": "Absolut Vodka 1L Mandarin 40% (12…",
-   "price": 449.0,
+   "price": 444.51,
    "amount": "1 l",
    "unit": ""
   },
   {
    "name": "Absolut Vodka 1L Mango 38% (12/64)",
-   "price": 460.0,
+   "price": 455.4,
    "amount": "1 l",
    "unit": ""
   },
   {
    "name": "Absolut Vodka 1L Raspberri 38% (12…",
-   "price": 449.0,
+   "price": 444.51,
    "amount": "1 l",
    "unit": ""
   },
   {
    "name": "Absolut Vodka 1L Vanilla 38% (12…",
-   "price": 460.0,
+   "price": 455.4,
    "amount": "1 l",
    "unit": ""
   },
   {
    "name": "Absolut Vodka 1L Wild Berry 40% …",
-   "price": 449.0,
+   "price": 444.51,
    "amount": "1 l",
    "unit": ""
   },
@@ -8656,19 +8806,19 @@
   },
   {
    "name": "Akashi 0,5L Meisei 40% GiftBox (6…",
-   "price": 695.0,
+   "price": 688.05,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Akashi 0,5L Red Blended 40% (6/80)",
-   "price": 539.0,
+   "price": 533.61,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Akashi 0,5L Red Blended 40%…",
-   "price": 550.0,
+   "price": 544.5,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -9736,25 +9886,25 @@
   },
   {
    "name": "Birell 0,5L Nealko Energy Pomelo…",
-   "price": 19.58,
+   "price": 19.98,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Birell 0,5L Nealko Energy Zelený…",
-   "price": 19.58,
+   "price": 19.98,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Birell 0,5L Nealko Malina-Limetka…",
-   "price": 19.58,
+   "price": 19.98,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Birell 0,5L Nealko Polotmavý…",
-   "price": 19.58,
+   "price": 19.98,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -9766,7 +9916,7 @@
   },
   {
    "name": "Birell 0,5L Nealko Pomelo+Grep…",
-   "price": 19.58,
+   "price": 19.98,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -9778,13 +9928,13 @@
   },
   {
    "name": "Birell 0,5L Nealko Sicilský Citrón…",
-   "price": 19.58,
+   "price": 19.98,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Birell 0,5L Nealko Světlý Plech …",
-   "price": 19.8,
+   "price": 20.2,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -9796,25 +9946,25 @@
   },
   {
    "name": "Birell 0,5L Nealko Višeň-Ostružina…",
-   "price": 19.58,
+   "price": 19.98,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Birell 0,5L Nealko Vitality Citrus…",
-   "price": 19.58,
+   "price": 19.98,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Birell 0,5L Nealko Vitality Mango…",
-   "price": 19.58,
+   "price": 19.98,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Birell 0,5L Nealko Vitality…",
-   "price": 19.58,
+   "price": 19.98,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -9964,7 +10114,7 @@
   },
   {
    "name": "Bohemia Sekt 0,75L Ice…",
-   "price": 133.4,
+   "price": 145.0,
    "amount": "0,75 l",
    "unit": ""
   },
@@ -9976,19 +10126,19 @@
   },
   {
    "name": "Bohemia Sekt 0,75L Nealkoholický …",
-   "price": 133.4,
+   "price": 145.0,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Bohemia Sekt 0,75L Rosé Brut (6/95)",
-   "price": 133.4,
+   "price": 145.0,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Bohemia Sekt 0,75L Rosé Demi Sec …",
-   "price": 133.4,
+   "price": 145.0,
    "amount": "0,75 l",
    "unit": ""
   },
@@ -12640,7 +12790,7 @@
   },
   {
    "name": "Frisco 0,33L Brusinka Plech (24/90)",
-   "price": 19.9,
+   "price": 20.9,
    "amount": "0,33 l",
    "unit": ""
   },
@@ -12658,7 +12808,7 @@
   },
   {
    "name": "Frisco 0,33L Jablko Plech (24/90)",
-   "price": 19.9,
+   "price": 20.9,
    "amount": "0,33 l",
    "unit": ""
   },
@@ -12682,7 +12832,7 @@
   },
   {
    "name": "Frisco 0,33L Mango+Limetka Plech …",
-   "price": 19.9,
+   "price": 20.9,
    "amount": "0,33 l",
    "unit": ""
   },
@@ -12706,7 +12856,7 @@
   },
   {
    "name": "Frisco 0,33L Mimosa Plech (24/90)",
-   "price": 19.9,
+   "price": 20.9,
    "amount": "0,33 l",
    "unit": ""
   },
@@ -12724,7 +12874,7 @@
   },
   {
    "name": "Frisco 0,33L Mojito Plech (24/90)",
-   "price": 19.9,
+   "price": 20.9,
    "amount": "0,33 l",
    "unit": ""
   },
@@ -12742,7 +12892,7 @@
   },
   {
    "name": "Frisco 0,33L Spritz Plech (24/90)",
-   "price": 19.9,
+   "price": 20.9,
    "amount": "0,33 l",
    "unit": ""
   },
@@ -12844,25 +12994,25 @@
   },
   {
    "name": "Gemma 0,75L Cabernet polosladká …",
-   "price": 72.9,
+   "price": 71.44,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Gemma 0,75L Chardonnay polosladká …",
-   "price": 72.9,
+   "price": 71.44,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Gemma 0,75L Merlot polosladká (12…",
-   "price": 72.9,
+   "price": 71.44,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Gemma 0,75L Merlot Rosé polosladká…",
-   "price": 72.9,
+   "price": 71.44,
    "amount": "0,75 l",
    "unit": ""
   },
@@ -13486,7 +13636,7 @@
   },
   {
    "name": "Heineken 0,5L Plech (4ks*6/72)",
-   "price": 19.99,
+   "price": 20.4,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -14644,49 +14794,49 @@
   },
   {
    "name": "JP.Chenet 0,75L Cabernet Syrah (do…",
-   "price": 98.6,
+   "price": 88.9,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "JP.Chenet 0,75L Chardonnay…",
-   "price": 98.6,
+   "price": 88.9,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "JP.Chenet 0,75L Colombard…",
-   "price": 98.6,
+   "price": 88.9,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "JP.Chenet 0,75L Grenache Cinsault…",
-   "price": 98.6,
+   "price": 88.9,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "JP.Chenet 0,75L Medium Sweet Blanc…",
-   "price": 98.6,
+   "price": 88.9,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "JP.Chenet 0,75L Medium Sweet…",
-   "price": 98.6,
+   "price": 88.9,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "JP.Chenet 0,75L Medium Sweet Red …",
-   "price": 98.6,
+   "price": 88.9,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "JP.Chenet 0,75L Merlot (tim) (6/96…",
-   "price": 98.6,
+   "price": 88.9,
    "amount": "0,75 l",
    "unit": ""
   },
@@ -15004,7 +15154,7 @@
   },
   {
    "name": "Kozel 0,5L CZ 10° Světlý Plech …",
-   "price": 17.55,
+   "price": 17.9,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -15016,7 +15166,7 @@
   },
   {
    "name": "Kozel 0,5L CZ 11° Černý Plech (24…",
-   "price": 20.38,
+   "price": 20.8,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -15046,7 +15196,7 @@
   },
   {
    "name": "Kozel 0,5L CZ 11° Zelený Plech (4…",
-   "price": 20.09,
+   "price": 20.5,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -17716,7 +17866,7 @@
   },
   {
    "name": "Réva Rakvice 0,75L Zemské…",
-   "price": 72.3,
+   "price": 70.85,
    "amount": "0,75 l",
    "unit": ""
   },
@@ -17818,7 +17968,7 @@
   },
   {
    "name": "Ron Cariba 0,7L Rum Salted Caramel…",
-   "price": 248.0,
+   "price": 255.0,
    "amount": "0,7 l",
    "unit": ""
   },
@@ -17836,7 +17986,7 @@
   },
   {
    "name": "Ron Cariba 0,7L Salted Caramel &…",
-   "price": 248.0,
+   "price": 255.0,
    "amount": "0,7 l",
    "unit": ""
   },
@@ -18268,7 +18418,7 @@
   },
   {
    "name": "Sovín 0,75L Cabernet Sauvignon 11…",
-   "price": 66.9,
+   "price": 55.4,
    "amount": "0,75 l",
    "unit": ""
   },
@@ -18286,13 +18436,13 @@
   },
   {
    "name": "Sovín 0,75L Frankovka Rosé 11,5% …",
-   "price": 66.9,
+   "price": 55.4,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Sovín 0,75L Merlot 11,5% (6ks) LI",
-   "price": 66.9,
+   "price": 55.4,
    "amount": "0,75 l",
    "unit": ""
   },
@@ -18399,6 +18549,12 @@
    "unit": ""
   },
   {
+   "name": "Stará Myslivecká 0,7L 35% (12/33)",
+   "price": 226.0,
+   "amount": "0,7 l",
+   "unit": ""
+  },
+  {
    "name": "Stará Myslivecká 0,7L 38% (12/33)",
    "price": 226.0,
    "amount": "0,7 l",
@@ -18412,43 +18568,43 @@
   },
   {
    "name": "Staropramen 0,5L 10% Světlý Plech …",
-   "price": 14.5,
+   "price": 14.21,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Staropramen 0,5L 11% Světlý Ležák…",
-   "price": 16.2,
+   "price": 15.88,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Staropramen 0,5L 12% Světlý Ležák…",
-   "price": 16.9,
+   "price": 16.56,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Staropramen 0,5L Nealko Cool…",
-   "price": 16.2,
+   "price": 15.88,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Staropramen 0,5L Nealko Cool…",
-   "price": 18.1,
+   "price": 17.74,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Staropramen 0,5L Nealko Cool…",
-   "price": 16.2,
+   "price": 15.88,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Staropramen 0,5L Nealko Cool Grep…",
-   "price": 16.2,
+   "price": 15.88,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -18460,7 +18616,7 @@
   },
   {
    "name": "Staropramen 0,5L Nealko Cool Mango…",
-   "price": 18.1,
+   "price": 17.74,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -18472,7 +18628,7 @@
   },
   {
    "name": "Staropramen 0,5L Nealko Plech (6*4…",
-   "price": 15.5,
+   "price": 15.19,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -18874,13 +19030,13 @@
   },
   {
    "name": "The Kraken 0,05L Black Spiced Rum…",
-   "price": 81.58,
+   "price": 82.4,
    "amount": "0,05 l",
    "unit": ""
   },
   {
    "name": "The Kraken 0,7L Black Spiced Rum…",
-   "price": 487.09,
+   "price": 492.0,
    "amount": "0,7 l",
    "unit": ""
   },
@@ -18904,7 +19060,7 @@
   },
   {
    "name": "Titos Handmade Vodka 0,7L 40% (6…",
-   "price": 487.09,
+   "price": 492.0,
    "amount": "0,7 l",
    "unit": ""
   },
@@ -18928,85 +19084,85 @@
   },
   {
    "name": "Trapiche 0,75L Cabernet Sauvignon …",
-   "price": 96.92,
+   "price": 98.9,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Trapiche 0,75L Malbec (6/115)",
-   "price": 96.92,
+   "price": 98.9,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Trapiche 0,75L Sauvignon Blanc (6…",
-   "price": 96.92,
+   "price": 98.9,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Trapiche 0,75L Syrah (6/115)",
-   "price": 96.92,
+   "price": 98.9,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Trapiche 0,75L Torrontes Bílé (6…",
-   "price": 96.92,
+   "price": 98.9,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "Tullamore Dew 0,05L Mini Honey 35%…",
-   "price": 70.29,
+   "price": 71.0,
    "amount": "0,05 l",
    "unit": ""
   },
   {
    "name": "Tullamore Dew 0,05L Mini Irish…",
-   "price": 54.66,
+   "price": 55.2,
    "amount": "0,05 l",
    "unit": ""
   },
   {
    "name": "Tullamore Dew 0,35L Irish Whiskey…",
-   "price": 244.53,
+   "price": 247.0,
    "amount": "0,35 l",
    "unit": ""
   },
   {
    "name": "Tullamore Dew 0,5L Honey 35% (12…",
-   "price": 302.94,
+   "price": 306.0,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Tullamore Dew 0,5L Irish Whiskey…",
-   "price": 295.02,
+   "price": 298.0,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Tullamore Dew 0,7L 12YO Irish…",
-   "price": 790.02,
+   "price": 798.0,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Tullamore Dew 0,7L 12YO Irish…",
-   "price": 790.02,
+   "price": 798.0,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Tullamore Dew 0,7L 14YO Single…",
-   "price": 979.31,
+   "price": 989.2,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Tullamore Dew 0,7L Honey 35% (12…",
-   "price": 384.11,
+   "price": 388.0,
    "amount": "0,7 l",
    "unit": ""
   },
@@ -19024,13 +19180,13 @@
   },
   {
    "name": "Tullamore Dew 0,7L Irish Whiskey…",
-   "price": 378.19,
+   "price": 382.0,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Tullamore Dew 0,7L Irish Whiskey…",
-   "price": 524.7,
+   "price": 530.0,
    "amount": "0,7 l",
    "unit": ""
   },
@@ -19042,25 +19198,25 @@
   },
   {
    "name": "Tullamore Dew 0,7L Rum Cask XO 43%…",
-   "price": 460.34,
+   "price": 465.0,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Tullamore Dew 1,75L Irish Whiskey…",
-   "price": 945.45,
+   "price": 955.0,
    "amount": "1,75 l",
    "unit": ""
   },
   {
    "name": "Tullamore Dew 1L Honey 35% (6/64)",
-   "price": 467.89,
+   "price": 472.63,
    "amount": "1 l",
    "unit": ""
   },
   {
    "name": "Tullamore Dew 1L Irish Whiskey 40%…",
-   "price": 455.4,
+   "price": 460.0,
    "amount": "1 l",
    "unit": ""
   },
@@ -19684,25 +19840,25 @@
   },
   {
    "name": "VH Classic 0,75L Chardonnay…",
-   "price": 69.8,
+   "price": 68.4,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "VH Classic 0,75L Irsai Oliver…",
-   "price": 69.8,
+   "price": 68.41,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "VH Classic 0,75L Modrý Portugal…",
-   "price": 69.8,
+   "price": 68.41,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "VH Classic 0,75L Rulanské Šedé…",
-   "price": 69.8,
+   "price": 68.41,
    "amount": "0,75 l",
    "unit": ""
   },
@@ -19714,25 +19870,25 @@
   },
   {
    "name": "VH Classic 0,75L Tramini…",
-   "price": 69.8,
+   "price": 68.41,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "VH Classic 0,75L Veltlínské Zelené…",
-   "price": 69.8,
+   "price": 68.41,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "VH Premium 0,75L Chardonnay…",
-   "price": 96.8,
+   "price": 94.86,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "VH Premium 0,75L Cuvee Cabernet…",
-   "price": 96.8,
+   "price": 94.86,
    "amount": "0,75 l",
    "unit": ""
   },
@@ -19744,49 +19900,49 @@
   },
   {
    "name": "VH Premium 0,75L Frankovka Blanc…",
-   "price": 96.8,
+   "price": 94.86,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "VH Premium 0,75L Hibernal…",
-   "price": 96.8,
+   "price": 94.86,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "VH Premium 0,75L Pálava polosuché …",
-   "price": 96.8,
+   "price": 94.86,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "VH Premium 0,75L Rulandské Šedé…",
-   "price": 96.8,
+   "price": 94.86,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "VH Premium 0,75L Ryzlink Vlašský…",
-   "price": 96.8,
+   "price": 94.86,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "VH Premium 0,75L Sauvignon suché …",
-   "price": 96.8,
+   "price": 94.86,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "VH Premium 0,75L Tramín Červený…",
-   "price": 96.8,
+   "price": 94.86,
    "amount": "0,75 l",
    "unit": ""
   },
   {
    "name": "VH Premium 0,75L Veltlínské Zelené…",
-   "price": 96.8,
+   "price": 94.86,
    "amount": "0,75 l",
    "unit": ""
   },
@@ -20530,7 +20686,7 @@
   },
   {
    "name": "Zubrowka 0,05L Mini 37,5% Pet …",
-   "price": 42.1,
+   "price": 41.68,
    "amount": "0,05 l",
    "unit": ""
   },
@@ -20566,7 +20722,7 @@
   },
   {
    "name": "Zubrowka 0,5L Vodka Bisson 37,5% …",
-   "price": 148.0,
+   "price": 146.52,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -20578,19 +20734,19 @@
   },
   {
    "name": "Zubrowka 0,5L Vodka Spiced 30% …",
-   "price": 141.4,
+   "price": 139.98,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Zubrowka 0,7L Vodka Bílá +1…",
-   "price": 275.0,
+   "price": 272.25,
    "amount": "0,7 l",
    "unit": ""
   },
   {
    "name": "Zubrowka 0,7L Vodka Bílá 37,5% …",
-   "price": 220.0,
+   "price": 217.8,
    "amount": "0,7 l",
    "unit": ""
   },
@@ -20602,7 +20758,7 @@
   },
   {
    "name": "Zubrowka 1L Bisson Grass 37,5% …",
-   "price": 272.0,
+   "price": 269.29,
    "amount": "1 l",
    "unit": ""
   },
@@ -20626,31 +20782,31 @@
   },
   {
    "name": "Žufánek 0,5L 35% Ořechovka (6ks)",
-   "price": 397.98,
+   "price": 402.0,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Žufánek 0,5L 40% Hruškovica z…",
-   "price": 589.84,
+   "price": 595.8,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Žufánek 0,5L 40% Kontuškovka (6ks)",
-   "price": 398.77,
+   "price": 402.8,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Žufánek 0,5L 45% Borovička (6ks)",
-   "price": 413.61,
+   "price": 417.8,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Žufánek 0,5L 45% Hruškovica (6ks)",
-   "price": 497.48,
+   "price": 502.5,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -20662,19 +20818,19 @@
   },
   {
    "name": "Žufánek 0,5L 45% Kloudovice (6ks)",
-   "price": 497.48,
+   "price": 502.5,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Žufánek 0,5L 45% Meruňkovica (6ks)",
-   "price": 497.48,
+   "price": 502.5,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Žufánek 0,5L 50% Slivovica (6ks)",
-   "price": 498.37,
+   "price": 503.4,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -21406,37 +21562,37 @@
   },
   {
    "name": "Argo 60g Sour Madness Bad Match…",
-   "price": 17.0,
+   "price": 16.49,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Argo 60g Sour Madness Crush/Keo…",
-   "price": 16.45,
+   "price": 15.96,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Argo 60g Sour Madness Fire/Keo dau…",
-   "price": 16.45,
+   "price": 15.96,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Argo 60g Sour Madness Mix/Keo dau…",
-   "price": 16.45,
+   "price": 15.96,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Argo 60g Sour Madness Pure/Keo dau…",
-   "price": 16.45,
+   "price": 15.96,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Argo 60g Sour Madness Tropical/Keo…",
-   "price": 16.45,
+   "price": 15.96,
    "amount": "60 g",
    "unit": ""
   },
@@ -21448,7 +21604,7 @@
   },
   {
    "name": "Artur Krekry 100g (24/132)",
-   "price": 7.7,
+   "price": 7.47,
    "amount": "100 g",
    "unit": ""
   },
@@ -21676,19 +21832,19 @@
   },
   {
    "name": "Big Shock! 55g Ener.tyčinka Koko s…",
-   "price": 10.91,
+   "price": 10.58,
    "amount": "55 g",
    "unit": ""
   },
   {
    "name": "Big Shock! 65g Ener.tyčinka Čoko s…",
-   "price": 10.91,
+   "price": 10.58,
    "amount": "65 g",
    "unit": ""
   },
   {
    "name": "Big Shock! 65g Ener.tyčinka…",
-   "price": 10.91,
+   "price": 10.58,
    "amount": "65 g",
    "unit": ""
   },
@@ -22294,49 +22450,49 @@
   },
   {
    "name": "Chio 110g Tortillas Hot Chili (12…",
-   "price": 28.3,
+   "price": 27.45,
    "amount": "110 g",
    "unit": ""
   },
   {
    "name": "Chio 110g Tortillas Nacho Cheese …",
-   "price": 28.3,
+   "price": 27.45,
    "amount": "110 g",
    "unit": ""
   },
   {
    "name": "Chio 110g Tortillas Salt (12/64)",
-   "price": 28.3,
+   "price": 27.45,
    "amount": "110 g",
    "unit": ""
   },
   {
    "name": "Chio 200g Tortillas Chilli (20/32)",
-   "price": 37.9,
+   "price": 36.76,
    "amount": "200 g",
    "unit": ""
   },
   {
    "name": "Chio 200g Tortillas Nacho Cheese …",
-   "price": 37.9,
+   "price": 36.76,
    "amount": "200 g",
    "unit": ""
   },
   {
    "name": "Chio 200ml Dip Hot Cheese (6/247)",
-   "price": 42.66,
+   "price": 41.38,
    "amount": "200 ml",
    "unit": ""
   },
   {
    "name": "Chio 200ml Dip Hot Salsa (6/247)",
-   "price": 42.66,
+   "price": 41.38,
    "amount": "200 ml",
    "unit": ""
   },
   {
    "name": "Chio 200ml Dip Mild Salsa (6/247)",
-   "price": 42.66,
+   "price": 41.38,
    "amount": "200 ml",
    "unit": ""
   },
@@ -22360,19 +22516,19 @@
   },
   {
    "name": "Chio 65g Big Pep (10/64)",
-   "price": 23.5,
+   "price": 22.79,
    "amount": "65 g",
    "unit": ""
   },
   {
    "name": "Chio 65g Cornados Paprika (10/64)",
-   "price": 23.5,
+   "price": 22.79,
    "amount": "65 g",
    "unit": ""
   },
   {
    "name": "Chio 65g Fried Chicken (10/64)",
-   "price": 23.5,
+   "price": 22.79,
    "amount": "65 g",
    "unit": ""
   },
@@ -22924,31 +23080,31 @@
   },
   {
    "name": "Delissa 30g Hořká (30ks)",
-   "price": 7.42,
+   "price": 7.2,
    "amount": "30 g",
    "unit": ""
   },
   {
    "name": "Delissa 30g Kokosová (30ks)",
-   "price": 7.42,
+   "price": 7.2,
    "amount": "30 g",
    "unit": ""
   },
   {
    "name": "Delissa 30g Mléčná (30ks)",
-   "price": 7.42,
+   "price": 7.2,
    "amount": "30 g",
    "unit": ""
   },
   {
    "name": "Delissa 30g Vanilková (30ks)",
-   "price": 7.42,
+   "price": 7.2,
    "amount": "30 g",
    "unit": ""
   },
   {
    "name": "Delissa 33g Oříšková (30/225)",
-   "price": 7.42,
+   "price": 7.2,
    "amount": "33 g",
    "unit": ""
   },
@@ -23806,31 +23962,31 @@
   },
   {
    "name": "Fini Roller 20g Jahoda (18ks…",
-   "price": 115.43,
+   "price": 119.0,
    "amount": "20 g",
    "unit": ""
   },
   {
    "name": "Fini Roller 20g Jahoda s Náplní …",
-   "price": 115.43,
+   "price": 119.0,
    "amount": "20 g",
    "unit": ""
   },
   {
    "name": "Fini Roller 20g Malina (18ks…",
-   "price": 115.43,
+   "price": 119.0,
    "amount": "20 g",
    "unit": ""
   },
   {
    "name": "Fini Roller 20g Meloun (18ks…",
-   "price": 112.32,
+   "price": 115.8,
    "amount": "20 g",
    "unit": ""
   },
   {
    "name": "Fini Roller 20g Rainbow (18ks…",
-   "price": 115.43,
+   "price": 119.0,
    "amount": "20 g",
    "unit": ""
   },
@@ -24064,19 +24220,19 @@
   },
   {
    "name": "Flipz 90g Milk Chocolate Usa (6…",
-   "price": 38.9,
+   "price": 37.73,
    "amount": "90 g",
    "unit": ""
   },
   {
    "name": "Flipz 90g Peanut Butter (6/180)",
-   "price": 38.9,
+   "price": 37.73,
    "amount": "90 g",
    "unit": ""
   },
   {
    "name": "Flipz 90g Salted Caramel Usa (6…",
-   "price": 38.9,
+   "price": 37.73,
    "amount": "90 g",
    "unit": ""
   },
@@ -24130,73 +24286,73 @@
   },
   {
    "name": "Fripsy 40g Onion (Jarni cibulka s…",
-   "price": 7.0,
+   "price": 7.3,
    "amount": "40 g",
    "unit": ""
   },
   {
    "name": "Fripsy 50g BBQ (25ks)",
-   "price": 6.9,
+   "price": 7.3,
    "amount": "50 g",
    "unit": ""
   },
   {
    "name": "Fripsy 50g Chilli (25ks)",
-   "price": 6.9,
+   "price": 7.3,
    "amount": "50 g",
    "unit": ""
   },
   {
    "name": "Fripsy 50g Habanero Lime (25ks)",
-   "price": 6.9,
+   "price": 7.0,
    "amount": "50 g",
    "unit": ""
   },
   {
    "name": "Fripsy 50g Hot Dog (25ks)",
-   "price": 6.9,
+   "price": 7.0,
    "amount": "50 g",
    "unit": ""
   },
   {
    "name": "Fripsy 50g Italská Směs (25ks)",
-   "price": 6.9,
+   "price": 7.3,
    "amount": "50 g",
    "unit": ""
   },
   {
    "name": "Fripsy 50g Ketchup (25ks)",
-   "price": 6.9,
+   "price": 7.0,
    "amount": "50 g",
    "unit": ""
   },
   {
    "name": "Fripsy 50g Kuře (25ks)",
-   "price": 6.9,
+   "price": 7.3,
    "amount": "50 g",
    "unit": ""
   },
   {
    "name": "Fripsy 50g Pizza (25ks)",
-   "price": 6.9,
+   "price": 7.3,
    "amount": "50 g",
    "unit": ""
   },
   {
    "name": "Fripsy 50g Slané (25ks)",
-   "price": 6.9,
+   "price": 7.3,
    "amount": "50 g",
    "unit": ""
   },
   {
    "name": "Fripsy 50g Slanina (25ks)",
-   "price": 6.9,
+   "price": 7.3,
    "amount": "50 g",
    "unit": ""
   },
   {
    "name": "Fripsy 50g Sýr (25ks)",
-   "price": 6.9,
+   "price": 7.3,
    "amount": "50 g",
    "unit": ""
   },
@@ -24286,19 +24442,19 @@
   },
   {
    "name": "Ghost snack 70g Kečup (15ks)",
-   "price": 13.33,
+   "price": 12.92,
    "amount": "70 g",
    "unit": ""
   },
   {
    "name": "Ghost snack 70g Solené (15ks)",
-   "price": 13.33,
+   "price": 12.92,
    "amount": "70 g",
    "unit": ""
   },
   {
    "name": "Ghost snack 70g Sýr (15ks)",
-   "price": 13.33,
+   "price": 12.92,
    "amount": "70 g",
    "unit": ""
   },
@@ -24645,6 +24801,12 @@
    "unit": ""
   },
   {
+   "name": "HAN NGAN Lays 55g Strong Cheese…",
+   "price": 15.4,
+   "amount": "55 g",
+   "unit": ""
+  },
+  {
    "name": "HAN NGAN Lays 55g Strong Chicken…",
    "price": 16.95,
    "amount": "55 g",
@@ -24957,6 +25119,12 @@
    "unit": ""
   },
   {
+   "name": "Haribo 160g CZ Starmix (36/88)",
+   "price": 24.51,
+   "amount": "160 g",
+   "unit": ""
+  },
+  {
    "name": "Haribo 160g CZ Tropi Frutti…",
    "price": 26.98,
    "amount": "160 g",
@@ -25173,7 +25341,7 @@
    "unit": ""
   },
   {
-   "name": "Haribo 160g EU Wassermelonen (32…",
+   "name": "Haribo 160g EU Wassermelonen…",
    "price": 24.51,
    "amount": "160 g",
    "unit": ""
@@ -26410,7 +26578,7 @@
   },
   {
    "name": "HET HAN Milka 100g Wholenuts (17ks…",
-   "price": 9.0,
+   "price": 22.9,
    "amount": "100 g",
    "unit": ""
   },
@@ -26860,49 +27028,61 @@
   },
   {
    "name": "JIMMY FOX Baby Burger (10g*70ks…",
-   "price": 182.06,
+   "price": 187.69,
    "amount": "10 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Baby on Carriage (5g*9ks…",
-   "price": 232.8,
+   "price": 240.0,
    "amount": "5 g",
    "unit": ""
   },
   {
+   "name": "JIMMY FOX Boom Powder (3g*120ks…",
+   "price": 136.36,
+   "amount": "3 g",
+   "unit": ""
+  },
+  {
    "name": "JIMMY FOX Brain Lollipop (50g*12ks…",
-   "price": 167.94,
+   "price": 173.13,
    "amount": "50 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Candy Cane Rainbow (14g…",
-   "price": 286.15,
+   "price": 295.0,
    "amount": "14 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Candy Duel (5g*9ks*6disp)",
-   "price": 203.53,
+   "price": 209.82,
    "amount": "5 g",
    "unit": ""
   },
   {
+   "name": "JIMMY FOX Chewy Beads (16g*48ks…",
+   "price": 195.98,
+   "amount": "16 g",
+   "unit": ""
+  },
+  {
    "name": "JIMMY FOX Clown Candy (17g*24ks…",
-   "price": 159.02,
+   "price": 163.94,
    "amount": "17 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Coctail Fruits Candy …",
-   "price": 85.55,
+   "price": 88.2,
    "amount": "",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Commando Police+Light …",
-   "price": 315.08,
+   "price": 324.82,
    "amount": "",
    "unit": ""
   },
@@ -26914,205 +27094,211 @@
   },
   {
    "name": "JIMMY FOX Cupcake Lighting Police…",
-   "price": 324.95,
+   "price": 335.0,
    "amount": "",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Cupcake Lollipop With…",
-   "price": 211.08,
+   "price": 217.6,
    "amount": "",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Donuts Multicolor (20g…",
-   "price": 195.26,
+   "price": 201.3,
    "amount": "20 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Donuts Strawberry…",
-   "price": 195.26,
+   "price": 201.3,
    "amount": "",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Double Robot Spinner…",
-   "price": 202.54,
+   "price": 208.8,
    "amount": "",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Dracula Lollipop (4,5g…",
-   "price": 292.16,
+   "price": 301.2,
    "amount": "4,5 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Dron Lollipop (10g*15ks…",
-   "price": 268.69,
+   "price": 277.0,
    "amount": "10 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Easter Marshmallows (36g…",
-   "price": 320.58,
+   "price": 330.5,
    "amount": "36 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Face Tornado (10g*20ks…",
-   "price": 289.55,
+   "price": 298.5,
    "amount": "10 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Fire Spray (50ml*20ks…",
-   "price": 161.89,
+   "price": 166.9,
    "amount": "50 ml",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Fireman+Fan (15g*12ks…",
-   "price": 295.88,
+   "price": 305.03,
    "amount": "15 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Fly Fan Candy (5g*16ks…",
-   "price": 172.66,
+   "price": 178.0,
    "amount": "5 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Hammer Stamp Lollipop …",
-   "price": 213.21,
+   "price": 219.8,
    "amount": "",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Hyper Splash Blaster (5g…",
-   "price": 200.91,
+   "price": 207.11,
    "amount": "5 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Ice Cream Balls +vit. C …",
-   "price": 216.31,
+   "price": 223.0,
    "amount": "",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Lízátko Ice Cream (23g…",
-   "price": 145.43,
+   "price": 149.92,
    "amount": "23 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Lolliphone+Tattoo …",
-   "price": 285.36,
+   "price": 294.2,
    "amount": "",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Maxxi Roll Snake+Tattoo …",
-   "price": 235.23,
+   "price": 242.5,
    "amount": "",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Mermaid Candy Pearl (17g…",
-   "price": 202.4,
+   "price": 208.66,
    "amount": "17 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Off Road Truck (5g*8ks…",
-   "price": 211.08,
+   "price": 217.6,
    "amount": "5 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Popping Foot & Thumb +…",
-   "price": 169.75,
+   "price": 175.0,
    "amount": "",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Royal Lollipop (8g*180ks…",
-   "price": 289.82,
+   "price": 298.78,
    "amount": "8 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Scary Brain (18g*90ks…",
-   "price": 869.43,
+   "price": 896.31,
    "amount": "18 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Sheriff Lollipop (8g…",
-   "price": 215.53,
+   "price": 222.2,
    "amount": "8 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Space Spray (25ml*24ks…",
-   "price": 112.38,
+   "price": 115.87,
    "amount": "25 ml",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Spinner Watch Candy (5g…",
-   "price": 226.0,
+   "price": 233.0,
    "amount": "5 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Splash & Sweet (5g*8ks…",
-   "price": 216.89,
+   "price": 223.6,
    "amount": "5 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Squeeze Tube (40ml*16ks…",
-   "price": 162.49,
+   "price": 167.52,
    "amount": "40 ml",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Squeeze Tube XXXL (120g…",
-   "price": 287.95,
+   "price": 296.86,
    "amount": "120 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Super Heroes Spray (25ml…",
-   "price": 112.38,
+   "price": 115.87,
    "amount": "25 ml",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Super Spray Bomb (50ml…",
-   "price": 161.89,
+   "price": 166.9,
    "amount": "50 ml",
    "unit": ""
   },
   {
+   "name": "JIMMY FOX Sweet & Sour Candies (5…",
+   "price": 171.32,
+   "amount": "",
+   "unit": ""
+  },
+  {
    "name": "JIMMY FOX Sweet Roll (40ml*20ks…",
-   "price": 152.54,
+   "price": 157.26,
    "amount": "40 ml",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Toilet Lollipop & Powder…",
-   "price": 247.35,
+   "price": 255.0,
    "amount": "",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Traffic Light (10,5g…",
-   "price": 117.66,
+   "price": 121.3,
    "amount": "10,5 g",
    "unit": ""
   },
@@ -27124,19 +27310,19 @@
   },
   {
    "name": "JIMMY FOX Unicorn Spray (60ml*12ks…",
-   "price": 200.7,
+   "price": 206.91,
    "amount": "60 ml",
    "unit": ""
   },
   {
    "name": "JIMMY FOX Watch Candy (14g*70ks…",
-   "price": 190.12,
+   "price": 196.0,
    "amount": "14 g",
    "unit": ""
   },
   {
    "name": "JIMMY FOX XXL House Burger (50g…",
-   "price": 309.62,
+   "price": 319.2,
    "amount": "50 g",
    "unit": ""
   },
@@ -27964,79 +28150,79 @@
   },
   {
    "name": "Jojo 80g Abeceda (28ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Borůvky (32ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Cola Mix (28ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Delfínci (32ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Housenky (28ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Hrošíci Plnění (28ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Ice Tea (28ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Jahůdky (32ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Kaktusáci (28ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Kyselé Rybičky (32ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Kyselé Žížalky (28ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Marshmallow (24ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Medvídci (32ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
@@ -28060,25 +28246,25 @@
   },
   {
    "name": "Jojo 80g Papoušci (32ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Srdcovky (28ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Vexta (36ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Jojo 80g Vexta Kyselá (32ks)",
-   "price": 14.9,
+   "price": 14.45,
    "amount": "80 g",
    "unit": ""
   },
@@ -28090,31 +28276,31 @@
   },
   {
    "name": "Jolly Time Popcorn 100g Blast O…",
-   "price": 22.9,
+   "price": 22.21,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Jolly Time Popcorn 100g Crispy'n…",
-   "price": 22.9,
+   "price": 22.21,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Jolly Time Popcorn 100g Sweet'n…",
-   "price": 22.9,
+   "price": 22.21,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Jolly Time Popcorn 100g The Big…",
-   "price": 22.9,
+   "price": 22.21,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Jolly Time Popcorn 85g Healthy Pop…",
-   "price": 22.9,
+   "price": 22.21,
    "amount": "85 g",
    "unit": ""
   },
@@ -28660,7 +28846,7 @@
   },
   {
    "name": "Kinder 50g CZ Chocolate T4 (160ks)",
-   "price": 15.5,
+   "price": 15.85,
    "amount": "50 g",
    "unit": ""
   },
@@ -28930,13 +29116,13 @@
   },
   {
    "name": "Lays 110g Oven Baked Yogurt and…",
-   "price": 27.5,
+   "price": 26.67,
    "amount": "110 g",
    "unit": ""
   },
   {
    "name": "Lays 120g Hot Chicken Wings (24/24)",
-   "price": 27.5,
+   "price": 26.67,
    "amount": "120 g",
    "unit": ""
   },
@@ -28966,19 +29152,19 @@
   },
   {
    "name": "Lays 120g Strong Cheese & Cayenne …",
-   "price": 27.5,
+   "price": 26.67,
    "amount": "120 g",
    "unit": ""
   },
   {
    "name": "Lays 120g Strong Chilli & Lime (24…",
-   "price": 27.5,
+   "price": 26.67,
    "amount": "120 g",
    "unit": ""
   },
   {
    "name": "Lays 120g Wavy BBQ Brisket FIFA …",
-   "price": 27.5,
+   "price": 26.67,
    "amount": "120 g",
    "unit": ""
   },
@@ -28990,7 +29176,7 @@
   },
   {
    "name": "Lays 130g Barbecue Ribs (21/24)",
-   "price": 27.5,
+   "price": 26.67,
    "amount": "130 g",
    "unit": ""
   },
@@ -29026,7 +29212,7 @@
   },
   {
    "name": "Lays 130g Fromage (21/24)",
-   "price": 27.5,
+   "price": 26.67,
    "amount": "130 g",
    "unit": ""
   },
@@ -29044,25 +29230,25 @@
   },
   {
    "name": "Lays 130g Pizza Hut Margherita (21…",
-   "price": 27.5,
+   "price": 26.67,
    "amount": "130 g",
    "unit": ""
   },
   {
    "name": "Lays 130g Salted (21/24)",
-   "price": 27.5,
+   "price": 26.67,
    "amount": "130 g",
    "unit": ""
   },
   {
    "name": "Lays 130g Stix Ketchup (26/28)",
-   "price": 27.5,
+   "price": 26.67,
    "amount": "130 g",
    "unit": ""
   },
   {
    "name": "Lays 55g Barbecue Ribs (14/64)",
-   "price": 16.11,
+   "price": 15.62,
    "amount": "55 g",
    "unit": ""
   },
@@ -29080,13 +29266,13 @@
   },
   {
    "name": "Lays 55g Fromage/Sýr (14/64)",
-   "price": 16.11,
+   "price": 15.62,
    "amount": "55 g",
    "unit": ""
   },
   {
    "name": "Lays 55g Green Onion (Cibule) (14…",
-   "price": 16.11,
+   "price": 15.62,
    "amount": "55 g",
    "unit": ""
   },
@@ -29104,12 +29290,6 @@
   },
   {
    "name": "Lays 55g Salted (solené) (14/64)",
-   "price": 15.62,
-   "amount": "55 g",
-   "unit": ""
-  },
-  {
-   "name": "Lays 55g Strong Cheese Cayenne (14…",
    "price": 15.62,
    "amount": "55 g",
    "unit": ""
@@ -29470,7 +29650,7 @@
   },
   {
    "name": "Lion 42g CZ Black&White (24/240)",
-   "price": 11.64,
+   "price": 12.0,
    "amount": "42 g",
    "unit": ""
   },
@@ -29482,13 +29662,13 @@
   },
   {
    "name": "Lion 42g CZ Standard (36/189)",
-   "price": 11.64,
+   "price": 12.0,
    "amount": "42 g",
    "unit": ""
   },
   {
    "name": "Lion 42g CZ White (36/189)",
-   "price": 11.64,
+   "price": 12.0,
    "amount": "42 g",
    "unit": ""
   },
@@ -29512,13 +29692,13 @@
   },
   {
    "name": "Lion 60g CZ 2Pack (28/160)",
-   "price": 14.55,
+   "price": 15.0,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Lion 60g CZ 2Pack White (30/160)",
-   "price": 14.55,
+   "price": 15.0,
    "amount": "60 g",
    "unit": ""
   },
@@ -30700,7 +30880,7 @@
   },
   {
    "name": "Mentos 13,5g Gum Fresh Mint (40/20)",
-   "price": 5.82,
+   "price": 6.0,
    "amount": "13,5 g",
    "unit": ""
   },
@@ -30712,43 +30892,43 @@
   },
   {
    "name": "Mentos 13,5g Gum White Peppermint …",
-   "price": 5.82,
+   "price": 6.0,
    "amount": "13,5 g",
    "unit": ""
   },
   {
    "name": "Mentos 21g CleanBreath Berry Mint …",
-   "price": 20.63,
+   "price": 21.27,
    "amount": "21 g",
    "unit": ""
   },
   {
    "name": "Mentos 21g CleanBreath LemonMint …",
-   "price": 20.63,
+   "price": 21.27,
    "amount": "21 g",
    "unit": ""
   },
   {
    "name": "Mentos 21g CleanBreath Peppermint …",
-   "price": 20.75,
+   "price": 21.39,
    "amount": "21 g",
    "unit": ""
   },
   {
    "name": "Mentos 21g CleanBreath Winter…",
-   "price": 20.63,
+   "price": 21.27,
    "amount": "21 g",
    "unit": ""
   },
   {
    "name": "Mentos 26g Gum PF Vitamins (12x10)",
-   "price": 18.47,
+   "price": 19.04,
    "amount": "26 g",
    "unit": ""
   },
   {
    "name": "Mentos 30g Gum PF Bubble Fresh …",
-   "price": 19.95,
+   "price": 20.57,
    "amount": "30 g",
    "unit": ""
   },
@@ -30760,49 +30940,49 @@
   },
   {
    "name": "Mentos 30g Gum PF Fruit Strawberry…",
-   "price": 19.96,
+   "price": 20.57,
    "amount": "30 g",
    "unit": ""
   },
   {
    "name": "Mentos 30g Gum PF Spearmint (12x10)",
-   "price": 19.96,
+   "price": 20.57,
    "amount": "30 g",
    "unit": ""
   },
   {
    "name": "Mentos 30g Gum PF Watermelon …",
-   "price": 19.96,
+   "price": 20.57,
    "amount": "30 g",
    "unit": ""
   },
   {
    "name": "Mentos 37,5g CZ Berry Good (8*40ks)",
-   "price": 9.21,
+   "price": 9.5,
    "amount": "37,5 g",
    "unit": ""
   },
   {
    "name": "Mentos 37,5g CZ Discovery (8*40ks)",
-   "price": 9.87,
+   "price": 10.18,
    "amount": "37,5 g",
    "unit": ""
   },
   {
    "name": "Mentos 37,5g CZ Pineapple (16*20ks)",
-   "price": 9.88,
+   "price": 10.18,
    "amount": "37,5 g",
    "unit": ""
   },
   {
    "name": "Mentos 37,5g CZ Rainbow (8*40ks)",
-   "price": 9.87,
+   "price": 10.18,
    "amount": "37,5 g",
    "unit": ""
   },
   {
    "name": "Mentos 37,5g CZ Sour Tones (8*40ks)",
-   "price": 9.88,
+   "price": 10.18,
    "amount": "37,5 g",
    "unit": ""
   },
@@ -30814,13 +30994,13 @@
   },
   {
    "name": "Mentos 38g CZ Fruit (8*40ks)",
-   "price": 9.87,
+   "price": 10.18,
    "amount": "38 g",
    "unit": ""
   },
   {
    "name": "Mentos 38g CZ Mint (8*40)",
-   "price": 9.21,
+   "price": 9.5,
    "amount": "38 g",
    "unit": ""
   },
@@ -30832,19 +31012,19 @@
   },
   {
    "name": "Mentos 60g Gum PF Bubble Fresh …",
-   "price": 35.24,
+   "price": 36.33,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Mentos 60g Gum PF Fresh Mint …",
-   "price": 35.24,
+   "price": 36.33,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Mentos 60g Gum PF Lime Mint (4x6ks)",
-   "price": 35.24,
+   "price": 36.33,
    "amount": "60 g",
    "unit": ""
   },
@@ -31467,7 +31647,7 @@
    "unit": ""
   },
   {
-   "name": "Milka 90g Raisins Hazelnuts (23ks)",
+   "name": "Milka 90g Raisins Hazelnuts (23ks)…",
    "price": 24.51,
    "amount": "90 g",
    "unit": ""
@@ -31648,25 +31828,25 @@
   },
   {
    "name": "Monsters 80g Proteinová Tyčinka…",
-   "price": 21.73,
+   "price": 22.4,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Monsters 80g Proteinová Tyčinka…",
-   "price": 21.73,
+   "price": 22.4,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Monsters 80g Proteinová Tyčinka…",
-   "price": 21.73,
+   "price": 22.4,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Monsters 80g Proteinová Tyčinka…",
-   "price": 21.73,
+   "price": 22.4,
    "amount": "80 g",
    "unit": ""
   },
@@ -31900,13 +32080,13 @@
   },
   {
    "name": "Nerds 141g Grape & Strawberry Usa …",
-   "price": 43.5,
+   "price": 42.2,
    "amount": "141 g",
    "unit": ""
   },
   {
    "name": "Nerds 141g Rainbow/Fruits Usa (12…",
-   "price": 51.5,
+   "price": 49.95,
    "amount": "141 g",
    "unit": ""
   },
@@ -31918,19 +32098,19 @@
   },
   {
    "name": "Nerds 26g Rope Rainbow (288/32) (0…",
-   "price": 27.5,
+   "price": 26.68,
    "amount": "26 g",
    "unit": ""
   },
   {
    "name": "Nerds 26g Rope Tropical (288/32) …",
-   "price": 27.5,
+   "price": 26.68,
    "amount": "26 g",
    "unit": ""
   },
   {
    "name": "Nerds 26g Rope Very Berry (288/32)…",
-   "price": 27.5,
+   "price": 26.68,
    "amount": "26 g",
    "unit": ""
   },
@@ -31948,7 +32128,7 @@
   },
   {
    "name": "Nerds 46,7g Cherry & Watermelon…",
-   "price": 27.4,
+   "price": 26.58,
    "amount": "46,7 g",
    "unit": ""
   },
@@ -31960,7 +32140,7 @@
   },
   {
    "name": "Nerds 46,7g Grape & Strawberry Usa…",
-   "price": 27.4,
+   "price": 26.58,
    "amount": "46,7 g",
    "unit": ""
   },
@@ -33058,7 +33238,7 @@
   },
   {
    "name": "Piedmont Trubičky 160g Arašídy…",
-   "price": 15.5,
+   "price": 15.04,
    "amount": "160 g",
    "unit": ""
   },
@@ -33070,43 +33250,43 @@
   },
   {
    "name": "Piedmont Trubičky 160g Coconut…",
-   "price": 15.5,
+   "price": 15.04,
    "amount": "160 g",
    "unit": ""
   },
   {
    "name": "Piedmont Trubičky 160g Kakao (28…",
-   "price": 15.5,
+   "price": 15.04,
    "amount": "160 g",
    "unit": ""
   },
   {
    "name": "Piedmont Trubičky 160g Milk-Kakao …",
-   "price": 15.5,
+   "price": 15.04,
    "amount": "160 g",
    "unit": ""
   },
   {
    "name": "Piedmont Trubičky 160g Oříškové …",
-   "price": 15.5,
+   "price": 15.04,
    "amount": "160 g",
    "unit": ""
   },
   {
    "name": "Piedmont Trubičky 160g Pistaccio…",
-   "price": 19.9,
+   "price": 19.3,
    "amount": "160 g",
    "unit": ""
   },
   {
    "name": "Piedmont Trubičky 160g Smetana …",
-   "price": 15.5,
+   "price": 15.04,
    "amount": "160 g",
    "unit": ""
   },
   {
    "name": "Piedmont Trubičky 160g Vanilla (28…",
-   "price": 15.5,
+   "price": 15.04,
    "amount": "160 g",
    "unit": ""
   },
@@ -33681,7 +33861,7 @@
    "unit": ""
   },
   {
-   "name": "Profisa 20g Vajíčko XXXL Princess …",
+   "name": "Profisa 20g Vajíčko XXXL Little…",
    "price": 265.82,
    "amount": "20 g",
    "unit": ""
@@ -33694,7 +33874,7 @@
   },
   {
    "name": "Profisa 20g XXL Dinosaur Egg…",
-   "price": 375.74,
+   "price": 226.0,
    "amount": "20 g",
    "unit": ""
   },
@@ -33706,13 +33886,13 @@
   },
   {
    "name": "Profisa 21g Vajíčko Knead Pinch…",
-   "price": 239.58,
+   "price": 226.0,
    "amount": "21 g",
    "unit": ""
   },
   {
    "name": "Profisa 21g Vajíčko Zoo Animals",
-   "price": 44.7,
+   "price": 226.0,
    "amount": "21 g",
    "unit": ""
   },
@@ -33765,9 +33945,9 @@
    "unit": ""
   },
   {
-   "name": "Profisa Vajíčko Dog Toy Egg (21g…",
+   "name": "Profisa Vajíčko Dog 4in1 Toy Egg …",
    "price": 268.22,
-   "amount": "21 g",
+   "amount": "",
    "unit": ""
   },
   {
@@ -33935,6 +34115,12 @@
   {
    "name": "Reese's 68g Big Cup Stuffed With…",
    "price": 44.0,
+   "amount": "68 g",
+   "unit": ""
+  },
+  {
+   "name": "Reese's 68g Minis Peanut Butter…",
+   "price": 48.6,
    "amount": "68 g",
    "unit": ""
   },
@@ -34672,19 +34858,19 @@
   },
   {
    "name": "Skittles 38g Crazysour (14ks)",
-   "price": 8.24,
+   "price": 8.5,
    "amount": "38 g",
    "unit": ""
   },
   {
    "name": "Skittles 38g Fruits (14ks)",
-   "price": 8.24,
+   "price": 8.5,
    "amount": "38 g",
    "unit": ""
   },
   {
    "name": "Skittles 38g Smoothies Mix (14ks)",
-   "price": 8.24,
+   "price": 8.5,
    "amount": "38 g",
    "unit": ""
   },
@@ -35590,19 +35776,19 @@
   },
   {
    "name": "Top of the Pop 100g Choco &…",
-   "price": 9.84,
+   "price": 10.15,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Top of the Pop 100g Extra Butter …",
-   "price": 9.84,
+   "price": 10.15,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Top of the Pop 100g Extra Cheese …",
-   "price": 9.84,
+   "price": 10.15,
    "amount": "100 g",
    "unit": ""
   },
@@ -35614,37 +35800,37 @@
   },
   {
    "name": "Top of the Pop 100g Extra Hot…",
-   "price": 9.84,
+   "price": 10.15,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Top of the Pop 100g Extra Salt …",
-   "price": 9.84,
+   "price": 10.15,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Top of the Pop 100g Honey (15ks…",
-   "price": 9.84,
+   "price": 10.15,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Top of the Pop 100g Salted Caramel…",
-   "price": 9.84,
+   "price": 10.15,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Top of the Pop 100g Sugar (15ks…",
-   "price": 9.84,
+   "price": 10.15,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Top of the Pop 100g Sweet & Salty …",
-   "price": 9.84,
+   "price": 10.15,
    "amount": "100 g",
    "unit": ""
   },
@@ -36058,19 +36244,19 @@
   },
   {
    "name": "Twix 46g CZ Hazelnut (30/300)",
-   "price": 13.48,
+   "price": 13.9,
    "amount": "46 g",
    "unit": ""
   },
   {
    "name": "Twix 46g CZ Salted Caramel (30/420)",
-   "price": 13.48,
+   "price": 13.9,
    "amount": "46 g",
    "unit": ""
   },
   {
    "name": "Twix 46g CZ White (32/300)",
-   "price": 13.48,
+   "price": 13.9,
    "amount": "46 g",
    "unit": ""
   },
@@ -36616,7 +36802,7 @@
   },
   {
    "name": "UKRA Monarch 300g Slun. Semínka …",
-   "price": 56.1,
+   "price": 58.0,
    "amount": "300 g",
    "unit": ""
   },
@@ -37240,19 +37426,19 @@
   },
   {
    "name": "Vincinni 100g Petit Beurre (36ks)",
-   "price": 7.27,
+   "price": 7.5,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Vincinni 200g Petit Beurre (21ks)",
-   "price": 13.98,
+   "price": 14.41,
    "amount": "200 g",
    "unit": ""
   },
   {
    "name": "Vincinni 300g Petit Beurre (10ks)",
-   "price": 21.16,
+   "price": 21.82,
    "amount": "300 g",
    "unit": ""
   },
@@ -37348,25 +37534,25 @@
   },
   {
    "name": "Werther'S Original 70g Soft…",
-   "price": 18.58,
+   "price": 19.15,
    "amount": "70 g",
    "unit": ""
   },
   {
    "name": "Werther'S Original 75g Soft…",
-   "price": 18.58,
+   "price": 19.15,
    "amount": "75 g",
    "unit": ""
   },
   {
    "name": "Werther'S Original 80g Creamy…",
-   "price": 18.58,
+   "price": 19.15,
    "amount": "80 g",
    "unit": ""
   },
   {
    "name": "Werther'S Original 90g Cream…",
-   "price": 18.58,
+   "price": 19.15,
    "amount": "90 g",
    "unit": ""
   },
@@ -37588,7 +37774,7 @@
   },
   {
    "name": "XXL Car Toy Egg 20g (6ks)",
-   "price": 47.53,
+   "price": 226.0,
    "amount": "20 g",
    "unit": ""
   },
@@ -37762,85 +37948,85 @@
   },
   {
    "name": "Adriana 500g Těstoviny semolinové…",
-   "price": 27.96,
+   "price": 28.83,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Adriana 500g Těstoviny semolinové…",
-   "price": 27.96,
+   "price": 28.83,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Adriana 500g Těstoviny semolinové…",
-   "price": 27.96,
+   "price": 28.83,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Adriana 500g Těstoviny semolinové…",
-   "price": 28.25,
+   "price": 29.12,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Adriana 500g Těstoviny semolinové…",
-   "price": 27.96,
+   "price": 28.83,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Adriana 500g Těstoviny semolinové…",
-   "price": 27.96,
+   "price": 28.83,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Adriana 500g Těstoviny semolinové…",
-   "price": 27.96,
+   "price": 28.83,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Adriana 500g Těstoviny semolinové…",
-   "price": 27.96,
+   "price": 28.83,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Adriana 500g Těstoviny semolinové…",
-   "price": 27.96,
+   "price": 28.83,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Adriana 500g Těstoviny semolinové…",
-   "price": 27.96,
+   "price": 28.83,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Adriana 500g Těstoviny semolinové…",
-   "price": 27.96,
+   "price": 28.83,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Adriana 500g Těstoviny semolinové…",
-   "price": 27.96,
+   "price": 28.83,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Adriana 500g Těstoviny semolinové…",
-   "price": 28.25,
+   "price": 29.12,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Adriana 500g Těstoviny semolinové…",
-   "price": 27.96,
+   "price": 28.83,
    "amount": "500 g",
    "unit": ""
   },
@@ -38115,6 +38301,24 @@
    "unit": ""
   },
   {
+   "name": "Asia Sriracha Tuong Ot Uni Eagle…",
+   "price": 39.8,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Asia Sriracha Tuong Ot Uni Eagle…",
+   "price": 65.6,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Asia Sriracha Tuong Ot Uni Eagle…",
+   "price": 79.9,
+   "amount": "",
+   "unit": ""
+  },
+  {
    "name": "Bask 1kg Rýže Dlouhozrná (10ks)",
    "price": 45.48,
    "amount": "1 kg",
@@ -38122,13 +38326,13 @@
   },
   {
    "name": "Bask 400g Bramborové knedlíky …",
-   "price": 27.06,
+   "price": 27.9,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Bask 400g Bramborové těsto (16ks)",
-   "price": 26.68,
+   "price": 27.5,
    "amount": "400 g",
    "unit": ""
   },
@@ -38164,7 +38368,7 @@
   },
   {
    "name": "Bassta 290g Žampiony krájené eo …",
-   "price": 21.24,
+   "price": 21.9,
    "amount": "290 g",
    "unit": ""
   },
@@ -38176,103 +38380,103 @@
   },
   {
    "name": "Bassta 340g Kukuřice vakuum sweet …",
-   "price": 16.72,
+   "price": 17.24,
    "amount": "340 g",
    "unit": ""
   },
   {
    "name": "Bassta 400g Cizrna (12/144)",
-   "price": 13.13,
+   "price": 13.54,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Bassta 400g Fazole bílé eo (12/144)",
-   "price": 13.5,
+   "price": 13.92,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Bassta 400g Fazole bílé s…",
-   "price": 14.74,
+   "price": 15.2,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Bassta 400g Fazole bílé velké (12…",
-   "price": 14.74,
+   "price": 15.2,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Bassta 400g Fazole červené eo (12…",
-   "price": 15.04,
+   "price": 15.5,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Bassta 400g Fazole v chilli omáčce…",
-   "price": 14.74,
+   "price": 15.2,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Bassta 400g Hrášek (12/144)",
-   "price": 11.64,
+   "price": 12.0,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Bassta 400g Rajčata krájená eo (12…",
-   "price": 15.42,
+   "price": 15.9,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Bassta 400g Rajčata loupaná celá …",
-   "price": 16.11,
+   "price": 16.6,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Bassta 425g Broskve půlené loupané…",
-   "price": 20.87,
+   "price": 21.5,
    "amount": "425 g",
    "unit": ""
   },
   {
    "name": "Bassta 425g Ovocný Kocktejl (12ks)",
-   "price": 21.24,
+   "price": 21.9,
    "amount": "425 g",
    "unit": ""
   },
   {
    "name": "Bassta 565g Ananas kousky eo (12…",
-   "price": 28.62,
+   "price": 29.5,
    "amount": "565 g",
    "unit": ""
   },
   {
    "name": "Bassta 800g Rajčatový protlak …",
-   "price": 40.64,
+   "price": 41.9,
    "amount": "800 g",
    "unit": ""
   },
   {
    "name": "Bassta 820g Broskve půlené loupané…",
-   "price": 35.8,
+   "price": 36.9,
    "amount": "820 g",
    "unit": ""
   },
   {
    "name": "Bassta 820g Meruňky půlené loupané…",
-   "price": 37.05,
+   "price": 38.2,
    "amount": "820 g",
    "unit": ""
   },
   {
    "name": "Bassta 850g Ananas kousky (12/72)",
-   "price": 38.61,
+   "price": 39.8,
    "amount": "850 g",
    "unit": ""
   },
@@ -39586,13 +39790,13 @@
   },
   {
    "name": "Granko 200g Kakao Original (24ks)",
-   "price": 53.54,
+   "price": 55.2,
    "amount": "200 g",
    "unit": ""
   },
   {
    "name": "Granko 400g Kakao Original (18ks)",
-   "price": 83.42,
+   "price": 86.0,
    "amount": "400 g",
    "unit": ""
   },
@@ -39634,31 +39838,31 @@
   },
   {
    "name": "Hamé 120g Játrovka (16ks)",
-   "price": 21.99,
+   "price": 21.32,
    "amount": "120 g",
    "unit": ""
   },
   {
    "name": "Hamé 120g Májka (16/176)",
-   "price": 21.62,
+   "price": 20.97,
    "amount": "120 g",
    "unit": ""
   },
   {
    "name": "Hamé 120g Matěj (16ks)",
-   "price": 21.62,
+   "price": 20.97,
    "amount": "120 g",
    "unit": ""
   },
   {
    "name": "Hamé 120g Paštika Andělské Tousty …",
-   "price": 21.57,
+   "price": 20.92,
    "amount": "120 g",
    "unit": ""
   },
   {
    "name": "Hamé 120g Paštika Ďábelské Tousty …",
-   "price": 21.57,
+   "price": 20.92,
    "amount": "120 g",
    "unit": ""
   },
@@ -39670,19 +39874,19 @@
   },
   {
    "name": "Hamé 120g Paštika Krůtí Maso S…",
-   "price": 27.18,
+   "price": 26.9,
    "amount": "120 g",
    "unit": ""
   },
   {
    "name": "Hamé 120g Škvarková pomazánka (16…",
-   "price": 21.62,
+   "price": 20.97,
    "amount": "120 g",
    "unit": ""
   },
   {
    "name": "Hamé 120g Svačinka (16ks)",
-   "price": 21.62,
+   "price": 20.97,
    "amount": "120 g",
    "unit": ""
   },
@@ -39694,7 +39898,7 @@
   },
   {
    "name": "Hamé 125g Vepřové ve Vlastní Šťávě…",
-   "price": 35.89,
+   "price": 34.81,
    "amount": "125 g",
    "unit": ""
   },
@@ -39712,13 +39916,13 @@
   },
   {
    "name": "Hamé 160g Křeník (12/180)",
-   "price": 24.7,
+   "price": 23.96,
    "amount": "160 g",
    "unit": ""
   },
   {
    "name": "Hamé 160g Májka (10/300)",
-   "price": 25.52,
+   "price": 24.75,
    "amount": "160 g",
    "unit": ""
   },
@@ -39730,31 +39934,31 @@
   },
   {
    "name": "Hamé 260g Džem Borůvka (10/161)",
-   "price": 36.9,
+   "price": 35.8,
    "amount": "260 g",
    "unit": ""
   },
   {
    "name": "Hamé 260g Džem Jahoda (10/161)",
-   "price": 30.5,
+   "price": 29.58,
    "amount": "260 g",
    "unit": ""
   },
   {
    "name": "Hamé 260g Džem Malina (10/161)",
-   "price": 37.89,
+   "price": 36.75,
    "amount": "260 g",
    "unit": ""
   },
   {
    "name": "Hamé 260g Džem Meruňka (10/161)",
-   "price": 29.61,
+   "price": 28.72,
    "amount": "260 g",
    "unit": ""
   },
   {
    "name": "Hamé 260g Džem Rybíz (10/161)",
-   "price": 29.61,
+   "price": 28.72,
    "amount": "260 g",
    "unit": ""
   },
@@ -39766,109 +39970,109 @@
   },
   {
    "name": "Hamé 260g Ovocná Směs Jahůdka (10…",
-   "price": 37.76,
+   "price": 36.64,
    "amount": "260 g",
    "unit": ""
   },
   {
    "name": "Hamé 300g Kečup Ostrý (12/90)",
-   "price": 28.15,
+   "price": 27.31,
    "amount": "300 g",
    "unit": ""
   },
   {
    "name": "Hamé 300g Kečup Sladký (12/90)",
-   "price": 27.75,
+   "price": 26.92,
    "amount": "300 g",
    "unit": ""
   },
   {
    "name": "Hamé 320g Feferony kulaté (10ks)",
-   "price": 33.6,
+   "price": 32.59,
    "amount": "320 g",
    "unit": ""
   },
   {
    "name": "Hamé 320g Halali (10/112)",
-   "price": 26.5,
+   "price": 25.7,
    "amount": "320 g",
    "unit": ""
   },
   {
    "name": "Hamé 320g Směs do Bramb. Salátu …",
-   "price": 23.96,
+   "price": 23.24,
    "amount": "320 g",
    "unit": ""
   },
   {
    "name": "Hamé 320g Zelí bílé (10ks)",
-   "price": 19.67,
+   "price": 19.08,
    "amount": "320 g",
    "unit": ""
   },
   {
    "name": "Hamé 320g Zelí červené (10ks)",
-   "price": 20.94,
+   "price": 20.31,
    "amount": "320 g",
    "unit": ""
   },
   {
    "name": "Hamé 320g Zelí kysané (10ks)",
-   "price": 24.25,
+   "price": 23.52,
    "amount": "320 g",
    "unit": ""
   },
   {
    "name": "Hamé 330g Červená řepa (10ks)",
-   "price": 21.23,
+   "price": 20.59,
    "amount": "330 g",
    "unit": ""
   },
   {
    "name": "Hamé 330g Feferony beranní rohy …",
-   "price": 34.96,
+   "price": 33.91,
    "amount": "330 g",
    "unit": ""
   },
   {
    "name": "Hamé 330g Hradišťanka (10/112)",
-   "price": 28.9,
+   "price": 28.03,
    "amount": "330 g",
    "unit": ""
   },
   {
    "name": "Hamé 330g Kunovjanka (10/112)",
-   "price": 28.65,
+   "price": 27.79,
    "amount": "330 g",
    "unit": ""
   },
   {
    "name": "Hamé 330g Lečo zeleninové (10ks)",
-   "price": 24.25,
+   "price": 23.52,
    "amount": "330 g",
    "unit": ""
   },
   {
    "name": "Hamé 330g Moravanka (10/112)",
-   "price": 28.65,
+   "price": 27.79,
    "amount": "330 g",
    "unit": ""
   },
   {
    "name": "Hamé 340g Paprika červená řezaná …",
-   "price": 24.6,
+   "price": 23.86,
    "amount": "340 g",
    "unit": ""
   },
   {
    "name": "Hamé 400g BBQ Fazole s Párkem …",
-   "price": 40.9,
+   "price": 39.67,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Hamé 400g Čočka s Párkem (10ks)",
-   "price": 40.9,
+   "price": 39.67,
    "amount": "400 g",
    "unit": ""
   },
@@ -39904,37 +40108,37 @@
   },
   {
    "name": "Hamé 400g Fazole v rajské (10ks)",
-   "price": 43.0,
+   "price": 41.71,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Hamé 400g Guláš Ďábelský s…",
-   "price": 40.9,
+   "price": 39.67,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Hamé 400g Lečo s Párkem (10ks)",
-   "price": 40.9,
+   "price": 39.67,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Hamé 400g Luncheon Meat Pork (8ks)",
-   "price": 55.0,
+   "price": 53.35,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Hamé 400g Masové Kuličky v Rajské…",
-   "price": 45.53,
+   "price": 44.16,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Hamé 400g Ravioly Masové s Rajčaty…",
-   "price": 45.53,
+   "price": 44.16,
    "amount": "400 g",
    "unit": ""
   },
@@ -39946,25 +40150,25 @@
   },
   {
    "name": "Hamé 400g Špagetka s Masem a…",
-   "price": 45.53,
+   "price": 44.16,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Hamé 400g Špagety Maso Zelenina…",
-   "price": 45.53,
+   "price": 44.16,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Hamé 400g Trenčanské Párky Fazole …",
-   "price": 40.9,
+   "price": 39.67,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Hamé 400g Vepřové ve Vlastní Šťávě…",
-   "price": 61.61,
+   "price": 59.76,
    "amount": "400 g",
    "unit": ""
   },
@@ -39976,13 +40180,13 @@
   },
   {
    "name": "Hamé 415g Chalupářský guláš (10ks)",
-   "price": 56.51,
+   "price": 54.81,
    "amount": "415 g",
    "unit": ""
   },
   {
    "name": "Hamé 415g Čočka s uzeninou (10ks)",
-   "price": 46.5,
+   "price": 45.11,
    "amount": "415 g",
    "unit": ""
   },
@@ -39994,7 +40198,7 @@
   },
   {
    "name": "Hamé 415g Lečo s uzeninou (10ks)",
-   "price": 48.6,
+   "price": 47.14,
    "amount": "415 g",
    "unit": ""
   },
@@ -40006,31 +40210,31 @@
   },
   {
    "name": "Hamé 415g Mexický guláš (10ks)",
-   "price": 47.6,
+   "price": 46.17,
    "amount": "415 g",
    "unit": ""
   },
   {
    "name": "Hamé 415g Slovácká klobása s…",
-   "price": 45.19,
+   "price": 43.83,
    "amount": "415 g",
    "unit": ""
   },
   {
    "name": "Hamé 415g Špagetka (10ks)",
-   "price": 49.18,
+   "price": 47.71,
    "amount": "415 g",
    "unit": ""
   },
   {
    "name": "Hamé 415g Trenčanské párky s…",
-   "price": 47.53,
+   "price": 46.1,
    "amount": "415 g",
    "unit": ""
   },
   {
    "name": "Hamé 415g Vepřový guláš (10ks)",
-   "price": 49.0,
+   "price": 47.53,
    "amount": "415 g",
    "unit": ""
   },
@@ -40042,25 +40246,25 @@
   },
   {
    "name": "Hamé 48g Bůčková pomazánka (24ks)",
-   "price": 10.7,
+   "price": 10.38,
    "amount": "48 g",
    "unit": ""
   },
   {
    "name": "Hamé 48g Játrovka (24ks)",
-   "price": 10.3,
+   "price": 10.23,
    "amount": "48 g",
    "unit": ""
   },
   {
    "name": "Hamé 48g Májka (24/266)",
-   "price": 10.3,
+   "price": 10.23,
    "amount": "48 g",
    "unit": ""
   },
   {
    "name": "Hamé 48g Matěj (24ks)",
-   "price": 10.7,
+   "price": 10.23,
    "amount": "48 g",
    "unit": ""
   },
@@ -40072,55 +40276,55 @@
   },
   {
    "name": "Hamé 48g Paštika pasta z uzeného…",
-   "price": 10.7,
+   "price": 10.38,
    "amount": "48 g",
    "unit": ""
   },
   {
    "name": "Hamé 48g Svačinka (24ks)",
-   "price": 10.7,
+   "price": 10.38,
    "amount": "48 g",
    "unit": ""
   },
   {
    "name": "Hamé 500g Halali (8/84)",
-   "price": 38.25,
+   "price": 37.11,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Hamé 500g Kečup Jemný (10/80)",
-   "price": 36.95,
+   "price": 32.42,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Hamé 500g Kečup Ostrý (10/80)",
-   "price": 32.42,
+   "price": 31.45,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Hamé 500g Kečup Sladký (10/80)",
-   "price": 32.42,
+   "price": 31.45,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Hamé 510g Hrášek s Karotkou (8ks)",
-   "price": 48.84,
+   "price": 47.38,
    "amount": "510 g",
    "unit": ""
   },
   {
    "name": "Hamé 510g Zelí bílé (8ks)",
-   "price": 34.9,
+   "price": 33.85,
    "amount": "510 g",
    "unit": ""
   },
   {
    "name": "Hamé 530g Lečo zeleninové (8ks)",
-   "price": 39.9,
+   "price": 38.7,
    "amount": "530 g",
    "unit": ""
   },
@@ -40144,67 +40348,67 @@
   },
   {
    "name": "Hamé 680g Okurky 7-9cm (8ks)",
-   "price": 39.9,
+   "price": 38.7,
    "amount": "680 g",
    "unit": ""
   },
   {
    "name": "Hamé 75g Bůčková Pomazánka (28ks)",
-   "price": 16.7,
+   "price": 16.2,
    "amount": "75 g",
    "unit": ""
   },
   {
    "name": "Hamé 75g Játrovka (ks)",
-   "price": 16.7,
+   "price": 16.2,
    "amount": "75 g",
    "unit": ""
   },
   {
    "name": "Hamé 75g Májka (28ks)",
-   "price": 16.7,
+   "price": 16.2,
    "amount": "75 g",
    "unit": ""
   },
   {
    "name": "Hamé 75g Matěj (28ks)",
-   "price": 16.7,
+   "price": 16.2,
    "amount": "75 g",
    "unit": ""
   },
   {
    "name": "Hamé 75g Paštika Jemná Drůbeží …",
-   "price": 16.7,
+   "price": 16.2,
    "amount": "75 g",
    "unit": ""
   },
   {
    "name": "Hamé 75g paštika Pasta z Uzeného…",
-   "price": 16.7,
+   "price": 16.2,
    "amount": "75 g",
    "unit": ""
   },
   {
    "name": "Hamé 75g paštika Šunková Pěna …",
-   "price": 16.7,
+   "price": 16.2,
    "amount": "75 g",
    "unit": ""
   },
   {
    "name": "Hamé 75g Svačinka (28ks)",
-   "price": 16.7,
+   "price": 16.2,
    "amount": "75 g",
    "unit": ""
   },
   {
    "name": "Hamé 900g Kečup Ostrý (10/40)",
-   "price": 52.1,
+   "price": 50.55,
    "amount": "900 g",
    "unit": ""
   },
   {
-   "name": "Hamé 900g Kečup Sladký (10/40)",
-   "price": 47.5,
+   "name": "Hamé 900g Kečup Sladký Jemný (10…",
+   "price": 46.08,
    "amount": "900 g",
    "unit": ""
   },
@@ -40228,13 +40432,13 @@
   },
   {
    "name": "Heinz 1kg Kečup Jemný (8ks)",
-   "price": 95.07,
+   "price": 98.0,
    "amount": "1 kg",
    "unit": ""
   },
   {
    "name": "Heinz 342g Kečup Jemný (10ks)",
-   "price": 37.83,
+   "price": 39.0,
    "amount": "342 g",
    "unit": ""
   },
@@ -40246,25 +40450,25 @@
   },
   {
    "name": "Heinz 460g Kečup Jemný (10ks)",
-   "price": 41.22,
+   "price": 42.5,
    "amount": "460 g",
    "unit": ""
   },
   {
    "name": "Heinz 460g Kečup Ostrý (10ks)",
-   "price": 41.22,
+   "price": 42.5,
    "amount": "460 g",
    "unit": ""
   },
   {
    "name": "Heinz 570g Kečup Jemný (12ks)",
-   "price": 46.08,
+   "price": 47.5,
    "amount": "570 g",
    "unit": ""
   },
   {
    "name": "Heinz 570g Kečup Ostrý (12ks)",
-   "price": 46.08,
+   "price": 47.5,
    "amount": "570 g",
    "unit": ""
   },
@@ -41344,31 +41548,31 @@
   },
   {
    "name": "Maggi Dobrý Hostinec 142g Kuře na…",
-   "price": 32.69,
+   "price": 33.7,
    "amount": "142 g",
    "unit": ""
   },
   {
    "name": "Maggi Dobrý Hostinec 143g Guláš …",
-   "price": 32.69,
+   "price": 33.7,
    "amount": "143 g",
    "unit": ""
   },
   {
    "name": "Maggi Dobrý Hostinec 144g Houbový …",
-   "price": 31.18,
+   "price": 32.14,
    "amount": "144 g",
    "unit": ""
   },
   {
    "name": "Maggi Dobrý Hostinec 153g Kuře na…",
-   "price": 32.69,
+   "price": 33.7,
    "amount": "153 g",
    "unit": ""
   },
   {
    "name": "Maggi Dobrý Hostinec 153g Svíčková…",
-   "price": 28.25,
+   "price": 29.12,
    "amount": "153 g",
    "unit": ""
   },
@@ -41488,55 +41692,55 @@
   },
   {
    "name": "MeiNing 180g Hovězí maso (10/255)",
-   "price": 30.99,
+   "price": 31.94,
    "amount": "180 g",
    "unit": ""
   },
   {
    "name": "MeiNing 180g Krůtí maso (10/255)",
-   "price": 29.66,
+   "price": 30.58,
    "amount": "180 g",
    "unit": ""
   },
   {
    "name": "MeiNing 180g Kuřecí maso (10/255)",
-   "price": 29.66,
+   "price": 30.58,
    "amount": "180 g",
    "unit": ""
   },
   {
    "name": "MeiNing 180g Vepřové maso (10/255)",
-   "price": 29.66,
+   "price": 30.58,
    "amount": "180 g",
    "unit": ""
   },
   {
    "name": "MeiNing 400g Hovězí maso ve…",
-   "price": 49.69,
+   "price": 51.23,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "MeiNing 400g Krutí maso ve vlastní…",
-   "price": 45.25,
+   "price": 46.65,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "MeiNing 400g Kuřecí maso ve…",
-   "price": 45.25,
+   "price": 46.65,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "MeiNing 400g Vepřové maso ve…",
-   "price": 41.09,
+   "price": 42.37,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "MeiNing 400g Vepřový lunchmeat (8…",
-   "price": 40.43,
+   "price": 41.68,
    "amount": "400 g",
    "unit": ""
   },
@@ -41992,7 +42196,7 @@
   },
   {
    "name": "Mokate 2v1 140g (10ks)",
-   "price": 25.03,
+   "price": 25.8,
    "amount": "140 g",
    "unit": ""
   },
@@ -42004,7 +42208,7 @@
   },
   {
    "name": "Mokate 3v1 170g (10ks)",
-   "price": 25.03,
+   "price": 25.8,
    "amount": "170 g",
    "unit": ""
   },
@@ -42436,7 +42640,7 @@
   },
   {
    "name": "Otma 120g Rajčatový protlak (24ks)",
-   "price": 15.6,
+   "price": 15.13,
    "amount": "120 g",
    "unit": ""
   },
@@ -42454,31 +42658,31 @@
   },
   {
    "name": "Otma 350g Arrabiata s česnekem a…",
-   "price": 38.5,
+   "price": 37.35,
    "amount": "350 g",
    "unit": ""
   },
   {
    "name": "Otma 350g Boloňská omáčka (10/96)",
-   "price": 38.5,
+   "price": 37.35,
    "amount": "350 g",
    "unit": ""
   },
   {
    "name": "Otma 350g Boloňská omáčka s Masem …",
-   "price": 38.5,
+   "price": 37.35,
    "amount": "350 g",
    "unit": ""
   },
   {
    "name": "Otma 350g Milánská omáčka (10/96)",
-   "price": 38.5,
+   "price": 37.35,
    "amount": "350 g",
    "unit": ""
   },
   {
    "name": "Otma 350g Neapolská omáčka s…",
-   "price": 38.5,
+   "price": 37.35,
    "amount": "350 g",
    "unit": ""
   },
@@ -42532,109 +42736,109 @@
   },
   {
    "name": "Panzani červené 500g Farfalle (14)",
-   "price": 30.95,
+   "price": 31.9,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Panzani červené 500g Gnocchi (11ks)",
-   "price": 33.85,
+   "price": 34.9,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Panzani červené 500g Kolínka (16)",
-   "price": 30.95,
+   "price": 31.9,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Panzani červené 500g Linguine (16)",
-   "price": 30.95,
+   "price": 31.9,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Panzani červené 500g Macaroni (16)",
-   "price": 30.95,
+   "price": 31.9,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Panzani červené 500g Makarony (24)",
-   "price": 30.95,
+   "price": 31.9,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Panzani červené 500g Penne (18)",
-   "price": 30.95,
+   "price": 31.9,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Panzani červené 500g Spaghetti (16)",
-   "price": 30.95,
+   "price": 31.9,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Panzani červené 500g Torti (18)",
-   "price": 30.95,
+   "price": 31.9,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Panzani omáčka 200g Pesto (12ks)",
-   "price": 54.22,
+   "price": 55.9,
    "amount": "200 g",
    "unit": ""
   },
   {
    "name": "Panzani omáčka 200g Pesto Rouge …",
-   "price": 65.23,
+   "price": 67.24,
    "amount": "200 g",
    "unit": ""
   },
   {
    "name": "Panzani omáčka 370g Carbonara …",
-   "price": 77.31,
+   "price": 79.7,
    "amount": "370 g",
    "unit": ""
   },
   {
    "name": "Panzani omáčka 370g Fromage (12ks)",
-   "price": 74.88,
+   "price": 77.2,
    "amount": "370 g",
    "unit": ""
   },
   {
    "name": "Panzani omáčka 400g Arrabiata(12ks)",
-   "price": 47.34,
+   "price": 48.8,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Panzani omáčka 400g Napoletana …",
-   "price": 47.34,
+   "price": 48.8,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Panzani omáčka 400g Olive &…",
-   "price": 47.34,
+   "price": 48.8,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Panzani omáčka 400g Originale …",
-   "price": 47.79,
+   "price": 49.27,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Panzani omáčka 425g Bolognese …",
-   "price": 63.53,
+   "price": 65.5,
    "amount": "425 g",
    "unit": ""
   },
@@ -42856,43 +43060,43 @@
   },
   {
    "name": "Reeva 60g Beef (Hovězí) (60ks)",
-   "price": 340.09,
+   "price": 350.6,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Reeva 60g Cheese+Bacon (Sýr…",
-   "price": 340.09,
+   "price": 350.6,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Reeva 60g Chicken (Kuřecí) (60ks)",
-   "price": 340.09,
+   "price": 350.6,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Reeva 60g Duck (Kachna) (24ks)",
-   "price": 143.93,
+   "price": 148.38,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Reeva 60g Fried Chicken (24ks)",
-   "price": 143.93,
+   "price": 148.38,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Reeva 60g Hot Chicken (60ks)",
-   "price": 340.09,
+   "price": 350.6,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Reeva 60g Shrimp (Kreveta) (24ks)",
-   "price": 143.93,
+   "price": 148.38,
    "amount": "60 g",
    "unit": ""
   },
@@ -42904,43 +43108,43 @@
   },
   {
    "name": "Reeva 70g Instantní těstoviny s…",
-   "price": 207.83,
+   "price": 214.26,
    "amount": "70 g",
    "unit": ""
   },
   {
    "name": "Reeva 70g Instantní těstoviny…",
-   "price": 207.83,
+   "price": 214.26,
    "amount": "70 g",
    "unit": ""
   },
   {
    "name": "Reeva 85g Beef (Hovězí) (20ks)",
-   "price": 207.83,
+   "price": 214.26,
    "amount": "85 g",
    "unit": ""
   },
   {
    "name": "Reeva 85g Chicken (Kuřecí) (20ks)",
-   "price": 207.83,
+   "price": 214.26,
    "amount": "85 g",
    "unit": ""
   },
   {
    "name": "Reeva 85g Mushroom (Houbová) (20ks)",
-   "price": 207.83,
+   "price": 214.26,
    "amount": "85 g",
    "unit": ""
   },
   {
    "name": "Reeva Coc 75g Beef (Hovězí) (24ks)",
-   "price": 19.88,
+   "price": 20.5,
    "amount": "75 g",
    "unit": ""
   },
   {
    "name": "Reeva Coc 75g Chicken (Kuřecí) …",
-   "price": 19.88,
+   "price": 20.5,
    "amount": "75 g",
    "unit": ""
   },
@@ -42952,13 +43156,13 @@
   },
   {
    "name": "Reeva Coc 75g Chicken Cari (Kuře…",
-   "price": 19.88,
+   "price": 20.5,
    "amount": "75 g",
    "unit": ""
   },
   {
    "name": "Reeva Coc 75g Vegetable (Zelenina)…",
-   "price": 19.88,
+   "price": 20.5,
    "amount": "75 g",
    "unit": ""
   },
@@ -43054,13 +43258,13 @@
   },
   {
    "name": "Rio Mare 160g Tuňák ve vlastní…",
-   "price": 55.19,
+   "price": 56.9,
    "amount": "160 g",
    "unit": ""
   },
   {
    "name": "Rio Mare 160g Tuňákový salát Cous…",
-   "price": 56.16,
+   "price": 57.9,
    "amount": "160 g",
    "unit": ""
   },
@@ -43084,7 +43288,7 @@
   },
   {
    "name": "Rio Mare 160g Tuňákový salát…",
-   "price": 56.16,
+   "price": 57.9,
    "amount": "160 g",
    "unit": ""
   },
@@ -43096,25 +43300,25 @@
   },
   {
    "name": "Rio Mare 160g Tuňákový salát s…",
-   "price": 56.16,
+   "price": 57.9,
    "amount": "160 g",
    "unit": ""
   },
   {
    "name": "Rio Mare 160g Tuňákový salát s…",
-   "price": 56.16,
+   "price": 57.9,
    "amount": "160 g",
    "unit": ""
   },
   {
    "name": "Rio Mare 160g Tuňákový salát s…",
-   "price": 56.16,
+   "price": 57.9,
    "amount": "160 g",
    "unit": ""
   },
   {
    "name": "Rio Mare 160g Tuňákový salát…",
-   "price": 56.16,
+   "price": 57.9,
    "amount": "160 g",
    "unit": ""
   },
@@ -43210,67 +43414,67 @@
   },
   {
    "name": "Rosické 500g Těstoviny bez vaječné…",
-   "price": 18.7,
+   "price": 18.14,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Rosické 500g Těstoviny bez vaječné…",
-   "price": 18.7,
+   "price": 18.14,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Rosické 500g Těstoviny bez vaječné…",
-   "price": 18.7,
+   "price": 18.14,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Rosické 500g Těstoviny bez vaječné…",
-   "price": 18.7,
+   "price": 18.14,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Rosické 500g Těstoviny bez vaječné…",
-   "price": 18.7,
+   "price": 18.14,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Rosické 500g Těstoviny bez vaječné…",
-   "price": 18.7,
+   "price": 18.14,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Rosické 500g Těstoviny bez vaječné…",
-   "price": 18.7,
+   "price": 18.14,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Rosické 500g Těstoviny bez vaječné…",
-   "price": 18.7,
+   "price": 18.14,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Rosické 500g Těstoviny bez vaječné…",
-   "price": 18.7,
+   "price": 18.14,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Rosické 500g Těstoviny bez vaječné…",
-   "price": 18.7,
+   "price": 18.14,
    "amount": "500 g",
    "unit": ""
   },
   {
    "name": "Rosické 500g Těstoviny bez vaječné…",
-   "price": 18.7,
+   "price": 18.14,
    "amount": "500 g",
    "unit": ""
   },
@@ -43300,19 +43504,19 @@
   },
   {
    "name": "Schwartau 340g Džem Aprikose …",
-   "price": 63.9,
+   "price": 61.98,
    "amount": "340 g",
    "unit": ""
   },
   {
    "name": "Schwartau 340g Džem Blueberry …",
-   "price": 63.9,
+   "price": 61.98,
    "amount": "340 g",
    "unit": ""
   },
   {
    "name": "Schwartau 340g Džem Erdbeere …",
-   "price": 63.9,
+   "price": 61.98,
    "amount": "340 g",
    "unit": ""
   },
@@ -43324,13 +43528,13 @@
   },
   {
    "name": "Schwartau 340g Džem Himbeere …",
-   "price": 63.9,
+   "price": 61.98,
    "amount": "340 g",
    "unit": ""
   },
   {
    "name": "Schwartau 340g Džem Pfirsich …",
-   "price": 63.9,
+   "price": 61.98,
    "amount": "340 g",
    "unit": ""
   },
@@ -43342,7 +43546,7 @@
   },
   {
    "name": "Schwartau 340g Džem Sauerkirsche …",
-   "price": 63.9,
+   "price": 61.98,
    "amount": "340 g",
    "unit": ""
   },
@@ -44062,7 +44266,7 @@
   },
   {
    "name": "UKRA Monarch 300g Slun. Semínka …",
-   "price": 56.1,
+   "price": 58.0,
    "amount": "300 g",
    "unit": ""
   },
@@ -44350,7 +44554,7 @@
   },
   {
    "name": "Vitana 110g Masox (16ks)",
-   "price": 20.0,
+   "price": 19.4,
    "amount": "110 g",
    "unit": ""
   },
@@ -44380,13 +44584,13 @@
   },
   {
    "name": "Vitana 16g koření Pepř 4 Barev …",
-   "price": 20.9,
+   "price": 20.27,
    "amount": "16 g",
    "unit": ""
   },
   {
    "name": "Vitana 18g koření Pepř Černý Celý …",
-   "price": 16.27,
+   "price": 15.78,
    "amount": "18 g",
    "unit": ""
   },
@@ -44470,7 +44674,7 @@
   },
   {
    "name": "Vitana 25g koření Americké…",
-   "price": 14.47,
+   "price": 14.04,
    "amount": "25 g",
    "unit": ""
   },
@@ -44500,7 +44704,7 @@
   },
   {
    "name": "Vitana 28g koření Kmín Celý(18ks)",
-   "price": 11.42,
+   "price": 11.08,
    "amount": "28 g",
    "unit": ""
   },
@@ -44524,19 +44728,19 @@
   },
   {
    "name": "Vitana 400g Rýže Loupaná (14ks)",
-   "price": 24.6,
+   "price": 23.86,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Vitana 400g Rýže Parboiled (14ks)",
-   "price": 28.2,
+   "price": 27.36,
    "amount": "400 g",
    "unit": ""
   },
   {
    "name": "Vitana 47g Slepičí vývar s nudlemi…",
-   "price": 20.35,
+   "price": 19.75,
    "amount": "47 g",
    "unit": ""
   },
@@ -44560,7 +44764,7 @@
   },
   {
    "name": "Vitana 50g/45 Francouzská polévka …",
-   "price": 19.87,
+   "price": 19.28,
    "amount": "50 g",
    "unit": ""
   },
@@ -44572,19 +44776,19 @@
   },
   {
    "name": "Vitana 56g Polévka s játrovými…",
-   "price": 20.65,
+   "price": 20.03,
    "amount": "56 g",
    "unit": ""
   },
   {
    "name": "Vitana 58g Hovězí polévka (25ks) NV",
-   "price": 19.87,
+   "price": 19.28,
    "amount": "58 g",
    "unit": ""
   },
   {
    "name": "Vitana 58g/55g Polévka s játrovými…",
-   "price": 19.87,
+   "price": 19.28,
    "amount": "58 g",
    "unit": ""
   },
@@ -44602,7 +44806,7 @@
   },
   {
    "name": "Vitana 61g Hrášková polévka s…",
-   "price": 19.87,
+   "price": 19.28,
    "amount": "61 g",
    "unit": ""
   },
@@ -44614,19 +44818,19 @@
   },
   {
    "name": "Vitana 68g/66g Bramborová polévka …",
-   "price": 19.87,
+   "price": 19.28,
    "amount": "68 g",
    "unit": ""
   },
   {
    "name": "Vitana 72g Hrachová polévka se…",
-   "price": 19.87,
+   "price": 19.28,
    "amount": "72 g",
    "unit": ""
   },
   {
    "name": "Vitana 72g/66g Masox 6k (32ks)",
-   "price": 19.09,
+   "price": 18.52,
    "amount": "72 g",
    "unit": ""
   },
@@ -44638,25 +44842,25 @@
   },
   {
    "name": "Vitana 76g/73g Rajská polévka …",
-   "price": 19.81,
+   "price": 19.22,
    "amount": "76 g",
    "unit": ""
   },
   {
    "name": "Vitana 800g Rýže Loupaná (10ks)",
-   "price": 46.23,
+   "price": 44.84,
    "amount": "800 g",
    "unit": ""
   },
   {
    "name": "Vitana 800g Rýže Parboiled (10ks)",
-   "price": 46.2,
+   "price": 44.81,
    "amount": "800 g",
    "unit": ""
   },
   {
    "name": "Vitana 83g Poctivá Kulajda Krémová…",
-   "price": 21.13,
+   "price": 20.5,
    "amount": "83 g",
    "unit": ""
   },
@@ -44674,49 +44878,67 @@
   },
   {
    "name": "Vitana 92g/91g Dršťková polévka …",
-   "price": 20.3,
+   "price": 19.69,
    "amount": "92 g",
    "unit": ""
   },
   {
    "name": "Vitana 95g Gulášová polévka (25…",
-   "price": 20.3,
+   "price": 19.69,
    "amount": "95 g",
    "unit": ""
   },
   {
    "name": "Vitana 96g/95g Gulášová svačinová…",
-   "price": 20.3,
+   "price": 19.69,
    "amount": "96 g",
    "unit": ""
   },
   {
-   "name": "Vitana Bistro 63g Boloňská omáčka…",
+   "name": "Vitana Bistro 55g Červené Kari (8…",
    "price": 27.07,
+   "amount": "55 g",
+   "unit": ""
+  },
+  {
+   "name": "Vitana Bistro 63g Boloňská omáčka…",
+   "price": 26.26,
    "amount": "63 g",
    "unit": ""
   },
   {
-   "name": "Vitana Bistro 66g Mexico s…",
+   "name": "Vitana Bistro 65g Kung Pao (8/120)",
    "price": 27.07,
+   "amount": "65 g",
+   "unit": ""
+  },
+  {
+   "name": "Vitana Bistro 66g Mexico s…",
+   "price": 26.26,
    "amount": "66 g",
    "unit": ""
   },
   {
    "name": "Vitana Bistro 72g Kuře na paprice …",
-   "price": 27.07,
+   "price": 26.26,
    "amount": "72 g",
    "unit": ""
   },
   {
    "name": "Vitana Bistro 72g Sýrová s…",
-   "price": 27.07,
+   "price": 26.26,
    "amount": "72 g",
    "unit": ""
   },
   {
+   "name": "Vitana Bistro 75g Nudle Teriyaki …",
+   "price": 27.07,
+   "amount": "75 g",
+   "unit": ""
+  },
+  {
    "name": "Vitana Klasik 160ml (20/91)",
-   "price": 21.7,
+   "price": 21.5,
    "amount": "160 ml",
    "unit": ""
   },
@@ -44734,115 +44956,115 @@
   },
   {
    "name": "Vitana Poctivá 78g Hovězí (17/105)",
-   "price": 22.79,
+   "price": 22.11,
    "amount": "78 g",
    "unit": ""
   },
   {
    "name": "Vitana Poctivá 88g s Játrovými…",
-   "price": 23.47,
+   "price": 22.77,
    "amount": "88 g",
    "unit": ""
   },
   {
    "name": "Vitana Poctivá 89g/85g Slepičí (17…",
-   "price": 23.47,
+   "price": 22.77,
    "amount": "89 g",
    "unit": ""
   },
   {
    "name": "Vitana Poctivá 96g Bramboračka s…",
-   "price": 23.47,
+   "price": 22.77,
    "amount": "96 g",
    "unit": ""
   },
   {
    "name": "Vitana Poctivá 97g Francouzská (18…",
-   "price": 23.47,
+   "price": 22.77,
    "amount": "97 g",
    "unit": ""
   },
   {
    "name": "Vitana Poctivá 97g Gulášová (18…",
-   "price": 23.47,
+   "price": 22.77,
    "amount": "97 g",
    "unit": ""
   },
   {
    "name": "Vitana Polévka do hrnečku 14g…",
-   "price": 9.79,
+   "price": 9.5,
    "amount": "14 g",
    "unit": ""
   },
   {
    "name": "Vitana Polévka do hrnečku 14g s…",
-   "price": 9.79,
+   "price": 9.5,
    "amount": "14 g",
    "unit": ""
   },
   {
    "name": "Vitana Polévka do hrnečku 15g…",
-   "price": 9.79,
+   "price": 9.5,
    "amount": "15 g",
    "unit": ""
   },
   {
    "name": "Vitana Polévka do hrnečku 16g…",
-   "price": 9.79,
+   "price": 9.5,
    "amount": "16 g",
    "unit": ""
   },
   {
    "name": "Vitana Polévka do hrnečku 17g…",
-   "price": 9.79,
+   "price": 9.5,
    "amount": "17 g",
    "unit": ""
   },
   {
    "name": "Vitana Polévka do hrnečku 17g…",
-   "price": 9.79,
+   "price": 9.5,
    "amount": "17 g",
    "unit": ""
   },
   {
    "name": "Vitana Polévka do hrnečku 18g…",
-   "price": 9.79,
+   "price": 9.5,
    "amount": "18 g",
    "unit": ""
   },
   {
    "name": "Vitana Polévka do hrnečku 20g…",
-   "price": 9.79,
+   "price": 9.5,
    "amount": "20 g",
    "unit": ""
   },
   {
    "name": "Vitana Polévka do hrnečku 21g…",
-   "price": 9.79,
+   "price": 9.5,
    "amount": "21 g",
    "unit": ""
   },
   {
    "name": "Vitana Polévka do hrnečku 21g…",
-   "price": 9.79,
+   "price": 9.5,
    "amount": "21 g",
    "unit": ""
   },
   {
    "name": "Vitana Polévka do hrnečku 22g…",
-   "price": 9.79,
+   "price": 9.5,
    "amount": "22 g",
    "unit": ""
   },
   {
    "name": "Vitana Polévka do hrnečku 22g…",
-   "price": 9.79,
+   "price": 9.5,
    "amount": "22 g",
    "unit": ""
   },
   {
    "name": "Vitana Polévka do hrnečku 25g…",
-   "price": 9.79,
+   "price": 9.5,
    "amount": "25 g",
    "unit": ""
   },
@@ -44854,19 +45076,19 @@
   },
   {
    "name": "Vitana Polévka do hrnečku 27g…",
-   "price": 9.79,
+   "price": 9.5,
    "amount": "27 g",
    "unit": ""
   },
   {
    "name": "Vitana Sojová omáčka 160ml (20/91)",
-   "price": 24.5,
+   "price": 23.77,
    "amount": "160 ml",
    "unit": ""
   },
   {
    "name": "Vitana Worcesterová omáčka 160ml …",
-   "price": 24.5,
+   "price": 23.77,
    "amount": "160 ml",
    "unit": ""
   },
@@ -45406,7 +45628,7 @@
   },
   {
    "name": "Znojmia 340g Okurky cocktail 3-6cm…",
-   "price": 29.2,
+   "price": 28.32,
    "amount": "340 g",
    "unit": ""
   },
@@ -45418,25 +45640,25 @@
   },
   {
    "name": "Znojmia 510g Zelí bílé (8ks)",
-   "price": 33.8,
+   "price": 32.79,
    "amount": "510 g",
    "unit": ""
   },
   {
    "name": "Znojmia 510g Zelí červené (8ks)",
-   "price": 33.8,
+   "price": 32.79,
    "amount": "510 g",
    "unit": ""
   },
   {
    "name": "Znojmia 510g Zelí kysané (8ks)",
-   "price": 35.5,
+   "price": 34.44,
    "amount": "510 g",
    "unit": ""
   },
   {
    "name": "Znojmia 520g Okurky 5-7cm (8ks)",
-   "price": 38.76,
+   "price": 37.6,
    "amount": "520 g",
    "unit": ""
   },
@@ -45472,7 +45694,7 @@
   },
   {
    "name": "Znojmia 680g Okurky 7-9cm (8ks)",
-   "price": 42.0,
+   "price": 40.75,
    "amount": "680 g",
    "unit": ""
   },
@@ -45975,8 +46197,26 @@
    "unit": ""
   },
   {
+   "name": "Asia Banh gao One One 118g vi Sua…",
+   "price": 41.78,
+   "amount": "118 g",
+   "unit": ""
+  },
+  {
+   "name": "Asia Banh gao One One 150g vi Ngot…",
+   "price": 41.78,
+   "amount": "150 g",
+   "unit": ""
+  },
+  {
    "name": "Asia Banh Gao One One Bo vi pho…",
    "price": 46.26,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Asia Banh Gao One One Tao bien…",
+   "price": 41.78,
    "amount": "",
    "unit": ""
   },
@@ -45987,7 +46227,13 @@
    "unit": ""
   },
   {
-   "name": "Asia Banh gao One One vi Ngot …",
+   "name": "Asia Banh gao One One vi Khoai…",
+   "price": 41.78,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Asia Banh gao One One vi Tom Nuong…",
    "price": 41.78,
    "amount": "",
    "unit": ""
@@ -46936,31 +47182,31 @@
   },
   {
    "name": "Bob 360ml Bubble Tea Blue Lime …",
-   "price": 49.8,
+   "price": 48.32,
    "amount": "360 ml",
    "unit": ""
   },
   {
    "name": "Bob 360ml Bubble Tea Fruit Berry …",
-   "price": 49.8,
+   "price": 48.32,
    "amount": "360 ml",
    "unit": ""
   },
   {
    "name": "Bob 360ml Bubble Tea Marshmallow …",
-   "price": 49.8,
+   "price": 48.32,
    "amount": "360 ml",
    "unit": ""
   },
   {
    "name": "Bob 360ml Bubble Tea Sakura Peach …",
-   "price": 49.8,
+   "price": 48.32,
    "amount": "360 ml",
    "unit": ""
   },
   {
    "name": "Bob 360ml Bubble Tea Tropical Mix …",
-   "price": 49.8,
+   "price": 48.32,
    "amount": "360 ml",
    "unit": ""
   },
@@ -47121,6 +47367,12 @@
    "unit": ""
   },
   {
+   "name": "Chupa Chups 0,345L Usa Tropical…",
+   "price": 23.4,
+   "amount": "0,345 l",
+   "unit": ""
+  },
+  {
    "name": "Chupa Chups 0,345L Usa Watermelon …",
    "price": 23.4,
    "amount": "0,345 l",
@@ -47272,25 +47524,25 @@
   },
   {
    "name": "Flipz 90g Milk Chocolate Usa (6…",
-   "price": 38.9,
+   "price": 37.73,
    "amount": "90 g",
    "unit": ""
   },
   {
    "name": "Flipz 90g Peanut Butter (6/180)",
-   "price": 38.9,
+   "price": 37.73,
    "amount": "90 g",
    "unit": ""
   },
   {
    "name": "Flipz 90g Salted Caramel Usa (6…",
-   "price": 38.9,
+   "price": 37.73,
    "amount": "90 g",
    "unit": ""
   },
   {
    "name": "Flipz 90g Strawberry Cheesecake…",
-   "price": 38.9,
+   "price": 37.73,
    "amount": "90 g",
    "unit": ""
   },
@@ -47505,15 +47757,15 @@
    "unit": ""
   },
   {
-   "name": "HAN NGAN USA Fanta 0,355L…",
-   "price": 17.9,
-   "amount": "0,355 l",
-   "unit": ""
-  },
-  {
    "name": "Haribo 150g EU Roulette Fg Roll …",
    "price": 24.51,
    "amount": "150 g",
+   "unit": ""
+  },
+  {
+   "name": "Haribo 160g CZ Starmix (36/88)",
+   "price": 24.51,
+   "amount": "160 g",
    "unit": ""
   },
   {
@@ -47631,7 +47883,7 @@
    "unit": ""
   },
   {
-   "name": "Haribo 160g EU Wassermelonen (32…",
+   "name": "Haribo 160g EU Wassermelonen…",
    "price": 24.51,
    "amount": "160 g",
    "unit": ""
@@ -48688,31 +48940,31 @@
   },
   {
    "name": "Jolly Time Popcorn 100g Blast O…",
-   "price": 22.9,
+   "price": 22.21,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Jolly Time Popcorn 100g Crispy'n…",
-   "price": 22.9,
+   "price": 22.21,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Jolly Time Popcorn 100g Sweet'n…",
-   "price": 22.9,
+   "price": 22.21,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Jolly Time Popcorn 100g The Big…",
-   "price": 22.9,
+   "price": 22.21,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Jolly Time Popcorn 85g Healthy Pop…",
-   "price": 22.9,
+   "price": 22.21,
    "amount": "85 g",
    "unit": ""
   },
@@ -50362,13 +50614,13 @@
   },
   {
    "name": "Nerds 141g Grape & Strawberry Usa …",
-   "price": 43.5,
+   "price": 42.2,
    "amount": "141 g",
    "unit": ""
   },
   {
    "name": "Nerds 141g Rainbow/Fruits Usa (12…",
-   "price": 51.5,
+   "price": 49.95,
    "amount": "141 g",
    "unit": ""
   },
@@ -50386,7 +50638,7 @@
   },
   {
    "name": "Nerds 46,7g Cherry & Watermelon…",
-   "price": 27.4,
+   "price": 26.58,
    "amount": "46,7 g",
    "unit": ""
   },
@@ -50398,7 +50650,7 @@
   },
   {
    "name": "Nerds 46,7g Grape & Strawberry Usa…",
-   "price": 27.4,
+   "price": 26.58,
    "amount": "46,7 g",
    "unit": ""
   },
@@ -50530,13 +50782,13 @@
   },
   {
    "name": "Oyakata 93g Inst. Nudle Yakitori…",
-   "price": 28.9,
+   "price": 29.75,
    "amount": "93 g",
    "unit": ""
   },
   {
    "name": "Oyakata 97g Inst. Nudle Hot…",
-   "price": 28.9,
+   "price": 29.75,
    "amount": "97 g",
    "unit": ""
   },
@@ -51249,6 +51501,12 @@
    "unit": ""
   },
   {
+   "name": "Reese's 68g Minis Peanut Butter…",
+   "price": 48.6,
+   "amount": "68 g",
+   "unit": ""
+  },
+  {
    "name": "Reese's 68g Pumpkins (24ks*6b)",
    "price": 23.8,
    "amount": "68 g",
@@ -51322,43 +51580,43 @@
   },
   {
    "name": "Reeva 60g Beef (Hovězí) (60ks)",
-   "price": 340.09,
+   "price": 350.6,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Reeva 60g Cheese+Bacon (Sýr…",
-   "price": 340.09,
+   "price": 350.6,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Reeva 60g Chicken (Kuřecí) (60ks)",
-   "price": 340.09,
+   "price": 350.6,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Reeva 60g Duck (Kachna) (24ks)",
-   "price": 143.93,
+   "price": 148.38,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Reeva 60g Fried Chicken (24ks)",
-   "price": 143.93,
+   "price": 148.38,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Reeva 60g Hot Chicken (60ks)",
-   "price": 340.09,
+   "price": 350.6,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Reeva 60g Shrimp (Kreveta) (24ks)",
-   "price": 143.93,
+   "price": 148.38,
    "amount": "60 g",
    "unit": ""
   },
@@ -51370,43 +51628,43 @@
   },
   {
    "name": "Reeva 70g Instantní těstoviny s…",
-   "price": 207.83,
+   "price": 214.26,
    "amount": "70 g",
    "unit": ""
   },
   {
    "name": "Reeva 70g Instantní těstoviny…",
-   "price": 207.83,
+   "price": 214.26,
    "amount": "70 g",
    "unit": ""
   },
   {
    "name": "Reeva 85g Beef (Hovězí) (20ks)",
-   "price": 207.83,
+   "price": 214.26,
    "amount": "85 g",
    "unit": ""
   },
   {
    "name": "Reeva 85g Chicken (Kuřecí) (20ks)",
-   "price": 207.83,
+   "price": 214.26,
    "amount": "85 g",
    "unit": ""
   },
   {
    "name": "Reeva 85g Mushroom (Houbová) (20ks)",
-   "price": 207.83,
+   "price": 214.26,
    "amount": "85 g",
    "unit": ""
   },
   {
    "name": "Reeva Coc 75g Beef (Hovězí) (24ks)",
-   "price": 19.88,
+   "price": 20.5,
    "amount": "75 g",
    "unit": ""
   },
   {
    "name": "Reeva Coc 75g Chicken (Kuřecí) …",
-   "price": 19.88,
+   "price": 20.5,
    "amount": "75 g",
    "unit": ""
   },
@@ -51418,13 +51676,13 @@
   },
   {
    "name": "Reeva Coc 75g Chicken Cari (Kuře…",
-   "price": 19.88,
+   "price": 20.5,
    "amount": "75 g",
    "unit": ""
   },
   {
    "name": "Reeva Coc 75g Vegetable (Zelenina)…",
-   "price": 19.88,
+   "price": 20.5,
    "amount": "75 g",
    "unit": ""
   },
@@ -51730,7 +51988,7 @@
   },
   {
    "name": "Snack It 120g Kabanos Exclusive…",
-   "price": 36.1,
+   "price": 41.88,
    "amount": "120 g",
    "unit": ""
   },
@@ -52113,19 +52371,7 @@
    "unit": ""
   },
   {
-   "name": "USA Dr.Pepper 0,355L Cherry (12ks)…",
-   "price": 22.9,
-   "amount": "0,355 l",
-   "unit": ""
-  },
-  {
    "name": "USA Dr.Pepper 0,355L Classic (12ks)",
-   "price": 22.9,
-   "amount": "0,355 l",
-   "unit": ""
-  },
-  {
-   "name": "USA Dr.Pepper 0,355L Cream Soda …",
    "price": 22.9,
    "amount": "0,355 l",
    "unit": ""
@@ -52276,6 +52522,12 @@
   },
   {
    "name": "USA Pepsi 0,355L Wild Cherry (12ks)",
+   "price": 22.9,
+   "amount": "0,355 l",
+   "unit": ""
+  },
+  {
+   "name": "USA Sprite 0,355L (12ks)",
    "price": 22.9,
    "amount": "0,355 l",
    "unit": ""
@@ -53044,25 +53296,25 @@
   },
   {
    "name": "Bely 150g paštika pro psy hovězí s…",
-   "price": 13.0,
+   "price": 13.4,
    "amount": "150 g",
    "unit": ""
   },
   {
    "name": "Bely 150g paštika pro psy kuřecí s…",
-   "price": 13.1,
+   "price": 13.5,
    "amount": "150 g",
    "unit": ""
   },
   {
    "name": "Bely 300g paštika pro psy hovězí s…",
-   "price": 20.69,
+   "price": 21.33,
    "amount": "300 g",
    "unit": ""
   },
   {
    "name": "Bely 300g paštika pro psy králik…",
-   "price": 20.69,
+   "price": 21.33,
    "amount": "300 g",
    "unit": ""
   },
@@ -53242,25 +53494,25 @@
   },
   {
    "name": "Caty 100g paštika pro kočky kuřecí…",
-   "price": 10.28,
+   "price": 10.6,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Caty 100g paštika pro kočky s…",
-   "price": 10.28,
+   "price": 10.6,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Caty 415g kousky v omáčce s…",
-   "price": 19.88,
+   "price": 20.5,
    "amount": "415 g",
    "unit": ""
   },
   {
    "name": "Caty 415g kousky v omáčce s…",
-   "price": 19.88,
+   "price": 20.5,
    "amount": "415 g",
    "unit": ""
   },
@@ -53434,61 +53686,61 @@
   },
   {
    "name": "Dax 100g kapsa kočka hovězí (24ks)",
-   "price": 7.69,
+   "price": 7.46,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Dax 100g kapsa kočka kuřecí (24ks)",
-   "price": 7.69,
+   "price": 7.46,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Dax 100g kapsa pes hovězí - králík…",
-   "price": 7.69,
+   "price": 7.46,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Dax 100g kapsa pes krůtí - kachní …",
-   "price": 7.69,
+   "price": 7.46,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Dax 100g vanička kočka drůbeží …",
-   "price": 10.66,
+   "price": 10.34,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Dax 100g vanička kočka hovězí …",
-   "price": 10.66,
+   "price": 10.34,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Dax 10kg granule pes drůbeží",
-   "price": 212.75,
+   "price": 206.37,
    "amount": "10 kg",
    "unit": ""
   },
   {
    "name": "Dax 10kg granule pes hovězí",
-   "price": 212.75,
+   "price": 206.37,
    "amount": "10 kg",
    "unit": ""
   },
   {
    "name": "Dax 1240g kousky pes drůbež (12ks)",
-   "price": 36.9,
+   "price": 35.8,
    "amount": "1240 g",
    "unit": ""
   },
   {
    "name": "Dax 1240g kousky pes hovězí (12ks)",
-   "price": 36.9,
+   "price": 35.8,
    "amount": "1240 g",
    "unit": ""
   },
@@ -53506,13 +53758,13 @@
   },
   {
    "name": "Dax 1240g kousky pes telecí (12ks)",
-   "price": 36.9,
+   "price": 35.8,
    "amount": "1240 g",
    "unit": ""
   },
   {
    "name": "Dax 1240g kousky pes zvěřina (12ks)",
-   "price": 36.9,
+   "price": 35.8,
    "amount": "1240 g",
    "unit": ""
   },
@@ -53530,37 +53782,37 @@
   },
   {
    "name": "Dax 300g vanička pes drůbeží (9ks)",
-   "price": 20.94,
+   "price": 20.31,
    "amount": "300 g",
    "unit": ""
   },
   {
    "name": "Dax 300g vanička pes hovězí (9ks)",
-   "price": 20.94,
+   "price": 20.31,
    "amount": "300 g",
    "unit": ""
   },
   {
    "name": "Dax 3kg granule pes drůbeží (6ks)",
-   "price": 101.29,
+   "price": 98.25,
    "amount": "3 kg",
    "unit": ""
   },
   {
    "name": "Dax 3kg granule pes hovězí (6ks)",
-   "price": 101.29,
+   "price": 98.25,
    "amount": "3 kg",
    "unit": ""
   },
   {
    "name": "Dax 415g kousky kočka hovězí (24ks)",
-   "price": 16.1,
+   "price": 15.62,
    "amount": "415 g",
    "unit": ""
   },
   {
    "name": "Dax 415g kousky kočka játra (24ks)",
-   "price": 16.5,
+   "price": 16.0,
    "amount": "415 g",
    "unit": ""
   },
@@ -53572,25 +53824,25 @@
   },
   {
    "name": "Dax 415g kousky kočka kuřecí (24ks)",
-   "price": 16.1,
+   "price": 15.62,
    "amount": "415 g",
    "unit": ""
   },
   {
    "name": "Dax 415g kousky kočka ryba (24ks)",
-   "price": 16.1,
+   "price": 15.62,
    "amount": "415 g",
    "unit": ""
   },
   {
    "name": "Dax 415g kousky pes hovězí (24ks)",
-   "price": 15.9,
+   "price": 15.42,
    "amount": "415 g",
    "unit": ""
   },
   {
    "name": "Dax 415g kousky pes kuřecí (24ks)",
-   "price": 15.6,
+   "price": 15.13,
    "amount": "415 g",
    "unit": ""
   },
@@ -53602,13 +53854,13 @@
   },
   {
    "name": "Dax 830g kousky kočka drůbež (12ks)",
-   "price": 30.09,
+   "price": 29.19,
    "amount": "830 g",
    "unit": ""
   },
   {
    "name": "Dax 830g kousky kočka hovězí (12ks)",
-   "price": 30.09,
+   "price": 29.19,
    "amount": "830 g",
    "unit": ""
   },
@@ -54154,7 +54406,7 @@
   },
   {
    "name": "Gourmet Gold 85g Konzerva…",
-   "price": 15.02,
+   "price": 15.49,
    "amount": "85 g",
    "unit": ""
   },
@@ -54166,7 +54418,7 @@
   },
   {
    "name": "Gourmet Gold 85g Paštika hovězí…",
-   "price": 14.36,
+   "price": 14.8,
    "amount": "85 g",
    "unit": ""
   },
@@ -54178,7 +54430,7 @@
   },
   {
    "name": "Gourmet Gold 85g Paštika hovězí…",
-   "price": 15.02,
+   "price": 15.49,
    "amount": "85 g",
    "unit": ""
   },
@@ -54196,13 +54448,13 @@
   },
   {
    "name": "Gourmet Gold 85g Paštika krůta …",
-   "price": 15.02,
+   "price": 15.49,
    "amount": "85 g",
    "unit": ""
   },
   {
    "name": "Gourmet Gold 85g Paštika kuře…",
-   "price": 14.36,
+   "price": 14.8,
    "amount": "85 g",
    "unit": ""
   },
@@ -54214,13 +54466,13 @@
   },
   {
    "name": "Gourmet Gold 85g Paštika losos…",
-   "price": 15.02,
+   "price": 15.49,
    "amount": "85 g",
    "unit": ""
   },
   {
    "name": "Gourmet Gold 85g Paštika mořské…",
-   "price": 14.36,
+   "price": 14.8,
    "amount": "85 g",
    "unit": ""
   },
@@ -54736,13 +54988,13 @@
   },
   {
    "name": "Papky 120g plátky drůbeží pro psy …",
-   "price": 16.68,
+   "price": 17.2,
    "amount": "120 g",
    "unit": ""
   },
   {
    "name": "Papky 120g tyčinky na srst a kůži …",
-   "price": 16.68,
+   "price": 17.2,
    "amount": "120 g",
    "unit": ""
   },
@@ -54754,7 +55006,7 @@
   },
   {
    "name": "Papky dentální tyčky 4ks pro psy …",
-   "price": 16.68,
+   "price": 17.2,
    "amount": "4 ks",
    "unit": ""
   },
@@ -54772,13 +55024,13 @@
   },
   {
    "name": "Papky plátky hovězí 12ks pro psy …",
-   "price": 16.68,
+   "price": 17.2,
    "amount": "12 ks",
    "unit": ""
   },
   {
    "name": "Papky tyčinky s dršťkami 12ks pro…",
-   "price": 16.68,
+   "price": 17.2,
    "amount": "12 ks",
    "unit": ""
   },
@@ -55414,7 +55666,7 @@
   },
   {
    "name": "PreVital 0,3kg granule kočka Adult…",
-   "price": 28.55,
+   "price": 27.69,
    "amount": "0,3 kg",
    "unit": ""
   },
@@ -55426,7 +55678,7 @@
   },
   {
    "name": "PreVital 0,3kg granule kočka Adult…",
-   "price": 28.55,
+   "price": 27.69,
    "amount": "0,3 kg",
    "unit": ""
   },
@@ -55438,13 +55690,13 @@
   },
   {
    "name": "PreVital 0,95kg granule kočka…",
-   "price": 67.1,
+   "price": 65.09,
    "amount": "0,95 kg",
    "unit": ""
   },
   {
    "name": "PreVital 1,4kg granule kočka Adult…",
-   "price": 96.0,
+   "price": 93.12,
    "amount": "1,4 kg",
    "unit": ""
   },
@@ -55456,19 +55708,19 @@
   },
   {
    "name": "PreVital 1,4kg granule kočka Adult…",
-   "price": 96.0,
+   "price": 93.12,
    "amount": "1,4 kg",
    "unit": ""
   },
   {
    "name": "PreVital 1,4kg granule kočka Adult…",
-   "price": 96.0,
+   "price": 93.12,
    "amount": "1,4 kg",
    "unit": ""
   },
   {
    "name": "PreVital 1,4kg granule kočka…",
-   "price": 99.24,
+   "price": 96.28,
    "amount": "1,4 kg",
    "unit": ""
   },
@@ -55480,13 +55732,13 @@
   },
   {
    "name": "PreVital 100g kapsa kočka kuře …",
-   "price": 10.04,
+   "price": 9.74,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "PreVital 100g kapsa kočka losos …",
-   "price": 10.04,
+   "price": 9.73,
    "amount": "100 g",
    "unit": ""
   },
@@ -55522,13 +55774,13 @@
   },
   {
    "name": "PreVital 415g kousky kočka hovězí…",
-   "price": 18.89,
+   "price": 18.33,
    "amount": "415 g",
    "unit": ""
   },
   {
    "name": "PreVital 415g kousky kočka hovězí…",
-   "price": 18.89,
+   "price": 18.33,
    "amount": "415 g",
    "unit": ""
   },
@@ -55540,13 +55792,13 @@
   },
   {
    "name": "PreVital 415g kousky kočka krůta…",
-   "price": 18.89,
+   "price": 18.33,
    "amount": "415 g",
    "unit": ""
   },
   {
    "name": "PreVital 415g kousky kočka losos v…",
-   "price": 18.89,
+   "price": 18.33,
    "amount": "415 g",
    "unit": ""
   },
@@ -55612,13 +55864,13 @@
   },
   {
    "name": "PreVital 85g Naturel kapsa hovězí …",
-   "price": 11.1,
+   "price": 10.77,
    "amount": "85 g",
    "unit": ""
   },
   {
    "name": "PreVital 85g Naturel kapsa kočka…",
-   "price": 11.1,
+   "price": 10.77,
    "amount": "85 g",
    "unit": ""
   },
@@ -55642,7 +55894,7 @@
   },
   {
    "name": "PreVital 85g Naturel kapsa kuřecí …",
-   "price": 11.1,
+   "price": 10.77,
    "amount": "85 g",
    "unit": ""
   },
@@ -55684,25 +55936,25 @@
   },
   {
    "name": "Propesko 100g kapsa kočka jehně…",
-   "price": 8.96,
+   "price": 8.69,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Propesko 100g kapsa kočka kuře…",
-   "price": 8.96,
+   "price": 8.69,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Propesko 100g kapsa pes hovězí…",
-   "price": 8.96,
+   "price": 8.69,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Propesko 100g kapsa pes kuře…",
-   "price": 8.96,
+   "price": 8.69,
    "amount": "100 g",
    "unit": ""
   },
@@ -55750,31 +56002,31 @@
   },
   {
    "name": "Propesko 1240g kousky pes 7+…",
-   "price": 39.83,
+   "price": 38.64,
    "amount": "1240 g",
    "unit": ""
   },
   {
    "name": "Propesko 1240g kousky pes hovězí…",
-   "price": 39.83,
+   "price": 38.64,
    "amount": "1240 g",
    "unit": ""
   },
   {
    "name": "Propesko 1240g kousky pes jehněčí…",
-   "price": 39.83,
+   "price": 38.64,
    "amount": "1240 g",
    "unit": ""
   },
   {
    "name": "Propesko 1240g kousky pes kuře…",
-   "price": 41.1,
+   "price": 39.87,
    "amount": "1240 g",
    "unit": ""
   },
   {
    "name": "Propesko 1240g kousky pes telecí…",
-   "price": 39.83,
+   "price": 38.64,
    "amount": "1240 g",
    "unit": ""
   },
@@ -55804,19 +56056,19 @@
   },
   {
    "name": "Propesko 1kg granule pes pro malá…",
-   "price": 40.6,
+   "price": 39.38,
    "amount": "1 kg",
    "unit": ""
   },
   {
    "name": "Propesko 1kg granule pes štěnátko …",
-   "price": 58.63,
+   "price": 56.87,
    "amount": "1 kg",
    "unit": ""
   },
   {
    "name": "Propesko 1kg salám pes s jehněčím …",
-   "price": 37.5,
+   "price": 36.37,
    "amount": "1 kg",
    "unit": ""
   },
@@ -55834,19 +56086,19 @@
   },
   {
    "name": "Propesko 3kg granule pes Vitality …",
-   "price": 106.35,
+   "price": 103.16,
    "amount": "3 kg",
    "unit": ""
   },
   {
    "name": "Propesko 3kg granule pes Wellness …",
-   "price": 106.35,
+   "price": 103.16,
    "amount": "3 kg",
    "unit": ""
   },
   {
    "name": "Propesko 415g kousky kočka hovězí…",
-   "price": 17.82,
+   "price": 17.29,
    "amount": "415 g",
    "unit": ""
   },
@@ -55858,13 +56110,13 @@
   },
   {
    "name": "Propesko 415g kousky kočka krůtí…",
-   "price": 18.35,
+   "price": 17.8,
    "amount": "415 g",
    "unit": ""
   },
   {
    "name": "Propesko 415g kousky kočka losos v…",
-   "price": 17.82,
+   "price": 17.28,
    "amount": "415 g",
    "unit": ""
   },
@@ -55876,13 +56128,13 @@
   },
   {
    "name": "Propesko 415g kousky pes jehněčí v…",
-   "price": 17.82,
+   "price": 17.28,
    "amount": "415 g",
    "unit": ""
   },
   {
    "name": "Propesko 415g kousky pes kuře…",
-   "price": 17.82,
+   "price": 17.28,
    "amount": "415 g",
    "unit": ""
   },
@@ -55894,7 +56146,7 @@
   },
   {
    "name": "Propesko 4x100g kapsa kočka hovězí…",
-   "price": 33.5,
+   "price": 32.5,
    "amount": "100 g",
    "unit": ""
   },
@@ -55906,13 +56158,13 @@
   },
   {
    "name": "Propesko 4x100g kapsa kočka kuřecí…",
-   "price": 33.5,
+   "price": 32.5,
    "amount": "100 g",
    "unit": ""
   },
   {
    "name": "Propesko 4x100g kapsa pes králík…",
-   "price": 34.48,
+   "price": 33.44,
    "amount": "100 g",
    "unit": ""
   },
@@ -55972,13 +56224,13 @@
   },
   {
    "name": "Propesko 830g kousky kočka hovězí…",
-   "price": 33.22,
+   "price": 32.22,
    "amount": "830 g",
    "unit": ""
   },
   {
    "name": "Propesko 830g kousky kočka losos v…",
-   "price": 32.43,
+   "price": 31.46,
    "amount": "830 g",
    "unit": ""
   },
@@ -56200,7 +56452,7 @@
   },
   {
    "name": "Reno 10kg granule pes s hovězím",
-   "price": 216.5,
+   "price": 210.0,
    "amount": "10 kg",
    "unit": ""
   },
@@ -56512,7 +56764,7 @@
   },
   {
    "name": "Shelma 85g kapsička kočka s…",
-   "price": 11.2,
+   "price": 10.86,
    "amount": "85 g",
    "unit": ""
   },
@@ -56866,7 +57118,7 @@
   },
   {
    "name": "Adidas 250ml 3v1 Fresh Endurance…",
-   "price": 35.72,
+   "price": 40.26,
    "amount": "250 ml",
    "unit": ""
   },
@@ -57292,7 +57544,7 @@
   },
   {
    "name": "Adidas Deo Sprej 150ml Men Pure…",
-   "price": 55.4,
+   "price": 62.5,
    "amount": "150 ml",
    "unit": ""
   },
@@ -57586,13 +57838,13 @@
   },
   {
    "name": "Alpa Gel 100ml Francovka (10ks)",
-   "price": 47.2,
+   "price": 49.55,
    "amount": "100 ml",
    "unit": ""
   },
   {
    "name": "Alpa Gel 100ml Lesana (10ks)",
-   "price": 50.0,
+   "price": 52.41,
    "amount": "100 ml",
    "unit": ""
   },
@@ -57874,19 +58126,19 @@
   },
   {
    "name": "Ariel gel 1,125L Color 25pd (4/80)",
-   "price": 116.01,
+   "price": 119.6,
    "amount": "1,125 l",
    "unit": ""
   },
   {
    "name": "Ariel gel 1,125L Mountain Spring…",
-   "price": 116.01,
+   "price": 119.6,
    "amount": "1,125 l",
    "unit": ""
   },
   {
    "name": "Ariel gel 1,125L Sensitive 25pd (4…",
-   "price": 116.01,
+   "price": 119.6,
    "amount": "1,125 l",
    "unit": ""
   },
@@ -57905,6 +58157,12 @@
   {
    "name": "Ariel gel 1,35L Extra Clean 30pd …",
    "price": 215.7,
+   "amount": "1,35 l",
+   "unit": ""
+  },
+  {
+   "name": "Ariel gel 1,35l Extra Color 30pd …",
+   "price": 156.4,
    "amount": "1,35 l",
    "unit": ""
   },
@@ -57964,7 +58222,7 @@
   },
   {
    "name": "Ariel gel 1,7L Extra Clean 34pd (5…",
-   "price": 174.02,
+   "price": 179.4,
    "amount": "1,7 l",
    "unit": ""
   },
@@ -57994,19 +58252,19 @@
   },
   {
    "name": "Ariel gel 1,8L Color 40pd (4/56)",
-   "price": 202.34,
+   "price": 208.6,
    "amount": "1,8 l",
    "unit": ""
   },
   {
    "name": "Ariel gel 1,8L Fresh Breeze of…",
-   "price": 202.34,
+   "price": 208.6,
    "amount": "1,8 l",
    "unit": ""
   },
   {
    "name": "Ariel gel 1,8L Mountain Spring…",
-   "price": 202.34,
+   "price": 208.6,
    "amount": "1,8 l",
    "unit": ""
   },
@@ -58036,13 +58294,13 @@
   },
   {
    "name": "Ariel gel 2,25L Color 50pd (4/48)",
-   "price": 269.0,
+   "price": 277.31,
    "amount": "2,25 l",
    "unit": ""
   },
   {
    "name": "Ariel gel 2,25L Mountain Spring…",
-   "price": 269.0,
+   "price": 277.31,
    "amount": "2,25 l",
    "unit": ""
   },
@@ -58096,7 +58354,7 @@
   },
   {
    "name": "Ariel kapsle Color 10pd (4/64)",
-   "price": 94.28,
+   "price": 97.2,
    "amount": "",
    "unit": ""
   },
@@ -58108,19 +58366,19 @@
   },
   {
    "name": "Ariel kapsle Color 13pd (4/64)",
-   "price": 106.41,
+   "price": 109.7,
    "amount": "",
    "unit": ""
   },
   {
    "name": "Ariel kapsle Color 20pd (4/48)",
-   "price": 171.98,
+   "price": 177.3,
    "amount": "",
    "unit": ""
   },
   {
    "name": "Ariel kapsle Color 24pd (4/48)",
-   "price": 184.11,
+   "price": 189.8,
    "amount": "",
    "unit": ""
   },
@@ -58132,13 +58390,13 @@
   },
   {
    "name": "Ariel kapsle Extra Clean Plus 20pd…",
-   "price": 209.52,
+   "price": 216.0,
    "amount": "",
    "unit": ""
   },
   {
    "name": "Ariel kapsle Fiber Protection 20pd…",
-   "price": 209.52,
+   "price": 216.0,
    "amount": "",
    "unit": ""
   },
@@ -58150,7 +58408,7 @@
   },
   {
    "name": "Ariel kapsle Mountain Spring 24pd …",
-   "price": 184.11,
+   "price": 189.8,
    "amount": "",
    "unit": ""
   },
@@ -58162,25 +58420,25 @@
   },
   {
    "name": "Ariel kapsle Universal 20pd (4/48)",
-   "price": 207.15,
+   "price": 213.55,
    "amount": "",
    "unit": ""
   },
   {
    "name": "Ariel prášek 1,1kg Color 20pd (12…",
-   "price": 126.67,
+   "price": 130.6,
    "amount": "1,1 kg",
    "unit": ""
   },
   {
    "name": "Ariel prášek 1,1kg Mountain Spring…",
-   "price": 126.67,
+   "price": 130.6,
    "amount": "1,1 kg",
    "unit": ""
   },
   {
    "name": "Ariel prášek 1,5kg Mountain (Dag…",
-   "price": 66.93,
+   "price": 68.99,
    "amount": "1,5 kg",
    "unit": ""
   },
@@ -58210,13 +58468,13 @@
   },
   {
    "name": "Ariel prášek 330g Color 6pd (24…",
-   "price": 43.64,
+   "price": 44.99,
    "amount": "330 g",
    "unit": ""
   },
   {
    "name": "Ariel prášek 330g Mountain Spring…",
-   "price": 43.64,
+   "price": 44.99,
    "amount": "330 g",
    "unit": ""
   },
@@ -58270,7 +58528,7 @@
   },
   {
    "name": "Axe 250ml 5v1 Lendemain Difficult…",
-   "price": 44.79,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
@@ -58282,13 +58540,13 @@
   },
   {
    "name": "Axe 250ml Africa Sprchový Gel (6ks)",
-   "price": 44.79,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
   {
    "name": "Axe 250ml Alaska Sprchový Gel (6ks…",
-   "price": 44.79,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
@@ -58300,7 +58558,7 @@
   },
   {
    "name": "Axe 250ml Apollo Sprchový Gel (6ks…",
-   "price": 44.79,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
@@ -58312,7 +58570,7 @@
   },
   {
    "name": "Axe 250ml Black Sprchový Gel (6ks)",
-   "price": 44.79,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
@@ -58330,7 +58588,7 @@
   },
   {
    "name": "Axe 250ml Dark Temptation Sprchový…",
-   "price": 44.79,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
@@ -58342,13 +58600,13 @@
   },
   {
    "name": "Axe 250ml Epic Fresh Sprchový Gel …",
-   "price": 44.79,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
   {
    "name": "Axe 250ml Excite Sprchový Gel (6ks)",
-   "price": 44.79,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
@@ -58384,7 +58642,7 @@
   },
   {
    "name": "Axe 250ml Ice Chill 8h Fresh…",
-   "price": 44.79,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
@@ -58396,7 +58654,7 @@
   },
   {
    "name": "Axe 250ml Leather & Cookies…",
-   "price": 44.79,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
@@ -58414,13 +58672,13 @@
   },
   {
    "name": "Axe 250ml Pride Unite- Love…",
-   "price": 44.79,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
   {
    "name": "Axe 250ml Re-load Sprchový Gel …",
-   "price": 44.79,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
@@ -58444,7 +58702,7 @@
   },
   {
    "name": "Axe 250ml Sport Blast Sprchový Gel…",
-   "price": 44.79,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
@@ -58456,7 +58714,7 @@
   },
   {
    "name": "Axe 250ml Wild Bergamot & Pink…",
-   "price": 44.79,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
@@ -58474,7 +58732,7 @@
   },
   {
    "name": "Axe 400ml Africa Shower Gel (6ks)",
-   "price": 65.81,
+   "price": 67.84,
    "amount": "400 ml",
    "unit": ""
   },
@@ -59080,7 +59338,7 @@
   },
   {
    "name": "Bonux Prášek 1,17kg Polar Ice…",
-   "price": 73.8,
+   "price": 76.08,
    "amount": "1,17 kg",
    "unit": ""
   },
@@ -59092,13 +59350,13 @@
   },
   {
    "name": "Bonux Prášek 1,17kg Radiant Rose…",
-   "price": 68.76,
+   "price": 70.9,
    "amount": "1,17 kg",
    "unit": ""
   },
   {
    "name": "Bonux Prášek 1,17kg White Lilac…",
-   "price": 73.73,
+   "price": 76.0,
    "amount": "1,17 kg",
    "unit": ""
   },
@@ -59158,25 +59416,25 @@
   },
   {
    "name": "Bonux prášek 300g Polar Ice Fresh…",
-   "price": 29.1,
+   "price": 30.0,
    "amount": "300 g",
    "unit": ""
   },
   {
    "name": "Bonux prášek 390g Color Caring…",
-   "price": 29.1,
+   "price": 30.0,
    "amount": "390 g",
    "unit": ""
   },
   {
    "name": "Bonux prášek 390g Color Pure…",
-   "price": 29.1,
+   "price": 30.0,
    "amount": "390 g",
    "unit": ""
   },
   {
    "name": "Bonux prášek 390g Polar Ice Fresh…",
-   "price": 29.1,
+   "price": 30.0,
    "amount": "390 g",
    "unit": ""
   },
@@ -59200,7 +59458,7 @@
   },
   {
    "name": "Bonux Prášek 400g White Polar Ice…",
-   "price": 20.65,
+   "price": 21.3,
    "amount": "400 g",
    "unit": ""
   },
@@ -59902,7 +60160,7 @@
   },
   {
    "name": "Cit 600g Čistič odpadu (8ks)",
-   "price": 58.9,
+   "price": 61.08,
    "amount": "600 g",
    "unit": ""
   },
@@ -59914,13 +60172,13 @@
   },
   {
    "name": "Cit 600g Písek tekutý Lemon (10ks)",
-   "price": 20.9,
+   "price": 25.3,
    "amount": "600 g",
    "unit": ""
   },
   {
    "name": "Cit 600g Písek tekutý Ocean (10ks)",
-   "price": 20.9,
+   "price": 23.23,
    "amount": "600 g",
    "unit": ""
   },
@@ -60262,7 +60520,7 @@
   },
   {
    "name": "Colgate kartáček Classic Deep…",
-   "price": 12.65,
+   "price": 12.64,
    "amount": "",
    "unit": ""
   },
@@ -60495,7 +60753,7 @@
    "unit": ""
   },
   {
-   "name": "Colgate ZP 75ml Max Fresh (12ks)",
+   "name": "Colgate ZP 75ml Max Fresh Cool…",
    "price": 31.5,
    "amount": "75 ml",
    "unit": ""
@@ -60688,7 +60946,7 @@
   },
   {
    "name": "Denim 250ml x3Triple Energy Wild…",
-   "price": 34.9,
+   "price": 38.7,
    "amount": "250 ml",
    "unit": ""
   },
@@ -60808,7 +61066,7 @@
   },
   {
    "name": "Denim Deo Sprej 150ml Wild (12ks)",
-   "price": 47.9,
+   "price": 52.9,
    "amount": "150 ml",
    "unit": ""
   },
@@ -60904,19 +61162,19 @@
   },
   {
    "name": "Discreet Intimky Vložky Normal…",
-   "price": 23.78,
+   "price": 23.06,
    "amount": "",
    "unit": ""
   },
   {
    "name": "Discreet Intimky Vložky Normal…",
-   "price": 26.0,
+   "price": 25.22,
    "amount": "",
    "unit": ""
   },
   {
    "name": "Discreet Intimky Vložky Waterlily…",
-   "price": 24.5,
+   "price": 23.76,
    "amount": "",
    "unit": ""
   },
@@ -60994,7 +61252,7 @@
   },
   {
    "name": "Domestos WC čistič 750ml Extended…",
-   "price": 35.3,
+   "price": 35.27,
    "amount": "750 ml",
    "unit": ""
   },
@@ -63748,7 +64006,19 @@
   },
   {
    "name": "Fresh Air 100ks Klip vlhč.…",
-   "price": 24.6,
+   "price": 27.08,
+   "amount": "100 ks",
+   "unit": ""
+  },
+  {
+   "name": "Fresh Air 100ks Klip vlhč.…",
+   "price": 27.08,
+   "amount": "100 ks",
+   "unit": ""
+  },
+  {
+   "name": "Fresh Air 100ks Klip vlhč.…",
+   "price": 27.08,
    "amount": "100 ks",
    "unit": ""
   },
@@ -63760,55 +64030,79 @@
   },
   {
    "name": "Fresh Air 100ks Klip vlhč.…",
-   "price": 24.6,
+   "price": 27.08,
    "amount": "100 ks",
    "unit": ""
   },
   {
    "name": "Fresh Air 100ks Klip vlhč.…",
-   "price": 24.6,
+   "price": 27.08,
    "amount": "100 ks",
    "unit": ""
   },
   {
    "name": "Fresh Air 100ks Klip vlhč.…",
-   "price": 24.6,
+   "price": 27.08,
    "amount": "100 ks",
    "unit": ""
   },
   {
    "name": "Fresh Air 100ks Klip vlhč.…",
-   "price": 24.6,
+   "price": 27.08,
    "amount": "100 ks",
    "unit": ""
   },
   {
    "name": "Fresh Air 100ks Klip vlhč.…",
-   "price": 24.6,
+   "price": 27.08,
    "amount": "100 ks",
    "unit": ""
   },
   {
    "name": "Fresh Air 100ks Klip vlhč.…",
-   "price": 24.6,
-   "amount": "100 ks",
-   "unit": ""
-  },
-  {
-   "name": "Fresh Air 100ks Klip vlhč.…",
-   "price": 24.6,
-   "amount": "100 ks",
-   "unit": ""
-  },
-  {
-   "name": "Fresh Air 100ks Klip vlhč.…",
-   "price": 24.6,
+   "price": 27.08,
    "amount": "100 ks",
    "unit": ""
   },
   {
    "name": "Fresh Air 120ks Klip vlhč.…",
-   "price": 27.0,
+   "price": 29.28,
+   "amount": "120 ks",
+   "unit": ""
+  },
+  {
+   "name": "Fresh Air 120ks Klip vlhč.…",
+   "price": 29.28,
+   "amount": "120 ks",
+   "unit": ""
+  },
+  {
+   "name": "Fresh Air 120ks Klip vlhč.…",
+   "price": 29.28,
+   "amount": "120 ks",
+   "unit": ""
+  },
+  {
+   "name": "Fresh Air 120ks Klip vlhč.…",
+   "price": 26.86,
+   "amount": "120 ks",
+   "unit": ""
+  },
+  {
+   "name": "Fresh Air 120ks Klip vlhč.…",
+   "price": 29.28,
+   "amount": "120 ks",
+   "unit": ""
+  },
+  {
+   "name": "Fresh Air 120ks Klip vlhč.…",
+   "price": 29.28,
+   "amount": "120 ks",
+   "unit": ""
+  },
+  {
+   "name": "Fresh Air 120ks Klip vlhč.…",
+   "price": 29.28,
    "amount": "120 ks",
    "unit": ""
   },
@@ -63820,55 +64114,19 @@
   },
   {
    "name": "Fresh Air 120ks Klip vlhč.…",
-   "price": 27.0,
+   "price": 29.28,
    "amount": "120 ks",
    "unit": ""
   },
   {
    "name": "Fresh Air 120ks Klip vlhč.…",
-   "price": 27.0,
+   "price": 29.28,
    "amount": "120 ks",
    "unit": ""
   },
   {
    "name": "Fresh Air 120ks Klip vlhč.…",
-   "price": 27.0,
-   "amount": "120 ks",
-   "unit": ""
-  },
-  {
-   "name": "Fresh Air 120ks Klip vlhč.…",
-   "price": 27.0,
-   "amount": "120 ks",
-   "unit": ""
-  },
-  {
-   "name": "Fresh Air 120ks Klip vlhč.…",
-   "price": 27.0,
-   "amount": "120 ks",
-   "unit": ""
-  },
-  {
-   "name": "Fresh Air 120ks Klip vlhč.…",
-   "price": 27.0,
-   "amount": "120 ks",
-   "unit": ""
-  },
-  {
-   "name": "Fresh Air 120ks Klip vlhč.…",
-   "price": 27.0,
-   "amount": "120 ks",
-   "unit": ""
-  },
-  {
-   "name": "Fresh Air 120ks Klip vlhč.…",
-   "price": 27.0,
-   "amount": "120 ks",
-   "unit": ""
-  },
-  {
-   "name": "Fresh Air 120ks Klip vlhč.…",
-   "price": 27.0,
+   "price": 29.34,
    "amount": "120 ks",
    "unit": ""
   },
@@ -64072,13 +64330,13 @@
   },
   {
    "name": "Freshmaker Kapesní vlhč. ubrousky…",
-   "price": 4.5,
+   "price": 4.45,
    "amount": "",
    "unit": ""
   },
   {
    "name": "Freshmaker kapesní vlhč. ubrousky…",
-   "price": 4.5,
+   "price": 4.8,
    "amount": "",
    "unit": ""
   },
@@ -64864,7 +65122,7 @@
   },
   {
    "name": "Gillette Holítka Blue3 Comfort 3ks…",
-   "price": 54.97,
+   "price": 56.93,
    "amount": "3 ks",
    "unit": ""
   },
@@ -66190,7 +66448,7 @@
   },
   {
    "name": "Lara 100 klip vlhč. ubrousky Aloe…",
-   "price": 27.0,
+   "price": 30.15,
    "amount": "",
    "unit": ""
   },
@@ -66202,7 +66460,7 @@
   },
   {
    "name": "Lara 100 klip vlhč. ubrousky…",
-   "price": 27.0,
+   "price": 29.69,
    "amount": "",
    "unit": ""
   },
@@ -66226,7 +66484,13 @@
   },
   {
    "name": "Lara 120 klip vlhč. ubrousky Aloe…",
-   "price": 27.42,
+   "price": 29.69,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Lara 120 klip vlhč. ubrousky…",
+   "price": 30.15,
    "amount": "",
    "unit": ""
   },
@@ -66238,7 +66502,13 @@
   },
   {
    "name": "Lara 120 klip vlhč. ubrousky…",
-   "price": 27.42,
+   "price": 29.69,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Lara 120 klip vlhč. ubrousky…",
+   "price": 30.15,
    "amount": "",
    "unit": ""
   },
@@ -66250,19 +66520,7 @@
   },
   {
    "name": "Lara 120 klip vlhč. ubrousky…",
-   "price": 27.42,
-   "amount": "",
-   "unit": ""
-  },
-  {
-   "name": "Lara 120 klip vlhč. ubrousky…",
-   "price": 27.42,
-   "amount": "",
-   "unit": ""
-  },
-  {
-   "name": "Lara 120 klip vlhč. ubrousky…",
-   "price": 28.2,
+   "price": 30.15,
    "amount": "",
    "unit": ""
   },
@@ -66346,13 +66604,13 @@
   },
   {
    "name": "Lara Mýdlo tekuté 0,375L…",
-   "price": 27.4,
+   "price": 32.8,
    "amount": "0,375 l",
    "unit": ""
   },
   {
    "name": "Lara Mýdlo tekuté 0,375L Green…",
-   "price": 27.4,
+   "price": 32.8,
    "amount": "0,375 l",
    "unit": ""
   },
@@ -66370,7 +66628,7 @@
   },
   {
    "name": "Lara Mýdlo tekuté 0,375L Lime …",
-   "price": 27.4,
+   "price": 32.8,
    "amount": "0,375 l",
    "unit": ""
   },
@@ -66394,7 +66652,7 @@
   },
   {
    "name": "Lara Mýdlo tekuté 0,375L Pear …",
-   "price": 27.4,
+   "price": 32.8,
    "amount": "0,375 l",
    "unit": ""
   },
@@ -67882,7 +68140,7 @@
   },
   {
    "name": "Nivea 250ml Cashmere Shower Gel …",
-   "price": 32.2,
+   "price": 45.0,
    "amount": "250 ml",
    "unit": ""
   },
@@ -67917,7 +68175,7 @@
    "unit": ""
   },
   {
-   "name": "Nivea 250ml Creme Coconut Shower…",
+   "name": "Nivea 250ml Creme Coconut & Jojoba…",
    "price": 50.6,
    "amount": "250 ml",
    "unit": ""
@@ -70288,7 +70546,7 @@
   },
   {
    "name": "Pantene kondicioner 90ml Repair &…",
-   "price": 36.28,
+   "price": 37.4,
    "amount": "90 ml",
    "unit": ""
   },
@@ -70468,7 +70726,7 @@
   },
   {
    "name": "Papilion 100 Klip vlhč. ubrousky…",
-   "price": 25.4,
+   "price": 27.08,
    "amount": "",
    "unit": ""
   },
@@ -70990,7 +71248,7 @@
   },
   {
    "name": "Persil prášek 1,5kg Power Rose …",
-   "price": 67.49,
+   "price": 69.58,
    "amount": "1,5 kg",
    "unit": ""
   },
@@ -72052,13 +72310,13 @@
   },
   {
    "name": "Savo 0,5l Sprej Kuchyně (12ks)",
-   "price": 48.9,
+   "price": 44.84,
    "amount": "0,5 l",
    "unit": ""
   },
   {
    "name": "Savo 0,5l Sprej Proti plísním…",
-   "price": 74.92,
+   "price": 76.81,
    "amount": "0,5 l",
    "unit": ""
   },
@@ -72160,7 +72418,7 @@
   },
   {
    "name": "Savo WC gel 700ml Oceán (12ks)",
-   "price": 39.5,
+   "price": 42.39,
    "amount": "700 ml",
    "unit": ""
   },
@@ -72694,25 +72952,25 @@
   },
   {
    "name": "Signal ZP Family 75ml Cavity…",
-   "price": 24.05,
+   "price": 24.8,
    "amount": "75 ml",
    "unit": ""
   },
   {
    "name": "Signal ZP Family 75ml Daily White …",
-   "price": 24.05,
+   "price": 24.8,
    "amount": "75 ml",
    "unit": ""
   },
   {
    "name": "Signal ZP Family 75ml Herbal Fresh…",
-   "price": 24.05,
+   "price": 24.8,
    "amount": "75 ml",
    "unit": ""
   },
   {
    "name": "Signal ZP Family 75ml White System…",
-   "price": 24.05,
+   "price": 24.8,
    "amount": "75 ml",
    "unit": ""
   },
@@ -73761,26 +74019,14 @@
    "unit": ""
   },
   {
-   "name": "Tento TP Classic 8ks 3vrst. Balsam…",
-   "price": 57.99,
-   "amount": "8 ks",
-   "unit": ""
-  },
-  {
-   "name": "Tento TP Classic 8ks 3vrst. Balsam…",
-   "price": 57.99,
-   "amount": "8 ks",
-   "unit": ""
-  },
-  {
    "name": "Tento TP Classic 8ks 3vrst. Blue…",
-   "price": 55.5,
+   "price": 55.81,
    "amount": "8 ks",
    "unit": ""
   },
   {
    "name": "Tento TP Classic 8ks 3vrst.…",
-   "price": 55.5,
+   "price": 55.81,
    "amount": "8 ks",
    "unit": ""
   },
@@ -73792,12 +74038,30 @@
   },
   {
    "name": "Tento TP Classic 8ks 3vrst. Pink…",
-   "price": 55.5,
+   "price": 55.81,
    "amount": "8 ks",
    "unit": ""
   },
   {
    "name": "Tento TP Classic 8ks 3vrst.…",
+   "price": 55.81,
+   "amount": "8 ks",
+   "unit": ""
+  },
+  {
+   "name": "Tento TP Family Fresh Lavender 8ks…",
+   "price": 44.14,
+   "amount": "8 ks",
+   "unit": ""
+  },
+  {
+   "name": "Tento TP Family White 8ks 3vrst. …",
+   "price": 44.14,
+   "amount": "8 ks",
+   "unit": ""
+  },
+  {
+   "name": "Tento TP Forest 8ks 3vrst (7ks)",
    "price": 55.81,
    "amount": "8 ks",
    "unit": ""
@@ -74004,6 +74268,18 @@
    "name": "TP Lilien Color 4ks 2vrst. - žlutý…",
    "price": 23.8,
    "amount": "4 ks",
+   "unit": ""
+  },
+  {
+   "name": "TP Revia Classic 2 vrst (10ks)",
+   "price": 39.66,
+   "amount": "10 ks",
+   "unit": ""
+  },
+  {
+   "name": "TP Rivea Premium 3 vrst. (10ks)",
+   "price": 47.31,
+   "amount": "10 ks",
    "unit": ""
   },
   {
@@ -74338,25 +74614,25 @@
   },
   {
    "name": "Zewa Pap.Kapesníčky Box Zewa…",
-   "price": 35.92,
+   "price": 34.85,
    "amount": "",
    "unit": ""
   },
   {
    "name": "Zewa Pap.Kapesníčky Box Zewa Soft…",
-   "price": 42.05,
+   "price": 40.79,
    "amount": "",
    "unit": ""
   },
   {
    "name": "Zewa Pap.Kapesníčky Box Zewa…",
-   "price": 42.04,
+   "price": 40.76,
    "amount": "",
    "unit": ""
   },
   {
    "name": "Zewa Pap.Kapesníčky Deluxe…",
-   "price": 36.94,
+   "price": 35.83,
    "amount": "",
    "unit": ""
   },
@@ -74368,31 +74644,31 @@
   },
   {
    "name": "Zewa Pap.Kapesníčky Softis Neutral…",
-   "price": 42.42,
+   "price": 41.15,
    "amount": "",
    "unit": ""
   },
   {
    "name": "Zewa Pap.Kapesníčky Softis Protect…",
-   "price": 42.41,
+   "price": 41.14,
    "amount": "",
    "unit": ""
   },
   {
    "name": "Zewa Pap.Kapesníčky Softis Sofr…",
-   "price": 42.42,
+   "price": 41.15,
    "amount": "",
    "unit": ""
   },
   {
    "name": "Zewa Pap.Utěrka Jumpo Klassik…",
-   "price": 92.49,
+   "price": 89.72,
    "amount": "",
    "unit": ""
   },
   {
    "name": "Zewa Pap.Utěrka Wish&Weg 2vrst.4…",
-   "price": 42.2,
+   "price": 40.93,
    "amount": "",
    "unit": ""
   },
@@ -74830,7 +75106,7 @@
   },
   {
    "name": "Airwick 19ml Elek. komplet Jasmine…",
-   "price": 80.66,
+   "price": 78.86,
    "amount": "19 ml",
    "unit": ""
   },
@@ -74920,7 +75196,7 @@
   },
   {
    "name": "Airwick 19ml Elek. komplet White…",
-   "price": 74.7,
+   "price": 72.45,
    "amount": "19 ml",
    "unit": ""
   },
@@ -75040,7 +75316,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Linen in…",
-   "price": 54.0,
+   "price": 52.38,
    "amount": "19 ml",
    "unit": ""
   },
@@ -75124,7 +75400,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Radostné…",
-   "price": 54.0,
+   "price": 66.4,
    "amount": "19 ml",
    "unit": ""
   },
@@ -75298,7 +75574,7 @@
   },
   {
    "name": "Airwick 250ml Fresh. komplet…",
-   "price": 121.0,
+   "price": 117.37,
    "amount": "250 ml",
    "unit": ""
   },
@@ -75310,7 +75586,7 @@
   },
   {
    "name": "Airwick 250ml Fresh. komplet White…",
-   "price": 121.6,
+   "price": 117.95,
    "amount": "250 ml",
    "unit": ""
   },
@@ -75340,7 +75616,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Cool…",
-   "price": 56.85,
+   "price": 58.6,
    "amount": "250 ml",
    "unit": ""
   },
@@ -75586,7 +75862,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic White…",
-   "price": 56.85,
+   "price": 58.6,
    "amount": "250 ml",
    "unit": ""
   },
@@ -75634,19 +75910,19 @@
   },
   {
    "name": "Airwick 300ml Freshmatic…",
-   "price": 49.4,
+   "price": 47.92,
    "amount": "300 ml",
    "unit": ""
   },
   {
    "name": "Airwick 300ml Freshmatic Levandule…",
-   "price": 49.4,
+   "price": 47.92,
    "amount": "300 ml",
    "unit": ""
   },
   {
    "name": "Airwick 300ml Freshmatic Magnolia …",
-   "price": 49.4,
+   "price": 47.92,
    "amount": "300 ml",
    "unit": ""
   },
@@ -75922,31 +76198,31 @@
   },
   {
    "name": "Alpa 160ml Francovka 12ks (trang)",
-   "price": 37.8,
+   "price": 40.1,
    "amount": "160 ml",
    "unit": ""
   },
   {
    "name": "Alpa 160ml Francovka Lesana (12ks)…",
-   "price": 44.0,
+   "price": 46.59,
    "amount": "160 ml",
    "unit": ""
   },
   {
    "name": "Alpa 160ml Konopí (12ks)",
-   "price": 50.0,
+   "price": 50.77,
    "amount": "160 ml",
    "unit": ""
   },
   {
    "name": "Alpa 60ml Francovka (24ks) (trang)",
-   "price": 22.1,
+   "price": 22.16,
    "amount": "60 ml",
    "unit": ""
   },
   {
    "name": "Alpa 60ml Francovka Lesana (12ks) …",
-   "price": 27.9,
+   "price": 28.73,
    "amount": "60 ml",
    "unit": ""
   },
@@ -78280,13 +78556,13 @@
   },
   {
    "name": "Bref 50g Color Aktiv Eukalyptus …",
-   "price": 29.4,
+   "price": 30.73,
    "amount": "50 g",
    "unit": ""
   },
   {
    "name": "Bref 50g Color Aktiv Flower (10ks)",
-   "price": 29.4,
+   "price": 33.4,
    "amount": "50 g",
    "unit": ""
   },
@@ -79468,7 +79744,7 @@
   },
   {
    "name": "Fresh Air 19ml Elek. náplň…",
-   "price": 37.0,
+   "price": 36.48,
    "amount": "19 ml",
    "unit": ""
   },
@@ -79558,13 +79834,13 @@
   },
   {
    "name": "Fresh Air 260ml Citron & Máta (6…",
-   "price": 25.9,
+   "price": 27.37,
    "amount": "260 ml",
    "unit": ""
   },
   {
    "name": "Fresh Air 260ml Cool Ocean (6/48ks)",
-   "price": 25.9,
+   "price": 27.37,
    "amount": "260 ml",
    "unit": ""
   },
@@ -79612,7 +79888,7 @@
   },
   {
    "name": "Fresh Air 260ml Lemon Fresh (6…",
-   "price": 25.9,
+   "price": 27.37,
    "amount": "260 ml",
    "unit": ""
   },
@@ -79636,7 +79912,7 @@
   },
   {
    "name": "Fresh Air 260ml Mango (6/24ks)",
-   "price": 25.9,
+   "price": 27.37,
    "amount": "260 ml",
    "unit": ""
   },
@@ -79684,7 +79960,7 @@
   },
   {
    "name": "Fresh Air 260ml Pomegranate (6…",
-   "price": 25.9,
+   "price": 27.37,
    "amount": "260 ml",
    "unit": ""
   },
@@ -79774,7 +80050,7 @@
   },
   {
    "name": "Fresh Air 300ml Aroma Therapy …",
-   "price": 18.9,
+   "price": 21.19,
    "amount": "300 ml",
    "unit": ""
   },
@@ -79804,7 +80080,7 @@
   },
   {
    "name": "Fresh Air 300ml Cocktail/ Tutti…",
-   "price": 18.9,
+   "price": 21.19,
    "amount": "300 ml",
    "unit": ""
   },
@@ -79816,7 +80092,7 @@
   },
   {
    "name": "Fresh Air 300ml Fresh Linen (24ks)",
-   "price": 18.9,
+   "price": 21.19,
    "amount": "300 ml",
    "unit": ""
   },
@@ -79828,13 +80104,13 @@
   },
   {
    "name": "Fresh Air 300ml Jasmine (24ks)",
-   "price": 18.9,
+   "price": 21.19,
    "amount": "300 ml",
    "unit": ""
   },
   {
    "name": "Fresh Air 300ml Lavender (24ks)",
-   "price": 18.9,
+   "price": 21.19,
    "amount": "300 ml",
    "unit": ""
   },
@@ -80998,7 +81274,7 @@
   },
   {
    "name": "Super Cobra 400ml proti hmyzu…",
-   "price": 48.9,
+   "price": 48.28,
    "amount": "400 ml",
    "unit": ""
   },
@@ -81657,6 +81933,18 @@
    "unit": ""
   },
   {
+   "name": "Dan Cake 500g Toast Toustový chléb…",
+   "price": 14.9,
+   "amount": "500 g",
+   "unit": ""
+  },
+  {
+   "name": "Dan Cake 500g Toast Toustový chléb…",
+   "price": 14.9,
+   "amount": "500 g",
+   "unit": ""
+  },
+  {
    "name": "Dan Cake 750g XXL American Toast…",
    "price": 35.94,
    "amount": "750 g",
@@ -81882,18 +82170,6 @@
    "name": "GooFree 50g Vafle Smetana (12ks…",
    "price": 13.95,
    "amount": "50 g",
-   "unit": ""
-  },
-  {
-   "name": "HAN NGAN Dan Cake 500g Toast…",
-   "price": 25.5,
-   "amount": "500 g",
-   "unit": ""
-  },
-  {
-   "name": "HAN NGAN Dan Cake 500g Toast…",
-   "price": 24.0,
-   "amount": "500 g",
    "unit": ""
   },
   {
@@ -82539,12 +82815,6 @@
    "unit": ""
   },
   {
-   "name": "Prima Rolky 240g Kakao + Milk …",
-   "price": 22.5,
-   "amount": "240 g",
-   "unit": ""
-  },
-  {
    "name": "Prima Rolky 240g Malina (20ks)",
    "price": 22.5,
    "amount": "240 g",
@@ -82864,7 +83134,7 @@
   },
   {
    "name": "Snack It 120g Kabanos Exclusive…",
-   "price": 36.1,
+   "price": 41.88,
    "amount": "120 g",
    "unit": ""
   },
