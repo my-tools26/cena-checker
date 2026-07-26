@@ -468,19 +468,49 @@ function pageAkce() {
   });
 }
 
+/* Gom CUNG MOT MAT HANG o nhieu kho -> 1 dong 3 cot (Re nhat / #2 / #3).
+   Khoa gom: MA VACH (chac chan nhat), khong co ma thi theo ten + quy cach.
+   Moi kho chi giu gia re nhat. Mat hang co nhieu kho duoc xep len dau vi day
+   la trang SO SANH gia - de nguyen thu tu thi cot #2/#3 trong tron. */
 var bbPage = 1;
+function buildBBGroups(cat) {
+  if (DATA.bbGroups) return DATA.bbGroups;
+  var by = new Map(), i, it, key, g, o, ex, k;
+  for (i = 0; i < cat.length; i++) {
+    it = cat[i];
+    key = (it[5] && it[5].length >= 8) ? 'E' + it[5]
+      : 'N' + stripAccents(it[0]).replace(/\s+/g, ' ').trim() +
+        '|' + stripAccents(it[2] || '').replace(/\s+/g, '');
+    g = by.get(key);
+    o = catalogOffers(it);
+    if (!g) { by.set(key, { name: it[0], amount: it[2], offers: [o] }); continue; }
+    ex = null;
+    for (k = 0; k < g.offers.length; k++) if (g.offers[k].slug === o.slug) { ex = g.offers[k]; break; }
+    if (!ex) g.offers.push(o);
+    else if (o.price < ex.price) { ex.price = o.price; ex.amount = o.amount; ex.pack = o.pack; }
+  }
+  var arr = [];
+  by.forEach(function (v) { arr.push(v); });
+  arr.sort(function (a, b) { return b.offers.length - a.offers.length; });  // sort on dinh
+  DATA.bbGroups = arr;
+  return arr;
+}
 function pageBanbuon() {
   var el = $('#main');
   el.innerHTML = tilesHTML() + filterBar(WHOLESALE_FILTERS, 'bb_off', 'data-bbcol') +
     "<p class='muted'>Đang tải catalog bán buôn (lần đầu ~2MB, sau đó nhanh)…</p>";
   loadCatalog().then(function (cat) {
     var off = offSet('bb_off');
-    var items = cat.filter(function (it) { return !off.has(SHOP_SLUG[it[3]]); });
+    var groups = buildBBGroups(cat);
+    var items = off.size ? groups.map(function (g) {          // bo kho bi tat
+      var ofs = g.offers.filter(function (o) { return !off.has(o.slug); });
+      return ofs.length ? { name: g.name, amount: g.amount, offers: ofs } : null;
+    }).filter(Boolean) : groups;
     var PER = 30, npages = Math.max(1, Math.ceil(items.length / PER));
     if (bbPage > npages) bbPage = npages;
     var slice = items.slice((bbPage - 1) * PER, bbPage * PER);
-    var rows = slice.map(function (it) {
-      return rowHTML(it[0], it[2], [catalogOffers(it)]);
+    var rows = slice.map(function (g) {
+      return rowHTML(g.name, g.amount, g.offers);
     });
     function pager() {
       var out = [], nums = new Set([1, 2, npages - 1, npages, bbPage - 1, bbPage, bbPage + 1]);
@@ -495,7 +525,8 @@ function pageBanbuon() {
     el.innerHTML = tilesHTML() + filterBar(WHOLESALE_FILTERS, 'bb_off', 'data-bbcol') +
       pager() + tableHTML(rows) + pager() +
       "<p class='muted' style='font-size:.8em'>📦 " + items.length + ' mặt hàng · trang ' +
-      bbPage + '/' + npages + ' · giá đã gồm DPH</p>';
+      bbPage + '/' + npages + ' · giá đã gồm DPH · cùng mặt hàng ở nhiều kho được ' +
+      'gộp 1 dòng, ✅ là kho rẻ nhất</p>';
     wireFilters('bb_off', 'data-bbcol', function () { bbPage = 1; pageBanbuon(); });
     document.querySelectorAll('[data-bbp]').forEach(function (a) {
       a.addEventListener('click', function (e) {
@@ -801,7 +832,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v0.7';
+if (el) el.textContent = 'v0.8';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
