@@ -627,71 +627,111 @@ function searchByText(raw, cs, head, el) {
 /* ---------- quet ma vach bang camera ---------- */
 function initScanner() {
   var btn = $('#scanbtn'), box = $('#scanbox'), closeBtn = $('#scanclose');
-  var scanner = null, stream = null, rafId = null;
+  var torchBtn = document.getElementById('torchbtn');
+  var stream = null, rafId = null, track = null, torchOn = false, zx = null;
   var FORMATS = ['ean_13', 'ean_8', 'upc_a', 'upc_e', 'code_128'];
+
   function stop() {
     if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+    if (track && torchOn) { try { track.applyConstraints({ advanced: [{ torch: false }] }); } catch (e) {} }
+    torchOn = false; track = null;
+    if (torchBtn) torchBtn.textContent = '🔦 Đèn';
     if (stream) { stream.getTracks().forEach(function (t) { t.stop(); }); stream = null; }
-    if (scanner) { scanner.stop().catch(function () {}); scanner = null; }
     box.style.display = 'none';
   }
   function found(code) { stop(); location.hash = '#/q/' + encodeURIComponent(code); }
-  function startNative() {
-    var det = new BarcodeDetector({ formats: FORMATS });
-    var v = document.createElement('video');
-    v.setAttribute('playsinline', ''); v.style.width = '100%';
-    $('#scanview').innerHTML = ''; $('#scanview').appendChild(v);
-    var cvs = document.createElement('canvas'), cx = cvs.getContext('2d');
-    // Xoay khung hinh 90° -> doc duoc ma vach NAM DOC ma khong phai quay may (muc 4)
-    function detectRotated() {
-      var w = v.videoWidth, h = v.videoHeight;
-      if (!w || !h) return Promise.resolve([]);
-      cvs.width = h; cvs.height = w;
-      cx.save(); cx.translate(h / 2, w / 2); cx.rotate(Math.PI / 2);
-      cx.drawImage(v, -w / 2, -h / 2); cx.restore();
-      return det.detect(cvs).catch(function () { return []; });
+
+  /* ZXing: doc duoc ma vach o MOI chieu (co xoay anh), dung cho may khong co
+     BarcodeDetector (iPhone/Safari). Tai 1 lan roi cache. */
+  function loadZX() {
+    if (window.ZXing) return Promise.resolve();
+    return new Promise(function (res, rej) {
+      var s = document.createElement('script');
+      s.src = 'https://unpkg.com/@zxing/library@0.21.3/umd/index.min.js';
+      s.onload = res; s.onerror = rej; document.head.appendChild(s);
+    });
+  }
+  function zxInit() {
+    if (zx || !window.ZXing) return;
+    var Z = window.ZXing, h = new Map();
+    h.set(Z.DecodeHintType.POSSIBLE_FORMATS, [Z.BarcodeFormat.EAN_13, Z.BarcodeFormat.EAN_8,
+      Z.BarcodeFormat.UPC_A, Z.BarcodeFormat.UPC_E, Z.BarcodeFormat.CODE_128]);
+    h.set(Z.DecodeHintType.TRY_HARDER, true);
+    zx = new Z.MultiFormatReader(); zx.setHints(h);
+  }
+  function zxDecode(cv) {
+    if (!zx || !window.ZXing) return null;
+    var Z = window.ZXing;
+    try {
+      var src = Z.HTMLCanvasElementLuminanceSource
+        ? new Z.HTMLCanvasElementLuminanceSource(cv)
+        : new Z.RGBLuminanceSource(cv.getContext('2d')
+            .getImageData(0, 0, cv.width, cv.height).data, cv.width, cv.height);
+      return zx.decode(new Z.BinaryBitmap(new Z.HybridBinarizer(src))).getText();
+    } catch (e) {
+      try { zx.reset(); } catch (e2) {}
+      return null;
     }
+  }
+
+  function start() {
+    var v = document.createElement('video');
+    v.setAttribute('playsinline', ''); v.muted = true; v.style.width = '100%';
+    $('#scanview').innerHTML = ''; $('#scanview').appendChild(v);
+    // canvas thuong + canvas xoay 90° (de bat ma vach NAM DOC)
+    var ca = document.createElement('canvas'), cxa = ca.getContext('2d', { willReadFrequently: true });
+    var cb = document.createElement('canvas'), cxb = cb.getContext('2d', { willReadFrequently: true });
+    var det = null;
     navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment',
       width: { ideal: 1920 }, height: { ideal: 1080 } } })
       .then(function (s) {
         stream = s; v.srcObject = s; v.play();
+        track = s.getVideoTracks()[0];
+        // luon hien nut den; may nao khong ho tro thi bao khi bam
+        if (torchBtn) torchBtn.style.display = 'inline-block';
+        if ('BarcodeDetector' in window) { try { det = new BarcodeDetector({ formats: FORMATS }); } catch (e) {} }
+        if (!det) loadZX().then(zxInit).catch(function () {});
         var busy = false;
         (function loop() {
           rafId = requestAnimationFrame(loop);
           if (busy || v.readyState < 2) return;
+          var w = v.videoWidth, h = v.videoHeight;
+          if (!w || !h) return;
           busy = true;
-          det.detect(v).then(function (codes) {
-            if (codes.length) { found(codes[0].rawValue); return; }
-            // chieu ngang khong thay -> thu chieu doc
-            return detectRotated().then(function (c2) {
-              if (c2.length) found(c2[0].rawValue);
-            });
-          }).catch(function () {}).then(function () { busy = false; });
+          // giam kich thuoc cho nhanh (720px du de doc ma vach)
+          var sc = Math.min(1, 720 / Math.max(w, h)), dw = Math.round(w * sc), dh = Math.round(h * sc);
+          ca.width = dw; ca.height = dh; cxa.drawImage(v, 0, 0, dw, dh);
+          cb.width = dh; cb.height = dw;
+          cxb.save(); cxb.translate(dh / 2, dw / 2); cxb.rotate(Math.PI / 2);
+          cxb.drawImage(v, -dw / 2, -dh / 2, dw, dh); cxb.restore();
+          if (det) {
+            det.detect(ca).then(function (c) {
+              if (c.length) { found(c[0].rawValue); return; }
+              return det.detect(cb).then(function (c2) { if (c2.length) found(c2[0].rawValue); });
+            }).catch(function () {}).then(function () { busy = false; });
+          } else {
+            var r = zxDecode(ca) || zxDecode(cb);
+            busy = false;
+            if (r) found(r);
+          }
         })();
       }).catch(function (e) { stop(); alert('Không mở được camera: ' + e.message); });
   }
-  function startLib() {
-    // khung vuong + cho phep lat -> de bat ma vach o nhieu chieu hon
-    scanner = new Html5Qrcode('scanview');
-    scanner.start({ facingMode: 'environment' },
-      { fps: 15, qrbox: { width: 250, height: 250 }, disableFlip: false },
-      function (c) { found(c); }, function () {})
-      .catch(function (e) { stop(); alert('Không mở được camera: ' + e); });
+
+  if (torchBtn) {
+    torchBtn.addEventListener('click', function () {
+      if (!track) return;
+      torchOn = !torchOn;
+      track.applyConstraints({ advanced: [{ torch: torchOn }] }).then(function () {
+        torchBtn.textContent = torchOn ? '💡 Tắt đèn' : '🔦 Đèn';
+      }).catch(function () {
+        torchOn = false;
+        torchBtn.textContent = '🔦 Đèn';
+        alert('Máy/trình duyệt này không bật được đèn flash khi quét.');
+      });
+    });
   }
-  btn.addEventListener('click', function () {
-    box.style.display = 'block';
-    function loadLib() {
-      if (window.Html5Qrcode) { startLib(); return; }
-      var s = document.createElement('script');
-      s.src = 'https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js';
-      s.onload = startLib; document.head.appendChild(s);
-    }
-    if ('BarcodeDetector' in window) {
-      BarcodeDetector.getSupportedFormats().then(function (fs) {
-        if (fs.indexOf('ean_13') >= 0) startNative(); else loadLib();
-      }).catch(loadLib);
-    } else loadLib();
-  });
+  btn.addEventListener('click', function () { box.style.display = 'block'; start(); });
   closeBtn.addEventListener('click', stop);
   // chi hien nut tren dien thoai
   if (!/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) btn.style.display = 'none';
@@ -728,7 +768,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v0.4';
+if (el) el.textContent = 'v0.5';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {

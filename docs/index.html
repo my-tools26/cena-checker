@@ -50,10 +50,13 @@
 </div>
 
 <div id="scanbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;padding:16px;text-align:center">
-  <p style="color:#fff;font-size:1em;margin:6px 0">Giơ camera vào mã vạch sản phẩm</p>
+  <p style="color:#fff;font-size:1em;margin:6px 0">Giơ camera vào mã vạch — nằm ngang hay dọc đều đọc được</p>
   <div id="scanview" style="max-width:480px;margin:0 auto;max-height:65vh;overflow:hidden"></div>
   <style>#scanview video{width:100%;max-height:65vh;object-fit:cover;border-radius:10px}</style>
-  <button id="scanclose" style="margin-top:12px;background:#a33;padding:10px 26px">✖ Đóng</button>
+  <div style="margin-top:12px;display:flex;gap:10px;justify-content:center">
+    <button id="torchbtn" style="background:#555;padding:10px 22px">🔦 Đèn</button>
+    <button id="scanclose" style="background:#a33;padding:10px 26px">✖ Đóng</button>
+  </div>
 </div>
 
 <script src="app.js"></script>
