@@ -39,6 +39,29 @@ def strip_accents(s):
                    if unicodedata.category(c) != "Mn").lower()
 
 
+def norm_amt(s):
+    """'330 ml' va '0,33 l' -> cung mot chuoi. Dung de so khop dung tich."""
+    m = re.search(r"(\d+(?:[.,]\d+)?)\s*(kg|g|ml|l|ks)\b", strip_accents(s))
+    if not m:
+        return ""
+    n = float(m.group(1).replace(",", ".")); u = m.group(2)
+    if u == "g": n /= 1000; u = "kg"
+    if u == "ml": n /= 1000; u = "l"
+    return f"{round(n, 4)}{u}"
+
+
+# tu chi BIEN THE (mui vi/loai) - khi khop theo ten, 2 ben phai giong nhau de
+# khong ghep nham (vd ban Zero vs ban thuong).
+VARIANT_WORDS = ("zero", "light", "cherry", "vanilla", "lemon", "lime", "free",
+                 "diet", "max", "sprite", "fanta", "pomeranc", "citron", "jahoda",
+                 "bez cukru")
+
+
+def _brand_toks(name):
+    return [t for t in re.split(r"[^a-z0-9]+", strip_accents(name))
+            if len(t) >= 3 and not t.isdigit()]
+
+
 def load(fn):
     p = os.path.join(HERE, fn)
     if not os.path.exists(p):
@@ -139,6 +162,47 @@ def build_ean_shards(catalog):
         rec[1].append([it[3], it[1], it[2], it[4]])  # kho, gia, quy cach, so chiec
         if not rec[0]:
             rec[0] = it[0]
+    # === GHEP GIA cho ma CHI CO TEN (chua gan gia) ===
+    # ~49% ma chi co ten (Luigi's Box, hoac kho khong ghi ma vach trong bang gia).
+    # Ghep theo THUONG HIEU (tu dau) + DUNG TICH, chan nham bien the -> quet ra
+    # gia ngay. Danh dau rec[2]=1 = "suy theo ten" (khong phai trung ma vach that).
+    idx = {}
+    for it in catalog:
+        amt = norm_amt(it[2]) or norm_amt(it[0])
+        if not amt:
+            continue
+        tk = _brand_toks(it[0])
+        if not tk:
+            continue
+        idx.setdefault((tk[0], amt), []).append(it)
+    enriched = 0
+    for m in shards.values():
+        for code, rec in m.items():
+            if rec[1] or not rec[0]:
+                continue
+            amt = norm_amt(rec[0])
+            tk = _brand_toks(rec[0])
+            if not amt or not tk:
+                continue
+            cand = idx.get((tk[0], amt))
+            if not cand:
+                continue
+            nm = strip_accents(rec[0])
+            my_vars = frozenset(w for w in VARIANT_WORDS if w in nm)
+            best = {}
+            for it in cand:
+                cn = strip_accents(it[0])
+                if frozenset(w for w in VARIANT_WORDS if w in cn) != my_vars:
+                    continue
+                cur = best.get(it[3])
+                if cur is None or it[1] < cur[1]:
+                    best[it[3]] = [it[3], it[1], it[2], it[4]]
+            if best:
+                rec[1] = list(best.values())
+                rec.append(1)          # danh dau: gia suy theo ten
+                enriched += 1
+    print(f"  ghep gia theo ten cho {enriched} ma chi co ten")
+
     # Chia nho THICH UNG: manh nao qua dong (ma Sec deu bat dau 859) thi tach
     # sau them 1-2 chu so nua, de moi lan quet chi tai vai chuc KB.
     LIMIT = 1500
