@@ -667,7 +667,9 @@ function searchByEan(code, head, el) {
           if (u === 'ml') { n /= 1000; u = 'l'; }
           return (Math.round(n * 10000) / 10000) + u;
         }
-        var myAmt = normAmt((offers[0] && offers[0].amount) || '');
+        // Ma chi co TEN chua co gia (vd tu Luigi's Box) -> offers rong, lay dung
+        // tich tu chinh TEN ("...45g") de van ghep duoc dung mat hang o cac kho.
+        var myAmt = normAmt((offers[0] && offers[0].amount) || '') || normAmt(name);
         var myName = stripAccents(name);
         var VAR = ['zero', 'light', 'cherry', 'vanilla', 'lemon', 'lime', 'free', 'diet',
           'max', 'sprite', 'fanta', 'pomeranc', 'citron', 'jahoda', 'bez cukru'];
@@ -938,7 +940,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.2';
+if (el) el.textContent = 'v1.3';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
