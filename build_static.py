@@ -183,7 +183,8 @@ def build_retail():
     import cena
     import urllib.parse
     slugs = ["lidl", "kaufland", "billa", "penny-market", "tesco", "albert",
-             "globus", "coop", "hruska", "flop", "ratio", "kosik"]
+             "globus", "coop", "hruska", "flop", "ratio", "kosik",
+             "makro", "jip"]  # them ban buon co deal akce -> hien o trang Akce
     cats = ["ovoce-a-zelenina", "maso-drubez-a-ryby", "mlecne-vyrobky-a-vejce",
             "pecivo", "sladkosti-a-slane-snacky", "pivo", "nealko-napoje",
             "kava", "drogerie", "mazlicci"]
@@ -218,6 +219,22 @@ def build_retail():
         except Exception:
             pass
         time.sleep(0.5)
+    # Tamda to roi (nguon da cao san) -> gop vao Akce, uu tien truoc kupi
+    td = load("tamda_prices.json")
+    if td:
+        n0 = len(prods)
+        for it in td.get("items", []):
+            nm = (it.get("name") or "").strip()
+            if not nm or not it.get("price"):
+                continue
+            key = nm + "|" + (it.get("amount", "") or "")
+            if key in seen:
+                continue
+            seen.add(key)
+            prods.append([nm, it.get("amount", "") or "",
+                          [["Tamda Foods", round(float(it["price"]), 2),
+                            it.get("unit", "") or "", "", td.get("valid", "") or ""]]])
+        print(f"  tamda to roi              +{len(prods) - n0}")
     print(f"  ban le: {len(prods)} mat hang")
     return prods
 
