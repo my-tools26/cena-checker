@@ -607,21 +607,30 @@ function searchByEan(code, head, el) {
       "<p class='muted'>Đang tìm giá siêu thị…</p>";
     return loadRetail().then(function (rd) {
       var ret = searchRetail(rd, toks);
-      el.innerHTML = tilesHTML() + html +
+      var base = html +
         (ret.length ? "<h2 style='font-size:.95em'>🏪 Giá siêu thị (khuyến mãi)</h2>" +
-          tableHTML(retailRows(ret.slice(0, 15), new Set())) : '') +
-        "<p style='margin-top:14px'><button id='simbtn' class='stp' " +
-        "style='padding:8px 16px;font-size:.9em'>🔍 Tìm sản phẩm tương tự ở các kho</button></p>";
-      var b = document.getElementById('simbtn');
-      if (b) b.addEventListener('click', function () {
-        b.textContent = 'Đang tải…';
-        loadCatalog().then(function (cat) {
-          var sim = searchCatalog(cat, toks).filter(function (x) { return x[0] !== name; });
-          b.parentNode.outerHTML = sim.length
-            ? "<h2 style='font-size:.95em'>🔍 Sản phẩm tương tự — " + sim.length + '</h2>' +
-              tableHTML(groupRows(sim.slice(0, 30)))
-            : "<p class='muted'>Không có hàng tương tự.</p>";
+          tableHTML(retailRows(ret.slice(0, 15), new Set())) : '');
+      el.innerHTML = tilesHTML() + base +
+        "<p class='muted' id='simwait'>⏳ Đang tìm cùng loại ở các kho khác…</p>";
+      // TU DONG tim cung loai o kho khac: nhieu kho (Bombacena/dathang) khong ghi
+      // ma vach, hoac dung ma khac (ban CZ/EU) -> quet ma chi khop 1 kho. Tim
+      // theo TEN de van thay ho ban bao nhieu. Catalog duoc cache sau lan dau.
+      return loadCatalog().then(function (cat) {
+        var sim = searchCatalog(cat, toks).filter(function (x) { return x[0] !== name; });
+        // Uu tien: CUNG dung tich -> chua het han -> re nhat
+        var amt = stripAccents((offers[0] && offers[0].amount) || '').replace(/\s+/g, '');
+        function sameAmt(x) { return stripAccents(x[2] || '').replace(/\s+/g, '') === amt ? 0 : 1; }
+        function expired(x) { return /het han/.test(stripAccents(x[0])) ? 1 : 0; }
+        sim.sort(function (a, b) {
+          return sameAmt(a) - sameAmt(b) || expired(a) - expired(b) || a[1] - b[1];
         });
+        el.innerHTML = tilesHTML() + base + (sim.length
+          ? "<h2 style='font-size:.95em'>🏬 Cùng loại ở kho khác — " + sim.length + '</h2>' +
+            tableHTML(groupRows(sim.slice(0, 30)))
+          : "<p class='muted'>Không có hàng cùng loại ở kho khác.</p>");
+      }).catch(function () {
+        var w = document.getElementById('simwait');
+        if (w) w.textContent = 'Không tải được danh mục kho.';
       });
     });
   });
@@ -837,7 +846,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v0.9';
+if (el) el.textContent = 'v1.0';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
