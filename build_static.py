@@ -30,6 +30,7 @@ SHOPS = [
     ("linsan", "Linsan24h"),       # 5
     ("bombacena", "Bombacena"),    # 6
     ("ptt", "PTT Global"),         # 7
+    ("jip", "JIP"),                # 8
 ]
 
 
@@ -63,6 +64,7 @@ def build_catalog():
         ("linsan_prices.json", 5, None),
         ("bombacena_prices.json", 6, None),
         ("pttglobal_prices.json", 7, None),
+        ("jip_prices.json", 8, None),
     ]
     meta = {}
     for fn, sid, _ in srcs:
@@ -86,7 +88,7 @@ def build_catalog():
     man = load("manual_prices.json")
     if man:
         slug2id = {"tamda": 1, "makro": 2, "bidfood": 3, "dathang": 4,
-                   "linsan": 5, "bombacena": 6, "ptt": 7}
+                   "linsan": 5, "bombacena": 6, "ptt": 7, "jip": 8}
         for it in man.get("items", []):
             sid = slug2id.get(it.get("slug"), 4)
             items.append([it["name"], round(float(it["price"]), 2),
