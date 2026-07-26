@@ -169,8 +169,10 @@ def build_ean_shards(catalog):
     for pref, m in final.items():
         with open(os.path.join(d, f"{pref}.json"), "w", encoding="utf-8") as f:
             json.dump(m, f, ensure_ascii=False, separators=(",", ":"))
-    # danh sach do dai prefix de trinh duyet biet tai file nao
-    with open(os.path.join(d, "_index.json"), "w", encoding="utf-8") as f:
+    # Danh sach prefix de trinh duyet biet tai manh nao.
+    # KHONG dat ten bat dau bang "_": GitHub Pages chay Jekyll va Jekyll BO QUA
+    # moi file/thu muc bat dau bang gach duoi -> file bi 404 -> quet ma vach hong.
+    with open(os.path.join(d, "shards.json"), "w", encoding="utf-8") as f:
         json.dump(sorted(final), f, separators=(",", ":"))
     big = max((len(m) for m in final.values()), default=0)
     print(f"  ean_db -> {len(final)} manh ({n} ma), manh lon nhat {big} ma")
