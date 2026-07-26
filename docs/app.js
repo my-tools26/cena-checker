@@ -55,8 +55,12 @@ function esc(s) {
     return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
   });
 }
+/* Chong CACHE: gan dau thoi diem build vao moi file du lieu. Khong co no,
+   trinh duyet giu ban cu -> cap nhat gia xong ma may nguoi dung van thay so cu. */
 function getJSON(url) {
-  return fetch(url).then(function (r) {
+  var u = url;
+  if (u.indexOf('data/') === 0 && u.indexOf('?') < 0 && DATA.cb) u += '?v=' + DATA.cb;
+  return fetch(u).then(function (r) {
     if (!r.ok) throw new Error(r.status);
     return r.json();
   });
@@ -356,13 +360,37 @@ function isFresh(p) {
   });
 }
 
+/* Xao tron on dinh theo NGAY: trong ngay thu tu khong doi (phan trang on dinh),
+   sang ngay moi tu doi. Dung cho trang Akce (giong ban Railway). */
+function seededRand(seed) {
+  return function () {
+    seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+    var t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+function dateSeed() {
+  var d = new Date();
+  return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
+}
+/* kupi ghi "TAMDA FOODS", to roi ghi "Tamda Foods" -> cung 1 sieu thi, hien 1 ten */
+function canonShop(s) {
+  return stripAccents(s).indexOf('tamda') === 0 ? 'Tamda Foods' : s;
+}
 function retailRows(items, offFilter) {
   return items.map(function (p) {
+    var seen = {};
     var offers = p[2].filter(function (d) {
       return !offFilter.has(stripAccents(d[0]).split(' ')[0]);
     }).map(function (d) {
-      return { shop: d[0], slug: stripAccents(d[0]).split(' ')[0], price: d[1],
+      var shop = canonShop(d[0]);
+      return { shop: shop, slug: stripAccents(shop).split(' ')[0], price: d[1],
                unit: d[2], pct: d[3], valid: d[4], wholesale: false };
+    }).filter(function (o) {          // bo deal trung y het (cung kho + cung gia)
+      var k = o.slug + '|' + o.price;
+      if (seen[k]) return false;
+      seen[k] = 1; return true;
     });
     return offers.length ? rowHTML(p[0], p[1], offers) : '';
   }).filter(Boolean);
@@ -422,9 +450,14 @@ function pageAkce() {
   loadRetail().then(function (d) {
     var off = offSet('retail_off'), lower = new Set();
     off.forEach(function (x) { lower.add(stripAccents(x)); });
-    // Akce: ban le + ban buon GOP CHUNG (giong Railway), xep theo % giam sau nhat
+    // Akce: ban le + ban buon GOP CHUNG (giong Railway). XAO TRON theo ngay chu
+    // KHONG xep theo % giam: hang ban buon (Makro/JIP/Tamda) hay khong ghi %,
+    // xep theo % la bi day xuong cuoi -> khong bao gio thay tren trang.
     var items = (d.items || []).slice();
-    items.sort(function (a, b) { return bestPct(b) - bestPct(a); });
+    var rnd = seededRand(dateSeed());
+    for (var i = items.length - 1; i > 0; i--) {
+      var j = (rnd() * (i + 1)) | 0, t = items[i]; items[i] = items[j]; items[j] = t;
+    }
     var rows = retailRows(items.slice(0, 60), lower);
     el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
       filterBar(AKCE_WS_FILTERS, 'retail_off', 'data-rshop') +
@@ -768,7 +801,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v0.6';
+if (el) el.textContent = 'v0.7';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
@@ -837,4 +870,11 @@ if (el) el.textContent = 'v0.6';
   });
 })();
 
-loadDict().then(route);
+/* Doc meta.json (nho, luon lay ban moi) -> lay dau thoi diem build lam ma chong
+   cache cho cac file du lieu lon. Xong moi tai tu dien + ve trang. */
+fetch('data/meta.json?t=' + Date.now(), { cache: 'no-store' })
+  .then(function (r) { return r.json(); })
+  .then(function (m) { DATA.cb = (m && m.built || '').replace(/\D/g, ''); })
+  .catch(function () {})
+  .then(function () { return loadDict(); })
+  .then(route);
