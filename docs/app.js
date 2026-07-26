@@ -140,6 +140,45 @@ function eanLookup(code) {
     return next();
   });
 }
+/* Gom TAT CA kho co CUNG ma vach (ke ca ma thung GTIN-14) vao 1 ban ghi -> kho
+   dat hon nam o cot #2/#3 cung mot dong, khong bi bo sot nhu khi dung eanLookup
+   (ham do thay manh dau tien la dung). Moi kho giu gia re nhat. */
+function eanLookupAll(code) {
+  return loadShardIndex().then(function (idx) {
+    var codes = eanVariants(code);
+    function shardOf(c) {
+      for (var L = 8; L >= 3; L--) { var p = c.slice(0, L); if (idx.has(p)) return p; }
+      return null;
+    }
+    var need = {};                       // manh -> danh sach ma can tra
+    codes.forEach(function (c) {
+      var p = shardOf(c); if (p) (need[p] = need[p] || []).push(c);
+    });
+    var prefixes = Object.keys(need);
+    if (!prefixes.length) return null;
+    return Promise.all(prefixes.map(function (p) {
+      return getJSON('data/ean/' + p + '.json').catch(function () { return {}; })
+        .then(function (m) { return { p: p, m: m }; });
+    })).then(function (parts) {
+      var name = '', byShop = {}, hitCode = null;
+      parts.forEach(function (part) {
+        need[part.p].forEach(function (c) {
+          var rec = part.m[c];
+          if (!rec) return;
+          if (!hitCode) hitCode = c;
+          if (!name && rec[0]) name = rec[0];
+          (rec[1] || []).forEach(function (o) {
+            var ex = byShop[o[0]];
+            if (!ex || o[1] < ex[1]) byShop[o[0]] = o;
+          });
+        });
+      });
+      if (!hitCode) return null;
+      var offers = Object.keys(byShop).map(function (k) { return byShop[k]; });
+      return { code: hitCode, rec: [name, offers] };
+    });
+  });
+}
 function loadCatalog(onProgress) {
   if (DATA.catalog) return Promise.resolve(DATA.catalog);
   if (onProgress) onProgress();
@@ -581,7 +620,7 @@ function pageSearch(query) {
 }
 
 function searchByEan(code, head, el) {
-  return eanLookup(code).then(function (hit) {
+  return eanLookupAll(code).then(function (hit) {
     if (!hit) {
       el.innerHTML = tilesHTML() + head +
         "<p>Không tìm thấy mã vạch <b>" + esc(code) + '</b> trong dữ liệu.</p>';
@@ -617,6 +656,54 @@ function searchByEan(code, head, el) {
       // theo TEN de van thay ho ban bao nhieu. Catalog duoc cache sau lan dau.
       return loadCatalog().then(function (cat) {
         var sim = searchCatalog(cat, toks).filter(function (x) { return x[0] !== name; });
+        // GOP vao CUNG MOT DONG cac kho ban DUNG san pham nay nhung khong ghi ma
+        // vach (Bombacena/dathang) -> kho dat hon nam o cot #2/#3.
+        // "330 ml" va "0,33 l" la MOT -> quy ve cung don vi truoc khi so sanh
+        function normAmt(s) {
+          var m = /(\d+(?:[.,]\d+)?)\s*(kg|g|ml|l|ks)\b/i.exec(stripAccents(s || ''));
+          if (!m) return '';
+          var n = parseFloat(m[1].replace(',', '.')), u = m[2].toLowerCase();
+          if (u === 'g') { n /= 1000; u = 'kg'; }
+          if (u === 'ml') { n /= 1000; u = 'l'; }
+          return (Math.round(n * 10000) / 10000) + u;
+        }
+        var myAmt = normAmt((offers[0] && offers[0].amount) || '');
+        var myName = stripAccents(name);
+        var VAR = ['zero', 'light', 'cherry', 'vanilla', 'lemon', 'lime', 'free', 'diet',
+          'max', 'sprite', 'fanta', 'pomeranc', 'citron', 'jahoda', 'bez cukru'];
+        var keyToks = myName.split(/[^a-z0-9]+/).filter(function (t) {
+          return t.length >= 3 && !/^\d+$/.test(t);
+        }).slice(0, 3);
+        var merged = [], rest = [];
+        sim.forEach(function (x) {
+          var n = stripAccents(x[0]);
+          var sameSize = myAmt && normAmt(x[2]) === myAmt;
+          // du thuong hieu (tu dau) la du - ten cac kho viet rat khac nhau
+          // ("Coca Cola 0,33L" vs "Coca 330ml Cerveny"); chan nham nho VAR + dung tich
+          var allToks = keyToks.length && n.indexOf(keyToks[0]) >= 0;
+          // Phai GIONG NHAU ca 2 chieu: quet ban Zero thi khong duoc ghep ban thuong,
+          // va nguoc lai.
+          var extraVariant = VAR.some(function (wv) {
+            return (n.indexOf(wv) >= 0) !== (myName.indexOf(wv) >= 0);
+          });
+          if (sameSize && allToks && !extraVariant) merged.push(x); else rest.push(x);
+        });
+        if (merged.length) {
+          merged.forEach(function (x) {
+            var o = catalogOffers(x);
+            var ex = null;
+            for (var i2 = 0; i2 < offers.length; i2++) if (offers[i2].slug === o.slug) { ex = offers[i2]; break; }
+            if (!ex) offers.push(o); else if (o.price < ex.price) { ex.price = o.price; ex.amount = o.amount; ex.pack = o.pack; }
+          });
+          html = head + "<p class='muted'>📦 Mã vạch: <b>" + esc(name) + '</b></p>' +
+            "<h2 style='font-size:.95em'>✅ Sản phẩm vừa quét — giá các kho</h2>" +
+            tableHTML([rowHTML(name, offers[0].amount, offers)]) +
+            "<p class='muted' style='font-size:.8em'>Kho không ghi mã vạch được ghép " +
+            'theo tên + đúng dung tích.</p>';
+          base = html + (ret.length ? "<h2 style='font-size:.95em'>🏪 Giá siêu thị (khuyến mãi)</h2>" +
+            tableHTML(retailRows(ret.slice(0, 15), new Set())) : '');
+          sim = rest;
+        }
         // Uu tien: CUNG dung tich -> chua het han -> re nhat
         var amt = stripAccents((offers[0] && offers[0].amount) || '').replace(/\s+/g, '');
         function sameAmt(x) { return stripAccents(x[2] || '').replace(/\s+/g, '') === amt ? 0 : 1; }
@@ -851,7 +938,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.1';
+if (el) el.textContent = 'v1.2';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
