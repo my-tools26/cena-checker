@@ -710,7 +710,7 @@ function initScanner() {
   var FORMATS = ['ean_13', 'ean_8', 'upc_a', 'upc_e', 'code_128'];
 
   function stop() {
-    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+    if (rafId) { clearInterval(rafId); rafId = null; }
     if (track && torchOn) { try { track.applyConstraints({ advanced: [{ torch: false }] }); } catch (e) {} }
     torchOn = false; track = null;
     if (torchBtn) torchBtn.textContent = '🔦 Đèn';
@@ -768,31 +768,36 @@ function initScanner() {
         // luon hien nut den; may nao khong ho tro thi bao khi bam
         if (torchBtn) torchBtn.style.display = 'inline-block';
         if ('BarcodeDetector' in window) { try { det = new BarcodeDetector({ formats: FORMATS }); } catch (e) {} }
-        if (!det) loadZX().then(zxInit).catch(function () {});
-        var busy = false;
-        (function loop() {
-          rafId = requestAnimationFrame(loop);
+        if (!det) loadZX().then(zxInit).catch(function () {
+          alert('Không tải được bộ đọc mã vạch. Kiểm tra kết nối mạng rồi thử lại.');
+        });
+        var busy = false, flip = false;
+        // setInterval chu KHONG requestAnimationFrame: rAF dung han khi trang
+        // khong ve khung hinh (mot so may/trinh duyet) -> quet mai khong ra.
+        rafId = setInterval(function loop() {
           if (busy || v.readyState < 2) return;
           var w = v.videoWidth, h = v.videoHeight;
           if (!w || !h) return;
           busy = true;
-          // giam kich thuoc cho nhanh (720px du de doc ma vach)
-          var sc = Math.min(1, 720 / Math.max(w, h)), dw = Math.round(w * sc), dh = Math.round(h * sc);
-          ca.width = dw; ca.height = dh; cxa.drawImage(v, 0, 0, dw, dh);
-          cb.width = dh; cb.height = dw;
-          cxb.save(); cxb.translate(dh / 2, dw / 2); cxb.rotate(Math.PI / 2);
-          cxb.drawImage(v, -dw / 2, -dh / 2, dw, dh); cxb.restore();
+          // DUNG DO PHAN GIAI GOC. (Truoc day thu nho ve 720px "cho nhanh" -> vach
+          // ma vach co lai con ~2px, ZXing khong doc noi -> quet mai khong ra.)
+          ca.width = w; ca.height = h; cxa.drawImage(v, 0, 0);
+          cb.width = h; cb.height = w;
+          cxb.save(); cxb.translate(h / 2, w / 2); cxb.rotate(Math.PI / 2);
+          cxb.drawImage(v, -w / 2, -h / 2); cxb.restore();
           if (det) {
             det.detect(ca).then(function (c) {
               if (c.length) { found(c[0].rawValue); return; }
               return det.detect(cb).then(function (c2) { if (c2.length) found(c2[0].rawValue); });
             }).catch(function () {}).then(function () { busy = false; });
           } else {
-            var r = zxDecode(ca) || zxDecode(cb);
+            // ZXing nang hon: moi khung chi thu 1 chieu, luan phien ngang/doc
+            flip = !flip;
+            var r = zxDecode(flip ? ca : cb) || zxDecode(flip ? cb : ca);
             busy = false;
             if (r) found(r);
           }
-        })();
+        }, 120);
       }).catch(function (e) { stop(); alert('Không mở được camera: ' + e.message); });
   }
 
@@ -846,7 +851,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.0';
+if (el) el.textContent = 'v1.1';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
