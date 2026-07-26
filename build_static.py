@@ -95,7 +95,27 @@ def build_catalog():
                           it.get("amount", ""), sid, int(it.get("pack") or 1),
                           it.get("ean", "")])
         print(f"  {'manual_prices.json':30s} +{len(man.get('items', []))}")
-    return items, meta
+
+    # TRON DEU cac kho theo vong tron: neu de nguyen thu tu file nguon thi trang 1
+    # cua /banbuon toan Tamda, con Makro/JIP nam tan hang tram-nghin trang sau.
+    # Gom theo SLUG (Tamda co 2 nguon 0+1 -> chung 1 suat).
+    buckets = {}
+    for it in items:
+        buckets.setdefault(SHOPS[it[3]][0], []).append(it)
+    order = sorted(buckets, key=lambda k: -len(buckets[k]))
+    mixed, idx = [], 0
+    while len(mixed) < len(items):
+        placed = False
+        for slug in order:
+            b = buckets[slug]
+            if idx < len(b):
+                mixed.append(b[idx])
+                placed = True
+        if not placed:
+            break
+        idx += 1
+    print("  tron deu: " + ", ".join(f"{s}={len(buckets[s])}" for s in order))
+    return mixed, meta
 
 
 def build_ean_shards(catalog):
@@ -192,6 +212,10 @@ def build_retail():
             "kava", "drogerie", "mazlicci"]
     seen, prods = set(), []
 
+    def canon_shop(s):
+        """kupi ghi 'TAMDA FOODS', to roi ghi 'Tamda Foods' -> cung 1 sieu thi."""
+        return "Tamda Foods" if strip_accents(s).startswith("tamda") else s
+
     def add(ps):
         for p in ps:
             key = p["name"] + "|" + p.get("amount", "")
@@ -199,7 +223,7 @@ def build_retail():
                 continue
             seen.add(key)
             prods.append([p["name"], p.get("amount", ""),
-                          [[d["shop"], round(float(d["price"]), 2),
+                          [[canon_shop(d["shop"]), round(float(d["price"]), 2),
                             d.get("unit", ""), d.get("pct", ""), d.get("valid", "")]
                            for d in p["deals"]]])
 
