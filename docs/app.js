@@ -112,9 +112,14 @@ function loadDict() {
 }
 function loadShardIndex() {
   if (DATA.shards) return Promise.resolve(DATA.shards);
-  return getJSON('data/ean/_index.json').then(function (a) {
+  // shards.json: ten KHONG co gach duoi (Jekyll cua GitHub Pages bo qua file "_*")
+  return getJSON('data/ean/shards.json').then(function (a) {
     return (DATA.shards = new Set(a));
-  }).catch(function () { return (DATA.shards = new Set()); });
+  }).catch(function () {
+    return getJSON('data/ean/_index.json').then(function (a) {   // ban cu
+      return (DATA.shards = new Set(a));
+    }).catch(function () { return (DATA.shards = new Set()); });
+  });
 }
 /* Tra ma vach: tai TUNG manh mot, thay la dung ngay (tiet kiem 3G).
    Ma goc thu truoc, cac bien the (ma bich GTIN-14) chi thu khi khong thay. */
@@ -832,7 +837,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v0.8';
+if (el) el.textContent = 'v0.9';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
