@@ -11,9 +11,20 @@ var SHOP_SLUG = ['tamda', 'tamda', 'makro', 'bidfood', 'dathang', 'linsan',
                  'bombacena', 'ptt'];
 var WHOLESALE_FILTERS = [['tamda', '🅣 Tamda'], ['makro', 'Ⓜ Makro'],
   ['bidfood', '🅑 Bidfood'], ['dathang', '🅳 dathang'], ['linsan', '🅻 Linsan'],
-  ['bombacena', '🅱 Bombacena'], ['ptt', '🅟 PTT']];
+  ['bombacena', '🅱 Bombacena'], ['ptt', '🅟 PTT Global']];
+/* Loc ban buon hien tren trang Akce (co JIP vi JIP co deal akce tu kupi) */
+var AKCE_WS_FILTERS = [['makro', 'Ⓜ Makro'], ['jip', '🄹 JIP'], ['tamda', '🅣 Tamda'],
+  ['bidfood', '🅑 Bidfood'], ['dathang', '🅳 dathang'], ['linsan', '🅻 Linsan'],
+  ['bombacena', '🅱 Bombacena'], ['ptt', '🅟 PTT Global']];
 var RETAIL_FILTERS = ['Lidl', 'Kaufland', 'Billa', 'Penny', 'Tesco', 'Albert',
   'Globus', 'COOP', 'Hruška', 'Flop', 'Ratio', 'Košík'];
+/* So nut ban le hien san; con lai an sau nut "…" (muc 6) */
+var RETAIL_SHOWN = 7;
+/* Dong nghia tim kiem: 1 tu Viet -> nhieu tu Sec (OR). VD banh mi -> rohlik + chleb */
+var SEARCH_SYNONYMS = {
+  'banh mi': ['rohlik', 'chleb'], 'banh my': ['rohlik', 'chleb'],
+  'rohlik': ['rohlik', 'chleb']
+};
 var TILES = [['🍎', 'Rau quả', 'ovoce'], ['🥩', 'Thịt cá', 'maso'],
   ['🥛', 'Sữa trứng', 'mleko'], ['🍞', 'Bánh mì', 'pecivo'],
   ['🍫', 'Bánh kẹo', 'sladkosti'], ['🍺', 'Bia', 'pivo'],
@@ -136,16 +147,24 @@ function offSet(key) {
   try { return new Set(JSON.parse(localStorage.getItem(key) || '[]')); }
   catch (e) { return new Set(); }
 }
-function filterBar(list, key, attr) {
-  var off = offSet(key), half = Math.floor(list.length / 2);
-  function row(arr) {
-    return '<div class="sfrow">' + arr.map(function (x) {
-      var slug = Array.isArray(x) ? x[0] : x, lbl = Array.isArray(x) ? x[1] : x;
-      return '<button class="stp' + (off.has(slug) ? ' off' : '') + '" ' + attr +
-        '="' + esc(slug) + '">' + esc(lbl) + '</button>';
-    }).join('') + '</div>';
+function filterBar(list, key, attr, collapseAfter) {
+  var off = offSet(key);
+  function btn(x) {
+    var slug = Array.isArray(x) ? x[0] : x, lbl = Array.isArray(x) ? x[1] : x;
+    return '<button class="stp' + (off.has(slug) ? ' off' : '') + '" ' + attr +
+      '="' + esc(slug) + '">' + esc(lbl) + '</button>';
   }
-  return '<div class="sfgroup">' + row(list.slice(0, half)) + row(list.slice(half)) + '</div>';
+  // Muc 6: chi hien "collapseAfter" nut dau, con lai an sau nut "…"
+  if (collapseAfter && list.length > collapseAfter) {
+    return '<div class="sfgroup"><div class="sfrow">' +
+      list.slice(0, collapseAfter).map(btn).join('') +
+      '<button type="button" class="stp morebtn">…</button>' +
+      '<span class="moreshops" style="display:none">' +
+      list.slice(collapseAfter).map(btn).join('') + '</span></div></div>';
+  }
+  var half = Math.floor(list.length / 2);
+  return '<div class="sfgroup"><div class="sfrow">' + list.slice(0, half).map(btn).join('') +
+    '</div><div class="sfrow">' + list.slice(half).map(btn).join('') + '</div></div>';
 }
 function wireFilters(key, attr, rerender) {
   document.querySelectorAll('[' + attr + ']').forEach(function (b) {
@@ -154,6 +173,18 @@ function wireFilters(key, attr, rerender) {
       if (off.has(k)) off.delete(k); else off.add(k);
       localStorage.setItem(key, JSON.stringify([].concat(Array.from(off))));
       rerender();
+    });
+  });
+  // nut "…" mo rong cac cua hang con lai (khong gan lai neu da gan)
+  document.querySelectorAll('.morebtn').forEach(function (b) {
+    if (b.dataset.w) return; b.dataset.w = '1';
+    b.addEventListener('click', function (e) {
+      e.preventDefault();
+      var s = b.parentNode.querySelector('.moreshops');
+      if (!s) return;
+      var open = s.style.display !== 'none';
+      s.style.display = open ? 'none' : 'contents';
+      b.textContent = open ? '…' : '✕';
     });
   });
 }
@@ -340,7 +371,7 @@ function retailRows(items, offFilter) {
 /* ---------- cac trang ---------- */
 function pageHome() {
   var el = $('#main');
-  el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop') +
+  el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
     "<p class='muted'>Đang tải giá khuyến mãi…</p>";
   loadRetail().then(function (d) {
     var off = offSet('retail_off'), lower = new Set();
@@ -358,7 +389,7 @@ function pageHome() {
     var pick = exp.concat(rest.slice(0, Math.max(0, 14 - exp.length)));
     pick.sort(function (a, b) { return bestPct(b) - bestPct(a); });
     var rows = retailRows(pick, lower);
-    el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop') +
+    el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
       "<h2 style='font-size:.95em'>💡 MUA GÌ Ở ĐÂU HÔM NAY</h2>" +
       (rows.length ? tableHTML(rows) : "<p class='muted'>Chưa có dữ liệu giá bán lẻ.</p>") +
       "<p class='muted' style='font-size:.85em'>⏰ = sắp hết akce (hôm nay/ngày mai) · " +
@@ -385,7 +416,8 @@ function freshHTML(all, lower) {
 
 function pageAkce() {
   var el = $('#main');
-  el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop') +
+  el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
+    filterBar(AKCE_WS_FILTERS, 'retail_off', 'data-rshop') +
     "<p class='muted'>Đang tải…</p>";
   loadRetail().then(function (d) {
     var off = offSet('retail_off'), lower = new Set();
@@ -394,7 +426,8 @@ function pageAkce() {
     var items = (d.items || []).slice();
     items.sort(function (a, b) { return bestPct(b) - bestPct(a); });
     var rows = retailRows(items.slice(0, 60), lower);
-    el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop') +
+    el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
+      filterBar(AKCE_WS_FILTERS, 'retail_off', 'data-rshop') +
       "<h2 style='font-size:.95em'>🔥 AKCE ĐANG DIỄN RA — " + items.length + ' mặt hàng</h2>' +
       tableHTML(rows) +
       "<p class='muted' style='font-size:.85em'>Cập nhật " + esc(d.date || '') + '</p>';
@@ -453,7 +486,7 @@ function pageCat(cat) {
       return words.some(function (w) { return n.indexOf(w) >= 0; });
     });
     var t = TILES.filter(function (x) { return x[2] === cat; })[0] || ['', cat, cat];
-    el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop') +
+    el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
       "<h2 style='font-size:.95em'>" + t[0] + ' ' + esc(t[1]) + ' — ' + items.length +
       ' mặt hàng khuyến mãi</h2>' +
       (items.length ? tableHTML(retailRows(items.slice(0, 60), lower))
@@ -556,14 +589,29 @@ function groupRows(items) {
   });
 }
 
+/* Mo rong 1 truy van thanh nhieu tu Sec (OR) theo bang dong nghia */
+function expandQueries(raw, cs) {
+  var s = SEARCH_SYNONYMS[raw] || SEARCH_SYNONYMS[cs];
+  return s ? s.slice() : [cs];
+}
+/* Gop nhieu mang ket qua, bo trung (theo tham chieu doi tuong goc) */
+function uniqConcat(lists) {
+  var seen = [], out = [];
+  lists.forEach(function (l) {
+    l.forEach(function (x) { if (seen.indexOf(x) < 0) { seen.push(x); out.push(x); } });
+  });
+  return out;
+}
+
 function searchByText(raw, cs, head, el) {
   el.innerHTML = tilesHTML() + head +
     "<p class='muted'>Đang tải dữ liệu giá (lần đầu ~2MB, sau đó nhanh)…</p>";
   return Promise.all([loadCatalog(), loadRetail()]).then(function (r) {
     var cat = r[0], retail = r[1];
-    var hits = searchCatalog(cat, cs);
+    var qs = expandQueries(raw, cs);
+    var hits = uniqConcat(qs.map(function (q) { return searchCatalog(cat, q); }));
     if (!hits.length && cs !== raw) hits = searchCatalog(cat, raw);
-    var ret = searchRetail(retail, cs);
+    var ret = uniqConcat(qs.map(function (q) { return searchRetail(retail, q); }));
     if (!ret.length && cs !== raw) ret = searchRetail(retail, raw);
     var html = head;
     if (ret.length) html += "<h2 style='font-size:.95em'>🏪 Giá siêu thị (khuyến mãi) — " +
@@ -593,6 +641,16 @@ function initScanner() {
     var v = document.createElement('video');
     v.setAttribute('playsinline', ''); v.style.width = '100%';
     $('#scanview').innerHTML = ''; $('#scanview').appendChild(v);
+    var cvs = document.createElement('canvas'), cx = cvs.getContext('2d');
+    // Xoay khung hinh 90° -> doc duoc ma vach NAM DOC ma khong phai quay may (muc 4)
+    function detectRotated() {
+      var w = v.videoWidth, h = v.videoHeight;
+      if (!w || !h) return Promise.resolve([]);
+      cvs.width = h; cvs.height = w;
+      cx.save(); cx.translate(h / 2, w / 2); cx.rotate(Math.PI / 2);
+      cx.drawImage(v, -w / 2, -h / 2); cx.restore();
+      return det.detect(cvs).catch(function () { return []; });
+    }
     navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment',
       width: { ideal: 1920 }, height: { ideal: 1080 } } })
       .then(function (s) {
@@ -603,15 +661,20 @@ function initScanner() {
           if (busy || v.readyState < 2) return;
           busy = true;
           det.detect(v).then(function (codes) {
-            busy = false; if (codes.length) found(codes[0].rawValue);
-          }).catch(function () { busy = false; });
+            if (codes.length) { found(codes[0].rawValue); return; }
+            // chieu ngang khong thay -> thu chieu doc
+            return detectRotated().then(function (c2) {
+              if (c2.length) found(c2[0].rawValue);
+            });
+          }).catch(function () {}).then(function () { busy = false; });
         })();
       }).catch(function (e) { stop(); alert('Không mở được camera: ' + e.message); });
   }
   function startLib() {
+    // khung vuong + cho phep lat -> de bat ma vach o nhieu chieu hon
     scanner = new Html5Qrcode('scanview');
     scanner.start({ facingMode: 'environment' },
-      { fps: 15, qrbox: { width: 300, height: 180 }, disableFlip: true },
+      { fps: 15, qrbox: { width: 250, height: 250 }, disableFlip: false },
       function (c) { found(c); }, function () {})
       .catch(function (e) { stop(); alert('Không mở được camera: ' + e); });
   }
@@ -665,7 +728,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v0.1';
+if (el) el.textContent = 'v0.2';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
