@@ -4,6 +4,9 @@ lidl_token.json
 # TUYET DOI khong dua cookie phien PTT Global ca nhan len repo!
 pttglobal_cookie.json
 
+# Cookie phien Bidfood
+bidfood_cookie.json
+
 __pycache__/
 *.pyc
 .venv/
