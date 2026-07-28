@@ -242,7 +242,7 @@ function wireFilters(key, attr, rerender) {
 /* ---------- hien thi ---------- */
 function shopBadge(name) {
   var s = stripAccents(name), bg = '#F1EFE8', fg = '#444441';
-  var C = [['lidl', '#FFF3C4', '#7A5C00'], ['kaufland', '#FFE8C8', '#7A4000'],
+  var C = [['lidl', '#FFF3C4', '#7A5C00'], ['kaufland', '#D4E8F0', '#2A4F6B'],
     ['billa', '#FFF0C8', '#6B5000'], ['penny', '#E0F0E0', '#2B5C2B'],
     ['tesco', '#DCEBFF', '#0A3D7A'], ['albert', '#DFF5DF', '#1F5C1F'],
     ['globus', '#FAEEDA', '#633806'], ['tamda', '#FFE3CC', '#8A4B00'],
