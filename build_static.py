@@ -22,15 +22,14 @@ OUT = os.path.join(HERE, "docs", "data")
 
 # Ma so kho (dung trong file compact de tiet kiem dung luong)
 SHOPS = [
-    ("tamda", "Tamda Foods"),      # 0 - to roi tuan (gia the)
-    ("tamda", "Tamda Foods"),      # 1 - catalog Tamda Express
-    ("makro", "Makro"),            # 2
-    ("bidfood", "Bidfood"),        # 3
-    ("dathang", "dathang.cz"),     # 4
-    ("linsan", "Linsan24h"),       # 5
-    ("bombacena", "Bombacena"),    # 6
-    ("ptt", "PTT Global"),         # 7
-    ("jip", "JIP"),                # 8
+    ("tamda", "Tamda Foods"),      # 0 - to roi + catalog gop chung
+    ("makro", "Makro"),            # 1
+    ("bidfood", "Bidfood"),        # 2
+    ("dathang", "dathang.cz"),     # 3
+    ("linsan", "Linsan24h"),       # 4
+    ("bombacena", "Bombacena"),    # 5
+    ("ptt", "PTT Global"),         # 6
+    ("jip", "JIP"),                # 7
 ]
 
 
@@ -80,14 +79,14 @@ def build_catalog():
     items = []
     srcs = [
         ("tamda_prices.json", 0, None),
-        ("tamda_full_prices.json", 1, None),
-        ("makro_full_prices.json", 2, None),
-        ("bidfood_prices.json", 3, None),
-        ("dathang_prices.json", 4, None),
-        ("linsan_prices.json", 5, None),
-        ("bombacena_prices.json", 6, None),
-        ("pttglobal_prices.json", 7, None),
-        ("jip_prices.json", 8, None),
+        ("tamda_full_prices.json", 0, None),
+        ("makro_full_prices.json", 1, None),
+        ("bidfood_prices.json", 2, None),
+        ("dathang_prices.json", 3, None),
+        ("linsan_prices.json", 4, None),
+        ("bombacena_prices.json", 5, None),
+        ("pttglobal_prices.json", 6, None),
+        ("jip_prices.json", 7, None),
     ]
     meta = {}
     for fn, sid, _ in srcs:
@@ -110,8 +109,8 @@ def build_catalog():
     # gia tu nhap tay (manual_prices.json)
     man = load("manual_prices.json")
     if man:
-        slug2id = {"tamda": 1, "makro": 2, "bidfood": 3, "dathang": 4,
-                   "linsan": 5, "bombacena": 6, "ptt": 7, "jip": 8}
+        slug2id = {"tamda": 0, "makro": 1, "bidfood": 2, "dathang": 3,
+                   "linsan": 4, "bombacena": 5, "ptt": 6, "jip": 7}
         for it in man.get("items", []):
             sid = slug2id.get(it.get("slug"), 4)
             items.append([it["name"], round(float(it["price"]), 2),

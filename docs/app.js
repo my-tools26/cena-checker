@@ -5,9 +5,9 @@
 */
 'use strict';
 
-var SHOP = ['Tamda Foods', 'Tamda Foods', 'Makro', 'Bidfood', 'dathang.cz',
+var SHOP = ['Tamda Foods', 'Makro', 'Bidfood', 'dathang.cz',
             'Linsan24h', 'Bombacena', 'PTT Global', 'JIP'];
-var SHOP_SLUG = ['tamda', 'tamda', 'makro', 'bidfood', 'dathang', 'linsan',
+var SHOP_SLUG = ['tamda', 'makro', 'bidfood', 'dathang', 'linsan',
                  'bombacena', 'ptt', 'jip'];
 var WHOLESALE_FILTERS = [['tamda', '🅣 Tamda'], ['makro', 'Ⓜ Makro'],
   ['jip', '🄹 JIP'], ['bidfood', '🅑 Bidfood'], ['dathang', '🅳 dathang'],
@@ -242,12 +242,12 @@ function wireFilters(key, attr, rerender) {
 /* ---------- hien thi ---------- */
 function shopBadge(name) {
   var s = stripAccents(name), bg = '#F1EFE8', fg = '#444441';
-  var C = [['lidl', '#FFF3C4', '#7A5C00'], ['kaufland', '#FFDDDD', '#8A1F1F'],
-    ['billa', '#FFE0E0', '#8A1F1F'], ['penny', '#FFE3E3', '#8A1F1F'],
+  var C = [['lidl', '#FFF3C4', '#7A5C00'], ['kaufland', '#FFE8C8', '#7A4000'],
+    ['billa', '#FFF0C8', '#6B5000'], ['penny', '#E0F0E0', '#2B5C2B'],
     ['tesco', '#DCEBFF', '#0A3D7A'], ['albert', '#DFF5DF', '#1F5C1F'],
     ['globus', '#FAEEDA', '#633806'], ['tamda', '#FFE3CC', '#8A4B00'],
-    ['makro', '#DCE9F8', '#123C6B'], ['jip', '#FFE0E0', '#8A1F1F'],
-    ['bidfood', '#D8F3E8', '#0B5C43'], ['dathang', '#FFE1E7', '#8A1F3F'],
+    ['makro', '#DCE9F8', '#123C6B'], ['jip', '#E8E0F8', '#4A2F7A'],
+    ['bidfood', '#D8F3E8', '#0B5C43'], ['dathang', '#D8EEF8', '#1A4A6B'],
     ['linsan', '#E6E1FF', '#3A2F7A'], ['bombacena', '#FFE9D6', '#7A4300'],
     ['ptt', '#E3F0FF', '#1A4E8A'], ['kosik', '#E8F0D8', '#3F5C0B'],
     ['hruska', '#FFE7D6', '#7A3E00'], ['coop', '#DDEEFF', '#0A3D7A']];
