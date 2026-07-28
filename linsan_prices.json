@@ -1,5 +1,5 @@
 {
- "date": "2026-07-22",
+ "date": "2026-07-28",
  "shop": "linsan",
  "items": [
   {
@@ -759,7 +759,7 @@
    "ean": "8595646203578"
   },
   {
-   "name": "Nestea 1.5L GREEN TEA - STRAWBERRY & ALOE VERA",
+   "name": "Nestea 1.5L GREEN TEA - STRAWBERRY ALOE VERA",
    "price": 24.55,
    "amount": "1.5 l",
    "unit": "",
@@ -1796,7 +1796,7 @@
   },
   {
    "name": "Airwaves 14g Extreme 20bx30ks CZ",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "14 g",
    "unit": "",
    "ean": "4009900454681"
@@ -1837,7 +1837,7 @@
    "ean": "5010455601030"
   },
   {
-   "name": "Tictac 38.5g Raspberry&Lemon",
+   "name": "Tictac 38.5g RaspberryLemon",
    "price": 29.98,
    "amount": "38.5 g",
    "unit": "",
@@ -1956,7 +1956,7 @@
    "ean": "5998710980697"
   },
   {
-   "name": "Nescafe Gold 200g Rich & Smooth",
+   "name": "Nescafe Gold 200g Rich Smooth",
    "price": 184.98,
    "amount": "200 g",
    "unit": "",
@@ -2803,7 +2803,7 @@
    "ean": "9002859037566"
   },
   {
-   "name": "Nestea 0,5L GREEN TEA - STRAWBERRY & ALOE VERA",
+   "name": "Nestea 0,5L GREEN TEA - STRAWBERRY ALOE VERA",
    "price": 13.98,
    "amount": "0,5 l",
    "unit": "",
@@ -3019,7 +3019,7 @@
    "ean": "4001686120279"
   },
   {
-   "name": "Haribo day 170g Balla Stixx Raspberry&Blackberry",
+   "name": "Haribo day 170g Balla Stixx RaspberryBlackberry",
    "price": 31.98,
    "amount": "170 g",
    "unit": "",
@@ -3299,21 +3299,21 @@
   },
   {
    "name": "Airwaves 14g Cool Cassis 20bx30ks (Fialový - tím) CZ",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "14 g",
    "unit": "",
    "ean": "4009900376570"
   },
   {
    "name": "Airwaves 14g Black Mint 20bx30ks (černý - den) CZ",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "14 g",
    "unit": "",
    "ean": "4009900393065"
   },
   {
    "name": "Airwaves 14g MentholEucalyptus 20bx30ks CZ",
-   "price": 12.55,
+   "price": 11.98,
    "amount": "14 g",
    "unit": "",
    "ean": "4009900022170"
@@ -3445,7 +3445,7 @@
   },
   {
    "name": "Soft Exclusive Toaletní 24/4ks Bílá 2vrstvý",
-   "price": 22.98,
+   "price": 20.98,
    "amount": "4 ks",
    "unit": "",
    "ean": "8594032260805"
@@ -4116,7 +4116,7 @@
   },
   {
    "name": "Orbit 14g Sweet Mint CZ",
-   "price": 11.55,
+   "price": 10.98,
    "amount": "14 g",
    "unit": "",
    "ean": "4009900362559"
@@ -4200,7 +4200,7 @@
   },
   {
    "name": "Orbit 14g Strawberry - Jahoda CZ",
-   "price": 11.55,
+   "price": 10.98,
    "amount": "14 g",
    "unit": "",
    "ean": "4009900023955"
@@ -4235,14 +4235,14 @@
   },
   {
    "name": "Soft Exclusive Toaletní 20/4ks Žlutá 2vrstvý",
-   "price": 25.98,
+   "price": 24.98,
    "amount": "4 ks",
    "unit": "",
    "ean": "20230804"
   },
   {
    "name": "Soft Exclusive Toaletní 20/4ks Růžová 2vrstvý",
-   "price": 25.98,
+   "price": 24.98,
    "amount": "4 ks",
    "unit": "",
    "ean": "8594032260782"
@@ -4305,21 +4305,21 @@
   },
   {
    "name": "Orbit 14g Meloun Cervené",
-   "price": 11.55,
+   "price": 10.98,
    "amount": "14 g",
    "unit": "",
    "ean": "4009900397605"
   },
   {
    "name": "Dau Hao - 600ML - Ústřicová Omáčka",
-   "price": 84.98,
+   "price": 75.98,
    "amount": "600 ml",
    "unit": "",
    "ean": "8850038400080"
   },
   {
    "name": "Dau Hao - 300ML - Ústřicová Omáčka",
-   "price": 54.98,
+   "price": 49.98,
    "amount": "300 ml",
    "unit": "",
    "ean": "8850038400073"
@@ -4633,7 +4633,7 @@
    "ean": "8594121270241"
   },
   {
-   "name": "Pringles 40g Sour Cream & Onion",
+   "name": "Pringles 40g Sour Cream Onion",
    "price": 21.98,
    "amount": "40 g",
    "unit": "",
@@ -4654,7 +4654,7 @@
    "ean": "5053990107339"
   },
   {
-   "name": "Tictac 38,5g Fresh&Mild",
+   "name": "Tictac 38,5g FreshMild",
    "price": 29.98,
    "amount": "38,5 g",
    "unit": "",
@@ -5746,7 +5746,7 @@
    "ean": "3038354256207"
   },
   {
-   "name": "PANZANI OM 400g Olive & Basilico",
+   "name": "PANZANI OM 400g Olive Basilico",
    "price": 46.98,
    "amount": "400 g",
    "unit": "",
@@ -5984,7 +5984,7 @@
   },
   {
    "name": "HQ Nongshim 112g Soon veggie Ramyun Multi",
-   "price": 23.98,
+   "price": 22.98,
    "amount": "112 g",
    "unit": "",
    "ean": "8801043022705"
@@ -6578,7 +6578,7 @@
    "ean": "8410525173967"
   },
   {
-   "name": "USA 355ml Dr. Pepper Strawberry & Cream",
+   "name": "USA 355ml Dr. Pepper Strawberry Cream",
    "price": 23.55,
    "amount": "355 ml",
    "unit": "",
@@ -6704,7 +6704,7 @@
    "ean": "8594012796515"
   },
   {
-   "name": "Pringles 40g Hot & Spicy",
+   "name": "Pringles 40g Hot Spicy",
    "price": 21.98,
    "amount": "40 g",
    "unit": "",
@@ -6914,7 +6914,7 @@
    "ean": "8594055300106"
   },
   {
-   "name": "Indiana Jerky 48b x 15ks x 25g BEEF - Hovězí Hot & Sweet",
+   "name": "Indiana Jerky 48b x 15ks x 25g BEEF - Hovězí Hot Sweet",
    "price": 52.98,
    "amount": "15 ks",
    "unit": "",
@@ -7012,7 +7012,7 @@
    "ean": "8594055300311"
   },
   {
-   "name": "Indiana Jerky 24b x 8ks x 90g Beef - Hovězí Hot & Sweet",
+   "name": "Indiana Jerky 24b x 8ks x 90g Beef - Hovězí Hot Sweet",
    "price": 155.0,
    "amount": "8 ks",
    "unit": "",
@@ -7047,14 +7047,14 @@
    "ean": "3249381000132"
   },
   {
-   "name": "Pringles 165g Cheese & Onion",
+   "name": "Pringles 165g Cheese Onion",
    "price": 47.56,
    "amount": "165 g",
    "unit": "",
    "ean": "5053990101535"
   },
   {
-   "name": "Pringles 165g Hot & Spicy",
+   "name": "Pringles 165g Hot Spicy",
    "price": 47.56,
    "amount": "165 g",
    "unit": "",
@@ -7265,14 +7265,14 @@
   },
   {
    "name": "Orbit Dóza - Lo 24b*6ks*64g Modrý - Peppermint",
-   "price": 43.99,
+   "price": 41.98,
    "amount": "6 ks",
    "unit": "",
    "ean": "4009900412087"
   },
   {
    "name": "Orbit Dóza - Lo 24b*6ks*64g Zelený - Spearmint",
-   "price": 43.99,
+   "price": 41.98,
    "amount": "6 ks",
    "unit": "",
    "ean": "4009900412124"
@@ -7398,7 +7398,7 @@
   },
   {
    "name": "Orbit 14g Apple - Jablko CZ",
-   "price": 11.55,
+   "price": 10.98,
    "amount": "14 g",
    "unit": "",
    "ean": "4009900023931"
@@ -8468,7 +8468,7 @@
   },
   {
    "name": "Kinder Vejce - Joy 20g N2 (Con Trai) - T1 24ks*8",
-   "price": 18.98,
+   "price": 17.98,
    "amount": "20 g",
    "unit": "",
    "ean": "8000500168028"
@@ -8656,14 +8656,14 @@
    "ean": "049000033939"
   },
   {
-   "name": "Maxx Plech. 250ml Circus Pineberry & Guava",
+   "name": "Maxx Plech. 250ml Circus Pineberry Guava",
    "price": 7.75,
    "amount": "250 ml",
    "unit": "",
    "ean": "8588004566057"
   },
   {
-   "name": "Maxx Plech. 250ml Meloun & Gooseberry",
+   "name": "Maxx Plech. 250ml Meloun Gooseberry",
    "price": 7.75,
    "amount": "250 ml",
    "unit": "",
@@ -8951,7 +8951,7 @@
   },
   {
    "name": "Orbit 14g Bubblemint CZECH",
-   "price": 11.55,
+   "price": 10.98,
    "amount": "14 g",
    "unit": "",
    "ean": "4009900482394"
@@ -10488,7 +10488,7 @@
   },
   {
    "name": "Oreo 176g Golden",
-   "price": 27.55,
+   "price": 24.98,
    "amount": "176 g",
    "unit": "",
    "ean": "7622300360375"
@@ -10614,14 +10614,14 @@
   },
   {
    "name": "Muffinki 300g Stracciatella DanCake",
-   "price": 48.98,
+   "price": 39.98,
    "amount": "300 g",
    "unit": "",
    "ean": "5900864711430"
   },
   {
    "name": "Muffinki 300g Čokoloádový DanCake",
-   "price": 48.98,
+   "price": 39.98,
    "amount": "300 g",
    "unit": "",
    "ean": "5900864711423"
@@ -10782,21 +10782,21 @@
   },
   {
    "name": "Orbit White 14g Spearmint",
-   "price": 12.98,
+   "price": 11.55,
    "amount": "14 g",
    "unit": "",
    "ean": "4009900395977"
   },
   {
    "name": "Orbit White 14g Fruit",
-   "price": 12.98,
+   "price": 11.55,
    "amount": "14 g",
    "unit": "",
    "ean": "4009900380447"
   },
   {
    "name": "Orbit White 14g Classic",
-   "price": 12.98,
+   "price": 11.55,
    "amount": "14 g",
    "unit": "",
    "ean": "4009900363488"
@@ -11522,7 +11522,7 @@
   },
   {
    "name": "Croissant Milka 50g Cokolada",
-   "price": 15.98,
+   "price": 14.98,
    "amount": "50 g",
    "unit": "",
    "ean": "7622202266102"
@@ -11648,7 +11648,7 @@
   },
   {
    "name": "Airwaves Dóza - Lo 24b*6ks*64g Cassis",
-   "price": 54.98,
+   "price": 49.98,
    "amount": "6 ks",
    "unit": "",
    "ean": "4009900478236"
@@ -11662,7 +11662,7 @@
   },
   {
    "name": "Kinder Vejce - Joy 20g N2 (Con Gai) - T1 24ks*8",
-   "price": 18.98,
+   "price": 17.98,
    "amount": "20 g",
    "unit": "",
    "ean": "8000500168042"
@@ -11696,28 +11696,28 @@
   },
   {
    "name": "Croissant Milka 50g Vanilka",
-   "price": 15.98,
+   "price": 14.98,
    "amount": "50 g",
    "unit": "",
    "ean": "7622202260087"
   },
   {
    "name": "SEDITA Tatranky 33g Mléčná (Modrá)",
-   "price": 6.55,
+   "price": 5.98,
    "amount": "33 g",
    "unit": "",
    "ean": "8584004041297"
   },
   {
    "name": "SEDITA Tatranky 33g Oříšková (Zelená)",
-   "price": 6.55,
+   "price": 5.98,
    "amount": "33 g",
    "unit": "",
    "ean": "8584004041198"
   },
   {
    "name": "SEDITA Tatranky 33g Čokoládová (Hnědá)",
-   "price": 6.55,
+   "price": 5.98,
    "amount": "33 g",
    "unit": "",
    "ean": "8584004041259"
@@ -11940,7 +11940,7 @@
    "ean": "8594008554174"
   },
   {
-   "name": "Cider Lišácké 500ml Jablko & Hruška",
+   "name": "Cider Lišácké 500ml Jablko Hruška",
    "price": 20.98,
    "amount": "500 ml",
    "unit": "",
@@ -12142,7 +12142,7 @@
    "ean": "8594042911940"
   },
   {
-   "name": "Milka šus. 175g Cake & Choc",
+   "name": "Milka šus. 175g Cake Choc",
    "price": 43.99,
    "amount": "175 g",
    "unit": "",
@@ -12345,21 +12345,21 @@
    "ean": "8410031921007"
   },
   {
-   "name": "DUPETKY pecené & solené 21x80g",
+   "name": "DUPETKY pecené solené 21x80g",
    "price": 15.98,
    "amount": "80 g",
    "unit": "",
    "ean": "5949040201419"
   },
   {
-   "name": "DUPETKY pecené & sezam 21x80g",
+   "name": "DUPETKY pecené sezam 21x80g",
    "price": 15.98,
    "amount": "80 g",
    "unit": "",
    "ean": "5949040201433"
   },
   {
-   "name": "DUPETKY pecené & horcice-med-cibule 21x70g",
+   "name": "DUPETKY pecené horcice-med-cibule 21x70g",
    "price": 15.98,
    "amount": "70 g",
    "unit": "",
@@ -12485,7 +12485,7 @@
    "ean": "5900259096609"
   },
   {
-   "name": "Lays 65g Max - Cheese & Onion",
+   "name": "Lays 65g Max - Cheese Onion",
    "price": 17.98,
    "amount": "65 g",
    "unit": "",
@@ -12582,7 +12582,7 @@
    "ean": "8595646203844"
   },
   {
-   "name": "Maretti 70g Sour Cream & Onion",
+   "name": "Maretti 70g Sour Cream Onion",
    "price": 15.98,
    "amount": "70 g",
    "unit": "",
@@ -12631,7 +12631,7 @@
    "ean": "7622300590970"
   },
   {
-   "name": "Milka šus. 150g Soft - Choc & Choc",
+   "name": "Milka šus. 150g Soft - Choc Choc",
    "price": 43.99,
    "amount": "150 g",
    "unit": "",
@@ -12688,7 +12688,7 @@
   },
   {
    "name": "Muffinki 300g Mix Dancake",
-   "price": 48.98,
+   "price": 39.98,
    "amount": "300 g",
    "unit": "",
    "ean": "5900864711546"
@@ -13041,7 +13041,7 @@
    "ean": "8005400058240"
   },
   {
-   "name": "Nescafe Gold 100g Rich & Smooth",
+   "name": "Nescafe Gold 100g Rich Smooth",
    "price": 99.99,
    "amount": "100 g",
    "unit": "",
@@ -13195,21 +13195,21 @@
    "ean": "5900864767406"
   },
   {
-   "name": "Birell plech 0.5L Polotmavý - Citron",
+   "name": "Birell Plech 0.5L Polotmavý - Citron",
    "price": 20.98,
    "amount": "0.5 l",
    "unit": "",
    "ean": "8586001761994"
   },
   {
-   "name": "Birell plech 0.5L Pomelo&grep",
+   "name": "Birell Plech 0.5L Pomelogrep",
    "price": 20.98,
    "amount": "0.5 l",
    "unit": "",
    "ean": "8594404009520"
   },
   {
-   "name": "Birell plech 0.5L Limetka & Malina",
+   "name": "Birell Plech 0.5L Limetka Malina",
    "price": 20.98,
    "amount": "0.5 l",
    "unit": "",
@@ -13776,7 +13776,7 @@
    "ean": "8008863046564"
   },
   {
-   "name": "Pickwick 20 x 1,75g Fruit Fusion - mango, lime & ginger",
+   "name": "Pickwick 20 x 1,75g Fruit Fusion - mango, lime ginger",
    "price": 34.98,
    "amount": "1,75 g",
    "unit": "",
@@ -13840,7 +13840,7 @@
   },
   {
    "name": "DanCake Toust XXL American 750g Pšeničný - Wheat",
-   "price": 39.98,
+   "price": 24.9,
    "amount": "750 g",
    "unit": "",
    "ean": "5900864784724"
@@ -14334,21 +14334,21 @@
    "ean": "8595646204803"
   },
   {
-   "name": "Nestea 1,5L BLACK TEA - MANGO & PINEAPPLE",
+   "name": "Nestea 1,5L BLACK TEA - MANGO PINEAPPLE",
    "price": 24.55,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8595646204889"
   },
   {
-   "name": "Nestea 0,5L BLACK TEA - MANGO & PINEAPPLE",
+   "name": "Nestea 0,5L BLACK TEA - MANGO PINEAPPLE",
    "price": 13.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646204896"
   },
   {
-   "name": "Cider Lišácké 500ml Jablko & Meruňka",
+   "name": "Cider Lišácké 500ml Jablko Meruňka",
    "price": 20.98,
    "amount": "500 ml",
    "unit": "",
@@ -14445,7 +14445,7 @@
    "ean": "5903140330448"
   },
   {
-   "name": "SenSoy 220ml Teriyaki Sauce - Teriyaki omáčka & Marináda",
+   "name": "SenSoy 220ml Teriyaki Sauce - Teriyaki omáčka Marináda",
    "price": 34.98,
    "amount": "220 ml",
    "unit": "",
@@ -14912,7 +14912,7 @@
    "ean": "5900259106599"
   },
   {
-   "name": "DUPETKY pecené & rajče 21x70g",
+   "name": "DUPETKY pecené rajče 21x70g",
    "price": 15.98,
    "amount": "70 g",
    "unit": "",
@@ -15423,7 +15423,7 @@
    "ean": "8594045605815"
   },
   {
-   "name": "DUPETKY pecene Hořčice & Med & Cibule 160g",
+   "name": "DUPETKY pecene Hořčice Med Cibule 160g",
    "price": 30.98,
    "amount": "160 g",
    "unit": "",
@@ -15444,7 +15444,7 @@
    "ean": "5949040202669"
   },
   {
-   "name": "Twistky 160g Rajčata & Kmín",
+   "name": "Twistky 160g Rajčata Kmín",
    "price": 30.98,
    "amount": "160 g",
    "unit": "",
@@ -15458,7 +15458,7 @@
    "ean": "5949040203611"
   },
   {
-   "name": "Twistky 160g Mořská Sůl & Med",
+   "name": "Twistky 160g Mořská Sůl Med",
    "price": 30.98,
    "amount": "160 g",
    "unit": "",
@@ -15473,7 +15473,7 @@
   },
   {
    "name": "Soft Exclusive Toaletní 20/4ks Bílá 3vrstvý",
-   "price": 25.98,
+   "price": 22.98,
    "amount": "4 ks",
    "unit": "",
    "ean": "8594032261062"
@@ -15500,7 +15500,7 @@
    "ean": "8595681004390"
   },
   {
-   "name": "Birell Plech Active 0,5L Zelený čaj & Broskev s kofeinem",
+   "name": "Birell Plech Active 0,5L Zelený čaj Broskev s kofeinem",
    "price": 20.98,
    "amount": "0,5 l",
    "unit": "",
@@ -15564,7 +15564,7 @@
   },
   {
    "name": "Mogu Mogu 320ml - Jahoda - Strawberry",
-   "price": 12.98,
+   "price": 7.99,
    "amount": "320 ml",
    "unit": "",
    "ean": "8850389103142"
@@ -15647,7 +15647,7 @@
    "ean": "5900259128843"
   },
   {
-   "name": "Lays 120g Strong - Cheese & Jalapeno",
+   "name": "Lays 120g Strong - Cheese Jalapeno",
    "price": 29.98,
    "amount": "120 g",
    "unit": "",
@@ -15970,7 +15970,7 @@
   },
   {
    "name": "DanCake Toust XXL American 375g Pšeničný - Wheat",
-   "price": 22.55,
+   "price": 14.9,
    "amount": "375 g",
    "unit": "",
    "ean": "5900864784298"
@@ -16354,7 +16354,7 @@
    "ean": "4014400925395"
   },
   {
-   "name": "Merci Petits 125g Milk & Cream Collection",
+   "name": "Merci Petits 125g Milk Cream Collection",
    "price": 52.98,
    "amount": "125 g",
    "unit": "",
@@ -16404,7 +16404,7 @@
   },
   {
    "name": "Soft Exclusive Toaletní 8ks Bílá 3vrstvý",
-   "price": 42.98,
+   "price": 41.98,
    "amount": "8 ks",
    "unit": "",
    "ean": "8594032260911"
@@ -16432,14 +16432,14 @@
   },
   {
    "name": "Sour Patch Kids 80g Original - Jelibon",
-   "price": 18.99,
+   "price": 14.95,
    "amount": "80 g",
    "unit": "",
    "ean": "7622210442789"
   },
   {
    "name": "Sour Patch Kids 160g Watermelon - Jelibon",
-   "price": 31.98,
+   "price": 25.55,
    "amount": "160 g",
    "unit": "",
    "ean": "7622210796868"
@@ -17040,7 +17040,7 @@
    "ean": "8595003401821"
   },
   {
-   "name": "Birel Plech Active Méně cukru 0,5L Citrus Mix a Guarana s Ko",
+   "name": "Birell Plech Active Vitality 0,5L Citrus Zázvor",
    "price": 20.98,
    "amount": "0,5 l",
    "unit": "",
@@ -17271,7 +17271,7 @@
    "ean": "7622202204203"
   },
   {
-   "name": "Tuc Bake Rolls 80g Smet&Cibule",
+   "name": "Tuc Bake Rolls 80g SmetCibule",
    "price": 19.98,
    "amount": "80 g",
    "unit": "",
@@ -17292,7 +17292,7 @@
    "ean": "5907205007597"
   },
   {
-   "name": "Sour Madness Argo 60g Crunch Kyselé",
+   "name": "Sour Madness Argo 60g Crush Kyselé",
    "price": 18.55,
    "amount": "60 g",
    "unit": "",
@@ -17335,42 +17335,42 @@
   },
   {
    "name": "Sour Patch Kids 160g Peach- Jelibon",
-   "price": 31.98,
+   "price": 25.55,
    "amount": "160 g",
    "unit": "",
    "ean": "7622202207228"
   },
   {
    "name": "Sour Patch Kids 160g Strawberry - Jelibon",
-   "price": 31.98,
+   "price": 25.55,
    "amount": "160 g",
    "unit": "",
    "ean": "7622202207259"
   },
   {
    "name": "Sour Patch Kids 160g Tropical- Jelibon",
-   "price": 31.98,
+   "price": 25.55,
    "amount": "160 g",
    "unit": "",
    "ean": "7622202207174"
   },
   {
    "name": "Sour Patch Kids 80g Peach - Jelibon",
-   "price": 18.99,
+   "price": 14.95,
    "amount": "80 g",
    "unit": "",
    "ean": "7622202207143"
   },
   {
    "name": "Sour Patch Kids 80g Strawberry - Jelibon",
-   "price": 18.99,
+   "price": 14.95,
    "amount": "80 g",
    "unit": "",
    "ean": "7622202207273"
   },
   {
    "name": "Sour Patch Kids 80g Tropical - Jelibon",
-   "price": 18.99,
+   "price": 14.95,
    "amount": "80 g",
    "unit": "",
    "ean": "7622202207310"
@@ -17425,7 +17425,7 @@
    "ean": "8595096371438"
   },
   {
-   "name": "Lindt čoko.100g Crispy Wafer&Caramel",
+   "name": "Lindt čoko.100g Crispy WaferCaramel",
    "price": 82.98,
    "amount": "100 g",
    "unit": "",
@@ -17509,7 +17509,7 @@
    "ean": "8594002153083"
   },
   {
-   "name": "RedBull CZ 250ml Ice Edition - Vanilla & Iced Berry",
+   "name": "RedBull CZ 250ml Ice Edition - Vanilla Iced Berry",
    "price": 28.55,
    "amount": "250 ml",
    "unit": "",
@@ -17573,7 +17573,7 @@
   },
   {
    "name": "Mogu Mogu 320ml - Passion Fruit",
-   "price": 6.55,
+   "price": 7.99,
    "amount": "320 ml",
    "unit": "",
    "ean": "8850389112878"
@@ -17635,7 +17635,7 @@
    "ean": "5901384509903"
   },
   {
-   "name": "Oyakata Inst. Ramen Kelímek 63g Hot & Spicy",
+   "name": "Oyakata Inst. Ramen Kelímek 63g Hot Spicy",
    "price": 24.55,
    "amount": "63 g",
    "unit": "",
@@ -17789,7 +17789,7 @@
    "ean": "4001686011591"
   },
   {
-   "name": "Frisco Cider VRATNÁ LÁHEV 0,33Lx12ks Mango & Limetka",
+   "name": "Frisco Cider VRATNÁ LÁHEV 0,33Lx12ks Mango Limetka",
    "price": 20.98,
    "amount": "12 ks",
    "unit": "",
@@ -18656,14 +18656,14 @@
    "ean": "8595723300701"
   },
   {
-   "name": "Lindor 200g Raspberry&Cream",
+   "name": "Lindor 200g RaspberryCream",
    "price": 119.99,
    "amount": "200 g",
    "unit": "",
    "ean": "8003340805740"
   },
   {
-   "name": "Lindt čoko.100g Crispy Wafer&Orange",
+   "name": "Lindt čoko.100g Crispy WaferOrange",
    "price": 82.98,
    "amount": "100 g",
    "unit": "",
@@ -18866,14 +18866,14 @@
    "ean": "8595646205992"
   },
   {
-   "name": "Orbit Refresher Dóza 12b*6ks*67g Meloun & Malina",
+   "name": "Orbit Refresher Dóza 12b*6ks*67g Meloun Malina",
    "price": 52.98,
    "amount": "6 ks",
    "unit": "",
    "ean": "4009900552165"
   },
   {
-   "name": "DUPETKY pecené & chilli-lime 21x70g",
+   "name": "DUPETKY pecené chilli-lime 21x70g",
    "price": 15.98,
    "amount": "70 g",
    "unit": "",
@@ -19251,7 +19251,7 @@
    "ean": "8005121214529"
   },
   {
-   "name": "IT. Poker Di Funghi 190g Casarecci - ATTINA & FORTI",
+   "name": "IT. Poker Di Funghi 190g Casarecci - ATTINA FORTI",
    "price": 74.98,
    "amount": "190 g",
    "unit": "",
@@ -19279,7 +19279,7 @@
    "ean": "5053990182947"
   },
   {
-   "name": "PopStar Tea 500ml Citron & Yuzu",
+   "name": "PopStar Tea 500ml Citron Yuzu",
    "price": 26.98,
    "amount": "500 ml",
    "unit": "",
@@ -19475,7 +19475,7 @@
    "ean": "5901384510466"
   },
   {
-   "name": "Oyakata Inst. Ramen CUP 97g Hot Chicken&Cheese",
+   "name": "Oyakata Inst. Ramen CUP 97g Hot ChickenCheese",
    "price": 30.38,
    "amount": "97 g",
    "unit": "",
@@ -19532,7 +19532,7 @@
   },
   {
    "name": "Orbit Dóza - Lo 24b*6ks*64g Meloun",
-   "price": 43.99,
+   "price": 41.98,
    "amount": "6 ks",
    "unit": "",
    "ean": "4009900420198"
@@ -20294,7 +20294,7 @@
    "ean": "8595004661835"
   },
   {
-   "name": "Robby Buble DINO 0,75L Pomeranč & Mango",
+   "name": "Robby Buble DINO 0,75L Pomeranč Mango",
    "price": 51.98,
    "amount": "0,75 l",
    "unit": "",
@@ -20315,14 +20315,14 @@
    "ean": "8588010097705"
   },
   {
-   "name": "MaXsport CRUNCHY Protein tyč. 40g Arašídy&Karamel No Added S",
+   "name": "MaXsport CRUNCHY Protein tyč. 40g ArašídyKaramel No Added S",
    "price": 26.55,
    "amount": "40 g",
    "unit": "",
    "ean": "8588010097682"
   },
   {
-   "name": "MaXsport CRUNCHY Protein tyč. 40g Vanilka&Kokos No Added Sug",
+   "name": "MaXsport CRUNCHY Protein tyč. 40g VanilkaKokos No Added Sug",
    "price": 26.55,
    "amount": "40 g",
    "unit": "",
@@ -20616,7 +20616,7 @@
    "ean": "8594404027746"
   },
   {
-   "name": "Birell plech 0.5L Marakuja & Maté",
+   "name": "Birell Plech Active Vitality 0.5L Marakuja Maté",
    "price": 20.98,
    "amount": "0.5 l",
    "unit": "",
@@ -20638,28 +20638,28 @@
   },
   {
    "name": "Závin MaxBakery 110g Borůvka",
-   "price": 14.98,
+   "price": 9.98,
    "amount": "110 g",
    "unit": "",
    "ean": "5902627457791"
   },
   {
    "name": "Závin MaxBakery 110g Čokoláda",
-   "price": 14.98,
+   "price": 9.98,
    "amount": "110 g",
    "unit": "",
    "ean": "5902627457838"
   },
   {
    "name": "Závin MaxBakery 110g Jahoda",
-   "price": 14.98,
+   "price": 9.98,
    "amount": "110 g",
    "unit": "",
    "ean": "5902627457814"
   },
   {
    "name": "Závin MaxBakery 110g Vanilka",
-   "price": 14.98,
+   "price": 6.99,
    "amount": "110 g",
    "unit": "",
    "ean": "5902627457784"
@@ -20812,28 +20812,28 @@
   },
   {
    "name": "Amos Peelerz Gummy 65g Grape",
-   "price": 21.98,
+   "price": 16.55,
    "amount": "65 g",
    "unit": "",
    "ean": "6936756289656"
   },
   {
    "name": "Amos Peelerz Gummy 65g Pineapple",
-   "price": 21.98,
+   "price": 16.55,
    "amount": "65 g",
    "unit": "",
    "ean": "6936756289632"
   },
   {
    "name": "Amos Peelerz Gummy 65g Peach",
-   "price": 21.98,
+   "price": 16.55,
    "amount": "65 g",
    "unit": "",
    "ean": "6936756289694"
   },
   {
    "name": "Amos Peelerz Gummy 120g Mango",
-   "price": 39.98,
+   "price": 32.98,
    "amount": "120 g",
    "unit": "",
    "ean": "6936756289670"
@@ -20937,14 +20937,14 @@
    "ean": "4770047238334"
   },
   {
-   "name": "Mix Cocktail - Alko.Nápoj Sklo 330ml Gin & Passion Fruit",
+   "name": "Mix Cocktail - Alko.Nápoj Sklo 330ml Gin Passion Fruit",
    "price": 34.98,
    "amount": "330 ml",
    "unit": "",
    "ean": "4770047236361"
   },
   {
-   "name": "Mix Cocktail - Alko.Nápoj Sklo 330ml Vodka & Wild Berry",
+   "name": "Mix Cocktail - Alko.Nápoj Sklo 330ml Vodka Wild Berry",
    "price": 34.98,
    "amount": "330 ml",
    "unit": "",
@@ -21056,7 +21056,7 @@
    "ean": "4720120756238"
   },
   {
-   "name": "Sovora Long Chips 50g ThinPack - Sour Cream&Herbs",
+   "name": "Sovora Long Chips 50g ThinPack - Sour CreamHerbs",
    "price": 9.55,
    "amount": "50 g",
    "unit": "",
@@ -21112,7 +21112,7 @@
    "ean": "4820120756030"
   },
   {
-   "name": "Sovora Long Chips 70g Sour Cream&Herbs",
+   "name": "Sovora Long Chips 70g Sour CreamHerbs",
    "price": 15.55,
    "amount": "70 g",
    "unit": "",
@@ -21140,7 +21140,7 @@
    "ean": "4820120756573"
   },
   {
-   "name": "Sovora Popcorn CUP 20g Meat Jelly&Horseradish",
+   "name": "Sovora Popcorn CUP 20g Meat JellyHorseradish",
    "price": 9.98,
    "amount": "20 g",
    "unit": "",
@@ -21154,7 +21154,7 @@
    "ean": "4820120756375"
   },
   {
-   "name": "Sovora Popcorn CUP 20g Sour Cream&Herbs",
+   "name": "Sovora Popcorn CUP 20g Sour CreamHerbs",
    "price": 9.98,
    "amount": "20 g",
    "unit": "",
@@ -21182,7 +21182,7 @@
    "ean": "4820120755552"
   },
   {
-   "name": "Sovora Popcorn Karamel CUP 60g Cherry&Chocolate",
+   "name": "Sovora Popcorn Karamel CUP 60g CherryChocolate",
    "price": 16.98,
    "amount": "60 g",
    "unit": "",
@@ -21238,7 +21238,7 @@
    "ean": "4820120754661"
   },
   {
-   "name": "Sovora Popcorn Karamel Tube 160g Cherry&Chocolate",
+   "name": "Sovora Popcorn Karamel Tube 160g CherryChocolate",
    "price": 38.98,
    "amount": "160 g",
    "unit": "",
@@ -21288,7 +21288,7 @@
   },
   {
    "name": "Oreo 66g Golden",
-   "price": 10.99,
+   "price": 9.55,
    "amount": "66 g",
    "unit": "",
    "ean": "7622202352782"
@@ -21315,14 +21315,14 @@
    "ean": "8054796010967"
   },
   {
-   "name": "Big Shock 0,5L Smart - Pineapple & Passionfruit",
+   "name": "Big Shock 0,5L Smart - Pineapple Passionfruit",
    "price": 20.56,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595681009715"
   },
   {
-   "name": "Big Shock 0,5L Smart - Mango & Lychee",
+   "name": "Big Shock 0,5L Smart - Mango Lychee",
    "price": 20.56,
    "amount": "0,5 l",
    "unit": "",
@@ -21336,7 +21336,7 @@
    "ean": "8595681009777"
   },
   {
-   "name": "WAIO 0,5l Cucumber & Lime",
+   "name": "WAIO 0,5l Cucumber Lime",
    "price": 18.55,
    "amount": "0,5 l",
    "unit": "",
@@ -21350,7 +21350,7 @@
    "ean": "8595681009838"
   },
   {
-   "name": "WAIO 0,5l Mango & Levander",
+   "name": "WAIO 0,5l Mango Levander",
    "price": 18.55,
    "amount": "0,5 l",
    "unit": "",
@@ -21371,7 +21371,7 @@
    "ean": "8595723301593"
   },
   {
-   "name": "Guarana Plech Asiana 500ml Luchy Lime &Raspberry",
+   "name": "Guarana Plech Asiana 500ml Luchy Lime Raspberry",
    "price": 16.55,
    "amount": "500 ml",
    "unit": "",
@@ -21484,14 +21484,14 @@
   },
   {
    "name": "Amos Peelerz Gummy 65g Lychee",
-   "price": 21.98,
+   "price": 16.55,
    "amount": "65 g",
    "unit": "",
    "ean": "6936756288369"
   },
   {
    "name": "Amos Peelerz Gummy 65g Orange",
-   "price": 21.98,
+   "price": 16.55,
    "amount": "65 g",
    "unit": "",
    "ean": "6936756297446"
@@ -21568,7 +21568,7 @@
   },
   {
    "name": "Mogu Mogu 320ml - Raspberry",
-   "price": 5.98,
+   "price": 7.99,
    "amount": "320 ml",
    "unit": "",
    "ean": "8850389116487"
@@ -21609,11 +21609,18 @@
    "ean": "5900259135704"
   },
   {
-   "name": "Cheetos 80g Crunchos Ham&Cheese",
+   "name": "Cheetos 80g Crunchos HamCheese",
    "price": 19.98,
    "amount": "80 g",
    "unit": "",
    "ean": "5900259137524"
+  },
+  {
+   "name": "Alk. Mix Bacardi 250ml Rum a Coca-Cola",
+   "price": 16.98,
+   "amount": "250 ml",
+   "unit": "",
+   "ean": "5449000336606"
   },
   {
    "name": "Milka suš.140g Tender Cow",
@@ -21624,49 +21631,49 @@
   },
   {
    "name": "Amos 4D Gummy 65g Grape",
-   "price": 21.98,
+   "price": 16.55,
    "amount": "65 g",
    "unit": "",
    "ean": "6936756277240"
   },
   {
    "name": "Amos 4D Gummy 65g Peach",
-   "price": 21.98,
+   "price": 16.55,
    "amount": "65 g",
    "unit": "",
    "ean": "6936756277233"
   },
   {
    "name": "Amos 4D Gummy 65g Strawberry",
-   "price": 21.98,
+   "price": 16.55,
    "amount": "65 g",
    "unit": "",
    "ean": "6936756277226"
   },
   {
    "name": "Amos 4D Gummy 65g Pineapple",
-   "price": 21.98,
+   "price": 16.55,
    "amount": "65 g",
    "unit": "",
    "ean": "6936756277219"
   },
   {
    "name": "Amos 4D Gummy 72g Blocks",
-   "price": 21.98,
+   "price": 16.55,
    "amount": "72 g",
    "unit": "",
    "ean": "6936756277202"
   },
   {
    "name": "Amos Peelerz Gummy 170g World Cup",
-   "price": 39.98,
+   "price": 32.98,
    "amount": "170 g",
    "unit": "",
    "ean": "6942712002641"
   },
   {
    "name": "Amos Peelerz Gummy 65g Mystery Cube",
-   "price": 21.98,
+   "price": 16.55,
    "amount": "65 g",
    "unit": "",
    "ean": "6936756288611"
@@ -21680,7 +21687,7 @@
   },
   {
    "name": "Amos Peelerz Gummy 120g Banana",
-   "price": 39.98,
+   "price": 32.98,
    "amount": "120 g",
    "unit": "",
    "ean": "6936756288598"
@@ -21750,14 +21757,14 @@
   },
   {
    "name": "Amos 4D Gummy 50g Milo Cola a Lemon",
-   "price": 21.98,
+   "price": 13.98,
    "amount": "50 g",
    "unit": "",
    "ean": "6936756298733"
   },
   {
    "name": "Amos 4D Gummy 50g Tina Peach a Grape",
-   "price": 21.98,
+   "price": 13.98,
    "amount": "50 g",
    "unit": "",
    "ean": "6936756298719"
@@ -21833,7 +21840,7 @@
    "ean": "8690504160304"
   },
   {
-   "name": "Flipz 70g Peanut Butter 70 g",
+   "name": "Flipz 70g Peanut Butter",
    "price": 31.98,
    "amount": "70 g",
    "unit": "",
