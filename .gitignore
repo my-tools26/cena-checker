@@ -7,6 +7,9 @@ pttglobal_cookie.json
 # Cookie phien Bidfood
 bidfood_cookie.json
 
+# Cookie phien JUNIORpapír
+juniorpapir_cookie.json
+
 __pycache__/
 *.pyc
 .venv/

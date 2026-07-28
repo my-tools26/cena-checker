@@ -6,12 +6,13 @@
 'use strict';
 
 var SHOP = ['Tamda Foods', 'Makro', 'Bidfood', 'dathang.cz',
-            'Linsan24h', 'Bombacena', 'PTT Global', 'JIP'];
+            'Linsan24h', 'Bombacena', 'PTT Global', 'JIP', 'JUNIORpapír'];
 var SHOP_SLUG = ['tamda', 'makro', 'bidfood', 'dathang', 'linsan',
-                 'bombacena', 'ptt', 'jip'];
+                 'bombacena', 'ptt', 'jip', 'juniorpapir'];
 var WHOLESALE_FILTERS = [['tamda', '🅣 Tamda'], ['makro', 'Ⓜ Makro'],
   ['jip', '🄹 JIP'], ['bidfood', '🅑 Bidfood'], ['dathang', '🅳 dathang'],
-  ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena'], ['ptt', '🅟 PTT Global']];
+  ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena'], ['ptt', '🅟 PTT Global'],
+  ['juniorpapir', '🅹 JUNIORpapír']];
 /* Loc ban buon hien tren trang Akce (co JIP vi JIP co deal akce tu kupi) */
 var AKCE_WS_FILTERS = [['makro', 'Ⓜ Makro'], ['jip', '🄹 JIP'], ['tamda', '🅣 Tamda'],
   ['bidfood', '🅑 Bidfood'], ['ptt', '🅟 PTT Global'], ['dathang', '🅳 dathang'],
@@ -250,7 +251,8 @@ function shopBadge(name) {
     ['bidfood', '#D8F3E8', '#0B5C43'], ['dathang', '#D8EEF8', '#1A4A6B'],
     ['linsan', '#E6E1FF', '#3A2F7A'], ['bombacena', '#FFE9D6', '#7A4300'],
     ['ptt', '#E3F0FF', '#1A4E8A'], ['kosik', '#E8F0D8', '#3F5C0B'],
-    ['hruska', '#FFE7D6', '#7A3E00'], ['coop', '#DDEEFF', '#0A3D7A']];
+    ['hruska', '#FFE7D6', '#7A3E00'], ['coop', '#DDEEFF', '#0A3D7A'],
+    ['junior', '#EAE6DC', '#4A4335']];
   for (var i = 0; i < C.length; i++)
     if (s.indexOf(C[i][0]) >= 0) { bg = C[i][1]; fg = C[i][2]; break; }
   return "<span class='sbadge' style='background:" + bg + ";color:" + fg + "'>" +
@@ -945,7 +947,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.4.1.2';
+if (el) el.textContent = 'v1.5.0.0';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
