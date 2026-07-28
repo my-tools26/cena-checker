@@ -297,7 +297,7 @@ CSS = """
 NAV_ITEMS = [("/", "Trang chủ"), ("/akce", "Akce"), ("/banbuon", "Bán buôn")]
 
 
-APP_VERSION = "v10.1 · 28.07.2026"
+APP_VERSION = "v10.2 · 28.07.2026"
 
 # Quet ma vach bang camera: uu tien BarcodeDetector cua trinh duyet (nhanh, nhay),
 # khong co thi dung html5-qrcode. Camera FullHD + den flash.
@@ -2500,7 +2500,11 @@ def search_html(query, only="", view="all"):
     elif q != cena.strip_accents(raw_query.lower()):
         body += f'<p class="muted">(tự dịch sang tiếng Séc: <b>{H.escape(q)}</b>)</p>'
     if not entries:
-        body += "<p>Không tìm thấy gì. Thử từ khác hoặc tên tiếng Séc?</p>"
+        if ean_name:
+            body += ("<p>⚠️ Đã nhận diện được sản phẩm (tên ở trên) nhưng "
+                     "không có giá tham khảo ở siêu thị/nguồn nào trong dữ liệu.</p>")
+        else:
+            body += "<p>Không tìm thấy gì. Thử từ khác hoặc tên tiếng Séc?</p>"
         return shell(body, "/banbuon" if only == "banbuon" else "")
 
     if lhits:
