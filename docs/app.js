@@ -16,7 +16,7 @@ var WHOLESALE_FILTERS = [['tamda', '🅣 Tamda'], ['makro', 'Ⓜ Makro'],
 /* Loc ban buon hien tren trang Akce (co JIP vi JIP co deal akce tu kupi) */
 var AKCE_WS_FILTERS = [['makro', 'Ⓜ Makro'], ['jip', '🄹 JIP'], ['tamda', '🅣 Tamda'],
   ['bidfood', '🅑 Bidfood'], ['ptt', '🅟 PTT Global'], ['dathang', '🅳 dathang'],
-  ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena']];
+  ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena'], ['juniorpapir', '🅹 JUNIORpapír']];
 var RETAIL_FILTERS = ['Lidl', 'Kaufland', 'Billa', 'Penny', 'Tesco', 'Albert',
   'Globus', 'COOP', 'Hruška', 'Flop', 'Ratio', 'Košík'];
 /* So nut ban le hien san; con lai an sau nut "…" (muc 6) */
@@ -947,7 +947,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.0.0';
+if (el) el.textContent = 'v1.5.0.1';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
