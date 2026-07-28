@@ -19,7 +19,7 @@ var AKCE_WS_FILTERS = [['makro', 'Ⓜ Makro'], ['jip', '🄹 JIP'], ['tamda', '�
 var RETAIL_FILTERS = ['Lidl', 'Kaufland', 'Billa', 'Penny', 'Tesco', 'Albert',
   'Globus', 'COOP', 'Hruška', 'Flop', 'Ratio', 'Košík'];
 /* So nut ban le hien san; con lai an sau nut "…" (muc 6) */
-var RETAIL_SHOWN = 7;
+var RETAIL_SHOWN = 6;
 /* Dong nghia tim kiem: 1 tu Viet -> nhieu tu Sec (OR). VD banh mi -> rohlik + chleb */
 var SEARCH_SYNONYMS = {
   'banh mi': ['rohlik', 'chleb'], 'banh my': ['rohlik', 'chleb'],
@@ -945,7 +945,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.4.1.0';
+if (el) el.textContent = 'v1.4.1.1';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
