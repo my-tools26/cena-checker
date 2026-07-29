@@ -468,10 +468,47 @@ function pageHome() {
       '(giá/đơn vị) ghi nhỏ · cập nhật ' + esc(d.date || '') + '</p>' +
       freshHTML(all, lower) +
       "<p class='muted' style='margin-top:20px'>So sánh giá siêu thị Séc — gõ tiếng Việt " +
-      'có dấu hoặc không dấu đều được.<br>Nguồn: kupi.cz, tamdafoods.eu, makro.cz, ' +
-      'mujbidfood.cz · dữ liệu chỉ mang tính tham khảo.</p>';
+      "có dấu hoặc không dấu đều được.<br>Dữ liệu chỉ mang tính tham khảo · " +
+      "<a href='#/gioithieu'>Giới thiệu &amp; miễn trừ trách nhiệm</a></p>";
     wireFilters('retail_off', 'data-rshop', pageHome);
   });
+}
+
+function pageGioithieu() {
+  var el = $('#main');
+  el.innerHTML =
+    "<h1 style='font-size:1.4em'>ℹ️ Giới thiệu</h1>" +
+    "<p><b>Cena Checker</b> là công cụ phi lợi nhuận giúp cộng đồng người Việt tại Séc " +
+    "so sánh giá khuyến mãi giữa các siêu thị bán lẻ và bán buôn. Hỗ trợ tìm kiếm bằng " +
+    "tiếng Việt có dấu hoặc không dấu, và quét mã vạch sản phẩm bằng camera điện thoại.</p>" +
+    "<h2 style='font-size:1.1em;margin-top:20px'>📋 Nguồn dữ liệu</h2>" +
+    "<p><b>Bán lẻ</b> (khuyến mãi tuần, tổng hợp từ kupi.cz): Lidl, Kaufland, Billa, " +
+    "Penny Market, Tesco, Albert, Globus, COOP, Hruška, Flop, Ratio, Košík.<br>" +
+    "<b>Bán buôn</b> (giá catalog B2B, cào trực tiếp từ site chính thức): Tamda Foods " +
+    "(tamdafoods.eu + tamdaexpress.eu), Makro (sortiment.makro.cz), JIP (jip-eshop.cz), " +
+    "Bidfood (mujbidfood.cz), dathang.cz, Linsan24h (linsan24h.cz), Bombacena " +
+    "(bombacena.eu), PTT Global (pttglobal.eu), JUNIORpapír (juniorpapir.cz).</p>" +
+    "<h2 style='font-size:1.1em;margin-top:20px'>⚖️ Miễn trừ trách nhiệm</h2>" +
+    "<p>· Dữ liệu giá được tổng hợp <b>tự động</b> từ các nguồn công khai (tờ rơi/catalog " +
+    "chính thức của các chuỗi) và <b>chỉ mang tính tham khảo</b> — giá thực tế tại cửa " +
+    "hàng có thể khác do khuyến mãi thay đổi, sai sót thu thập, khác biệt giữa các chi " +
+    "nhánh, hoặc hết hạn tờ rơi.<br>" +
+    "· Trang này <b>không liên kết, không đại diện, không phải đại lý</b> của bất kỳ " +
+    "chuỗi siêu thị nào (Kupi.cz, Tamda Foods, Makro, JIP, Bidfood, dathang, Linsan, " +
+    "Bombacena, PTT Global, JUNIORpapír, Lidl, Kaufland, Billa, Penny, Tesco, Albert, " +
+    "Globus, COOP, Hruška, Flop, Ratio, Košík, hay bất kỳ đơn vị nào).<br>" +
+    "· Các tên gọi, thương hiệu, logo (nếu có) thuộc quyền sở hữu của chủ sở hữu tương ứng.<br>" +
+    "· Chúng tôi <b>không chịu trách nhiệm</b> cho quyết định mua sắm, tổn thất tài " +
+    "chính, hay bất kỳ hậu quả nào phát sinh từ việc sử dụng thông tin trên trang này. " +
+    "Người dùng nên tự kiểm tra giá tại cửa hàng trước khi mua.<br>" +
+    "· Giá bán buôn (Makro, JIP, Bidfood, PTT Global, JUNIORpapír, dathang) là <b>giá B2B</b> " +
+    "— cần tài khoản kinh doanh của các chuỗi này để mua.<br>" +
+    "· Dữ liệu được cập nhật định kỳ (bán lẻ hàng ngày, bán buôn mỗi tuần). " +
+    "Ngày cập nhật hiện tại xem ở phần cuối mỗi bảng.</p>" +
+    "<h2 style='font-size:1.1em;margin-top:20px'>💬 Liên hệ</h2>" +
+    "<p class='muted'>Góp ý / báo lỗi: liên hệ người quản trị trang qua GitHub " +
+    "<a href='https://github.com/my-tools26/cena-checker'>my-tools26/cena-checker</a>.</p>" +
+    "<p style='margin-top:20px'><a href='#/'>← Về Trang chủ</a></p>";
 }
 
 /* Bang "TO ROI MOI - deal sap bat dau" (giong home_suggestions_html ben Python) */
@@ -507,7 +544,9 @@ function pageAkce() {
       filterBar(AKCE_WS_FILTERS, 'retail_off', 'data-rshop') +
       "<h2 style='font-size:.95em'>🔥 AKCE ĐANG DIỄN RA — " + items.length + ' mặt hàng</h2>' +
       tableHTML(rows) +
-      "<p class='muted' style='font-size:.85em'>Cập nhật " + esc(d.date || '') + '</p>';
+      "<p class='muted' style='font-size:.85em'>Cập nhật " + esc(d.date || '') +
+      " · Dữ liệu chỉ mang tính tham khảo · " +
+      "<a href='#/gioithieu'>Giới thiệu &amp; miễn trừ trách nhiệm</a></p>";
     wireFilters('retail_off', 'data-rshop', pageAkce);
   });
 }
@@ -570,7 +609,8 @@ function pageBanbuon() {
       pager() + tableHTML(rows) + pager() +
       "<p class='muted' style='font-size:.8em'>📦 " + items.length + ' mặt hàng · trang ' +
       bbPage + '/' + npages + ' · giá đã gồm DPH · cùng mặt hàng ở nhiều kho được ' +
-      'gộp 1 dòng, ✅ là kho rẻ nhất</p>';
+      "gộp 1 dòng, ✅ là kho rẻ nhất · giá bán buôn cần tài khoản B2B · " +
+      "<a href='#/gioithieu'>Giới thiệu &amp; miễn trừ trách nhiệm</a></p>";
     wireFilters('bb_off', 'data-bbcol', function () { bbPage = 1; pageBanbuon(); });
     document.querySelectorAll('[data-bbp]').forEach(function (a) {
       a.addEventListener('click', function (e) {
@@ -924,6 +964,7 @@ function route() {
   } else if (h.indexOf('/cat/') === 0) { pageCat(h.slice(5)); }
   else if (h === '/akce') pageAkce();
   else if (h === '/banbuon') { bbPage = 1; pageBanbuon(); }
+  else if (h === '/gioithieu') pageGioithieu();
   else pageHome();
   window.scrollTo(0, 0);
 }
@@ -943,7 +984,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.0.2';
+if (el) el.textContent = 'v1.5.1.0';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
