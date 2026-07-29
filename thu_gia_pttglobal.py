@@ -33,10 +33,35 @@ COOKIE_FILE = os.path.join(HERE, "pttglobal_cookie.json")
 HEADERS = {"Accept": "text/html",
            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) CenaChecker/1.0"}
 
-CATEGORIES = [
+CATEGORIES_FALLBACK = [
     "sezonni", "drogerie", "domaci-potreby", "skolni-a-kancelarske-potreby",
     "svicky", "hracky", "automoto", "cestovni-potreby",
 ]
+
+
+def discover_categories(session):
+    """Doc menu trang chu de tim tat ca danh muc, fallback neu that bai."""
+    try:
+        r = session.get(f"{BASE}/", headers=HEADERS, timeout=45)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, "html.parser")
+        slugs = []
+        seen = set()
+        for a in soup.select("a[href]"):
+            href = a.get("href", "")
+            m = re.match(r"^(?:https?://[^/]+)?/([a-z0-9-]+)/?$", href)
+            if m and m.group(1) not in seen and m.group(1) not in (
+                    "prihlaseni", "registrace", "kosik", "kontakty",
+                    "obchodni-podminky", "gdpr", "reklamacni-rad", "en"):
+                seen.add(m.group(1))
+                slugs.append(m.group(1))
+        if len(slugs) >= 5:
+            print(f"Auto-discover: {len(slugs)} danh muc tu menu")
+            return slugs
+    except Exception as e:
+        print(f"Loi discover: {e}")
+    print(f"Dung fallback {len(CATEGORIES_FALLBACK)} danh muc")
+    return CATEGORIES_FALLBACK
 MAX_PAGES = 400  # phanh an toan
 
 RE_AMOUNT = re.compile(r"(\d+[,.]?\d*)\s*(kg|g|ml|l|ks)\b", re.I)
@@ -133,8 +158,9 @@ def main():
               "pttglobal_cookie.json roi chay lai. KHONG ghi de du lieu cu.")
         raise SystemExit(2)
 
+    categories = discover_categories(session)
     seen = {}
-    for slug in CATEGORIES:
+    for slug in categories:
         prods = crawl_category(session, slug)
         new = 0
         for p in prods:
