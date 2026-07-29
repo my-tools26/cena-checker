@@ -501,8 +501,8 @@ function pageGioithieu() {
     "· Chúng tôi <b>không chịu trách nhiệm</b> cho quyết định mua sắm, tổn thất tài " +
     "chính, hay bất kỳ hậu quả nào phát sinh từ việc sử dụng thông tin trên trang này. " +
     "Người dùng nên tự kiểm tra giá tại cửa hàng trước khi mua.<br>" +
-    "· Giá bán buôn (Makro, JIP, Bidfood, PTT Global, JUNIORpapír, dathang) là <b>giá B2B</b> " +
-    "— cần tài khoản kinh doanh của các chuỗi này để mua.<br>" +
+    "· Giá bán buôn (Tamda Express, Makro, JIP, Bidfood, PTT Global, JUNIORpapír, dathang) " +
+    "là <b>giá B2B</b> — cần tài khoản kinh doanh của các chuỗi này để mua.<br>" +
     "· Dữ liệu được cập nhật định kỳ (bán lẻ hàng ngày, bán buôn mỗi tuần). " +
     "Ngày cập nhật hiện tại xem ở phần cuối mỗi bảng.</p>" +
     "<h2 style='font-size:1.1em;margin-top:20px'>💬 Liên hệ</h2>" +
@@ -984,7 +984,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.1.0';
+if (el) el.textContent = 'v1.5.1.1';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
