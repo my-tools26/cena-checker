@@ -119,3 +119,5 @@
  }
  .stact{margin-top:2px}
  .stact button{font-size:.78em;padding:3px 10px;margin-right:6px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--muted);cursor:pointer}
+ #sttoggle{font-weight:600;color:var(--accent);border-color:var(--accent)}
+ #sttoggle.on{background:var(--accent);color:#fff}
