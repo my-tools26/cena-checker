@@ -452,18 +452,14 @@ function pageHome() {
   loadRetail().then(function (d) {
     var off = offSet('retail_off'), lower = new Set();
     off.forEach(function (x) { lower.add(stripAccents(x)); });
-    // Giong Railway: CHI gia ban le, uu tien 8 hang sap het akce + BOC NGAU NHIEN
-    // du 14 (moi F5 doi mat hang -> khong lap loai). Sap xep theo % giam sau nhat.
+    // Tron hoan toan ngau nhien: moi F5 doi 14 mat hang va thu tu
+    // (khong uu tien ⏰, khong sort theo % giam).
     var all = retailOnly(d.items || []);
-    var exp = all.filter(hasExpiring).slice(0, 8);
-    var rest = all.filter(function (p) { return exp.indexOf(p) < 0; });
-    // shuffle Fisher-Yates
-    for (var i = rest.length - 1; i > 0; i--) {
+    for (var i = all.length - 1; i > 0; i--) {
       var j = (Math.random() * (i + 1)) | 0;
-      var t = rest[i]; rest[i] = rest[j]; rest[j] = t;
+      var t = all[i]; all[i] = all[j]; all[j] = t;
     }
-    var pick = exp.concat(rest.slice(0, Math.max(0, 14 - exp.length)));
-    pick.sort(function (a, b) { return bestPct(b) - bestPct(a); });
+    var pick = all.slice(0, 14);
     var rows = retailRows(pick, lower);
     el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
       "<h2 style='font-size:.95em'>💡 MUA GÌ Ở ĐÂU HÔM NAY</h2>" +
@@ -947,7 +943,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.0.1';
+if (el) el.textContent = 'v1.5.0.2';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
