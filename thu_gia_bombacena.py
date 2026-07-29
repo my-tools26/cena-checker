@@ -23,11 +23,35 @@ HEADERS = {"Accept": "text/html", "User-Agent": "Mozilla/5.0 CenaChecker/1.0"}
 
 # 14 danh muc lon o menu chinh - di het se phu toan bo catalog (danh muc con
 # nam trong cac danh muc lon nay, khong can cao rieng).
-CATEGORIES = [
+CATEGORIES_FALLBACK = [
     "vyprodej", "nealko", "alko", "tabak", "cukrovinky", "trvanlive",
     "podpultovky", "pet-food", "drogerie", "domacnost-a-zahrada", "pecivo",
     "ovoce-a-zelenina", "chlazene-mlecne-a-uzeniny", "mrazene",
 ]
+
+
+def discover_categories(session):
+    """Doc menu trang chu de tim tat ca danh muc, fallback neu that bai."""
+    try:
+        r = session.get(f"{BASE}/cs", headers=HEADERS, timeout=45)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, "html.parser")
+        slugs = []
+        seen = set()
+        for a in soup.select("a[href]"):
+            href = a.get("href", "")
+            m = re.match(r"/cs/([a-z0-9-]+)/?$", href)
+            if m and m.group(1) not in seen and m.group(1) not in (
+                    "prihlaseni", "registrace", "kosik", "kontakt"):
+                seen.add(m.group(1))
+                slugs.append(m.group(1))
+        if len(slugs) >= 10:
+            print(f"Auto-discover: {len(slugs)} danh muc tu menu")
+            return slugs
+    except Exception as e:
+        print(f"Loi discover: {e}")
+    print(f"Dung fallback {len(CATEGORIES_FALLBACK)} danh muc")
+    return CATEGORIES_FALLBACK
 MAX_PAGES = 60  # phanh an toan, thuc te khong danh muc nao dai nhu vay
 
 RE_AMOUNT = re.compile(r"(\d+[,.]?\d*)\s*(kg|g|ml|l|ks)\b", re.I)
@@ -84,8 +108,9 @@ def crawl_category(session, slug):
 
 def main():
     session = requests.Session()
+    categories = discover_categories(session)
     seen = {}
-    for slug in CATEGORIES:
+    for slug in categories:
         prods = crawl_category(session, slug)
         new = 0
         for href, name, price in prods:

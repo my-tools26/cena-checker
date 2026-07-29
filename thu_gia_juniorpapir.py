@@ -31,7 +31,7 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) CenaChecker/1.0",
 }
 
-CATEGORIES = [
+CATEGORIES_FALLBACK = [
     "akcie-zlavy-a-novinky-v-ponuke-juniorpapier-c2664",
     "skolske-tasky-a-batohy-pre-skolakov-a-studentov-c2229",
     "skolske-potreby-a-pomocky-pre-ziakov-a-studentov-c1214",
@@ -45,6 +45,27 @@ CATEGORIES = [
     "darcekove-doplnky-a-dekoracie-c2228",
     "sezonny-sortiment-vianoce-velka-noc-halloween-a-dekoracie-c1261",
 ]
+
+
+def discover_categories(session):
+    """Doc menu trang chu de tim danh muc co dang *-cNNNN, fallback neu that bai."""
+    try:
+        r = session.get(f"{BASE}/", headers=HEADERS, timeout=45)
+        r.raise_for_status()
+        slugs = []
+        seen = set()
+        for m in re.finditer(r'href="/([a-z0-9-]+-c\d+)/"', r.text):
+            slug = m.group(1)
+            if slug not in seen:
+                seen.add(slug)
+                slugs.append(slug)
+        if len(slugs) >= 8:
+            print(f"Auto-discover: {len(slugs)} danh muc tu menu")
+            return slugs
+    except Exception as e:
+        print(f"Loi discover: {e}")
+    print(f"Dung fallback {len(CATEGORIES_FALLBACK)} danh muc")
+    return CATEGORIES_FALLBACK
 
 PAGE_SIZE = 30
 MAX_PAGES = 200  # phanh an toan (~6000 sp/danh muc)
@@ -117,8 +138,9 @@ def main():
               "dau tien > Request Headers > Cookie), roi chay lai.")
         raise SystemExit(2)
 
+    categories = discover_categories(session)
     seen = {}
-    for slug in CATEGORIES:
+    for slug in categories:
         prods = crawl_category(session, slug)
         new = 0
         for p in prods:

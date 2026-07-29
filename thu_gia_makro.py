@@ -72,14 +72,44 @@ def cat_tree():
     return cats
 
 
+def get_subcats(cat_path):
+    """Lay danh muc con cua cat_path tu menu API."""
+    d = get(f"{BASE}/searchdiscover/navigationmenu/menu_structure/"
+            f"country/CZ/locale/cs-CZ/store/{STORE}", {})
+    if not d:
+        return []
+    subs = []
+
+    def walk(nodes, parent_match):
+        for n in nodes:
+            rel = n.get("relativeURL", "")
+            is_match = rel == f"/category/{cat_path}"
+            kids = n.get("children") or []
+            if parent_match and rel.startswith("/category/"):
+                subs.append(rel[len("/category/"):])
+            elif is_match and kids:
+                walk(kids, True)
+            elif kids:
+                walk(kids, False)
+
+    walk(d.get("shop", []), False)
+    return subs
+
+
 def collect_category(cat_path, prices, depth=0):
-    """Quet 1 danh muc; neu >MAX_SEARCH ket qua thi chia nho theo cap con (them 1 tu vao path)."""
+    """Quet 1 danh muc; neu >MAX_SEARCH ket qua thi tu dong chia nho theo cap con."""
     d = search(cat_path, 1, 1)
     total = (d or {}).get("amount", 0)
     if not total:
         return
-    if total > MAX_SEARCH:
-        print(f"  ! {cat_path}: {total} > {MAX_SEARCH}, chi lay duoc 1 phan")
+    if total > MAX_SEARCH and depth < 3:
+        subs = get_subcats(cat_path)
+        if subs:
+            print(f"  ! {cat_path}: {total} > {MAX_SEARCH}, chia thanh {len(subs)} danh muc con")
+            for sc in subs:
+                collect_category(sc, prices, depth + 1)
+            return
+        print(f"  ! {cat_path}: {total} > {MAX_SEARCH}, khong co danh muc con - lay {MAX_SEARCH} dau")
     pages = min((total + 499) // 500, MAX_SEARCH // 500)
     got = 0
     for pg in range(1, pages + 1):

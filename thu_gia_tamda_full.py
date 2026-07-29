@@ -6,10 +6,8 @@ Chrome that (khong headless), ban tu dang nhap 1 lan, roi script tu dong duyet
 qua tung trang so cua tat ca danh muc (URL dang <danh-muc>-page-N.html), doc
 ten/gia/EAN va ghi vao tamda_full_prices.json.
 
-Luu y: da thu chuyen sang requests (HTTP thuan, khong qua trinh duyet) de
-nhanh hon nhung site khong chap nhan cookie tai su dung qua requests (van bi
-coi la chua dang nhap) - nen phai dung Selenium (dieu khien that trinh duyet)
-cho toan bo qua trinh, khong chi phan dang nhap.
+Buoc 1: cao theo danh muc (kham pha tu dong tu menu).
+Buoc 2: search sweep a-z + 0-9 de bat san pham o sub-category sau.
 
 Chay:  python thu_gia_tamda_full.py
 """
@@ -25,14 +23,15 @@ BASE = "https://tamdaexpress.eu"
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "tamda_full_prices.json")
 
-CATS = [
+# Danh muc fallback neu tu dong kham pha that bai
+CATS_FALLBACK = [
     "gastro", "do-uong-gastro", "drogerie", "banh-keo", "nuoc", "che-cafe",
     "gia-vi", "tre-em", "cho-meo", "do-choi", "do-gia-dung", "qua-tang",
-    "hang-thoi-vu", "thuoc-la",
+    "hang-thoi-vu", "thuoc-la", "thuc-pham",
 ]
 
-MAX_PAGES_PER_CAT = 60  # an toan, tranh vong lap vo han neu site doi cau truc
-EMPTY_PAGES_TO_STOP = 2  # 2 trang lien tiep khong co san pham moi -> het danh muc
+MAX_PAGES_PER_CAT = 120
+EMPTY_PAGES_TO_STOP = 2
 
 
 def wait_login(driver):
@@ -97,6 +96,29 @@ def merge_items(collector, items):
     return new
 
 
+def discover_categories(driver):
+    """Doc menu chinh de tim tat ca danh muc (ke ca sub-category)."""
+    driver.get(BASE)
+    time.sleep(2)
+    slugs = set()
+    try:
+        links = driver.find_elements(By.CSS_SELECTOR, "a[href]")
+        for a in links:
+            href = a.get_attribute("href") or ""
+            if href.startswith(BASE + "/") and href.endswith(".html"):
+                slug = href[len(BASE) + 1:-5]  # bo ".html"
+                if slug and "/" not in slug and not slug.startswith("search") \
+                        and slug not in ("index", "profiles", "orders", "wishlist"):
+                    slugs.add(slug)
+    except Exception as e:
+        print(f"Loi kham pha danh muc: {e}")
+    if len(slugs) >= 10:
+        print(f"Tu dong tim thay {len(slugs)} danh muc tu menu")
+        return sorted(slugs)
+    print(f"Chi tim thay {len(slugs)} danh muc, dung fallback")
+    return CATS_FALLBACK
+
+
 def crawl_category(driver, cat, collector):
     empty_streak = 0
     for page in range(1, MAX_PAGES_PER_CAT + 1):
@@ -118,6 +140,34 @@ def crawl_category(driver, cat, collector):
         print(f"  [{cat} p{page}] {len(items)} san pham, +{new} moi (tong {len(collector)})")
 
 
+def search_sweep(driver, collector):
+    """Tim kiem a-z, 0-9, cac ky tu Czech de bat san pham o sub-category sau."""
+    queries = list("abcdefghijklmnopqrstuvwxyz0123456789") + ["č", "ř", "š", "ž", "ů", "ď", "ť", "ň", "á", "é", "í", "ó", "ú", "ý"]
+    before = len(collector)
+    for q in queries:
+        page = 1
+        while page <= 30:
+            url = (f"{BASE}/search.html?match=all&subcats=Y&pcode_from_q=Y"
+                   f"&pshort=N&pfull=N&pname=Y&pkeywords=N"
+                   f"&search_performed=Y&hidden=1&q={q}")
+            if page > 1:
+                url += f"&page={page}"
+            try:
+                driver.get(url)
+            except Exception:
+                break
+            time.sleep(1.0)
+            items = extract_items(driver)
+            if not items:
+                break
+            new = merge_items(collector, items)
+            if new > 0:
+                print(f"  [search '{q}' p{page}] +{new} moi (tong {len(collector)})")
+            page += 1
+    added = len(collector) - before
+    print(f"Search sweep: +{added} san pham moi")
+
+
 def main():
     options = webdriver.ChromeOptions()
     options.add_argument("--lang=vi-VN")
@@ -125,9 +175,12 @@ def main():
     all_items = {}
     try:
         wait_login(driver)
-        for cat in CATS:
+        cats = discover_categories(driver)
+        for cat in cats:
             print(f"=== [{cat}] ===")
             crawl_category(driver, cat, all_items)
+        print(f"\n=== SEARCH SWEEP (bat san pham sot) ===")
+        search_sweep(driver, all_items)
     finally:
         driver.quit()
 
