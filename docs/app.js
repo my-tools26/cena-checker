@@ -984,7 +984,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.1.2';
+if (el) el.textContent = 'v1.5.2.0';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
@@ -1010,18 +1010,38 @@ if (el) el.textContent = 'v1.5.1.2';
       b.classList.toggle('off', h.indexOf(b.getAttribute('data-k')) >= 0);
     });
   }
+  function allKeys() {
+    var all = []; panel.querySelectorAll('.stp').forEach(function (b) { all.push(b.getAttribute('data-k')); });
+    return all;
+  }
   panel.querySelectorAll('.stp').forEach(function (b) {
     b.addEventListener('click', function () {
       var k = b.getAttribute('data-k'); var h = hidden(); var i = h.indexOf(k);
       if (i >= 0) h.splice(i, 1); else h.push(k);
-      save(h); paint(); apply();
+      save(h); paint(); paintToggle(); apply();
     });
   });
-  document.getElementById('stall').addEventListener('click', function () { save([]); paint(); apply(); });
+  document.getElementById('stall').addEventListener('click', function () { save([]); paint(); paintToggle(); apply(); });
   document.getElementById('stnone').addEventListener('click', function () {
-    var all = []; panel.querySelectorAll('.stp').forEach(function (b) { all.push(b.getAttribute('data-k')); });
-    save(all); paint(); apply();
+    save(allKeys()); paint(); paintToggle(); apply();
   });
+  // Nut ẩn/hiện nhanh TẤT CẢ gian hàng (bán lẻ + bán buôn)
+  var toggleBtn = document.getElementById('sttoggle');
+  function paintToggle() {
+    if (!toggleBtn) return;
+    var h = hidden(); var keys = allKeys();
+    var allHidden = keys.length > 0 && keys.every(function (k) { return h.indexOf(k) >= 0; });
+    toggleBtn.textContent = allHidden ? '👁 Hiện tất cả gian hàng' : '🙈 Ẩn tất cả gian hàng';
+    toggleBtn.classList.toggle('on', allHidden);
+  }
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      var keys = allKeys(); var h = hidden();
+      var allHidden = keys.every(function (k) { return h.indexOf(k) >= 0; });
+      save(allHidden ? [] : keys);
+      paint(); paintToggle(); apply();
+    });
+  }
   function show() { panel.classList.add('open'); }
   function hide() { panel.classList.remove('open'); }
   input.addEventListener('focus', show);
@@ -1029,7 +1049,7 @@ if (el) el.textContent = 'v1.5.1.2';
   document.addEventListener('click', function (e) {
     if (!panel.contains(e.target) && e.target !== input) hide();
   });
-  paint();
+  paint(); paintToggle();
   window.addEventListener('load', apply);
   setTimeout(apply, 300);
 })();
