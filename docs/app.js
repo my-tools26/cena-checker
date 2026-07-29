@@ -205,16 +205,23 @@ function filterBar(list, key, attr, collapseAfter) {
     return '<button class="stp' + (off.has(slug) ? ' off' : '') + '" ' + attr +
       '="' + esc(slug) + '">' + esc(lbl) + '</button>';
   }
+  // Nut ✕ do: an het / hien lai toan bo gian hang cua bar nay (toggle)
+  var slugs = list.map(function (x) { return Array.isArray(x) ? x[0] : x; });
+  var allOff = slugs.length > 0 && slugs.every(function (s) { return off.has(s); });
+  var clr = '<button type="button" class="stp clearall' + (allOff ? ' on' : '') +
+    '" data-clearslugs="' + esc(slugs.join(',')) + '" title="' +
+    (allOff ? 'Hiện lại tất cả gian hàng' : 'Ẩn hết tất cả gian hàng') + '">' +
+    (allOff ? '✓' : '✕') + '</button>';
   // Muc 6: chi hien "collapseAfter" nut dau, con lai an sau nut "…"
   if (collapseAfter && list.length > collapseAfter) {
-    return '<div class="sfgroup"><div class="sfrow">' +
+    return '<div class="sfgroup"><div class="sfrow">' + clr +
       list.slice(0, collapseAfter).map(btn).join('') +
       '<button type="button" class="stp morebtn">…</button>' +
       '<span class="moreshops" style="display:none">' +
       list.slice(collapseAfter).map(btn).join('') + '</span></div></div>';
   }
   var half = Math.floor(list.length / 2);
-  return '<div class="sfgroup"><div class="sfrow">' + list.slice(0, half).map(btn).join('') +
+  return '<div class="sfgroup"><div class="sfrow">' + clr + list.slice(0, half).map(btn).join('') +
     '</div><div class="sfrow">' + list.slice(half).map(btn).join('') + '</div></div>';
 }
 function wireFilters(key, attr, rerender) {
@@ -222,6 +229,18 @@ function wireFilters(key, attr, rerender) {
     b.addEventListener('click', function () {
       var off = offSet(key), k = b.getAttribute(attr);
       if (off.has(k)) off.delete(k); else off.add(k);
+      localStorage.setItem(key, JSON.stringify([].concat(Array.from(off))));
+      rerender();
+    });
+  });
+  // nut ✕ do: an het / hien lai toan bo gian hang cua bar (toggle)
+  document.querySelectorAll('.clearall').forEach(function (b) {
+    if (b.dataset.w) return; b.dataset.w = '1';
+    b.addEventListener('click', function () {
+      var off = offSet(key);
+      var slugs = (b.getAttribute('data-clearslugs') || '').split(',').filter(Boolean);
+      var allOff = slugs.length > 0 && slugs.every(function (s) { return off.has(s); });
+      slugs.forEach(function (s) { if (allOff) off.delete(s); else off.add(s); });
       localStorage.setItem(key, JSON.stringify([].concat(Array.from(off))));
       rerender();
     });
@@ -984,7 +1003,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.2.0';
+if (el) el.textContent = 'v1.5.3.0';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
@@ -1010,38 +1029,18 @@ if (el) el.textContent = 'v1.5.2.0';
       b.classList.toggle('off', h.indexOf(b.getAttribute('data-k')) >= 0);
     });
   }
-  function allKeys() {
-    var all = []; panel.querySelectorAll('.stp').forEach(function (b) { all.push(b.getAttribute('data-k')); });
-    return all;
-  }
   panel.querySelectorAll('.stp').forEach(function (b) {
     b.addEventListener('click', function () {
       var k = b.getAttribute('data-k'); var h = hidden(); var i = h.indexOf(k);
       if (i >= 0) h.splice(i, 1); else h.push(k);
-      save(h); paint(); paintToggle(); apply();
+      save(h); paint(); apply();
     });
   });
-  document.getElementById('stall').addEventListener('click', function () { save([]); paint(); paintToggle(); apply(); });
+  document.getElementById('stall').addEventListener('click', function () { save([]); paint(); apply(); });
   document.getElementById('stnone').addEventListener('click', function () {
-    save(allKeys()); paint(); paintToggle(); apply();
+    var all = []; panel.querySelectorAll('.stp').forEach(function (b) { all.push(b.getAttribute('data-k')); });
+    save(all); paint(); apply();
   });
-  // Nut ẩn/hiện nhanh TẤT CẢ gian hàng (bán lẻ + bán buôn)
-  var toggleBtn = document.getElementById('sttoggle');
-  function paintToggle() {
-    if (!toggleBtn) return;
-    var h = hidden(); var keys = allKeys();
-    var allHidden = keys.length > 0 && keys.every(function (k) { return h.indexOf(k) >= 0; });
-    toggleBtn.textContent = allHidden ? '👁 Hiện tất cả gian hàng' : '🙈 Ẩn tất cả gian hàng';
-    toggleBtn.classList.toggle('on', allHidden);
-  }
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', function () {
-      var keys = allKeys(); var h = hidden();
-      var allHidden = keys.every(function (k) { return h.indexOf(k) >= 0; });
-      save(allHidden ? [] : keys);
-      paint(); paintToggle(); apply();
-    });
-  }
   function show() { panel.classList.add('open'); }
   function hide() { panel.classList.remove('open'); }
   input.addEventListener('focus', show);
@@ -1049,7 +1048,7 @@ if (el) el.textContent = 'v1.5.2.0';
   document.addEventListener('click', function (e) {
     if (!panel.contains(e.target) && e.target !== input) hide();
   });
-  paint(); paintToggle();
+  paint();
   window.addEventListener('load', apply);
   setTimeout(apply, 300);
 })();

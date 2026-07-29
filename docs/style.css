@@ -89,6 +89,8 @@
  .stg{font-size:.82em;color:var(--muted);margin-right:4px;min-width:64px}
  .stp{font-size:.8em;padding:3px 10px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--accent);cursor:pointer}
  .stp.off{opacity:.45;text-decoration:line-through;color:var(--muted)}
+ .stp.clearall{font-weight:800;color:#fff;background:#d33;border-color:#d33;padding:3px 11px}
+ .stp.clearall.on{background:#2a7a2a;border-color:#2a7a2a}
  .mxwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
  .mxwrap table.mx{min-width:100%}
  .sfgroup{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0;align-items:center}
@@ -119,5 +121,3 @@
  }
  .stact{margin-top:2px}
  .stact button{font-size:.78em;padding:3px 10px;margin-right:6px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--muted);cursor:pointer}
- #sttoggle{font-weight:600;color:var(--accent);border-color:var(--accent)}
- #sttoggle.on{background:var(--accent);color:#fff}
