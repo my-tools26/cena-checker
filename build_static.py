@@ -290,10 +290,12 @@ def build_retail():
             if key in seen or not p.get("deals"):
                 continue
             seen.add(key)
-            prods.append([p["name"], p.get("amount", ""),
-                          [[canon_shop(d["shop"]), round(float(d["price"]), 2),
-                            d.get("unit", ""), d.get("pct", ""), d.get("valid", "")]
-                           for d in p["deals"]]])
+            deals = [[canon_shop(d["shop"]), round(float(d["price"]), 2),
+                       d.get("unit", ""), d.get("pct", ""), d.get("valid", "")]
+                      for d in p["deals"]
+                      if not cena.SHOP_BLACKLIST_RE.search(d["shop"])]
+            if deals:
+                prods.append([p["name"], p.get("amount", ""), deals])
 
     for slug in cats + slugs:
         # kupi dung chung duong dan /slevy/<slug> cho CA nhom hang lan sieu thi
