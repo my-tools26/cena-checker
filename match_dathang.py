@@ -401,15 +401,125 @@ tr:hover{background:#fafafa}code{color:#0F6E3B}</style>"""]
     open(os.path.join(OUT, "applied.html"), "w", encoding="utf-8").write("\n".join(out))
 
 
+def export_review():
+    """Sinh cong cu DUYET TAY (review_tool.html) cho nhom map mo: nguoi bam chon
+    EAN dung -> tai ve JSON de dan vao dathang_ean_map.json."""
+    print("[1/3] Nap ung vien ...")
+    cands = load_candidates()
+    idx = build_index(cands)
+    manual = load_manual_map()
+    d = json.load(open(os.path.join(HERE, "dathang_prices.json"), encoding="utf-8"))
+    print("[2/3] Thu thap nhom map mo ...")
+    data = []
+    for it in d.get("items", []):
+        nm = it.get("name", "")
+        if _norm_name(nm) in manual:
+            continue
+        cand, sz, mydist = match_one(nm, it.get("amount", ""), cands, idx)
+        if not cand or is_clear(cand):
+            continue
+        data.append({"n": nm, "a": it.get("amount", ""), "p": it.get("price"),
+                     "c": [[e, cands[e]["name"], cands[e]["src"], s, cands[e]["size"]]
+                           for e, s, sh, shb, cf in cand]})
+    data.sort(key=lambda x: -(x["c"][0][3] if x["c"] else 0))
+    print(f"      {len(data)} mon map mo")
+    print("[3/3] Xuat review_tool.html ...")
+    _write_review_tool(data)
+    print(f"  -> {os.path.join(OUT, 'review_tool.html')}")
+
+
+def _write_review_tool(data):
+    payload = json.dumps(data, ensure_ascii=False)
+    html_doc = REVIEW_TOOL_TMPL.replace("/*DATA*/", payload)
+    open(os.path.join(OUT, "review_tool.html"), "w", encoding="utf-8").write(html_doc)
+
+
+REVIEW_TOOL_TMPL = r"""<!doctype html><html lang=vi><meta charset=utf-8>
+<title>Duyệt EAN dathang</title>
+<style>
+body{font-family:system-ui,Arial;margin:0;color:#222;background:#f4f4f2}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid #ddd;padding:10px 16px;z-index:5}
+header b{font-size:16px}.wrap{max-width:820px;margin:0 auto;padding:12px 16px}
+.card{background:#fff;border:1px solid #e3e3e3;border-radius:10px;padding:12px;margin:10px 0}
+.card.done{outline:2px solid #0F6E3B}.pn{font-weight:600;font-size:15px}
+.meta{color:#888;font-size:12.5px;margin:2px 0 8px}
+.opt{display:block;border:1px solid #e0e0e0;border-radius:7px;padding:7px 9px;margin:5px 0;cursor:pointer;font-size:13px}
+.opt:hover{background:#f6faf7}.opt.sel{background:#eafbef;border-color:#0F6E3B}
+.opt.no{color:#999}.opt.no.sel{background:#fbecec;border-color:#c33;color:#a00}
+.src{color:#0b5cad;font-weight:600}code{color:#0F6E3B}
+input,button{font:inherit}#f{padding:6px 10px;border:1px solid #ccc;border-radius:6px;width:220px}
+button{padding:7px 12px;border:1px solid #0F6E3B;background:#0F6E3B;color:#fff;border-radius:6px;cursor:pointer}
+button.sec{background:#fff;color:#333;border-color:#ccc}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.pg{font-weight:600}
+</style>
+<header><div class=wrap style="padding:0">
+<b>✋ Duyệt EAN dathang</b> — bấm chọn ứng viên đúng cho từng món.
+<div class=bar>
+<span class=pg id=pg></span>
+<input id=f placeholder="lọc theo tên...">
+<label style="font-size:13px"><input type=checkbox id=only> chỉ hiện chưa chọn</label>
+<button onclick=dl()>⬇ Tải map (.json)</button>
+<button class=sec onclick=reset()>xoá lựa chọn</button>
+</div></div></header>
+<div class=wrap id=list></div>
+<script>
+const DATA = /*DATA*/;
+const KEY='dathang_review_v1';
+let sel=JSON.parse(localStorage.getItem(KEY)||'{}');
+const list=document.getElementById('list'), fEl=document.getElementById('f'), onlyEl=document.getElementById('only');
+function save(){localStorage.setItem(KEY,JSON.stringify(sel));draw();}
+function pick(name,ean){sel[name]=ean;save();}
+function draw(){
+  const q=(fEl.value||'').toLowerCase(), only=onlyEl.checked;
+  let done=0,total=DATA.length,html='';
+  for(const it of DATA){
+    if(sel[it.n]!==undefined)done++;
+    if(q&&!it.n.toLowerCase().includes(q))continue;
+    if(only&&sel[it.n]!==undefined)continue;
+    const chosen=sel[it.n];
+    let opts='';
+    for(const c of it.c){
+      const s=chosen===c[0]?' sel':'';
+      opts+=`<label class="opt${s}" onclick="pick(${JSON.stringify(it.n)},${JSON.stringify(c[0])})">`
+        +`<span class=src>${c[2]}</span> <code>${c[0]}</code> · ${esc(c[1])} `
+        +`<span style="color:#888">[${c[4]||'?'}]</span> · điểm ${c[3]}</label>`;
+    }
+    const sn=chosen==='__none__'?' sel':'';
+    opts+=`<label class="opt no${sn}" onclick="pick(${JSON.stringify(it.n)},'__none__')">❌ Không phải cái nào / bỏ qua</label>`;
+    html+=`<div class="card${chosen!==undefined?' done':''}"><div class=pn>${esc(it.n)}</div>`
+      +`<div class=meta>${it.a||''} ${it.p?('· '+it.p+' Kč'):''}</div>${opts}</div>`;
+  }
+  list.innerHTML=html||'<p style="color:#888">— không có món nào khớp bộ lọc —</p>';
+  document.getElementById('pg').textContent=`Đã chọn ${done}/${total}`;
+}
+function esc(s){return (s+'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function dl(){
+  const map={};
+  for(const k in sel){if(sel[k]&&sel[k]!=='__none__')map[k]=sel[k];}
+  const out={_note:'Dán mục "map" này vào dathang_ean_map.json rồi chạy match_dathang.py --apply',map:map};
+  const blob=new Blob([JSON.stringify(out,null,1)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download='dathang_ean_map_additions.json';a.click();
+}
+function reset(){if(confirm('Xoá toàn bộ lựa chọn đã lưu?')){sel={};save();}}
+fEl.oninput=draw;onlyEl.onchange=draw;draw();
+</script></html>"""
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=200)
     ap.add_argument("--force", default="18871")
     ap.add_argument("--apply", action="store_true",
                     help="Khop toan bo dathang_prices.json va ghi ean vao file")
+    ap.add_argument("--review", action="store_true",
+                    help="Sinh cong cu duyet tay review_tool.html cho nhom map mo")
     args = ap.parse_args()
     if args.apply:
         apply_to_file()
+    elif args.review:
+        export_review()
     else:
         fids = [int(x) for x in args.force.split(",") if x.strip().isdigit()]
         run(args.limit, fids)
