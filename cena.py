@@ -32,6 +32,13 @@ CATEGORIES = {
     "rau cu qua": "ovoce-a-zelenina",
 }
 
+SHOP_BLACKLIST_RE = re.compile(
+    r"teta|dm drogerie|raj drogerie|ráj drogerie|slak drogerie|šlak drogerie|"
+    r"barvy a laky|^cba$|eso market|bene napoje|bene nápoje|tescoma|"
+    r"travel free|zeman maso",
+    re.IGNORECASE,
+)
+
 # Ngoai le: khong goi y ruou manh
 LIQUOR_RE = re.compile(
     r"vodka|rum\b|tuzem|whisk|gin\b|lik[ée]r|brandy|co[gn]nac|slivovic|fernet|"
@@ -96,6 +103,7 @@ def parse_groups(soup: BeautifulSoup):
                 "pct": clean(pct_el.get_text()) if pct_el else "",
                 "valid": clean(valid_el.get_text()) if valid_el else "",
             })
+        deals = [d for d in deals if not SHOP_BLACKLIST_RE.search(d["shop"])]
         if deals:
             deals.sort(key=lambda d: d["price"])
             products.append({"name": name, "amount": amount, "deals": deals})
