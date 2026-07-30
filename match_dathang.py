@@ -140,10 +140,12 @@ def match_one(name, amount, cands, idx, topk=4):
     scores = defaultdict(float)
     shared = defaultdict(list)
     sh_brand = defaultdict(list)
+    sh_count = defaultdict(int)
     for t in tks:
         w = idf.get(t, 0)
         for ean in tok2ean.get(t, ()):
             scores[ean] += w
+            sh_count[ean] += 1
             if t in distinctive:
                 shared[ean].append(t)
             if t in brand:
@@ -165,8 +167,10 @@ def match_one(name, amount, cands, idx, topk=4):
         #     (vd Haribo LEMONADE vs COLA, Kotanyi PEPR vs ANYZ) -> danh dau
         cand_distinct = c["toks"] & distinctive
         conflict = bool(my_distinct - cand_distinct) and bool(cand_distinct - my_distinct)
-        ranked.append((ean, round(sc, 3), shared[ean], sh_brand[ean], conflict))
-    ranked.sort(key=lambda x: -x[1])
+        ranked.append((ean, round(sc, 3), shared[ean], sh_brand[ean],
+                       conflict, sh_count[ean]))
+    # sap theo diem, roi theo so tu trung (de bien the dung len dau khi diem sat)
+    ranked.sort(key=lambda x: (-x[1], -x[5]))
     return ranked[:topk], sz, sorted(my_brand)
 
 
@@ -209,15 +213,23 @@ STRONG_SCORE = 12.0  # 1 tu dac trung van chap nhan neu diem >= muc nay
 
 
 def is_clear(cand):
-    """cand[0] = (ean, score, shared_distinctive, shared_brand, conflict)."""
-    top = cand[0][1]
-    second = cand[1][1] if len(cand) > 1 else 0
-    if cand[0][4]:                       # xung dot mui vi -> khong ro rang
+    """cand[i] = (ean, score, shared_distinctive, shared_brand, conflict)."""
+    top = cand[0]
+    if top[4]:                           # top xung dot mui vi -> khong an toan
         return False
-    if top < CLEAR_MIN or top < second * DOMINATE:
+    ts = top[1]
+    second = cand[1][1] if len(cand) > 1 else 0
+    if ts < CLEAR_MIN:
         return False
     # can 2 tu dac trung khop, HOAC 1 tu nhung diem cao han han (chan Haribo-dao-cat-banh)
-    return len(cand[0][2]) >= 2 or top >= STRONG_SCORE
+    if not (len(top[2]) >= 2 or ts >= STRONG_SCORE):
+        return False
+    if ts >= second * DOMINATE:          # diem vuot troi han #2 -> chac chan
+        return True
+    # diem SAT NHAU (nhieu bien the): chi tu chon neu top trung NHIEU tu hon #2
+    # (vd cerveny trung them tu 'cerveny' ma bily khong) -> dung bien the.
+    # #2 cung khong duoc xung dot (neu #2 sach va bang tu -> con mo ho).
+    return len(cand) > 1 and top[5] > cand[1][5]
 
 
 def run(limit, force_ids):
@@ -249,7 +261,7 @@ def run(limit, force_ids):
                      "chosen": chosen,
                      "cands": [{"ean": e, "score": s, "shared": shb,
                                 "name": cands[e]["name"], "src": cands[e]["src"],
-                                "size": cands[e]["size"]} for e, s, sh, shb, cf in cand]})
+                                "size": cands[e]["size"]} for e, s, sh, shb, cf, sc2 in cand]})
 
     with open(os.path.join(OUT, "candidates.json"), "w", encoding="utf-8") as f:
         json.dump(rows, f, ensure_ascii=False, indent=1)
@@ -420,7 +432,7 @@ def export_review():
             continue
         data.append({"n": nm, "a": it.get("amount", ""), "p": it.get("price"),
                      "c": [[e, cands[e]["name"], cands[e]["src"], s, cands[e]["size"]]
-                           for e, s, sh, shb, cf in cand]})
+                           for e, s, sh, shb, cf, sc2 in cand]})
     data.sort(key=lambda x: -(x["c"][0][3] if x["c"] else 0))
     print(f"      {len(data)} mon map mo")
     print("[3/3] Xuat review_tool.html ...")
