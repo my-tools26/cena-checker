@@ -1,0 +1,6 @@
+{
+ "_note": "Map thủ công tên dathang -> EAN. ƯU TIÊN hơn auto-match. Dùng khi bạn tự biết EAN (vd hàng độc quyền dathang không NCC nào khác bán). Sửa xong chạy: python match_dathang.py --apply, rồi build_static + push. Khớp theo tên đã chuẩn hoá (không phân biệt dấu/khoảng trắng/gạch ngang).",
+ "map": {
+  "Čokoládový krém 350g Milkyway – 6ks/kart": "5056357904664"
+ }
+}

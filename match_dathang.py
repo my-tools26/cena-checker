@@ -313,6 +313,21 @@ h1{font-size:20px}.st{background:#f5f5f5;padding:10px;border-radius:8px;display:
         f.write("\n".join(out))
 
 
+def _norm_name(s):
+    """Chuan hoa ten de map tay khop du lech dau/khoang trang/gach ngang."""
+    return re.sub(r"[^a-z0-9]+", " ", strip_accents(s)).strip()
+
+
+def load_manual_map():
+    """dathang_ean_map.json: {"map": {ten dathang: ean}} - uu tien hon auto-match.
+    Nguoi dung tu them khi biet EAN (vd hang doc quyen khong NCC nao khac ban)."""
+    p = os.path.join(HERE, "dathang_ean_map.json")
+    if not os.path.exists(p):
+        return {}
+    d = json.load(open(p, encoding="utf-8"))
+    return {_norm_name(k): str(v).strip() for k, v in d.get("map", {}).items() if v}
+
+
 def apply_to_file():
     """Khop TOAN BO dathang_prices.json -> gan 'ean' cho nhom RO RANG, ghi lai file."""
     print("[1/3] Nap ung vien tu 5 catalog co EAN ...")
@@ -320,17 +335,25 @@ def apply_to_file():
     idx = build_index(cands)
     print(f"      {idx['N']} ma vach · {len(idx['brand'])} token thuong-hieu")
 
+    manual = load_manual_map()
     path = os.path.join(HERE, "dathang_prices.json")
     data = json.load(open(path, encoding="utf-8"))
     items = data.get("items", [])
-    print(f"[2/3] Khop {len(items)} mon trong dathang_prices.json ...")
+    print(f"[2/3] Khop {len(items)} mon (co {len(manual)} map tay) ...")
 
-    clear = review = none = 0
+    clear = review = none = man = 0
     report = []
     for it in items:
+        it.pop("ean", None)               # xoa ean cu (chay lai sach se)
+        # MAP TAY uu tien tuyet doi
+        mk = _norm_name(it.get("name", ""))
+        if mk in manual:
+            it["ean"] = manual[mk]; man += 1
+            report.append({"name": it["name"], "ean": manual[mk], "src": "TAY",
+                           "cand": "(map thủ công)", "score": 999})
+            continue
         cand, sz, mydist = match_one(it.get("name", ""), it.get("amount", ""),
                                      cands, idx)
-        it.pop("ean", None)               # xoa ean cu (chay lai sach se)
         decision, chosen = "none", None
         if cand:
             if is_clear(cand):
@@ -353,6 +376,7 @@ def apply_to_file():
     _write_apply_html(report, {"clear": clear, "review": review,
                                "none": none, "total": len(items)})
     print("[3/3] Da ghi ean vao dathang_prices.json")
+    print(f"  Map tay (uu tien)   : {man}")
     print(f"  Ro rang (da gan EAN): {clear}")
     print(f"  Map mo (bo trong)   : {review}")
     print(f"  Khong ung vien      : {none}")
