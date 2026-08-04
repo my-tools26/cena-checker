@@ -205,23 +205,16 @@ function filterBar(list, key, attr, collapseAfter) {
     return '<button class="stp' + (off.has(slug) ? ' off' : '') + '" ' + attr +
       '="' + esc(slug) + '">' + esc(lbl) + '</button>';
   }
-  // Nut ✕ do: an het / hien lai toan bo gian hang cua bar nay (toggle)
-  var slugs = list.map(function (x) { return Array.isArray(x) ? x[0] : x; });
-  var allOff = slugs.length > 0 && slugs.every(function (s) { return off.has(s); });
-  var clr = '<button type="button" class="stp clearall' + (allOff ? ' on' : '') +
-    '" data-clearslugs="' + esc(slugs.join(',')) + '" title="' +
-    (allOff ? 'Hiện lại tất cả gian hàng' : 'Ẩn hết tất cả gian hàng') + '">' +
-    (allOff ? '✓' : '✕') + '</button>';
   // Muc 6: chi hien "collapseAfter" nut dau, con lai an sau nut "…"
   if (collapseAfter && list.length > collapseAfter) {
-    return '<div class="sfgroup"><div class="sfrow">' + clr +
+    return '<div class="sfgroup"><div class="sfrow">' +
       list.slice(0, collapseAfter).map(btn).join('') +
       '<button type="button" class="stp morebtn">…</button>' +
       '<span class="moreshops" style="display:none">' +
       list.slice(collapseAfter).map(btn).join('') + '</span></div></div>';
   }
   var half = Math.floor(list.length / 2);
-  return '<div class="sfgroup"><div class="sfrow">' + clr + list.slice(0, half).map(btn).join('') +
+  return '<div class="sfgroup"><div class="sfrow">' + list.slice(0, half).map(btn).join('') +
     '</div><div class="sfrow">' + list.slice(half).map(btn).join('') + '</div></div>';
 }
 function wireFilters(key, attr, rerender) {
@@ -229,18 +222,6 @@ function wireFilters(key, attr, rerender) {
     b.addEventListener('click', function () {
       var off = offSet(key), k = b.getAttribute(attr);
       if (off.has(k)) off.delete(k); else off.add(k);
-      localStorage.setItem(key, JSON.stringify([].concat(Array.from(off))));
-      rerender();
-    });
-  });
-  // nut ✕ do: an het / hien lai toan bo gian hang cua bar (toggle)
-  document.querySelectorAll('.clearall').forEach(function (b) {
-    if (b.dataset.w) return; b.dataset.w = '1';
-    b.addEventListener('click', function () {
-      var off = offSet(key);
-      var slugs = (b.getAttribute('data-clearslugs') || '').split(',').filter(Boolean);
-      var allOff = slugs.length > 0 && slugs.every(function (s) { return off.has(s); });
-      slugs.forEach(function (s) { if (allOff) off.delete(s); else off.add(s); });
       localStorage.setItem(key, JSON.stringify([].concat(Array.from(off))));
       rerender();
     });
@@ -1003,7 +984,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.6.1';
+if (el) el.textContent = 'v1.5.6.2';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
