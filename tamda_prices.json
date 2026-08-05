@@ -1,693 +1,136 @@
 {
-  "letak": "Leták tuần 29/07/2026 - 04/08/2026",
-  "valid": "29.07.2026 - 04.08.2026",
-  "date": "2026-07-29",
-  "note": "Sezonni blok he thu 20 trang; nhieu san pham la banh keo/do choi/my pham chong muoi, khong phai chi thuc pham",
+  "letak": "Letak tuan 05/08/2026 - 11/08/2026",
+  "valid": "05.08.2026 - 11.08.2026",
+  "date": "2026-08-05",
+  "note": "Sezonni blok 20 trang; nhieu san pham la do uong/bia/ruou/con trung diet, khong phai chi thuc pham. Trang 20 (Comperio/Vici) khong co gia nen bo qua.",
   "items": [
-    {
-      "name": "Fizi Saxana baguette crunchy sticks (kyselá smetana-cibule)",
-      "amount": "30g",
-      "price": 9.5
-    },
-    {
-      "name": "Fizi Saxana baguette crunchy sticks (sýr)",
-      "amount": "30g",
-      "price": 9.5
-    },
-    {
-      "name": "Polaretti vodové zmrzliny",
-      "amount": "400ml",
-      "price": 29.9
-    },
-    {
-      "name": "Criximo trubičky",
-      "amount": "18g",
-      "price": 3.3
-    },
-    {
-      "name": "SweetFlash Frosty mrazem sušené bonbóny",
-      "amount": "50g",
-      "price": 36.9
-    },
-    {
-      "name": "TwistDrink Čtyřlístek nápoj",
-      "amount": "200ml",
-      "price": 12.9
-    },
-    {
-      "name": "JimmyFox Dron lízátko s hráčkem",
-      "amount": "10g",
-      "price": 16.9
-    },
-    {
-      "name": "Orion Total Attack nástrahy na mravence",
-      "amount": "2 ks",
-      "price": 54.9
-    },
-    {
-      "name": "Pedro želé",
-      "amount": "1kg",
-      "price": 109.0
-    },
-    {
-      "name": "Tic Tac bonbóny",
-      "amount": "18g",
-      "price": 9.5
-    },
-    {
-      "name": "Kinder Kinderini sušenka",
-      "amount": "25g",
-      "price": 9.5
-    },
-    {
-      "name": "JustMeat Just Chicken maso",
-      "amount": "100g",
-      "price": 41.9
-    },
-    {
-      "name": "Kent Sour Patch bonbóny",
-      "amount": "160g",
-      "price": 26.9
-    },
-    {
-      "name": "Reeses Pieces pouch",
-      "amount": "90g",
-      "price": 45.9
-    },
-    {
-      "name": "Reeses Peanut Butter 2 cups",
-      "amount": "39,5g",
-      "price": 16.9
-    },
-    {
-      "name": "Haribo Chammallows LE",
-      "amount": "175g",
-      "price": 25.9
-    },
-    {
-      "name": "Reeses Nutrageous tyčinka",
-      "amount": "47g",
-      "price": 20.9
-    },
-    {
-      "name": "Magicland cukrová vata",
-      "amount": "30g",
-      "price": 9.5
-    },
-    {
-      "name": "Top rolky",
-      "amount": "240g",
-      "price": 20.9
-    },
-    {
-      "name": "Twix, Bounty, Cadbury wafer rolls",
-      "amount": "22-23,4g",
-      "price": 9.9
-    },
-    {
-      "name": "Orion Kofila tyčinka",
-      "amount": "34-35g",
-      "price": 10.9
-    },
-    {
-      "name": "Maggi instantní nudle Noodle Snack",
-      "amount": "5,2-62g",
-      "price": 8.9
-    },
-    {
-      "name": "Hašlerky bonbóny",
-      "amount": "90g",
-      "price": 17.9
-    },
-    {
-      "name": "Maggi MagicAsia nudle",
-      "amount": "118-130g",
-      "price": 29.9
-    },
-    {
-      "name": "Koli",
-      "amount": "2L",
-      "price": 20.9
-    },
-    {
-      "name": "NEOH crunch bites chocolate",
-      "amount": "29g",
-      "price": 28.9
-    },
-    {
-      "name": "NEOH draže Drageelinos",
-      "amount": "60g",
-      "price": 52.9
-    },
-    {
-      "name": "NEOH wafer Hazelnut Crunch",
-      "amount": "21g",
-      "price": 23.9
-    },
-    {
-      "name": "NEOH tyčinka CrispNCream",
-      "amount": "22g",
-      "price": 22.9
-    },
-    {
-      "name": "Vilgain proteinová tyčinka Double Trouble Blueberry",
-      "amount": "55g",
-      "price": 42.9
-    },
-    {
-      "name": "Vilgain proteinová tyčinka Double Trouble Crispy Choconut",
-      "amount": "55g",
-      "price": 42.9
-    },
-    {
-      "name": "Vilgain proteinová tyčinka Double Trouble Fudgy frosted",
-      "amount": "55g",
-      "price": 42.9
-    },
-    {
-      "name": "Vilgain proteinová tyčinka Double Trouble Salted caramel",
-      "amount": "55g",
-      "price": 42.9
-    },
-    {
-      "name": "Vilgain proteinová tyčinka Double Trouble Velvet Coco Almond",
-      "amount": "55g",
-      "price": 42.9
-    },
-    {
-      "name": "Vilgain proteinová tyčinka Trouble Milky coconut",
-      "amount": "55g",
-      "price": 42.9
-    },
-    {
-      "name": "Vilgain tyčinka Organic Coconut",
-      "amount": "30g",
-      "price": 19.9
-    },
-    {
-      "name": "Vilgain Energy Ball Organic almonds with raspberry jam",
-      "amount": "30g",
-      "price": 25.9
-    },
-    {
-      "name": "Vilgain Energy Ball Organic cocoa with peanut butter",
-      "amount": "30g",
-      "price": 25.9
-    },
-    {
-      "name": "Vilgain Oat Sticks Organic oregano and basil",
-      "amount": "50g",
-      "price": 18.9
-    },
-    {
-      "name": "Vilgain Oat Sticks Organic sea salt",
-      "amount": "50g",
-      "price": 18.9
-    },
-    {
-      "name": "Pulse Electrolytes nápoj Mango",
-      "amount": "500ml",
-      "price": 30.9
-    },
-    {
-      "name": "Roshen Creamy Toffee bonbóny",
-      "amount": "150g",
-      "price": 26.9
-    },
-    {
-      "name": "Roshen Milk Caramel bonbóny",
-      "amount": "150g",
-      "price": 18.9
-    },
-    {
-      "name": "Roshen Beri berry bonbóny",
-      "amount": "180g",
-      "price": 17.9
-    },
-    {
-      "name": "Roshen Bim Bom bonbóny",
-      "amount": "1kg",
-      "price": 66.9
-    },
-    {
-      "name": "Roshen juice mix bonbóny",
-      "amount": "1kg",
-      "price": 72.9
-    },
-    {
-      "name": "Roshen Bim Bom bonbóny",
-      "amount": "200g",
-      "price": 15.9
-    },
-    {
-      "name": "Roshen Eucalyptus bonbóny",
-      "amount": "200g",
-      "price": 19.9
-    },
-    {
-      "name": "Roshen Korivka bonbóny",
-      "amount": "205g",
-      "price": 22.9
-    },
-    {
-      "name": "Roshen fruit mix želé",
-      "amount": "1kg",
-      "price": 84.9
-    },
-    {
-      "name": "Roshen Crazy Bee želé",
-      "amount": "200g",
-      "price": 17.9
-    },
-    {
-      "name": "Roshen fruit mix želé",
-      "amount": "200g",
-      "price": 19.9
-    },
-    {
-      "name": "Roshen Lovita sušenky cocoa",
-      "amount": "127g",
-      "price": 19.9
-    },
-    {
-      "name": "Roshen Lovita sušenky hazelnut",
-      "amount": "127g",
-      "price": 19.9
-    },
-    {
-      "name": "Roshen Lovita sušenky milk",
-      "amount": "127g",
-      "price": 19.9
-    },
-    {
-      "name": "Roshen Lovita jelly sušenky cocoa-cherry",
-      "amount": "135g",
-      "price": 20.9
-    },
-    {
-      "name": "Roshen Lovita jelly sušenky raspberry",
-      "amount": "135g",
-      "price": 20.9
-    },
-    {
-      "name": "Vidas sweet vaccine bonbóny",
-      "amount": "20g",
-      "price": 11.5
-    },
-    {
-      "name": "Vidas trio dip&lick bonbóny",
-      "amount": "35g",
-      "price": 13.9
-    },
-    {
-      "name": "Vidas animal doctor gummies bonbóny",
-      "amount": "22g",
-      "price": 8.9
-    },
-    {
-      "name": "Vidas brain washing cukrovinka s hračkou",
-      "amount": "9g",
-      "price": 39.9
-    },
-    {
-      "name": "Vidas doctor dentist cukrovinka s hračkou",
-      "amount": "24g",
-      "price": 13.9
-    },
-    {
-      "name": "Vidas funny toilet cukrovinka s hračkou",
-      "amount": "5g",
-      "price": 22.9
-    },
-    {
-      "name": "Vidas unicorn ventilator cukrovinka s hračkou",
-      "amount": "5g",
-      "price": 15.5
-    },
-    {
-      "name": "Vidas unicrazy gummy želé",
-      "amount": "25g",
-      "price": 6.9
-    },
-    {
-      "name": "Vidas spider gummy želé",
-      "amount": "20g",
-      "price": 9.5
-    },
-    {
-      "name": "Vidas cannibal gumm želé",
-      "amount": "22g",
-      "price": 9.5
-    },
-    {
-      "name": "Vidas Eat Me želé",
-      "amount": "25g",
-      "price": 9.5
-    },
-    {
-      "name": "Vidas eyelien želé",
-      "amount": "28g",
-      "price": 9.9
-    },
-    {
-      "name": "Vidas zombie gummy želé",
-      "amount": "28g",
-      "price": 9.5
-    },
-    {
-      "name": "Vidas asian food gummies želé",
-      "amount": "42g",
-      "price": 19.9
-    },
-    {
-      "name": "Vidas spaghetti gummies želé",
-      "amount": "46g",
-      "price": 18.9
-    },
-    {
-      "name": "Vidas zombie brain gummy želé",
-      "amount": "120g",
-      "price": 23.9
-    },
-    {
-      "name": "Mogu Mogu nápoj s příchutí",
-      "amount": "320ml",
-      "price": 17.9
-    },
-    {
-      "name": "Green Lotus rýže jasmínová",
-      "amount": "9,09kg",
-      "price": 440.0
-    },
-    {
-      "name": "Green Lotus rýže jasmínová",
-      "amount": "1kg",
-      "price": 51.9
-    },
-    {
-      "name": "Green Lotus rýže jasmínová",
-      "amount": "4,55kg",
-      "price": 225.0
-    },
-    {
-      "name": "Green Lotus rýže jasmínová",
-      "amount": "18,18kg",
-      "price": 890.0
-    },
-    {
-      "name": "Biolit elektrický odpařovač Eucalyptus",
-      "amount": "30N",
-      "price": 149.9
-    },
-    {
-      "name": "Biolit elektrický odpařovač+tekutou náplní",
-      "amount": "27ml 45 nocí",
-      "price": 164.9
-    },
-    {
-      "name": "Raid elektrický odpařovač s tekutou náplní Family",
-      "amount": "21ml",
-      "price": 219.9
-    },
-    {
-      "name": "Raid elektrický odpařovač+tekutá náplň",
-      "amount": "30 nocí",
-      "price": 139.9
-    },
-    {
-      "name": "Raid Essentials elektrický odpařovač",
-      "amount": "27ml",
-      "price": 219.9
-    },
-    {
-      "name": "Raid tekutá náplň elektrický",
-      "amount": "45 nocí",
-      "price": 149.9
-    },
-    {
-      "name": "Biolit tekutá náplň do elektrického odpařovače",
-      "amount": "27ml 45 nocí",
-      "price": 139.9
-    },
-    {
-      "name": "Biolit tekutá náplň Eucalyptus",
-      "amount": "30N 21ml",
-      "price": 124.9
-    },
-    {
-      "name": "Loprais 69 energetický nápoj",
-      "amount": "0,5L",
-      "price": 16.9
-    },
-    {
-      "name": "Excelsior",
-      "amount": "1,5L",
-      "price": 10.5
-    },
-    {
-      "name": "Red Bull",
-      "amount": "473ml",
-      "price": 50.9
-    },
-    {
-      "name": "Dr Witt Balance nápoj",
-      "amount": "1,5L",
-      "price": 11.9
-    },
-    {
-      "name": "COCOXIM kokosová voda",
-      "amount": "0,33L",
-      "price": 27.9
-    },
-    {
-      "name": "Crodo Lemon Soda",
-      "amount": "0,33L",
-      "price": 20.9
-    },
-    {
-      "name": "XP BOOST energetický nápoj PLECH",
-      "amount": "0,5L",
-      "price": 20.9
-    },
-    {
-      "name": "Pepsi PLECH Original",
-      "amount": "0,33L",
-      "price": 10.9
-    },
-    {
-      "name": "Caprio hustý",
-      "amount": "0,7L",
-      "price": 14.9
-    },
-    {
-      "name": "Vitar šumivé tabletky",
-      "amount": "72g+76g",
-      "price": 19.9
-    },
-    {
-      "name": "WAIO hypotonický nápoj",
-      "amount": "0,5L",
-      "price": 16.9
-    },
-    {
-      "name": "Qapka",
-      "amount": "0,5L",
-      "price": 20.9
-    },
-    {
-      "name": "Starbucks Frappuccino",
-      "amount": "0,25L",
-      "price": 55.9
-    },
-    {
-      "name": "Evian",
-      "amount": "0,5-1,5L",
-      "price": 15.9
-    },
-    {
-      "name": "Monte Chilena BiB",
-      "amount": "3L",
-      "price": 129.0
-    },
-    {
-      "name": "Sovín",
-      "amount": "0,75L",
-      "price": 63.9
-    },
-    {
-      "name": "Koli",
-      "amount": "2L",
-      "price": 20.9
-    },
-    {
-      "name": "CC (Coca Cola, Fanta, Sprite)",
-      "amount": "1L",
-      "price": 21.9
-    },
-    {
-      "name": "FuzeTea",
-      "amount": "1,5L",
-      "price": 30.9
-    },
-    {
-      "name": "XIXO",
-      "amount": "0,25L",
-      "price": 9.9
-    },
-    {
-      "name": "Krušovice Bohém plech",
-      "amount": "0,5l",
-      "price": 16.9
-    },
-    {
-      "name": "Braník 11 PET",
-      "amount": "2L",
-      "price": 44.9
-    },
-    {
-      "name": "Via Imperialis",
-      "amount": "0,75l",
-      "price": 125.0
-    },
-    {
-      "name": "Vinařství Bílovice 1946",
-      "amount": "0,75l",
-      "price": 72.9
-    },
-    {
-      "name": "Templářské 1248",
-      "amount": "0,75l",
-      "price": 60.9
-    },
-    {
-      "name": "Verzieri",
-      "amount": "0,75l",
-      "price": 105.0
-    },
-    {
-      "name": "Původní Sklepmistr",
-      "amount": "1L",
-      "price": 49.9
-    },
-    {
-      "name": "Jameson",
-      "amount": "0,7l",
-      "price": 369.0
-    },
-    {
-      "name": "Budvar ležák",
-      "amount": "0,5l",
-      "price": 19.9
-    },
-    {
-      "name": "Marengo Lambrusco",
-      "amount": "0,75l",
-      "price": 91.9
-    },
-    {
-      "name": "Asconi gold",
-      "amount": "0,75l",
-      "price": 67.9
-    },
-    {
-      "name": "Stará myslivecká",
-      "amount": "0,5l",
-      "price": 149.0
-    },
-    {
-      "name": "Svijanský rytíř",
-      "amount": "0,5l",
-      "price": 17.9
-    },
-    {
-      "name": "Božkov vodka",
-      "amount": "0,5l",
-      "price": 149.0
-    },
-    {
-      "name": "Nordic mini panák",
-      "amount": "0,04l",
-      "price": 16.9
-    },
-    {
-      "name": "Cellarium Bisencii",
-      "amount": "0,75L",
-      "price": 69.9
-    },
-    {
-      "name": "Dolci Momenti",
-      "amount": "0,75l",
-      "price": 66.9
-    },
-    {
-      "name": "Beluga vodka Celebration",
-      "amount": "1L",
-      "price": 1249.0
-    },
-    {
-      "name": "Queens Nata de Coco",
-      "amount": "0,5l",
-      "price": 31.9
-    },
-    {
-      "name": "Ice (Lemon/Classic Cola/Mango)",
-      "amount": "0,33L",
-      "price": 11.5
-    },
-    {
-      "name": "Hell energy ledová káva Ice Coffee",
-      "amount": "0,25l",
-      "price": 23.9
-    },
-    {
-      "name": "Želetava tavený sýr Krémová",
-      "amount": "150g",
-      "price": 27.9
-    },
-    {
-      "name": "Agricol majonéza Poličanka",
-      "amount": "240g",
-      "price": 20.9
-    },
-    {
-      "name": "Agricol omáčka Tatarská",
-      "amount": "240g",
-      "price": 18.5
-    },
-    {
-      "name": "Skyr natur",
-      "amount": "130g",
-      "price": 13.9
-    },
-    {
-      "name": "Bohemilk opočenský jogurt hruška-karamel PREMIUM",
-      "amount": "150g",
-      "price": 14.9
-    },
-    {
-      "name": "Wein Bauernschinken",
-      "amount": "80g",
-      "price": 30.9
-    },
-    {
-      "name": "Wein Landschinken",
-      "amount": "80g",
-      "price": 30.9
-    },
-    {
-      "name": "Wein Schwarzwälder schinken",
-      "amount": "80g",
-      "price": 30.9
-    },
-    {
-      "name": "Kiri z tvarohu a smetany",
-      "amount": "100g",
-      "price": 28.9
-    },
-    {
-      "name": "Leerdammer sýr Originál",
-      "amount": "100g",
-      "price": 28.9
-    }
+    {"name": "FIZI Cake Brownie", "amount": "40g", "price": 9.50},
+    {"name": "FIZI Cake Strawberry", "amount": "38g", "price": 9.50},
+    {"name": "FIZI Cool Ice Sticks", "amount": "120x40ml", "price": 519.00},
+    {"name": "Fizi crunchy snacks barbecue", "amount": "60g", "price": 23.90},
+    {"name": "Fizi mini biscuits choco", "amount": "30g", "price": 8.50},
+    {"name": "FIZI Mystery Boris Toilet box", "amount": "98g", "price": 149.90},
+    {"name": "Fizi Saxana baguette crunchy sticks", "amount": "30g", "price": 9.50},
+    {"name": "Fizi Saxana crunchy snacks", "amount": "110g", "price": 34.90},
+    {"name": "Rychtar Premium svetly lezak", "amount": "0,5l", "price": 13.90},
+    {"name": "Lobkowicz Nealko nealkoholicke svetle", "amount": "0,5l", "price": 11.90},
+    {"name": "Rychtar 11 svetly lezak", "amount": "0,5l", "price": 13.50},
+    {"name": "Lobkowicz Refresh (Grapefruit/Citrus mix/Malina a limeta/Virgin Mojito)", "amount": "0,5l", "price": 11.90},
+    {"name": "Maggi PridejVejce polevka slepici", "amount": "32g", "price": 11.90},
+    {"name": "Maggi PridejVejce polevka formanska", "amount": "40,5g", "price": 11.90},
+    {"name": "Maggi PridejVejce polevka rychtarska", "amount": "40,5g", "price": 11.90},
+    {"name": "Maggi PridejVejce polevka hovezi", "amount": "44g", "price": 11.90},
+    {"name": "Maggi PridejVejce polevka kulajda", "amount": "48g", "price": 11.90},
+    {"name": "Maggi tradicni polevka francouzska", "amount": "42g", "price": 11.90},
+    {"name": "Maggi tradicni polevka drstkova", "amount": "48g", "price": 11.90},
+    {"name": "Maggi tradicni polevka pismenkova", "amount": "51g", "price": 11.90},
+    {"name": "Maggi tradicni polevka hrachova", "amount": "52g", "price": 11.90},
+    {"name": "Maggi tradicni polevka gulasova", "amount": "54g", "price": 11.90},
+    {"name": "Maggi tradicni polevka gulasova pikant", "amount": "58g", "price": 11.90},
+    {"name": "Maggi Harmonie Chuti ochucovadlo", "amount": "200g", "price": 23.50},
+    {"name": "Maggi MagicAsia saucy noodles cup sesame chicken", "amount": "75g", "price": 25.50},
+    {"name": "Maggi MagicAsia saucy noodles cup sweet chilli", "amount": "75g", "price": 25.50},
+    {"name": "Maggi MagicAsia saucy noodles cup teriyaki", "amount": "75g", "price": 25.50},
+    {"name": "Thomy Sauce Hollandaise dresink", "amount": "250ml", "price": 36.90},
+    {"name": "Maggi Napady smes (4 druhy)", "amount": "30-46g", "price": 17.90},
+    {"name": "Maggi bujon a stava (vsechny druhy)", "amount": "72-100g", "price": 29.90},
+    {"name": "Maggi bujon a stava (vsechny druhy)", "amount": "60g", "price": 17.50},
+    {"name": "Maggi AirFryer Napady smes (3 druhy)", "amount": "66-70g", "price": 17.90},
+    {"name": "Lotus ryze jasminova (New Crorp 2026)", "amount": "1kg", "price": 51.90},
+    {"name": "Lotus ryze jasminova (New Crorp 2026)", "amount": "4,54kg", "price": 230.00},
+    {"name": "Lotus ryze jasminova (New Crorp 2026)", "amount": "9,07kg", "price": 450.00},
+    {"name": "Lotus ryze jasminova (New Crorp 2026)", "amount": "18,18kg", "price": 890.00},
+    {"name": "Nong Shim nudle (vice druhu)", "amount": "112-125g", "price": 19.90},
+    {"name": "Pilsner Urquell 20x0,5l sklo", "amount": "0,5l", "price": 558.00},
+    {"name": "Excelent 11 plech", "amount": "0,5l", "price": 19.90},
+    {"name": "Gambrinus 10 Original plech", "amount": "0,5l", "price": 18.50},
+    {"name": "Kozel 12 Svetly Lezak plech", "amount": "0,5l", "price": 20.90},
+    {"name": "Kozel 11 20x0,5l sklo", "amount": "0,5l", "price": 330.00},
+    {"name": "Kozel Svetly plech 10", "amount": "0,5l", "price": 18.50},
+    {"name": "Radegast Ratar Svetly Lezak plech", "amount": "0,5l", "price": 20.90},
+    {"name": "Radegast Ryze Horka plech 12", "amount": "0,5l", "price": 22.90},
+    {"name": "Birell nealko pivo plech", "amount": "0,5l", "price": 19.90},
+    {"name": "Birell nealko pivo plech", "amount": "0,33l", "price": 18.99},
+    {"name": "Birell nealko Vitality (3 druhy)", "amount": "0,5l", "price": 20.90},
+    {"name": "Birell nealko Energy (2 druhy)", "amount": "0,5l", "price": 20.90},
+    {"name": "Kozel nealko (3 druhy)", "amount": "0,5l", "price": 18.90},
+    {"name": "Frisco sklo Vr (vice druhu)", "amount": "0,33l", "price": 20.90},
+    {"name": "Frisco plech (3 druhy)", "amount": "0,33l", "price": 20.90},
+    {"name": "Gin Gordons (2 druhy)", "amount": "0,7l", "price": 349.00},
+    {"name": "Baileys", "amount": "0,7l", "price": 359.00},
+    {"name": "Tanqueray London Dry Gin", "amount": "0,7l", "price": 519.00},
+    {"name": "Johnnie Walker 12Y (Black/Blue/Red Label) - od", "amount": "0,7l", "price": 309.00},
+    {"name": "Metaxa (3 druhy) - od", "amount": "0,7l", "price": 309.00},
+    {"name": "Captain Morgan (Dark/Spiced) - od", "amount": "0,7l", "price": 269.00},
+    {"name": "Don Papa Rum 7Y (Tuba/Baroko/Masskara) - od", "amount": "0,7l", "price": 799.00},
+    {"name": "Jim Beam bourbon", "amount": "0,7l", "price": 329.00},
+    {"name": "Roku Gin", "amount": "0,7l", "price": 669.00},
+    {"name": "Tatratea Liker (4 druhy) - od", "amount": "0,7l", "price": 429.00},
+    {"name": "Smirnoff Vodka Red", "amount": "0,7l", "price": 349.00},
+    {"name": "Bros lepova past na svaby Standard", "amount": "1ks", "price": 20.90},
+    {"name": "Bros Max Spray Proti Hmyzu Na Komary+Kliste", "amount": "90ml", "price": 64.90},
+    {"name": "Bros mucholapka", "amount": "1ks", "price": 3.80},
+    {"name": "Bros mucholapka Na Okno", "amount": "4ks", "price": 31.90},
+    {"name": "Bros Repelent Proti Komarum A Klistatum", "amount": "100ml", "price": 57.90},
+    {"name": "Bros Samolepka Proti Moucham / Spiraly Proti Komarum (2 druhy) - od", "amount": "", "price": 40.90},
+    {"name": "Bros Spray Na Odevy Proti Klistatum / Proti Hmyzu Vosy+Srsne (2 druhy) - od", "amount": "90-300ml", "price": 62.90},
+    {"name": "Bros Spray Proti Hmyzu Na Komary Pro Deti (4 druhy) - od", "amount": "50-90ml", "price": 38.50},
+    {"name": "Bros Spray Proti Molum / Vosam A Srsnum (3 druhy) - od", "amount": "150-600ml", "price": 44.90},
+    {"name": "Bros Sprej Proti Komarum A Klistatum 50% Deet (2 druhy) - od", "amount": "130-180ml", "price": 114.90},
+    {"name": "Bros sprej Proti Mravencum", "amount": "150ml", "price": 44.90},
+    {"name": "Bros Vitrol Proti Slimakum (2 druhy) - od", "amount": "250g-1kg", "price": 89.90},
+    {"name": "Bros Hacek Proti Molum Levandule", "amount": "1ks", "price": 24.90},
+    {"name": "Bros Zelena Sila (vice druhu) - od", "amount": "50-500ml", "price": 44.90},
+    {"name": "Clash energeticky napoj classic", "amount": "0,5l", "price": 20.90},
+    {"name": "Rauch (4 druhy)", "amount": "0,5l", "price": 16.90},
+    {"name": "Ustronianka (3 druhy)", "amount": "1,5l", "price": 6.90},
+    {"name": "NON STOP energeticky napoj Boost plech (3 druhy)", "amount": "0,5l", "price": 14.90},
+    {"name": "Pragers soda (2 druhy)", "amount": "0,33l", "price": 27.90},
+    {"name": "Oshee vitaminova voda (vice druhu)", "amount": "555ml", "price": 20.90},
+    {"name": "TO THE MOON (3 druhy)", "amount": "0,25l", "price": 14.90},
+    {"name": "PC Mirinda/Pepsi/pepsi zero sugar (3 druhy)", "amount": "1l", "price": 18.50},
+    {"name": "Tiger energeticky napoj (vsechny druhy)", "amount": "0,5l", "price": 14.50},
+    {"name": "Maxi Vita sumive tablety (vice druhu)", "amount": "80g", "price": 23.90},
+    {"name": "Big Shock (vice druhu)", "amount": "0,5l", "price": 19.90},
+    {"name": "Pfanner IceTea (3 druhy)", "amount": "0,33l", "price": 11.50},
+    {"name": "Rio H2O vitaminova voda (4 druhy)", "amount": "0,4l", "price": 18.90},
+    {"name": "Kofola (4 druhy)", "amount": "0,5l", "price": 16.90},
+    {"name": "Cielo vino (vice druhu) - od", "amount": "0,75l", "price": 76.90},
+    {"name": "Zamecke vino stolni (2 druhy)", "amount": "1l", "price": 30.90},
+    {"name": "Koli (vsechny druhy)", "amount": "0,5l", "price": 14.50},
+    {"name": "Coca Cola/Fanta/Sprite/Kinley (vsechny druhy)", "amount": "1,5l", "price": 28.50},
+    {"name": "Finlandia vodka", "amount": "0,5l", "price": 249.00},
+    {"name": "Hell (vsechny druhy)", "amount": "0,5l", "price": 16.90},
+    {"name": "Maschio prosecco Dei Cavalieri Spago DOC", "amount": "0,75l", "price": 99.00},
+    {"name": "Costaross Piu vino frizzante bianco", "amount": "0,75l", "price": 57.90},
+    {"name": "Latistello Frizzante Bianco secco", "amount": "0,75l", "price": 65.90},
+    {"name": "Campo de Chile (3 druhy)", "amount": "0,75l", "price": 65.90},
+    {"name": "Chaluparske Bib (3 druhy)", "amount": "3l", "price": 109.00},
+    {"name": "Tarapaca (vice druhu)", "amount": "0,75l", "price": 105.00},
+    {"name": "Staropramen Cool nealko (vice druhu)", "amount": "0,5l", "price": 15.50},
+    {"name": "Zlatopramen Soulad nealko (4 druhy)", "amount": "0,5l", "price": 15.90},
+    {"name": "Mucha alkoholicky koktejl (4 druhy)", "amount": "0,75l", "price": 83.90},
+    {"name": "Revo alkoholicky energeticky napoj (4 druhy)", "amount": "0,5l", "price": 49.90},
+    {"name": "Becherovka", "amount": "1l", "price": 349.00},
+    {"name": "Finlandia vodka", "amount": "1l", "price": 359.00},
+    {"name": "Stella Artois pivo", "amount": "0,33l", "price": 14.90},
+    {"name": "Divine liker (vsechny druhy)", "amount": "0,5l", "price": 112.00},
+    {"name": "Bozkov mini (2 druhy)", "amount": "0,09l", "price": 41.90},
+    {"name": "Fernet (3 druhy)", "amount": "0,5l", "price": 159.00},
+    {"name": "Avanti (vsechny druhy)", "amount": "0,75l", "price": 47.90},
+    {"name": "Riunite Treviso Prosecco (vice druhu) - od", "amount": "0,75l", "price": 99.00},
+    {"name": "Aperol", "amount": "0,7l", "price": 309.00},
+    {"name": "Le Coq nealkoholicky koktejl (vice druhu)", "amount": "0,33l", "price": 29.90},
+    {"name": "Pragers cider (vice druhu)", "amount": "0,33l", "price": 27.90},
+    {"name": "The drinks detsky napoj (vice druhu)", "amount": "0,25l", "price": 15.90},
+    {"name": "Gran Moravia syr strouhana", "amount": "60g", "price": 33.90},
+    {"name": "Balkansky syr", "amount": "125g", "price": 25.90},
+    {"name": "Hollandia selsky jogurt bily", "amount": "500g", "price": 17.50},
+    {"name": "Chodura grilovaci parecky s medvedim cesnekem (vice druhu)", "amount": "270g", "price": 44.90},
+    {"name": "Le & Co sunka Bohemia shaved", "amount": "100g", "price": 17.90},
+    {"name": "Le & Co sunka od kosti shaved NJ", "amount": "100g", "price": 24.90},
+    {"name": "Olmici Maty smetanovy (2 druhy)", "amount": "150g", "price": 12.50},
+    {"name": "Smetanito Smetanove (vice druhu)", "amount": "150g", "price": 30.90},
+    {"name": "Sumavsky Eidam 30% strouhany", "amount": "100g", "price": 24.90}
   ]
 }
