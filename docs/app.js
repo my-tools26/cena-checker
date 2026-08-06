@@ -372,7 +372,12 @@ function tableHTML(rows) {
     '<th>#2</th><th>#3</th></tr>' + rows.join('') + '</table></div>';
 }
 function tilesHTML() {
-  return '<div class="tiles">' + TILES.map(function (t) {
+  var arr = TILES.slice();
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = (_rng() * (i + 1)) | 0;
+    var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+  }
+  return '<div class="tiles">' + arr.map(function (t) {
     return '<a class="tile" href="#/cat/' + t[2] + '"><span class="em">' + t[0] + '</span>' + t[1] + '</a>';
   }).join('') + '</div>';
 }
@@ -962,6 +967,18 @@ function initScanner() {
   if (!/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) btn.style.display = 'none';
 }
 
+/* ---------- xao tron navbar 1 lan / load ---------- */
+(function () {
+  var nav = document.querySelector('.navtabs');
+  if (!nav) return;
+  var kids = Array.prototype.slice.call(nav.children);
+  for (var i = kids.length - 1; i > 0; i--) {
+    var j = (_rng() * (i + 1)) | 0;
+    var t = kids[i]; kids[i] = kids[j]; kids[j] = t;
+  }
+  kids.forEach(function (k) { nav.appendChild(k); });
+})();
+
 /* ---------- dieu huong ---------- */
 function route() {
   var h = location.hash.replace(/^#/, '') || '/';
@@ -994,7 +1011,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.7.0';
+if (el) el.textContent = 'v1.5.7.1';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
