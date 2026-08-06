@@ -24,7 +24,9 @@ var RETAIL_SHOWN = 6;
 /* Dong nghia tim kiem: 1 tu Viet -> nhieu tu Sec (OR). VD banh mi -> rohlik + chleb */
 var SEARCH_SYNONYMS = {
   'banh mi': ['rohlik', 'chleb'], 'banh my': ['rohlik', 'chleb'],
-  'rohlik': ['rohlik', 'chleb']
+  'rohlik': ['rohlik', 'chleb'],
+  'dua': ['ananas', 'meloun', 'kokos', 'dua'],
+  'thanh long': ['pitahaya', 'draci ovoce']
 };
 var TILES = [['🍎', 'Rau quả', 'ovoce'], ['🥩', 'Thịt cá', 'maso'],
   ['🥛', 'Sữa trứng', 'mleko'], ['🍞', 'Bánh mì', 'pecivo'],
@@ -48,6 +50,14 @@ var DATA = { dict: null, catalog: null, retail: null, meta: null, shards: null }
 var $ = function (s) { return document.querySelector(s); };
 
 /* ---------- tien ich ---------- */
+var _rng = (function (s) {
+  return function () {
+    s |= 0; s = s + 0x6D2B79F5 | 0;
+    var t = Math.imul(s ^ s >>> 15, 1 | s);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+})(Date.now());
 function stripAccents(s) {
   return (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 }
@@ -456,7 +466,7 @@ function pageHome() {
     // (khong uu tien ⏰, khong sort theo % giam).
     var all = retailOnly(d.items || []);
     for (var i = all.length - 1; i > 0; i--) {
-      var j = (Math.random() * (i + 1)) | 0;
+      var j = (_rng() * (i + 1)) | 0;
       var t = all[i]; all[i] = all[j]; all[j] = t;
     }
     var pick = all.slice(0, 14);
@@ -984,7 +994,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.6.2';
+if (el) el.textContent = 'v1.5.7.0';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
