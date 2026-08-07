@@ -644,6 +644,10 @@ function pageCat(cat) {
       var n = stripAccents(p[0]);
       return words.some(function (w) { return n.indexOf(w) >= 0; });
     });
+    // Shuffle random moi F5 (nhu Trang chu / Akce / Ban buon)
+    for (var i = items.length - 1; i > 0; i--) {
+      var j = (_rng() * (i + 1)) | 0, tmp = items[i]; items[i] = items[j]; items[j] = tmp;
+    }
     var t = TILES.filter(function (x) { return x[2] === cat; })[0] || ['', cat, cat];
     el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
       "<h2 style='font-size:.95em'>" + t[0] + ' ' + esc(t[1]) + ' — ' + items.length +
@@ -995,7 +999,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.7.4';
+if (el) el.textContent = 'v1.5.7.5';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
