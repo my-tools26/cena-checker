@@ -464,18 +464,22 @@ function retailRows(items, offFilter) {
 }
 
 /* ---------- cac trang ---------- */
-function pageHome() {
+function pageHome(keepOrder) {
   var el = $('#main');
   el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
     "<p class='muted'>Đang tải giá khuyến mãi…</p>";
   loadRetail().then(function (d) {
     var off = offSet('retail_off'), lower = new Set();
     off.forEach(function (x) { lower.add(stripAccents(x)); });
-    var all = retailOnly(d.items || []);
-    for (var i = all.length - 1; i > 0; i--) {
-      var j = (_rng() * (i + 1)) | 0;
-      var t = all[i]; all[i] = all[j]; all[j] = t;
+    // Chi shuffle khi vao trang moi (F5 hoac chuyen tab); an filter GIU nguyen thu tu.
+    if (!keepOrder || !DATA.homeAll) {
+      DATA.homeAll = retailOnly(d.items || []);
+      for (var i = DATA.homeAll.length - 1; i > 0; i--) {
+        var j = (_rng() * (i + 1)) | 0;
+        var t = DATA.homeAll[i]; DATA.homeAll[i] = DATA.homeAll[j]; DATA.homeAll[j] = t;
+      }
     }
+    var all = DATA.homeAll;
     var pick = all.slice(0, 14);
     var rows = retailRows(pick, lower);
     el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
@@ -487,7 +491,7 @@ function pageHome() {
       "<p class='muted' style='margin-top:20px'>So sánh giá siêu thị Séc — gõ tiếng Việt " +
       "có dấu hoặc không dấu đều được.<br>Dữ liệu chỉ mang tính tham khảo · " +
       "<a href='#/gioithieu'>Giới thiệu &amp; miễn trừ trách nhiệm</a></p>";
-    wireFilters('retail_off', 'data-rshop', pageHome);
+    wireFilters('retail_off', 'data-rshop', function () { pageHome(true); });
   });
 }
 
@@ -540,7 +544,7 @@ function freshHTML(all, lower) {
     'chưa/vừa bắt đầu — lên kế hoạch đi chợ trước.</p>';
 }
 
-function pageAkce() {
+function pageAkce(keepOrder) {
   var el = $('#main');
   el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
     filterBar(AKCE_WS_FILTERS, 'retail_off', 'data-rshop') +
@@ -548,11 +552,14 @@ function pageAkce() {
   loadRetail().then(function (d) {
     var off = offSet('retail_off'), lower = new Set();
     off.forEach(function (x) { lower.add(stripAccents(x)); });
-    // Akce: ban le + ban buon GOP CHUNG. Shuffle random moi F5 (nhu trang chu).
-    var items = (d.items || []).slice();
-    for (var i = items.length - 1; i > 0; i--) {
-      var j = (_rng() * (i + 1)) | 0, t = items[i]; items[i] = items[j]; items[j] = t;
+    // Chi shuffle khi vao trang moi; an filter GIU nguyen thu tu.
+    if (!keepOrder || !DATA.akceAll) {
+      DATA.akceAll = (d.items || []).slice();
+      for (var i = DATA.akceAll.length - 1; i > 0; i--) {
+        var j = (_rng() * (i + 1)) | 0, t = DATA.akceAll[i]; DATA.akceAll[i] = DATA.akceAll[j]; DATA.akceAll[j] = t;
+      }
     }
+    var items = DATA.akceAll;
     var rows = retailRows(items.slice(0, 60), lower);
     el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
       filterBar(AKCE_WS_FILTERS, 'retail_off', 'data-rshop') +
@@ -561,7 +568,7 @@ function pageAkce() {
       "<p class='muted' style='font-size:.85em'>Cập nhật " + esc(d.date || '') +
       " · Dữ liệu chỉ mang tính tham khảo · " +
       "<a href='#/gioithieu'>Giới thiệu &amp; miễn trừ trách nhiệm</a></p>";
-    wireFilters('retail_off', 'data-rshop', pageAkce);
+    wireFilters('retail_off', 'data-rshop', function () { pageAkce(true); });
   });
 }
 
@@ -592,21 +599,26 @@ function buildBBGroups(cat) {
   DATA.bbGroups = arr;
   return arr;
 }
-function pageBanbuon() {
+function pageBanbuon(keepOrder) {
   var el = $('#main');
   el.innerHTML = tilesHTML() + filterBar(WHOLESALE_FILTERS, 'bb_off', 'data-bbcol') +
     "<p class='muted'>Đang tải catalog bán buôn (lần đầu ~2MB, sau đó nhanh)…</p>";
   loadCatalog().then(function (cat) {
     var off = offSet('bb_off');
     var groups = buildBBGroups(cat);
-    var items = off.size ? groups.map(function (g) {          // bo kho bi tat
+    // Chi shuffle khi vao trang moi/doi filter/doi trang; giu index shuffle tren FULL groups.
+    if (!DATA.bbOrder || DATA.bbOrder.length !== groups.length) {
+      DATA.bbOrder = groups.map(function (_, i) { return i; });
+      for (var si = DATA.bbOrder.length - 1; si > 0; si--) {
+        var sj = (_rng() * (si + 1)) | 0;
+        var st = DATA.bbOrder[si]; DATA.bbOrder[si] = DATA.bbOrder[sj]; DATA.bbOrder[sj] = st;
+      }
+    }
+    var shuffled = DATA.bbOrder.map(function (i) { return groups[i]; });
+    var items = off.size ? shuffled.map(function (g) {         // bo kho bi tat
       var ofs = g.offers.filter(function (o) { return !off.has(o.slug); });
       return ofs.length ? { name: g.name, amount: g.amount, offers: ofs } : null;
-    }).filter(Boolean) : groups.slice();
-    // Shuffle random moi F5 (nhu Akce va Trang chu)
-    for (var si = items.length - 1; si > 0; si--) {
-      var sj = (_rng() * (si + 1)) | 0, st = items[si]; items[si] = items[sj]; items[sj] = st;
-    }
+    }).filter(Boolean) : shuffled;
     var PER = 30, npages = Math.max(1, Math.ceil(items.length / PER));
     if (bbPage > npages) bbPage = npages;
     var slice = items.slice((bbPage - 1) * PER, bbPage * PER);
@@ -629,11 +641,11 @@ function pageBanbuon() {
       bbPage + '/' + npages + ' · giá đã gồm DPH · cùng mặt hàng ở nhiều kho được ' +
       "gộp 1 dòng, ✅ là kho rẻ nhất · giá bán buôn cần tài khoản B2B · " +
       "<a href='#/gioithieu'>Giới thiệu &amp; miễn trừ trách nhiệm</a></p>";
-    wireFilters('bb_off', 'data-bbcol', function () { bbPage = 1; pageBanbuon(); });
+    wireFilters('bb_off', 'data-bbcol', function () { bbPage = 1; pageBanbuon(true); });
     document.querySelectorAll('[data-bbp]').forEach(function (a) {
       a.addEventListener('click', function (e) {
         e.preventDefault(); bbPage = +a.getAttribute('data-bbp');
-        pageBanbuon(); window.scrollTo(0, 0);
+        pageBanbuon(true); window.scrollTo(0, 0);
       });
     });
   }).catch(function (e) {
@@ -641,27 +653,30 @@ function pageBanbuon() {
   });
 }
 
-function pageCat(cat) {
+function pageCat(cat, keepOrder) {
   var el = $('#main'), words = CAT_WORDS[cat] || [];
   el.innerHTML = tilesHTML() + "<p class='muted'>Đang tải…</p>";
   loadRetail().then(function (d) {
     var off = offSet('retail_off'), lower = new Set();
     off.forEach(function (x) { lower.add(stripAccents(x)); });
-    var items = (d.items || []).filter(function (p) {
-      var n = stripAccents(p[0]);
-      return words.some(function (w) { return n.indexOf(w) >= 0; });
-    });
-    // Shuffle random moi F5 (nhu Trang chu / Akce / Ban buon)
-    for (var i = items.length - 1; i > 0; i--) {
-      var j = (_rng() * (i + 1)) | 0, tmp = items[i]; items[i] = items[j]; items[j] = tmp;
+    if (!keepOrder || !DATA.catCache || DATA.catCache.cat !== cat) {
+      var items = (d.items || []).filter(function (p) {
+        var n = stripAccents(p[0]);
+        return words.some(function (w) { return n.indexOf(w) >= 0; });
+      });
+      for (var i = items.length - 1; i > 0; i--) {
+        var j = (_rng() * (i + 1)) | 0, tmp = items[i]; items[i] = items[j]; items[j] = tmp;
+      }
+      DATA.catCache = { cat: cat, items: items };
     }
+    var items = DATA.catCache.items;
     var t = TILES.filter(function (x) { return x[2] === cat; })[0] || ['', cat, cat];
     el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
       "<h2 style='font-size:.95em'>" + t[0] + ' ' + esc(t[1]) + ' — ' + items.length +
       ' mặt hàng khuyến mãi</h2>' +
       (items.length ? tableHTML(retailRows(items.slice(0, 60), lower))
         : "<p class='muted'>Tuần này không có khuyến mãi nhóm này.</p>");
-    wireFilters('retail_off', 'data-rshop', function () { pageCat(cat); });
+    wireFilters('retail_off', 'data-rshop', function () { pageCat(cat, true); });
   });
 }
 
@@ -1006,7 +1021,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.7.9';
+if (el) el.textContent = 'v1.5.8.0';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
