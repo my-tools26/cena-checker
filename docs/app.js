@@ -546,13 +546,10 @@ function pageAkce() {
   loadRetail().then(function (d) {
     var off = offSet('retail_off'), lower = new Set();
     off.forEach(function (x) { lower.add(stripAccents(x)); });
-    // Akce: ban le + ban buon GOP CHUNG (giong Railway). XAO TRON theo ngay chu
-    // KHONG xep theo % giam: hang ban buon (Makro/JIP/Tamda) hay khong ghi %,
-    // xep theo % la bi day xuong cuoi -> khong bao gio thay tren trang.
+    // Akce: ban le + ban buon GOP CHUNG. Shuffle random moi F5 (nhu trang chu).
     var items = (d.items || []).slice();
-    var rnd = seededRand(dateSeed());
     for (var i = items.length - 1; i > 0; i--) {
-      var j = (rnd() * (i + 1)) | 0, t = items[i]; items[i] = items[j]; items[j] = t;
+      var j = (_rng() * (i + 1)) | 0, t = items[i]; items[i] = items[j]; items[j] = t;
     }
     var rows = retailRows(items.slice(0, 60), lower);
     el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
@@ -603,7 +600,11 @@ function pageBanbuon() {
     var items = off.size ? groups.map(function (g) {          // bo kho bi tat
       var ofs = g.offers.filter(function (o) { return !off.has(o.slug); });
       return ofs.length ? { name: g.name, amount: g.amount, offers: ofs } : null;
-    }).filter(Boolean) : groups;
+    }).filter(Boolean) : groups.slice();
+    // Shuffle random moi F5 (nhu Akce va Trang chu)
+    for (var si = items.length - 1; si > 0; si--) {
+      var sj = (_rng() * (si + 1)) | 0, st = items[si]; items[si] = items[sj]; items[sj] = st;
+    }
     var PER = 30, npages = Math.max(1, Math.ceil(items.length / PER));
     if (bbPage > npages) bbPage = npages;
     var slice = items.slice((bbPage - 1) * PER, bbPage * PER);
@@ -999,7 +1000,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.7.2';
+if (el) el.textContent = 'v1.5.7.3';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
