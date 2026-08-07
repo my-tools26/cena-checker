@@ -440,10 +440,11 @@ function retailRows(items, offFilter) {
   return items.map(function (p) {
     var seen = {};
     var offers = p[2].filter(function (d) {
-      return !offFilter.has(stripAccents(d[0]).split(' ')[0]);
+      // tach ca space va dau cham -> "Košík.cz" -> "košík" (khop nut filter "Košík")
+      return !offFilter.has(stripAccents(d[0]).split(/[\s.]/)[0]);
     }).map(function (d) {
       var shop = canonShop(d[0]);
-      return { shop: shop, slug: stripAccents(shop).split(' ')[0], price: d[1],
+      return { shop: shop, slug: stripAccents(shop).split(/[\s.]/)[0], price: d[1],
                unit: d[2], pct: d[3], valid: d[4], wholesale: false };
     }).filter(function (o) {          // bo deal trung y het (cung kho + cung gia)
       var k = o.slug + '|' + o.price;
@@ -999,7 +1000,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.7.5';
+if (el) el.textContent = 'v1.5.7.6';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
