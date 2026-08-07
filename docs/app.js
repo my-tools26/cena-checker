@@ -688,8 +688,7 @@ function pageSearch(query) {
 
   loadDict().then(function () {
     var cs = viTranslate(raw);
-    var head = "<h1 style='font-size:1.15em'>Kết quả: " + esc(query) + '</h1>' +
-      (cs !== raw ? "<p class='muted'>(tự dịch sang tiếng Séc: <b>" + esc(cs) + '</b>)</p>' : '');
+    var head = "<h1 style='font-size:1.15em'>Kết quả: " + esc(query) + '</h1>';
 
     if (isEan) return searchByEan(raw, head, el);
     return searchByText(raw, cs, head, el);
@@ -1021,7 +1020,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.8.0';
+if (el) el.textContent = 'v1.5.8.1';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
