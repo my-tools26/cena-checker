@@ -34,7 +34,15 @@ var TILES = [['🍎', 'Rau quả', 'ovoce'], ['🥩', 'Thịt cá', 'maso'],
   ['🥤', 'Đồ uống', 'napoje'], ['☕', 'Cà phê & trà', 'kava'],
   ['🧴', 'Drogerie', 'drogerie'], ['🐶', 'Thú cưng', 'mazlicci']];
 var CAT_WORDS = {
-  ovoce: ['ovoce', 'zelenina', 'jablk', 'banan', 'rajcat', 'brambor', 'cibul', 'mrkev'],
+  ovoce: ['ovoce', 'ovocn', 'zelenina', 'jablk', 'banan', 'banán', 'hrozn', 'meloun',
+    'ananas', 'pomeranc', 'pomeranč', 'mandarink', 'broskv', 'svestk', 'tresn',
+    'jahod', 'boruvk', 'malin', 'hrusk', 'avokad', 'kokos', 'mango', 'kiwi',
+    'limetk', 'citron', 'ostruzin', 'brusink', 'merunk', 'meruňk', 'fik', 'datle',
+    'granatov', 'kaki', 'pitahaya', 'papaj', 'papáj', 'marakuja',
+    'rajcat', 'brambor', 'cibul', 'mrkev', 'okurk', 'paprik', 'zeli', 'salat',
+    'spenat', 'houb', 'kvetak', 'brokolic', 'kukuric', 'dyne', 'cuket', 'lilek',
+    'redkev', 'repa', 'celer', 'porek', 'chrest', 'tofu', 'klicky', 'bylink',
+    'koriandr', 'bazalk', 'kopr', 'cesnek', 'zazvor', 'chilli'],
   maso: ['maso', 'kureci', 'veprov', 'hovezi', 'ryba', 'losos', 'sunka', 'parky', 'krevet'],
   mleko: ['mleko', 'jogurt', 'syr', 'maslo', 'vejce', 'smetana', 'tvaroh', 'eidam'],
   pecivo: ['chleb', 'rohlik', 'pecivo', 'toast', 'croissant', 'bageta'],
@@ -998,7 +1006,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.7.8';
+if (el) el.textContent = 'v1.5.7.9';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
