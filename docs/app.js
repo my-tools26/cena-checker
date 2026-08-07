@@ -463,18 +463,12 @@ function pageHome() {
   loadRetail().then(function (d) {
     var off = offSet('retail_off'), lower = new Set();
     off.forEach(function (x) { lower.add(stripAccents(x)); });
-    // 7 deal HOT nhat (% giam sau nhat) + 7 mat hang RANDOM khac.
-    // Vua thay deal ngon (nhu Meloun -66%), vua co yeu to kham pha.
     var all = retailOnly(d.items || []);
-    var sorted = all.slice().sort(function (a, b) { return bestPct(b) - bestPct(a); });
-    var top = sorted.slice(0, 7);
-    var topSet = new Set(top);
-    var rest = all.filter(function (x) { return !topSet.has(x); });
-    for (var i = rest.length - 1; i > 0; i--) {
+    for (var i = all.length - 1; i > 0; i--) {
       var j = (_rng() * (i + 1)) | 0;
-      var t = rest[i]; rest[i] = rest[j]; rest[j] = t;
+      var t = all[i]; all[i] = all[j]; all[j] = t;
     }
-    var pick = top.concat(rest.slice(0, 7));
+    var pick = all.slice(0, 14);
     var rows = retailRows(pick, lower);
     el.innerHTML = tilesHTML() + filterBar(RETAIL_FILTERS, 'retail_off', 'data-rshop', RETAIL_SHOWN) +
       "<h2 style='font-size:.95em'>💡 MUA GÌ Ở ĐÂU HÔM NAY</h2>" +
@@ -1004,7 +998,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.7.7';
+if (el) el.textContent = 'v1.5.7.8';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
