@@ -967,18 +967,6 @@ function initScanner() {
   if (!/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) btn.style.display = 'none';
 }
 
-/* ---------- xao tron navbar 1 lan / load ---------- */
-(function () {
-  var nav = document.querySelector('.navtabs');
-  if (!nav) return;
-  var kids = Array.prototype.slice.call(nav.children);
-  for (var i = kids.length - 1; i > 0; i--) {
-    var j = (_rng() * (i + 1)) | 0;
-    var t = kids[i]; kids[i] = kids[j]; kids[j] = t;
-  }
-  kids.forEach(function (k) { nav.appendChild(k); });
-})();
-
 /* ---------- dieu huong ---------- */
 function route() {
   var h = location.hash.replace(/^#/, '') || '/';
@@ -1011,7 +999,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.7.1';
+if (el) el.textContent = 'v1.5.7.2';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
