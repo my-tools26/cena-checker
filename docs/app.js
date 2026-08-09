@@ -1073,7 +1073,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.9.2';
+if (el) el.textContent = 'v1.5.9.3';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
@@ -1111,8 +1111,8 @@ if (el) el.textContent = 'v1.5.9.2';
     var all = []; panel.querySelectorAll('.stp').forEach(function (b) { all.push(b.getAttribute('data-k')); });
     save(all); paint(); apply();
   });
-  function show() { panel.classList.add('open'); }
-  function hide() { panel.classList.remove('open'); panel.classList.remove('mforce'); }
+  function show() { panel.classList.add('open'); document.body.classList.add('q-focused'); }
+  function hide() { panel.classList.remove('open'); panel.classList.remove('mforce'); document.body.classList.remove('q-focused'); }
   input.addEventListener('focus', show);
   input.addEventListener('click', show);
   // Nut '🏪 Loc' cho mobile + trang search: toggle .mforce -> CSS moi cho hien
