@@ -120,15 +120,15 @@
      khong phai vuot xuong sau khi quet ma vach. Desktop giu nguyen. */
   body.is-search #main > .tiles,
   body.is-search #main > h1{display:none}
-  /* Mobile + trang search: khong tu bung bang siêu thi khi focus search */
-  body.is-search .filterwrap.open{display:none}
-  body.is-search .filterwrap.open.mforce{display:block}
-  /* Nut mo/dong filter thu cong cho mobile + search */
-  body.is-search #filterbtn{display:inline-block}
+  /* Mobile MOI trang: khong tu bung bang sieu thi khi focus search;
+     phai bam nut '🏪 Loc' de mo (.mforce). */
+  .filterwrap.open{display:none}
+  .filterwrap.open.mforce{display:block}
  }
  /* Ban giu HTML nhung an UI: viewtabs 'Tat ca/Sieu thi/Ban buon' - de phong khi can khoi phuc */
  .viewtabs{display:none !important}
- /* Nut '🏪 Loc' mac dinh an, chi hien tren mobile + search page (media query o tren) */
- #filterbtn{display:none;margin:6px 0 4px;padding:6px 12px;font-size:.85em;border:1px solid var(--chip-border);border-radius:16px;background:var(--card);color:var(--accent);cursor:pointer}
+ /* Nut '🏪 Loc' - mac dinh an tren desktop, chi hien tren mobile (media query o tren) */
+ #filterbtn{margin:6px 0 4px;padding:6px 12px;font-size:.85em;border:1px solid var(--chip-border);border-radius:16px;background:var(--card);color:var(--accent);cursor:pointer}
+ @media(min-width:641px){#filterbtn{display:none}}
  .stact{margin-top:2px}
  .stact button{font-size:.78em;padding:3px 10px;margin-right:6px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--muted);cursor:pointer}
