@@ -1037,7 +1037,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.8.2';
+if (el) el.textContent = 'v1.5.8.3';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
