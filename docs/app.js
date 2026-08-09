@@ -1014,7 +1014,11 @@ function route() {
   });
   if (h.indexOf('/q/') === 0) {
     var q = decodeURIComponent(h.slice(3));
-    $('#q').value = q; pageSearch(q);
+    var qEl = $('#q');
+    qEl.value = q;
+    // Boi xanh san query cu -> quet/go tiep se tu de len ma khong can xoa tay
+    setTimeout(function () { try { qEl.focus(); qEl.select(); } catch (e) {} }, 0);
+    pageSearch(q);
   } else if (h.indexOf('/cat/') === 0) { pageCat(h.slice(5)); }
   else if (h === '/akce') pageAkce();
   else if (h === '/banbuon') { bbPage = 1; pageBanbuon(); }
@@ -1045,7 +1049,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.8.6';
+if (el) el.textContent = 'v1.5.8.7';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
