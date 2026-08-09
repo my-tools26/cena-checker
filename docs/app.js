@@ -1017,7 +1017,10 @@ function route() {
     var qEl = $('#q');
     qEl.value = q;
     // Boi xanh san query cu -> quet/go tiep se tu de len ma khong can xoa tay
-    setTimeout(function () { try { qEl.focus(); qEl.select(); } catch (e) {} }, 0);
+    // Mobile can setSelectionRange + timeout dai hon focus() moi kip
+    setTimeout(function () {
+      try { qEl.focus(); qEl.setSelectionRange(0, qEl.value.length); } catch (e) {}
+    }, 150);
     pageSearch(q);
   } else if (h.indexOf('/cat/') === 0) { pageCat(h.slice(5)); }
   else if (h === '/akce') pageAkce();
@@ -1032,12 +1035,20 @@ $('#searchform').addEventListener('submit', function (e) {
   var q = $('#q').value.trim();
   if (q) location.hash = '#/q/' + encodeURIComponent(q);
 });
-// Bam vao o tim kiem -> boi xanh toan bo (desktop + mobile) -> go moi de tu de len
+// Bam / cham vao o tim kiem -> boi xanh toan bo (desktop + mobile)
+// Mobile: dung setSelectionRange + timeout de vuot qua thoi diem browser bo select
 (function () {
   var q = $('#q');
-  function selAll() { try { q.select(); } catch (e) {} }
-  q.addEventListener('focus', selAll);
-  q.addEventListener('click', selAll);
+  function selAll() {
+    if (!q.value) return;
+    try {
+      q.focus();
+      q.setSelectionRange(0, q.value.length);
+    } catch (e) {}
+  }
+  q.addEventListener('focus', function () { setTimeout(selAll, 50); });
+  q.addEventListener('click', function () { setTimeout(selAll, 50); });
+  q.addEventListener('touchend', function () { setTimeout(selAll, 150); });
 })();
 $('#themebtn').addEventListener('click', function () {
   var dark = document.documentElement.classList.toggle('dark');
@@ -1049,7 +1060,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.8.7';
+if (el) el.textContent = 'v1.5.8.8';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
