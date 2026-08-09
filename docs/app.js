@@ -205,10 +205,27 @@ function loadCatalog(onProgress) {
   if (onProgress) onProgress();
   return getJSON('data/catalog.json').then(function (c) { return (DATA.catalog = c); });
 }
+/* Deal het akce > 1 ngay -> loai bo (data cu, khong show nua) */
+function isExpiredDeal(valid) {
+  if (!valid) return false;
+  var m = valid.match(/(\d{1,2})\.\s*(\d{1,2})\./g);
+  if (!m || !m.length) return false;
+  var last = /(\d{1,2})\.\s*(\d{1,2})\./.exec(m[m.length - 1]);
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  var end = new Date(today.getFullYear(), +last[2] - 1, +last[1]);
+  return (today - end) / 86400000 > 1;
+}
 function loadRetail() {
   if (DATA.retail !== null && DATA.retail !== undefined) return Promise.resolve(DATA.retail);
-  return getJSON('data/retail.json').then(function (d) { return (DATA.retail = d); })
-    .catch(function () { return (DATA.retail = { items: [] }); });
+  return getJSON('data/retail.json').then(function (d) {
+    // Loc bo deal het han >1 ngay ngay khi load; item con >=1 deal thi giu
+    var items = (d.items || []).map(function (p) {
+      var deals = p[2].filter(function (dd) { return !isExpiredDeal(dd[4]); });
+      return deals.length ? [p[0], p[1], deals] : null;
+    }).filter(Boolean);
+    d.items = items;
+    return (DATA.retail = d);
+  }).catch(function () { return (DATA.retail = { items: [] }); });
 }
 
 /* ---------- bo loc kho (nho localStorage) ---------- */
@@ -1020,7 +1037,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.8.1';
+if (el) el.textContent = 'v1.5.8.2';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
