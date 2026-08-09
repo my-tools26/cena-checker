@@ -1036,19 +1036,30 @@ $('#searchform').addEventListener('submit', function (e) {
   if (q) location.hash = '#/q/' + encodeURIComponent(q);
 });
 // Bam / cham vao o tim kiem -> boi xanh toan bo (desktop + mobile)
-// Mobile: dung setSelectionRange + timeout de vuot qua thoi diem browser bo select
+// iOS Safari: phai preventDefault mouseup neu khong con tro se dat lai vi tri cham
 (function () {
   var q = $('#q');
+  var justSelected = false;
   function selAll() {
     if (!q.value) return;
     try {
-      q.focus();
       q.setSelectionRange(0, q.value.length);
+      justSelected = true;
+      setTimeout(function () { justSelected = false; }, 200);
     } catch (e) {}
   }
-  q.addEventListener('focus', function () { setTimeout(selAll, 50); });
-  q.addEventListener('click', function () { setTimeout(selAll, 50); });
-  q.addEventListener('touchend', function () { setTimeout(selAll, 150); });
+  q.addEventListener('focus', function () {
+    requestAnimationFrame(selAll);
+    setTimeout(selAll, 50);
+    setTimeout(selAll, 200);
+  });
+  q.addEventListener('click', selAll);
+  q.addEventListener('touchend', function () {
+    setTimeout(selAll, 0);
+    setTimeout(selAll, 100);
+  });
+  // Chan mouseup ngay sau khi selAll -> tranh iOS/desktop dat con tro tai cham
+  q.addEventListener('mouseup', function (e) { if (justSelected) e.preventDefault(); });
 })();
 $('#themebtn').addEventListener('click', function () {
   var dark = document.documentElement.classList.toggle('dark');
@@ -1060,7 +1071,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.8.8';
+if (el) el.textContent = 'v1.5.8.9';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
