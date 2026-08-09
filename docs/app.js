@@ -1028,6 +1028,13 @@ $('#searchform').addEventListener('submit', function (e) {
   var q = $('#q').value.trim();
   if (q) location.hash = '#/q/' + encodeURIComponent(q);
 });
+// Bam vao o tim kiem -> boi xanh toan bo (desktop + mobile) -> go moi de tu de len
+(function () {
+  var q = $('#q');
+  function selAll() { try { q.select(); } catch (e) {} }
+  q.addEventListener('focus', selAll);
+  q.addEventListener('click', selAll);
+})();
 $('#themebtn').addEventListener('click', function () {
   var dark = document.documentElement.classList.toggle('dark');
   localStorage.setItem('cctheme', dark ? 'dark' : 'light');
@@ -1038,7 +1045,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.8.5';
+if (el) el.textContent = 'v1.5.8.6';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
