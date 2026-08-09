@@ -1012,6 +1012,8 @@ function route() {
   document.querySelectorAll('[data-nav]').forEach(function (a) {
     a.classList.toggle('on', a.getAttribute('data-nav') === h);
   });
+  // Trang search: them class 'is-search' -> CSS mobile an tiles + h1 de ket qua len cao
+  document.body.classList.toggle('is-search', h.indexOf('/q/') === 0);
   if (h.indexOf('/q/') === 0) {
     var q = decodeURIComponent(h.slice(3));
     var qEl = $('#q');
@@ -1071,7 +1073,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.8.9';
+if (el) el.textContent = 'v1.5.9.1';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
@@ -1110,11 +1112,24 @@ if (el) el.textContent = 'v1.5.8.9';
     save(all); paint(); apply();
   });
   function show() { panel.classList.add('open'); }
-  function hide() { panel.classList.remove('open'); }
+  function hide() { panel.classList.remove('open'); panel.classList.remove('mforce'); }
   input.addEventListener('focus', show);
   input.addEventListener('click', show);
+  // Nut '🏪 Loc' cho mobile + trang search: toggle .mforce -> CSS moi cho hien
+  var fbtn = document.getElementById('filterbtn');
+  if (fbtn) {
+    fbtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (!panel.classList.contains('open')) panel.classList.add('open');
+      panel.classList.toggle('mforce');
+      fbtn.textContent = panel.classList.contains('mforce') ? '✕ Đóng lọc' : '🏪 Lọc siêu thị';
+    });
+  }
   document.addEventListener('click', function (e) {
-    if (!panel.contains(e.target) && e.target !== input) hide();
+    if (!panel.contains(e.target) && e.target !== input && e.target !== fbtn) {
+      hide();
+      if (fbtn) fbtn.textContent = '🏪 Lọc siêu thị';
+    }
   });
   paint();
   window.addEventListener('load', apply);
