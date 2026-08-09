@@ -380,13 +380,14 @@ function rowHTML(name, amount, offers) {
     if (!o) { tds += "<td class='a'>—</td>"; continue; }
     var per = o.unit || unitPrice(o.amount || amount, o.price, o.pack);
     var ks = (o.pack > 1) ? "<span class='a'> · " + (o.price / o.pack).toFixed(2) + ' Kč/ks</span>' : '';
-    var dph = o.wholesale ? " <span class='a' style='font-weight:normal;font-size:.75em'>s DPH</span>" : '';
+    var dph = o.wholesale ? " <span class='a' style='font-weight:normal;font-size:.75em'>vč. DPH</span>" : '';
+    var netLine = (o.wholesale && o.net) ? "<span class='a'>" + o.net.toFixed(2) + ' Kč bez DPH</span>' : '';
     var pct = o.pct ? " <span class='pctb'>" + esc(o.pct) + '</span>' : '';
     var d = o.valid ? expShort(o.valid) : null;
     var exp = d ? " <span class='expb'>⏰ " + esc(d) + '</span>' : '';
     tds += "<td" + (i === 0 ? " class='w'" : '') + " data-shop='" + esc(o.slug || '') + "'>" +
       shopBadge(o.shop) + exp + "<span class='mxp'>" + o.price.toFixed(2) + ' Kč' + dph + pct +
-      '</span>' + (per ? "<span class='a'>" + esc(per) + '</span>' : '') + ks + '</td>';
+      '</span>' + netLine + (per ? "<span class='a'>" + esc(per) + '</span>' : '') + ks + '</td>';
   }
   return '<tr><td>' + iconFor(name) + '<b>' + esc(name) + '</b>' +
     (amount ? " <span class='a'>" + esc(amount) + '</span>' : '') + '</td>' + tds + '</tr>';
@@ -405,7 +406,7 @@ function tilesHTML() {
 /* ---------- gom du lieu -> hang ---------- */
 function catalogOffers(item) {
   return { shop: SHOP[item[3]], slug: SHOP_SLUG[item[3]], price: item[1],
-           amount: item[2], pack: item[4] || 1, wholesale: true };
+           amount: item[2], pack: item[4] || 1, net: item[6] || null, wholesale: true };
 }
 /* Trang chu chi hien gia BAN LE: bo deal cua kho ban buon (giong WHOLESALE_KEYWORDS) */
 var WHOLESALE_KW = ['jip', 'makro', 'tamda', 'bidfood'];
@@ -1037,7 +1038,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.8.3';
+if (el) el.textContent = 'v1.5.8.4';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {

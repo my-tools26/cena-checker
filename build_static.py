@@ -102,8 +102,13 @@ def build_catalog():
             if not name or not price:
                 continue
             ean = it.get("ean") or ""
-            items.append([name, round(float(price), 2), it.get("amount", "") or "",
-                          sid, int(it.get("pack") or 1), ean])
+            row = [name, round(float(price), 2), it.get("amount", "") or "",
+                   sid, int(it.get("pack") or 1), ean]
+            # them field 7 = gia net (bez DPH) neu co (Makro chu yeu)
+            pn = it.get("price_net")
+            if pn:
+                row.append(round(float(pn), 2))
+            items.append(row)
         meta[fn] = {"n": len(items) - n0, "date": d.get("date", ""),
                     "valid": d.get("valid", "")}
         print(f"  {fn:30s} +{len(items)-n0:6d}")
