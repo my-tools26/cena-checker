@@ -381,7 +381,7 @@ function rowHTML(name, amount, offers) {
     var per = o.unit || unitPrice(o.amount || amount, o.price, o.pack);
     var ks = (o.pack > 1) ? "<span class='a'> · " + (o.price / o.pack).toFixed(2) + ' Kč/ks</span>' : '';
     var dph = o.wholesale ? " <span class='a' style='font-weight:normal;font-size:.75em'>vč. DPH</span>" : '';
-    var netLine = (o.wholesale && o.net) ? "<span class='a'>" + o.net.toFixed(2) + ' Kč bez DPH</span>' : '';
+    var netLine = (o.wholesale && o.net) ? "<span class='a'>" + o.net.toFixed(2) + ' Kč bez DPH' + (per ? ' · ' : '') + '</span>' : '';
     var pct = o.pct ? " <span class='pctb'>" + esc(o.pct) + '</span>' : '';
     var d = o.valid ? expShort(o.valid) : null;
     var exp = d ? " <span class='expb'>⏰ " + esc(d) + '</span>' : '';
@@ -1073,7 +1073,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.9.3';
+if (el) el.textContent = 'v1.5.9.4';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
