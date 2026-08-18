@@ -1,5 +1,5 @@
 {
- "date": "2026-08-04",
+ "date": "2026-08-18",
  "shop": "linsan",
  "items": [
   {
@@ -270,21 +270,21 @@
   },
   {
    "name": "DobraVoda 1.5L Nep. Hrozny",
-   "price": 12.55,
+   "price": 12.98,
    "amount": "1.5 l",
    "unit": "",
    "ean": "8594001406197"
   },
   {
    "name": "DobraVoda 1.5L Nep. Malina",
-   "price": 12.55,
+   "price": 12.98,
    "amount": "1.5 l",
    "unit": "",
    "ean": "8594001406012"
   },
   {
    "name": "DobraVoda 1.5L Nep. Jahoda",
-   "price": 12.55,
+   "price": 12.98,
    "amount": "1.5 l",
    "unit": "",
    "ean": "8594001406807"
@@ -305,56 +305,56 @@
   },
   {
    "name": "Kubík water 500ml Jablka",
-   "price": 11.99,
+   "price": 10.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "5901067461108"
   },
   {
    "name": "Kubík water 500ml Malina",
-   "price": 11.99,
+   "price": 10.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "5901067400237"
   },
   {
    "name": "Kubík water 500ml Hruška",
-   "price": 11.99,
+   "price": 10.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "5901067475211"
   },
   {
    "name": "Kubík water 500ml Jahoda",
-   "price": 11.99,
+   "price": 10.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "5901067474108"
   },
   {
    "name": "Relax Fruit Drink 1L Pomerač",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057636074"
   },
   {
    "name": "Relax Fruit Drink 1L Jablko",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057636098"
   },
   {
    "name": "Relax Fruit Drink 1L Multivitamín",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057636111"
   },
   {
    "name": "OKF Aloe King 1.5L Original",
-   "price": 59.98,
+   "price": 49.98,
    "amount": "1.5 l",
    "unit": "",
    "ean": "8809041420912"
@@ -522,21 +522,21 @@
   },
   {
    "name": "Nestea 0,5L BLACK TEA - LEMON",
-   "price": 13.98,
+   "price": 12.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646203516"
   },
   {
    "name": "Nestea 0,5L GREEN TEA - CITRUS",
-   "price": 13.98,
+   "price": 12.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646203592"
   },
   {
    "name": "Nestea 0,5L BLACK TEA - PEACH",
-   "price": 13.98,
+   "price": 12.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646203554"
@@ -746,21 +746,21 @@
   },
   {
    "name": "Nestea 1.5L GREEN TEA - CITRUS",
-   "price": 24.56,
+   "price": 23.98,
    "amount": "1.5 l",
    "unit": "",
    "ean": "8595646203615"
   },
   {
    "name": "Nestea 1.5L BLACK TEA - PEACH",
-   "price": 24.56,
+   "price": 23.98,
    "amount": "1.5 l",
    "unit": "",
    "ean": "8595646203578"
   },
   {
    "name": "Nestea 1.5L GREEN TEA - STRAWBERRY ALOE VERA",
-   "price": 24.56,
+   "price": 23.98,
    "amount": "1.5 l",
    "unit": "",
    "ean": "8595646203653"
@@ -900,28 +900,28 @@
   },
   {
    "name": "Jagoš Chateau 1L Muller thurgau",
-   "price": 46.98,
+   "price": 44.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594029226951"
   },
   {
    "name": "Jagoš Chateau 1L Modrý Portugal",
-   "price": 46.98,
+   "price": 44.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594029222489"
   },
   {
    "name": "Jagoš Chateau 1L Frankovka",
-   "price": 46.98,
+   "price": 44.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594029226968"
   },
   {
    "name": "Jagoš Chateau 1L Veltlínské Zelené",
-   "price": 46.98,
+   "price": 44.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594029222496"
@@ -998,28 +998,28 @@
   },
   {
    "name": "Bohemia chips 60g Slanina",
-   "price": 18.55,
+   "price": 15.98,
    "amount": "60 g",
    "unit": "",
    "ean": "8595606206144"
   },
   {
    "name": "Bohemia chips 60g Solené",
-   "price": 18.55,
+   "price": 15.98,
    "amount": "60 g",
    "unit": "",
    "ean": "8595606206106"
   },
   {
    "name": "Bohemia chips Vroubky 55g Pizza",
-   "price": 18.55,
+   "price": 15.98,
    "amount": "55 g",
    "unit": "",
    "ean": "8595606206229"
   },
   {
    "name": "Bohemia chips 60g Paprika",
-   "price": 18.55,
+   "price": 15.98,
    "amount": "60 g",
    "unit": "",
    "ean": "8595606206120"
@@ -1292,21 +1292,21 @@
   },
   {
    "name": "Lindor 200g Milk (červená)",
-   "price": 119.99,
+   "price": 79.98,
    "amount": "200 g",
    "unit": "",
    "ean": "8003340093000"
   },
   {
    "name": "Lindor 200g Assorted (žlutá)",
-   "price": 119.99,
+   "price": 79.98,
    "amount": "200 g",
    "unit": "",
    "ean": "8003340097916"
   },
   {
    "name": "Lindor 200g White (bílá)",
-   "price": 119.99,
+   "price": 79.98,
    "amount": "200 g",
    "unit": "",
    "ean": "8003340093017"
@@ -1565,28 +1565,28 @@
   },
   {
    "name": "Bounty 57g Bílý",
-   "price": 13.98,
+   "price": 12.75,
    "amount": "57 g",
    "unit": "",
    "ean": "40111216"
   },
   {
    "name": "Twix 50g",
-   "price": 13.65,
+   "price": 12.55,
    "amount": "50 g",
    "unit": "",
    "ean": "5000159459228"
   },
   {
    "name": "Twix xtra 75g",
-   "price": 16.98,
+   "price": 15.55,
    "amount": "75 g",
    "unit": "",
    "ean": "5900951028502"
   },
   {
    "name": "Mars 51g",
-   "price": 13.65,
+   "price": 12.55,
    "amount": "51 g",
    "unit": "",
    "ean": "5000159503273"
@@ -1600,21 +1600,21 @@
   },
   {
    "name": "Mars 2Pack 70g",
-   "price": 16.98,
+   "price": 15.55,
    "amount": "70 g",
    "unit": "",
    "ean": "5900951134937"
   },
   {
    "name": "Snickers CZ 50g 40ks/b",
-   "price": 13.65,
+   "price": 12.55,
    "amount": "50 g",
    "unit": "",
    "ean": "5000159461122"
   },
   {
    "name": "Snickers 2pack 75g 24ks/b",
-   "price": 16.98,
+   "price": 15.55,
    "amount": "75 g",
    "unit": "",
    "ean": "5900951027307"
@@ -2062,7 +2062,7 @@
   },
   {
    "name": "Zlaté Polomáčené 100g Mléčná",
-   "price": 19.55,
+   "price": 17.98,
    "amount": "100 g",
    "unit": "",
    "ean": "8593894904087"
@@ -2237,21 +2237,21 @@
   },
   {
    "name": "Zlaté Oplatky 146g Citron",
-   "price": 26.98,
+   "price": 25.98,
    "amount": "146 g",
    "unit": "",
    "ean": "8593894911092"
   },
   {
    "name": "Zlaté Oplatky 146g Čokoladové",
-   "price": 26.98,
+   "price": 25.98,
    "amount": "146 g",
    "unit": "",
    "ean": "8593894911061"
   },
   {
    "name": "Zlaté Oplatky 146g Ořechy",
-   "price": 26.98,
+   "price": 25.98,
    "amount": "146 g",
    "unit": "",
    "ean": "8593894911030"
@@ -2377,14 +2377,14 @@
   },
   {
    "name": "Natura 1,5l Jemně p.",
-   "price": 13.98,
+   "price": 13.99,
    "amount": "1,5 l",
    "unit": "",
    "ean": "5449000287700"
   },
   {
    "name": "Natura 1,5L Perlivá",
-   "price": 13.98,
+   "price": 13.99,
    "amount": "1,5 l",
    "unit": "",
    "ean": "5449000287724"
@@ -2405,14 +2405,14 @@
   },
   {
    "name": "Bohemia chips 60g Špíz",
-   "price": 18.55,
+   "price": 15.98,
    "amount": "60 g",
    "unit": "",
    "ean": "8595606206182"
   },
   {
    "name": "Nestea 1,5L BLACK TEA - LEMON",
-   "price": 24.56,
+   "price": 23.98,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8595646203530"
@@ -2454,7 +2454,7 @@
   },
   {
    "name": "Kubík water 500ml citron",
-   "price": 11.99,
+   "price": 10.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "5901067475105"
@@ -2608,28 +2608,28 @@
   },
   {
    "name": "DobraVoda 1,5L lesní jahoda",
-   "price": 12.55,
+   "price": 12.98,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8594001403301"
   },
   {
    "name": "DobraVoda 1,5L Citron",
-   "price": 12.55,
+   "price": 12.98,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8594001400539"
   },
   {
    "name": "DobraVoda 1,5L Pomeranč",
-   "price": 12.55,
+   "price": 12.98,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8594001400621"
   },
   {
    "name": "DobraVoda 1,5L lesní plody",
-   "price": 12.55,
+   "price": 12.98,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8594001406746"
@@ -2741,35 +2741,35 @@
   },
   {
    "name": "Zlaté Polomáčené 100g Hořká",
-   "price": 19.55,
+   "price": 17.98,
    "amount": "100 g",
    "unit": "",
    "ean": "8593894001175"
   },
   {
    "name": "Cielo 0,75L Chardonnay",
-   "price": 82.98,
+   "price": 77.98,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8008900001075"
   },
   {
    "name": "Cielo 0,75L Souvignon",
-   "price": 82.98,
+   "price": 77.98,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8008900005899"
   },
   {
    "name": "Cielo 0,75L Merlot",
-   "price": 82.98,
+   "price": 77.98,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8008900004212"
   },
   {
    "name": "Cielo 0,75L Cabernet Sauvignon",
-   "price": 82.98,
+   "price": 77.98,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8008900001037"
@@ -2804,7 +2804,7 @@
   },
   {
    "name": "Nestea 0,5L GREEN TEA - STRAWBERRY ALOE VERA",
-   "price": 13.98,
+   "price": 12.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646203639"
@@ -3230,7 +3230,7 @@
   },
   {
    "name": "Zlatopramen 1,5L 6ks/b",
-   "price": 38.55,
+   "price": 34.98,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8591036550918"
@@ -3278,7 +3278,7 @@
   },
   {
    "name": "Next 0,75L Shiraz Cabernet",
-   "price": 77.0,
+   "price": 74.98,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8594045653311"
@@ -3396,7 +3396,7 @@
   },
   {
    "name": "Monster 0,5L CZ Zelený ENERGY",
-   "price": 25.55,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "ean": "5060166692599"
@@ -3410,7 +3410,7 @@
   },
   {
    "name": "Next 0,75L Semillon Chardonnay",
-   "price": 77.0,
+   "price": 74.98,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8594045653250"
@@ -3452,7 +3452,7 @@
   },
   {
    "name": "Next 0.75L Merlot",
-   "price": 77.0,
+   "price": 74.98,
    "amount": "0.75 l",
    "unit": "",
    "ean": "8594045653304"
@@ -3508,7 +3508,7 @@
   },
   {
    "name": "Lindor 200g Salted Caramel",
-   "price": 119.99,
+   "price": 79.98,
    "amount": "200 g",
    "unit": "",
    "ean": "8003340801537"
@@ -3668,7 +3668,7 @@
   },
   {
    "name": "Monster 0,5L CZ JUICED - Ausie Lemonade Style",
-   "price": 25.55,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "ean": "5060166695477"
@@ -3983,7 +3983,7 @@
   },
   {
    "name": "OKF Coco 0.5L Kokos",
-   "price": 23.98,
+   "price": 22.98,
    "amount": "0.5 l",
    "unit": "",
    "ean": "8809041426815"
@@ -4214,7 +4214,7 @@
   },
   {
    "name": "OKF Aloe King 0,5L Jahoda",
-   "price": 23.98,
+   "price": 22.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "884394000903"
@@ -4249,14 +4249,14 @@
   },
   {
    "name": "Baronova Zahrada 2l Červená",
-   "price": 32.98,
+   "price": 31.55,
    "amount": "2 l",
    "unit": "",
    "ean": "8595622900521"
   },
   {
    "name": "Baronova Zahrada 2l Bílý",
-   "price": 32.98,
+   "price": 31.55,
    "amount": "2 l",
    "unit": "",
    "ean": "8595622900507"
@@ -4417,7 +4417,7 @@
   },
   {
    "name": "Bohemia chips Vroubky 55g Sůl",
-   "price": 18.55,
+   "price": 15.98,
    "amount": "55 g",
    "unit": "",
    "ean": "8595606206205"
@@ -4669,14 +4669,14 @@
   },
   {
    "name": "Old Porter 0,75L Rich Sweet Wine",
-   "price": 135.99,
+   "price": 129.98,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8410006032202"
   },
   {
    "name": "Old Porter 0,75L White Sweet Wine",
-   "price": 135.99,
+   "price": 129.98,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8410006235603"
@@ -4788,28 +4788,28 @@
   },
   {
    "name": "Kubik Play 400ml Jahoda",
-   "price": 13.98,
+   "price": 13.55,
    "amount": "400 ml",
    "unit": "",
    "ean": "5901067460835"
   },
   {
    "name": "Kubik Play 400ml Broskev",
-   "price": 13.98,
+   "price": 13.55,
    "amount": "400 ml",
    "unit": "",
    "ean": "5901067499811"
   },
   {
    "name": "Kubik Play 400ml Malina-Jablko",
-   "price": 13.98,
+   "price": 13.55,
    "amount": "400 ml",
    "unit": "",
    "ean": "5901067470834"
   },
   {
    "name": "Kubik Play 400ml Meloun",
-   "price": 13.98,
+   "price": 13.55,
    "amount": "400 ml",
    "unit": "",
    "ean": "5901067499408"
@@ -4858,14 +4858,14 @@
   },
   {
    "name": "Chio Tortillas Chips 110g Nacho Cheese",
-   "price": 28.98,
+   "price": 27.98,
    "amount": "110 g",
    "unit": "",
    "ean": "4001242002384"
   },
   {
    "name": "Chio Tortillas Chips 110g Hot Chilli",
-   "price": 28.98,
+   "price": 27.98,
    "amount": "110 g",
    "unit": "",
    "ean": "4001242002377"
@@ -4886,21 +4886,21 @@
   },
   {
    "name": "PomBar 50g Originál",
-   "price": 24.98,
+   "price": 19.98,
    "amount": "50 g",
    "unit": "",
    "ean": "8595606203532"
   },
   {
    "name": "PomBar 50g Kečup",
-   "price": 24.98,
+   "price": 19.98,
    "amount": "50 g",
    "unit": "",
    "ean": "8595606203556"
   },
   {
    "name": "PomBar 50g Sýr",
-   "price": 24.98,
+   "price": 19.98,
    "amount": "50 g",
    "unit": "",
    "ean": "8595606203570"
@@ -5019,14 +5019,14 @@
   },
   {
    "name": "Gajdošovo 2L Červené",
-   "price": 32.98,
+   "price": 31.55,
    "amount": "2 l",
    "unit": "",
    "ean": "8595622900361"
   },
   {
    "name": "Gajdošovo 2L Bílé",
-   "price": 32.98,
+   "price": 31.55,
    "amount": "2 l",
    "unit": "",
    "ean": "8595622900347"
@@ -5047,70 +5047,70 @@
   },
   {
    "name": "OKF Aloe King 0,5L Liči Lychee",
-   "price": 23.98,
+   "price": 22.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8809041426587"
   },
   {
    "name": "Relax Exotica 1L Mango",
-   "price": 21.98,
+   "price": 19.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057637712"
   },
   {
    "name": "Relax Exotica 1L Lici",
-   "price": 21.98,
+   "price": 19.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057637736"
   },
   {
    "name": "Relax Exotica 1L Kaktus",
-   "price": 21.98,
+   "price": 19.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646204247"
   },
   {
    "name": "Relax 1L 100% Jablka",
-   "price": 29.98,
+   "price": 26.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057631598"
   },
   {
    "name": "Relax 1L 100% Pomeranč",
-   "price": 39.99,
+   "price": 37.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057632038"
   },
   {
    "name": "Relax 1L Ananas",
-   "price": 34.98,
+   "price": 29.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646200539"
   },
   {
    "name": "Relax 1L Multivitamín",
-   "price": 28.55,
+   "price": 26.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057636050"
   },
   {
    "name": "Relax 1L Hruška",
-   "price": 28.99,
+   "price": 26.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057631574"
   },
   {
    "name": "Relax 1L Select - Pomeranč, Mandrinka, mango, Ma.",
-   "price": 23.98,
+   "price": 21.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057631666"
@@ -5201,7 +5201,7 @@
   },
   {
    "name": "Tiger 500ml ENERGY",
-   "price": 15.56,
+   "price": 15.55,
    "amount": "500 ml",
    "unit": "",
    "ean": "8594057637859"
@@ -5628,7 +5628,7 @@
   },
   {
    "name": "Relax 1L Jablko Jahoda",
-   "price": 36.98,
+   "price": 34.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057631444"
@@ -5642,7 +5642,7 @@
   },
   {
    "name": "Relax 1L Brusinka",
-   "price": 27.98,
+   "price": 24.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057631604"
@@ -6033,7 +6033,7 @@
   },
   {
    "name": "Zelí Kysané 510g - ZNOJMIA",
-   "price": 37.98,
+   "price": 39.95,
    "amount": "510 g",
    "unit": "",
    "ean": "8594001740062"
@@ -6502,28 +6502,28 @@
   },
   {
    "name": "Relax 1L 100% Rajče",
-   "price": 29.98,
+   "price": 26.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057631611"
   },
   {
    "name": "Relax 1L Mandarinka pomeranč s dužinou",
-   "price": 39.98,
+   "price": 37.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057636517"
   },
   {
    "name": "Relax 1L Select - Broskev",
-   "price": 27.98,
+   "price": 26.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057633530"
   },
   {
    "name": "Monster 0,5L CZ The Doctor - Valentino Rossi",
-   "price": 25.55,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "ean": "5060896626321"
@@ -6593,7 +6593,7 @@
   },
   {
    "name": "Hašlerky Originál 90g",
-   "price": 18.98,
+   "price": 18.55,
    "amount": "90 g",
    "unit": "",
    "ean": "8593893306035"
@@ -6618,6 +6618,13 @@
    "amount": "33 g",
    "unit": "",
    "ean": "7613036268677"
+  },
+  {
+   "name": "Croissant 7days 60g Jahoda",
+   "price": 9.98,
+   "amount": "60 g",
+   "unit": "",
+   "ean": "5201360521418"
   },
   {
    "name": "SanBenedetto 1.5L Frizzante - Perlivá",
@@ -6712,7 +6719,7 @@
   },
   {
    "name": "Magnesia Plus Boost 0.7L Min.Mandar.+limeta+zazvor PET",
-   "price": 23.55,
+   "price": 21.55,
    "amount": "0.7 l",
    "unit": "",
    "ean": "8594001026371"
@@ -6810,7 +6817,7 @@
   },
   {
    "name": "Relax 1L Višeň - Jablko.",
-   "price": 27.98,
+   "price": 24.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646204865"
@@ -7118,7 +7125,7 @@
   },
   {
    "name": "Cielo 0,75L Rosato Veneto (Rosé)",
-   "price": 82.98,
+   "price": 77.98,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8008900006018"
@@ -7524,28 +7531,28 @@
   },
   {
    "name": "Jagoš Chateau 1L Chardonnay",
-   "price": 46.98,
+   "price": 44.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595622903515"
   },
   {
    "name": "Jagoš Chateau 1L Merlot",
-   "price": 46.98,
+   "price": 44.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595622903508"
   },
   {
    "name": "Jagoš Chateau 1L Cabernet Sauvignon",
-   "price": 46.98,
+   "price": 44.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595622903492"
   },
   {
    "name": "Jagoš Chateau 1L Sauvignon Blanc",
-   "price": 46.98,
+   "price": 44.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595622903522"
@@ -7587,7 +7594,7 @@
   },
   {
    "name": "Hašlerky 90g Extra Silné",
-   "price": 18.98,
+   "price": 18.55,
    "amount": "90 g",
    "unit": "",
    "ean": "8593893306226"
@@ -7965,14 +7972,14 @@
   },
   {
    "name": "Kubík Ovocná Kapsicka 100g Banán, Jablko, Jahoda",
-   "price": 10.98,
+   "price": 10.55,
    "amount": "100 g",
    "unit": "",
    "ean": "8594057637897"
   },
   {
    "name": "Kubík Ovocná Kapsicka 100g Banán, Jablko",
-   "price": 10.98,
+   "price": 10.55,
    "amount": "100 g",
    "unit": "",
    "ean": "8594057637873"
@@ -8266,14 +8273,14 @@
   },
   {
    "name": "Monster 0,5L CZ Ultra ZERO (bílé)",
-   "price": 25.55,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "ean": "5060896626406"
   },
   {
    "name": "Monster 0,5L CZ Ultra Rosá",
-   "price": 25.55,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "ean": "5061013941846"
@@ -8405,21 +8412,21 @@
   },
   {
    "name": "Chio Chips 65g BIG PEP - Smoky Bacon",
-   "price": 25.98,
+   "price": 24.98,
    "amount": "65 g",
    "unit": "",
    "ean": "5997312702065"
   },
   {
    "name": "Chio Chips 65g FRIED CHICKEN",
-   "price": 25.98,
+   "price": 24.98,
    "amount": "65 g",
    "unit": "",
    "ean": "5941445668651"
   },
   {
    "name": "SVIJANY - 0,5l 11 PLECH Svijanský MÁZ (Xanh)",
-   "price": 16.98,
+   "price": 15.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8594030013045"
@@ -8447,21 +8454,21 @@
   },
   {
    "name": "Strongbow Plech 440ml Tropical 4,5%",
-   "price": 20.98,
+   "price": 19.55,
    "amount": "440 ml",
    "unit": "",
    "ean": "8586000987791"
   },
   {
    "name": "Strongbow Plech 440ml Red Berries 4,5%",
-   "price": 20.98,
+   "price": 19.55,
    "amount": "440 ml",
    "unit": "",
    "ean": "8586000988101"
   },
   {
    "name": "Strongbow Plech 440ml Gold Apple 4,5%",
-   "price": 20.98,
+   "price": 19.55,
    "amount": "440 ml",
    "unit": "",
    "ean": "8586000987760"
@@ -8503,7 +8510,7 @@
   },
   {
    "name": "Tiger 500ml SPEED REFLEX",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8595646200188"
@@ -8524,7 +8531,7 @@
   },
   {
    "name": "Chio Chips 65g CORNADOS Paprika",
-   "price": 25.98,
+   "price": 24.98,
    "amount": "65 g",
    "unit": "",
    "ean": "5941445668668"
@@ -8790,21 +8797,21 @@
   },
   {
    "name": "Strongbow Plech 440ml Dark Fruit 4,5%",
-   "price": 20.98,
+   "price": 19.55,
    "amount": "440 ml",
    "unit": "",
    "ean": "8586000987784"
   },
   {
    "name": "Desperados Plech 500ml Original",
-   "price": 23.98,
+   "price": 20.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8586000986503"
   },
   {
    "name": "Hašlerky 90g Černý Rybíz",
-   "price": 18.98,
+   "price": 18.55,
    "amount": "90 g",
    "unit": "",
    "ean": "8593893752610"
@@ -8853,7 +8860,7 @@
   },
   {
    "name": "Relax 1L 100% Jablko Broskev",
-   "price": 29.98,
+   "price": 26.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057639808"
@@ -8874,7 +8881,7 @@
   },
   {
    "name": "Relax Exotica 1L Meloun",
-   "price": 21.98,
+   "price": 19.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646200782"
@@ -10481,14 +10488,14 @@
   },
   {
    "name": "DanCake Toustový Chléb 500g Wholegrain (Celozrný)",
-   "price": 27.55,
+   "price": 24.98,
    "amount": "500 g",
    "unit": "",
    "ean": "5900864520018"
   },
   {
    "name": "Oreo 176g Golden",
-   "price": 24.98,
+   "price": 27.55,
    "amount": "176 g",
    "unit": "",
    "ean": "7622300360375"
@@ -10614,28 +10621,28 @@
   },
   {
    "name": "Muffinki 300g Stracciatella DanCake",
-   "price": 48.98,
+   "price": 42.98,
    "amount": "300 g",
    "unit": "",
    "ean": "5900864711430"
   },
   {
    "name": "Muffinki 300g Čokoloádový DanCake",
-   "price": 48.98,
+   "price": 42.98,
    "amount": "300 g",
    "unit": "",
    "ean": "5900864711423"
   },
   {
    "name": "Krušovice 1,5L PET 12* 5%",
-   "price": 38.55,
+   "price": 36.98,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8594009923191"
   },
   {
    "name": "Lays 130g Lays Stix ketchup",
-   "price": 29.98,
+   "price": 26.98,
    "amount": "130 g",
    "unit": "",
    "ean": "5900259099457"
@@ -11138,7 +11145,7 @@
   },
   {
    "name": "Monster 0,5L CZ Zelený ENERGY - ZERO SUGAR",
-   "price": 25.55,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "ean": "5060947549852"
@@ -11403,7 +11410,7 @@
   },
   {
    "name": "Tiger 500ml Mango Power",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8595646201086"
@@ -11508,7 +11515,7 @@
   },
   {
    "name": "Twix 46g WHITE - Limited",
-   "price": 13.65,
+   "price": 9.98,
    "amount": "46 g",
    "unit": "",
    "ean": "5000159486965"
@@ -11634,7 +11641,7 @@
   },
   {
    "name": "Monster 0,5L CZ Nitro",
-   "price": 25.55,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "ean": "5060896625317"
@@ -11662,14 +11669,14 @@
   },
   {
    "name": "Kinder Vejce - Joy 20g N2 (Con Gai) - T1 24ks*8",
-   "price": 17.98,
+   "price": 21.98,
    "amount": "20 g",
    "unit": "",
    "ean": "8000500168042"
   },
   {
    "name": "Relax 1L Multivitamin červené ovoce",
-   "price": 23.55,
+   "price": 21.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057632380"
@@ -11941,14 +11948,14 @@
   },
   {
    "name": "Cider Lišácké 500ml Jablko Hruška",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8586000984714"
   },
   {
    "name": "Cider Lišácké 500ml Jablko",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8586000984974"
@@ -12003,7 +12010,7 @@
   },
   {
    "name": "Relax 1L PET!!! Pomeranc 100%",
-   "price": 54.98,
+   "price": 42.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646200607"
@@ -12108,7 +12115,7 @@
   },
   {
    "name": "Relax 1L PET!!! Jablko 100%",
-   "price": 34.98,
+   "price": 29.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646200621"
@@ -12304,14 +12311,14 @@
   },
   {
    "name": "SVIJANY - 0.5l 10 Svijanská DESÍTKA",
-   "price": 16.98,
+   "price": 16.55,
    "amount": "0.5 l",
    "unit": "",
    "ean": "8594030013113"
   },
   {
    "name": "SVIJANY - 0.5l 12 Svijanský RYTÍŘ 4X6ks",
-   "price": 17.55,
+   "price": 16.98,
    "amount": "0.5 l",
    "unit": "",
    "ean": "8594030013120"
@@ -12507,27 +12514,27 @@
   },
   {
    "name": "Tiger 500ml Strawberry Boom",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8595646201437"
   },
   {
    "name": "Kubík water 500ml Víšen",
-   "price": 11.99,
+   "price": 10.98,
    "amount": "500 ml",
    "unit": ""
   },
   {
    "name": "Kubík Ovocná Kapsicka 100g Jablko, Broskev",
-   "price": 10.98,
+   "price": 10.55,
    "amount": "100 g",
    "unit": "",
    "ean": "8594057638337"
   },
   {
    "name": "Kubík Ovocná Kapsicka 100g Jablko, Banán",
-   "price": 10.98,
+   "price": 10.55,
    "amount": "100 g",
    "unit": "",
    "ean": "8594057638313"
@@ -12569,14 +12576,14 @@
   },
   {
    "name": "Kubik Water Summer Fruits MANGO SORBET-Citron 0,5L",
-   "price": 11.99,
+   "price": 10.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646203882"
   },
   {
    "name": "Kubik Water Summer Fruits VODNÍ MELOUN-Citron 0,5L",
-   "price": 11.99,
+   "price": 10.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646203844"
@@ -12597,21 +12604,21 @@
   },
   {
    "name": "Relax CSD 330ml Kaktus",
-   "price": 12.65,
+   "price": 11.98,
    "amount": "330 ml",
    "unit": "",
    "ean": "8595646202489"
   },
   {
    "name": "Relax CSD 330ml Mango",
-   "price": 12.65,
+   "price": 11.98,
    "amount": "330 ml",
    "unit": "",
    "ean": "8595646202502"
   },
   {
    "name": "Relax CSD 330ml Meloun",
-   "price": 12.65,
+   "price": 11.98,
    "amount": "330 ml",
    "unit": "",
    "ean": "8595646202526"
@@ -12688,7 +12695,7 @@
   },
   {
    "name": "Muffinki 300g Mix Dancake",
-   "price": 48.98,
+   "price": 42.98,
    "amount": "300 g",
    "unit": "",
    "ean": "5900864711546"
@@ -12723,7 +12730,7 @@
   },
   {
    "name": "Monster 0,5L CZ Mango Loco",
-   "price": 25.55,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "ean": "5060896626390"
@@ -12806,7 +12813,7 @@
   },
   {
    "name": "Tiger 500ml Raspberry Mania - Malina",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8595646202748"
@@ -12945,7 +12952,7 @@
   },
   {
    "name": "OKF Aloe King 0,5L Water Melon - Melounová Šťáva",
-   "price": 23.98,
+   "price": 22.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8809041428932"
@@ -13742,7 +13749,7 @@
   },
   {
    "name": "Jagoš Chateau 1L Rulandské Bílé",
-   "price": 46.98,
+   "price": 44.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595622909708"
@@ -13798,7 +13805,7 @@
   },
   {
    "name": "Twix 46g Caramel Salted - Karamel se Soli",
-   "price": 13.55,
+   "price": 12.55,
    "amount": "46 g",
    "unit": "",
    "ean": "5000159527255"
@@ -13819,7 +13826,7 @@
   },
   {
    "name": "Tiger 500ml Kaktus",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8595646203332"
@@ -13833,7 +13840,7 @@
   },
   {
    "name": "Relax CSD 330ml Liči",
-   "price": 12.65,
+   "price": 11.98,
    "amount": "330 ml",
    "unit": "",
    "ean": "8595646203806"
@@ -13902,7 +13909,7 @@
   },
   {
    "name": "Relax CSD 330ml Jahoda",
-   "price": 12.65,
+   "price": 11.98,
    "amount": "330 ml",
    "unit": "",
    "ean": "8595646203783"
@@ -13929,21 +13936,21 @@
   },
   {
    "name": "Relax 1L 100% multivitamín s dužninou",
-   "price": 41.99,
+   "price": 37.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057635350"
   },
   {
    "name": "Desperados Plech 500ml Mojito",
-   "price": 23.98,
+   "price": 20.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8586000988033"
   },
   {
    "name": "Relax CSD 330ml Tutti Frutti",
-   "price": 12.65,
+   "price": 11.98,
    "amount": "330 ml",
    "unit": "",
    "ean": "8595646210514"
@@ -13971,7 +13978,7 @@
   },
   {
    "name": "Monster 0,5L CZ Pipeline PUNCH",
-   "price": 25.55,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "ean": "5060896626383"
@@ -14034,7 +14041,7 @@
   },
   {
    "name": "Relax 1L Banán - Jablko",
-   "price": 26.55,
+   "price": 24.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8594057631659"
@@ -14048,7 +14055,7 @@
   },
   {
    "name": "Relax 1L Jablko-Banán-Jahoda",
-   "price": 27.55,
+   "price": 24.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646202120"
@@ -14062,28 +14069,28 @@
   },
   {
    "name": "Dr Witt 0,75L Granatové jablko a Acai - ruzove",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8595646202861"
   },
   {
    "name": "Dr Witt 0,75L Mango, Citron a zelený čaj - zluty",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8595646202847"
   },
   {
    "name": "Dr Witt 0,75L Černý rybíz, brusinka a ibišek",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8595646202885"
   },
   {
    "name": "Dr Witt 0,75L Pomeranč, Pomelo - oranzovy",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8595646204001"
@@ -14286,28 +14293,28 @@
   },
   {
    "name": "Disko169g Čoko (Červená)",
-   "price": 39.98,
+   "price": 34.98,
    "amount": "169 g",
    "unit": "",
    "ean": "7622201123505"
   },
   {
    "name": "Disko169g Kakaové",
-   "price": 39.98,
+   "price": 34.98,
    "amount": "169 g",
    "unit": "",
    "ean": "7622201123420"
   },
   {
    "name": "Disko169g Kakao S Mléčná (tmavě modrá)",
-   "price": 39.98,
+   "price": 34.98,
    "amount": "169 g",
    "unit": "",
    "ean": "7622201123079"
   },
   {
    "name": "Disko169g Mléčná (světle modrá)",
-   "price": 39.98,
+   "price": 34.98,
    "amount": "169 g",
    "unit": "",
    "ean": "7622201123369"
@@ -14321,35 +14328,35 @@
   },
   {
    "name": "Relax CSD 330ml Cola - Malina",
-   "price": 12.65,
+   "price": 11.98,
    "amount": "330 ml",
    "unit": "",
    "ean": "8595646204544"
   },
   {
    "name": "Tiger 500ml Watermelon",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8595646204803"
   },
   {
    "name": "Nestea 1,5L BLACK TEA - MANGO PINEAPPLE",
-   "price": 24.56,
+   "price": 23.98,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8595646204889"
   },
   {
    "name": "Nestea 0,5L BLACK TEA - MANGO PINEAPPLE",
-   "price": 13.98,
+   "price": 12.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646204896"
   },
   {
    "name": "Cider Lišácké 500ml Jablko Meruňka",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8586000986657"
@@ -14523,42 +14530,42 @@
   },
   {
    "name": "Mutěnice BiB 3L Chardonnay",
-   "price": 114.95,
+   "price": 112.0,
    "amount": "3 l",
    "unit": "",
    "ean": "8594121270678"
   },
   {
    "name": "Mutěnice BiB 3L Veltlínské zelené",
-   "price": 114.95,
+   "price": 112.0,
    "amount": "3 l",
    "unit": "",
    "ean": "8594121270838"
   },
   {
    "name": "Mutěnice BiB 3L Pinot Gris",
-   "price": 114.95,
+   "price": 112.0,
    "amount": "3 l",
    "unit": "",
    "ean": "8594121270593"
   },
   {
    "name": "Mutěnice BiB 3L Souvignon Blanc",
-   "price": 114.95,
+   "price": 112.0,
    "amount": "3 l",
    "unit": "",
    "ean": "8594121270739"
   },
   {
    "name": "Tiger 500ml Newschool Classic",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8588001651565"
   },
   {
    "name": "Mutěnice BiB 3L Merlot",
-   "price": 114.95,
+   "price": 112.0,
    "amount": "3 l",
    "unit": "",
    "ean": "8594121270708"
@@ -14593,7 +14600,7 @@
   },
   {
    "name": "Desperados Plech 500ml Red",
-   "price": 23.98,
+   "price": 20.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8586000987753"
@@ -14663,7 +14670,7 @@
   },
   {
    "name": "Dr Witt 0,75L Collagen - Jahoda",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "0,75 l",
    "unit": "",
    "ean": "8595646204773"
@@ -14740,14 +14747,14 @@
   },
   {
    "name": "Relax 1L PET!!! Kaktus",
-   "price": 25.98,
+   "price": 23.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646202274"
   },
   {
    "name": "Relax 1L PET!!! Mango",
-   "price": 25.98,
+   "price": 23.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646201659"
@@ -14871,7 +14878,7 @@
   },
   {
    "name": "Monster 0,5L CZ Fiesta Mango",
-   "price": 25.55,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "ean": "5060896626437"
@@ -14885,7 +14892,7 @@
   },
   {
    "name": "Tiger 500ml Bubble Gum",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8588001651527"
@@ -14906,7 +14913,7 @@
   },
   {
    "name": "Lays 130g Barbecue Ribs",
-   "price": 29.98,
+   "price": 26.98,
    "amount": "130 g",
    "unit": "",
    "ean": "5900259106599"
@@ -14920,7 +14927,7 @@
   },
   {
    "name": "Monster 0,5L CZ Juice Monarch",
-   "price": 25.55,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "ean": "5060896621241"
@@ -15241,7 +15248,7 @@
   },
   {
    "name": "Gajdošovo 2L Rosé",
-   "price": 32.98,
+   "price": 31.55,
    "amount": "2 l",
    "unit": "",
    "ean": "8595622910216"
@@ -15297,7 +15304,7 @@
   },
   {
    "name": "Chio Tortillas Chips 110g Solené - Salt",
-   "price": 28.98,
+   "price": 27.98,
    "amount": "110 g",
    "unit": "",
    "ean": "4001242000052"
@@ -15389,7 +15396,7 @@
   },
   {
    "name": "SNICKERS 36,5g Creamy Butter",
-   "price": 12.98,
+   "price": 12.55,
    "amount": "36,5 g",
    "unit": "",
    "ean": "5900951302411"
@@ -15424,7 +15431,7 @@
   },
   {
    "name": "DUPETKY pecene Hořčice Med Cibule 160g",
-   "price": 30.98,
+   "price": 29.98,
    "amount": "160 g",
    "unit": "",
    "ean": "5949040203314"
@@ -15438,7 +15445,7 @@
   },
   {
    "name": "DUPETKY Pecene 180g Sezam",
-   "price": 30.98,
+   "price": 29.98,
    "amount": "180 g",
    "unit": "",
    "ean": "5949040202669"
@@ -15564,7 +15571,7 @@
   },
   {
    "name": "Mogu Mogu 320ml - Jahoda - Strawberry",
-   "price": 7.99,
+   "price": 5.98,
    "amount": "320 ml",
    "unit": "",
    "ean": "8850389103142"
@@ -15578,7 +15585,7 @@
   },
   {
    "name": "Mogu Mogu 320ml - Peach",
-   "price": 7.99,
+   "price": 5.98,
    "amount": "320 ml",
    "unit": "",
    "ean": "8850389106280"
@@ -15592,7 +15599,7 @@
   },
   {
    "name": "Mogu Mogu 320ml - Pink Guava",
-   "price": 7.99,
+   "price": 5.98,
    "amount": "320 ml",
    "unit": "",
    "ean": "8850389111376"
@@ -15634,28 +15641,28 @@
   },
   {
    "name": "Lays 110g Oven Baked - Grilled Vegetables",
-   "price": 29.98,
+   "price": 26.98,
    "amount": "110 g",
    "unit": "",
    "ean": "5900259127679"
   },
   {
    "name": "Lays 110g Oven Baked - Yoghurt With Herbs",
-   "price": 29.98,
+   "price": 26.98,
    "amount": "110 g",
    "unit": "",
    "ean": "5900259128843"
   },
   {
    "name": "Lays 120g Strong - Cheese Jalapeno",
-   "price": 29.98,
+   "price": 26.98,
    "amount": "120 g",
    "unit": "",
    "ean": "5900259101938"
   },
   {
    "name": "Lays 110g Oven Baked - Salt",
-   "price": 29.98,
+   "price": 26.98,
    "amount": "110 g",
    "unit": "",
    "ean": "5900259099723"
@@ -15774,21 +15781,21 @@
   },
   {
    "name": "Relax CSD 330ml Cola - Višen",
-   "price": 12.65,
+   "price": 11.98,
    "amount": "330 ml",
    "unit": "",
    "ean": "8595646207361"
   },
   {
    "name": "Nestea 1,5L BLACK TEA - FOREST FRUITS",
-   "price": 24.56,
+   "price": 23.98,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8595646207347"
   },
   {
    "name": "Nestea 0,5L BLACK TEA - FOREST FRUITS",
-   "price": 13.98,
+   "price": 12.98,
    "amount": "0,5 l",
    "unit": "",
    "ean": "8595646207323"
@@ -15865,7 +15872,7 @@
   },
   {
    "name": "Březňák Světlé výčepní pivo 2l PET",
-   "price": 38.98,
+   "price": 35.99,
    "amount": "2 l",
    "unit": "",
    "ean": "8591036551441"
@@ -15893,7 +15900,7 @@
   },
   {
    "name": "Relax 1L PET!!! Multivitamin",
-   "price": 41.99,
+   "price": 39.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646200645"
@@ -16082,7 +16089,7 @@
   },
   {
    "name": "Monster 0,5L CZ Lewis Hamilton ZERO",
-   "price": 25.55,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "ean": "5060896625720"
@@ -16159,21 +16166,21 @@
   },
   {
    "name": "DobraVoda 1,5L Nep. Jahoda/Malina",
-   "price": 12.55,
+   "price": 12.98,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8594001407798"
   },
   {
    "name": "Magnesia Plus Antistress 0,7L Mango+Medunka PET",
-   "price": 23.55,
+   "price": 21.55,
    "amount": "0,7 l",
    "unit": "",
    "ean": "8594001025763"
   },
   {
    "name": "Magnesia Plus Focus 0,7L Merunka+Marac.+Ženšen PET",
-   "price": 23.55,
+   "price": 21.55,
    "amount": "0,7 l",
    "unit": "",
    "ean": "8594001025749"
@@ -16250,7 +16257,7 @@
   },
   {
    "name": "Relax Fruit Drink 1L Mango",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646203943"
@@ -17307,21 +17314,21 @@
   },
   {
    "name": "Dr Witt Vital 0.75L RECOVER",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "0.75 l",
    "unit": "",
    "ean": "8595646208276"
   },
   {
    "name": "Dr Witt Vital 0.75L IMMUNO",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "0.75 l",
    "unit": "",
    "ean": "8595646208290"
   },
   {
    "name": "Dr Witt Vital 0.75L ANTI-STRESS",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "0.75 l",
    "unit": "",
    "ean": "8595646208689"
@@ -17580,14 +17587,14 @@
   },
   {
    "name": "Mogu Mogu 320ml - Bubble Gum",
-   "price": 7.99,
+   "price": 5.98,
    "amount": "320 ml",
    "unit": "",
    "ean": "8850389118856"
   },
   {
    "name": "Mogu Mogu 320ml - Cotton Candy",
-   "price": 7.99,
+   "price": 5.98,
    "amount": "320 ml",
    "unit": "",
    "ean": "8850389118870"
@@ -17622,7 +17629,7 @@
   },
   {
    "name": "Dr Witt 0,75 Bílá broskev",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "",
    "unit": "",
    "ean": "8595646208337"
@@ -17832,7 +17839,7 @@
   },
   {
    "name": "Kubik Play 400ml Mango",
-   "price": 13.98,
+   "price": 13.55,
    "amount": "400 ml",
    "unit": "",
    "ean": "8595646205282"
@@ -18189,7 +18196,7 @@
   },
   {
    "name": "Relax 1L Select - Pomeranč",
-   "price": 35.98,
+   "price": 26.98,
    "amount": "1 l",
    "unit": "",
    "ean": "8595646209204"
@@ -18657,7 +18664,7 @@
   },
   {
    "name": "Lindor 200g RaspberryCream",
-   "price": 119.99,
+   "price": 79.98,
    "amount": "200 g",
    "unit": "",
    "ean": "8003340805740"
@@ -18671,7 +18678,7 @@
   },
   {
    "name": "Desperados Sklo 0,33L 5,9% VRATNÉ LÁHVE",
-   "price": 21.98,
+   "price": 19.55,
    "amount": "0,33 l",
    "unit": "",
    "ean": "8594009924020"
@@ -18881,7 +18888,7 @@
   },
   {
    "name": "DUPETKY Pecene 160g Chilli-lime",
-   "price": 30.98,
+   "price": 29.98,
    "amount": "160 g",
    "unit": "",
    "ean": "5949040204878"
@@ -20001,7 +20008,7 @@
   },
   {
    "name": "Dupetky Pečené 70g +20% Chili-Lime",
-   "price": 15.98,
+   "price": 14.98,
    "amount": "70 g",
    "unit": "",
    "ean": "5949040205332"
@@ -20050,14 +20057,14 @@
   },
   {
    "name": "Lotus Sušenky 150g Plněné Krémem Biscoff",
-   "price": 31.98,
+   "price": 29.98,
    "amount": "150 g",
    "unit": "",
    "ean": "5410126006360"
   },
   {
    "name": "Lotus Sušenky 150g S Vanilkovou Příchutí",
-   "price": 31.98,
+   "price": 29.98,
    "amount": "150 g",
    "unit": "",
    "ean": "5410126006377"
@@ -20092,21 +20099,21 @@
   },
   {
    "name": "Lotus Sušenky 50g Plněné Krémem Biscoff",
-   "price": 14.98,
+   "price": 13.98,
    "amount": "50 g",
    "unit": "",
    "ean": "54010659"
   },
   {
    "name": "Lotus Sušenky 140g Karamelizované",
-   "price": 22.98,
+   "price": 21.98,
    "amount": "140 g",
    "unit": "",
    "ean": "5410126806090"
   },
   {
    "name": "Lotus Sušenky 124g Karamelizované",
-   "price": 25.98,
+   "price": 24.98,
    "amount": "124 g",
    "unit": "",
    "ean": "5410126006339"
@@ -20889,7 +20896,7 @@
   },
   {
    "name": "Monster 0,5L CZ JUICED - Viking Berry",
-   "price": 25.55,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "ean": "5056784912621"
@@ -21288,7 +21295,7 @@
   },
   {
    "name": "Oreo 66g Golden",
-   "price": 9.55,
+   "price": 10.99,
    "amount": "66 g",
    "unit": "",
    "ean": "7622202352782"
@@ -21498,42 +21505,42 @@
   },
   {
    "name": "Tiger 500ml Aura Gold Apple",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8595646212228"
   },
   {
    "name": "Tiger 500ml Aura Pink Candy",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8595646212266"
   },
   {
    "name": "Tiger 500ml Aura White Grapefruit",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "500 ml",
    "unit": "",
    "ean": "8595646212242"
   },
   {
    "name": "Dr Witt Balance Jemně Perlivá 1,5L Citrón",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8595646212167"
   },
   {
    "name": "Dr Witt Balance Jemně Perlivá 1,5L Grep",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8595646212129"
   },
   {
    "name": "Dr Witt Balance Jemně Perlivá 1,5L Máta",
-   "price": 16.55,
+   "price": 14.98,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8595646212143"
@@ -21694,7 +21701,7 @@
   },
   {
    "name": "Mogu Mogu 320ml - Pineapple",
-   "price": 7.99,
+   "price": 5.98,
    "amount": "320 ml",
    "unit": "",
    "ean": "8850389100868"
@@ -21771,7 +21778,7 @@
   },
   {
    "name": "Magnesia Red 1,5L Červený pomeranč",
-   "price": 20.98,
+   "price": 20.55,
    "amount": "1,5 l",
    "unit": "",
    "ean": "8595723202210"
@@ -21880,6 +21887,83 @@
    "amount": "200 ml",
    "unit": "",
    "ean": "8606108619070"
+  },
+  {
+   "name": "Yaki Sushi Nori 23g - Sushi Mořské Řasy 10 plátků",
+   "price": 1120.0,
+   "amount": "23 g",
+   "unit": "",
+   "ean": "8802142300121"
+  },
+  {
+   "name": "Yaki Sushi Nori 125g - Sushi Mořské Řasy 50 plátků",
+   "price": 1120.0,
+   "amount": "125 g",
+   "unit": "",
+   "ean": "8809171520766"
+  },
+  {
+   "name": "Yaki Sushi Nori 250g - Sushi Mořské Řasy 100 plátků",
+   "price": 1120.0,
+   "amount": "250 g",
+   "unit": "",
+   "ean": "8809171520773"
+  },
+  {
+   "name": "Nori Chips AN 10g Original - Chipsy z nori řasy Originál",
+   "price": 1120.0,
+   "amount": "10 g",
+   "unit": "",
+   "ean": "8802142002605"
+  },
+  {
+   "name": "Nori Chips AN 10g Wasabi - Chipsy z nori řasy Wasabi",
+   "price": 1120.0,
+   "amount": "10 g",
+   "unit": "",
+   "ean": "8802142002612"
+  },
+  {
+   "name": "Nori Chips AN 10g Kimchi - Chipsy z nori řasy Kimchi",
+   "price": 1120.0,
+   "amount": "10 g",
+   "unit": "",
+   "ean": "8802142002636"
+  },
+  {
+   "name": "Nori Chips AN 10g BBQ - Chipsy z nori řasy BBQ - Teriyaki",
+   "price": 1120.0,
+   "amount": "10 g",
+   "unit": "",
+   "ean": "8802142002629"
+  },
+  {
+   "name": "Nori Flakes AN 40g Original - Vločky z nori řasy Original",
+   "price": 1120.0,
+   "amount": "40 g",
+   "unit": "",
+   "ean": "8802142002643"
+  },
+  {
+   "name": "Nori Flakes AN 40g Vegetable - Vločky z nori řasy Zeleninové",
+   "price": 1120.0,
+   "amount": "40 g",
+   "unit": "",
+   "ean": "8802142002650"
+  },
+  {
+   "name": "Nori Flakes AN 40g Seafood - Vločky z nori řasy Mořské plody",
+   "price": 1120.0,
+   "amount": "40 g",
+   "unit": "",
+   "ean": "8802142002667"
+  },
+  {
+   "name": "Nori Flakes AN 40g BBQ - Vločky z nori řasy BBQ",
+   "price": 1120.0,
+   "amount": "40 g",
+   "unit": "",
+   "ean": "8802142002674"
   },
   {
    "name": "Build your own computer",
