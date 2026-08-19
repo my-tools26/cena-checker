@@ -53,6 +53,26 @@ var CAT_WORDS = {
   drogerie: ['praci', 'sampon', 'mydlo', 'zubni', 'toaletni', 'ubrousky', 'cistic', 'gel'],
   mazlicci: ['psy', 'kocky', 'granule', 'kapsick', 'stelivo', 'pamlsk']
 };
+/* BO SUNG: go TEN NHOM (khong dau) + cac tu tuong tu -> tim CA NHOM (OR theo
+   CAT_WORDS). Vd "rau qua","trai cay","hoa qua" deu ra nhom rau qua. Chi them
+   du lieu vao SEARCH_SYNONYMS, khong sua ham nao. */
+var CAT_ALIASES = {
+  ovoce: ['rau qua', 'rau', 'qua', 'trai cay', 'hoa qua', 'rau cu', 'rau xanh'],
+  maso: ['thit ca', 'thit', 'ca', 'hai san', 'thuy san'],
+  mleko: ['sua trung', 'sua', 'trung', 'bo sua', 'do sua'],
+  pecivo: ['banh mi', 'banh my', 'banh bao', 'banh ngot'],
+  sladkosti: ['banh keo', 'keo', 'keo banh', 'do ngot', 'socola', 'chocolate'],
+  pivo: ['bia', 'ruou bia'],
+  napoje: ['do uong', 'nuoc uong', 'nuoc ngot', 'thuc uong', 'giai khat', 'nuoc'],
+  kava: ['ca phe tra', 'ca phe', 'cafe', 'tra', 'ca phe va tra'],
+  drogerie: ['drogerie', 'do gia dung', 'hoa my pham', 've sinh', 'tay rua', 'my pham'],
+  mazlicci: ['thu cung', 'cho meo', 'vat nuoi', 'do thu cung', 'thuc an thu cung']
+};
+Object.keys(CAT_ALIASES).forEach(function (slug) {
+  CAT_ALIASES[slug].forEach(function (vi) {
+    if (!SEARCH_SYNONYMS[vi]) SEARCH_SYNONYMS[vi] = CAT_WORDS[slug];
+  });
+});
 
 var DATA = { dict: null, catalog: null, retail: null, meta: null, shards: null };
 var $ = function (s) { return document.querySelector(s); };
@@ -1088,7 +1108,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.9.5';
+if (el) el.textContent = 'v1.5.9.6';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
