@@ -550,9 +550,24 @@ function pageGioithieu() {
     "<p style='margin-top:20px'><a href='#/'>← Về Trang chủ</a></p>";
 }
 
+/* BO SUNG: giu lai chi cac o cua hang co ngay BAT DAU trong tuong lai cho 1 mat
+   hang -> muc "TO ROI MOI" khong lan deal dang giam hom nay (⏰). Khong sua ham
+   dung chung nao, chi loc lai DU LIEU mat hang truoc khi ve. */
+function futureOffersOnly(p) {
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  var offs = p[2].filter(function (d) {
+    var m = (d[4] || '').match(/(\d{1,2})\.\s*(\d{1,2})\./g);
+    if (!m || m.length < 2) return false;
+    var f = /(\d{1,2})\.\s*(\d{1,2})\./.exec(m[0]);
+    var start = new Date(today.getFullYear(), +f[2] - 1, +f[1]);
+    return start > today;
+  });
+  return [p[0], p[1], offs];
+}
+
 /* Bang "TO ROI MOI - deal sap bat dau" (giong home_suggestions_html ben Python) */
 function freshHTML(all, lower) {
-  var fresh = all.filter(isFresh).slice(0, 15);
+  var fresh = all.filter(isFresh).slice(0, 15).map(futureOffersOnly);
   if (!fresh.length) return '';
   var rows = retailRows(fresh, lower);
   if (!rows.length) return '';
@@ -1073,7 +1088,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.9.4';
+if (el) el.textContent = 'v1.5.9.5';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
