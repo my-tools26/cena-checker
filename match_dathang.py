@@ -68,14 +68,23 @@ def norm_size(s):
     return f"{round(n, 4)}{u}"
 
 
+# Dong nghia da ngon ngu -> chuan hoa ve 1 token Sec (bac cau Greek<->Recky,
+# strawberry<->jahoda...). Ap dung cho CA hai phia (dathang + catalog).
+SYN = {"greek": "recky", "erdbeere": "jahoda", "strawberry": "jahoda",
+       "truskawka": "jahoda", "himbeere": "malina", "raspberry": "malina",
+       "vanille": "vanilka", "vanilla": "vanilka"}
+
+
 def tokens(name):
+    # tach chu dinh so ("malina140g" -> "malina" + "140g") truoc khi loc
+    s = re.sub(r"(?<=[a-z])(?=[0-9])|(?<=[0-9])(?=[a-z])", " ", strip_accents(name))
     out = []
-    for t in re.split(r"[^a-z0-9]+", strip_accents(name)):
+    for t in re.split(r"[^a-z0-9]+", s):
         if len(t) < 3 or t.isdigit() or t in STOP:
             continue
         if re.fullmatch(r"\d+[a-z]*", t):      # 350g, 6ks, 24bal
             continue
-        out.append(t)
+        out.append(SYN.get(t, t))
     return out
 
 
