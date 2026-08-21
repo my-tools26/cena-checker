@@ -1693,7 +1693,8 @@
    "name": "Fini Roller 20g filled Jahoda – 18ks/kart",
    "price": 6.9,
    "amount": "20 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8410525127892"
   },
   {
    "name": "ALZZIN. ZAP. CLIPPER CP11 HOLLYWOOD ANIMALS 2 24/BAL(269805)",
@@ -3892,7 +3893,8 @@
    "name": "Pepsi 0,5L PET Raspberry",
    "price": 18.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595723301807"
   },
   {
    "name": "BM CAPYBARA PLASTIC EGG + TATTOO – plastové vejce s tetováním 5g x 18",
@@ -6272,7 +6274,8 @@
    "name": "Flipz strawberry 6x90g",
    "price": 37.5,
    "amount": "90 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5000168008523"
   },
   {
    "name": "Twix white 46g x 32ks",
@@ -8913,7 +8916,8 @@
    "name": "7Days Croissant 80g Vanilka + Jahoda",
    "price": 14.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622201391812"
   },
   {
    "name": "AA Bonduelle Creátif 150g Mexická zelenina – 12ks/kart",
@@ -9261,7 +9265,8 @@
    "name": "7Days Croissant 80g Max Kakao",
    "price": 14.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622201388386"
   },
   {
    "name": "Orbit Eukaliptus 30 x 14g",
@@ -9485,7 +9490,8 @@
    "name": "7Days Croissant 80g Max Creme Brulee",
    "price": 14.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622202039713"
   },
   {
    "name": "CA – Rau cải thìa",
@@ -11645,8 +11651,7 @@
    "name": "Dr. Oetker Kypřící prášek do pečiva 5x12g",
    "price": 14.9,
    "amount": "12 g",
-   "unit": "",
-   "ean": "8595072603300"
+   "unit": ""
   },
   {
    "name": "Pepsi 2.25l Zero Cherry",
@@ -12147,7 +12152,8 @@
    "name": "7Days Croissant 70g Max Choco Drops",
    "price": 14.9,
    "amount": "70 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622201391911"
   },
   {
    "name": "Tuc Bake Rolls 80g pizza – 14ks/kart",
@@ -12759,7 +12765,8 @@
    "name": "7Days Croissant 60g Meruňka",
    "price": 11.5,
    "amount": "60 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622202244179"
   },
   {
    "name": "7Days Croissant 60g Jahoda",
@@ -14094,7 +14101,8 @@
    "name": "Only Big Gold Coins 36 x21,5g",
    "price": 12.9,
    "amount": "21,5 g",
-   "unit": ""
+   "unit": "",
+   "ean": "9002859057144"
   },
   {
    "name": "Brick Polévka Boršč 680g",
@@ -14414,7 +14422,8 @@
    "name": "7Days Croissant 60g Spumante",
    "price": 11.5,
    "amount": "60 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622201391737"
   },
   {
    "name": "Porto Artesao Ruis Tawny 19% 700ml",
@@ -16392,13 +16401,15 @@
    "name": "7Days Croissant 80g Vanilka + Višeň",
    "price": 14.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622202010002"
   },
   {
    "name": "7Days Croissant 80g kakao + kokos",
    "price": 14.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622201391980"
   },
   {
    "name": "Poděbradka 1,5L PET Citrus mix",
@@ -19131,7 +19142,8 @@
    "name": "Gillette Fusion5 Proglide 4ks",
    "price": 250.0,
    "amount": "4 ks",
-   "unit": ""
+   "unit": "",
+   "ean": "7702018355518"
   },
   {
    "name": "Gillette Fusion5 náhradní hlavice 4 kusy",
@@ -21311,7 +21323,8 @@
    "name": "Heineken Beer 400ml sklo",
    "price": 16.5,
    "amount": "400 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8594009923948"
   },
   {
    "name": "Vidal Monster Jelly 11g x 66",
@@ -22301,7 +22314,8 @@
    "name": "Capri-Sun 200ml Fairy Drink",
    "price": 7.5,
    "amount": "200 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "4000177033500"
   },
   {
    "name": "Proline 1,5L PET Zahradní mix",
@@ -23353,8 +23367,7 @@
    "name": "Pedigree kap 4x100g ve štávě",
    "price": 39.9,
    "amount": "100 g",
-   "unit": "",
-   "ean": "4770608261146"
+   "unit": ""
   },
   {
    "name": "Pedigree kap 4x100g kuřeci – Hovezi",
@@ -23402,22 +23415,19 @@
    "name": "Nescafe 2in1 (10x8g)x8",
    "price": 37.9,
    "amount": "8 g",
-   "unit": "",
-   "ean": "7613036960298"
+   "unit": ""
   },
   {
    "name": "Nescafe 3in1 Brownsugar (10×16,5g)x8",
    "price": 37.9,
    "amount": "16,5 g",
-   "unit": "",
-   "ean": "7613287337597"
+   "unit": ""
   },
   {
    "name": "Nescafe 3in1 (10×16,5g) – 8ks/kart",
    "price": 34.9,
    "amount": "16,5 g",
-   "unit": "",
-   "ean": "7613287337597"
+   "unit": ""
   },
   {
    "name": "MULLER Part Ltd. – Marakuja Sunrise 400g",
@@ -23593,8 +23603,7 @@
    "name": "CA – Cafe G7 3in1 21x16g",
    "price": 79.9,
    "amount": "16 g",
-   "unit": "",
-   "ean": "8935024143353"
+   "unit": ""
   },
   {
    "name": "CA – Thạch Newchoice TARO 1kg",
@@ -25100,7 +25109,8 @@
    "name": "Ritter Sport Čokoláda jahoda-jogurt 100g",
    "price": 32.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4000417237002"
   },
   {
    "name": "Ritter Sport 100g Haselnuss",
@@ -29863,7 +29873,8 @@
    "name": "Pedigree kap. junior kuře želé 4x100g",
    "price": 39.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5900951319419"
   },
   {
    "name": "Drwitt min.voda mango 750ml x 12",
@@ -31205,7 +31216,8 @@
    "name": "7Days Croissant 80g kakao + vanilka",
    "price": 14.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622201389413"
   },
   {
    "name": "7Days Croissant 60g Lískooříšek",
@@ -32029,7 +32041,8 @@
    "name": "Mars 2Pack 24x70g",
    "price": 16.5,
    "amount": "70 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5900951134937"
   },
   {
    "name": "Corny Big 40g White Strawberry",
@@ -33239,8 +33252,7 @@
    "name": "Bateria AA R03 15 x 4ks",
    "price": 3.5,
    "amount": "4 ks",
-   "unit": "",
-   "ean": "8595067301693"
+   "unit": ""
   },
   {
    "name": "Tatra Smetana do kávy Premium 10% 500g X6",
@@ -37321,8 +37333,7 @@
    "name": "Haribo Balla Stixx 80g Strawberry – 24ks/krt",
    "price": 16.9,
    "amount": "80 g",
-   "unit": "",
-   "ean": "4001686117194"
+   "unit": ""
   },
   {
    "name": "Haribo 100g Wummis – 30ks/krt",
@@ -37712,7 +37723,8 @@
    "name": "Snickers 2pack 75g – 24ks/krt",
    "price": 16.9,
    "amount": "75 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5900951027307"
   },
   {
    "name": "Twix Extra 75g x 30ks",
@@ -38959,13 +38971,15 @@
    "name": "BoheMilk Opoč.jogurt vanilka 150g X10",
    "price": 13.9,
    "amount": "150 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8592206342845"
   },
   {
    "name": "BoheMilk Opoč.jogurt jahoda 150g X10",
    "price": 13.9,
    "amount": "150 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8592206342807"
   },
   {
    "name": "BoheMilk Opoč.jogurt bros-merun 150g X10",
@@ -38977,7 +38991,8 @@
    "name": "BoheMilk Opoč.jogurt borůvka 150g X10",
    "price": 13.9,
    "amount": "150 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8592206342821"
   },
   {
    "name": "BoheMilk Conde slad.mléko 400g",
@@ -40515,7 +40530,8 @@
    "name": "Korbáč uzený 55g 5ks",
    "price": 22.5,
    "amount": "55 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594035090126"
   },
   {
    "name": "Brick TS Žampionový 100g",
@@ -41063,8 +41079,7 @@
    "name": "Kapucin smetana do kávy 10x10g",
    "price": 11.9,
    "amount": "10 g",
-   "unit": "",
-   "ean": "8594001242054"
+   "unit": ""
   },
   {
    "name": "TP Choceň Šunka 150g",
