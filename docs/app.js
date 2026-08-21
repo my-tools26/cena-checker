@@ -751,9 +751,7 @@ function pageSearch(query) {
 function searchByEan(code, head, el) {
   return eanLookupAll(code).then(function (hit) {
     if (!hit) {
-      el.innerHTML = tilesHTML() + head +
-        "<p>Không tìm thấy mã vạch <b>" + esc(code) + '</b> trong dữ liệu.</p>';
-      return;
+      return eanFallbackOFF(code, head, el);   // Lop 3: tra Open Food Facts + goi y
     }
     var name = hit.rec[0], offers = (hit.rec[1] || []).map(function (o) {
       return { shop: SHOP[o[0]], slug: SHOP_SLUG[o[0]], price: o[1], amount: o[2],
@@ -857,6 +855,59 @@ function searchByEan(code, head, el) {
   });
 }
 
+/* ===== LOP 3 (BO SUNG): ma vach KHONG co trong kho -> tra ten qua Open Food
+   Facts (mien phi, CORS mo) roi GOI Y san pham cung ten o cac kho (gom dathang
+   khong ghi ma vach). Khong sua ham dung chung. ===== */
+function offLookup(code) {
+  var u = 'https://world.openfoodfacts.org/api/v2/product/' +
+    encodeURIComponent(code) +
+    '.json?fields=product_name,product_name_cs,product_name_en,brands,quantity';
+  return fetch(u).then(function (r) { return r.json(); }).then(function (d) {
+    if (!d || d.status !== 1 || !d.product) return null;
+    var p = d.product;
+    var nm = (p.product_name_cs || p.product_name || p.product_name_en || '').trim();
+    return nm ? { name: nm, brand: (p.brands || '').split(',')[0].trim(),
+                  qty: (p.quantity || '').trim() } : null;
+  }).catch(function () { return null; });
+}
+function suggestToks(info) {
+  return stripAccents(info.brand + ' ' + info.name).split(/[^a-z0-9]+/)
+    .filter(function (w) { return w.length >= 3 && !/^\d+$/.test(w); }).slice(0, 3);
+}
+function eanFallbackOFF(code, head, el) {
+  el.innerHTML = tilesHTML() + head +
+    "<p class='muted'>🌐 Mã chưa có trong kho — đang tra tên trên Open Food Facts…</p>";
+  return offLookup(code).then(function (info) {
+    if (!info) {
+      el.innerHTML = tilesHTML() + head + "<p>Không tìm thấy mã vạch <b>" +
+        esc(code) + '</b> trong dữ liệu (kho + Open Food Facts đều không có).</p>';
+      return;
+    }
+    var label = info.name + (info.qty ? ' ' + info.qty : '') +
+      (info.brand ? ' · ' + info.brand : '');
+    var base = head + "<p class='muted'>🌐 Nhận diện qua Open Food Facts: <b>" +
+      esc(label) + '</b><br>Mã <b>' + esc(code) +
+      '</b> chưa có kho nào ghi — gợi ý theo tên:</p>';
+    var toks = suggestToks(info);
+    if (!toks.length) { el.innerHTML = tilesHTML() + base; return; }
+    return Promise.all([loadCatalog(), loadRetail()]).then(function (r) {
+      var cat = r[0], rd = r[1], sim = [], ret = [];
+      // noi long dan: 3 tu -> 2 -> 1, dung ngay khi co ket qua
+      for (var k = toks.length; k >= 1 && !sim.length && !ret.length; k--) {
+        var q = toks.slice(0, k).join(' ');
+        sim = searchCatalog(cat, q); ret = searchRetail(rd, q);
+      }
+      var html = base;
+      if (ret.length) html += "<h2 style='font-size:.95em'>🏪 Giá siêu thị (gợi ý cùng tên)</h2>" +
+        tableHTML(retailRows(ret.slice(0, 15), new Set()));
+      if (sim.length) html += "<h2 style='font-size:.95em'>🔎 Sản phẩm gợi ý ở các kho — " +
+        sim.length + '</h2>' + tableHTML(groupRows(sim.slice(0, 30)));
+      if (!ret.length && !sim.length)
+        html += "<p class='muted'>Chưa có kho nào bán sản phẩm cùng tên.</p>";
+      el.innerHTML = tilesHTML() + html;
+    });
+  });
+}
 function searchCatalog(cat, q) {
   var terms = q.split(/\s+/).filter(Boolean);
   if (!terms.length) return [];
@@ -1108,7 +1159,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.9.6';
+if (el) el.textContent = 'v1.5.9.7';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
