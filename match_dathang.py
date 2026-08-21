@@ -117,6 +117,56 @@ def load_candidates():
     return cands
 
 
+# ---------------- nguon OFFLINE Open Food Facts (tang 2) ----------------
+# Tach RIENG khoi 5 catalog: neu gop chung se lam loang IDF -> pha khop cu.
+# Chi dung cho hang dathang mà catalog KHÔNG khớp được (chủ yếu hàng ngoại/EU).
+# build_off_index.py tao off_candidates.json.
+def load_off_candidates():
+    p = os.path.join(HERE, "off_candidates.json")
+    if not os.path.exists(p):
+        return {}
+    cands = {}
+    for ean, o in json.load(open(p, encoding="utf-8")).items():
+        if not ean.isdigit() or len(ean) < 8:
+            continue
+        nm = ((o.get("brand") or "") + " " + (o.get("name") or "")).strip()
+        ordered = tokens(nm)
+        if not ordered:
+            continue
+        cands[ean] = {"name": o.get("name") or "",
+                      "size": norm_size(o.get("qty") or o.get("name") or ""),
+                      "toks": set(ordered), "first": ordered[0],
+                      "vars": variants_of(nm), "src": "OFF"}
+    return cands
+
+
+def _jaccard(a, b):
+    a, b = set(a), set(b)
+    return len(a & b) / len(a | b) if (a or b) else 0.0
+
+
+def match_off_strict(name, amount, cands, idx):
+    """Khop hang con lai voi ung vien OFF - NGUONG RAT CHAT (tranh gia sai):
+    >=2 tu dac trung chung + KHONG xung dot mui vi + CUNG dung tich + top vuot
+    #2 + ten trung >=60% token (Jaccard). Tra EAN hoac None."""
+    cand, sz, _ = match_one(name, amount, cands, idx)
+    if not cand:
+        return None
+    top = cand[0]
+    if top[4] or len(top[2]) < 2:                       # xung dot / <2 tu dac trung
+        return None
+    c = cands[top[0]]
+    mysz = norm_size(amount) or norm_size(name)
+    if not (mysz and c["size"] and mysz == c["size"]):  # bat buoc cung size
+        return None
+    second = cand[1][1] if len(cand) > 1 else 0
+    if top[1] < second * DOMINATE:                      # phai vuot troi #2
+        return None
+    if _jaccard(tokens(name), c["toks"]) < 0.6:         # ten phai trung >=60%
+        return None
+    return top[0]
+
+
 def build_index(cands):
     tok2ean = defaultdict(set)
     first_count = defaultdict(int)
@@ -355,6 +405,11 @@ def apply_to_file():
     cands = load_candidates()
     idx = build_index(cands)
     print(f"      {idx['N']} ma vach · {len(idx['brand'])} token thuong-hieu")
+    # TANG 2: nguon OFF (Open Food Facts) - RIENG, chi cho hang catalog khong khop
+    off = load_off_candidates()
+    off_idx = build_index(off) if off else None
+    if off:
+        print(f"      + OFF: {len(off)} ung vien (hang ngoai/EU)")
 
     manual = load_manual_map()
     path = os.path.join(HERE, "dathang_prices.json")
@@ -362,7 +417,7 @@ def apply_to_file():
     items = data.get("items", [])
     print(f"[2/3] Khop {len(items)} mon (co {len(manual)} map tay) ...")
 
-    clear = review = none = man = 0
+    clear = review = none = man = off_hit = 0
     report = []
     for it in items:
         it.pop("ean", None)               # xoa ean cu (chay lai sach se)
@@ -384,6 +439,15 @@ def apply_to_file():
                 decision = "review"; review += 1
         else:
             none += 1
+        # TANG 2: catalog khong khop RO -> thu OFF (nguong rat chat)
+        if decision != "clear" and off_idx:
+            oe = match_off_strict(it.get("name", ""), it.get("amount", ""),
+                                  off, off_idx)
+            if oe:
+                it["ean"] = oe; off_hit += 1
+                report.append({"name": it["name"], "ean": oe, "src": "OFF",
+                               "cand": off[oe]["name"], "score": 0})
+                continue
         if decision == "clear":
             c0 = cands[chosen]
             report.append({"name": it["name"], "ean": chosen, "src": c0["src"],
@@ -398,7 +462,9 @@ def apply_to_file():
                                "none": none, "total": len(items)})
     print("[3/3] Da ghi ean vao dathang_prices.json")
     print(f"  Map tay (uu tien)   : {man}")
-    print(f"  Ro rang (da gan EAN): {clear}")
+    print(f"  Ro rang catalog     : {clear}")
+    print(f"  Them tu OFF (tang 2) : {off_hit}")
+    print(f"  Tong da gan EAN     : {man + clear + off_hit}")
     print(f"  Map mo (bo trong)   : {review}")
     print(f"  Khong ung vien      : {none}")
     print(f"  -> soi lai: {os.path.join(OUT, 'applied.html')}")
