@@ -1,7 +1,7 @@
 # Chuyển Cena Checker sang Oracle Cloud (miễn phí vĩnh viễn)
 
 Hướng dẫn dựng web trên VM Oracle Always Free, tự cấp HTTPS, và **tự động deploy
-mỗi khi push GitHub** (giống Railway). Làm 1 lần, sau đó không phải đụng tới nữa.
+mỗi khi push GitHub**. Làm 1 lần, sau đó không phải đụng tới nữa.
 
 ---
 
@@ -75,7 +75,8 @@ journalctl -u caddy -f
 
 ## Ghi chú
 
-- Railway vẫn chạy song song tới khi bạn hài lòng với Oracle. Cả hai deploy chung
-  từ nhánh `master` — không xung đột. Muốn bỏ Railway thì xóa project bên đó.
+- Web hiện tại chạy trên GitHub Pages (https://my-tools26.github.io/cena-checker).
+  Oracle chỉ cần khi muốn bản có server (vd tránh giới hạn trang tĩnh); cả hai
+  deploy chung từ nhánh `master` — không xung đột.
 - Các task cào giá **vẫn chạy trên máy Windows** của bạn (Claude Code) rồi push
   GitHub — Oracle chỉ phục vụ trang.

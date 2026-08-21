@@ -465,7 +465,7 @@ function isFresh(p) {
 }
 
 /* Xao tron on dinh theo NGAY: trong ngay thu tu khong doi (phan trang on dinh),
-   sang ngay moi tu doi. Dung cho trang Akce (giong ban Railway). */
+   sang ngay moi tu doi. Dung cho trang Akce (giu thu tu phan trang on dinh). */
 function seededRand(seed) {
   return function () {
     seed |= 0; seed = seed + 0x6D2B79F5 | 0;
@@ -1159,7 +1159,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.5.9.7';
+if (el) el.textContent = 'v1.5.9.8';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
