@@ -399,6 +399,22 @@ def load_manual_map():
     return {_norm_name(k): str(v).strip() for k, v in d.get("map", {}).items() if v}
 
 
+def load_page_ean():
+    """dathang_page_ean.json {slug:{name,ean,price}} - ma dathang TU KHAI trong HTML
+    trang san pham (thu_ean_dathang_page.py). Chinh xac nhat -> uu tien sau map tay.
+    Tra {norm_name: ean}."""
+    p = os.path.join(HERE, "dathang_page_ean.json")
+    if not os.path.exists(p):
+        return {}
+    out = {}
+    for v in json.load(open(p, encoding="utf-8")).values():
+        ean = str(v.get("ean", "")).strip()
+        nm = v.get("name", "")
+        if nm and ean.isdigit() and 8 <= len(ean) <= 14:
+            out[_norm_name(nm)] = ean
+    return out
+
+
 def apply_to_file():
     """Khop TOAN BO dathang_prices.json -> gan 'ean' cho nhom RO RANG, ghi lai file."""
     print("[1/3] Nap ung vien tu 5 catalog co EAN ...")
@@ -412,12 +428,13 @@ def apply_to_file():
         print(f"      + OFF: {len(off)} ung vien (hang ngoai/EU)")
 
     manual = load_manual_map()
+    pageean = load_page_ean()          # ma dathang tu khai (HTML) - uu tien #1
     path = os.path.join(HERE, "dathang_prices.json")
     data = json.load(open(path, encoding="utf-8"))
     items = data.get("items", [])
-    print(f"[2/3] Khop {len(items)} mon (co {len(manual)} map tay) ...")
+    print(f"[2/3] Khop {len(items)} mon (map tay {len(manual)}, EAN dathang khai {len(pageean)}) ...")
 
-    clear = review = none = man = off_hit = 0
+    clear = review = none = man = off_hit = page_hit = 0
     report = []
     for it in items:
         it.pop("ean", None)               # xoa ean cu (chay lai sach se)
@@ -427,6 +444,12 @@ def apply_to_file():
             it["ean"] = manual[mk]; man += 1
             report.append({"name": it["name"], "ean": manual[mk], "src": "TAY",
                            "cand": "(map thủ công)", "score": 999})
+            continue
+        # UU TIEN #1: EAN dathang TU KHAI trong HTML trang -> chinh xac nhat
+        if mk in pageean:
+            it["ean"] = pageean[mk]; page_hit += 1
+            report.append({"name": it["name"], "ean": pageean[mk], "src": "PAGE",
+                           "cand": "(dathang tự khai HTML)", "score": 998})
             continue
         cand, sz, mydist = match_one(it.get("name", ""), it.get("amount", ""),
                                      cands, idx)
@@ -462,9 +485,10 @@ def apply_to_file():
                                "none": none, "total": len(items)})
     print("[3/3] Da ghi ean vao dathang_prices.json")
     print(f"  Map tay (uu tien)   : {man}")
+    print(f"  EAN dathang tu khai : {page_hit}")
     print(f"  Ro rang catalog     : {clear}")
     print(f"  Them tu OFF (tang 2) : {off_hit}")
-    print(f"  Tong da gan EAN     : {man + clear + off_hit}")
+    print(f"  Tong da gan EAN     : {man + page_hit + clear + off_hit}")
     print(f"  Map mo (bo trong)   : {review}")
     print(f"  Khong ung vien      : {none}")
     print(f"  -> soi lai: {os.path.join(OUT, 'applied.html')}")
