@@ -169,6 +169,24 @@ def build_ean_shards(catalog):
         rec[1].append([it[3], it[1], it[2], it[4]])  # kho, gia, quy cach, so chiec
         if not rec[0]:
             rec[0] = it[0]
+    # === Ma "baleni" (ma bich) -> tro ve cung san pham voi ma "kus" ===
+    # bombacena co ca EAN kus (it['ean']) lan EAN baleni (it['ean_bal']); index
+    # them ma bich de go/quet CA HAI deu ra dung san pham + gia.
+    for _fn in ("bombacena_prices.json",):
+        _d = load(_fn)
+        for it in (_d or {}).get("items", []):
+            eb = (it.get("ean_bal") or "").strip()
+            if not eb or not eb.isdigit():
+                continue
+            e = (it.get("ean") or "").strip()
+            src = shards.get(e[:3], {}).get(e) if e and e.isdigit() else None
+            rec = shards.setdefault(eb[:3], {}).setdefault(
+                eb, [it.get("name", "") or "", []])
+            if src:
+                if not rec[0]:
+                    rec[0] = src[0]
+                if not rec[1] and src[1]:
+                    rec[1] = list(src[1])
     # === GHEP GIA cho ma CHI CO TEN (chua gan gia) ===
     # ~49% ma chi co ten (Luigi's Box, hoac kho khong ghi ma vach trong bang gia).
     # Ghep theo THUONG HIEU (tu dau) + DUNG TICH, chan nham bien the -> quet ra
