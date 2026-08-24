@@ -1159,7 +1159,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.6.0.0';
+if (el) el.textContent = 'v1.6.0.1';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
@@ -1220,6 +1220,18 @@ if (el) el.textContent = 'v1.6.0.0';
   paint();
   window.addEventListener('load', apply);
   setTimeout(apply, 300);
+  // BO SUNG: moi khi #main render lai (tim kiem, doi trang) -> tu ap lai bo loc
+  // sieu thi da chon TRUOC do. Nho vay chon an/hien truoc roi bam Tim thi ket qua
+  // ra da loc san. disconnect trong luc apply de khong lap vo han.
+  var main = document.getElementById('main');
+  if (main && window.MutationObserver) {
+    var mo = new MutationObserver(function () {
+      mo.disconnect();
+      apply();
+      mo.observe(main, { childList: true, subtree: true });
+    });
+    mo.observe(main, { childList: true, subtree: true });
+  }
 })();
 
 /* ---------- viewtabs (Tat ca / Sieu thi / Ban buon) ---------- */
