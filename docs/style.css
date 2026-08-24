@@ -132,3 +132,4 @@
  @media(max-width:640px){body.q-focused #filterbtn{display:inline-block}}
  .stact{margin-top:2px}
  .stact button{font-size:.78em;padding:3px 10px;margin-right:6px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--muted);cursor:pointer}
+ .stnote{margin:6px 0 0;font-size:.76em;color:var(--muted2);line-height:1.35}
