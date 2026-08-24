@@ -97,7 +97,12 @@ def parse_products(html_text):
         price_dph_el = box.select_one(".s31-article-price-DPH")
         price = parse_price(price_el.get_text()) if price_el else None
         price_net = parse_price(price_dph_el.get_text()) if price_dph_el else None
-        if not name or not price:
+        # BAT BUOC co gia B2B "bez DPH" (price_net). Khi CHUA dang nhap, site chi
+        # hien "Doporucena MO cena" (gia ban le) va KHONG co bez DPH -> price_net
+        # None -> BO QUA, tranh nuot nham gia ban le vao du lieu (loi 08/2026:
+        # 87% hang bi ghi gia ban le vi phien cao mat login). Nho vay check_login
+        # cung tu dung: khong co net = coi nhu chua login.
+        if not name or not price or price_net is None:
             continue
         out.append({"name": name, "code": code, "ean": ean,
                     "price": price, "price_net": price_net})
