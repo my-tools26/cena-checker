@@ -1,23 +1,38 @@
 # -*- coding: utf-8 -*-
-"""Cao gia catalog day du Tamda Express (tamdaexpress.eu) - CAN DANG NHAP B2B.
+"""Cao gia catalog Tamda Express (tamdaexpress.eu) - CAN DANG NHAP B2B.
 
-Gia bi an sau dang nhap ("Dang nhap de xem gia") nen script nay mo mot cua so
-Chrome that (khong headless), ban tu dang nhap 1 lan, roi script tu dong duyet
-qua tung trang so cua tat ca danh muc (URL dang <danh-muc>-page-N.html), doc
-ten/gia/EAN va ghi vao tamda_full_prices.json.
+Gia bi an sau dang nhap ("Dang nhap de xem gia") nen script mo mot cua so Chrome
+that (khong headless), ban tu dang nhap 1 lan, roi script duyet danh muc doc
+ten/gia/EAN -> tamda_full_prices.json.
 
-Buoc 1: cao theo danh muc (kham pha tu dong tu menu).
-Buoc 2: search sweep a-z + 0-9 de bat san pham o sub-category sau.
+MAC DINH = INCREMENTAL (chi them mat hang MOI):
+  - Nap data cu tamda_full_prices.json, GIU nguyen.
+  - Duyet danh muc voi sort MOI-NHAT-TRUOC; khi gap 3 trang lien tiep khong co
+    hang moi -> dung (khoi cao het). Bo search sweep. -> nhanh hon nhieu.
+  - Dung cho lich hang tuan (khi to roi het han thi hang moi tu vao).
 
-Chay:  python thu_gia_tamda_full.py
+  python thu_gia_tamda_full.py
+
+CAO LAI TOAN BO (bo data cu + quet het moi trang + search sweep) - nen ~1 thang/lan
+de bat het hang o sub-category sau:
+
+  python thu_gia_tamda_full.py --full
 """
 import json
 import os
 import re
+import sys
 import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+
+# Mac dinh CHAY INCREMENTAL: giu data cu, chi them mat hang MOI (sort moi-nhat
+# truoc + dung som khi gap toan hang da biet, bo search sweep). Chay lai TOAN BO
+# (bo data cu + quet het + search sweep) bang co --full (nen chay ~1 thang/lan).
+FULL = "--full" in sys.argv
+# So trang lien tiep KHONG co san pham moi -> coi nhu da toi vung da cao, dung
+STOP_AFTER_ALLKNOWN = 3
 
 BASE = "https://tamdaexpress.eu"
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -121,8 +136,14 @@ def discover_categories(driver):
 
 def crawl_category(driver, cat, collector):
     empty_streak = 0
+    allknown_streak = 0
     for page in range(1, MAX_PAGES_PER_CAT + 1):
-        url = f"{BASE}/{cat}.html" if page == 1 else f"{BASE}/{cat}-page-{page}.html"
+        if FULL:
+            # TOAN BO: phan trang SEO nhu cu, khong sort
+            url = f"{BASE}/{cat}.html" if page == 1 else f"{BASE}/{cat}-page-{page}.html"
+        else:
+            # INCREMENTAL: sort MOI-NHAT truoc + phan trang query de sort giu nguyen
+            url = f"{BASE}/{cat}.html?sort_by=timestamp&sort_order=desc&page={page}"
         try:
             driver.get(url)
         except Exception as e:
@@ -138,6 +159,14 @@ def crawl_category(driver, cat, collector):
         empty_streak = 0
         new = merge_items(collector, items)
         print(f"  [{cat} p{page}] {len(items)} san pham, +{new} moi (tong {len(collector)})")
+        # INCREMENTAL: sort moi-nhat truoc -> khi da qua vung san pham moi,
+        # cac trang sau toan hang cu -> dung som (khoi cao het 120 trang).
+        if not FULL:
+            allknown_streak = allknown_streak + 1 if new == 0 else 0
+            if allknown_streak >= STOP_AFTER_ALLKNOWN:
+                print(f"  [{cat}] {STOP_AFTER_ALLKNOWN} trang lien tiep khong co "
+                      f"hang moi -> dung (incremental)")
+                break
 
 
 def search_sweep(driver, collector):
@@ -168,21 +197,51 @@ def search_sweep(driver, collector):
     print(f"Search sweep: +{added} san pham moi")
 
 
+def load_existing():
+    """Nap tamda_full_prices.json cu -> collector, de INCREMENTAL chi them hang moi."""
+    if not os.path.exists(OUT):
+        return {}
+    try:
+        data = json.load(open(OUT, encoding="utf-8"))
+    except Exception:
+        return {}
+    coll = {}
+    for it in data.get("items", []):
+        key = it.get("ean") or it.get("name")
+        if key:
+            coll[key] = it
+    return coll
+
+
 def main():
+    mode = "TOAN BO (--full)" if FULL else "INCREMENTAL (chi them hang moi)"
+    print(f"Che do: {mode}")
     options = webdriver.ChromeOptions()
     options.add_argument("--lang=vi-VN")
     driver = webdriver.Chrome(options=options)
-    all_items = {}
+
+    all_items = {} if FULL else load_existing()
+    before = len(all_items)
+    print(f"Data cu: {before} san pham" if not FULL else "Cao lai tu dau")
     try:
         wait_login(driver)
         cats = discover_categories(driver)
         for cat in cats:
             print(f"=== [{cat}] ===")
             crawl_category(driver, cat, all_items)
-        print(f"\n=== SEARCH SWEEP (bat san pham sot) ===")
-        search_sweep(driver, all_items)
+        if FULL:
+            print(f"\n=== SEARCH SWEEP (bat san pham sot) ===")
+            search_sweep(driver, all_items)
     finally:
         driver.quit()
+
+    added = len(all_items) - before
+    # An toan: incremental KHONG duoc lam giam so luong (neu cao loi ra rong ->
+    # giu data cu, khong ghi de).
+    if not FULL and os.path.exists(OUT) and len(all_items) < before:
+        print(f"LOI: sau khi cao con {len(all_items)} < data cu {before} - "
+              f"nghi cao loi, KHONG ghi de.")
+        raise SystemExit(2)
 
     result = {
         "date": time.strftime("%Y-%m-%d"),
@@ -191,7 +250,7 @@ def main():
     }
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=1)
-    print(f"XONG: ghi {len(result['items'])} san pham vao {OUT}")
+    print(f"XONG: {len(result['items'])} san pham (+{added} moi) -> {OUT}")
 
 
 if __name__ == "__main__":
