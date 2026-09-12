@@ -195,9 +195,27 @@ def enrich_ean(session, seen, cache):
     print(f"EAN: lay them {fetched} item lan nay, tong cache {len(cache)}")
 
 
+# Mac dinh INCREMENTAL: chi cao danh muc "hang moi + khuyen mai" (nhanh ~2-4 phut),
+# giu data cu + cap nhat gia + them hang moi. Chay TOAN BO (tat ca danh muc + fetch
+# EAN) bang --full (~30-40 phut, nen ~1 thang/lan de refresh het gia + lay EAN moi).
+FULL = "--full" in sys.argv
+INCR_CATS = ["akce", "novinky", "vyprodej"]   # hang moi + deal (noi gia hay doi)
+
+
+def load_existing():
+    """Nap bombacena_prices.json cu -> {name: item} (giu ean/ean_bal), de incremental."""
+    try:
+        old = json.load(open(OUT, encoding="utf-8"))
+    except Exception:
+        return {}
+    return {it["name"]: it for it in old.get("items", []) if it.get("name")}
+
+
 def main():
     session = requests.Session()
-    categories = discover_categories(session)
+    categories = discover_categories(session) if FULL else INCR_CATS
+    print(f"Che do: {'TOAN BO (--full)' if FULL else 'INCREMENTAL (hang moi + akce)'}")
+
     seen = {}
     for slug in categories:
         prods = crawl_category(session, slug)
@@ -210,24 +228,44 @@ def main():
         print(f"[bombacena] {slug} - {len(prods)} mat hang ({new} moi) - tong {len(seen)}")
 
     cache = load_ean_cache()
-    enrich_ean(session, seen, cache)
+    enrich_ean(session, seen, cache)   # incremental: chi it hang moi chua co EAN -> nhanh
 
-    items = []
-    n_ean = 0
+    # san pham vua cao -> {name: item}
+    crawled = {}
     for v in seen.values():
         name, price, href = v["name"], v["price"], v["href"]
         m = RE_AMOUNT.search(name)
         amount = f"{m.group(1)} {m.group(2).lower()}" if m else ""
-        item = {"name": name, "price": round(price, 2),
-                "amount": amount, "unit": ""}
+        item = {"name": name, "price": round(price, 2), "amount": amount, "unit": ""}
         c = cache.get(slug_of(href), {})
         if c.get("ean"):
             item["ean"] = c["ean"]
-            n_ean += 1
         if c.get("ean_bal"):
             item["ean_bal"] = c["ean_bal"]
-        items.append(item)
+        crawled[name] = item
 
+    if FULL:
+        items = list(crawled.values())
+    else:
+        # INCREMENTAL: giu data cu, cap nhat GIA + them hang MOI
+        merged = load_existing()
+        before = len(merged)
+        added = updated = 0
+        for nm, it in crawled.items():
+            if nm in merged:
+                if merged[nm].get("price") != it["price"]:
+                    merged[nm]["price"] = it["price"]; updated += 1
+                if it.get("ean") and not merged[nm].get("ean"):
+                    merged[nm]["ean"] = it["ean"]
+            else:
+                merged[nm] = it; added += 1
+        items = list(merged.values())
+        print(f"Incremental: +{added} hang moi, cap nhat gia {updated}, tong {len(items)} (cu {before})")
+        # an toan: khong duoc giam manh (neu it hon 50% data cu -> nghi loi)
+        if before and len(items) < before * 0.5:
+            print("LOI: giam manh bat thuong, KHONG ghi de."); raise SystemExit(2)
+
+    n_ean = sum(1 for it in items if it.get("ean"))
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "shop": "bombacena",
                    "items": items}, f, ensure_ascii=False, indent=1)
