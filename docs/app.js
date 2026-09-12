@@ -818,7 +818,13 @@ function searchByEan(code, head, el) {
           var extraVariant = VAR.some(function (wv) {
             return (n.indexOf(wv) >= 0) !== (myName.indexOf(wv) >= 0);
           });
-          if (sameSize && allToks && !extraVariant) merged.push(x); else rest.push(x);
+          // CHAN GOP NHAM BIEN THE: neu ung vien co EAN KHAC voi ma dang tra thi
+          // day la SAN PHAM KHAC (vd Dr.House Levandule ...680 vs Black ...598) ->
+          // khong gop, tranh lay nham gia re hon cua bien the khac.
+          var xe = x[5] ? String(x[5]) : '';
+          var diffEan = xe && xe !== String(code) && xe !== String(hit.code || '');
+          if (sameSize && allToks && !extraVariant && !diffEan) merged.push(x);
+          else rest.push(x);
         });
         if (merged.length) {
           merged.forEach(function (x) {
@@ -1159,7 +1165,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.6.0.2';
+if (el) el.textContent = 'v1.6.0.3';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
