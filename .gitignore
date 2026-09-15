@@ -27,3 +27,5 @@ freshtab_test.txt
 makro_gtins_batch2*.json
 .claude/
 off_candidates.json
+.chrome-tamda-profile/
+.chrome-cookie-profiles/
