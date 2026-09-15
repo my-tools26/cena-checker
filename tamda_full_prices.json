@@ -152076,6 +152076,202 @@
    "ean": "4052199532356",
    "amount": "",
    "unit": ""
+  },
+  {
+   "name": "Sanytol dezinfekční čistič pračky 240ML",
+   "price": 87.4,
+   "ean": "8411660006295",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Virusept antibakteriální mýdlo tuhé 100g",
+   "price": 18.2,
+   "ean": "8594060453910",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol mýdlo dezinfekční purifiant 250ML",
+   "price": 45.5,
+   "ean": "3045206501804",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Miléne vlhčené ubrousky antibakteriální 15ks",
+   "price": 9.9,
+   "ean": "8594069814453",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol odstraňovač skvrn dezinfekční bělící 450g",
+   "price": 147.7,
+   "ean": "3045206382601",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol dezinfekce na prádlo 1L",
+   "price": 116.1,
+   "ean": "3045206360609",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol spray do obuvi dezinfekční 150ML",
+   "price": 110.8,
+   "ean": "3045200715009",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol gel na ruce dezinfekční 75ML",
+   "price": 57.9,
+   "ean": "3045206502009",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Pohoda dezinfekce šoková do bazénu 0,9kg",
+   "price": 210.2,
+   "ean": "8595135201542",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol tekuté mýdlo dezinfekční vyživující 250ML",
+   "price": 45.5,
+   "ean": "3045206501408",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol dezinfekční gel na ruce 250ML",
+   "price": 76.9,
+   "ean": "3045206503006",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol odstraňovač skvrn dezinfekční 450g",
+   "price": 147.7,
+   "ean": "3045206382007",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol dezinfekce na prádlo 500ML",
+   "price": 69.3,
+   "ean": "3045200760009",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol osvěžovač dezinfekční horská vůně 300ML",
+   "price": 76.8,
+   "ean": "3045206394307",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol osvěžovač dezinfekční květinová vůně 300ML",
+   "price": 76.8,
+   "ean": "3045206394406",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol osvěžovač dezinfekční mentol 300ML",
+   "price": 76.8,
+   "ean": "3045206394000",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol dezinfekční sprej 500ml pro koupelny",
+   "price": 74.6,
+   "ean": "3045206393003",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol dezinfekční sprej 500ml pro kuchuyň Citrus",
+   "price": 74.6,
+   "ean": "3045206392006",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol čistič univerzální dezinfekční na podlahy citrus 1L",
+   "price": 74.6,
+   "ean": "3045206312226",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol čistič univerzální dezinfekční na podlahy eukalytups 1L",
+   "price": 74.6,
+   "ean": "3045206312202",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol univerzální vlhčené ubrousky 36ks dezinfekční",
+   "price": 69.3,
+   "ean": "3045206312257",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Indulona Profi Krém na ruce 100ml antibakteriální (červená)",
+   "price": 39.4,
+   "ean": "8586017550025",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol dezinfekční mýdlo kuchyně 250ML",
+   "price": 45.5,
+   "ean": "3045206501309",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Sanytol dezinfekční mýdlo hydratující 250ML",
+   "price": 45.5,
+   "ean": "3045206501200",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Linteo vlhčené ubrousky 15ks pro denní potřebu",
+   "price": 13.9,
+   "ean": "8594158371348",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Green shield vlhčené ubrousky antibakteriální household 50ks",
+   "price": 42.5,
+   "ean": "5060110229093",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Linteo čisticí vlhčené ubrousky 40ks univerzální",
+   "price": 27.9,
+   "ean": "8594008878348",
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Spontex utěrka x3ks houbová antibak",
+   "price": 34.0,
+   "ean": "9001378424499",
+   "amount": "",
+   "unit": ""
   }
  ]
 }

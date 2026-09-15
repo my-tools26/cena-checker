@@ -45,6 +45,14 @@ CATS_FALLBACK = [
     "hang-thoi-vu", "thuoc-la", "thuc-pham",
 ]
 
+# Danh muc "MO COI": KHONG con link o menu trang chu (vd trang landing cu tu
+# thoi COVID) -> discover_categories() KHONG BAO GIO tu tim ra, nhung van con
+# ban hang that (phat hien 15/09/2026 qua EAN 8411660006295 Sanytol). LUON cao
+# cung du discover thanh cong hay khong, de khong mat hang o day.
+ORPHAN_CATS = [
+    "anti-covid19-vi",
+]
+
 MAX_PAGES_PER_CAT = 120
 EMPTY_PAGES_TO_STOP = 2
 
@@ -231,6 +239,8 @@ def main():
     try:
         wait_login(driver)
         cats = discover_categories(driver)
+        # luon them danh muc mo coi (khong co trong menu -> discover bo sot)
+        cats = cats + [c for c in ORPHAN_CATS if c not in cats]
         for cat in cats:
             print(f"=== [{cat}] ===")
             crawl_category(driver, cat, all_items)
