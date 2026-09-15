@@ -218,6 +218,11 @@ def main():
     print(f"Che do: {mode}")
     options = webdriver.ChromeOptions()
     options.add_argument("--lang=vi-VN")
+    # HO SO CHROME RIENG giu dang nhap Tamda qua nhieu lan chay -> routine tu chay
+    # khong can login lai (chi login lai khi phien het han). KHONG dung profile
+    # Chrome chinh cua user (tranh xung dot khi Chrome dang mo).
+    profile = os.path.join(HERE, ".chrome-tamda-profile")
+    options.add_argument(f"--user-data-dir={profile}")
     driver = webdriver.Chrome(options=options)
 
     all_items = {} if FULL else load_existing()
