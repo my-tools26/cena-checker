@@ -16,6 +16,13 @@ Cau truc 1 san pham (.s31-article-box):
 Cac danh muc cap 1 hien thi TOAN BO san pham cua ca cay danh muc con, phan
 trang bang ?page=N (moi trang 48 san pham) - khong can cao rieng tung danh
 muc con.
+
+Luu y (28/09/2026): da kiem chung cac tham so sort/orderby (sort=newest,
+orderby=date_desc...) deu KHONG doi thu tu ket qua -> site KHONG ho tro sap
+xep moi-nhat, nen KHONG THE bo qua trang de "chi cao hang moi" mot cach an
+toan (rui ro sot hang moi nam giua danh sach). Van quet HET moi trang moi lan,
+nhung MERGE vao data cu thay vi ghi de: hang MOI duoc them, gia hang cu duoc
+cap nhat, khong mat du lieu neu 1 danh muc loi giua chung.
 """
 import html
 import json
@@ -52,7 +59,8 @@ def discover_categories(session):
             m = re.match(r"^(?:https?://[^/]+)?/([a-z0-9-]+)/?$", href)
             if m and m.group(1) not in seen and m.group(1) not in (
                     "prihlaseni", "registrace", "kosik", "kontakty",
-                    "obchodni-podminky", "gdpr", "reklamacni-rad", "en"):
+                    "obchodni-podminky", "gdpr", "reklamacni-rad", "en",
+                    "logout", "wishlists", "admin", "pttglobal", "muj-ucet"):
                 seen.add(m.group(1))
                 slugs.append(m.group(1))
         if len(slugs) >= 5:
@@ -150,6 +158,23 @@ def check_login(session):
     return bool(parse_products(r.text))
 
 
+def load_existing():
+    if not os.path.exists(OUT):
+        return {}
+    try:
+        d = json.load(open(OUT, encoding="utf-8"))
+    except Exception as e:
+        print(f"LOI NGHIEM TRONG: file cu {OUT} ton tai nhung doc/parse that "
+              f"bai ({e}). DUNG lai de tranh ghi de mat du lieu cu.")
+        raise SystemExit(2)
+    out = {}
+    for it in d.get("items", []):
+        key = it.get("ean") or it.get("code") or it.get("name")
+        if key:
+            out[key] = it
+    return out
+
+
 def main():
     with open(COOKIE_FILE, "r", encoding="utf-8") as f:
         cookies = json.load(f)
@@ -164,30 +189,35 @@ def main():
         raise SystemExit(2)
 
     categories = discover_categories(session)
-    seen = {}
+    merged_raw = {}  # key -> {name,code,ean,price,price_net} (crawl format)
     for slug in categories:
         prods = crawl_category(session, slug)
         new = 0
         for p in prods:
             key = p["ean"] or p["code"] or p["name"]
-            if key not in seen:
-                seen[key] = p
+            if key not in merged_raw:
                 new += 1
-        print(f"[pttglobal] {slug} - {len(prods)} mat hang ({new} moi) - tong {len(seen)}")
+            merged_raw[key] = p  # them moi HOAC cap nhat gia hang da biet
+        print(f"[pttglobal] {slug} - {len(prods)} mat hang ({new} moi) - tong {len(merged_raw)}")
 
-    items = []
-    for p in seen.values():
+    # gop voi data cu (dang items da co "amount") de khong mat hang neu 1
+    # danh muc loi lan nay; hang vua cao lai (merged_raw) LUON de len tren.
+    seen = load_existing()
+    before = len(seen)
+    for key, p in merged_raw.items():
         m = RE_AMOUNT.search(p["name"])
         amount = f"{m.group(1)} {m.group(2).lower()}" if m else ""
-        items.append({"name": p["name"], "code": p["code"], "ean": p["ean"],
-                       "price": round(p["price"], 2),
-                       "price_net": round(p["price_net"], 2) if p["price_net"] else None,
-                       "amount": amount, "unit": ""})
+        seen[key] = {"name": p["name"], "code": p["code"], "ean": p["ean"],
+                     "price": round(p["price"], 2),
+                     "price_net": round(p["price_net"], 2) if p["price_net"] else None,
+                     "amount": amount, "unit": ""}
+    items = list(seen.values())
 
     if len(items) < MIN_ITEMS:
         print(f"LOI: chi lay duoc {len(items)} mat hang (< {MIN_ITEMS}), nghi ngo "
               f"cookie het han hoac site loi. KHONG ghi de du lieu cu.")
         raise SystemExit(2)
+    print(f"(+{len(items) - before} moi so voi lan truoc)")
 
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "shop": "pttglobal",

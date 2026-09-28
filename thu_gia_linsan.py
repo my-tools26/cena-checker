@@ -5,6 +5,13 @@ gia that (PriceValue) va ma vach that (Sku) du giao dien web hien "Dang nhap de
 xem gia" cho khach chua dang nhap - khong can dang nhap, khong can cookie.
 Chay:  python thu_gia_linsan.py
 Ket qua -> linsan_prices.json.
+
+Luu y (28/09/2026): API nay KHONG ho tro sort theo ngay tao (da kiem chung cac
+tham so OrderBy/Sort deu bi bo qua hoac loi 400) -> KHONG THE bo qua trang cu
+mot cach an toan (co nguy co sot hang moi nam giua danh sach). Van quet HET
+moi trang moi lan (~16 trang, da nhanh <1 phut), nhung MERGE vao data cu thay
+vi ghi de tu dau -> khong mat du lieu neu crawl loi giua chung, hang MOI van
+duoc them, gia hang cu duoc cap nhat.
 """
 import html
 import json
@@ -28,8 +35,26 @@ def clean(s):
     return html.unescape(re.sub(r"\s+", " ", s or "")).strip()
 
 
+def load_existing():
+    if not os.path.exists(OUT):
+        return {}
+    try:
+        d = json.load(open(OUT, encoding="utf-8"))
+    except Exception as e:
+        print(f"LOI NGHIEM TRONG: file cu {OUT} ton tai nhung doc/parse that "
+              f"bai ({e}). DUNG lai de tranh ghi de mat du lieu cu.")
+        raise SystemExit(2)
+    out = {}
+    for it in d.get("items", []):
+        key = it.get("sku_key") or it.get("name")
+        if key:
+            out[key] = it
+    return out
+
+
 def main():
-    items = []
+    merged = load_existing()
+    before = len(merged)
     fetched = 0
     total = None
     page = 1
@@ -60,21 +85,33 @@ def main():
                 continue
             m = RE_AMOUNT.search(name)
             amount = f"{m.group(1)} {m.group(2).lower()}" if m else ""
-            item = {"name": name, "price": round(float(price), 2),
-                     "amount": amount, "unit": ""}
             sku = clean(p.get("Sku"))
+            # sku_key: dinh danh THAT cua site (moi khi co), tranh gop nham cac
+            # san pham KHAC NHAU dung chung ten hien thi (~25 cap da thay trong
+            # data that 28/09/2026). Field noi bo, khong dung o app.
+            item = {"name": name, "price": round(float(price), 2),
+                     "amount": amount, "unit": "", "sku_key": sku or None}
+            if not item["sku_key"]:
+                del item["sku_key"]
             if sku.isdigit() and len(sku) in (8, 12, 13, 14):
                 item["ean"] = sku
-            items.append(item)
-        print(f"[linsan] trang {page} - da doc {fetched}/{total} mat hang, con lai {len(items)}")
+            key = item.get("sku_key") or name
+            merged[key] = item  # them moi HOAC cap nhat gia hang da biet
+        print(f"[linsan] trang {page} - da doc {fetched}/{total} mat hang, tong {len(merged)}")
         if len(products) < LIMIT or fetched >= total:
             break
         page += 1
         time.sleep(0.5)
 
+    items = list(merged.values())
+    if before and len(items) < before * 0.5:
+        print(f"LOI: sau khi cao con {len(items)} < 50% data cu {before}, KHONG ghi de.")
+        raise SystemExit(2)
+
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "shop": "linsan",
                    "items": items}, f, ensure_ascii=False, indent=1)
+    print(f"(+{len(items) - before} moi so voi lan truoc)")
     print(f"XONG linsan: {len(items)} mat hang -> linsan_prices.json")
 
 

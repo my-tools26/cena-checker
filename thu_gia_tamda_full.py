@@ -206,13 +206,18 @@ def search_sweep(driver, collector):
 
 
 def load_existing():
-    """Nap tamda_full_prices.json cu -> collector, de INCREMENTAL chi them hang moi."""
+    """Nap tamda_full_prices.json cu -> collector, de INCREMENTAL chi them hang moi.
+    QUAN TRONG: neu file TON TAI nhung doc/parse loi thi PHAI DUNG (khong duoc
+    tra ve {} coi nhu chua co gi -> an toan giam-manh se khong hoat dong dung,
+    xem loi thuc te o thu_gia_bombacena.py 18/09/2026)."""
     if not os.path.exists(OUT):
         return {}
     try:
         data = json.load(open(OUT, encoding="utf-8"))
-    except Exception:
-        return {}
+    except Exception as e:
+        print(f"LOI NGHIEM TRONG: file cu {OUT} ton tai nhung doc/parse that bai "
+              f"({e}). DUNG lai de tranh ghi de mat du lieu cu.")
+        raise SystemExit(2)
     coll = {}
     for it in data.get("items", []):
         key = it.get("ean") or it.get("name")

@@ -17,6 +17,7 @@ import html
 import json
 import os
 import re
+import sys
 import time
 from urllib.parse import urlparse, parse_qs
 
@@ -203,12 +204,31 @@ INCR_CATS = ["akce", "novinky", "vyprodej"]   # hang moi + deal (noi gia hay doi
 
 
 def load_existing():
-    """Nap bombacena_prices.json cu -> {name: item} (giu ean/ean_bal), de incremental."""
+    """Nap bombacena_prices.json cu -> {name: item} (giu ean/ean_bal), de incremental.
+    QUAN TRONG: neu FILE TON TAI nhung doc loi (JSON hong, khoa boi tien trinh
+    khac...) thi PHAI DUNG hang, KHONG duoc tra ve {} roi de main() tuong nham
+    la 'chua co data cu' -> bo qua an toan giam manh -> ghi de mat sach du lieu
+    cu (loi thuc te 18/09/2026: mat 28k/39971 mat hang vi loi nay)."""
+    if not os.path.exists(OUT):
+        return {}
     try:
         old = json.load(open(OUT, encoding="utf-8"))
-    except Exception:
-        return {}
-    return {it["name"]: it for it in old.get("items", []) if it.get("name")}
+        # KHOA la href/slug (dinh danh THAT), KHONG PHAI name: nhieu san pham
+        # KHAC NHAU (mui huong/mau khac) dung chung 1 ten hien thi rut gon (vd
+        # "Bartek 115g Svíčka ve skle..." lap toi 104 lan trong data that,
+        # thang 39971 dong con 11815 ten neu gop theo ten -> gop NHAM mat
+        # ~28000 san pham khac nhau. Loi thuc te 18-28/09/2026, da phuc hoi tu
+        # git va sua lai key o day.
+        out = {}
+        for it in old.get("items", []):
+            key = it.get("href") or it.get("name")
+            if key:
+                out[key] = it
+        return out
+    except Exception as e:
+        print(f"LOI NGHIEM TRONG: file cu {OUT} ton tai nhung doc/parse that bai "
+              f"({e}). DUNG lai de tranh ghi de mat du lieu cu.")
+        raise SystemExit(2)
 
 
 def main():
@@ -230,41 +250,47 @@ def main():
     cache = load_ean_cache()
     enrich_ean(session, seen, cache)   # incremental: chi it hang moi chua co EAN -> nhanh
 
-    # san pham vua cao -> {name: item}
+    # san pham vua cao -> {href-hoac-ten: item}. GIU href trong item de lan
+    # sau (kha incremental) khop DUNG san pham, khong gop nham theo ten chung.
     crawled = {}
-    for v in seen.values():
+    for key, v in seen.items():
         name, price, href = v["name"], v["price"], v["href"]
         m = RE_AMOUNT.search(name)
         amount = f"{m.group(1)} {m.group(2).lower()}" if m else ""
-        item = {"name": name, "price": round(price, 2), "amount": amount, "unit": ""}
+        item = {"name": name, "price": round(price, 2), "amount": amount,
+                "unit": "", "href": href}
         c = cache.get(slug_of(href), {})
         if c.get("ean"):
             item["ean"] = c["ean"]
         if c.get("ean_bal"):
             item["ean_bal"] = c["ean_bal"]
-        crawled[name] = item
+        crawled[key] = item
 
     if FULL:
         items = list(crawled.values())
     else:
-        # INCREMENTAL: giu data cu, cap nhat GIA + them hang MOI
+        # INCREMENTAL: giu data cu, cap nhat GIA + them hang MOI (khop theo href)
         merged = load_existing()
         before = len(merged)
         added = updated = 0
-        for nm, it in crawled.items():
-            if nm in merged:
-                if merged[nm].get("price") != it["price"]:
-                    merged[nm]["price"] = it["price"]; updated += 1
-                if it.get("ean") and not merged[nm].get("ean"):
-                    merged[nm]["ean"] = it["ean"]
+        for key, it in crawled.items():
+            if key in merged:
+                if merged[key].get("price") != it["price"]:
+                    merged[key]["price"] = it["price"]; updated += 1
+                if it.get("ean") and not merged[key].get("ean"):
+                    merged[key]["ean"] = it["ean"]
             else:
-                merged[nm] = it; added += 1
+                merged[key] = it; added += 1
         items = list(merged.values())
         print(f"Incremental: +{added} hang moi, cap nhat gia {updated}, tong {len(items)} (cu {before})")
-        # an toan: khong duoc giam manh (neu it hon 50% data cu -> nghi loi)
-        if before and len(items) < before * 0.5:
+        # an toan: khong duoc giam manh (neu it hon 90% data cu -> nghi loi;
+        # nguong cao vi gio khop chinh xac theo href, khong con gop nham nua)
+        if before and len(items) < before * 0.9:
             print("LOI: giam manh bat thuong, KHONG ghi de."); raise SystemExit(2)
 
+    # href GIU LAI trong output (build_static/app.js chi doc field can, bo qua
+    # field la) - de LAN CHAY SAU dung href lam khoa khop chinh xac, khong con
+    # gop nham cac san pham khac nhau dung chung 1 ten hien thi.
     n_ean = sum(1 for it in items if it.get("ean"))
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "shop": "bombacena",

@@ -9,6 +9,18 @@ Luu y:
   Gia s DPH tinh theo co "food": 12% thuc pham, 21% con lai.
 - Phan trang search bi chan o ~10k ket qua -> phai quet theo danh muc
   (filter=category:<duong-dan>), danh muc nao qua lon thi xuong cap con.
+
+TOI UU (28/09/2026, khong doi hanh vi/gia tri):
+- Da kiem chung API tim kiem KHONG ho tro sort theo ngay tao -> khong the bo
+  qua trang cu mot cach an toan cho buoc THU THAP GIA (van phai quet HET moi
+  danh muc moi lan, de gia luon dung cho TAT CA mat hang, khong chi hang moi).
+- NHUNG buoc lay TEN + EAN (goi API betty-variants theo lo 40 id) la phan
+  NANG NHAT (hang tram request) va KHONG doi theo thoi gian cho 1 variantId
+  co san -> CACHE ten/EAN vao makro_variant_cache.json, lan sau chi goi API
+  cho variantId MOI (chua co trong cache), tai su dung ten/EAN da biet cho
+  variantId cu -> giam manh so request ma khong lam gia cu di.
+- --full: xoa cache, tra lai TEN/EAN cho TAT CA (nen ~1-2 thang/lan phong khi
+  Makro doi ten/EAN 1 san pham da co).
 """
 import json
 import os
@@ -17,14 +29,30 @@ import time
 
 import requests
 
+VARIANT_CACHE = None  # nap 1 lan trong main()
+
 BASE = "https://sortiment.makro.cz"
 STORE = "00006"  # makro Praha - Stodulky
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "makro_full_prices.json")
+CACHE_FILE = os.path.join(HERE, "makro_variant_cache.json")
 H = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) CenaChecker/1.0",
      "Accept": "application/json", "CallTreeId": "cena-checker"}
 RE_AMOUNT = re.compile(r"(\d+[,.]?\d*)\s*(kg|g|ml|l|ks)\b", re.I)
 MAX_SEARCH = 3000  # search co filter danh muc bi chan o 3000 ket qua (do duoc 10.7.2026)
+
+
+def load_variant_cache():
+    """variantId -> {name, ean, food}. Ton tai qua nhieu lan chay -> khoi phai
+    goi lai API ten/EAN cho variantId da biet."""
+    try:
+        return json.load(open(CACHE_FILE, encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def save_variant_cache(cache):
+    json.dump(cache, open(CACHE_FILE, "w", encoding="utf-8"), ensure_ascii=False)
 
 
 def get(url, params, tries=4):
@@ -126,20 +154,27 @@ def collect_category(cat_path, prices, depth=0):
 
 
 def main():
+    import sys
+    full = "--full" in sys.argv
     cats = cat_tree()
     print(f"{len(cats)} danh muc cap 2")
-    prices = {}  # variantId -> gia net
+    prices = {}  # variantId -> gia net (LUON quet HET moi lan, de gia moi cho TAT CA)
     for c in cats:
         collect_category(c, prices)
     # quet them query=* khong filter de vot 9000 sp dau (phong khi menu thieu)
     collect_category("", prices)
     ids = list(prices)
-    print(f"Tong {len(ids)} variant, bat dau lay ten/EAN...")
+    print(f"Tong {len(ids)} variant")
 
-    items = []
-    seen_names = set()
-    for i in range(0, len(ids), 40):
-        chunk = ids[i:i + 40]
+    # TOI UU: ten/EAN cua variantId DA BIET tu lan truoc khong doi -> tai su
+    # dung tu cache, chi goi API cho variantId MOI -> giam manh so request.
+    cache = {} if full else load_variant_cache()
+    new_ids = [vid for vid in ids if vid not in cache]
+    print(f"  {len(ids) - len(new_ids)} variant da co ten/EAN trong cache, "
+          f"chi tra {len(new_ids)} variant moi...")
+
+    for i in range(0, len(new_ids), 40):
+        chunk = new_ids[i:i + 40]
         d = get(f"{BASE}/evaluate.article.v1/betty-variants",
                 {"storeIds": STORE, "country": "CZ", "locale": "cs-CZ",
                  "ids": ",".join(chunk)})
@@ -150,8 +185,7 @@ def main():
             for v in art.get("variants", {}).values():
                 vid = v.get("bettyVariantId", {}).get("bettyVariantId", "")
                 name = (v.get("description") or "").strip()
-                net = prices.get(vid)
-                if not name or not net:
+                if not name or vid not in prices:
                     continue
                 ean = ""
                 for b in v.get("bundles", {}).values():
@@ -168,19 +202,31 @@ def main():
                                 break
                     if ean:
                         break
-                vat = 1.12 if food else 1.21
-                m = RE_AMOUNT.search(name)
-                key = name + "|" + ean
-                if key in seen_names:
-                    continue
-                seen_names.add(key)
-                items.append({"name": name, "price": round(net * vat, 1),
-                              "price_net": net, "ean": ean,
-                              "amount": f"{m.group(1)} {m.group(2).lower()}" if m else "",
-                              "unit": ""})
+                cache[vid] = {"name": name, "ean": ean, "food": food}
         if (i // 40) % 25 == 0:
-            print(f"  chi tiet {i}/{len(ids)} -> {len(items)} items")
+            print(f"  chi tiet moi {i}/{len(new_ids)}")
         time.sleep(0.25)
+
+    save_variant_cache(cache)
+
+    items = []
+    seen_names = set()
+    for vid in ids:
+        info = cache.get(vid)
+        net = prices.get(vid)
+        if not info or not net:
+            continue
+        name, ean, food = info["name"], info["ean"], info.get("food", True)
+        vat = 1.12 if food else 1.21
+        m = RE_AMOUNT.search(name)
+        key = name + "|" + ean
+        if key in seen_names:
+            continue
+        seen_names.add(key)
+        items.append({"name": name, "price": round(net * vat, 1),
+                      "price_net": net, "ean": ean,
+                      "amount": f"{m.group(1)} {m.group(2).lower()}" if m else "",
+                      "unit": ""})
 
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "shop": "makro_full",

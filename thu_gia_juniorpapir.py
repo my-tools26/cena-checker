@@ -14,6 +14,12 @@ Cau truc: moi trang danh muc goc (c-so) nhung <script type='application/
 ld+json'> chua ItemList day du (ten, gia B2B, EAN gtin8, url) cho CA CAY
 danh muc con - khong can quet rieng tung danh muc con.
 Phan trang: ?f=N (N = 0,30,60,... buoc 30). Trang cuoi < 30 san pham.
+
+Luu y (28/09/2026): trang khong ho tro sort theo ngay tao -> KHONG THE bo qua
+trang de "chi cao hang moi" mot cach an toan. Van quet HET moi lan (nhung moi
+danh muc goc da tra ca cay con trong 1 luot phan trang, nen von da tuong doi
+gon), nhung MERGE vao data cu thay vi ghi de: hang MOI duoc them, gia hang cu
+duoc cap nhat, khong mat du lieu neu 1 danh muc loi giua chung.
 """
 import json
 import os
@@ -125,6 +131,23 @@ def crawl_category(session, slug):
     return items
 
 
+def load_existing():
+    if not os.path.exists(OUT):
+        return {}
+    try:
+        d = json.load(open(OUT, encoding="utf-8"))
+    except Exception as e:
+        print(f"LOI NGHIEM TRONG: file cu {OUT} ton tai nhung doc/parse that "
+              f"bai ({e}). DUNG lai de tranh ghi de mat du lieu cu.")
+        raise SystemExit(2)
+    out = {}
+    for it in d.get("items", []):
+        key = it.get("ean") or it.get("name")
+        if key:
+            out[key] = it
+    return out
+
+
 def main():
     with open(COOKIE_FILE, "r", encoding="utf-8") as f:
         cookies = json.load(f)
@@ -139,30 +162,34 @@ def main():
         raise SystemExit(2)
 
     categories = discover_categories(session)
-    seen = {}
+    merged_raw = {}
     for slug in categories:
         prods = crawl_category(session, slug)
         new = 0
         for p in prods:
             key = p["ean"] or p["sku"] or p["name"]
-            if key not in seen:
-                seen[key] = p
+            if key not in merged_raw:
                 new += 1
-        print(f"[juniorpapir] {slug}: {len(prods)} sp ({new} moi) - tong {len(seen)}")
+            merged_raw[key] = p  # them moi HOAC cap nhat gia hang da biet
+        print(f"[juniorpapir] {slug}: {len(prods)} sp ({new} moi) - tong {len(merged_raw)}")
         time.sleep(1)
 
-    items = []
-    for p in seen.values():
+    seen = load_existing()
+    before = len(seen)
+    for p in merged_raw.values():
         m = RE_AMOUNT.search(p["name"])
-        items.append({"name": p["name"], "price": round(p["price"], 2),
-                      "ean": p["ean"],
-                      "amount": f"{m.group(1)} {m.group(2).lower()}" if m else "",
-                      "unit": ""})
+        key = p["ean"] or p["name"]
+        seen[key] = {"name": p["name"], "price": round(p["price"], 2),
+                     "ean": p["ean"],
+                     "amount": f"{m.group(1)} {m.group(2).lower()}" if m else "",
+                     "unit": ""}
+    items = list(seen.values())
 
     if len(items) < MIN_ITEMS:
         print(f"LOI: chi lay duoc {len(items)} mat hang (< {MIN_ITEMS}), "
               f"nghi ngo cookie het han. KHONG ghi de du lieu cu.")
         raise SystemExit(2)
+    print(f"(+{len(items) - before} moi so voi lan truoc)")
 
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "items": items},

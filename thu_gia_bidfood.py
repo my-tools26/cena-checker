@@ -9,6 +9,12 @@ Cach lay cookie: mo DevTools (F12) tren mujbidfood.cz da dang nhap,
 tab Application > Cookies > mujbidfood.cz, copy tat ca cookie vao
 bidfood_cookie.json theo format {"ten": "gia tri", ...}.
 Hoac copy gia tri header Cookie tu bat ky request nao trong tab Network.
+
+Luu y (28/09/2026): moi danh muc da tra VE HET san pham trong 1 request
+(showAll=Yes_please!) nen crawl von da nhanh (~15 request, <1 phut) - khong
+can/khong the bo qua trang de "chi cao hang moi". Van MERGE ket qua vao data
+cu thay vi ghi de: hang MOI duoc them, gia hang cu duoc cap nhat, va neu 1
+danh muc loi tam thoi thi khong mat du lieu cu cua danh muc do.
 """
 import json
 import os
@@ -151,6 +157,19 @@ def crawl_category(session, slug):
     return []
 
 
+def load_existing():
+    if not os.path.exists(OUT):
+        return {}
+    try:
+        d = json.load(open(OUT, encoding="utf-8"))
+    except Exception as e:
+        print(f"LOI NGHIEM TRONG: file cu {OUT} ton tai nhung doc/parse that "
+              f"bai ({e}). DUNG lai de tranh ghi de mat du lieu cu.")
+        raise SystemExit(2)
+    return {(it.get("code") or it.get("name")): it for it in d.get("items", [])
+            if it.get("code") or it.get("name")}
+
+
 def main():
     with open(COOKIE_FILE, "r", encoding="utf-8") as f:
         cookies = json.load(f)
@@ -165,15 +184,16 @@ def main():
         raise SystemExit(2)
 
     categories = discover_categories(session)
-    seen = {}
+    seen = load_existing()
+    before = len(seen)
     for slug in categories:
         prods = crawl_category(session, slug)
         new = 0
         for p in prods:
             key = p["code"] or p["name"]
             if key not in seen:
-                seen[key] = p
                 new += 1
+            seen[key] = p  # them moi HOAC cap nhat gia hang da biet
         print(f"[bidfood] {slug}: {len(prods)} sp ({new} moi) - tong {len(seen)}")
         time.sleep(1)
 
@@ -187,7 +207,7 @@ def main():
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "items": items},
                   f, ensure_ascii=False, indent=1)
-    print(f"XONG bidfood: {len(items)} mat hang -> bidfood_prices.json")
+    print(f"XONG bidfood: {len(items)} mat hang (+{len(items) - before} moi) -> bidfood_prices.json")
 
 
 if __name__ == "__main__":
