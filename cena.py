@@ -93,11 +93,20 @@ def parse_groups(soup: BeautifulSoup):
             unit_el = row.select_one(".price_per_unit")
             pct_el = row.select_one(".discount_percentage")
             valid_el = row.select_one(".discounts_validity")
+            note_el = row.select_one(".discount_note")
             price = parse_price(price_el.get_text())
             if price is None:
                 continue
+            shop = clean(shop_el.get_text())
+            note = clean(note_el.get_text()) if note_el else ""
+            # kupi gop nhieu BIEN THE khac nhau (vd "nguyen qua" vs "krajeny",
+            # "it hat"...) duoi CHUNG 1 ten san pham + cung kho -> ghi chu vao
+            # ten kho de nguoi dung phan biet duoc ("Albert hypermarket
+            # (krajeny)"), tranh tuong lam gia trung lap/loi cao du lieu.
+            if note:
+                shop = f"{shop} ({note})"
             deals.append({
-                "shop": clean(shop_el.get_text()),
+                "shop": shop,
                 "price": price,
                 "unit": clean(unit_el.get_text()) if unit_el else "",
                 "pct": clean(pct_el.get_text()) if pct_el else "",
