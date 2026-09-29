@@ -203,10 +203,6 @@ FULL = "--full" in sys.argv
 INCR_CATS = ["akce", "novinky", "vyprodej"]   # hang moi + deal (noi gia hay doi)
 
 
-def _is_incr(href):
-    return any((href or "").startswith(f"/cs/{c}?") for c in INCR_CATS)
-
-
 def load_existing():
     """Nap bombacena_prices.json cu -> {name: item} (giu ean/ean_bal), de incremental.
     QUAN TRONG: neu FILE TON TAI nhung doc loi (JSON hong, khoa boi tien trinh
@@ -223,19 +219,11 @@ def load_existing():
         # thang 39971 dong con 11815 ten neu gop theo ten -> gop NHAM mat
         # ~28000 san pham khac nhau. Loi thuc te 18-28/09/2026, da phuc hoi tu
         # git va sua lai key o day.
-        # Khoa = SLUG (?url=...), KHONG phai href: cung 1 san pham nam o nhieu
-        # danh muc (/cs/akce?url=X, /cs/novinky?url=X...) -> khoa href lam NHAN
-        # DOI 3-4 lan (40276 dong nhung chi 13108 san pham that, 29/09/2026).
-        # Khi trung slug: uu tien ban o danh muc incremental (duoc cao lai
-        # thuong xuyen nhat = gia/ten moi nhat).
         out = {}
         for it in old.get("items", []):
-            key = slug_of(it.get("href")) or it.get("name")
-            if not key:
-                continue
-            if key in out and not _is_incr(it.get("href")):
-                continue
-            out[key] = it
+            key = it.get("href") or it.get("name")
+            if key:
+                out[key] = it
         return out
     except Exception as e:
         print(f"LOI NGHIEM TRONG: file cu {OUT} ton tai nhung doc/parse that bai "
@@ -253,7 +241,7 @@ def main():
         prods = crawl_category(session, slug)
         new = 0
         for href, name, price in prods:
-            key = slug_of(href) or name
+            key = href or name
             if key not in seen:
                 seen[key] = {"name": name, "price": price, "href": href}
                 new += 1
@@ -287,14 +275,10 @@ def main():
         added = updated = 0
         for key, it in crawled.items():
             if key in merged:
-                old = merged[key]
-                if old.get("price") != it["price"]:
-                    updated += 1
-                # lay ten/gia/dung tich MOI NHAT tren kho; giu EAN cu neu lan nay thieu
-                for f in ("ean", "ean_bal"):
-                    if old.get(f) and not it.get(f):
-                        it[f] = old[f]
-                merged[key] = it
+                if merged[key].get("price") != it["price"]:
+                    merged[key]["price"] = it["price"]; updated += 1
+                if it.get("ean") and not merged[key].get("ean"):
+                    merged[key]["ean"] = it["ean"]
             else:
                 merged[key] = it; added += 1
         items = list(merged.values())

@@ -51,10 +51,7 @@ def load_existing():
         print(f"LOI NGHIEM TRONG: file cu {OUT} ton tai nhung doc/parse that "
               f"bai ({e}). DUNG lai de tranh ghi de mat du lieu cu.")
         raise SystemExit(2)
-    # khoa = id san pham cua site (on dinh khi kho DOI TEN); hang cu chua co id
-    # -> tam khoa theo ten, se duoc gan id o lan cao ke tiep
-    return {(str(it["id"]) if it.get("id") else it["name"]): it
-            for it in d.get("items", []) if it.get("id") or it.get("name")}
+    return {it["name"]: it for it in d.get("items", []) if it.get("name")}
 
 
 def main():
@@ -105,19 +102,9 @@ def main():
             amount = f"{m.group(1)} {m.group(2).lower()}" if m else ""
             item = {"name": name, "price": round(price, 2),
                     "amount": amount, "unit": ""}
-            pid = p.get("id")
-            key = str(pid) if pid else name
-            if pid:
-                item["id"] = pid
-            old = merged.get(key)
-            if old is None and key != name and name in merged                     and not merged[name].get("id"):
-                old = merged.pop(name)  # hang cu khoa theo ten -> chuyen sang id, khong nhan doi
-            if old is None:
+            if name not in merged:
                 new_this_page += 1
-            elif old.get("ean"):
-                item["ean"] = old["ean"]  # giu EAN da gan boi match_dathang.py
-            # ghi de -> ten/gia/dung tich luon theo du lieu MOI NHAT tren kho
-            merged[key] = item
+            merged[name] = item  # them moi HOAC cap nhat gia hang da biet
         print(f"[dathang] trang {page} - +{new_this_page} moi (tong {len(merged)})")
         if not FULL:
             allknown_streak = allknown_streak + 1 if new_this_page == 0 else 0
