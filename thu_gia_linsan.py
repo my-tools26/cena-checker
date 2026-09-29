@@ -46,7 +46,8 @@ def load_existing():
         raise SystemExit(2)
     out = {}
     for it in d.get("items", []):
-        key = it.get("sku_key") or it.get("name")
+        # hang cu (truoc khi co sku_key) van co ean == sku -> khop dung khoa moi
+        key = it.get("sku_key") or it.get("ean") or it.get("name")
         if key:
             out[key] = it
     return out
@@ -96,7 +97,12 @@ def main():
             if sku.isdigit() and len(sku) in (8, 12, 13, 14):
                 item["ean"] = sku
             key = item.get("sku_key") or name
-            merged[key] = item  # them moi HOAC cap nhat gia hang da biet
+            # bo ban cu khoa theo TEN (chua co sku_key) de khong nhan doi
+            old = merged.get(name)
+            if key != name and old is not None and not old.get("sku_key"):
+                del merged[name]
+            # ghi de ca item -> ten/dung tich luon theo du lieu MOI NHAT tren kho
+            merged[key] = item
         print(f"[linsan] trang {page} - da doc {fetched}/{total} mat hang, tong {len(merged)}")
         if len(products) < LIMIT or fetched >= total:
             break
