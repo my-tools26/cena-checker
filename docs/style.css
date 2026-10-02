@@ -91,10 +91,13 @@
  .stp.off{opacity:.45;text-decoration:line-through;color:var(--muted)}
  .mxwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
  .mxwrap table.mx{min-width:100%}
- /* Cot CO DINH (ten 34%, 3 cot gia deu 22%) - truoc day bang tu gian theo noi
+ /* Cot CO DINH (ten 30%, 3 cot gia chia deu ~23%) - truoc day bang tu gian theo noi
     dung: cot "Re nhat" phinh to, cot ten bi ep xuong 5-6 dong */
  .mx{table-layout:fixed;width:100%}
- .mx td, .mx th{overflow-wrap:break-word;vertical-align:top}
+ .mx td, .mx th{overflow-wrap:break-word;vertical-align:top;overflow:hidden}
+ /* nhan sieu thi dai ("Penny Market (+3 Kč záloha na láhev...)") PHAI xuong
+    dong trong o, khong tran sang cot ben canh (ca may tinh lan dien thoai) */
+ .mx .sbadge{display:inline-block;max-width:100%;white-space:normal;line-height:1.25;box-sizing:border-box}
  .sfgroup{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0;align-items:center}
  .sfgroup .sfrow{display:contents}
  .sfrow .stp{font-size:.72em;padding:2px 7px}

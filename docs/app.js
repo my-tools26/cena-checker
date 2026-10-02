@@ -447,7 +447,7 @@ function rowHTML(name, amount, offers) {
     (amount ? " <span class='a'>" + esc(amount) + '</span>' : '') + '</td>' + tds + '</tr>';
 }
 function tableHTML(rows) {
-  return "<div class='mxwrap'><table class='mx'><tr><th style='width:34%'>Mặt hàng</th>" +
+  return "<div class='mxwrap'><table class='mx'><tr><th style='width:30%'>Mặt hàng</th>" +
     "<th style='background:var(--acc-bg);color:var(--acc-strong)'>✅ Rẻ nhất</th>" +
     '<th>#2</th><th>#3</th></tr>' + rows.join('') + '</table></div>';
 }
@@ -1259,7 +1259,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.6.0.18';
+if (el) el.textContent = 'v1.6.0.19';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
