@@ -91,6 +91,10 @@
  .stp.off{opacity:.45;text-decoration:line-through;color:var(--muted)}
  .mxwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
  .mxwrap table.mx{min-width:100%}
+ /* Cot CO DINH (ten 34%, 3 cot gia deu 22%) - truoc day bang tu gian theo noi
+    dung: cot "Re nhat" phinh to, cot ten bi ep xuong 5-6 dong */
+ .mx{table-layout:fixed;width:100%}
+ .mx td, .mx th{overflow-wrap:break-word;vertical-align:top}
  .sfgroup{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0;align-items:center}
  .sfgroup .sfrow{display:contents}
  .sfrow .stp{font-size:.72em;padding:2px 7px}
@@ -109,6 +113,7 @@
   .mx{font-size:.74em}
   .mx td, .mx th{padding:5px 3px}
   .mx td.w .mxp{font-size:1em}
+  .mx .mxp{white-space:normal}   /* "546.50 Kč vč. DPH" xuong dong trong o hep */
   /* badge ten sieu thi PHAI duoc xuong dong ("Penny Market" -> 2 dong):
      nowrap la thu pham chinh lam bang rong 423px > man 390px */
   .sbadge{font-size:.85em;padding:1px 4px;display:inline-block;white-space:normal;line-height:1.2}
