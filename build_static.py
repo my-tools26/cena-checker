@@ -305,8 +305,11 @@ GUESS_RULES = [
                  "garage", "alkohol"]),
     ("sladkosti-a-slane-snacky", ["chips", "snack", "tycink", "pralink", "cokolad", "bonbon",
                                   "susenk", "oplatk", "keks", "zvykac", "energy ball",
-                                  "popcorn", "dort"]),
-    ("nealko-napoje", ["napoj", "dzus", "limonad", "voda", "sirup", "cola", "nektar",
+                                  "popcorn", "dort", "cokokrem", "nugeta", "nutella",
+                                  "chocoland"]),
+    # " cola" co dau cach: "Chocoland" chua chuoi "cola" -> tung bi xep vao Do uong
+    ("nealko-napoje", ["napoj", "dzus", "limonad", "voda", "sirup", " cola", "coca",
+                       "nektar",
                        "ledovy caj", "pepsi", "nestea", "capri sun", "drinks", "yuzee"]),
     ("nealko-napoje/kava", ["kava", "caj ", "cappuccino", "espresso"]),
     ("konzervy", ["konzerv", "kompot", "sterilov", "nakladan", "loupan", "plechovk"]),

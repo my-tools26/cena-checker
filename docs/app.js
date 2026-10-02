@@ -40,9 +40,11 @@ var TILES = [['🍎', 'Rau quả', 'ovoce'], ['🥩', 'Thịt cá', 'maso'],
 /* Danh muc chuan kupi ("goc/con", phan tu thu 4 trong retail.json) -> o tren web.
    Thay cho doan theo chuoi con trong ten (CAT_WORDS) da xep nham vd "Bageta s
    cibulkou", "Kompot jahody" vao Rau qua. */
-function retailTile(c) {
+function retailTile(c, name) {
   if (!c) return '';
   var top = c.split('/')[0], sub = c.split('/')[1] || '';
+  // kupi xep cider vao "pivo-ochucene" (bia huong vi) -> dua sang Ruou
+  if (top === 'alkohol' && /cider|cidr/i.test(name || '')) return 'alkohol';
   if (top === 'alkohol') return sub.indexOf('pivo') === 0 ? 'pivo' : 'alkohol';
   if (top === 'nealko-napoje') return /kav|caj/.test(sub) ? 'kava' : 'napoje';
   return {
@@ -746,7 +748,7 @@ function pageCat(cat, keepOrder) {
     off.forEach(function (x) { lower.add(stripAccents(x)); });
     if (!keepOrder || !DATA.catCache || DATA.catCache.cat !== cat) {
       var items = (d.items || []).filter(function (p) {
-        if (p.length > 3) return retailTile(p[3]) === cat;   // danh muc chuan
+        if (p.length > 3) return retailTile(p[3], p[0]) === cat;   // danh muc chuan
         var n = stripAccents(p[0]);                           // du lieu cu
         return words.some(function (w) { return n.indexOf(w) >= 0; });
       });
@@ -1257,7 +1259,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.6.0.16';
+if (el) el.textContent = 'v1.6.0.17';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
