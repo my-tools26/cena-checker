@@ -33,10 +33,9 @@ var TILES = [['🍎', 'Rau quả', 'ovoce'], ['🥩', 'Thịt cá', 'maso'],
   ['🍫', 'Bánh kẹo', 'sladkosti'], ['🍺', 'Bia', 'pivo'],
   ['🥤', 'Đồ uống', 'napoje'], ['☕', 'Cà phê & trà', 'kava'],
   ['🧴', 'Drogerie', 'drogerie'], ['🐶', 'Thú cưng', 'mazlicci'],
-  // 5 o moi (them 10/2026): truoc day cac mon nay bi xep nham vao o khac
+  // 4 o moi (them 10/2026; Dong lanh + Do an san gop thanh 'Do mat/lanh'): truoc day cac mon nay bi xep nham vao o khac
   ['🍷', 'Rượu', 'alkohol'], ['🥫', 'Đồ hộp', 'konzervy'],
-  ['🍝', 'Đồ khô & gia vị', 'vareni'], ['❄️', 'Đông lạnh', 'mrazene'],
-  ['🥗', 'Đồ ăn sẵn', 'lahudky']];
+  ['🍝', 'Đồ khô & gia vị', 'vareni'], ['❄️', 'Đồ mát/lạnh', 'mrazene']];
 /* Danh muc chuan kupi ("goc/con", phan tu thu 4 trong retail.json) -> o tren web.
    Thay cho doan theo chuoi con trong ten (CAT_WORDS) da xep nham vd "Bageta s
    cibulkou", "Kompot jahody" vao Rau qua. */
@@ -54,7 +53,7 @@ function retailTile(c, name) {
     'pro-deti': 'drogerie', 'krasa': 'drogerie', 'lekarna': 'drogerie',
     'mazlicci': 'mazlicci', 'konzervy': 'konzervy', 'vareni-a-peceni': 'vareni',
     'zdrava-vyziva': 'vareni', 'mrazene-a-instantni-potraviny': 'mrazene',
-    'lahudky': 'lahudky'
+    'lahudky': 'mrazene'   // Do an san gop chung o "Do mat/lanh"
   }[top] || '';
 }
 var CAT_WORDS = {
@@ -79,8 +78,7 @@ var CAT_WORDS = {
   alkohol: ['vino', 'vodka', 'rum', 'whisk', 'liker', 'gin', 'sekt', 'prosecco', 'cider'],
   konzervy: ['konzerv', 'kompot', 'sterilov', 'nakladan', 'loupan', 'pastik'],
   vareni: ['ryze', 'testovin', 'olej', 'koreni', 'mouka', 'cukr', 'kecup', 'majonez', 'ocet'],
-  mrazene: ['mrazen', 'zmrzlin', 'hranolk', 'pizza'],
-  lahudky: ['lahudk', 'pomazank', 'hotov', 'salat s']
+  mrazene: ['mrazen', 'zmrzlin', 'hranolk', 'pizza', 'lahudk', 'pomazank', 'hotov', 'salat s']
 };
 /* BO SUNG: go TEN NHOM (khong dau) + cac tu tuong tu -> tim CA NHOM (OR theo
    CAT_WORDS). Vd "rau qua","trai cay","hoa qua" deu ra nhom rau qua. Chi them
@@ -99,8 +97,8 @@ var CAT_ALIASES = {
   alkohol: ['ruou', 'ruou vang', 'ruou manh'],
   konzervy: ['do hop', 'do dong hop'],
   vareni: ['do kho', 'do kho gia vi'],
-  mrazene: ['dong lanh', 'do dong lanh'],
-  lahudky: ['do an san', 'mon an san']
+  mrazene: ['dong lanh', 'do dong lanh', 'do mat', 'do lanh', 'do mat lanh',
+    'do an san', 'mon an san']
 };
 Object.keys(CAT_ALIASES).forEach(function (slug) {
   CAT_ALIASES[slug].forEach(function (vi) {
@@ -1259,7 +1257,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.6.0.19';
+if (el) el.textContent = 'v1.6.0.20';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
