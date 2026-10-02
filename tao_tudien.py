@@ -624,7 +624,69 @@ E = [
  ("tortilla", "tortilla", "tortilla", "Bánh mì"),
  ("bot yen mach", "bột yến mạch", "ovesna mouka", "Đồ khô & gia vị"),
  ("keo mut", "kẹo mút", "lizatko", "Bánh kẹo"),
+ # --- khoi phuc 02/10/2026: 34 muc tung them TAY vao tudien.xlsx, bi xoa khi
+ # routine thang 10 chay lai file nay (ghi de). Gio da nam trong E. ---
+ ("trai mit", "trái mít", "jackfruit", "Trái cây"),
+ ("vai", "vải", "lici", "Trái cây"),
+ ("trai vai", "trái vải", "lici", "Trái cây"),
+ ("trai nhan", "trái nhãn", "longan", "Trái cây"),
+ ("trai oi", "trái ổi", "guava", "Trái cây"),
+ ("hong", "hồng", "kaki", "Trái cây"),
+ ("qua hong", "quả hồng", "kaki", "Trái cây"),
+ ("khe", "khế", "karambola", "Trái cây"),
+ ("trai khe", "trái khế", "karambola", "Trái cây"),
+ ("na", "na", "anona", "Trái cây"),
+ ("mang cau", "mãng cầu", "anona", "Trái cây"),
+ ("man cau", "mãng cầu", "anona", "Trái cây"),
+ ("sung", "sung", "fiky", "Trái cây"),
+ ("trai sung", "trái sung", "fiky", "Trái cây"),
+ ("quat", "quất", "kumquat", "Trái cây"),
+ ("tac", "tắc", "kumquat", "Trái cây"),
+ ("du du", "đu đủ", "papaja", "Trái cây"),
+ ("mo", "mơ", "merunky", "Trái cây"),
+ ("cha la", "chà là", "datle", "Trái cây"),
+ ("nam viet quat", "nam việt quất", "brusinky", "Trái cây"),
+ ("dau", "dâu", "jahody", "Trái cây"),
+ ("trai dau", "trái dâu", "jahody", "Trái cây"),
+ ("dua gang", "dưa gang", "meloun", "Trái cây"),
+ ("me", "me", "tamarind", "Trái cây"),
+ ("bang dinh", "băng dính", "paska", "Văn phòng/gia dụng"),
+ ("bang keo", "băng keo", "paska", "Văn phòng/gia dụng"),
+ ("bang dan", "băng dán", "paska", "Văn phòng/gia dụng"),
+ ("bang dinh trong", "băng dính trong", "lepici paska", "Văn phòng/gia dụng"),
+ ("bang keo dong goi", "băng keo đóng gói", "balici paska", "Văn phòng/gia dụng"),
+ ("bang keo hai mat", "băng keo hai mặt", "oboustranna paska", "Văn phòng/gia dụng"),
+ ("bang dinh hai mat", "băng dính hai mặt", "oboustranna paska", "Văn phòng/gia dụng"),
+ ("bang keo dien", "băng keo điện", "izolacni paska", "Văn phòng/gia dụng"),
+ ("bang dinh dien", "băng dính điện", "izolacni paska", "Văn phòng/gia dụng"),
+ ("bang keo giay", "băng keo giấy", "malirska paska", "Văn phòng/gia dụng"),
 ]
+
+# AN TOAN: KHONG duoc lam mat dong da them TAY vao tudien.xlsx. Truoc khi ghi
+# de, doc file cu va giu lai moi dong chua co trong E (them vao cuoi). Loi that
+# 02/10/2026: chay lai file nay xoa 34 muc (mit, vai, nhan, bang dinh...).
+import os
+import unicodedata
+
+
+def _k(s):
+    s = str(s or "").replace("đ", "d").replace("Đ", "D")
+    return "".join(c for c in unicodedata.normalize("NFD", s)
+                   if unicodedata.category(c) != "Mn").lower().strip()
+
+
+if os.path.exists("tudien.xlsx"):
+    _have = {_k(r[0]) for r in E}
+    _kept = []
+    for _r in openpyxl.load_workbook("tudien.xlsx", read_only=True).active.iter_rows(
+            min_row=2, values_only=True):
+        if _r and _r[0] and _r[2] and _k(_r[0]) not in _have:
+            _kept.append(tuple((list(_r) + [""] * 4)[:4]))
+            _have.add(_k(_r[0]))
+    if _kept:
+        print(f"GIU LAI {len(_kept)} dong sua tay trong tudien.xlsx (chua co trong E) - "
+              f"nen chep chung vao E: {[r[0] for r in _kept][:10]}")
+        E = E + _kept
 
 wb = openpyxl.Workbook()
 ws = wb.active

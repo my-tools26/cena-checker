@@ -32,7 +32,29 @@ var TILES = [['🍎', 'Rau quả', 'ovoce'], ['🥩', 'Thịt cá', 'maso'],
   ['🥛', 'Sữa trứng', 'mleko'], ['🍞', 'Bánh mì', 'pecivo'],
   ['🍫', 'Bánh kẹo', 'sladkosti'], ['🍺', 'Bia', 'pivo'],
   ['🥤', 'Đồ uống', 'napoje'], ['☕', 'Cà phê & trà', 'kava'],
-  ['🧴', 'Drogerie', 'drogerie'], ['🐶', 'Thú cưng', 'mazlicci']];
+  ['🧴', 'Drogerie', 'drogerie'], ['🐶', 'Thú cưng', 'mazlicci'],
+  // 5 o moi (them 10/2026): truoc day cac mon nay bi xep nham vao o khac
+  ['🍷', 'Rượu', 'alkohol'], ['🥫', 'Đồ hộp', 'konzervy'],
+  ['🍝', 'Đồ khô & gia vị', 'vareni'], ['❄️', 'Đông lạnh', 'mrazene'],
+  ['🥗', 'Đồ ăn sẵn', 'lahudky']];
+/* Danh muc chuan kupi ("goc/con", phan tu thu 4 trong retail.json) -> o tren web.
+   Thay cho doan theo chuoi con trong ten (CAT_WORDS) da xep nham vd "Bageta s
+   cibulkou", "Kompot jahody" vao Rau qua. */
+function retailTile(c) {
+  if (!c) return '';
+  var top = c.split('/')[0], sub = c.split('/')[1] || '';
+  if (top === 'alkohol') return sub.indexOf('pivo') === 0 ? 'pivo' : 'alkohol';
+  if (top === 'nealko-napoje') return /kav|caj/.test(sub) ? 'kava' : 'napoje';
+  return {
+    'ovoce-a-zelenina': 'ovoce', 'maso-drubez-a-ryby': 'maso',
+    'mlecne-vyrobky-a-vejce': 'mleko', 'pecivo': 'pecivo',
+    'sladkosti-a-slane-snacky': 'sladkosti', 'drogerie': 'drogerie',
+    'pro-deti': 'drogerie', 'krasa': 'drogerie', 'lekarna': 'drogerie',
+    'mazlicci': 'mazlicci', 'konzervy': 'konzervy', 'vareni-a-peceni': 'vareni',
+    'zdrava-vyziva': 'vareni', 'mrazene-a-instantni-potraviny': 'mrazene',
+    'lahudky': 'lahudky'
+  }[top] || '';
+}
 var CAT_WORDS = {
   ovoce: ['ovoce', 'ovocn', 'zelenina', 'jablk', 'banan', 'banán', 'hrozn', 'meloun',
     'ananas', 'pomeranc', 'pomeranč', 'mandarink', 'broskv', 'svestk', 'tresn',
@@ -51,7 +73,12 @@ var CAT_WORDS = {
   napoje: ['voda', 'limonad', 'dzus', 'napoj', 'cola', 'kofola', 'sirup', 'mineraln'],
   kava: ['kava', 'caj', 'espresso', 'nescafe', 'cappuccino', 'jacobs', 'tchibo'],
   drogerie: ['praci', 'sampon', 'mydlo', 'zubni', 'toaletni', 'ubrousky', 'cistic', 'gel'],
-  mazlicci: ['psy', 'kocky', 'granule', 'kapsick', 'stelivo', 'pamlsk']
+  mazlicci: ['psy', 'kocky', 'granule', 'kapsick', 'stelivo', 'pamlsk'],
+  alkohol: ['vino', 'vodka', 'rum', 'whisk', 'liker', 'gin', 'sekt', 'prosecco', 'cider'],
+  konzervy: ['konzerv', 'kompot', 'sterilov', 'nakladan', 'loupan', 'pastik'],
+  vareni: ['ryze', 'testovin', 'olej', 'koreni', 'mouka', 'cukr', 'kecup', 'majonez', 'ocet'],
+  mrazene: ['mrazen', 'zmrzlin', 'hranolk', 'pizza'],
+  lahudky: ['lahudk', 'pomazank', 'hotov', 'salat s']
 };
 /* BO SUNG: go TEN NHOM (khong dau) + cac tu tuong tu -> tim CA NHOM (OR theo
    CAT_WORDS). Vd "rau qua","trai cay","hoa qua" deu ra nhom rau qua. Chi them
@@ -66,7 +93,12 @@ var CAT_ALIASES = {
   napoje: ['do uong', 'nuoc uong', 'nuoc ngot', 'thuc uong', 'giai khat', 'nuoc'],
   kava: ['ca phe tra', 'ca phe', 'cafe', 'tra', 'ca phe va tra'],
   drogerie: ['drogerie', 'do gia dung', 'hoa my pham', 've sinh', 'tay rua', 'my pham'],
-  mazlicci: ['thu cung', 'cho meo', 'vat nuoi', 'do thu cung', 'thuc an thu cung']
+  mazlicci: ['thu cung', 'cho meo', 'vat nuoi', 'do thu cung', 'thuc an thu cung'],
+  alkohol: ['ruou', 'ruou vang', 'ruou manh'],
+  konzervy: ['do hop', 'do dong hop'],
+  vareni: ['do kho', 'do kho gia vi'],
+  mrazene: ['dong lanh', 'do dong lanh'],
+  lahudky: ['do an san', 'mon an san']
 };
 Object.keys(CAT_ALIASES).forEach(function (slug) {
   CAT_ALIASES[slug].forEach(function (vi) {
@@ -241,7 +273,7 @@ function loadRetail() {
     // Loc bo deal het han >1 ngay ngay khi load; item con >=1 deal thi giu
     var items = (d.items || []).map(function (p) {
       var deals = p[2].filter(function (dd) { return !isExpiredDeal(dd[4]); });
-      return deals.length ? [p[0], p[1], deals] : null;
+      return deals.length ? [p[0], p[1], deals].concat(p.slice(3)) : null;  // giu danh muc (p[3])
     }).filter(Boolean);
     d.items = items;
     return (DATA.retail = d);
@@ -714,7 +746,8 @@ function pageCat(cat, keepOrder) {
     off.forEach(function (x) { lower.add(stripAccents(x)); });
     if (!keepOrder || !DATA.catCache || DATA.catCache.cat !== cat) {
       var items = (d.items || []).filter(function (p) {
-        var n = stripAccents(p[0]);
+        if (p.length > 3) return retailTile(p[3]) === cat;   // danh muc chuan
+        var n = stripAccents(p[0]);                           // du lieu cu
         return words.some(function (w) { return n.indexOf(w) >= 0; });
       });
       for (var i = items.length - 1; i > 0; i--) {
@@ -945,6 +978,51 @@ function groupRows(items) {
   });
 }
 
+/* Ban buon: lay HET ket qua (searchCatalog cat o 400 theo thu tu luu -> chi
+   hien vai kho dau, vd "nuoc rua tay" chi thay Bombacena/PTT/Tamda). */
+function searchCatalogAll(cat, q) {
+  var terms = q.split(/\s+/).filter(Boolean);
+  if (!terms.length) return [];
+  return cat.filter(function (it) {
+    var n = stripAccents(it[0]);
+    for (var j = 0; j < terms.length; j++) if (n.indexOf(terms[j]) < 0) return false;
+    return true;
+  });
+}
+/* Khoa so sanh "re nhat" cua 1 chao gia: gia tren kg/lit neu doc duoc khoi
+   luong (cong bang giua goi 50 g va thung 5 kg); khong doc duoc thi xep SAU,
+   theo gia moi chiec. */
+function cheapKey(o) {
+  var s = unitPrice(o.amount, o.price, o.pack);
+  if (/Kč\/(kg|lít)/.test(s)) return [0, parseFloat(s)];
+  return [1, o.price / Math.max(o.pack || 1, 1)];
+}
+function cmpKey(a, b) { return a[0] - b[0] || a[1] - b[1]; }
+/* Nhu groupRows nhung SAP hang theo chao gia re nhat cua moi hang */
+function groupRowsCheapest(items) {
+  var by = {};
+  items.forEach(function (it) {
+    var k = it[0] + '|' + it[2];
+    (by[k] = by[k] || { name: it[0], amount: it[2], offers: [] }).offers.push(catalogOffers(it));
+  });
+  return Object.keys(by).map(function (k) {
+    var g = by[k];
+    g.key = g.offers.map(cheapKey).sort(cmpKey)[0];
+    return g;
+  }).sort(function (a, b) { return cmpKey(a.key, b.key); }).map(function (g) {
+    return rowHTML(g.name, g.amount, g.offers);
+  });
+}
+var WS_STEP = 40;   // so hang ban buon moi lan hien / bam "Xem them"
+/* uniqConcat ban nhanh (Set) cho danh sach lon - khong con chan 400 */
+function uniqConcatFast(lists) {
+  var seen = new Set(), out = [];
+  lists.forEach(function (l) {
+    l.forEach(function (x) { if (!seen.has(x)) { seen.add(x); out.push(x); } });
+  });
+  return out;
+}
+
 /* Mo rong 1 truy van thanh nhieu tu Sec (OR) theo bang dong nghia */
 function expandQueries(raw, cs) {
   var s = SEARCH_SYNONYMS[raw] || SEARCH_SYNONYMS[cs];
@@ -965,19 +1043,33 @@ function searchByText(raw, cs, head, el) {
   return Promise.all([loadCatalog(), loadRetail()]).then(function (r) {
     var cat = r[0], retail = r[1];
     var qs = expandQueries(raw, cs);
-    var hits = uniqConcat(qs.map(function (q) { return searchCatalog(cat, q); }));
-    if (!hits.length && cs !== raw) hits = searchCatalog(cat, raw);
+    var hits = uniqConcatFast(qs.map(function (q) { return searchCatalogAll(cat, q); }));
+    if (!hits.length && cs !== raw) hits = searchCatalogAll(cat, raw);
     var ret = uniqConcat(qs.map(function (q) { return searchRetail(retail, q); }));
     if (!ret.length && cs !== raw) ret = searchRetail(retail, raw);
     var html = head;
     if (ret.length) html += "<h2 style='font-size:.95em'>🏪 Giá siêu thị (khuyến mãi) — " +
       ret.length + '</h2>' + tableHTML(retailRows(ret.slice(0, 20), new Set()));
+    var wsRows = hits.length ? groupRowsCheapest(hits) : [];
     if (hits.length) html += "<h2 style='font-size:.95em'>📦 Giá bán buôn — " + hits.length +
-      ' mặt hàng</h2>' + tableHTML(groupRows(hits.slice(0, 40)));
+      " mặt hàng <span class='muted' style='font-weight:normal'>(rẻ nhất trước, theo giá/kg·lít)</span></h2>" +
+      "<div id='wsres'></div>";
     if (!ret.length && !hits.length)
       html += '<p>Không tìm thấy gì. Thử từ khác hoặc tên tiếng Séc?</p>';
     el.innerHTML = tilesHTML() + html;
+    if (wsRows.length) showWsRows(wsRows, WS_STEP);
   });
+}
+/* Ve bang ban buon voi n hang dau + nut "Xem them" (moi lan +WS_STEP) */
+function showWsRows(rows, n) {
+  var box = document.getElementById('wsres');
+  if (!box) return;
+  var rest = rows.length - n;
+  box.innerHTML = tableHTML(rows.slice(0, n)) + (rest > 0
+    ? "<p style='text-align:center'><button type='button' id='wsmore'>⬇️ Xem thêm " +
+      Math.min(rest, WS_STEP) + ' (còn ' + rest + ')</button></p>' : '');
+  var b = document.getElementById('wsmore');
+  if (b) b.addEventListener('click', function () { showWsRows(rows, n + WS_STEP); });
 }
 
 /* ---------- quet ma vach bang camera ---------- */
@@ -1165,7 +1257,7 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.6.0.15';
+if (el) el.textContent = 'v1.6.0.16';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {

@@ -115,8 +115,26 @@ def parse_groups(soup: BeautifulSoup):
         deals = [d for d in deals if not SHOP_BLACKLIST_RE.search(d["shop"])]
         if deals:
             deals.sort(key=lambda d: d["price"])
-            products.append({"name": name, "amount": amount, "deals": deals})
+            # slug trang chi tiet san pham (/sleva/<slug>) - de tra danh muc
+            # chuan cua kupi (breadcrumb) khi phan loai o trang web
+            link = group.select_one(".product_name h2 a[href^='/sleva/']")
+            slug = link["href"].split("/sleva/", 1)[1].split("?")[0] if link else ""
+            products.append({"name": name, "amount": amount, "deals": deals,
+                             "slug": slug})
     return products
+
+
+def product_category(slug):
+    """Danh muc chuan kupi cua 1 san pham, doc tu breadcrumb trang chi tiet:
+    /slevy -> /slevy/<goc> -> /slevy/<con>. Tra ve "goc/con" (vd
+    "ovoce-a-zelenina/hroznove-vino-a-melouny") hoac "" neu khong doc duoc."""
+    soup = fetch(f"{BASE}/sleva/{slug}")
+    parts = []
+    for a in soup.select("div.bc_nav a[href^='/slevy/']"):
+        p = a["href"].split("/slevy/", 1)[1].split("?")[0].strip("/")
+        if p and p not in parts:
+            parts.append(p)
+    return "/".join(parts[:2])
 
 
 def print_product(p, max_shops=6):

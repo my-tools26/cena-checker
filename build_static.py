@@ -290,6 +290,78 @@ def build_dict():
     return out
 
 
+KUPI_CAT_CACHE = os.path.join(HERE, "kupi_cat_cache.json")
+
+# Phan loai mon KHONG den tu kupi (to roi Tamda) - luat THEO THU TU, luat dau
+# khop thang. Rau qua de CUOI va chi khi khong luat nao khac khop: truoc day khop
+# chuoi con "kukuric"/"malin"/"houb" xep nham chips, keo, bo my pham vao Rau qua.
+GUESS_RULES = [
+    ("drogerie", ["sampon", "sprchov", "peeling", "lotion", "mydl", "praci", "toaletn",
+                  "zubni", "sumivk", "deodor", "beaute", "kosmet", "cistic", "avivaz",
+                  "sprej", " gel", "hair", "lapac", "osvezovac"]),
+    ("alkohol/pivo", ["pivo", "lezak"]),
+    ("alkohol", ["vino", "wine", "vodka", "rum ", "whisk", "liker", "gin ", "sekt", "brandy",
+                 "prosecco", "cider", "koktejl", "becherovka", "panak", "metaxa", "sangria",
+                 "garage", "alkohol"]),
+    ("sladkosti-a-slane-snacky", ["chips", "snack", "tycink", "pralink", "cokolad", "bonbon",
+                                  "susenk", "oplatk", "keks", "zvykac", "energy ball",
+                                  "popcorn", "dort"]),
+    ("nealko-napoje", ["napoj", "dzus", "limonad", "voda", "sirup", "cola", "nektar",
+                       "ledovy caj", "pepsi", "nestea", "capri sun", "drinks", "yuzee"]),
+    ("nealko-napoje/kava", ["kava", "caj ", "cappuccino", "espresso"]),
+    ("konzervy", ["konzerv", "kompot", "sterilov", "nakladan", "loupan", "plechovk"]),
+    ("mrazene-a-instantni-potraviny", ["mrazen", "zmrzl", "instantni"]),
+    ("vareni-a-peceni", ["ryze", "nudle", "testovin", "olej", "omack", "koreni", "mouka",
+                         "ocet", "polevk", "cukr", "sul ", "kecup", "majonez"]),
+    ("mlecne-vyrobky-a-vejce", ["mleko", "jogurt", "syr", "maslo", "vejce", "smetan", "tvaroh"]),
+    ("maso-drubez-a-ryby", ["maso", "kureci", "veprov", "hovezi", "ryba", "losos", "krevet",
+                            "sunk", "salam", "park", "klobas"]),
+    ("pecivo", ["chleb", "rohlik", "bageta", "toust", "croissant"]),
+    ("mazlicci", ["pro psy", "pro kocky", "granule", "stelivo"]),
+    ("ovoce-a-zelenina", ["jablk", "banan", "hrozn", "meloun", "ananas", "pomeranc",
+                          "mandarink", "citron", "limetk", "mango", "avokad", "rajcat",
+                          "brambor", "cibul", "mrkev", "okurk", "paprik", "zeli", "salat",
+                          "cesnek", "zazvor", "houby", "kvetak", "brokolic"]),
+]
+
+
+def guess_category(name):
+    n = " " + strip_accents(name) + " "
+    for cat, words in GUESS_RULES:
+        if any(w in n for w in words):
+            return cat
+    return ""
+
+
+def kupi_categories(cena, slugs):
+    """slug san pham kupi -> "goc/con" (breadcrumb kupi). Cache vao
+    kupi_cat_cache.json: hang khuyen mai lap lai tuan sau tuan nen moi ngay chi
+    phai tra vai chuc slug moi."""
+    from concurrent.futures import ThreadPoolExecutor
+    cache = {}
+    if os.path.exists(KUPI_CAT_CACHE):
+        try:
+            cache = json.load(open(KUPI_CAT_CACHE, encoding="utf-8"))
+        except Exception:
+            cache = {}
+    todo = sorted({s for s in slugs if s and s not in cache})
+
+    def job(s):
+        try:
+            return s, cena.product_category(s)
+        except Exception:
+            return s, None
+
+    with ThreadPoolExecutor(4) as ex:
+        for s, c in ex.map(job, todo):
+            if c:
+                cache[s] = c
+    json.dump(cache, open(KUPI_CAT_CACHE, "w", encoding="utf-8"),
+              ensure_ascii=False, indent=0, sort_keys=True)
+    print(f"  danh muc kupi: tra moi {len(todo)}, cache {len(cache)}")
+    return cache
+
+
 def build_retail():
     """Cao gia khuyen mai ban le tu kupi.cz -> JSON (trinh duyet khong tu goi duoc)."""
     sys.path.insert(0, HERE)
@@ -302,6 +374,7 @@ def build_retail():
             "pecivo", "sladkosti-a-slane-snacky", "pivo", "nealko-napoje",
             "kava", "drogerie", "mazlicci"]
     seen, prods = set(), []
+    slug_of = {}  # vi tri trong prods -> slug kupi (de tra danh muc)
 
     def canon_shop(s):
         """kupi ghi 'TAMDA FOODS', to roi ghi 'Tamda Foods' -> cung 1 sieu thi."""
@@ -319,6 +392,7 @@ def build_retail():
                       if not cena.SHOP_BLACKLIST_RE.search(d["shop"])]
             if deals:
                 prods.append([p["name"], p.get("amount", ""), deals])
+                slug_of[len(prods) - 1] = p.get("slug", "")
 
     for slug in cats + slugs:
         # kupi dung chung duong dan /slevy/<slug> cho CA nhom hang lan sieu thi
@@ -354,7 +428,14 @@ def build_retail():
                           [["Tamda Foods", round(float(it["price"]), 2),
                             it.get("unit", "") or "", "", td.get("valid", "") or ""]]])
         print(f"  tamda to roi              +{len(prods) - n0}")
-    print(f"  ban le: {len(prods)} mat hang")
+    # phan tu thu 4 = danh muc "goc/con": mon kupi lay breadcrumb chuan cua kupi,
+    # mon khong co (to roi Tamda) doan bang GUESS_RULES. Web dung de xep vao o.
+    cats_of = kupi_categories(cena, slug_of.values())
+    for i, p in enumerate(prods):
+        c = cats_of.get(slug_of.get(i, ""), "") or guess_category(p[0])
+        p.append(c)
+    print(f"  ban le: {len(prods)} mat hang "
+          f"(khong phan loai duoc: {sum(1 for p in prods if not p[3])})")
     return prods
 
 
