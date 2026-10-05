@@ -342,9 +342,15 @@ function shopBadge(name) {
     ['junior', '#EAE6DC', '#4A4335']];
   for (var i = 0; i < C.length; i++)
     if (s.indexOf(C[i][0]) >= 0) { bg = C[i][1]; fg = C[i][2]; break; }
-  return "<span class='sbadge' style='background:" + bg + ";color:" + fg + "'>" +
-    esc(name) + '</span>';
+  // 1 dong, dai qua thi "..." (CSS); title = ca cau khi re chuot vao
+  return "<span class='sbadge' title='" + esc(name).replace(/'/g, '&#39;') +
+    "' style='background:" + bg + ";color:" + fg + "'>" + esc(name) + '</span>';
 }
+/* Dien thoai khong co re chuot: cham vao nhan de mo/thu ca cau */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest && e.target.closest('.mx .sbadge');
+  if (b) b.classList.toggle('open');
+});
 /* Icon theo tu khoa trong ten (giong ICON_RULES ben Python) */
 var ICON_RULES = [
   ['banan', '🍌'], ['jablk', '🍎'], ['pomeranc', '🍊'], ['citron', '🍋'],

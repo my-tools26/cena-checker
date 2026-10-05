@@ -97,7 +97,10 @@
  .mx td, .mx th{overflow-wrap:break-word;vertical-align:top;overflow:hidden}
  /* nhan sieu thi dai ("Penny Market (+3 Kč záloha na láhev...)") PHAI xuong
     dong trong o, khong tran sang cot ben canh (ca may tinh lan dien thoai) */
- .mx .sbadge{display:inline-block;max-width:100%;white-space:normal;line-height:1.25;box-sizing:border-box}
+ /* nhan sieu thi: 1 DONG, dai qua thi "..." - re chuot (title) / cham (.open) xem ca cau */
+ .mx .sbadge{display:inline-block;max-width:100%;box-sizing:border-box;vertical-align:top;
+   white-space:nowrap !important;overflow:hidden;text-overflow:ellipsis;line-height:1.35;cursor:default}
+ .mx .sbadge.open{white-space:normal !important;overflow:visible}
  .sfgroup{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0;align-items:center}
  .sfgroup .sfrow{display:contents}
  .sfrow .stp{font-size:.72em;padding:2px 7px}
