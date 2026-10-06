@@ -187,6 +187,16 @@ def build_ean_shards(catalog):
                     rec[0] = src[0]
                 if not rec[1] and src[1]:
                     rec[1] = list(src[1])
+    # === Ma vach PHU (ean_alias.json: {ma_phu: ma_chinh}) ===
+    # 1 san pham co the in 2 ma (bao bi moi/cu), kho chi ghi 1 ma. Vd Lexus
+    # dóza hazelnut 500g: Tamda ghi 8699462600488, hop thuc te in 8684154700218.
+    for alias, main in ((load("ean_alias.json") or {}).get("aliases", {})).items():
+        src = shards.get(main[:3], {}).get(main)
+        if not src or not alias.isdigit():
+            continue
+        rec = shards.setdefault(alias[:3], {}).setdefault(alias, [src[0], []])
+        if not rec[1]:
+            rec[0], rec[1] = src[0], list(src[1])
     # === GHEP GIA cho ma CHI CO TEN (chua gan gia) ===
     # ~49% ma chi co ten (Luigi's Box, hoac kho khong ghi ma vach trong bang gia).
     # Ghep theo THUONG HIEU (tu dau) + DUNG TICH, chan nham bien the -> quet ra
