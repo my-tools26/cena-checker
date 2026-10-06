@@ -118,27 +118,23 @@ def parse_products(html_text):
 
 
 def crawl_category(session, slug):
-    page = 1
-    results = []
-    while page <= MAX_PAGES:
+    # tai 4 trang SONG SONG (fastfetch) thay vi tung trang + nghi 0.4s
+    from fastfetch import pages_parallel
+
+    def get_page(page):
         for attempt in range(4):
             try:
                 r = session.get(f"{BASE}/{slug}/", params={"page": page},
-                                 headers=HEADERS, timeout=45)
+                                headers=HEADERS, timeout=45)
                 r.raise_for_status()
-                break
+                return parse_products(r.text)
             except Exception as e:
                 print(f"  {slug} trang {page} loi ({e}), cho 10s")
                 time.sleep(10)
-        else:
-            break
-        prods = parse_products(r.text)
-        if not prods:
-            break
-        results.extend(prods)
-        print(f"  {slug} trang {page}: +{len(prods)}")
-        page += 1
-        time.sleep(0.4)
+        return []
+
+    results = pages_parallel(get_page, MAX_PAGES)
+    print(f"  {slug}: {len(results)} san pham")
     return results
 
 

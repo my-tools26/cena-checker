@@ -98,36 +98,35 @@ def check_login(session):
 
 
 def crawl_category(session, slug):
-    items, offset = [], 0
-    for _ in range(MAX_PAGES):
+    # tai 4 trang SONG SONG (fastfetch); trang cuoi = it hon PAGE_SIZE phan tu
+    from fastfetch import pages_parallel
+
+    def get_page(page):
+        offset = (page - 1) * PAGE_SIZE
         url = f"{BASE}/{slug}/" + (f"?f={offset}" if offset else "")
         for attempt in range(4):
             try:
                 r = session.get(url, headers=HEADERS, timeout=45)
                 r.raise_for_status()
-                break
+                return parse_itemlist(r.text)
             except Exception as e:
                 print(f"  {slug} f={offset} loi ({e}), cho 10s")
                 time.sleep(10)
-        else:
-            break
-        elems = parse_itemlist(r.text)
-        if not elems:
-            break
-        for el in elems:
-            it = el.get("item", {})
-            offer = it.get("offers", {}) or {}
-            name = (it.get("name") or "").strip()
-            price = offer.get("price")
-            if not name or not price:
-                continue
-            ean = it.get("gtin8") or it.get("gtin13") or it.get("gtin") or ""
-            items.append({"name": name, "price": float(price), "ean": str(ean),
-                          "sku": it.get("sku", "")})
-        if len(elems) < PAGE_SIZE:
-            break
-        offset += PAGE_SIZE
-        time.sleep(0.3)
+        return []
+
+    elems_all = pages_parallel(get_page, MAX_PAGES,
+                               is_last=lambda els: len(els) < PAGE_SIZE)
+    items = []
+    for el in elems_all:
+        it = el.get("item", {})
+        offer = it.get("offers", {}) or {}
+        name = (it.get("name") or "").strip()
+        price = offer.get("price")
+        if not name or not price:
+            continue
+        ean = it.get("gtin8") or it.get("gtin13") or it.get("gtin") or ""
+        items.append({"name": name, "price": float(price), "ean": str(ean),
+                      "sku": it.get("sku", "")})
     return items
 
 

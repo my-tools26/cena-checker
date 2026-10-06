@@ -140,8 +140,9 @@ def collect_category(cat_path, prices, depth=0):
         print(f"  ! {cat_path}: {total} > {MAX_SEARCH}, khong co danh muc con - lay {MAX_SEARCH} dau")
     pages = min((total + 499) // 500, MAX_SEARCH // 500)
     got = 0
-    for pg in range(1, pages + 1):
-        d = search(cat_path, 500, pg)
+    # so trang biet truoc -> tai SONG SONG (fastfetch), gop theo dung thu tu
+    from fastfetch import map_parallel
+    for d in map_parallel(lambda pg: search(cat_path, 500, pg), range(1, pages + 1)):
         if not d:
             break
         for rid in d.get("resultIds", []):
@@ -149,7 +150,6 @@ def collect_category(cat_path, prices, depth=0):
             if rid not in prices and info.get("price"):
                 prices[rid] = info["price"]
                 got += 1
-        time.sleep(0.3)
     print(f"[{cat_path}] {total} sp, +{got} moi, tong {len(prices)}")
 
 
@@ -173,11 +173,12 @@ def main():
     print(f"  {len(ids) - len(new_ids)} variant da co ten/EAN trong cache, "
           f"chi tra {len(new_ids)} variant moi...")
 
-    for i in range(0, len(new_ids), 40):
-        chunk = new_ids[i:i + 40]
-        d = get(f"{BASE}/evaluate.article.v1/betty-variants",
-                {"storeIds": STORE, "country": "CZ", "locale": "cs-CZ",
-                 "ids": ",".join(chunk)})
+    from fastfetch import map_parallel
+    chunks = [new_ids[i:i + 40] for i in range(0, len(new_ids), 40)]
+    details = map_parallel(lambda ch: get(
+        f"{BASE}/evaluate.article.v1/betty-variants",
+        {"storeIds": STORE, "country": "CZ", "locale": "cs-CZ", "ids": ",".join(ch)}), chunks)
+    for i, d in zip(range(0, len(new_ids), 40), details):
         if not d:
             continue
         for art in d.get("result", {}).values():
@@ -205,7 +206,6 @@ def main():
                 cache[vid] = {"name": name, "ean": ean, "food": food}
         if (i // 40) % 25 == 0:
             print(f"  chi tiet moi {i}/{len(new_ids)}")
-        time.sleep(0.25)
 
     save_variant_cache(cache)
 

@@ -226,8 +226,99 @@ def load_existing():
     return coll
 
 
+# ===== CHE DO NHANH (--fast): cao TOAN BO nhung khong mo tung trang =====
+# Chrome chi de GIU PHIEN DANG NHAP; cac trang lay bang fetch() ngay trong tab
+# tamdaexpress.eu (cookie phien tu gui kem, ke ca HttpOnly), nhieu trang SONG
+# SONG, doc HTML bang DOMParser -> nhanh hon nhieu so voi driver.get tung trang.
+FAST = "--fast" in sys.argv
+FAST_PARALLEL = 8
+
+FETCH_JS = r"""
+const urls = arguments[0], done = arguments[arguments.length - 1];
+function price(t) {
+  const d = (t || '').replace(/\D/g, '');
+  if (!d) return null;
+  return d.length <= 2 ? +d / 100 : +d.slice(0, -2) + +d.slice(-2) / 100;
+}
+async function one(u) {
+  try {
+    const r = await fetch(u, {credentials: 'include'});
+    if (!r.ok) return [];
+    const t = await r.text();
+    if (t.indexOf('Đăng nhập để xem giá') >= 0) return null;   // mat phien
+    const doc = new DOMParser().parseFromString(t, 'text/html');
+    const out = [];
+    // trang danh muc co khung .cat-view-grid; trang TIM KIEM thi khong (tung lam
+    // quet tim kiem ra 0 mon -> sot ~2000 mon o sub-category sau)
+    const root = doc.querySelector('.cat-view-grid') || doc;
+    root.querySelectorAll('.product-item.ut2-gl__item').forEach(c => {
+      const n = c.querySelector('.product-title'), p = c.querySelector('.ty-price');
+      const name = n ? n.textContent.trim() : '', pr = p ? price(p.textContent) : null;
+      if (!name || pr === null) return;
+      let ean = null;
+      c.querySelectorAll('.ut2-gl__feature').forEach(f => {
+        const m = (f.textContent || '').match(/EAN\s*(\d{8,14})/);
+        if (m && !ean) ean = m[1];
+      });
+      out.push({name: name, price: pr, ean: ean, amount: '', unit: ''});
+    });
+    return out;
+  } catch (e) { return []; }
+}
+Promise.all(urls.map(one)).then(done);
+"""
+
+
+def fetch_pages(driver, urls):
+    driver.set_script_timeout(120)
+    res = driver.execute_async_script(FETCH_JS, urls)
+    if any(r is None for r in res):
+        raise SystemExit("LOI: mat phien dang nhap giua chung (trang hien 'Dang nhap de xem gia')")
+    return res
+
+
+def crawl_paged_fast(driver, url_of, label, collector, max_pages=MAX_PAGES_PER_CAT):
+    """Lay trang 1..N theo lo FAST_PARALLEL trang song song; dung khi gap trang
+    rong hoac 1 lo khong them duoc mon nao (trang vuot cuoi co the lap lai)."""
+    page = 1
+    seen_here = set()   # khoa da gap TRONG danh muc nay (mon co the o nhieu danh muc)
+    while page <= max_pages:
+        nums = list(range(page, min(page + FAST_PARALLEL, max_pages + 1)))
+        res = fetch_pages(driver, [url_of(n) for n in nums])
+        got = new = 0
+        stop = False
+        for items in res:
+            keys = {it["ean"] or it["name"] for it in items}
+            if not items or keys <= seen_here:   # trang rong / lap lai -> het
+                stop = True
+                break
+            seen_here |= keys
+            got += len(items)
+            new += merge_items(collector, items)
+        print(f"  [{label} p{nums[0]}-{nums[-1]}] {got} san pham, +{new} moi (tong {len(collector)})")
+        if stop:
+            break
+        page += FAST_PARALLEL
+
+
+def crawl_all_fast(driver, cats, collector):
+    for cat in cats:
+        crawl_paged_fast(driver, lambda n, c=cat: f"{BASE}/{c}.html" if n == 1
+                         else f"{BASE}/{c}-page-{n}.html", cat, collector)
+    print("\n=== SEARCH SWEEP nhanh (bat san pham o sub-category sau) ===")
+    qs = list("abcdefghijklmnopqrstuvwxyz0123456789") + ["č", "ř", "š", "ž", "ů", "á", "é", "í", "ý"]
+    for q in qs:
+        base = (f"{BASE}/search.html?match=all&subcats=Y&pcode_from_q=Y&pshort=N&pfull=N"
+                f"&pname=Y&pkeywords=N&search_performed=Y&hidden=1&q={q}")
+        crawl_paged_fast(driver, lambda n, b=base: b if n == 1 else f"{b}&page={n}",
+                         f"search {q}", collector, max_pages=60)
+
+
 def main():
-    mode = "TOAN BO (--full)" if FULL else "INCREMENTAL (chi them hang moi)"
+    if FAST:
+        globals()["FULL"] = True   # --fast = cao TOAN BO, chi khac cach lay trang
+    mode = ("TOAN BO NHANH (--fast, fetch song song)" if FAST else
+            "TOAN BO (--full)" if FULL else "INCREMENTAL (chi them hang moi)")
     print(f"Che do: {mode}")
     options = webdriver.ChromeOptions()
     options.add_argument("--lang=vi-VN")
@@ -240,16 +331,21 @@ def main():
 
     all_items = {} if FULL else load_existing()
     before = len(all_items)
+    old_n = len(load_existing())
     print(f"Data cu: {before} san pham" if not FULL else "Cao lai tu dau")
     try:
         wait_login(driver)
         cats = discover_categories(driver)
         # luon them danh muc mo coi (khong co trong menu -> discover bo sot)
         cats = cats + [c for c in ORPHAN_CATS if c not in cats]
+        if FAST:
+            driver.get(f"{BASE}/banh-keo.html")   # tab cung domain de fetch kem phien
+            crawl_all_fast(driver, cats, all_items)
+            cats = []                              # bo vong lap cham ben duoi
         for cat in cats:
             print(f"=== [{cat}] ===")
             crawl_category(driver, cat, all_items)
-        if FULL:
+        if FULL and not FAST:
             print(f"\n=== SEARCH SWEEP (bat san pham sot) ===")
             search_sweep(driver, all_items)
     finally:
@@ -261,6 +357,11 @@ def main():
     if not FULL and os.path.exists(OUT) and len(all_items) < before:
         print(f"LOI: sau khi cao con {len(all_items)} < data cu {before} - "
               f"nghi cao loi, KHONG ghi de.")
+        raise SystemExit(2)
+    # An toan cho cao toan bo: ra it hon 90% data cu -> nghi loi (mat phien,
+    # site doi giao dien...) -> KHONG ghi de.
+    if FULL and old_n and len(all_items) < old_n * 0.9:
+        print(f"LOI: cao toan bo chi ra {len(all_items)} < 90% data cu {old_n}, KHONG ghi de.")
         raise SystemExit(2)
 
     result = {
