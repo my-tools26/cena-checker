@@ -126,6 +126,8 @@ def crawl_category(session, slug):
             try:
                 r = session.get(f"{BASE}/{slug}/", params={"page": page},
                                 headers=HEADERS, timeout=45)
+                if r.status_code == 404:   # vuot qua trang cuoi -> het, khong thu lai
+                    return []
                 r.raise_for_status()
                 return parse_products(r.text)
             except Exception as e:

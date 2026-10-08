@@ -327,6 +327,10 @@ def main():
     # Chrome chinh cua user (tranh xung dot khi Chrome dang mo).
     profile = os.path.join(HERE, ".chrome-tamda-profile")
     options.add_argument(f"--user-data-dir={profile}")
+    # BAT luu mat khau Chrome (Selenium mac dinh tat) -> lan sau tu dien dang nhap
+    options.add_experimental_option("prefs", {
+        "credentials_enable_service": True,
+        "profile.password_manager_enabled": True})
     driver = webdriver.Chrome(options=options)
 
     all_items = {} if FULL else load_existing()

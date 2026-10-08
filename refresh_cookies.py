@@ -36,6 +36,7 @@ SITES = {
         "keep": ["PHPSESSID"],  # crawler chi can PHPSESSID
         # dau hieu DA dang nhap: link "Odhlásit" (dang xuat) xuat hien
         "logged_in_text": "Odhlásit",
+        "alt_marker": "s31-article-price-DPH",
     },
     "bidfood": {
         "url": "https://www.mujbidfood.cz/",
@@ -57,6 +58,11 @@ def make_driver(site_key):
     options.add_argument("--lang=vi-VN")
     profile = os.path.join(PROFILE_ROOT, site_key)
     options.add_argument(f"--user-data-dir={profile}")
+    # BAT luu mat khau cua Chrome (Selenium mac dinh TAT): lan dau user bam
+    # "Luu mat khau" -> lan sau Chrome TU DIEN ten + mat khau, khoi go lai.
+    options.add_experimental_option("prefs", {
+        "credentials_enable_service": True,
+        "profile.password_manager_enabled": True})
     return webdriver.Chrome(options=options)
 
 
@@ -65,9 +71,13 @@ def is_logged_in(driver, cfg):
         return "UserPanelView" in driver.page_source and "settings" in driver.page_source
     try:
         body = driver.find_element(By.TAG_NAME, "body").text
+        src = driver.page_source
     except Exception:
-        body = ""
-    return cfg["logged_in_text"] in body
+        body = src = ""
+    # "Odhlasit" co the nam trong menu AN (khong co trong chu hien) -> xet ca HTML;
+    # PTT: gia "bez DPH" chi hien khi da dang nhap B2B
+    return (cfg["logged_in_text"] in body or cfg["logged_in_text"] in src
+            or cfg.get("alt_marker", "\x00") in src)
 
 
 def refresh_one(site_key):
@@ -80,15 +90,23 @@ def refresh_one(site_key):
         if not is_logged_in(driver, cfg):
             print(f"  Chua dang nhap (hoac phien het han). Hay DANG NHAP "
                   f"{site_key} trong cua so Chrome vua mo (toi doi toi 5 phut)...")
+            # CHI NHIN trang hien tai, KHONG tai lai: truoc day reload moi ~4s
+            # lam DONG o dang nhap user dang go (loi user bao 06/10/2026).
             waited = 0
-            while not is_logged_in(driver, cfg) and waited < 300:
+            while waited < 300:
                 time.sleep(3)
                 waited += 3
                 try:
-                    driver.get(cfg["url"])  # reload de check lai
+                    if is_logged_in(driver, cfg):
+                        break
+                except Exception:
+                    pass   # trang dang chuyen huong sau khi bam Dang nhap
+            if not is_logged_in(driver, cfg):
+                # dang nhap xong co the van o trang con -> tai lai trang chu 1 lan de chac
+                try:
+                    driver.get(cfg["url"]); time.sleep(2)
                 except Exception:
                     pass
-                time.sleep(1)
             if not is_logged_in(driver, cfg):
                 print(f"  BO QUA {site_key}: khong thay dang nhap sau 5 phut.")
                 return False
