@@ -235,7 +235,8 @@
    "name": "Trolli 150g The Squiggles",
    "price": 24.9,
    "amount": "150 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4000512463658"
   },
   {
    "name": "Trolli 150g wurli",
@@ -1010,7 +1011,8 @@
    "name": "Vína CZ 1L Cabernet Sauvignon polosl.",
    "price": 55.5,
    "amount": "1 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594031258131"
   },
   {
    "name": "American 100% Coconut water 0,33L",
@@ -1143,7 +1145,8 @@
    "name": "Haribo 160g Rainbow Sauer",
    "price": 23.9,
    "amount": "160 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686120163"
   },
   {
    "name": "Haribo 150g Dragibus",
@@ -1155,13 +1158,15 @@
    "name": "Glico Pocky 31g Rose – 10ks/kart",
    "price": 23.9,
    "amount": "31 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8851019600499"
   },
   {
    "name": "Glico Pocky 31g Milk – 10ks/kart",
    "price": 23.9,
    "amount": "31 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8851019600499"
   },
   {
    "name": "OKF 350ml Sparkling – Pineapple",
@@ -1215,7 +1220,8 @@
    "name": "Prima rolky Kakaové 240g milk – 20ks/kart",
    "price": 23.9,
    "amount": "240 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8588010163233"
   },
   {
    "name": "Vincinni Torta tiramisu 400g – 6ks/kart",
@@ -1513,7 +1519,8 @@
    "name": "Pepsi 330ml plech CZ – Raspberry",
    "price": 13.5,
    "amount": "330 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8595723301852"
   },
   {
    "name": "Pepsi 0,5L PET Raspberry",
@@ -1581,7 +1588,8 @@
    "name": "Corny Big 40g Cinnamon",
    "price": 11.9,
    "amount": "40 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8592084422813"
   },
   {
    "name": "Lipton 500ml – Orange & Mango",
@@ -1720,7 +1728,8 @@
    "name": "7Days Croissant 98g Max Vani + Oreo",
    "price": 16.9,
    "amount": "98 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622202267413"
   },
   {
    "name": "Birell 500ml plech – Sicilský Citron",
@@ -1806,7 +1815,8 @@
    "name": "JF House Burger 50g – 20ks/kart",
    "price": 15.9,
    "amount": "50 g",
-   "unit": ""
+   "unit": "",
+   "ean": "6976627930157"
   },
   {
    "name": "CA – Orion Chocopie 2 packs 66g (2x33g)",
@@ -2516,7 +2526,8 @@
    "name": "Reese´s 79g Big Cup Choco Lava",
    "price": 45.9,
    "amount": "79 g",
-   "unit": ""
+   "unit": "",
+   "ean": "034000953424"
   },
   {
    "name": "Red Bull 0,25L Apricot edition",
@@ -3436,7 +3447,8 @@
    "name": "Ritter sport 100g Knusperkeks",
    "price": 32.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4000417621412"
   },
   {
    "name": "Ritter sport 100g Edel – Vollmilch",
@@ -3448,25 +3460,29 @@
    "name": "Ritter sport 100g Knusperflakes",
    "price": 32.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4000417601117"
   },
   {
    "name": "Ritter sport 100g Weisse Crisp",
    "price": 32.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4000417629210"
   },
   {
    "name": "Ritter sport 100g Trauben Nuss",
    "price": 32.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4000417602213"
   },
   {
    "name": "Ritter sport 100g Joghurt",
    "price": 32.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4000417216007"
   },
   {
    "name": "UA Octopus (9) Sardel (ančovička) slané-sušený 36g – (1/25ks)",
@@ -3516,7 +3532,8 @@
    "name": "Lakmilk strouhaný Cheddar 100g",
    "price": 30.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594221860915"
   },
   {
    "name": "Lakmilk balkánský sýr strouhaný 100g",
@@ -3528,7 +3545,8 @@
    "name": "Lakmilk strouhaná Gouda 48% 100g",
    "price": 22.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594221860908"
   },
   {
    "name": "Damla 90g Meloun – Pineapple",
@@ -3713,7 +3731,8 @@
    "name": "Ritter sport 100g Nugát",
    "price": 32.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4000417602619"
   },
   {
    "name": "Ritter sport 100g Smarties milk chocolate",
@@ -3764,7 +3783,8 @@
    "name": "Wikinger Párky hot dog (8x45g) 550g",
    "price": 69.9,
    "amount": "45 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4010142026253"
   },
   {
    "name": "Gummy Burger 18g – 20ks/kart",
@@ -3941,7 +3961,8 @@
    "name": "Milka Choco Minis Stars 150g – 16ks/kart",
    "price": 49.9,
    "amount": "150 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8593894000048"
   },
   {
    "name": "Milka Choco Biscuits 150g – 14ks/kart",
@@ -3977,25 +3998,29 @@
    "name": "Mochi QLove 80g Wild Blueberry",
    "price": 35.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4712928345137"
   },
   {
    "name": "Mochi QLove 80g Velvet Taro",
    "price": 35.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4712928345250"
   },
   {
    "name": "Mochi QLove 80g Peanut Butter",
    "price": 35.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4712928345151"
   },
   {
    "name": "Mochi QLove 80g Matcha Latte",
    "price": 35.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4712928345106"
   },
   {
    "name": "Mochi QLove 80g Intense Chocolate",
@@ -4007,7 +4032,8 @@
    "name": "Mochi QLove 80g Exotic Lychee",
    "price": 35.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4712928345144"
   },
   {
    "name": "CA – Bánh bông lan tam giác 100g Chuối – 40ks/kart",
@@ -4093,7 +4119,8 @@
    "name": "VOBRO – Panna cotta 200g – 6ks/kart",
    "price": 94.9,
    "amount": "200 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5901177155911"
   },
   {
    "name": "VOBRO – Hazelnut Passion 182g – 6ks/kart",
@@ -4328,7 +4355,8 @@
    "name": "Haribo minis 250g Kinder – party",
    "price": 39.9,
    "amount": "250 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686753040"
   },
   {
    "name": "Fanta 0,33L CZ plech Jablko – Liči",
@@ -4367,7 +4395,8 @@
    "name": "Haribo 175g EU Beerentraum",
    "price": 23.9,
    "amount": "175 g",
-   "unit": ""
+   "unit": "",
+   "ean": "9002975002417"
   },
   {
    "name": "Haribo 175g EU Monsterjagd",
@@ -4482,7 +4511,8 @@
    "name": "Schogetten 100g Black & White",
    "price": 34.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4000415743604"
   },
   {
    "name": "Schogetten 100g Alpine milk čoko",
@@ -4627,7 +4657,8 @@
    "name": "Milka 300g Almonds Caramel – 12ks/kart",
    "price": 69.9,
    "amount": "300 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622210999016"
   },
   {
    "name": "A – XÔI THỊT (domácí)",
@@ -4737,7 +4768,8 @@
    "name": "Kofola PET 2L Vánoční punč",
    "price": 29.5,
    "amount": "2 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595231222083"
   },
   {
    "name": "Milka Choco Sticks 112g – 20ks/kart",
@@ -4782,7 +4814,8 @@
    "name": "Hamé Lečo s uzeninou 415g – 10ks/kart",
    "price": 49.9,
    "amount": "415 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594001693207"
   },
   {
    "name": "Rio Mare 120g Tuňák s italským chilli – 12ks/kart",
@@ -5203,7 +5236,8 @@
    "name": "Fanta 0,355L USA – Chucky´s punch",
    "price": 23.9,
    "amount": "0,355 l",
-   "unit": ""
+   "unit": "",
+   "ean": "2000046260008"
   },
   {
    "name": "AA Tako Mi Nuts Rice 150g – 12ks/kart",
@@ -5306,7 +5340,8 @@
    "name": "Pepsi 0,5L PET Lemon Twist",
    "price": 18.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595723301418"
   },
   {
    "name": "Kláštorná 1,5L PET jemná sycená",
@@ -5435,7 +5470,8 @@
    "name": "Red Bull 0,25L The Winter Edition",
    "price": 29.9,
    "amount": "0,25 l",
-   "unit": ""
+   "unit": "",
+   "ean": "9002492085821"
   },
   {
    "name": "WIMEX – 65325 – Miska (PP) s oušky bílá Ø156mm 500ml [10ks]",
@@ -5509,13 +5545,15 @@
    "name": "Fizi 80g bonbon Ultra Boris – 18ks/kart",
    "price": 16.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594216110551"
   },
   {
    "name": "Fizi 80g bonbon Kola – 18ks/kart",
    "price": 16.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594216110520"
   },
   {
    "name": "Meridia Primitivo IGT Puglia 0,75L",
@@ -5622,7 +5660,8 @@
    "name": "Dobrá voda 1.5l hruška nep.",
    "price": 12.9,
    "amount": "1.5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594001405855"
   },
   {
    "name": "Baterie Eveready AAA (LR03) 1,5V 4ks – 60ks/kart",
@@ -5640,7 +5679,8 @@
    "name": "A – Nordic vodka 0,04L – 20ks/kart",
    "price": 17.9,
    "amount": "0,04 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594005019409"
   },
   {
    "name": "OLEA kosmetické odličovací tampony 120ks",
@@ -5691,7 +5731,8 @@
    "name": "Reese´s 79g King Size 4 Peanut Butter Cups",
    "price": 32.9,
    "amount": "79 g",
-   "unit": ""
+   "unit": "",
+   "ean": "034000480067"
   },
   {
    "name": "Biorebe 0,25L Pinot Grigio",
@@ -5704,7 +5745,8 @@
    "name": "Biorebe 0,25L Merlot",
    "price": 39.9,
    "amount": "0,25 l",
-   "unit": ""
+   "unit": "",
+   "ean": "4003301079597"
   },
   {
    "name": "CA – Omachi inst. nudle 91g s řajčatovou omáčkou",
@@ -5969,7 +6011,8 @@
    "name": "ELF BAR 1000 KIWI PASSION FRUIT GUAVA 20MG/ML",
    "price": 137.0,
    "amount": "",
-   "unit": ""
+   "unit": "",
+   "ean": "8592303002529"
   },
   {
    "name": "ELF BAR 1000 APPLE PEACH 20MG/ML",
@@ -6173,7 +6216,8 @@
    "name": "Doritos 75g Flamin HOT – 14ks/kart",
    "price": 24.9,
    "amount": "75 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5900259135391"
   },
   {
    "name": "Club mate 500ml Beere – 20ks/kart",
@@ -6212,13 +6256,15 @@
    "name": "Sprite 0,355L USA Tropical mix",
    "price": 23.9,
    "amount": "0,355 l",
-   "unit": ""
+   "unit": "",
+   "ean": "049000559064"
   },
   {
    "name": "Sprite 0,355L USA Tea",
    "price": 23.9,
    "amount": "0,355 l",
-   "unit": ""
+   "unit": "",
+   "ean": "049000558951"
   },
   {
    "name": "Guarana plech 0,25L Classic",
@@ -6370,7 +6416,8 @@
    "name": "Fizi Jelly 62g Jahoda – 30ks/kart",
    "price": 17.9,
    "amount": "62 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594216110599"
   },
   {
    "name": "Fizi Jelly 62g Banán – 30ks/kart",
@@ -6390,7 +6437,8 @@
    "name": "Fizi 80g bonbon Malina – 18ks/kart",
    "price": 16.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594216110513"
   },
   {
    "name": "Fizi 80g bonbon Galaxy – 18ks/kart",
@@ -6778,19 +6826,22 @@
    "name": "AA Vinut Aloe Vera 0,5L Meloun",
    "price": 17.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8935330203246"
   },
   {
    "name": "AA Vinut Aloe Vera 0,5L Mango",
    "price": 17.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8935330203239"
   },
   {
    "name": "AA Vinut Aloe Vera 0,5L Granatové Jablko",
    "price": 17.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8935330203253"
   },
   {
    "name": "CA – Co Gai Ao Dai vlast.nudle 400g (BUN GAO LUT)",
@@ -6814,7 +6865,8 @@
    "name": "Biorebe 750ml Merlot",
    "price": 89.9,
    "amount": "750 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "4003301080876"
   },
   {
    "name": "Biorebe 750ml Pinot Grigio",
@@ -6964,7 +7016,8 @@
    "name": "CA – TTR Jasmine rice 8,5kg (Gạo Lá Cải)",
    "price": 550.0,
    "amount": "8,5 kg",
-   "unit": ""
+   "unit": "",
+   "ean": "8859086000037"
   },
   {
    "name": "CA – TTR Jasmine rice 1kg (Gạo Lá Cải)",
@@ -7340,7 +7393,8 @@
    "name": "Tarapaca 750ml Sauvignon Blanc nealko",
    "price": 159.9,
    "amount": "750 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "7804340103185"
   },
   {
    "name": "Tarapaca Santa Cecilia – Sauvignon Blanc 750ml",
@@ -7676,13 +7730,15 @@
    "name": "Mochi 80g Mango flavour",
    "price": 39.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4712928345090"
   },
   {
    "name": "Mochi 80g Strawberry flavour",
    "price": 39.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4712928345120"
   },
   {
    "name": "Mochi 80g Muscat flavour",
@@ -7909,7 +7965,8 @@
    "name": "Prosecco Borgo del Gelso Frizzante 750ml",
    "price": 94.9,
    "amount": "750 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8054796010905"
   },
   {
    "name": "Prosecco DOC frizzante Voscarini 0,75L",
@@ -7989,7 +8046,8 @@
    "name": "WIMEX – 65104 – Kelímek krystal (PS) Ø43mm 2cl/4cl [10 ks]",
    "price": 14.9,
    "amount": "10 ks",
-   "unit": ""
+   "unit": "",
+   "ean": "8591199651040"
   },
   {
    "name": "WIMEX – 41002 – Talíř (cukrová třtina) Ø22cm [10ks]",
@@ -8087,7 +8145,8 @@
    "name": "Andes Sysah Rosé Chile 750ml",
    "price": 69.9,
    "amount": "750 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "4003301075995"
   },
   {
    "name": "Birell 500ml plech Stylu IPA",
@@ -8193,7 +8252,8 @@
    "name": "Lipton 500ml EU – Lemon",
    "price": 15.9,
    "amount": "500 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "5949000506431"
   },
   {
    "name": "Lipton 500ml EU – Malina",
@@ -8205,7 +8265,8 @@
    "name": "Lipton 500ml EU – Peach",
    "price": 15.9,
    "amount": "500 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "5942204001832"
   },
   {
    "name": "A – OKF Aloe 500ml – Strawberry",
@@ -8302,13 +8363,15 @@
    "name": "Gervais Chilli 80g",
    "price": 21.5,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "3073781137828"
   },
   {
    "name": "Monster 0,5L Absolutely Zero (modrý)",
    "price": 23.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "5060335631930"
   },
   {
    "name": "Today Red Velvet 40g x 24ks",
@@ -8589,7 +8652,8 @@
    "name": "Proud 0,5L plech sv.ležák",
    "price": 27.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594404023212"
   },
   {
    "name": "Proud sv.ležák 0,33l sklo",
@@ -9062,7 +9126,8 @@
    "name": "Moravia PANÝR sýr nejen na grilování 200g",
    "price": 79.9,
    "amount": "200 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594006324830"
   },
   {
    "name": "MIX nealko 0,33L 0% – Sex On The Beach Cocktail",
@@ -9327,7 +9392,8 @@
    "name": "TEREA SILVER",
    "price": 1347.0,
    "amount": "",
-   "unit": ""
+   "unit": "",
+   "ean": "8595701564767"
   },
   {
    "name": "LECO Venkovská šunka 100g",
@@ -9410,7 +9476,8 @@
    "name": "Palais de France rosé 750ml",
    "price": 78.9,
    "amount": "750 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8594045653151"
   },
   {
    "name": "Snack !t KIDS CLUB drůbeží 90 g",
@@ -9721,7 +9788,8 @@
    "name": "Pringles 40g – sour cream",
    "price": 21.9,
    "amount": "40 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5053990107384"
   },
   {
    "name": "Pringles 40g – hot spicy",
@@ -9745,7 +9813,8 @@
    "name": "A – Fernet stock 1L Original",
    "price": 340.0,
    "amount": "1 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594005020139"
   },
   {
    "name": "Coca Cola EU 500ml Cherry",
@@ -9794,7 +9863,8 @@
    "name": "Smirnoff Red Vodka 4% 275ml sklo",
    "price": 48.9,
    "amount": "275 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "5410316983693"
   },
   {
    "name": "7Days Croissant 70g Max Choco Drops",
@@ -10677,7 +10747,8 @@
    "name": "Pringles 40g – Original",
    "price": 21.9,
    "amount": "40 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5053990107339"
   },
   {
    "name": "Linteo Papírové kapesníky 10×10 2 vrstvy",
@@ -10911,7 +10982,8 @@
    "name": "Med Český květový 500g Medokom – 8ks/kart",
    "price": 86.9,
    "amount": "500 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594003432217"
   },
   {
    "name": "Happy day 1L mango",
@@ -11584,7 +11656,8 @@
    "name": "Boneco Salát pochoutkový 450g",
    "price": 41.9,
    "amount": "450 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8595008714605"
   },
   {
    "name": "Boneco Salát Pařížský 450g",
@@ -11651,7 +11724,8 @@
    "name": "A – Jagermeister 35% mini 0,02L – 24ks/kart",
    "price": 26.9,
    "amount": "0,02 l",
-   "unit": ""
+   "unit": "",
+   "ean": "40677057"
   },
   {
    "name": "7UP Zero Sugar 2,25L",
@@ -12177,13 +12251,15 @@
    "name": "CA – Oreo Wafer roll Chocolate 54g",
    "price": 24.9,
    "amount": "54 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8934680033442"
   },
   {
    "name": "CA – Oreo Wafer roll Vanilla 54g",
    "price": 24.9,
    "amount": "54 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8934680033442"
   },
   {
    "name": "Braník 550ml +% plech 10°",
@@ -12235,7 +12311,8 @@
    "name": "Pepsi 330ml EU (lon cao)",
    "price": 12.9,
    "amount": "330 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "290047000117"
   },
   {
    "name": "CA – Lotus Rýže jasmínová 9,09kg(gói vàng)",
@@ -12366,7 +12443,8 @@
    "name": "Haribo 160g Chameleon",
    "price": 26.9,
    "amount": "160 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686005132"
   },
   {
    "name": "Haribo 80g Harry Potter (zlutý) – 30ks/kart",
@@ -13284,7 +13362,8 @@
    "name": "Brick Hotové jídlo Polévka Gulášová 600g",
    "price": 61.9,
    "amount": "600 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594045600100"
   },
   {
    "name": "CANDLELIGHT FILTR GOLD 10KS",
@@ -13356,7 +13435,8 @@
    "name": "Andes Sauvignon Blanc Chile 750ml",
    "price": 69.9,
    "amount": "750 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "4003301075995"
   },
   {
    "name": "Prosecco Frizzante Foscaro 750ml",
@@ -13663,7 +13743,8 @@
    "name": "ELFLIQ 20MG KIWI PASSION FRUIT GUAVA 10ML",
    "price": 175.0,
    "amount": "10 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8592303002307"
   },
   {
    "name": "ELFLIQ 20MG BLUEBERRY SOUR RASPBERRY 10ML",
@@ -13777,7 +13858,7 @@
    "price": 55.5,
    "amount": "1 l",
    "unit": "",
-   "ean": "8594031250357"
+   "ean": "8594031250067"
   },
   {
    "name": "Homann Majoneza 250ml",
@@ -14041,13 +14122,15 @@
    "name": "A – Božkov Republica 38% 0,2L – 14ks/kart",
    "price": 99.9,
    "amount": "0,2 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595736203983"
   },
   {
    "name": "A – Božkov 0,5L Peprmint 19%",
    "price": 135.0,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594005016750"
   },
   {
    "name": "A – Becherovka 500ml x 15",
@@ -14072,7 +14155,8 @@
    "name": "Haribo 90g Flower power – 30ks/kart",
    "price": 14.9,
    "amount": "90 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686117255"
   },
   {
    "name": "JF Crazy bubble roll + tattoo 16g x 24",
@@ -14986,7 +15070,8 @@
    "name": "Hamé Sekaná svíčková na smetaně 400g – 10ks/kart",
    "price": 54.9,
    "amount": "400 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594001693245"
   },
   {
    "name": "Hamé Western fazole 415g – 10ks/kart",
@@ -15081,13 +15166,15 @@
    "name": "Viva 120g Pomazánka se sýrem a kořením Pizza",
    "price": 16.9,
    "amount": "120 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594044448383"
   },
   {
    "name": "Viva 120g Pomazánka se sýrem a jalapeňos",
    "price": 16.9,
    "amount": "120 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594044448284"
   },
   {
    "name": "Bohemilk opoč.jogurt Smetanový jogurt-černý rybíz 150g",
@@ -15143,19 +15230,22 @@
    "name": "Camellia 105g Strawberry – 12ks/kart",
    "price": 34.9,
    "amount": "105 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8690351126522"
   },
   {
    "name": "Camellia 105g Hazelnut – 12ks/kart",
    "price": 34.9,
    "amount": "105 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8690351126515"
   },
   {
    "name": "Camellia 105g Caramel – 12ks/kart",
    "price": 34.9,
    "amount": "105 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8690351126508"
   },
   {
    "name": "Nescafe 3in1 Brown Sugar 10×16,5g – 18ks/kart",
@@ -15734,7 +15824,8 @@
    "name": "Poděbradka 1,5L PET Jablečný mošt",
    "price": 11.5,
    "amount": "1,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594006828369"
   },
   {
    "name": "Rama salted-200g",
@@ -15784,7 +15875,8 @@
    "name": "Haribo roulette 150g 6ks",
    "price": 23.9,
    "amount": "150 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686372852"
   },
   {
    "name": "Mon Cheri 157,5g T15",
@@ -16165,7 +16257,8 @@
    "name": "Pfanner 0,33l plech Led.čaj černý broskev",
    "price": 12.9,
    "amount": "0,33 l",
-   "unit": ""
+   "unit": "",
+   "ean": "90069970"
   },
   {
    "name": "Royal Crown 1,33L PET Bez Cukru",
@@ -16208,7 +16301,8 @@
    "name": "Tary Drink 250ml – Epický Beko ( xanh lá )",
    "price": 20.9,
    "amount": "250 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8594222110101"
   },
   {
    "name": "JB POCKET GUN – lízátko v pistoli 5g x 16",
@@ -16251,7 +16345,8 @@
    "name": "Milka 90g Triple Choco Cocoa",
    "price": 26.9,
    "amount": "90 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622210516091"
   },
   {
    "name": "CA – Bánh Tráng Rế",
@@ -16476,7 +16571,8 @@
    "name": "JF Scary Brain 18g x 90",
    "price": 10.11,
    "amount": "18 g",
-   "unit": ""
+   "unit": "",
+   "ean": "6976627938283"
   },
   {
    "name": "JF Baby Burger 10g – 70ks/kart",
@@ -16885,7 +16981,8 @@
    "name": "Med květový 500g Medokom – 8ks/kart",
    "price": 69.9,
    "amount": "500 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594003432217"
   },
   {
    "name": "Med květový 250g Medokom – 10ks/kart",
@@ -16925,7 +17022,8 @@
    "name": "Gillette Mach3 Turbo 5 kusů",
    "price": 250.0,
    "amount": "",
-   "unit": ""
+   "unit": "",
+   "ean": "7702018514229"
   },
   {
    "name": "Soke Smeták s holí hnědý/červený 1ks",
@@ -17167,7 +17265,8 @@
    "name": "Maggi tekuté koření 160ml",
    "price": 27.9,
    "amount": "160 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "5900862215701"
   },
   {
    "name": "Hellmann’s Ketchup Jemný 485g",
@@ -17237,7 +17336,8 @@
    "name": "Lotus 250g karamel",
    "price": 33.9,
    "amount": "250 g",
-   "unit": ""
+   "unit": "",
+   "ean": "05410126716016"
   },
   {
    "name": "Bahlsen Hit Sušenky kakaové 134g",
@@ -17364,7 +17464,8 @@
    "name": "Maitre Mořské plody modré 250g",
    "price": 65.9,
    "amount": "250 g",
-   "unit": ""
+   "unit": "",
+   "ean": "9002859033360"
   },
   {
    "name": "Carla Laguna Mořské plody bonboniéra 200g",
@@ -17646,7 +17747,8 @@
    "name": "Monster 0,5L Rehab Peach",
    "price": 23.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "5060517884833"
   },
   {
    "name": "Giana Jahody 400g – 12ks/kart",
@@ -17957,7 +18059,8 @@
    "name": "A – Familia 0,1L Hruška – 12ks/kart",
    "price": 39.9,
    "amount": "0,1 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8586017279773"
   },
   {
    "name": "A – Familia 0,1L Slivka – 12ks/kart",
@@ -18057,7 +18160,8 @@
    "name": "Hamé Špagetka masová směs 415g – 10ks/kart",
    "price": 49.9,
    "amount": "415 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594001693610"
   },
   {
    "name": "Hamé Hovězí maso ve vlastní šťávě 180g",
@@ -18249,7 +18353,8 @@
    "name": "ANITA 125g Jahoda Prens – 24ks/kart",
    "price": 11.9,
    "amount": "125 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8690481023128"
   },
   {
    "name": "Red Bull 0,25L Zero",
@@ -18402,13 +18507,15 @@
    "name": "UA Shake 330ml Basil Beauty sklo",
    "price": 31.9,
    "amount": "330 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "4820097897484"
   },
   {
    "name": "UA Shake 330ml Caribe sklo",
    "price": 31.9,
    "amount": "330 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "4820097893745"
   },
   {
    "name": "UA Lvivské 1715 světlé 4,5% plech. 0,48l",
@@ -18545,7 +18652,8 @@
    "name": "Monster 0,5L Assault",
    "price": 23.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "5060896622309"
   },
   {
    "name": "Bersi 270g kyblik Uherák",
@@ -18751,7 +18859,8 @@
    "name": "Nutella krém porc. 15g",
    "price": 4.5,
    "amount": "15 g",
-   "unit": ""
+   "unit": "",
+   "ean": "80751151"
   },
   {
    "name": "Penam Strouhanka z pečiva 12x500g",
@@ -18763,7 +18872,8 @@
    "name": "Nestea bl.tea Peach 330ml plech",
    "price": 11.9,
    "amount": "330 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "5900334017949"
   },
   {
    "name": "Nestea bl.tea Lemon 330ml plech",
@@ -18873,7 +18983,8 @@
    "name": "Viva 120g paštika s drůbežím masem",
    "price": 14.9,
    "amount": "120 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594044446822"
   },
   {
    "name": "Viva 120g Vepřový lunchmeat",
@@ -18911,7 +19022,8 @@
    "name": "Viva 120g Vepřové maso",
    "price": 16.9,
    "amount": "120 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594044445115"
   },
   {
    "name": "Viva Uzená pečeně s fazolí 400g",
@@ -18937,7 +19049,8 @@
    "name": "Viva 120g Lososová pomazanká",
    "price": 16.9,
    "amount": "120 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594044444965"
   },
   {
    "name": "Viva 120g Krůtí maso ve vlastní šťávě",
@@ -18962,7 +19075,8 @@
    "name": "Viva 120g Bavorská sekaná",
    "price": 16.9,
    "amount": "120 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594044442473"
   },
   {
    "name": "Fogo Porto Ruby 750ml",
@@ -19291,7 +19405,8 @@
    "name": "JF Brain lollipop + powder 50g x 12",
    "price": 14.58,
    "amount": "50 g",
-   "unit": ""
+   "unit": "",
+   "ean": "6978327820462"
   },
   {
    "name": "JF Double Robot Spinner 20g x 12",
@@ -19310,37 +19425,43 @@
    "name": "Euroliker Vodka 37,5% 0,04L",
    "price": 12.0,
    "amount": "0,04 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594203230040"
   },
   {
    "name": "Euroliker Tuzemák 37,5% 0,04L",
    "price": 12.0,
    "amount": "0,04 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594203230057"
   },
   {
    "name": "Euroliker Vodka 37,5% 0,1L",
    "price": 30.9,
    "amount": "0,1 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594203230033"
   },
   {
    "name": "Euroliker Tuzemák 37,5% 0,1L",
    "price": 30.9,
    "amount": "0,1 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594203230026"
   },
   {
    "name": "Euroliker Vodka 37,5% 0,2L",
    "price": 53.9,
    "amount": "0,2 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594203230507"
   },
   {
    "name": "Euroliker Tuzemák 37,5% 0,2L",
    "price": 53.9,
    "amount": "0,2 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594203230514"
   },
   {
    "name": "PE-PO drevený podpalovač 32ks (màu xanh)",
@@ -19498,7 +19619,8 @@
    "name": "Pepsi 330ml plech CZ – Original (lon cao)",
    "price": 13.5,
    "amount": "330 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "290047000117"
   },
   {
    "name": "Relax Exotica Liči 1L",
@@ -19737,7 +19859,8 @@
    "name": "Pringles 165g Classic Paprika – 19ks/kart",
    "price": 41.9,
    "amount": "165 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5053990162413"
   },
   {
    "name": "Coca Cola EU 330ml original (lon cao)",
@@ -19774,7 +19897,8 @@
    "name": "Kofola PET 0.5l Meřunka",
    "price": 18.9,
    "amount": "0.5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595231219335"
   },
   {
    "name": "Lotus Biscoff Vanilka 50gx16",
@@ -19799,7 +19923,8 @@
    "name": "Orion Milena Mléčná 32gx60",
    "price": 9.9,
    "amount": "",
-   "unit": ""
+   "unit": "",
+   "ean": "18593893110196"
   },
   {
    "name": "Milka fidorka ChocoWafers 30gx30",
@@ -19954,7 +20079,8 @@
    "name": "Fini – Missile Explosion 5gx200",
    "price": 1.5,
    "amount": "",
-   "unit": ""
+   "unit": "",
+   "ean": "8410525243653"
   },
   {
    "name": "Radegast rázná 10° 500ml",
@@ -19979,7 +20105,8 @@
    "name": "CA – Vifon mì lẩu thái bát 85gx12",
    "price": 32.0,
    "amount": "",
-   "unit": ""
+   "unit": "",
+   "ean": "8935311130547"
   },
   {
    "name": "CA – Vifon mì gà bát 85gx12",
@@ -20054,7 +20181,8 @@
    "name": "Haribo 175g Donuts",
    "price": 26.9,
    "amount": "175 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686002087"
   },
   {
    "name": "Hamé Matěj 120g – 16ks/kart",
@@ -20570,7 +20698,8 @@
    "name": "CA – Bánh TIPO trứng 220g",
    "price": 72.9,
    "amount": "220 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8934760211920"
   },
   {
    "name": "CA – JIN JIN thach que 390g (màu xanh)",
@@ -20796,7 +20925,8 @@
    "name": "Haribo 175g Konfekt",
    "price": 26.9,
    "amount": "175 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686151105"
   },
   {
    "name": "CA – Gạo VJ Platinum rice 9kg",
@@ -20914,7 +21044,8 @@
    "name": "Viva Trenčanský párek s fazolí 400g",
    "price": 37.9,
    "amount": "400 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594044440653"
   },
   {
    "name": "Mattoni 1,5L Multi-trop.ovoce",
@@ -21376,7 +21507,8 @@
    "name": "Monster 0,5L NITRO Cosmic Peach",
    "price": 23.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "5060947546844"
   },
   {
    "name": "Heidi pure MILK 80g",
@@ -21400,7 +21532,8 @@
    "name": "Heidi Grand´or Golden Almonds dark 100g",
    "price": 29.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5941021016401"
   },
   {
    "name": "Heidi Grand´or Golden Hazenuts WHITE 100g",
@@ -22421,7 +22554,8 @@
    "name": "Orion Bílé banány v čokoláda 42g x 48",
    "price": 13.5,
    "amount": "42 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8445291065253"
   },
   {
    "name": "Pepsi 2.25l Lime x 6",
@@ -22726,7 +22860,8 @@
    "name": "Orbit White Classic 14g x 30",
    "price": 9.17,
    "amount": "14 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4009900363488"
   },
   {
    "name": "Orbit White Fruit 30x 14g",
@@ -23045,7 +23180,8 @@
    "name": "Haribo 175g ingwer zitrone",
    "price": 26.9,
    "amount": "175 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686342770"
   },
   {
    "name": "Damla 90g Smoothie",
@@ -23148,7 +23284,8 @@
    "name": "Trolli 150g squiggle twist",
    "price": 19.9,
    "amount": "150 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4000512463665"
   },
   {
    "name": "Mokate káva 3v1 Irish 10x 17g",
@@ -23408,7 +23545,8 @@
    "name": "CA – Nongshim CUP 75g Kimchi – 12ks/kart",
    "price": 23.5,
    "amount": "75 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8801043028158"
   },
   {
    "name": "Jack Daniel & Cola 330ml 5% alk.",
@@ -23440,13 +23578,15 @@
    "name": "Chupa chup green apple sparkling sour 345ml x 24",
    "price": 24.9,
    "amount": "345 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8801069417950"
   },
   {
    "name": "Chupa chup Blueberry sparking sour 345ml x 24",
    "price": 24.9,
    "amount": "345 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8801069417905"
   },
   {
    "name": "DAVIDOFF EVOLVED BLUE 166.00 U",
@@ -23701,13 +23841,15 @@
    "name": "Grand sud merlot rosé 1L x 6",
    "price": 110.0,
    "amount": "1 l",
-   "unit": ""
+   "unit": "",
+   "ean": "3263280102179"
   },
   {
    "name": "Grand Sud merlot 1L x 6",
    "price": 110.0,
    "amount": "1 l",
-   "unit": ""
+   "unit": "",
+   "ean": "3263280102179"
   },
   {
    "name": "Grand sud Chardonnay 1Litr x 6",
@@ -23863,7 +24005,8 @@
    "name": "Woogie Karamel kakao 250g",
    "price": 32.9,
    "amount": "250 g",
-   "unit": ""
+   "unit": "",
+   "ean": "9002859084133"
   },
   {
    "name": "Woogie karamely Milk 250g",
@@ -24057,13 +24200,15 @@
    "name": "Viva párkový guláš 400g",
    "price": 34.9,
    "amount": "400 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594044444477"
   },
   {
    "name": "Viva kotlíkový guláš 400g",
    "price": 34.9,
    "amount": "400 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594044446952"
   },
   {
    "name": "Kubik Water 0,5L PET Watermeloun",
@@ -24196,7 +24341,8 @@
    "name": "Fuze tea peach 330ml x 24",
    "price": 11.9,
    "amount": "330 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "57088815"
   },
   {
    "name": "Klim Fruit Ball jahodové kuličky 245g – 12ks/kart",
@@ -24303,7 +24449,8 @@
    "name": "Vobro Cherry passion 98g",
    "price": 45.9,
    "amount": "98 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5901177153597"
   },
   {
    "name": "Dr.pepper USA Cream Soda 355ml x 12",
@@ -24364,7 +24511,8 @@
    "name": "Brilla 0,2L Prosecco spumante DOC – 24ks/kart",
    "price": 85.9,
    "amount": "0,2 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8008863065985"
   },
   {
    "name": "Kafer 750ml Gruner veltliner",
@@ -24608,7 +24756,8 @@
    "name": "Fini – Tennis gum 5g x 200",
    "price": 1.5,
    "amount": "5 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8410525186608"
   },
   {
    "name": "Fini – Banana Split Bubble gum 5g x 200ks",
@@ -24891,7 +25040,8 @@
    "name": "Robby Bubble borůvka 0,75L x 6",
    "price": 47.9,
    "amount": "0,75 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595004661330"
   },
   {
    "name": "Tortilla flour natur 25cm 450g (6ks) – 10ks/kart",
@@ -25135,7 +25285,8 @@
    "name": "Vidal Pizza 66g x 11",
    "price": 22.72,
    "amount": "66 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8413178368469"
   },
   {
    "name": "Vidal Dragon 33g x 22",
@@ -25200,7 +25351,8 @@
    "name": "CA – Vifon mi Kim Chi bat 12x85g",
    "price": 32.0,
    "amount": "85 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8935311130530"
   },
   {
    "name": "Frisco 330ml sklo – Strawberry Daiquiri cider",
@@ -25298,7 +25450,8 @@
    "name": "CA – Vifon Hoang Gia Hu Tieu Nam Vang 18x120g",
    "price": 27.5,
    "amount": "120 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8935311110419"
   },
   {
    "name": "TEREA BRONZE S50 PRI 20 SLIM",
@@ -25823,7 +25976,8 @@
    "name": "CA – Mama hovězí 60g x 30",
    "price": 9.67,
    "amount": "60 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8850987141508"
   },
   {
    "name": "CA – HAO HAO Zeleninová 30 x 74g",
@@ -25877,7 +26031,8 @@
    "name": "Golden Popcorn sladký 300g kbelík",
    "price": 69.9,
    "amount": "300 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594042911674"
   },
   {
    "name": "Nardelli 1976 primitivo puglia Gold 750ml",
@@ -26372,7 +26527,8 @@
    "name": "Brilla 0,2L Prosecco spumante Rosé extra dry – 24ks/kart",
    "price": 83.9,
    "amount": "0,2 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8008863065985"
   },
   {
    "name": "Brilla 0,75L Asolo prosecco brut DOC – 6ks/kart",
@@ -26409,7 +26565,8 @@
    "name": "Bohemia 0,375L Sekt Demi Rosé – 12ks/kart",
    "price": 81.9,
    "amount": "0,375 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594000940357"
   },
   {
    "name": "Bohemia 0,375L Sekt Demi – 12ks/kart",
@@ -26557,13 +26714,15 @@
    "name": "CA – Bún OH RICEY 400g",
    "price": 59.9,
    "amount": "400 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8934563245856"
   },
   {
    "name": "CA – Mama kuřecí 60g x 30",
    "price": 9.67,
    "amount": "60 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8850987101090"
   },
   {
    "name": "Bibis Polévka Mleté maso 55gx100",
@@ -26588,7 +26747,8 @@
    "name": "ELF BAR 600 KIWI PASSION FRUIT GUAVA 2%NICOTINE",
    "price": 132.0,
    "amount": "",
-   "unit": ""
+   "unit": "",
+   "ean": "8592303002529"
   },
   {
    "name": "ELF BAR 600 STRAWBERRY ICE 2%NICOTINE",
@@ -26637,7 +26797,8 @@
    "name": "American cookies 160g coconut – 15ks/kart",
    "price": 22.9,
    "amount": "160 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5310115005568"
   },
   {
    "name": "MULLER Puding – puding čokoláda/vanilka 450g",
@@ -26859,7 +27020,8 @@
    "name": "Škvrnovo pečivo linečké a třrné 240g – 20ks/kart",
    "price": 29.9,
    "amount": "240 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594014020212"
   },
   {
    "name": "Škvrnovy banánky 210g – 20ks/kart",
@@ -27095,7 +27257,8 @@
    "name": "Bersi 220g kyblik Uzené šunky",
    "price": 59.9,
    "amount": "220 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594001192113"
   },
   {
    "name": "Bersi 250g kyblik Sýrové koule",
@@ -27203,7 +27366,8 @@
    "name": "CA – Vifon mi vi tom 60g x 30",
    "price": 7.5,
    "amount": "60 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8935311130110"
   },
   {
    "name": "CA – Vifon mi heo 60g x 30",
@@ -27489,7 +27653,8 @@
    "name": "Mochi 210g Bubble milk tea",
    "price": 54.9,
    "amount": "210 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4711931034168"
   },
   {
    "name": "Smetanito s Pažitkou 150g",
@@ -27659,7 +27824,8 @@
    "name": "Lučina Nadýchaná se sušenými rajčaty 140g",
    "price": 31.9,
    "amount": "140 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594008278162"
   },
   {
    "name": "Paul mas Syrah 750ml x 6",
@@ -27671,7 +27837,8 @@
    "name": "Paul mas Syah rosé 750ml x 6",
    "price": 105.9,
    "amount": "750 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "3760040421261"
   },
   {
    "name": "Paul mas Sauvignon Blanc 750ml x 6",
@@ -27896,7 +28063,8 @@
    "name": "Today Snowball 50g*24ks – káva",
    "price": 5.9,
    "amount": "50 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8693029612716"
   },
   {
    "name": "Today Snowball 50g*24ks – milky",
@@ -28004,7 +28172,8 @@
    "name": "Vína CZ 1L Sauvignon",
    "price": 55.5,
    "amount": "1 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594031258100"
   },
   {
    "name": "Aquila čaj 1,5L zelený",
@@ -28137,7 +28306,8 @@
    "name": "Whiskas gran 300g Hovězí – 6ks/kart",
    "price": 36.9,
    "amount": "300 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5998749144176"
   },
   {
    "name": "Whiskas gran 300g Kuřecí – 6ks/kart",
@@ -28222,7 +28392,8 @@
    "name": "Nestea 1,5L Peach",
    "price": 25.5,
    "amount": "1,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595646203578"
   },
   {
    "name": "Nestea 1,5L Lemon",
@@ -28561,7 +28732,8 @@
    "name": "Today Goldies 45g*24ks Mood",
    "price": 5.5,
    "amount": "45 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8693029608191"
   },
   {
    "name": "Today Goldies 45g*24ks – milk",
@@ -28847,7 +29019,8 @@
    "name": "Bona vita Choco balls 375g",
    "price": 38.9,
    "amount": "375 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594001561698"
   },
   {
    "name": "Merci 250g oříšková zelená",
@@ -28859,7 +29032,8 @@
    "name": "Reese´s 70g Minis Peanut Butter Cups",
    "price": 31.5,
    "amount": "70 g",
-   "unit": ""
+   "unit": "",
+   "ean": "034000470228"
   },
   {
    "name": "Reese´s 63g Trio 3 peanut butter cups",
@@ -29211,7 +29385,8 @@
    "name": "Euro malé only 100g – 24ks/krt",
    "price": 29.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "9002859050824"
   },
   {
    "name": "Glanisky Čajové pečivo MIX 250g",
@@ -29243,7 +29418,8 @@
    "name": "Corny Big 40g Milk Dark & White",
    "price": 11.9,
    "amount": "40 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4011800588113"
   },
   {
    "name": "Lučina & Skyr 120g",
@@ -29419,7 +29595,8 @@
    "name": "Winterfresh original 30x14g",
    "price": 295.0,
    "amount": "14 g",
-   "unit": ""
+   "unit": "",
+   "ean": "50173419"
   },
   {
    "name": "Pringles 165g Cheese & Onion – 19ks/kart",
@@ -29491,7 +29668,8 @@
    "name": "Reese´s 47g Nutrageous",
    "price": 24.9,
    "amount": "47 g",
-   "unit": ""
+   "unit": "",
+   "ean": "034000000050"
   },
   {
    "name": "Reese´s 39g Big cup",
@@ -29712,7 +29890,8 @@
    "name": "Glico Pocky 33g Matcha – 10ks/kart",
    "price": 23.9,
    "amount": "33 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8851019210223"
   },
   {
    "name": "Glico Pocky 47g Chocolate – 10ks/kart",
@@ -29960,7 +30139,8 @@
    "name": "Fanta 0,355L USA – Orange",
    "price": 23.9,
    "amount": "0,355 l",
-   "unit": ""
+   "unit": "",
+   "ean": "049000014235"
   },
   {
    "name": "Fanta 0,355L USA – Strawberry",
@@ -30079,7 +30259,8 @@
    "name": "Kofola PET 2L",
    "price": 28.9,
    "amount": "2 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595231223448"
   },
   {
    "name": "Heineken ležák svìtlý plech 500ml x 24",
@@ -30387,7 +30568,8 @@
    "name": "Milkpol máslo 250g",
    "price": 32.9,
    "amount": "250 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594052744910"
   },
   {
    "name": "FL Tortilla chips HOT 200g – 22ks/krt",
@@ -30425,7 +30607,8 @@
    "name": "Bohemia 200g Chips Slanina (14)",
    "price": 44.9,
    "amount": "200 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8595606210073"
   },
   {
    "name": "Goldfein kostky kokos 270g – 10ks/kart",
@@ -30491,7 +30674,8 @@
    "name": "Moravia Oleš. tvaroh tvrdý 200g",
    "price": 27.5,
    "amount": "200 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594005857063"
   },
   {
    "name": "EHR Grand Dessert Eiskaffe 190g",
@@ -31018,7 +31202,8 @@
    "name": "Tago Trubičky 150g Vanilka – 30ks/kart",
    "price": 19.9,
    "amount": "150 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5901356071025"
   },
   {
    "name": "CA – Bột nếp Vĩnh Thuận 400g",
@@ -31733,13 +31918,15 @@
    "name": "Lipton 500ml – Peach",
    "price": 17.9,
    "amount": "500 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "5942204001832"
   },
   {
    "name": "Lipton 500ml – Lemon",
    "price": 17.9,
    "amount": "500 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "5949000506431"
   },
   {
    "name": "JAR 450ml Aloe vera & pink – 21ks/kart",
@@ -33254,7 +33441,8 @@
    "name": "Pepsi 330ml EU – original (lon lùn)",
    "price": 12.5,
    "amount": "330 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "4062139001286"
   },
   {
    "name": "Tofinek 40g x 24",
@@ -33459,7 +33647,8 @@
    "name": "AUSTRALIAN BUSH Shiraz – Cabernet 6 x 750ml",
    "price": 92.9,
    "amount": "750 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "4007988036348"
   },
   {
    "name": "AUSTRALIAN BUSH Chardonnay – colombard 6 x 750ml",
@@ -33490,7 +33679,8 @@
    "name": "Haribo 175g primavera – 18ks/krt",
    "price": 26.9,
    "amount": "175 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686327609"
   },
   {
    "name": "Haribo 100g Tropi fruiti – 30ks/kart",
@@ -33816,7 +34006,8 @@
    "name": "Kavis vienna cherry cake 200g – 8ks/krt",
    "price": 24.9,
    "amount": "200 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5901037001792"
   },
   {
    "name": "Kavis vienna cappucino cake 200g – 8ks/krt",
@@ -34173,7 +34364,8 @@
    "name": "Jolly Time Popcorn 100g Sweetn crispy – 18ks/kart",
    "price": 23.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "028190009610"
   },
   {
    "name": "Jolly Time Popcorn 100g Healthy pop butter – 18ks/kart",
@@ -34185,7 +34377,8 @@
    "name": "Jolly Time Popcorn 100g Crispy n white – 18ks/kart",
    "price": 23.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "028190009610"
   },
   {
    "name": "Jolly Time Popcorn 100g Blast o butter – 18ks/kart",
@@ -34372,7 +34565,8 @@
    "name": "CA – Vifon Hoang Gia mi thit bam 120g x 18",
    "price": 25.0,
    "amount": "120 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8934561250999"
   },
   {
    "name": "CA – Vifon Hoang Gia mi bo 120g x18",
@@ -34594,7 +34788,8 @@
    "name": "Jolly Time Popcorn 100g The Big Cheez – 18ks/kart",
    "price": 23.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "028190009627"
   },
   {
    "name": "Haribo 175g EU Phantasia",
@@ -35463,7 +35658,8 @@
    "name": "Haribo Balla Stixx 200g Cherry – 15ks/krt",
    "price": 31.9,
    "amount": "200 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686114421"
   },
   {
    "name": "Haribo Balla Stixx 170g Apple – 18ks/kart",
@@ -35476,7 +35672,8 @@
    "name": "Haribo 175g Miami Fizz – 30ks/krt",
    "price": 26.9,
    "amount": "175 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8426617365653"
   },
   {
    "name": "Haribo 200g Happy Cola – 30ks/kart",
@@ -35509,7 +35706,8 @@
    "name": "Haribo 175g GoldBaeren – 30ks/krt",
    "price": 23.9,
    "amount": "175 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686327487"
   },
   {
    "name": "Haribo 160g MilchBaeren – 28ks/kart",
@@ -35542,13 +35740,15 @@
    "name": "Haribo Maoam Red berries 5er 110g – 24ks/krt. màu đỏ",
    "price": 17.9,
    "amount": "110 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686502082"
   },
   {
    "name": "Haribo Balla Stixx 80g Apple – 24ks/krt",
    "price": 16.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8426617117177"
   },
   {
    "name": "Haribo Balla Stixx 80g Cola – 24ks/krt",
@@ -35661,13 +35861,15 @@
    "name": "GM Baton Čokoláda 180g – 21ks/kart",
    "price": 27.9,
    "amount": "180 g",
-   "unit": ""
+   "unit": "",
+   "ean": "3800093511189"
   },
   {
    "name": "GM Baton Vanilka 180g – 21ks/kart",
    "price": 27.9,
    "amount": "180 g",
-   "unit": ""
+   "unit": "",
+   "ean": "3800093511196"
   },
   {
    "name": "Skatt Bramb. 200g Slanina",
@@ -35679,7 +35881,8 @@
    "name": "Skatt Bramb. 200g česnek",
    "price": 34.9,
    "amount": "200 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594039750101"
   },
   {
    "name": "Skatt Bramb. 200g Slané",
@@ -35910,7 +36113,8 @@
    "name": "Kinder Schoko-bons 46g – 12ks/kart",
    "price": 26.9,
    "amount": "46 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4008400284620"
   },
   {
    "name": "Nussbeisser čokoláda 100g (đỏ)",
@@ -35922,7 +36126,8 @@
    "name": "Nutella B-ready 22g",
    "price": 8.5,
    "amount": "22 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8000500227848"
   },
   {
    "name": "Raffaello 150 g T15 X6 CZ",
@@ -36171,7 +36376,8 @@
    "name": "Nutella tyčinky B-ready 44g – 24ks/krt",
    "price": 19.9,
    "amount": "44 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8000500264850"
   },
   {
    "name": "Kinder joy Mario 20g x 24ks",
@@ -36854,7 +37060,8 @@
    "name": "CA – Knorr Hat Nem 900g",
    "price": 99.9,
    "amount": "900 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8934707010500"
   },
   {
    "name": "CA – Hoa Hoi 100g",
@@ -40482,7 +40689,8 @@
    "name": "Haribo 80g Pfirsiche",
    "price": 14.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8691216090484"
   },
   {
    "name": "Haribo 160g Pasta fruitta",
@@ -40494,7 +40702,8 @@
    "name": "Haribo 175g Beerentraum",
    "price": 23.9,
    "amount": "175 g",
-   "unit": ""
+   "unit": "",
+   "ean": "9002975002417"
   },
   {
    "name": "CA – Bà Tuyết Chân gà 29g sả tắc",
@@ -40638,7 +40847,8 @@
    "name": "TABÁK MARK ADAMS NO.1 ORIGINAL 30G",
    "price": 198.0,
    "amount": "30 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8595721102369"
   },
   {
    "name": "Panzani těsto 500g Chifferini – 12ks/kart",
@@ -40680,7 +40890,8 @@
    "name": "Arizona 0,45L PET Green tea honey & lemon",
    "price": 32.9,
    "amount": "0,45 l",
-   "unit": ""
+   "unit": "",
+   "ean": "0613008776732"
   },
   {
    "name": "Pivečka solená 80g – 16ks/kart",
@@ -40746,7 +40957,8 @@
    "name": "Haribo 80g Unicornilicious – 30ks/kart",
    "price": 14.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686013502"
   },
   {
    "name": "Haribo 80g Goldbaeren sauer – 30ks/kart",
@@ -40758,7 +40970,8 @@
    "name": "Haribo 80g Pico Balla sour – 30ks/kart",
    "price": 14.9,
    "amount": "80 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686022122"
   },
   {
    "name": "Haribo 160g Mango – 36ks/kart",
@@ -40788,43 +41001,50 @@
    "name": "Vitana do hrnečku 22g rajská – 25ks/kart",
    "price": 9.9,
    "amount": "22 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8593837244027"
   },
   {
    "name": "Vitana do hrnečku 14g kuřecí – 30ks/kart",
    "price": 9.9,
    "amount": "14 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8593837244010"
   },
   {
    "name": "Vitana do hrnečku 20g hovězí – 22ks/kart",
    "price": 9.9,
    "amount": "20 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8593837244003"
   },
   {
    "name": "Vitana do hrnečku 18g gulášová – 33ks/kart",
    "price": 9.9,
    "amount": "18 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8593837243792"
   },
   {
    "name": "Vitana do hrnečku 17g česnečka – 25ks/kart",
    "price": 9.9,
    "amount": "17 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8593837244041"
   },
   {
    "name": "Vitana do hrnečku 21g brokolicová – 24ks/kart",
    "price": 9.9,
    "amount": "21 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8593837243976"
   },
   {
    "name": "Kinder Joy 20g One Piece – 24ks/kart",
    "price": 33.9,
    "amount": "20 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8000500299562"
   },
   {
    "name": "Samyang Buldak CUP 70g Hot – 30ks/kart",
@@ -40878,7 +41098,8 @@
    "name": "Piacelli 200g Sfogliatine Glassate – 20ks/kart",
    "price": 34.9,
    "amount": "200 g",
-   "unit": ""
+   "unit": "",
+   "ean": "9002859043161"
   },
   {
    "name": "Čoko Only 85g Srdce – 26ks/kart",
@@ -40920,19 +41141,22 @@
    "name": "Woogie Flying Saucers 42g – 16ks/kart",
    "price": 28.9,
    "amount": "42 g",
-   "unit": ""
+   "unit": "",
+   "ean": "9002859124525"
   },
   {
    "name": "Maitre Mořské plody 250g bílé – 12ks/kart",
    "price": 79.9,
    "amount": "250 g",
-   "unit": ""
+   "unit": "",
+   "ean": "9002859033360"
   },
   {
    "name": "Fine Drops 200g Exotic fruit – 10ks/kart",
    "price": 41.9,
    "amount": "200 g",
-   "unit": ""
+   "unit": "",
+   "ean": "9002859131813"
   },
   {
    "name": "Fine Drops 200g Mentol – 10ks/kart",
@@ -40950,7 +41174,8 @@
    "name": "Fine Drops 200g Lesní směs – 10ks/kart",
    "price": 41.9,
    "amount": "200 g",
-   "unit": ""
+   "unit": "",
+   "ean": "9002859055614"
   },
   {
    "name": "Fine Drops 200g Cherry – 10ks/kart",
@@ -40968,7 +41193,8 @@
    "name": "Fine Drops 175g Malina – 10ks/kart",
    "price": 41.9,
    "amount": "175 g",
-   "unit": ""
+   "unit": "",
+   "ean": "9002859093173"
   },
   {
    "name": "Fine Drops 200g Fruit mix – 10ks/kart",
@@ -41058,7 +41284,8 @@
    "name": "VUSE PRO ONE AQUA PEPPERMINT 18MG",
    "price": 141.0,
    "amount": "",
-   "unit": ""
+   "unit": "",
+   "ean": "8595682188693"
   },
   {
    "name": "NEWS XL RED 21S 164.00 U",
@@ -41143,13 +41370,15 @@
    "name": "ALZZIN-Moravská Malina 30% 1L",
    "price": 250.0,
    "amount": "1 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595198857823"
   },
   {
    "name": "ALZZIN-Moravská Merunka 30% 1 L",
    "price": 265.0,
    "amount": "1 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595198857816"
   },
   {
    "name": "ALZZIN-Moravská Svestska bílá 38% 1 L",
@@ -41167,19 +41396,22 @@
    "name": "ALZZIN-Moravská Svestka Bílá 38% 0,2 L",
    "price": 75.0,
    "amount": "0,2 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594000872634"
   },
   {
    "name": "ALZZIN-Moravská Merunka 30% 0,2l",
    "price": 70.0,
    "amount": "0,2 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595198866696"
   },
   {
    "name": "ALZZIN-Moravská Malina 30% 0,2L",
    "price": 70.0,
    "amount": "0,2 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595198825921"
   },
   {
    "name": "ALZZIN-Moravská Hruška 38% 0,2L",
@@ -41245,7 +41477,8 @@
    "name": "ALZZIN-Johnnie Walker Red Label 40% 1L",
    "price": 483.0,
    "amount": "1 l",
-   "unit": ""
+   "unit": "",
+   "ean": "5000267013619"
   },
   {
    "name": "ALZZIN-John Walker red 40% 0,7L",
@@ -41257,7 +41490,8 @@
    "name": "ALZZIN-Beluga Noble 40% 0,7L",
    "price": 814.99,
    "amount": "0,7 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594057575915"
   },
   {
    "name": "ALZZIN-Amundsen Vodka 37,5% 1L",
@@ -41311,7 +41545,8 @@
    "name": "ALZZIN-Jack Daniels 40% 0,5 L",
    "price": 399.0,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "1114001570000"
   },
   {
    "name": "WINSTON BLUE 95G",
@@ -41335,7 +41570,8 @@
    "name": "Oshee 555ml PET pomeranč+citrón",
    "price": 26.9,
    "amount": "555 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "5908260253776"
   },
   {
    "name": "Minutka Čaj černý 100×1,4g",
@@ -41359,7 +41595,8 @@
    "name": "JEMČA čaj 40g bezový květ+citron – 20ks/kart",
    "price": 17.9,
    "amount": "40 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594004171825"
   },
   {
    "name": "Frape Tea instant 350g Forest Fruit – 12ks/kart",
@@ -41389,7 +41626,8 @@
    "name": "Rio Mare Insalatissime 160g Summer – 36ks/kart",
    "price": 64.9,
    "amount": "160 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8004030835221"
   },
   {
    "name": "Rio Mare Insalatissime 160g Spring – 36ks/kart",
@@ -41425,7 +41663,8 @@
    "name": "ALZZIN-Tullamore Dew 40% 0,35 L",
    "price": 290.0,
    "amount": "0,35 l",
-   "unit": ""
+   "unit": "",
+   "ean": "5011026108057"
   },
   {
    "name": "ALZZIN-Jim Beam Honey 32,5% 1L",
@@ -41473,7 +41712,8 @@
    "name": "ALZZIN-Becherovka Lemond 20% 1L",
    "price": 355.0,
    "amount": "1 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8594405105535"
   },
   {
    "name": "ALZZIN-Becherovka 38% 1L",
@@ -41552,7 +41792,8 @@
    "name": "Skittles 14 x 38g Citrus",
    "price": 8.9,
    "amount": "38 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4009900532310"
   },
   {
    "name": "ALZZIN. ZAP. CLIPPER CP11 LEAF STYLE 24/BAL(298515)",
@@ -41618,19 +41859,22 @@
    "name": "Italat Ricotta 200g",
    "price": 19.9,
    "amount": "200 g",
-   "unit": ""
+   "unit": "",
+   "ean": "85953512"
   },
   {
    "name": "Italat Mascarpone 200g",
    "price": 36.9,
    "amount": "200 g",
-   "unit": ""
+   "unit": "",
+   "ean": "85953529"
   },
   {
    "name": "Italat Mozzarella třešinky 150g",
    "price": 25.9,
    "amount": "150 g",
-   "unit": ""
+   "unit": "",
+   "ean": "85953499"
   },
   {
    "name": "Italat Mozzarella v nálevu 100g",
@@ -41660,7 +41904,8 @@
    "name": "Frisco 330ml sklo – Mimosa",
    "price": 21.9,
    "amount": "330 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "85980556"
   },
   {
    "name": "Krajánek pomazánka cottage s romadurem 100g",
@@ -41678,13 +41923,15 @@
    "name": "Kinder Crunchy Cookies Sušenky 136g – 15ks/kart",
    "price": 72.9,
    "amount": "136 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8000500426449"
   },
   {
    "name": "Fanta 0,33L CZ plech Crimson Cherry",
    "price": 15.5,
    "amount": "0,33 l",
-   "unit": ""
+   "unit": "",
+   "ean": "5000112694215"
   },
   {
    "name": "Lízátka watermelon 2 barvy 15g x 36ks",
@@ -41696,7 +41943,8 @@
    "name": "Kinder Maxi Surprise 100g – 12ks/kart",
    "price": 84.9,
    "amount": "100 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4008400231723"
   },
   {
    "name": "Jerky Indiana 25g Beef sweet & spicy – 15ks/kart",
@@ -41720,7 +41968,8 @@
    "name": "VELO MINI FREEZING PEPPERMINT 10MG -NEW",
    "price": 593.0,
    "amount": "",
-   "unit": ""
+   "unit": "",
+   "ean": "8596691020868"
   },
   {
    "name": "Mochi Royal 120g Chocolate – 12ks/kart",
@@ -41732,7 +41981,8 @@
    "name": "Nowaco Obalovaný květák předsmažený 15 x 400 g",
    "price": 44.9,
    "amount": "400 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594001049844"
   },
   {
    "name": "OKF 350ml Sparkling – Passion Fruit",
@@ -41774,13 +42024,15 @@
    "name": "Sovora Long Chips 70g Chicken – 20ks/kart",
    "price": 15.9,
    "amount": "70 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4820120756153"
   },
   {
    "name": "UA Non stop 250ml – Stalker Red",
    "price": 13.9,
    "amount": "250 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "4820252124820"
   },
   {
    "name": "Giana Tunak 170g kousky ve žluté curry omáčce",
@@ -41798,7 +42050,8 @@
    "name": "Trinketto Sour 70ml – 24ks/kart",
    "price": 6.9,
    "amount": "70 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8005533056717"
   },
   {
    "name": "CA – Sữa đậu nành FAMI 200ml",
@@ -42014,7 +42267,8 @@
    "name": "CA – Gạo VJ Pearl Rice 20kg",
    "price": 1050.0,
    "amount": "20 kg",
-   "unit": ""
+   "unit": "",
+   "ean": "8936089504844"
   },
   {
    "name": "Long Chips 75g Creamy Mushroom – 20ks/kart",
@@ -42032,19 +42286,22 @@
    "name": "Mattoni 0,7L Esence marakuja + mango",
    "price": 19.9,
    "amount": "0,7 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595723202593"
   },
   {
    "name": "Mattoni 0,7L Esence limetka + pomeranč",
    "price": 19.9,
    "amount": "0,7 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595723202579"
   },
   {
    "name": "Magnifivo Primitivo Rosso Puglia Fuoco 0,75l",
    "price": 169.9,
    "amount": "0,75 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8008863062960"
   },
   {
    "name": "Ehrman Matcha Latte 190g",
@@ -42056,13 +42313,15 @@
    "name": "Viva 120g Paštika pikantní",
    "price": 16.9,
    "amount": "120 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594044446365"
   },
   {
    "name": "Viva 120g Krůtí maso s vejci",
    "price": 16.9,
    "amount": "120 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594044446365"
   },
   {
    "name": "ALZZIN-32523 Zapalovač SPARX P1850 Woman-50/BAL",
@@ -42104,13 +42363,15 @@
    "name": "Lavazza- Caramel Latte 220ml",
    "price": 31.9,
    "amount": "220 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "4025500307288"
   },
   {
    "name": "Lavazza- Latte Macchiato 220ml",
    "price": 31.9,
    "amount": "220 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "4025500307264"
   },
   {
    "name": "Lavazza- Capuccino 220ml",
@@ -42326,7 +42587,8 @@
    "name": "Mochi Royal 120g Creamy Matcha Latte – 12ks/kart",
    "price": 14.9,
    "amount": "120 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4711931036742"
   },
   {
    "name": "Zápalky 100ks (Diêm)",
@@ -42440,7 +42702,8 @@
    "name": "Chio tortillas 110g Extra hot sauce – 12ks/kart",
    "price": 28.5,
    "amount": "110 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001242106297"
   },
   {
    "name": "Red Bull 0,25L The Lila Edition",
@@ -42536,19 +42799,22 @@
    "name": "A – Divine Apple 16,6% 1l",
    "price": 240.0,
    "amount": "1 l",
-   "unit": ""
+   "unit": "",
+   "ean": "3263285155057"
   },
   {
    "name": "A – Divine Apple 16,6% 500ml",
    "price": 130.0,
    "amount": "500 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "3263285155576"
   },
   {
    "name": "Milka 280g Triolade",
    "price": 69.9,
    "amount": "280 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622210690852"
   },
   {
    "name": "Milka 300g Choco & Cookie – 12ks/kart",
@@ -42560,13 +42826,15 @@
    "name": "Milka 300g Choco & biscuit – 12ks/kart",
    "price": 69.9,
    "amount": "300 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622200009084"
   },
   {
    "name": "Milka 300g Almonds Truffle – 12ks/kart",
    "price": 69.9,
    "amount": "300 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7622201125813"
   },
   {
    "name": "Halls fruitwave 45g Strawberry",
@@ -42590,13 +42858,15 @@
    "name": "Pepino kondom 3ks Ultra Sensitive – 24ks/kart",
    "price": 24.9,
    "amount": "3 ks",
-   "unit": ""
+   "unit": "",
+   "ean": "8592442900472"
   },
   {
    "name": "Pepino kondom 3ks Pleasure – 24ks/kart",
    "price": 24.9,
    "amount": "3 ks",
-   "unit": ""
+   "unit": "",
+   "ean": "8592442900038"
   },
   {
    "name": "Pepino kondom 3ks Long action – 24ks/kart",
@@ -42608,7 +42878,8 @@
    "name": "Pepino kondom 3ks Extra thin – 24ks/kart",
    "price": 24.9,
    "amount": "3 ks",
-   "unit": ""
+   "unit": "",
+   "ean": "8592442900069"
   },
   {
    "name": "Pepino kondom 3ks Classic – 24ks/kart",
@@ -42620,7 +42891,8 @@
    "name": "Pepino Kondom 3ks Aroma Jahoda – 24ks/kart",
    "price": 24.9,
    "amount": "3 ks",
-   "unit": ""
+   "unit": "",
+   "ean": "8592442900045"
   },
   {
    "name": "Pepino kondom 3ks Aroma banán – 24ks/kart",
@@ -42680,7 +42952,8 @@
    "name": "Znojmia Okurky 7-9cm 680g – 8ks/kart",
    "price": 39.9,
    "amount": "680 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594001740659"
   },
   {
    "name": "Znojmia Okurky 5-7 520g – 8ks/kart",
@@ -42788,31 +43061,36 @@
    "name": "Hamé maďarský guláš 415g – 10ks/krt",
    "price": 57.9,
    "amount": "415 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8594001693092"
   },
   {
    "name": "Olma Greek-Jablko hruška 140g",
    "price": 13.9,
    "amount": "140 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8593807732738"
   },
   {
    "name": "Olma Greek-Meruňka 140g",
    "price": 13.9,
    "amount": "140 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8593807732523"
   },
   {
    "name": "Olma Greek-Malina140g",
    "price": 13.9,
    "amount": "140 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8593807732516"
   },
   {
    "name": "Olma Greek-Bílý 140g",
    "price": 13.9,
    "amount": "140 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8593807732509"
   },
   {
    "name": "E-LIQUID SYX SOUR RASPBERRY 10ML/20MG",
@@ -42884,7 +43162,8 @@
    "name": "MAOAM Kracher 200g Two Fruits – 34ks/kart",
    "price": 34.9,
    "amount": "200 g",
-   "unit": ""
+   "unit": "",
+   "ean": "4001686536025"
   },
   {
    "name": "Pringles 40g – Cheese",
@@ -43070,7 +43349,8 @@
    "name": "Chupa Chups Mads 45g Berries",
    "price": 24.9,
    "amount": "45 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8003440928578"
   },
   {
    "name": "Proud 0,5L plech Limetka",
@@ -43082,7 +43362,8 @@
    "name": "UA Non stop 500ml – Stalker Red",
    "price": 19.9,
    "amount": "500 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "4820252122413"
   },
   {
    "name": "TABÁK PUEBLO PINK 30G",
@@ -43112,7 +43393,8 @@
    "name": "Giana Šproty uzené v rostlinném oleji 160g – 24ks/kart",
    "price": 41.9,
    "amount": "160 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8595241511757"
   },
   {
    "name": "Delissa 30g – Kokos",
@@ -43124,13 +43406,15 @@
    "name": "Hell energy 0,5L Classic",
    "price": 21.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "5999884034216"
   },
   {
    "name": "Allini Secco Frizzante 0,2L Rosato",
    "price": 15.9,
    "amount": "0,2 l",
-   "unit": ""
+   "unit": "",
+   "ean": "4335619046078"
   },
   {
    "name": "Allini Secco Frizzante 0,2L Bianco blue",
@@ -43148,55 +43432,64 @@
    "name": "Hell energy 0,5L Strawberry – Banana",
    "price": 21.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "5999571054725"
   },
   {
    "name": "Hell energy 0,5L Peach – Lemon",
    "price": 21.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "5999571051892"
   },
   {
    "name": "Hell energy 0,5L Green Apple",
    "price": 21.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "5999571054749"
   },
   {
    "name": "Hell energy 0,5L Goji Berry",
    "price": 21.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "5999571054701"
   },
   {
    "name": "Hell energy 0,5L Black Cherry",
    "price": 21.9,
    "amount": "0,5 l",
-   "unit": ""
+   "unit": "",
+   "ean": "5999884034353"
   },
   {
    "name": "AA Squid game energy drink 250ml Watermelon",
    "price": 7.9,
    "amount": "250 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8721082875684"
   },
   {
    "name": "AA Squid game energy drink 250ml Mango",
    "price": 7.9,
    "amount": "250 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8721082875677"
   },
   {
    "name": "Lays 120g Wavy BBQ Brisket – 24ks/kart",
    "price": 28.9,
    "amount": "120 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5900259141873"
   },
   {
    "name": "Lays 163g Fromage – 18ks/kart",
    "price": 28.9,
    "amount": "163 g",
-   "unit": ""
+   "unit": "",
+   "ean": "5900259136060"
   },
   {
    "name": "UA Nautilus Seafood Jerky Calamari Crab 36g(1/130)",
@@ -43346,7 +43639,8 @@
    "name": "RIVO ARCTIC CLICK 20/4,6G",
    "price": 1172.08,
    "amount": "4,6 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8596691010838"
   },
   {
    "name": "Lepicí páska 18mm x 33m [3ks]",
@@ -43676,13 +43970,15 @@
    "name": "Sovín 0,75L Merlot",
    "price": 64.9,
    "amount": "0,75 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595078816735"
   },
   {
    "name": "Sovín 0,75L Frankovka rosé",
    "price": 64.9,
    "amount": "0,75 l",
-   "unit": ""
+   "unit": "",
+   "ean": "8595078813550"
   },
   {
    "name": "Sovín 0,75L Cabernet Sauvignon",
@@ -43781,7 +44077,8 @@
    "name": "CA – Mít sấy VINAMIT 210g",
    "price": 99.9,
    "amount": "210 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8934743012131"
   },
   {
    "name": "Red Bull 0,25L The Spring sugar free",
@@ -43832,25 +44129,29 @@
    "name": "IL Mariscal cabernet sauvignon 750ml",
    "price": 84.9,
    "amount": "750 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8594045654035"
   },
   {
    "name": "IL Mariscal Chardonnay 750ml",
    "price": 84.9,
    "amount": "750 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8594045654028"
   },
   {
    "name": "IL Mariscal Tempranillo 750ml",
    "price": 84.9,
    "amount": "750 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8594045654011"
   },
   {
    "name": "IL mariscal Merlot 750ml",
    "price": 84.9,
    "amount": "750 ml",
-   "unit": ""
+   "unit": "",
+   "ean": "8594045654004"
   },
   {
    "name": "Papale ORO Primitivo di Manduria 14,5% 750ml – 6ks/kart",
@@ -44103,13 +44404,15 @@
    "name": "Delissa 30g – Vanilka",
    "price": 7.9,
    "amount": "30 g",
-   "unit": ""
+   "unit": "",
+   "ean": "7613037028157"
   },
   {
    "name": "Mentos 37,5g Sour Tones",
    "price": 10.5,
    "amount": "37,5 g",
-   "unit": ""
+   "unit": "",
+   "ean": "87368543"
   },
   {
    "name": "Mr.Brownie 200g Karamel – 12ks/kart",
@@ -44181,7 +44484,8 @@
    "name": "CIG.NEWS XL BLUE 21S 164.00 U",
    "price": 1552.51,
    "amount": "",
-   "unit": ""
+   "unit": "",
+   "ean": "4030600371565"
   },
   {
    "name": "CIG.DAVIDOFF REACH AIR MIST 164.00 U",
@@ -44241,19 +44545,22 @@
    "name": "Maggi Polévka 51g písmenková – 20ks/kart",
    "price": 14.9,
    "amount": "51 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8585002444035"
   },
   {
    "name": "Maggi Polévka 52g hrachová – 25ks/kart",
    "price": 14.9,
    "amount": "52 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8585002433503"
   },
   {
    "name": "Maggi Polévka 54g gulášová – 25ks/kart",
    "price": 14.9,
    "amount": "54 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8585002443427"
   },
   {
    "name": "Maggi Polévka 42g francouzská – 24ks/kart",
@@ -44301,25 +44608,29 @@
    "name": "Nori AN Flakes 40g Vegetable – 30ks/kart",
    "price": 47.9,
    "amount": "40 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8802142002650"
   },
   {
    "name": "Nori AN Flakes 40g Seafood – 30ks/kart",
    "price": 47.9,
    "amount": "40 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8802142002667"
   },
   {
    "name": "Nori AN Flakes 40g Original – 30ks/kart",
    "price": 47.9,
    "amount": "40 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8802142002643"
   },
   {
    "name": "Nori AN Flakes 40g BBQ – 30ks/kart",
    "price": 47.9,
    "amount": "40 g",
-   "unit": ""
+   "unit": "",
+   "ean": "8802142002674"
   },
   {
    "name": "OXVA XLIM GO 2 STARTER KIT WEAVE BROWN 1500 mAh",
@@ -44355,13 +44666,15 @@
    "name": "CIG.NEWS XL RED 21S 164.00 U",
    "price": 1552.51,
    "amount": "",
-   "unit": ""
+   "unit": "",
+   "ean": "4030600371534"
   },
   {
    "name": "CIG.NEWS 100 BLUE 159.00 U",
    "price": 1502.94,
    "amount": "",
-   "unit": ""
+   "unit": "",
+   "ean": "4030600371565"
   }
  ]
 }

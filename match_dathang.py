@@ -415,12 +415,39 @@ def load_page_ean():
     return out
 
 
+def load_img_ean():
+    """dathang_img_ean.json (thu_ean_dathang_img.py): EAN lay CHINH XAC tu SKU dang
+    ma vach hoac doc ma vach trong ANH san pham. Tra {norm_name: ean}."""
+    p = os.path.join(HERE, "dathang_img_ean.json")
+    if not os.path.exists(p):
+        return {}
+    return {_norm_name(v["name"]): v["ean"]
+            for v in json.load(open(p, encoding="utf-8")).values() if v.get("ean")}
+
+
+def load_bomba_fallback():
+    """Bo khop DU PHONG = 5 catalog + Bombacena (shop hang A ~36k ma). Chi dung khi
+    5 catalog cu KHONG khop ro (gop chung tu dau lam loang IDF -> mat ~119 khop cu;
+    thu nghiem 10/2026: lam du phong +193 mon, khong mat mon nao)."""
+    saved = list(CATALOG_SRCS)
+    try:
+        CATALOG_SRCS.append(("bombacena_prices.json", "Bombacena"))
+        c = load_candidates()
+    finally:
+        CATALOG_SRCS[:] = saved
+    return c, build_index(c)
+
+
 def apply_to_file():
     """Khop TOAN BO dathang_prices.json -> gan 'ean' cho nhom RO RANG, ghi lai file."""
     print("[1/3] Nap ung vien tu 5 catalog co EAN ...")
     cands = load_candidates()
     idx = build_index(cands)
     print(f"      {idx['N']} ma vach · {len(idx['brand'])} token thuong-hieu")
+    bcands, bidx = load_bomba_fallback()
+    print(f"      + du phong Bombacena: {bidx['N']} ma vach")
+    imgean = load_img_ean()
+    print(f"      + EAN tu SKU/anh dathang: {len(imgean)}")
     # TANG 2: nguon OFF (Open Food Facts) - RIENG, chi cho hang catalog khong khop
     off = load_off_candidates()
     off_idx = build_index(off) if off else None
@@ -434,64 +461,63 @@ def apply_to_file():
     items = data.get("items", [])
     print(f"[2/3] Khop {len(items)} mon (map tay {len(manual)}, EAN dathang khai {len(pageean)}) ...")
 
-    clear = review = none = man = off_hit = page_hit = 0
+    from collections import Counter
+    st = Counter()
     report = []
+    kept = 0
     for it in items:
-        it.pop("ean", None)               # xoa ean cu (chay lai sach se)
-        # MAP TAY uu tien tuyet doi
-        mk = _norm_name(it.get("name", ""))
-        if mk in manual:
-            it["ean"] = manual[mk]; man += 1
-            report.append({"name": it["name"], "ean": manual[mk], "src": "TAY",
-                           "cand": "(map thủ công)", "score": 999})
-            continue
-        # UU TIEN #1: EAN dathang TU KHAI trong HTML trang -> chinh xac nhat
-        if mk in pageean:
-            it["ean"] = pageean[mk]; page_hit += 1
-            report.append({"name": it["name"], "ean": pageean[mk], "src": "PAGE",
-                           "cand": "(dathang tự khai HTML)", "score": 998})
-            continue
-        cand, sz, mydist = match_one(it.get("name", ""), it.get("amount", ""),
-                                     cands, idx)
-        decision, chosen = "none", None
-        if cand:
-            if is_clear(cand):
-                it["ean"] = cand[0][0]
-                decision, chosen = "clear", cand[0][0]; clear += 1
-            else:
-                decision = "review"; review += 1
-        else:
-            none += 1
-        # TANG 2: catalog khong khop RO -> thu OFF (nguong rat chat)
-        if decision != "clear" and off_idx:
-            oe = match_off_strict(it.get("name", ""), it.get("amount", ""),
-                                  off, off_idx)
-            if oe:
-                it["ean"] = oe; off_hit += 1
-                report.append({"name": it["name"], "ean": oe, "src": "OFF",
-                               "cand": off[oe]["name"], "score": 0})
-                continue
-        if decision == "clear":
-            c0 = cands[chosen]
-            report.append({"name": it["name"], "ean": chosen, "src": c0["src"],
-                           "cand": c0["name"], "score": cand[0][1]})
-
-    # sao luu + ghi lai (git van revert duoc)
-    json.dump(data, open(path, "w", encoding="utf-8"),
-              ensure_ascii=False, indent=1)
+        prev = it.pop("ean", None)        # ma lan truoc (de GIU ON DINH, xem cuoi vong)
+        _apply_one(it, manual, pageean, imgean, cands, idx, bcands, bidx, off, off_idx,
+                   report, st)
+        # GIU ON DINH (10/2026): doi catalog lam bo khop doan khac lan truoc ->
+        # 44 mon mat ma, 18 mon doi ma (vai cai sai). Mon DA co ma: chi nguon CHAC
+        # CHAN (tay/trang/SKU-anh) moi duoc ghi de; con lai giu ma cu.
+        src = it.pop("_src", None)
+        if prev and (not it.get("ean") or (it["ean"] != prev and src == "guess")):
+            it["ean"] = prev; kept += 1
+    json.dump(data, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     json.dump(report, open(os.path.join(OUT, "applied_clear.json"), "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
-    _write_apply_html(report, {"clear": clear, "review": review,
-                               "none": none, "total": len(items)})
-    print("[3/3] Da ghi ean vao dathang_prices.json")
-    print(f"  Map tay (uu tien)   : {man}")
-    print(f"  EAN dathang tu khai : {page_hit}")
-    print(f"  Ro rang catalog     : {clear}")
-    print(f"  Them tu OFF (tang 2) : {off_hit}")
-    print(f"  Tong da gan EAN     : {man + page_hit + clear + off_hit}")
-    print(f"  Map mo (bo trong)   : {review}")
-    print(f"  Khong ung vien      : {none}")
+    _write_apply_html(report, {"clear": st["clear"], "review": st["review"],
+                               "none": st["none"], "total": len(items)})
+    n = sum(1 for it in items if it.get("ean"))
+    print(f"[3/3] Da ghi ean vao dathang_prices.json: {n}/{len(items)} mon co ma")
+    print(f"  tay {st['man']} · dathang khai {st['page']} · SKU/anh {st['img']} · "
+          f"catalog {st['clear']} · Bombacena {st['bomba']} · OFF {st['off']} · "
+          f"giu ma cu {kept}")
     print(f"  -> soi lai: {os.path.join(OUT, 'applied.html')}")
+
+
+def _apply_one(it, manual, pageean, imgean, cands, idx, bcands, bidx, off, off_idx,
+               report, st):
+    """Gan ean cho 1 mon theo thu tu uu tien; it['_src'] = 'sure' (tay/trang/
+    SKU-anh: chac chan) hoac 'guess' (khop theo ten); st = bo dem."""
+    name, amt = it.get("name", ""), it.get("amount", "")
+    mk = _norm_name(name)
+
+    def put(ean, src, cand, score, kind, key):
+        it["ean"] = ean; it["_src"] = kind; st[key] += 1
+        report.append({"name": name, "ean": ean, "src": src, "cand": cand, "score": score})
+
+    if mk in manual:                       # MAP TAY uu tien tuyet doi
+        return put(manual[mk], "TAY", "(map thủ công)", 999, "sure", "man")
+    if mk in pageean:                      # #1 dathang tu khai trong HTML
+        return put(pageean[mk], "PAGE", "(dathang tự khai HTML)", 998, "sure", "page")
+    if mk in imgean:                       # #2 SKU dang ma vach / anh san pham
+        return put(imgean[mk], "SKU/ẢNH", "(mã từ SKU hoặc ảnh dathang)", 997, "sure", "img")
+    cand, _, _ = match_one(name, amt, cands, idx)
+    if cand and is_clear(cand):            # #3 khop ro voi 5 catalog
+        c0 = cands[cand[0][0]]
+        return put(cand[0][0], c0["src"], c0["name"], cand[0][1], "guess", "clear")
+    st["review" if cand else "none"] += 1
+    bc, _, _ = match_one(name, amt, bcands, bidx)
+    if bc and is_clear(bc):                # #4 du phong Bombacena
+        c0 = bcands[bc[0][0]]
+        return put(bc[0][0], c0["src"], c0["name"], bc[0][1], "guess", "bomba")
+    if off_idx:                            # #5 Open Food Facts (nguong rat chat)
+        oe = match_off_strict(name, amt, off, off_idx)
+        if oe:
+            return put(oe, "OFF", off[oe]["name"], 0, "guess", "off")
 
 
 def _write_apply_html(report, stats):
