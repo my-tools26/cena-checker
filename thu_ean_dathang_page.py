@@ -7,6 +7,7 @@ Chay:  python thu_ean_dathang_page.py
 Ket qua -> dathang_page_ean.json {slug: {"name":..., "ean":..., "price":...}}
 + in so hang co EAN / tong.
 """
+from safeio import atomic_open  # ghi file an toan (tmp roi doi ten)
 import json
 import os
 import re
@@ -68,10 +69,10 @@ def main():
             has += 1
         if i % 250 == 0:
             print(f"      ...{i}/{len(prods)}  co EAN: {has}")
-            json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+            json.dump(out, atomic_open(OUT), ensure_ascii=False, indent=1)
         time.sleep(0.1)
 
-    json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    json.dump(out, atomic_open(OUT), ensure_ascii=False, indent=1)
     print(f"XONG. Co 'EAN kod': {has}/{len(prods)} san pham -> dathang_page_ean.json")
 
 

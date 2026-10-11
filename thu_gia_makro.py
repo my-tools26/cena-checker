@@ -22,6 +22,7 @@ TOI UU (28/09/2026, khong doi hanh vi/gia tri):
 - --full: xoa cache, tra lai TEN/EAN cho TAT CA (nen ~1-2 thang/lan phong khi
   Makro doi ten/EAN 1 san pham da co).
 """
+from safeio import atomic_open  # ghi file an toan (tmp roi doi ten)
 import json
 import os
 import re
@@ -52,7 +53,7 @@ def load_variant_cache():
 
 
 def save_variant_cache(cache):
-    json.dump(cache, open(CACHE_FILE, "w", encoding="utf-8"), ensure_ascii=False)
+    json.dump(cache, atomic_open(CACHE_FILE), ensure_ascii=False)
 
 
 def get(url, params, tries=4):
@@ -236,7 +237,7 @@ def main():
                       "amount": f"{m.group(1)} {m.group(2).lower()}" if m else "",
                       "unit": ""})
 
-    with open(OUT, "w", encoding="utf-8") as f:
+    with atomic_open(OUT) as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "shop": "makro_full",
                    "store": STORE,
                    "vat_note": "price = s DPH; net + DPH that tu phien dang nhap (neu co)",

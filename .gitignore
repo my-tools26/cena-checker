@@ -29,3 +29,5 @@ makro_gtins_batch2*.json
 off_candidates.json
 .chrome-tamda-profile/
 .chrome-cookie-profiles/
+*.tmp
+*.part

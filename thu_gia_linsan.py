@@ -13,6 +13,7 @@ moi trang moi lan (~16 trang, da nhanh <1 phut), nhung MERGE vao data cu thay
 vi ghi de tu dau -> khong mat du lieu neu crawl loi giua chung, hang MOI van
 duoc them, gia hang cu duoc cap nhat.
 """
+from safeio import atomic_open  # ghi file an toan (tmp roi doi ten)
 import html
 import json
 import os
@@ -114,7 +115,7 @@ def main():
         print(f"LOI: sau khi cao con {len(items)} < 50% data cu {before}, KHONG ghi de.")
         raise SystemExit(2)
 
-    with open(OUT, "w", encoding="utf-8") as f:
+    with atomic_open(OUT) as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "shop": "linsan",
                    "items": items}, f, ensure_ascii=False, indent=1)
     print(f"(+{len(items) - before} moi so voi lan truoc)")

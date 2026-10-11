@@ -13,6 +13,7 @@ CHIEN LUOC (sau lo thu 200 + Milky Way):
 Chay:  python match_dathang.py --limit 200
 Ket qua: _match_out/report.html  (mat thuong kiem tra) + candidates.json
 """
+from safeio import atomic_open  # ghi file an toan (tmp roi doi ten)
 import argparse
 import html as H
 import json
@@ -322,7 +323,7 @@ def run(limit, force_ids):
                                 "name": cands[e]["name"], "src": cands[e]["src"],
                                 "size": cands[e]["size"]} for e, s, sh, shb, cf, sc2 in cand]})
 
-    with open(os.path.join(OUT, "candidates.json"), "w", encoding="utf-8") as f:
+    with atomic_open(os.path.join(OUT, "candidates.json")) as f:
         json.dump(rows, f, ensure_ascii=False, indent=1)
     write_html(rows, {"clear": clear, "review": ambig, "none": none, "total": len(rows)})
 
@@ -380,7 +381,7 @@ h1{font-size:20px}.st{background:#f5f5f5;padding:10px;border-radius:8px;display:
                    f"{' <b style=color:#c90>[MILKY WAY test]</b>' if r['forced'] else ''}"
                    f"{cds or '<div class=c style=color:#bbb>— không tìm được ứng viên nào —</div>'}"
                    f"</div></div>")
-    with open(os.path.join(OUT, "report.html"), "w", encoding="utf-8") as f:
+    with atomic_open(os.path.join(OUT, "report.html")) as f:
         f.write("\n".join(out))
 
 
@@ -475,8 +476,8 @@ def apply_to_file():
         src = it.pop("_src", None)
         if prev and (not it.get("ean") or (it["ean"] != prev and src == "guess")):
             it["ean"] = prev; kept += 1
-    json.dump(data, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    json.dump(report, open(os.path.join(OUT, "applied_clear.json"), "w", encoding="utf-8"),
+    json.dump(data, atomic_open(path), ensure_ascii=False, indent=1)
+    json.dump(report, atomic_open(os.path.join(OUT, "applied_clear.json")),
               ensure_ascii=False, indent=1)
     _write_apply_html(report, {"clear": st["clear"], "review": st["review"],
                                "none": st["none"], "total": len(items)})
@@ -535,7 +536,7 @@ tr:hover{background:#fafafa}code{color:#0F6E3B}</style>"""]
                    f"<td><code>{r['ean']}</code></td><td class=src>{r['src']}</td>"
                    f"<td>{H.escape(r['cand'][:70])}</td><td>{r['score']}</td></tr>")
     out.append("</table>")
-    open(os.path.join(OUT, "applied.html"), "w", encoding="utf-8").write("\n".join(out))
+    atomic_open(os.path.join(OUT, "applied.html")).write("\n".join(out))
 
 
 def export_review():
@@ -568,7 +569,7 @@ def export_review():
 def _write_review_tool(data):
     payload = json.dumps(data, ensure_ascii=False)
     html_doc = REVIEW_TOOL_TMPL.replace("/*DATA*/", payload)
-    open(os.path.join(OUT, "review_tool.html"), "w", encoding="utf-8").write(html_doc)
+    atomic_open(os.path.join(OUT, "review_tool.html")).write(html_doc)
 
 
 REVIEW_TOOL_TMPL = r"""<!doctype html><html lang=vi><meta charset=utf-8>

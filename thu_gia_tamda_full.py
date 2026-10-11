@@ -18,6 +18,7 @@ de bat het hang o sub-category sau:
 
   python thu_gia_tamda_full.py --full
 """
+from safeio import atomic_open  # ghi file an toan (tmp roi doi ten)
 import json
 import os
 import re
@@ -61,11 +62,13 @@ def wait_login(driver):
     print("Mo tamdaexpress.eu - hay dang nhap tai khoan B2B trong cua so Chrome vua mo...")
     driver.get(f"{BASE}/banh-keo.html")
     while True:
+        # doc HTML goc, KHONG dung body.text: site viet hoa nut bang CSS
+        # (text-transform) -> .text ra "ĐĂNG NHẬP..." -> tung bao nham da login
         try:
-            body_text = driver.find_element(By.TAG_NAME, "body").text
+            html = driver.page_source
         except Exception:
-            body_text = ""
-        if "Đăng nhập để xem giá" not in body_text:
+            html = ""
+        if html and "Đăng nhập để xem giá" not in html:
             print("Da phat hien dang nhap. Bat dau cao...")
             return
         time.sleep(2)
@@ -373,7 +376,7 @@ def main():
         "shop": "tamda_full",
         "items": list(all_items.values()),
     }
-    with open(OUT, "w", encoding="utf-8") as f:
+    with atomic_open(OUT) as f:
         json.dump(result, f, ensure_ascii=False, indent=1)
     print(f"XONG: {len(result['items'])} san pham (+{added} moi) -> {OUT}")
 

@@ -24,6 +24,7 @@ toan (rui ro sot hang moi nam giua danh sach). Van quet HET moi trang moi lan,
 nhung MERGE vao data cu thay vi ghi de: hang MOI duoc them, gia hang cu duoc
 cap nhat, khong mat du lieu neu 1 danh muc loi giua chung.
 """
+from safeio import atomic_open  # ghi file an toan (tmp roi doi ten)
 import html
 import json
 import os
@@ -217,7 +218,7 @@ def main():
         raise SystemExit(2)
     print(f"(+{len(items) - before} moi so voi lan truoc)")
 
-    with open(OUT, "w", encoding="utf-8") as f:
+    with atomic_open(OUT) as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "shop": "pttglobal",
                    "vat_note": "price = s DPH, price_net = bez DPH",
                    "items": items}, f, ensure_ascii=False, indent=1)

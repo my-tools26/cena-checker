@@ -16,6 +16,7 @@ can/khong the bo qua trang de "chi cao hang moi". Van MERGE ket qua vao data
 cu thay vi ghi de: hang MOI duoc them, gia hang cu duoc cap nhat, va neu 1
 danh muc loi tam thoi thi khong mat du lieu cu cua danh muc do.
 """
+from safeio import atomic_open  # ghi file an toan (tmp roi doi ten)
 import json
 import os
 import re
@@ -204,7 +205,7 @@ def main():
               f"nghi ngo cookie het han. KHONG ghi de du lieu cu.")
         raise SystemExit(2)
 
-    with open(OUT, "w", encoding="utf-8") as f:
+    with atomic_open(OUT) as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "items": items},
                   f, ensure_ascii=False, indent=1)
     print(f"XONG bidfood: {len(items)} mat hang (+{len(items) - before} moi) -> bidfood_prices.json")

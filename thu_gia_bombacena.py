@@ -13,6 +13,7 @@ nang / chan IP. EAN da lay duoc cache lai vinh vien -> khong bao gio cao lai.
 Chay:  python thu_gia_bombacena.py
 Ket qua -> bombacena_prices.json (+ cache bombacena_ean.json).
 """
+from safeio import atomic_open  # ghi file an toan (tmp roi doi ten)
 import html
 import json
 import os
@@ -136,7 +137,7 @@ def load_ean_cache():
 
 
 def save_ean_cache(cache):
-    with open(EAN_CACHE, "w", encoding="utf-8") as f:
+    with atomic_open(EAN_CACHE) as f:
         json.dump(cache, f, ensure_ascii=False, indent=1)
 
 
@@ -289,7 +290,7 @@ def main():
     # field la) - de LAN CHAY SAU dung href lam khoa khop chinh xac, khong con
     # gop nham cac san pham khac nhau dung chung 1 ten hien thi.
     n_ean = sum(1 for it in items if it.get("ean"))
-    with open(OUT, "w", encoding="utf-8") as f:
+    with atomic_open(OUT) as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "shop": "bombacena",
                    "items": items}, f, ensure_ascii=False, indent=1)
     print(f"XONG bombacena: {len(items)} mat hang ({n_ean} co EAN) -> bombacena_prices.json")

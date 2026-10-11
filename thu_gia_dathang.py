@@ -16,6 +16,7 @@ lam moi gia CA cac hang cu nam sau diem dung incremental:
 
   python thu_gia_dathang.py --full
 """
+from safeio import atomic_open  # ghi file an toan (tmp roi doi ten)
 import html
 import json
 import os
@@ -121,7 +122,7 @@ def main():
         print(f"LOI: sau khi cao con {len(items)} < 50% data cu {before}, KHONG ghi de.")
         raise SystemExit(2)
 
-    with open(OUT, "w", encoding="utf-8") as f:
+    with atomic_open(OUT) as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "shop": "dathang",
                    "items": items}, f, ensure_ascii=False, indent=1)
     print(f"XONG dathang: {len(items)} mat hang (+{len(items) - before} moi) -> dathang_prices.json")

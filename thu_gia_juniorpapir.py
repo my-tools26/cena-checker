@@ -21,6 +21,7 @@ danh muc goc da tra ca cay con trong 1 luot phan trang, nen von da tuong doi
 gon), nhung MERGE vao data cu thay vi ghi de: hang MOI duoc them, gia hang cu
 duoc cap nhat, khong mat du lieu neu 1 danh muc loi giua chung.
 """
+from safeio import atomic_open  # ghi file an toan (tmp roi doi ten)
 import json
 import os
 import re
@@ -192,7 +193,7 @@ def main():
         raise SystemExit(2)
     print(f"(+{len(items) - before} moi so voi lan truoc)")
 
-    with open(OUT, "w", encoding="utf-8") as f:
+    with atomic_open(OUT) as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "items": items},
                   f, ensure_ascii=False, indent=1)
     print(f"XONG juniorpapir: {len(items)} mat hang -> juniorpapir_prices.json")

@@ -10,6 +10,7 @@ Chay:  python thu_ean_dathang_img.py        (can: pip install --user zxing-cpp)
 Ket qua -> dathang_img_ean.json {slug: {name, ean, src}}  (match_dathang.py --apply nap vao)
 Chay lai: chi xu ly mon CHUA co trong file (nhanh).
 """
+from safeio import atomic_open  # ghi file an toan (tmp roi doi ten)
 import io
 import json
 import os
@@ -82,7 +83,7 @@ def main():
             # ghi ca mon KHONG tim thay (ean "") de lan sau bo qua
             done[p["slug"]] = {"name": p["name"], "ean": e or "", "src": src or ""}
             n += 1 if e else 0
-    json.dump(done, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+    json.dump(done, atomic_open(OUT), ensure_ascii=False, indent=0)
     tot = sum(1 for v in done.values() if v["ean"])
     print(f"XONG: lan nay +{n}, tong {tot} mon co EAN (SKU/anh) -> {OUT}")
 

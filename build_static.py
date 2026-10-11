@@ -10,6 +10,7 @@ Vi sao can: trinh duyet KHONG goi truc tiep kupi.cz duoc (chan CORS), nen gia
 ban le phai duoc cao san thanh JSON. Cac catalog ban buon thi gop + nen lai
 dang mang compact cho nhe (ten khoa dai -> bo het).
 """
+from safeio import atomic_open  # ghi file an toan (tmp roi doi ten)
 import json
 import os
 import re
@@ -266,12 +267,12 @@ def build_ean_shards(catalog):
     for k in os.listdir(d):
         os.remove(os.path.join(d, k))
     for pref, m in final.items():
-        with open(os.path.join(d, f"{pref}.json"), "w", encoding="utf-8") as f:
+        with atomic_open(os.path.join(d, f"{pref}.json")) as f:
             json.dump(m, f, ensure_ascii=False, separators=(",", ":"))
     # Danh sach prefix de trinh duyet biet tai manh nao.
     # KHONG dat ten bat dau bang "_": GitHub Pages chay Jekyll va Jekyll BO QUA
     # moi file/thu muc bat dau bang gach duoi -> file bi 404 -> quet ma vach hong.
-    with open(os.path.join(d, "shards.json"), "w", encoding="utf-8") as f:
+    with atomic_open(os.path.join(d, "shards.json")) as f:
         json.dump(sorted(final), f, separators=(",", ":"))
     big = max((len(m) for m in final.values()), default=0)
     print(f"  ean_db -> {len(final)} manh ({n} ma), manh lon nhat {big} ma")
@@ -369,7 +370,7 @@ def kupi_categories(cena, slugs):
         for s, c in ex.map(job, todo):
             if c:
                 cache[s] = c
-    json.dump(cache, open(KUPI_CAT_CACHE, "w", encoding="utf-8"),
+    json.dump(cache, atomic_open(KUPI_CAT_CACHE),
               ensure_ascii=False, indent=0, sort_keys=True)
     print(f"  danh muc kupi: tra moi {len(todo)}, cache {len(cache)}")
     return cache
@@ -456,7 +457,7 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     print("== Gop catalog ban buon ==")
     catalog, meta = build_catalog()
-    with open(os.path.join(OUT, "catalog.json"), "w", encoding="utf-8") as f:
+    with atomic_open(os.path.join(OUT, "catalog.json")) as f:
         json.dump(catalog, f, ensure_ascii=False, separators=(",", ":"))
     print(f"  TONG: {len(catalog)} mat hang")
 
@@ -464,18 +465,18 @@ def main():
     build_ean_shards(catalog)
 
     print("== Tu dien ==")
-    with open(os.path.join(OUT, "dict.json"), "w", encoding="utf-8") as f:
+    with atomic_open(os.path.join(OUT, "dict.json")) as f:
         json.dump(build_dict(), f, ensure_ascii=False, separators=(",", ":"))
 
     if "--retail" in sys.argv:
         print("== Gia ban le (kupi.cz) ==")
         retail = build_retail()
-        with open(os.path.join(OUT, "retail.json"), "w", encoding="utf-8") as f:
+        with atomic_open(os.path.join(OUT, "retail.json")) as f:
             json.dump({"date": time.strftime("%Y-%m-%d"), "items": retail},
                       f, ensure_ascii=False, separators=(",", ":"))
 
     # thong tin chung cho trang web
-    with open(os.path.join(OUT, "meta.json"), "w", encoding="utf-8") as f:
+    with atomic_open(os.path.join(OUT, "meta.json")) as f:
         json.dump({"built": time.strftime("%Y-%m-%d %H:%M"),
                    "shops": [s[1] for s in SHOPS], "sources": meta},
                   f, ensure_ascii=False)
