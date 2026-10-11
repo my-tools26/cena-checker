@@ -223,7 +223,7 @@ def main():
         if key in seen_names:
             continue
         seen_names.add(key)
-        items.append({"name": name, "price": round(net * vat, 1),
+        items.append({"name": name, "price": round(net * vat, 2),
                       "price_net": net, "ean": ean,
                       "amount": f"{m.group(1)} {m.group(2).lower()}" if m else "",
                       "unit": ""})
