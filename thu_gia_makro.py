@@ -209,6 +209,12 @@ def main():
 
     save_variant_cache(cache)
 
+    # GIA THAT (11/10/2026): API cong khai chi tra "shelfPrice" (gia ke) — KHAC gia
+    # khach dang nhap thay tren Makro (vd soda Dr.Oetker: ke 12,20 / thuc 11,42
+    # bez DPH; thue 21% chu khong phai 12%). Lay netPrice + vatPercent that bang
+    # phien DANG NHAP (Chrome rieng, giu phien); khong lay duoc -> dung gia ke cu.
+    real = login_prices(ids)
+
     items = []
     seen_names = set()
     for vid in ids:
@@ -218,6 +224,8 @@ def main():
             continue
         name, ean, food = info["name"], info["ean"], info.get("food", True)
         vat = 1.12 if food else 1.21
+        if vid in real:
+            net, vat = real[vid][0], 1 + real[vid][1]
         m = RE_AMOUNT.search(name)
         key = name + "|" + ean
         if key in seen_names:
@@ -230,9 +238,76 @@ def main():
 
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "shop": "makro_full",
-                   "store": STORE, "vat_note": "price = s DPH (12% food/21% non-food tinh tu gia net)",
-                   "items": items}, f, ensure_ascii=False)
-    print(f"XONG makro: {len(items)} mat hang -> makro_full_prices.json")
+                   "store": STORE,
+                   "vat_note": "price = s DPH; net + DPH that tu phien dang nhap (neu co)",
+                   "login_prices": len(real), "items": items}, f, ensure_ascii=False)
+    print(f"XONG makro: {len(items)} mat hang (gia that dang nhap: {len(real)}) "
+          f"-> makro_full_prices.json")
+
+
+PRICE_JS = r"""
+const ids = arguments[0], store = arguments[1], done = arguments[arguments.length - 1];
+async function one(chunk) {
+  try {
+    const u = '/evaluate.article.v1/betty-variants?storeIds=' + store +
+              '&country=CZ&locale=cs-CZ&ids=' + chunk.join(',');
+    const d = await fetch(u, {credentials: 'include'}).then(r => r.json());
+    const out = {};
+    for (const art of Object.values(d.result || {}))
+      for (const v of Object.values(art.variants || {})) {
+        const vid = (v.bettyVariantId || {}).bettyVariantId;
+        let best = null;
+        for (const b of Object.values(v.bundles || {}))
+          for (const st of Object.values((b.stores || {})))
+            for (const dm of Object.values(st.possibleDeliveryModes || {}))
+              for (const ft of Object.values(dm.possibleFulfillmentTypes || {})) {
+                const s = ft.sellingPriceInfo;
+                if (s && s.netPrice && s.vatPercent != null && !best) best = [s.netPrice, s.vatPercent];
+              }
+        if (vid && best) out[vid] = best;
+      }
+    return out;
+  } catch (e) { return {}; }
+}
+const chunks = []; for (let i = 0; i < ids.length; i += 40) chunks.push(ids.slice(i, i + 40));
+Promise.all(chunks.map(one)).then(rs => done(Object.assign({}, ...rs)));
+"""
+
+
+def login_prices(ids, wait_login=300):
+    """{variantId: [netPrice, vatPercent]} lay trong phien DANG NHAP Makro.
+    Chrome rieng .chrome-cookie-profiles/makro giu phien (+ luu mat khau) -> lan
+    sau tu chay. Chua dang nhap -> cho toi da 5 phut (KHONG tu go mat khau)."""
+    try:
+        from selenium import webdriver
+    except Exception:
+        return {}
+    o = webdriver.ChromeOptions()
+    o.add_argument("--user-data-dir=" + os.path.join(HERE, ".chrome-cookie-profiles", "makro"))
+    o.add_experimental_option("prefs", {"credentials_enable_service": True,
+                                        "profile.password_manager_enabled": True})
+    d = webdriver.Chrome(options=o)
+    try:
+        d.get(f"{BASE}/shop/search?q=soda")
+        d.set_script_timeout(180)
+        probe = ids[:40]
+        waited = 0
+        while not d.execute_async_script(PRICE_JS, probe, STORE):
+            if waited == 0:
+                print("Makro: CHUA DANG NHAP - hay dang nhap trong cua so Chrome vua mo (cho 5 phut)...")
+            if waited >= wait_login:
+                print("Makro: khong dang nhap -> dung gia ke cong khai (CO THE LECH gia that)")
+                return {}
+            time.sleep(5); waited += 5
+        real = {}
+        for i in range(0, len(ids), 40 * 8):          # 8 request song song moi luot
+            real.update(d.execute_async_script(PRICE_JS, ids[i:i + 320], STORE))
+            if (i // 320) % 20 == 0:
+                print(f"  gia that {len(real)}/{len(ids)}")
+        print(f"Makro: gia that cho {len(real)}/{len(ids)} variant")
+        return real
+    finally:
+        d.quit()
 
 
 if __name__ == "__main__":
