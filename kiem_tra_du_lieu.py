@@ -10,7 +10,11 @@ So ban SAP COMMIT (staged) voi ban dang co tren git (HEAD), CHAN commit neu:
   - tu dien docs/data/dict.json IT muc hon truoc
   - khuyen mai docs/data/retail.json duoi 300 mon
 Co chu dich giam that (vd kho ngung ban nhieu hang): dat bien moi truong
-CENA_CHO_PHEP_GIAM=1 roi commit lai.
+CENA_CHO_PHEP_GIAM=1 roi commit lai — CHI KHI NGUOI DUNG XAC NHAN. Routine tu
+dong KHONG BAO GIO tu dat bien nay: bi chan -> giu nguyen, bao loi trong bao cao.
+
+Cai hook (1 lan, neu clone lai repo):
+  printf '#!/bin/sh\nPYTHONUTF8=1 python kiem_tra_du_lieu.py\n' > .git/hooks/pre-commit
 
 Chay tay:  python kiem_tra_du_lieu.py      (kiem cac file dang staged)
 """
