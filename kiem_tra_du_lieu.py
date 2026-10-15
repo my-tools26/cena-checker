@@ -9,6 +9,10 @@ So ban SAP COMMIT (staged) voi ban dang co tren git (HEAD), CHAN commit neu:
   - docs/data/catalog.json giam > 10% so mon
   - tu dien docs/data/dict.json IT muc hon truoc
   - khuyen mai docs/data/retail.json duoi 300 mon
+  - kho nao (*_prices.json) co 1 SAN PHAM (cung ma: slug ?url=, href, code,
+    sku_key) xuat hien NHIEU DONG -> 1 mon nhieu gia tren web (loi Bombacena
+    15/10/2026: 1 mon nam o akce/nealko/novinky luu 3 dong, cao nhanh chi cap
+    nhat 1 dong, cac dong kia giu gia cu). Crawler phai khoa theo MA SAN PHAM.
 Co chu dich giam that (vd kho ngung ban nhieu hang): dat bien moi truong
 CENA_CHO_PHEP_GIAM=1 roi commit lai — CHI KHI NGUOI DUNG XAC NHAN. Routine tu
 dong KHONG BAO GIO tu dat bien nay: bi chan -> giu nguyen, bao loi trong bao cao.
@@ -22,6 +26,8 @@ import json
 import os
 import subprocess
 import sys
+from collections import Counter
+from urllib.parse import parse_qs, urlparse
 
 MAX_DROP = 0.10
 
@@ -48,6 +54,28 @@ def count(d):
     return len(d) if isinstance(d, list) else 0
 
 
+def product_id(it):
+    """Ma dinh danh san pham trong 1 kho (None neu kho khong co ma)."""
+    if not isinstance(it, dict):
+        return None
+    h = it.get("href") or it.get("url")
+    if h:
+        q = parse_qs(urlparse(h).query)
+        return "url:" + (q["url"][0] if q.get("url") else urlparse(h).path.rstrip("/"))
+    for k in ("code", "sku_key"):
+        if it.get(k):
+            return f"{k}:{it[k]}"
+    return None
+
+
+def duplicate_ids(d):
+    items = d.get("items", d) if isinstance(d, dict) else d
+    if isinstance(items, dict):
+        items = list(items.values())
+    c = Counter(i for i in map(product_id, items or []) if i)
+    return [k for k, n in c.items() if n > 1]
+
+
 def main():
     errs = []
     for f in staged_files():
@@ -67,6 +95,10 @@ def main():
         if f.endswith("_prices.json") or f == "docs/data/catalog.json":
             if n_old and n_new < n_old * (1 - MAX_DROP):
                 errs.append(f"{f}: so mon giam {n_old} -> {n_new} (>{int(MAX_DROP*100)}%)")
+            dup = duplicate_ids(new) if f.endswith("_prices.json") else []
+            if dup:
+                errs.append(f"{f}: {len(dup)} san pham bi LAP nhieu dong (vd {dup[:3]})"
+                            " -> 1 mon nhieu gia; sua crawler khoa theo ma san pham")
         elif f == "docs/data/dict.json":
             if n_old and n_new < n_old:
                 errs.append(f"{f}: tu dien giam {n_old} -> {n_new} muc")

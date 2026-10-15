@@ -217,10 +217,14 @@ def load_existing():
         # thang 39971 dong con 11815 ten neu gop theo ten -> gop NHAM mat
         # ~28000 san pham khac nhau. Loi thuc te 18-28/09/2026, da phuc hoi tu
         # git va sua lai key o day.
+        # 15/10/2026: khoa = MA SAN PHAM (slug ?url=...), KHONG phai ca href:
+        # 1 mon nam o nhieu danh muc (akce, nealko, novinky...) -> truoc day
+        # luu thanh nhieu dong; lan cao nhanh chi cap nhat dong akce/novinky,
+        # dong o danh muc khac giu GIA CU -> web hien 1 mon nhieu gia khac nhau.
         out = {}
         for it in old.get("items", []):
-            key = it.get("href") or it.get("name")
-            if key:
+            key = slug_of(it.get("href")) or it.get("name")
+            if key and (key not in out or (it.get("ean") and not out[key].get("ean"))):
                 out[key] = it
         return out
     except Exception as e:
@@ -239,7 +243,7 @@ def main():
         prods = crawl_category(session, slug)
         new = 0
         for href, name, price in prods:
-            key = href or name
+            key = slug_of(href) or name   # 1 mon = 1 dong du nam o nhieu danh muc
             if key not in seen:
                 seen[key] = {"name": name, "price": price, "href": href}
                 new += 1
