@@ -190,7 +190,12 @@ def main():
                 if not name or vid not in prices:
                     continue
                 ean = ""
+                pack = 1   # bundleSize: gia Makro la ca THUNG (vd 10 x 200 g)
                 for b in v.get("bundles", {}).values():
+                    try:
+                        pack = int(float(b.get("bundleSize") or 1))
+                    except (TypeError, ValueError):
+                        pack = 1
                     for g in (b.get("gtins") or []):
                         e = re.sub(r"\D", "", str(g.get("number", g) if isinstance(g, dict) else g))
                         if len(e) in (8, 12, 13, 14):
@@ -204,7 +209,7 @@ def main():
                                 break
                     if ean:
                         break
-                cache[vid] = {"name": name, "ean": ean, "food": food}
+                cache[vid] = {"name": name, "ean": ean, "food": food, "pack": pack}
         if (i // 40) % 25 == 0:
             print(f"  chi tiet moi {i}/{len(new_ids)}")
 
@@ -232,10 +237,13 @@ def main():
         if key in seen_names:
             continue
         seen_names.add(key)
-        items.append({"name": name, "price": round(net * vat, 2),
-                      "price_net": net, "ean": ean,
-                      "amount": f"{m.group(1)} {m.group(2).lower()}" if m else "",
-                      "unit": ""})
+        it = {"name": name, "price": round(net * vat, 2),
+              "price_net": net, "ean": ean,
+              "amount": f"{m.group(1)} {m.group(2).lower()}" if m else "",
+              "unit": ""}
+        if info.get("pack", 1) > 1:
+            it["pack"] = info["pack"]   # web hien them Kc/ks
+        items.append(it)
 
     with atomic_open(OUT) as f:
         json.dump({"date": time.strftime("%Y-%m-%d"), "shop": "makro_full",

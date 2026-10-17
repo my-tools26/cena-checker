@@ -6,6 +6,7 @@
 //      CLICK CHUOT THAT vao nut (computer tool) de Chrome cho tai blob ve Downloads.
 //      File co the mang ten tam *.tmp trong C:\Users\charl\Downloads -> doc noi dung,
 //      kiem tra roi ghi vao cena-checker/makro_full_prices.json.
+// pack = bundleSize: Makro ban theo THUNG (vd smetana 10 x 200 g), gia = ca thung (17/10/2026).
 // Gia = sellingPriceInfo.netPrice + vatPercent (betty-variants, CAN dang nhap).
 // API cong khai chi co shelfPrice (gia ke) -> LECH gia that (vd soda 12,20 vs 11,42).
 window.__mk = window.__mk || {phase: 'cats', cats: [], ci: 0, ids: new Set(), idList: null, di: 0, items: {}};
@@ -52,7 +53,7 @@ window.__mk = window.__mk || {phase: 'cats', cats: [], ci: 0, ids: new Set(), id
         for (const art of Object.values((d || {}).result || {})) for (const v of Object.values(art.variants || {})) {
           const vid = (v.bettyVariantId || {}).bettyVariantId; const name = (v.description || '').trim();
           if (!vid || !name) continue;
-          let ean = '', best = null;
+          let ean = '', best = null, pack = 1;
           for (const b of Object.values(v.bundles || {})) {
             for (const g of (b.gtins || [])) {
               const e = String(g && g.number != null ? g.number : g).replace(/\D/g, '');
@@ -61,10 +62,10 @@ window.__mk = window.__mk || {phase: 'cats', cats: [], ci: 0, ids: new Set(), id
             for (const st of Object.values(b.stores || {})) for (const dm of Object.values(st.possibleDeliveryModes || {}))
               for (const ft of Object.values(dm.possibleFulfillmentTypes || {})) {
                 const s = ft.sellingPriceInfo;
-                if (s && s.netPrice && s.vatPercent != null && !best) best = [s.netPrice, s.vatPercent, s.listNetPrice || null];
+                if (s && s.netPrice && s.vatPercent != null && !best) { best = [s.netPrice, s.vatPercent, s.listNetPrice || null]; pack = parseInt(b.bundleSize) || 1; }
               }
           }
-          if (best) m.items[vid] = [name, ean, best[0], best[1], best[2]];
+          if (best) m.items[vid] = [name, ean, best[0], best[1], best[2], pack];
         }
       }));
       m.di += 320;
@@ -73,10 +74,12 @@ window.__mk = window.__mk || {phase: 'cats', cats: [], ci: 0, ids: new Set(), id
   };
   window.__mkExport = function () {
     const RE = /(\d+[.,]?\d*)\s*(kg|g|ml|l|ks)\b/i, seen = new Set(), items = [];
-    for (const [name, ean, net, vat, list] of Object.values(window.__mk.items)) {
+    for (const [name, ean, net, vat, list, pack] of Object.values(window.__mk.items)) {
       const k = name + '|' + ean; if (seen.has(k)) continue; seen.add(k); const m = RE.exec(name);
-      items.push({name, price: Math.round(net * (1 + vat) * 100) / 100, price_net: net, vat, list_net: list, ean,
-                  amount: m ? m[1] + ' ' + m[2].toLowerCase() : '', unit: ''});
+      const it = {name, price: Math.round(net * (1 + vat) * 100) / 100, price_net: net, vat, list_net: list, ean,
+                  amount: m ? m[1] + ' ' + m[2].toLowerCase() : '', unit: ''};
+      if (pack > 1) it.pack = pack;   // gia la ca THUNG (bundleSize mon) -> web hien them Kc/ks
+      items.push(it);
     }
     const blob = new Blob([JSON.stringify({date: new Date().toISOString().slice(0, 10), shop: 'makro_full', store: '00006',
       source: 'tai khoan Makro dang nhap (Claude in Chrome)', vat_note: 'price = s DPH theo vatPercent that; price_net = gia that bez DPH', items})],
