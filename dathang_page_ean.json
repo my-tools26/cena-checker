@@ -1,4 +1,24 @@
 {
+ "ua-flint-craft-pikantni-klobasy-80g-8ks-kart": {
+  "name": "UA Flint Craft Pikantní klobásy 80g &#8211; 8ks/kart",
+  "ean": "4823127317822",
+  "price": "1790"
+ },
+ "ua-flint-craft-tomato-spicy-80g-xanh-la-8ks-kart": {
+  "name": "UA Flint Craft Tomato Spicy 80g (xanh lá) &#8211; 8ks/kart",
+  "ean": "4823127317822",
+  "price": "1790"
+ },
+ "milka-peanut-crispy-100g": {
+  "name": "Milka peanut crispy 100g",
+  "ean": "7631300617820",
+  "price": "2690"
+ },
+ "milka-cherry-100g": {
+  "name": "Milka Cherry 100g",
+  "ean": "7631300617820",
+  "price": "2690"
+ },
  "panzani-testo-500g-chifferini-12ks-kart": {
   "name": "Panzani těsto 500g Chifferini &#8211; 12ks/kart",
   "ean": "3038359004957",
@@ -125,7 +145,7 @@
   "price": "1450"
  },
  "ps-plus-white-160-00-u": {
-  "name": "PS PLUS WHITE 161.00 U",
+  "name": "CIG.PS PLUS WHITE 161.00 U",
   "ean": "4030600293362",
   "price": "152413"
  },
@@ -145,12 +165,12 @@
   "price": "7990"
  },
  "king-compact-strato-142-00-r": {
-  "name": "KING COMPACT STRATO 142.00 R",
+  "name": "CIG.KING COMPACT STRATO 142.00 R",
   "ean": "3800162422798",
   "price": "134275"
  },
  "king-blue-s-line-145-00-r": {
-  "name": "KING BLUE S-LINE 150.00U",
+  "name": "CIG.KING BLUE S-LINE 150.00U",
   "ean": "3800162422798",
   "price": "141841"
  },
@@ -199,15 +219,15 @@
   "ean": "5900951310447",
   "price": "1390"
  },
+ "flint-craft-tomato-spicy-80g-1-35kus": {
+  "name": "UA Flint Craft Tomato Spicy 80g (xanh+đỏ) &#8211; 35ks/kart",
+  "ean": "4823127313084",
+  "price": "1790"
+ },
  "mark-adams-100-blue-144-00-r": {
-  "name": "MARK ADAMS 100 BLUE 149.00 U",
+  "name": "CIG.MARK ADAMS 100 BLUE 149.00 U",
   "ean": "8595721106237",
   "price": "142275"
- },
- "red-bull-025l-the-winter-edition": {
-  "name": "Red Bull 0,25L The Winter Edition",
-  "ean": "9002492085821",
-  "price": "2790"
  },
  "borgo-dei-filari-075l-primitivo-igt-puglia": {
   "name": "Borgo dei Filari 0,75L Primitivo IGT Puglia",
@@ -235,12 +255,12 @@
   "price": "3990"
  },
  "lm-loft-black-38-sli-280-00r": {
-  "name": "LM 38S LOFT BLACK 280.00U",
+  "name": "CIG.LM 38S LOFT BLACK 280.00U",
   "ean": "8595234380414",
   "price": "132583"
  },
  "lm-loft-blue-38-sli-280-00-r": {
-  "name": "LM BLUE LABEL 168.00 U",
+  "name": "CIG.LM BLUE LABEL 168.00 U",
   "ean": "8595234380414",
   "price": "158890"
  },
@@ -287,12 +307,12 @@
  "nautilus-snack-seafood-fish-stix-36g1-100": {
   "name": "UA Nautilus Seafood Fish Stix 36g(1/100)",
   "ean": "6922571302168",
-  "price": "2990"
+  "price": "2490"
  },
  "nautilus-snack-seafood-fish-cuts-with-chili-36g1-100": {
   "name": "UA Nautilus Seafood Fish Cuts 36g(1/100)",
   "ean": "6922571302052",
-  "price": "2990"
+  "price": "2490"
  },
  "nautilus-snack-seafood-jerky-smoked-calamari-1-100": {
   "name": "UA Nautilus Seafood Jerky Smoked Calamari (1/100)",
@@ -425,17 +445,17 @@
   "price": "9400"
  },
  "candlelight-white-20ks": {
-  "name": "CANDLELIGHT WHITE 20KS",
+  "name": "CANDLELIGHT FILTR WHITE 20KS",
   "ean": "4012922833952",
   "price": "17500"
  },
  "candlelight-red-20ks": {
-  "name": "CANDLELIGHT RED 20KS",
+  "name": "CANDLELIGHT FILTR RED 20KS",
   "ean": "4012922833952",
   "price": "17500"
  },
  "candlelight-gold-20ks": {
-  "name": "CANDLELIGHT GOLD 20KS",
+  "name": "CANDLELIGHT FILTR GOLD 20KS",
   "ean": "4012922833952",
   "price": "17500"
  },
@@ -542,7 +562,7 @@
  "ps-black-97g": {
   "name": "TABÁK PS BLACK 88G",
   "ean": "4030700143284",
-  "price": "63900"
+  "price": "65200"
  },
  "msdm-susene-kalamary-solene-36g-zelene": {
   "name": "UA MSDM Sušené Kalamáry, solené 36g (zelené)",
@@ -600,27 +620,27 @@
   "price": "17500"
  },
  "syx-bar-starter-kit-red-r": {
-  "name": "SYX BAR STARTER KIT RED",
+  "name": "SYX STARTER KIT RED",
   "ean": "8595721103151",
   "price": "18000"
  },
  "syx-bar-starter-kit-pink-r": {
-  "name": "SYX BAR STARTER KIT PINK",
+  "name": "SYX STARTER KIT PINK",
   "ean": "8595721103090",
   "price": "18000"
  },
  "syx-bar-starter-kit-blue-r": {
-  "name": "SYX BAR STARTER KIT BLUE",
+  "name": "SYX STARTER KIT BLUE",
   "ean": "8595721103069",
   "price": "18000"
  },
  "syx-bar-starter-kit-dark-blue-r": {
-  "name": "SYX BAR STARTER KIT DARK BLUE",
+  "name": "SYX STARTER KIT DARK BLUE",
   "ean": "8595721103038",
   "price": "18000"
  },
  "syx-bar-starter-kit-gold-r": {
-  "name": "SYX BAR STARTER KIT GOLD",
+  "name": "SYX STARTER KIT GOLD",
   "ean": "8595721103120",
   "price": "18000"
  },
@@ -652,7 +672,7 @@
  "dutinky-ps-black-100ks": {
   "name": "DUTINKY PS BLACK 100KS",
   "ean": "4007793120225",
-  "price": "2990"
+  "price": "3200"
  },
  "okf-aloe-500ml-x-20ks": {
   "name": "OKF Aloe 500ml x 20ks",
@@ -745,12 +765,12 @@
   "price": "25500"
  },
  "davidoff-100-evolved-red-151-00-r": {
-  "name": "DAVIDOFF 100 EVOLVED RED 166.00 U",
+  "name": "CIG.DAVIDOFF 100 EVOLVED RED 166.00 U",
   "ean": "4030600343661",
   "price": "156798"
  },
  "davidoff-100-evolved-blue-151-00-r": {
-  "name": "DAVIDOFF 100 EVOLVED BLUE 166.00 U",
+  "name": "CIG.DAVIDOFF 100 EVOLVED BLUE 166.00 U",
   "ean": "4030600343692",
   "price": "156798"
  },
@@ -780,7 +800,7 @@
   "price": "65000"
  },
  "candlelight-filter-red-50ks": {
-  "name": "CANDLELIGHT FILTER RED 50KS(U)",
+  "name": "CANDLELIGHT FILTR RED 50KS(U)",
   "ean": "401292283392",
   "price": "65000"
  },
@@ -900,27 +920,27 @@
   "price": "74000"
  },
  "winston-100-red-27s-189-00-q": {
-  "name": "WINSTON 100 RED 27S 215.00 U",
+  "name": "CIG.WINSTON 100 RED 27S 215.00 U",
   "ean": "8594011810229",
   "price": "161882"
  },
  "candlelight-filter-gold-50ks": {
-  "name": "CANDLELIGHT FILTER GOLD 50KS(U)",
+  "name": "CANDLELIGHT FILTR GOLD 50KS(U)",
   "ean": "4012922833952",
   "price": "65000"
  },
  "marlboro-crafted-red-30s-209-00-q": {
-  "name": "MARLBORO CRAFTED MAXI RED 221.00 U",
+  "name": "CIG.MARLBORO CRAFTED MAXI RED 221.00 U",
   "ean": "8595701537334",
   "price": "167176"
  },
  "marlboro-crafted-gold-30s-209-00-q": {
-  "name": "MARLBORO CRAFTED MAXI GOLD 221.00 U",
+  "name": "CIG.MARLBORO CRAFTED MAXI GOLD 221.00 U",
   "ean": "8595701537303",
   "price": "167176"
  },
  "marlboro-crated-s-line-147-00-q": {
-  "name": "MARLBORO CRATED S-LINE 157.00 R",
+  "name": "CIG.MARLBORO CRATED S-LINE 157.00 R",
   "ean": "8595701536658",
   "price": "148578"
  },
@@ -965,9 +985,9 @@
   "price": "3590"
  },
  "bacco-blue-line-133-00-q": {
-  "name": "BACCO BLUE SILVER 149.00 U",
+  "name": "CIG.BACCO BLUE SILVER 154.00 U",
   "ean": "8594060365626",
-  "price": "142134"
+  "price": "145805"
  },
  "agricol-policanka-majoneza-230ml": {
   "name": "Agricol-Poličanka majonéza-230ml",
@@ -992,7 +1012,7 @@
  "kapucin-ts-light-100g": {
   "name": "Kapucín TS- light 100g",
   "ean": "8594047130117",
-  "price": "2190"
+  "price": "1890"
  },
  "kapucin-ts-burger-100g": {
   "name": "Kapucín TS Burger 100g",
@@ -1027,7 +1047,7 @@
  "aaa-rodinne-maslo-82-200g": {
   "name": "A-Rodinné máslo 82%-200g",
   "ean": "8594052744460",
-  "price": "3690"
+  "price": "2490"
  },
  "ehr-protein-pudding-caramel-20g-protein": {
   "name": "EHR-Protein Pudding Caramel -20g Protein",
@@ -1105,12 +1125,12 @@
   "price": "25000"
  },
  "king-compact-nimbo-132-00-q": {
-  "name": "KING COMPACT NIMBO 147.00U",
+  "name": "CIG.KING COMPACT NIMBO 147.00U",
   "ean": "3800162422798",
   "price": "139004"
  },
  "king-100-red-134-00-q": {
-  "name": "KING 100 RED 154.00 U",
+  "name": "CIG.KING 100 RED 154.00 U",
   "ean": "3800162422798",
   "price": "145622"
  },
@@ -1125,7 +1145,7 @@
   "price": "41500"
  },
  "lm-blue-label-100-148-00-q": {
-  "name": "LM 100 BLUE LABEL 166.00 U",
+  "name": "CIG.LM 100 BLUE LABEL 166.00 U",
   "ean": "8595234380414",
   "price": "156896"
  },
@@ -1232,10 +1252,10 @@
  "jihoceska-niva-fit-30-100g": {
   "name": "Jihočeská Niva Fit 30% 100g",
   "ean": "8593803336886",
-  "price": "2450"
+  "price": "2590"
  },
  "rothmans-blue-21-141-00-q": {
-  "name": "ROTHMANS KS BLUE 166.00 U",
+  "name": "CIG.ROTHMANS KS BLUE 166.00 U",
   "ean": "8595682126367",
   "price": "157215"
  },
@@ -1245,7 +1265,7 @@
   "price": "134700"
  },
  "winston-25-blue-165-00-l": {
-  "name": "WINSTON 25 BLUE 196.00 U",
+  "name": "CIG.WINSTON 25 BLUE 196.00 U",
   "ean": "8594011812506",
   "price": "147726"
  },
@@ -1315,12 +1335,12 @@
   "price": "3490"
  },
  "king-red-124-00-l": {
-  "name": "KING RED 154.00 U",
+  "name": "CIG.KING RED 154.00 U",
   "ean": "3800162422828",
   "price": "145622"
  },
  "king-blue-124-00-l": {
-  "name": "KING WHITE S-LINE 150.00U",
+  "name": "CIG.KING WHITE S-LINE 150.00U",
   "ean": "3800162422798",
   "price": "141841"
  },
@@ -1332,15 +1352,15 @@
  "jihoceska-niva-60-100-g": {
   "name": "Jihočeská niva 60% 100 g",
   "ean": "8593803336930",
-  "price": "2750"
+  "price": "2990"
  },
  "jihoceska-niva-45-100-g": {
   "name": "Jihočeská niva 45% 100 g",
   "ean": "8593803336916",
-  "price": "2550"
+  "price": "2790"
  },
  "davidoff-evolved-blue-136-00-l": {
-  "name": "DAVIDOFF EVOLVED BLUE 166.00 U",
+  "name": "CIG.DAVIDOFF EVOLVED BLUE 166.00 U",
   "ean": "4030600266885",
   "price": "156797"
  },
@@ -1370,22 +1390,22 @@
   "price": "5590"
  },
  "elixyr-40-gold-239-00-l-5ks": {
-  "name": "ELIXYR 40&#8243; GOLD 239.00 L (5KS)",
+  "name": "CIG.ELIXYR 40&#8243; GOLD 239.00 L (5KS)",
   "ean": "4260667462269",
   "price": "112886"
  },
  "elixyr-40-red-239-00-l-5ks": {
-  "name": "ELIXYR 40&#8243; RED 239.00 L (5KS)",
+  "name": "CIG.ELIXYR 40&#8243; RED 239.00 L (5KS)",
   "ean": "4260667462269",
   "price": "112886"
  },
  "austin-100-red-124-00-l": {
-  "name": "AUSTIN 100 RED 149.00U",
+  "name": "CIG.AUSTIN 100 RED 149.00U",
   "ean": "4260667462269",
   "price": "140895"
  },
  "austin-red-122-00-l": {
-  "name": "AUSTIN RED 149.00U",
+  "name": "CIG.AUSTIN RED 149.00U",
   "ean": "4260667462269",
   "price": "140895"
  },
@@ -1395,12 +1415,12 @@
   "price": "16990"
  },
  "karelia-l-01-mg-125-00-l": {
-  "name": "KARELIA L 0,1 MG 147.00 U",
+  "name": "CIG.KARELIA L 0,1 MG 147.00 U",
   "ean": "5201333085039",
   "price": "140112"
  },
  "lucky-strike-flowres-138-00-l": {
-  "name": "LUCKY STRIKE FLOW RES 173.00 U",
+  "name": "CIG.LUCKY STRIKE FLOW RES 173.00 U",
   "ean": "8595682114906",
   "price": "165201"
  },
@@ -1425,22 +1445,22 @@
   "price": "10500"
  },
  "marlboro-100-gold-craft-131-00-l": {
-  "name": "MARLBORO 100 CRAFTED GOLD 166.00 U",
+  "name": "CIG.MARLBORO 100 CRAFTED GOLD 166.00 U",
   "ean": "8595234379159",
   "price": "156896"
  },
  "marlboro-100-red-craft-131-00-l": {
-  "name": "MARLBORO 100 CRAFTED RED 166.00 U",
+  "name": "CIG.MARLBORO 100 CRAFTED RED 166.00 U",
   "ean": "8595234379159",
   "price": "156896"
  },
  "marlboro-gold-craft-131-00-l": {
-  "name": "MARLBORO CRAFTED GOLD 166.00 U",
+  "name": "CIG.MARLBORO CRAFTED GOLD 166.00 U",
   "ean": "8595234379159",
   "price": "156896"
  },
  "marlboro-red-craft-131-00-l": {
-  "name": "MARLBORO CRAFTED RED 166.00 U",
+  "name": "CIG.MARLBORO CRAFTED RED 166.00 U",
   "ean": "8595234379159",
   "price": "156896"
  },
@@ -1655,7 +1675,7 @@
   "price": "2250"
  },
  "rothmans-longs-modra-122-00-g": {
-  "name": "ROTHMANS LONGS BLUE 167.00 U",
+  "name": "CIG.ROTHMANS LONGS BLUE 167.00 U",
   "ean": "8595682126367",
   "price": "158025"
  },
@@ -1670,12 +1690,12 @@
   "price": "13900"
  },
  "bohemia-chips-paprika-70g-x-15ks": {
-  "name": "Bohemia 60g Chips Paprika (18)",
+  "name": "Bohemia chips 60g Paprika &#8211; 18ks/kart",
   "ean": "8595606206120",
-  "price": "1750"
+  "price": "1690"
  },
  "mark-adams-gold-110-00-g": {
-  "name": "MARK ADAMS GOLD 149.00 U",
+  "name": "CIG.MARK ADAMS GOLD 149.00 U",
   "ean": "4260667467165",
   "price": "142275"
  },
@@ -1792,7 +1812,7 @@
  "olma-misa-tvarohovy-mls-merunka-130g": {
   "name": "Olma Míša Tvarohový Mls Meruňka 130g",
   "ean": "8593807647346",
-  "price": "1690"
+  "price": "1650"
  },
  "gornicky-klobasa-csabai-lucifer-250g": {
   "name": "Gornicky Klobása Csabai Lucifer 250g",
@@ -1867,7 +1887,7 @@
  "tvaroh-chocen-jemny-250g": {
   "name": "Tvaroh Choceň jemný 250g",
   "ean": "8594003214011",
-  "price": "2090"
+  "price": "2290"
  },
  "hame-majka-jemna-pastika-120g": {
   "name": "Májka Jemná Paštika 120g",
@@ -1915,7 +1935,7 @@
   "price": "1490"
  },
  "west-silver-sl-line-118-00-f": {
-  "name": "WEST SILVER SLIM-LINE 133.00 Q",
+  "name": "CIG.WEST SILVER SLIM-LINE 133.00 Q",
   "ean": "4030600293096",
   "price": "125442"
  },
@@ -1970,7 +1990,7 @@
   "price": "50800"
  },
  "lucky-strike-rs-core-70-red-116-00-f": {
-  "name": "LUCKY STRIKE RS CORE 70 RED 166.00 U",
+  "name": "CIG.LUCKY STRIKE RS CORE 70 RED 166.00 U",
   "ean": "8595682132665",
   "price": "156428"
  },
@@ -1995,7 +2015,7 @@
   "price": "14300"
  },
  "davidoff-evolved-blue-122-00-f": {
-  "name": "DAVIDOFF EVOLVED SAPPHIRE 166.00 U",
+  "name": "CIG.DAVIDOFF EVOLVED SAPPHIRE 166.00 U",
   "ean": "4030600292341",
   "price": "156797"
  },
@@ -2010,7 +2030,7 @@
   "price": "2890"
  },
  "winston-compact-106-00-f": {
-  "name": "WINSTON COMPACT BLUE 164.00 U",
+  "name": "CIG.WINSTON COMPACT BLUE 164.00 U",
   "ean": "8594011812964",
   "price": "154338"
  },
@@ -2022,25 +2042,25 @@
  "prantl-gothajsky-salam-100g": {
   "name": "Prantl Gothajský salám 100g",
   "ean": "8594005320284",
-  "price": "1450"
+  "price": "1590"
  },
  "olma-misa-tvarohovy-mls-smet-eoko-130g": {
   "name": "Olma Míša Tvarohový Mls Smet. ČOKO 130g",
   "ean": "8593807647223",
-  "price": "1690"
+  "price": "1650"
  },
  "olma-misa-tvarohovy-mls-smetana-130g": {
   "name": "Olma Míša Tvarohový Mls smetana 130g",
   "ean": "8593807647216",
-  "price": "1690"
+  "price": "1650"
  },
  "davidoff-reach-112-00-f": {
-  "name": "DAVIDOFF REACH BLUE 164.00 U",
+  "name": "CIG.DAVIDOFF REACH BLUE 164.00 U",
   "ean": "030600293690",
   "price": "154922"
  },
  "winston-25-red-133-00-f": {
-  "name": "WINSTON 25 RED 196.00 U",
+  "name": "CIG.WINSTON 25 RED 196.00 U",
   "ean": "8594011812506",
   "price": "147726"
  },
@@ -2055,24 +2075,24 @@
   "price": "3150"
  },
  "bohemia-chip-spiz-70g-x-15ks": {
-  "name": "Bohemia 60g Chip Špíz (18)",
+  "name": "Bohemia chips 60g Špíz &#8211; 18ks/kart",
   "ean": "8595606206182",
-  "price": "1750"
+  "price": "1690"
  },
  "bohemia-vroubky-pizza-210g-x-14ks": {
-  "name": "Bohemia 230g Chips Vroubky Pizza (12)",
+  "name": "Bohemia chips 190g Vroubky Pizza &#8211; 12ks/kart",
   "ean": "8595606206885",
-  "price": "4190"
+  "price": "4490"
  },
  "bohemia-chips-solene-215-g-x-14ks": {
-  "name": "Bohemia 250g Chips Solené &#8211; 12ks/kart",
+  "name": "Bohemia chips 200g Sůl &#8211; 12ks/kart",
   "ean": "8595606207004",
-  "price": "4190"
+  "price": "4490"
  },
  "bacco-100s-blue-silver-line-101-00-f": {
-  "name": "BACCO 100 BLUE SILVER 149.00 U",
+  "name": "CIG.BACCO 100 BLUE SILVER 154.00 U",
   "ean": "8594060365626",
-  "price": "142135"
+  "price": "145805"
  },
  "prantl-videnske-miniparecky-200g": {
   "name": "Prantl Vídeňské Minipárečky 200g",
@@ -2117,7 +2137,7 @@
  "krahulik-spekacky-400g": {
   "name": "Krahulík Špekáčky 400g",
   "ean": "8594014097115",
-  "price": "4990"
+  "price": "4790"
  },
  "brick-syrove-oplatky-cesnek-100g": {
   "name": "Brick Sýrové Oplatky Česnek 100g",
@@ -2135,12 +2155,12 @@
   "price": "2190"
  },
  "rothmans-demi-ultramarine-106-00-f": {
-  "name": "ROTHMANS DEMI ULTRAMARINE 164.00 U",
+  "name": "CIG.ROTHMANS DEMI ULTRAMARINE 164.00 U",
   "ean": "8595682134553",
   "price": "154486"
  },
  "camel-compact-112-00-f": {
-  "name": "CAMEL COMPACT 164.00 U",
+  "name": "CIG.CAMEL COMPACT 164.00 U",
   "ean": "8594011812988",
   "price": "154354"
  },
@@ -2172,45 +2192,45 @@
  "bom-par-original-50g": {
   "name": "Bohemia Pom-bar 50g original",
   "ean": "8595606203532",
-  "price": "2250"
+  "price": "1990"
  },
  "bom-par-syr-50g": {
   "name": "Bohemia Pom-bar 50g Sýr",
   "ean": "8595606203570",
-  "price": "2250"
+  "price": "1990"
  },
  "pom-bar-kecup-50g": {
   "name": "Bohemia Pom-bar 50g Kečup",
   "ean": "8595606203556",
-  "price": "2250"
+  "price": "1990"
  },
  "bohemia-chips-slanina-140g": {
-  "name": "Bohemia 130g Chips Slanina (18)",
+  "name": "Bohemia chips 130g Slanina &#8211; 18ks/kart",
   "ean": "8595606207042",
-  "price": "2950"
+  "price": "2890"
  },
  "bohemia-chips-solene-140g": {
-  "name": "Bohemia 130g Chips Solené (18)",
+  "name": "Bohemia chips 130g Sůl &#8211; 18ks/kart",
   "ean": "8595606207004",
-  "price": "2950"
+  "price": "2890"
  },
  "bohemia-chips-smetana-a-cibule-70g": {
-  "name": "Bohemia 60g Chips Smetana s Cibule (18)",
+  "name": "Bohemia chips 60g Smetana s Cibule &#8211; 18ks/kart",
   "ean": "8595606206168",
-  "price": "1750"
+  "price": "1690"
  },
  "bohemia-chips-70g": {
-  "name": "Bohemia 60g Chips Slanina (18)",
+  "name": "Bohemia chips 60g Slanina &#8211; 18ks/kart",
   "ean": "8595606206144",
-  "price": "1750"
+  "price": "1690"
  },
  "bohemia-chips-solene-70g": {
-  "name": "Bohemia 60g Chips Solené (18)",
+  "name": "Bohemia chips 60g Sůl &#8211; 18ks/kart",
   "ean": "8595606206106",
-  "price": "1750"
+  "price": "1690"
  },
  "davidoff-evolved-red-116-00-f": {
-  "name": "DAVIDOFF EVOLVED RED 166.00 U",
+  "name": "CIG.DAVIDOFF EVOLVED RED 166.00 U",
   "ean": "4030600266885",
   "price": "156797"
  },
@@ -2250,32 +2270,32 @@
   "price": "3750"
  },
  "winston-superline-silver-111-00-f": {
-  "name": "WINSTON SUPERLINE SILVER 167.00 U",
+  "name": "CIG.WINSTON SUPERLINE SILVER 167.00 U",
   "ean": "8594011812575",
   "price": "157160"
  },
  "winston-superline-option-bez-kapsle-111-00-f": {
-  "name": "WINSTON SUPERLINE GREEN 167.00 U",
+  "name": "CIG.WINSTON SUPERLINE GREEN 167.00 U",
   "ean": "4033100074738",
   "price": "157174"
  },
  "lucky-strike-sc-amber-115-00-f": {
-  "name": "LUCKY STRIKE SC AMBER 171.00 U",
+  "name": "CIG.LUCKY STRIKE SC AMBER 171.00 U",
   "ean": "8595682120419",
   "price": "164342"
  },
  "viceroy-longs-fialova-113-00-f": {
-  "name": "ROTHMANS LONGS VIOLET 167.00 U",
+  "name": "CIG.ROTHMANS LONGS VIOLET 167.00 U",
   "ean": "8595682126367",
   "price": "158025"
  },
  "viceroy-longs-modra-113-00-f": {
-  "name": "ROTHMANS LONGS TOPAZ 167.00 U",
+  "name": "CIG.ROTHMANS LONGS TOPAZ 167.00 U",
   "ean": "8595682126350",
   "price": "158025"
  },
  "davidoff-reach-green-112-00-f": {
-  "name": "DAVIDOFF REACH AMETHYST 159.00 U",
+  "name": "CIG.DAVIDOFF REACH AMETHYST 159.00 U",
   "ean": "4030600270721",
   "price": "150344"
  },
@@ -2292,7 +2312,7 @@
  "tago-trubieky-vanilkovy-170g-x-18ks": {
   "name": "Tago Trubičky 150g Vanilka &#8211; 30ks/kart",
   "ean": "5901356000087",
-  "price": "1990"
+  "price": "1690"
  },
  "ca-bot-nep-vn-400g": {
   "name": "CA &#8211; Bột nếp Vĩnh Thuận 400g",
@@ -2395,14 +2415,14 @@
   "price": "4390"
  },
  "camel-shorts-blue-106-00-z-tt": {
-  "name": "CAMEL SHORTS BLUE 167.00 U",
+  "name": "CIG.CAMEL SHORTS BLUE 167.00 U",
   "ean": "8594011812421",
   "price": "157174"
  },
  "ps-100-blue-104-00-z-tt": {
-  "name": "PS 100 BLUE 160.00 U",
+  "name": "CIG.PS 100 BLUE 165.00 U",
   "ean": "4030600267066",
-  "price": "151467"
+  "price": "156287"
  },
  "ca-tom-the-cvkd-71-90-500g": {
   "name": "CA Tom the cvkd 71/90 500g",
@@ -2452,7 +2472,7 @@
  "gornicky-kabanos-excl-togo-chilli-50g": {
   "name": "Gornicky Kabanos Excl. ToGo Chilli 50g",
   "ean": "5908230522765",
-  "price": "2190"
+  "price": "2390"
  },
  "jp-chenet-merlot-250ml-x-6": {
   "name": "J.P Chenet 0,25L Merlot",
@@ -2565,24 +2585,24 @@
   "price": "4490"
  },
  "giana-tunak-kousky-v-rost-oleji-185g": {
-  "name": "Giana Tunak 170g kousky v rost. oleji",
+  "name": "Giana Tunak 170g kousky v rostlinném v oleji &#8211; 24ks/kart ",
   "ean": "8594012790513",
   "price": "3690"
  },
  "giana-tunak-kousky-ve-vl-stave-185g": {
-  "name": "Giana Tunak 170g kousky ve vl. stave",
+  "name": "Giana Tunak 170g kousky ve vlastní šťávě &#8211; 24ks/kart",
   "ean": "8594012790537",
   "price": "3690"
  },
  "franz-josef-olivovy-olej-extra-virgin-250-ml": {
   "name": "FJK Olivový olej 250ml extra virgin &#8211; 12ks/kart",
   "ean": "8595241510484",
-  "price": "8490"
+  "price": "8990"
  },
  "franz-josef-olivovy-olej-extra-vir-500ml": {
-  "name": "AA FJK Olivový olej 500ml extra virgin &#8211; 12ks/kart",
+  "name": "FJK Olivový olej 500ml extra virgin &#8211; 12ks/kart",
   "ean": "2000005200007",
-  "price": "11990"
+  "price": "14990"
  },
  "kokosove-mleko-17-18-fat-165-ml": {
   "name": "ASIA TIME Kokosové mléko 17 &#8211; 18 % FAT 165ml &#8211; 12ks/kart",
@@ -2605,12 +2625,12 @@
   "price": "4490"
  },
  "giana-tunak-drt-v-oleji-185-g": {
-  "name": "Giana Tuňák 170g drť v oleji &#8211; 24ks/kart",
+  "name": "Giana Tuňák 170g drcený v rostlinném v oleji &#8211; 24ks/kart",
   "ean": "8594012790018",
   "price": "2490"
  },
  "giana-tunak-drt-vlastni-stava-185g": {
-  "name": "Giana Tuňák 170g drť Vlastní štáva &#8211; 24ks/kart",
+  "name": "Giana Tuňák 170g drcený ve vlastní šťávě &#8211; 24ks/kart",
   "ean": "8594012790032",
   "price": "2490"
  },
@@ -2692,10 +2712,10 @@
  "t-javaanse-30g-classic-1-4-203-00-z": {
   "name": "TABÁK JAVAANSE 30G CLASSIC",
   "ean": "8595682105966",
-  "price": "29931"
+  "price": "31200"
  },
  "winston-100-classic-red-105-00-z-tt": {
-  "name": "WINSTON 100 RED 166.00 U",
+  "name": "CIG.WINSTON 100 RED 166.00 U",
   "ean": "4033100074912",
   "price": "156218"
  },
@@ -3285,9 +3305,9 @@
   "price": "23200"
  },
  "t-west-blue-105g-450-00-z-tt": {
-  "name": "TABÁK WEST BLUE 99G",
+  "name": "TABÁK WEST BLUE 98G",
   "ean": "1044700132455",
-  "price": "60650"
+  "price": "72800"
  },
  "t-west-blue-60g-263-00-z-tt": {
   "name": "TABÁK WEST BLUE 54G",
@@ -3337,7 +3357,7 @@
  "t-ps-black-50g-217-00-z-tt": {
   "name": "TABÁK PS BLACK 45G",
   "ean": "4030700120858",
-  "price": "33500"
+  "price": "34200"
  },
  "t-ps-black-30g-132-00-z-tt": {
   "name": "TABÁK PS BLACK 30G",
@@ -3347,17 +3367,17 @@
  "t-lucky-strike-at-ryo-30g-187-00-z-6-ev-tt": {
   "name": "TABÁK LUCKY STRIKE 30G AT RYO",
   "ean": "8595682107700",
-  "price": "28090"
+  "price": "29500"
  },
  "t-javaanse-30g-tembaco-jongens-3-4-203-00-z-ev-6-tt": {
   "name": "TABÁK JAVAANSE 30G TEMBACO JONGENS",
   "ean": "8595682107656",
-  "price": "29931"
+  "price": "31200"
  },
  "t-javaanse-30g-halfzware-jongens-1-2-203-00-z-6": {
   "name": "TABÁK JAVAANSE 30G HALFZWARE JONGENS",
   "ean": "8595682107649",
-  "price": "29931"
+  "price": "31200"
  },
  "t-golden-virginia-50g-330-00-z-tt": {
   "name": "TABÁK GOLDEN VIRGINIA 50G",
@@ -3380,377 +3400,377 @@
   "price": "24000"
  },
  "winston-silver-101-00-z-tt": {
-  "name": "WINSTON SILVER 166.00 U",
+  "name": "CIG.WINSTON SILVER 166.00 U",
   "ean": "4033100054884",
   "price": "156219"
  },
  "winston-red-shorts-97-00-z-tt": {
-  "name": "WINSTON COMPACT GREEN 164.00 U",
+  "name": "CIG.WINSTON COMPACT GREEN 164.00 U",
   "ean": "4033100097591",
   "price": "154351"
  },
  "winston-classic-red-101-00-z-tt": {
-  "name": "WINSTON RED 166.00 U",
+  "name": "CIG.WINSTON RED 166.00 U",
   "ean": "4033100002939",
   "price": "156233"
  },
  "winston-balanced-blue-101-00-z-tt": {
-  "name": "WINSTON BLUE 166.00 U",
+  "name": "CIG.WINSTON BLUE 166.00 U",
   "ean": "4033100000805",
   "price": "156233"
  },
  "winston-100-silver-101-00-z-tt": {
-  "name": "WINSTON 100 SILVER 166.00 U",
+  "name": "CIG.WINSTON 100 SILVER 166.00 U",
   "ean": "4033100054853",
   "price": "156219"
  },
  "winston-100-balanced-blue-101-00-z-tt": {
-  "name": "WINSTON 100 BLUE 166.00 U",
+  "name": "CIG.WINSTON 100 BLUE 166.00 U",
   "ean": "4033100054822",
   "price": "156218"
  },
  "west-silver-plus-100-00-z-tt": {
-  "name": "WEST SILVER PLUS 141.00 Q",
+  "name": "CIG.WEST SILVER PLUS 141.00 Q",
   "ean": "4030600292976",
   "price": "133096"
  },
  "vogue-lacig-lilas-109-00-z-tt": {
-  "name": "VOGUE LACIG LILAS 169.00 U",
+  "name": "CIG.VOGUE LACIG LILAS 169.00 U",
   "ean": "8595682134461",
   "price": "160655"
  },
  "vogue-lacig-bleue-109-00-z-tt": {
-  "name": "VOGUE LACIG BLEUE 169.00 U",
+  "name": "CIG.VOGUE LACIG BLEUE 169.00 U",
   "ean": "8595682134454",
   "price": "160513"
  },
  "viceroy-plus-modra-filter-103-00-z-tt": {
-  "name": "ROTHMANS PREMIUM BLUE 166.00 U",
+  "name": "CIG.ROTHMANS PREMIUM BLUE 166.00 U",
   "ean": "8595682121454",
   "price": "157131"
  },
  "viceroy-plus-filter-stribrna-103-00-z-tt": {
-  "name": "ROTHMANS PREMIUM SILVER 166.00 U",
+  "name": "CIG.ROTHMANS PREMIUM SILVER 166.00 U",
   "ean": "8595682121478",
   "price": "157131"
  },
  "viceroy-classic-red-ks-105-00-z-tt": {
-  "name": "VICEROY CLASSIC RED KS 166.00 U",
+  "name": "CIG.VICEROY CLASSIC RED KS 166.00 U",
   "ean": "8595682109124",
   "price": "157210"
  },
  "viceroy-classic-blue-ks-105-00-z-tt": {
-  "name": "VICEROY CLASSIC BLUE KS 166.00 U",
+  "name": "CIG.VICEROY CLASSIC BLUE KS 166.00 U",
   "ean": "8595682109131",
   "price": "157210"
  },
  "viceroy-40-s-line-red-198-00-z-tt": {
-  "name": "ROTHMANS 40 S-LINE RED 310.00 U",
+  "name": "CIG.ROTHMANS 40 S-LINE RED 310.00 U",
   "ean": "8595682121416",
   "price": "235474"
  },
  "viceroy-40-s-line-blue-206-00-z-tt": {
-  "name": "ROTHMANS 40 S-LINE BLUE 310.00 U",
+  "name": "CIG.ROTHMANS 40 S-LINE BLUE 310.00 U",
   "ean": "8595682135970",
   "price": "235474"
  },
  "chesterfield-red-rs-box-20-101-00-z-tt": {
-  "name": "CHESTERFIELD RS 70 RED 166.00 U",
+  "name": "CIG.CHESTERFIELD RS 70 RED 166.00 U",
   "ean": "8595234379968",
   "price": "156896"
  },
  "sparta-ks-classic-box-111-00-z-tt": {
-  "name": "SPARTA RED 176.00 U",
+  "name": "CIG.SPARTA RED 176.00 U",
   "ean": "8595234394732",
   "price": "166267"
  },
  "sparta-ks-blue-box-111-00-z-tt": {
-  "name": "SPARTA BLUE 176.00 U",
+  "name": "CIG.SPARTA BLUE 176.00 U",
   "ean": "8595234380568",
   "price": "166267"
  },
  "rothmans-of-london-ks-red-101-00-z-tt": {
-  "name": "ROTHMANS KS RED 166.00 U",
+  "name": "CIG.ROTHMANS KS RED 166.00 U",
   "ean": "8595682134508",
   "price": "157214"
  },
  "rothmans-of-london-demi-blue-97-00-z-tt": {
-  "name": "ROTHMANS DEMI BLUE 164.00 U",
+  "name": "CIG.ROTHMANS DEMI BLUE 164.00 U",
   "ean": "8595682127005",
   "price": "154486"
  },
  "rothmans-100-of-london-red-105-00-z-tt": {
-  "name": "ROTHMANS 100 OF LONDON RED 166.00 U",
+  "name": "CIG.ROTHMANS 100 OF LONDON RED 166.00 U",
   "ean": "8595682121348",
   "price": "157214"
  },
  "rothmans-100-of-london-blue-105-00-z-tt": {
-  "name": "ROTHMANS 100 OF LONDON BLUE 166.00 U",
+  "name": "CIG.ROTHMANS 100 OF LONDON BLUE 166.00 U",
   "ean": "8595682110397",
   "price": "157214"
  },
  "ps-blue-100-00-z-tt": {
-  "name": "PS BLUE 160.00 U",
+  "name": "CIG.PS BLUE 160.00 U",
   "ean": "4030600293362",
   "price": "151467"
  },
  "ps-black-100-00-z-tt": {
-  "name": "PS BLACK 160.00 U",
+  "name": "CIG.PS BLACK 165.00 U",
   "ean": "4030600267097",
-  "price": "151467"
+  "price": "156287"
  },
  "ps-100-blue-100-00-z-tt": {
-  "name": "PS 100 BLACK 160.00 U",
+  "name": "CIG.PS 100 BLACK 165.00 U",
   "ean": "4030600267035",
-  "price": "151467"
+  "price": "156287"
  },
  "petra-ks-klasik-rcb-modra-107-00-z-tt": {
-  "name": "PETRA KLASIK MODRÝ 166.00 U",
+  "name": "CIG.PETRA KLASIK MODRÝ 166.00 U",
   "ean": "8595234394763",
   "price": "156896"
  },
  "petra-ks-klasik-rcb-cervena-107-00-z-tt": {
-  "name": "PETRA KLASIK ČERVENÁ 166.00 U",
+  "name": "CIG.PETRA KLASIK ČERVENÁ 166.00 U",
   "ean": "8595234380599",
   "price": "156896"
  },
  "mark-adams-red-no-1-97-00-z-tt": {
-  "name": "MARK ADAMS RED 154.00 U",
+  "name": "CIG.MARK ADAMS RED 154.00 U",
   "ean": "8594060363738",
   "price": "146045"
  },
  "mark-adams-100s-red-no-1-97-00-z-tt": {
-  "name": "MARK ADAMS 100 RED 154.00 U",
+  "name": "CIG.MARK ADAMS 100 RED 154.00 U",
   "ean": "8594060364360",
   "price": "146045"
  },
  "mark-adams-100s-gold-no-1-97-00-z-tt": {
-  "name": "MARK ADAMS 100 GOLD 154.00 U",
+  "name": "CIG.MARK ADAMS 100 GOLD 154.00 U",
   "ean": "4260667464201",
   "price": "146045"
  },
  "marlboro-ks-gold-3-0-orig-box-119-00-z-tt": {
-  "name": "MARLBORO GOLD KS 184.00 U",
+  "name": "CIG.MARLBORO GOLD KS 184.00 U",
   "ean": "8595234379159",
   "price": "173758"
  },
  "lm-red-label-ks-rcb-108-00-z-tt": {
-  "name": "LM RED LABEL 173.00 U",
+  "name": "CIG.LM RED LABEL 173.00 U",
   "ean": "8595701545469",
   "price": "163444"
  },
  "marlboro-touch-core-fwd-ks-bot-sli-112-00-z-tt": {
-  "name": "MARLBORO KS TOUCH CORE 175.00 U",
+  "name": "CIG.MARLBORO KS TOUCH CORE 175.00 U",
   "ean": "8595234390215",
   "price": "165322"
  },
  "lm-link-ssl-100-violet-box-113-00-z-tt": {
-  "name": "LM LINK 100 VIOLET 167.00 U",
+  "name": "CIG.LM LINK 100 VIOLET 167.00 U",
   "ean": "8595234380476",
   "price": "157841"
  },
  "marlboro-rs-70-red-fwd-box-104-00-z-tt": {
-  "name": "MARLBORO RS 70 RED 169.00 U",
+  "name": "CIG.MARLBORO RS 70 RED 169.00 U",
   "ean": "8595234379364",
   "price": "159686"
  },
  "lm-link-ssl-100-blue-box-113-00-z-tt": {
-  "name": "LM LINK SSL 100 BLUE 167.00 U",
+  "name": "CIG.LM LINK SSL 100 BLUE 167.00 U",
   "ean": "8595234380445",
   "price": "157841"
  },
  "marlboro-ks-touch-rct-2-0-sli-112-00-z-tt": {
-  "name": "MARLBORO KS TOUCH 175.00 U",
+  "name": "CIG.MARLBORO KS TOUCH 175.00 U",
   "ean": "8595234390208",
   "price": "165322"
  },
  "lm-ks-sof-blue-label-107-00-z-tt": {
-  "name": "LM SOFT BLUE 163.00 U",
+  "name": "CIG.LM SOFT BLUE 163.00 U",
   "ean": "8595234380506",
   "price": "154212"
  },
  "marlboro-ks-sof-red-fwd-111-00-z-tt": {
-  "name": "MARLBORO SOFT RED 176.00 U",
+  "name": "CIG.MARLBORO SOFT RED 176.00 U",
   "ean": "8595234390161",
   "price": "166267"
  },
  "marlboro-ks-sof-gold-3-0-orig-115-00-z-tt": {
-  "name": "MARLBORO SOFT GOLD 176.00 U",
+  "name": "CIG.MARLBORO SOFT GOLD 176.00 U",
   "ean": "8595234390178",
   "price": "166267"
  },
  "lm-ks-loft-blue-true-bot-sli-107-00-z-tt": {
-  "name": "LM LOFT BLUE 166.00 U",
+  "name": "CIG.LM LOFT BLUE 166.00 U",
   "ean": "8595234380414",
   "price": "156896"
  },
  "marlboro-ks-red-fwd-box-123-00-z-tt": {
-  "name": "MARLBORO RED KS 184.00 U",
+  "name": "CIG.MARLBORO RED KS 184.00 U",
   "ean": "8595234379128",
   "price": "173758"
  },
  "lm-ks-loft-aqua-bot-sli-103-00-z-tt": {
-  "name": "LM LOFT AQUA 166.00 U",
+  "name": "CIG.LM LOFT AQUA 166.00 U",
   "ean": "8595234376578",
   "price": "156896"
  },
  "lm-blue-label-ks-rcb-112-00-z-tt": {
-  "name": "LM 38S LOFT BLUE 299.00 U",
+  "name": "CIG.LM 38S LOFT BLUE 299.00 U",
   "ean": "8595234380322",
   "price": "141369"
  },
  "lucky-strike-sc-red-106-00-z-tt": {
-  "name": "LUCKY STRIKE SC RED 171.00 U",
+  "name": "CIG.LUCKY STRIKE SC RED 171.00 U",
   "ean": "8595682132535",
   "price": "161150"
  },
  "lucky-strike-red-113-00-z-tt": {
-  "name": "LUCKY STRIKE RED 178.00 U",
+  "name": "CIG.LUCKY STRIKE RED 178.00 U",
   "ean": "8595682127289",
   "price": "167038"
  },
  "lucky-strike-amber-113-00-z-tt": {
-  "name": "LUCKY STRIKE AMBER 178.00 U",
+  "name": "CIG.LUCKY STRIKE AMBER 178.00 U",
   "ean": "8595682132528",
   "price": "167529"
  },
  "ld-violet-102-00-z-tt": {
-  "name": "LD VIOLET 167.00 U",
+  "name": "CIG.LD VIOLET 167.00 U",
   "ean": "8594011816221",
   "price": "157267"
  },
  "ld-pink-102-00-z-tt": {
-  "name": "LD PINK 167.00 U",
+  "name": "CIG.LD PINK 167.00 U",
   "ean": "8594011816238",
   "price": "157267"
  },
  "chesterfield-ks-red-crown-3-0-box-107-00-z-tt": {
-  "name": "MARLBORO SELECTO GOLD 164.00 U",
+  "name": "CIG.MARLBORO SELECTO GOLD 164.00 U",
   "ean": "8595234390222",
   "price": "155024"
  },
  "kent-core-blue-127-00-z-tt": {
-  "name": "KENT CORE BLUE 187.00 U",
+  "name": "CIG.KENT CORE BLUE 187.00 U",
   "ean": "8595682120358",
   "price": "176998"
  },
  "chesterfield-ks-blue-crown-3-0-box-107-00-z-tt": {
-  "name": "MARLBORO SELECTO PURPLE 164.00 U",
+  "name": "CIG.MARLBORO SELECTO PURPLE 164.00 U",
   "ean": "8595234390246",
   "price": "155024"
  },
  "karelia-s-06-mg-100-00-z-tt": {
-  "name": "KARELIA S 0,6 MG 147.00 U",
+  "name": "CIG.KARELIA S 0,6 MG 147.00 U",
   "ean": "5201333085275",
   "price": "140112"
  },
  "karelia-m-m-100-00-z-tt": {
-  "name": "KARELIA M (M) 147.00 U",
+  "name": "CIG.KARELIA M 147.00 U",
   "ean": "5201333888715",
   "price": "140112"
  },
  "karelia-i-01-mg-100-00-z-tt": {
-  "name": "KARELIA I 0,1 MG 147.00 U",
+  "name": "CIG.KARELIA I 0,1 MG 147.00 U",
   "ean": "5201333085039",
   "price": "140112"
  },
  "chesterfield-28s-red-crown-3-0-ks-bom-145-00-z-tt": {
-  "name": "CHESTERFIELD MAXI RED 215.00 U",
+  "name": "CIG.CHESTERFIELD MAXI RED 215.00 U",
   "ean": "8595234390291",
   "price": "162623"
  },
  "chesterfield-28s-blue-crown-3-0-ks-bom-145-00-z-tt": {
-  "name": "CHESTERFIELD MAX BLUE 215.00 U",
+  "name": "CIG.CHESTERFIELD MAX BLUE 215.00 U",
   "ean": "8595701555017",
   "price": "162623"
  },
  "hb-classic-blend-101-00-z-tt": {
-  "name": "HB CLASSIC 166.00 U",
+  "name": "CIG.HB CLASSIC 166.00 U",
   "ean": "8595682124738",
   "price": "157114"
  },
  "gauloises-red-blondes-111-00-z-tt": {
-  "name": "GAULOISES RED BLONDES 176.00 U",
+  "name": "CIG.GAULOISES RED BLONDES 176.00 U",
   "ean": "4030600258804",
   "price": "166767"
  },
  "hb-100s-classic-blend-101-00-z-tt": {
-  "name": "HB 100 CLASSIC BLEND 166.00 U",
+  "name": "CIG.HB 100 CLASSIC BLEND 166.00 U",
   "ean": "8595682121652",
   "price": "157119"
  },
  "gauloises-blue-blondes-111-00-z-tt": {
-  "name": "GAULOISES BLUE BLONDES 176.00 U",
+  "name": "CIG.GAULOISES BLUE BLONDES 176.00 U",
   "ean": "4030600267844",
   "price": "166767"
  },
  "dunhill-international-142-00-z-tt": {
-  "name": "DUNHILL INTERNATIONAL 202.00 U",
+  "name": "CIG.DUNHILL INTERNATIONAL 202.00 U",
   "ean": "8595682120341",
   "price": "190202"
  },
  "davidoff-white-reshape-112-00-z-tt": {
-  "name": "DAVIDOFF WHITE RESHAPE 175.00 U",
+  "name": "CIG.DAVIDOFF WHITE RESHAPE 175.00 U",
   "ean": "4030600293621",
   "price": "165232"
  },
  "davidoff-gold-sl-line-125-00-z-tt": {
-  "name": "DAVIDOFF SLIM GOLD 188.00 U",
+  "name": "CIG.DAVIDOFF SLIM GOLD 188.00 U",
   "ean": "4030600293577",
   "price": "177704"
  },
  "camel-yellow-filters-soft-106-00-z-tt": {
-  "name": "CAMEL YELLOW SOFT 171.00 U",
+  "name": "CIG.CAMEL YELLOW SOFT 171.00 U",
   "ean": "4033100093784",
   "price": "160924"
  },
  "davidoff-gold-123-00-z-tt": {
-  "name": "DAVIDOFF GOLD 185.00 U",
+  "name": "CIG.DAVIDOFF GOLD 185.00 U",
   "ean": "4030600287477",
   "price": "174674"
  },
  "camel-white-83mm-104-00-z-tt": {
-  "name": "CAMEL WHITE 167.00 U",
+  "name": "CIG.CAMEL WHITE 167.00 U",
   "ean": "4033100037153",
   "price": "157160"
  },
  "davidoff-classic-123-00-z-tt": {
-  "name": "DAVIDOFF CLASSIC 185.00 U",
+  "name": "CIG.DAVIDOFF CLASSIC 185.00 U",
   "ean": "4030600293751",
   "price": "174674"
  },
  "camel-shorts-yellow-filters-102-00-z-tt": {
-  "name": "CAMEL SHORTS YELLOW 167.00 U",
+  "name": "CIG.CAMEL SHORTS YELLOW 167.00 U",
   "ean": "4033100068058",
   "price": "157174"
  },
  "camel-filters-yellow-113-00-z-tt": {
-  "name": "CAMEL YELLOW 178.00 U",
+  "name": "CIG.CAMEL YELLOW 178.00 U",
   "ean": "4033100003646",
   "price": "167082"
  },
  "davidoff-black-reshape-112-00-z-tt": {
-  "name": "DAVIDOFF BLACK 175.00 U",
+  "name": "CIG.DAVIDOFF BLACK 175.00 U",
   "ean": "4030600293607",
   "price": "165232"
  },
  "camel-blue-113-00-z-tt": {
-  "name": "CAMEL BLUE 178.00 U",
+  "name": "CIG.CAMEL BLUE 178.00 U",
   "ean": "4033100001864",
   "price": "167085"
  },
  "camel-black-83mm-104-00-z-tt": {
-  "name": "CAMEL BLACK 167.00 U",
+  "name": "CIG.CAMEL BLACK 167.00 U",
   "ean": "4033100037337",
   "price": "157160"
  },
  "benson-a-hedges-22s-silver-110-00-z-tt": {
-  "name": "WINSTON BLACK 151.00 R",
+  "name": "CIG.WINSTON BLACK 151.00 R",
   "ean": "4033100018886",
   "price": "142321"
  },
  "camel-activate-bez-kapsle-109-00-z-tt": {
-  "name": "CAMEL ACTIVATE 174.00 U",
+  "name": "CIG.CAMEL ACTIVATE 174.00 U",
   "ean": "8594011816139",
   "price": "163327"
  },
@@ -3887,7 +3907,7 @@
  "krahulik-parky-se-syrem-200g": {
   "name": "Krahulík párky se sýrem 200g",
   "ean": "2000004440008",
-  "price": "3090"
+  "price": "3190"
  },
  "ad-veprove-rolky-chili-cesnek-nem-chua-200g": {
   "name": "AD vepřové rolky chili česnek &#8211; nem chua 200g",
@@ -3962,7 +3982,7 @@
  "krahulik-sunkove-parecky-200g": {
   "name": "Krahulík šunkové párečky 200g",
   "ean": "8594014096231",
-  "price": "3290"
+  "price": "3490"
  },
  "australian-bush-shiraz-6-x-750ml": {
   "name": "AUSTRALIAN BUSH Shiraz 6 x 750ml",
@@ -4002,7 +4022,7 @@
  "haribo-primavera-200g": {
   "name": "Haribo  175g primavera &#8211; 18ks/krt",
   "ean": "4001686405093",
-  "price": "2690"
+  "price": "2390"
  },
  "haribo-tropi-fruiti-100g": {
   "name": "Haribo 100g Tropi fruiti &#8211; 30ks/kart",
@@ -4057,32 +4077,32 @@
  "kmotr-selsky-salam-75g": {
   "name": "Kmotr Selský salám 75g (bal./10kus)",
   "ean": "8594007487633",
-  "price": "1990"
+  "price": "1790"
  },
  "brick-kts-s-paprikou-100g": {
   "name": "Brick KTS s paprikou 100g",
   "ean": "8594045601916",
-  "price": "1490"
+  "price": "1590"
  },
  "brick-kts-se-sunkou-100g-2": {
   "name": "Brick KTS se šunkou 100g",
   "ean": "8594045601596",
-  "price": "1490"
+  "price": "1590"
  },
  "brick-kts-se-sunkou-100g": {
   "name": "Brick KTS s goudou 100g",
   "ean": "8594045601558",
-  "price": "1490"
+  "price": "1590"
  },
  "brick-kts-kremovy-100g": {
   "name": "Brick KTS krémový 100g",
   "ean": "8594045601572",
-  "price": "1490"
+  "price": "1590"
  },
  "madeta-pomazanka-cesnek-a-jarni-cibulka-150-g": {
   "name": "Madeta pomazánka česnek a jarní cibulka 150g X6",
   "ean": "8593803442938",
-  "price": "2950"
+  "price": "3190"
  },
  "zs-cheddar-blocek-200g": {
   "name": "ZS Cheddar bloček 200g",
@@ -4172,7 +4192,7 @@
  "tago-trubicky-s-kokosovou-prichuti-170g-x-18ks": {
   "name": "Tago Trubičky 150g Kokos &#8211; 30ks/kart",
   "ean": "5901356000063",
-  "price": "1990"
+  "price": "1690"
  },
  "orbit-winterfrost-30-x-14g": {
   "name": "Orbit WinterFrest 30 x 14g",
@@ -4667,7 +4687,7 @@
  "mila-rezy-50g-x-56ks": {
   "name": "Mila řezy 50g x 56ks",
   "ean": "8584004030000",
-  "price": "1250"
+  "price": "1350"
  },
  "lh-my-gao-chu-400g": {
   "name": "CA &#8211; My gao chu 500g",
@@ -5397,7 +5417,7 @@
  "haribo-happy-cherries-200g": {
   "name": "Haribo  175g Happy Cherries &#8211; 30ks/krt",
   "ean": "90234975309509",
-  "price": "2690"
+  "price": "2390"
  },
  "haribo-wummis-200g": {
   "name": "Haribo  200g Wummis &#8211; 30ks/kart",
@@ -5495,9 +5515,9 @@
   "price": "1490"
  },
  "haribo-anguria-200g-cz": {
-  "name": "Haribo  175g Anguria &#8211; 24ks/krt",
+  "name": "Haribo  175g Wasser Melonen &#8211; 24ks/krt",
   "ean": "84624617650285",
-  "price": "2690"
+  "price": "2390"
  },
  "leco-vinohradska-sunka-nej-jakosti-sh-100g": {
   "name": "LECO Vinohradská šunka shaved 100g (bal./12ks)",
@@ -5617,17 +5637,17 @@
  "imco-welcome-gouda-pl-200g": {
   "name": "IMCO Welcome Gouda pl. 200g",
   "ean": "3123930920099",
-  "price": "4690"
+  "price": "4990"
  },
  "imco-welcome-emmental-pl-200g": {
   "name": "IMCO Welcome Emmental Pl. 200g",
   "ean": "3123930920075",
-  "price": "4690"
+  "price": "4990"
  },
  "imco-welcome-cheddar-pl-200g": {
   "name": "IMCO Welcome Cheddar Pl. 200g",
   "ean": "3123930920082",
-  "price": "4690"
+  "price": "4990"
  },
  "imco-red-leicester-cheese-200g": {
   "name": "IMCO Red Leicester Cheese 200g",
@@ -5702,7 +5722,7 @@
  "kmotr-lovecky-salam-300g": {
   "name": "Kmotr Lovecký salám 300g",
   "ean": "8594007484779",
-  "price": "6990"
+  "price": "5990"
  },
  "olma-bio-bily-jogurt-150g": {
   "name": "Olma BIO bílý jogurt 150g X20",
@@ -5937,7 +5957,7 @@
  "kmotr-pepper-krajeny-75g": {
   "name": "Kmotr Pepper krájený 75g (bal./10kus)",
   "ean": "8594007486278",
-  "price": "2350"
+  "price": "1990"
  },
  "kmotr-myslivecka-klobasa-180g": {
   "name": "Kmotr Myslivecká klobása 180g",
@@ -5957,7 +5977,7 @@
  "kmotr-flamender-krajeny-75g": {
   "name": "Kmotr Flamender krájený 75g (bal./10kus)",
   "ean": "8594007486834",
-  "price": "1790"
+  "price": "1990"
  },
  "kmotr-kmotrovky-cesnekove-100g": {
   "name": "Kmotr Kmotrovky česnekové 100g",
@@ -6427,7 +6447,7 @@
  "vh-che-dac-san-200g": {
   "name": "CA &#8211; Trà đặc sản Thái Nguyên 200g (màu vàng)",
   "ean": "8936154950415",
-  "price": "3990"
+  "price": "4990"
  },
  "vh-ca-phao-trang-365g": {
   "name": "CA &#8211; Cà pháo trắng 365g",
@@ -6722,32 +6742,32 @@
  "bohemilk-cerstve-mleko-plnotuk-35-1l": {
   "name": "AAA BoheMilk Čerstvé Mléko plnotuk 3,5% 1L",
   "ean": "8592206344023",
-  "price": "2390"
+  "price": "2490"
  },
  "bohemilk-opoc-jogurt-vanilka-150g": {
   "name": "BoheMilk Opoč.jogurt vanilka 150g X10",
   "ean": "8592206342845",
-  "price": "1550"
+  "price": "1490"
  },
  "bohemilk-opoc-jogurt-jahoda-150g": {
   "name": "BoheMilk Opoč.jogurt jahoda 150g X10",
   "ean": "8592206342807",
-  "price": "1550"
+  "price": "1490"
  },
  "bohemilk-opoc-jogurt-bros-merun-150g": {
   "name": "BoheMilk Opoč.jogurt bros-merun 150g X10",
   "ean": "8592206342814",
-  "price": "1550"
+  "price": "1490"
  },
  "bohemilk-opoc-jogurt-boruvka-150g": {
   "name": "BoheMilk Opoč.jogurt borůvka 150g X10",
   "ean": "8592206342821",
-  "price": "1550"
+  "price": "1490"
  },
  "bohemilk-conde-slad-mleko-400g": {
   "name": "BoheMilk Conde slad.mléko 400g",
   "ean": "8592206673017",
-  "price": "4090"
+  "price": "4250"
  },
  "bohemilk-caramelo-conde-397g": {
   "name": "BoheMilk Caramelo Conde 397g",
@@ -6757,7 +6777,7 @@
  "kmotr-dunajska-klobasa-180g": {
   "name": "Kmotr Dunajská Klobása 180g",
   "ean": "8594007482652",
-  "price": "3590"
+  "price": "4790"
  },
  "cerstve-pekar-drozdi-42g": {
   "name": "Čerstvé pekař. droždí 42g X24",
@@ -6792,7 +6812,7 @@
  "kmotr-kromerizsky-uherak-300g": {
   "name": "Kmotr Kroměřížský Uherák 300g",
   "ean": "8594007489170",
-  "price": "7490"
+  "price": "5990"
  },
  "pribinaeek-mix-vani-jaho-125g": {
   "name": "Pribináček MIX Vani &#8211; čoko 125g X15",
@@ -6862,12 +6882,12 @@
  "krahulik-videnske-parky-200g": {
   "name": "Krahulík Vídeňské párky 200g",
   "ean": "8594014093445",
-  "price": "2890"
+  "price": "2990"
  },
  "krahulik-klob-lucifer-170g": {
   "name": "Krahulík Klob.Lucifer 170g",
   "ean": "8594001783038",
-  "price": "3290"
+  "price": "3390"
  },
  "krahulik-klob-gombasecka-170g": {
   "name": "Krahulík Klob.Gombasecká 170g",
@@ -6877,7 +6897,7 @@
  "krahulik-chamburizo-klobasa-170g": {
   "name": "Krahulík Chamburizo klobása 170g",
   "ean": "8594001785483",
-  "price": "3990"
+  "price": "3590"
  },
  "leco-sunkove-koleno-shaved-100g": {
   "name": "LECO Šunkové Koleno Shaved 100g (bal./12ks)",
@@ -6912,7 +6932,7 @@
  "leco-veprova-sunka-100g": {
   "name": "LECO Vepřová Šunka 100g (bal./15ks)",
   "ean": "8594026121211",
-  "price": "1790"
+  "price": "1690"
  },
  "leco-kur-prs-sunka-zau-shaved-100g": {
   "name": "LECO Kuřečí Prsní Šunka Zau. Shaved 100g (bal./12ks)",
@@ -7092,7 +7112,7 @@
  "madeta-pomaz-niva-150g": {
   "name": "Madeta Pomaz. Niva 150g X6",
   "ean": "8593803442846",
-  "price": "2950"
+  "price": "3190"
  },
  "philadelphia-pazitka-125g": {
   "name": "Philadelphia pažitka 125g X6",
@@ -7137,12 +7157,12 @@
  "madeland-ts-125g": {
   "name": "Madeland TS 125g X6",
   "ean": "8593803442945",
-  "price": "2650"
+  "price": "2790"
  },
  "romadur-ts-125g": {
   "name": "Romadur TS 125g X6",
   "ean": "8593803347790",
-  "price": "2650"
+  "price": "2790"
  },
  "nowaco-sardelova-pasta-60g": {
   "name": "Nowaco Sardelová pasta 60g",
@@ -7152,7 +7172,7 @@
  "madeta-pomaz-sunka-150g": {
   "name": "Madeta Pomaz. Šunka 150g X6",
   "ean": "8593803442914",
-  "price": "2950"
+  "price": "3190"
  },
  "madeta-pomaz-pazitka-150g": {
   "name": "Madeta Pomaz. Pažitka 150g X6",
@@ -7162,12 +7182,12 @@
  "madeta-pomaz-kren-150g": {
   "name": "Madeta Pomaz. Křen 150g X6",
   "ean": "8593803442877",
-  "price": "2950"
+  "price": "3190"
  },
  "madeta-pomaz-bez-prichuti-150g": {
   "name": "Madeta Pomaz. bez příchuti. 150g X6",
   "ean": "8593803441177",
-  "price": "2950"
+  "price": "3190"
  },
  "nowaco-a-la-losos-pomazanka-100g": {
   "name": "Nowaco Á la losos Pomazánka 100g X8",
@@ -7327,7 +7347,7 @@
  "dzk-kur-parky-videnske-200g": {
   "name": "DZK Kuř. Párky Vídeňské 200g",
   "ean": "8594010694288",
-  "price": "2390"
+  "price": "2490"
  },
  "ponnath-zampion-salam-100g": {
   "name": "Ponnath žampion. salám 100g",
@@ -7402,27 +7422,27 @@
  "dzk-kureci-jemne-parky-250g": {
   "name": "DZK Kuřecí Jemné Párky 250g",
   "ean": "8594010692635",
-  "price": "1750"
+  "price": "1990"
  },
  "dzk-kureci-uzena-stehna-340g": {
   "name": "DZK Kuřecí Uzená Stehna 340g",
   "ean": "8594010693250",
-  "price": "3790"
+  "price": "4290"
  },
  "kmotr-paprikas300g": {
   "name": "Kmotr Paprikáš 300g",
   "ean": "8594007486476",
-  "price": "6990"
+  "price": "5990"
  },
  "kmotr-polican-300g": {
   "name": "Kmotr Poličan 300g",
   "ean": "8594007484182",
-  "price": "6990"
+  "price": "5990"
  },
  "kmotr-kromerizska-vysocina-300g": {
   "name": "Kmotr Kroměřížská Vysočina 300g",
   "ean": "8594007484267",
-  "price": "6090"
+  "price": "5090"
  },
  "syr-grana-padano-200-g": {
   "name": "Sýr Grana Padano 200 g",
@@ -7482,7 +7502,7 @@
  "dzk-kureci-debrecinska-kraj-100g": {
   "name": "DZK Kuřecí Debrecínská kraj. 100g",
   "ean": "8594010694820",
-  "price": "1850"
+  "price": "1690"
  },
  "dzk-kureci-prsni-sunka-100g": {
   "name": "DZK Kuřecí Prsní Šunka 100g",
@@ -7572,22 +7592,22 @@
  "kravik-mleko-jahoda-15-250-ml": {
   "name": "Kravík Mléko Jahoda 1,5% 250ml",
   "ean": "8594006844758",
-  "price": "1590"
+  "price": "1390"
  },
  "kravik-mleko-cokolada-15-250-ml": {
   "name": "Kravík Mléko Čokoláda 1,5% 250ml",
   "ean": "8594006844703",
-  "price": "1590"
+  "price": "1390"
  },
  "kravik-mleko-banan-15-250ml": {
   "name": "Kravík Mléko Banán 1,5% 250ml",
   "ean": "8594006844604",
-  "price": "1590"
+  "price": "1390"
  },
  "kravik-mleko-vanilka-15-250ml": {
   "name": "Kravík Mléko Vanilka 1,5% 250ml",
   "ean": "8594006844659",
-  "price": "1590"
+  "price": "1390"
  },
  "pikao-9-150g-x12": {
   "name": "Pikao 8% 150g",
@@ -7602,7 +7622,7 @@
  "piknik-8-75g-x24": {
   "name": "Piknik 8% 75g",
   "ean": "8594006841115",
-  "price": "2190"
+  "price": "1990"
  },
  "pikao-8-75g-x24": {
   "name": "Pikao 8% 75g",
@@ -7617,7 +7637,7 @@
  "florian-mix-8-150g-jahmerorbor": {
   "name": "Florian MIX 8% 150g",
   "ean": "8593807569907",
-  "price": "1290"
+  "price": "1190"
  },
  "activia-napoj-malina-gran-jablko-310g": {
   "name": "Activia Nápoj Malina Gran. Jablko 8x280g",
@@ -7642,17 +7662,17 @@
  "kapuci-slehacka-spray-250g": {
   "name": "Kapucin Šlehačka spray 250g",
   "ean": "80079900005008",
-  "price": "3490"
+  "price": "3550"
  },
  "kinder-mlecny-rez-10x28g": {
   "name": "Kinder Mléčný Řez 28g x 10",
   "ean": "4008400192208",
-  "price": "1190"
+  "price": "1390"
  },
  "tatra-tvaroh-tucny-84-250g": {
   "name": "Tatra Tvaroh Tučný 8,4% 250g",
   "ean": "8594006848220",
-  "price": "2490"
+  "price": "2290"
  },
  "tatra-tvaroh-polotucny-35-250g": {
   "name": "Tatra Tvaroh polotučný 3,5% 250g",
@@ -7662,7 +7682,7 @@
  "tatra-tvaroh-mekky-05-250g": {
   "name": "Tatra Tvaroh Měkký 0,5% 250g",
   "ean": "8594006848251",
-  "price": "1990"
+  "price": "1790"
  },
  "olma-dezert-karamel-200g": {
   "name": "OLMA Dezert Karamel 200g",
@@ -7717,12 +7737,12 @@
  "kmotr-ohniva-klobasa-180g": {
   "name": "Kmotr Ohnivá Klobása 180g",
   "ean": "8594007487671",
-  "price": "3590"
+  "price": "4790"
  },
  "kmotr-cesnekova-klobasa-180g": {
   "name": "Kmotr Česneková Klobása 180g",
   "ean": "8594007488920",
-  "price": "3590"
+  "price": "4790"
  },
  "kmotr-certova-klobasa-180g": {
   "name": "Kmotr Čertova klobása 180g",
@@ -7812,27 +7832,27 @@
  "gornicky-kabanos-exclusive-se-syrem-120-g": {
   "name": "Gornicky Kabanos Exclusive se sýrem 120g",
   "ean": "5908230522710",
-  "price": "3790"
+  "price": "4350"
  },
  "gornicky-kabanos-exclusive-chilli-120-g": {
   "name": "Gornicky Kabanos Exclusive s chilli 120g",
   "ean": "5908230522697",
-  "price": "3790"
+  "price": "4350"
  },
  "gornicky-kabanos-exclusive-120g": {
   "name": "Gornicky Kabanos Exclusive 120g",
   "ean": "5908230522680",
-  "price": "3790"
+  "price": "4350"
  },
  "gornicky-kabanos-excl-togo-veprovy-50g": {
   "name": "Gornicky Kabanos Excl. ToGo Vepřový 50g",
   "ean": "5908230522758",
-  "price": "2190"
+  "price": "2390"
  },
  "gornicky-kabanos-excl-togo-kureci-50g": {
   "name": "Gornicky Kabanos Excl. ToGo Kuřecí 50g",
   "ean": "5908230522772",
-  "price": "2190"
+  "price": "2390"
  },
  "gornicky-jamon-serrano-krajene-80g": {
   "name": "Gornicky NOEL Jamon Serrano krájené 80g (hình chữ nhật)",
@@ -7922,12 +7942,12 @@
  "skyr-natur-140g": {
   "name": "SKYR Natur 140g X6",
   "ean": "8594001246830",
-  "price": "1350"
+  "price": "1590"
  },
  "skyr-jahoda-140g": {
   "name": "SKYR jahoda 140g X6",
   "ean": "8594001246885",
-  "price": "1390"
+  "price": "1590"
  },
  "skyr-brusinka-140g": {
   "name": "SKYR brusinka 140g X6",
@@ -7937,7 +7957,7 @@
  "skyr-boruvka-140g": {
   "name": "SKYR borůvka 140g X6",
   "ean": "8594001246748",
-  "price": "1390"
+  "price": "1590"
  },
  "samir-zeli-kysane-bile-500g": {
   "name": "SAMIR zelí kysané bílé 500g",
@@ -8012,7 +8032,7 @@
  "brick-listove-testo-275g": {
   "name": "Brick Listové těsto 275g",
   "ean": "8594045601978",
-  "price": "2390"
+  "price": "2590"
  },
  "president-maasdamer-platky-100g": {
   "name": "President Maasdamer Plátky 100g",
@@ -8132,7 +8152,7 @@
  "olma-bio-mleko-cerstve-35-1l-pet": {
   "name": "AAA Olma BIO Mléko čerstvé 4% 1L PET",
   "ean": "8593807210502",
-  "price": "3090"
+  "price": "3390"
  },
  "olma-selske-mleko-cerstve-35-1l-pet-1080011": {
   "name": "AAA Olma Selské Mléko čerstvé 3,9% 1L PET",
@@ -8275,14 +8295,14 @@
   "price": "2590"
  },
  "dr-halir-gouda-pl-48-80g-1100166": {
-  "name": "Dr.Halíř Gouda pl. 48% 80g",
+  "name": "Laktos Gouda pl. 48% 80g",
   "ean": "8595121800728",
-  "price": "1690"
+  "price": "1990"
  },
  "dr-halir-eidam-platky-30-80g-1100165": {
-  "name": "Dr.Halíř Eidam plátky 30% 80g",
+  "name": "laktos Eidam plátky 30% 80g",
   "ean": "8595121800711",
-  "price": "1690"
+  "price": "1990"
  },
  "blanik-gouda-48-100g-1100169": {
   "name": "Blaník Gouda 48% 100g",
@@ -8422,17 +8442,17 @@
  "kapucin-smetana-10x10g-1040017": {
   "name": "Kapucin smetana do kávy 10x10g",
   "ean": "8594001242061",
-  "price": "1150"
+  "price": "1190"
  },
  "tp-chocen-sunka-150g-1220034": {
   "name": "TP Choceň Šunka 150g",
   "ean": "8594003212048",
-  "price": "2990"
+  "price": "2590"
  },
  "tp-chocen-pazitka-150g-1220036": {
   "name": "TP Choceň Pažitka 150g",
   "ean": "8594003212116",
-  "price": "2990"
+  "price": "2590"
  },
  "tp-chocen-bile-200g-1220018": {
   "name": "TP Choceň Bílé 150g",
@@ -8537,7 +8557,7 @@
  "klasik-bily-jogurt-400-g": {
   "name": "Olma &#8211; Klasik Bílý Jogurt 2,7% 400g X12",
   "ean": "8593807529208",
-  "price": "1790"
+  "price": "1850"
  },
  "actimel-natural-4x100g-32070": {
   "name": "Actimel Natural 4x100g",
@@ -8547,7 +8567,7 @@
  "dz-klatovy-kureci-parky-se-syrem-vac-250g-638200": {
   "name": "DZK Klatovy Kuřecí párky se sýrem VAC 250g",
   "ean": "8594010693533",
-  "price": "2350"
+  "price": "2590"
  },
  "dz-klatovy-kureci-debrecinske-parecky-vac-200g-633740": {
   "name": "DZK Klatovy Kuřecí Debrecínské Párečky VAC 200g",
@@ -8557,12 +8577,12 @@
  "dz-klatovy-klatovska-kureci-jatrovka-parizska-120g-661000": {
   "name": "DZK Klatovy Klatovská Kuřecí játrovka Pařížská 120g",
   "ean": "8594010694424",
-  "price": "4950"
+  "price": "5960"
  },
  "dz-klatovy-kureci-sunkova-pena-120g-686100": {
   "name": "DZK Klatovy Kuřecí šunková pěna 120g",
   "ean": "8594010693366",
-  "price": "4950"
+  "price": "5960"
  },
  "pribinacek-kakao-155-125-g-11783": {
   "name": "Pribináček kakao 15,5% 125g",
@@ -8572,7 +8592,7 @@
  "jihoceska-smetana-kavy-10-10-x-10-g-16468": {
   "name": "Jihočeská smetana do kávy 10% 10 x 10g",
   "ean": "8593803252056",
-  "price": "1150"
+  "price": "1290"
  },
  "smetana-12-200-g-16467": {
   "name": "Kunín Smetana 12% 200g",
@@ -8617,7 +8637,7 @@
  "romadur-mekky-zrajici-syr-40-100-g-14332": {
   "name": "Romadur měkký zrající sýr 40% 100g",
   "ean": "8593803313047",
-  "price": "2350"
+  "price": "2490"
  },
  "kral-syru-hermelin-lahudkova-paprika-56-120-g-14308": {
   "name": "Král sýrů Hermelín lahůdková paprika 56% 120g",
@@ -8642,7 +8662,7 @@
  "balkansky-syr-43-115-g-12635": {
   "name": "Balkánský sýr 43% 115 g",
   "ean": "8593803314273",
-  "price": "2490"
+  "price": "2690"
  },
  "galbani-mozzarella-100-g-12093": {
   "name": "Galbani mozzarella 100g",
@@ -8667,22 +8687,22 @@
  "madeland-fitness-20-platky-100-g-12414": {
   "name": "Madeland Fitness 20% plátky 100g",
   "ean": "8593803328225",
-  "price": "3150"
+  "price": "3290"
  },
  "madeland-uzeny-44-platky-100-g-12415": {
   "name": "Madeland uzený 44% plátky 100g",
   "ean": "8593803328294",
-  "price": "3150"
+  "price": "3290"
  },
  "madeland-light-30-platky-100-g-12384": {
   "name": "Madeland light 30% plátky 100g",
   "ean": "8593803327525",
-  "price": "3150"
+  "price": "3290"
  },
  "madeland-45-platky-100-g-12382": {
   "name": "Madeland 45% plátky 100g",
   "ean": "8593803327518",
-  "price": "3150"
+  "price": "3290"
  },
  "jihocesky-eidam-uzeny-44-platky-100-g-12316": {
   "name": "Jihočeský Eidam uzený 44% plátky 100g",
@@ -8707,7 +8727,7 @@
  "jihocesky-cottage-bez-prichuti-5-150-g-11316": {
   "name": "Jihočeský Cottage bez příchuti 5% 150g",
   "ean": "8593803311968",
-  "price": "2490"
+  "price": "2690"
  },
  "jihoceske-maslo-82-125-g-15107": {
   "name": "Jihočeské máslo 82% 125g",
@@ -8722,32 +8742,32 @@
  "kefirove-mleko-nizkotucne-merunka-min-08-450-g-16640": {
   "name": "Kefírové mléko nízkotučné meruňka min. 0,8% 450g",
   "ean": "8594003023033",
-  "price": "1750"
+  "price": "1790"
  },
  "kefirove-mleko-nizkotucne-visen-min-08-450-g-16621": {
   "name": "Kefírové mléko nízkotučné višeň min. 0,8% 450g",
   "ean": "8594003027093",
-  "price": "1750"
+  "price": "1790"
  },
  "kefirove-mleko-nizkotucne-jahoda-min-08-450-g-16600": {
   "name": "Kefírové mléko nízkotučné jahoda min. 0,8% 450g",
   "ean": "8594003023026",
-  "price": "1750"
+  "price": "1790"
  },
  "kefirove-mleko-nizkotucne-11-500-g-16582": {
   "name": "Kefírové mléko nízkotučné 1,1% 500g",
   "ean": "8594003027079",
-  "price": "1650"
+  "price": "1790"
  },
  "kinder-maxi-king-35-g-62503": {
   "name": "Kinder Maxi King 35 g",
   "ean": "4008400553023",
-  "price": "1890"
+  "price": "2090"
  },
  "kinder-pingui-cokoladou-30-g-62502": {
   "name": "Kinder Pingui 30g x10",
   "ean": "4008400290829",
-  "price": "1690"
+  "price": "1790"
  },
  "monte-133-150-g-18655": {
   "name": "Monte Choco 13,3% 150 g",
@@ -8792,12 +8812,12 @@
  "olma-klasik-jogurt-bili-min-24-150g-18033": {
   "name": "Olma &#8211; Klasik Bílý Jogurt 150g X20",
   "ean": "8593807519100",
-  "price": "950"
+  "price": "890"
  },
  "olma-mleko-cerstve-polotucne-15-1l-16130": {
   "name": "AAA Olma Mléko čerstvé polotučné 1,5% 1L",
   "ean": "8593807234713",
-  "price": "2250"
+  "price": "2190"
  },
  "tatra-jesenka-zahustena-slazena-smetana-75g-17392": {
   "name": "Jesenka 21,50% 75g",
@@ -8837,7 +8857,7 @@
  "kmotr-kromerizska-vysocina-krajena-75g-53019": {
   "name": "Kmotr Kroměřížská Vysočina Krájená 75g (bal./10ks)",
   "ean": "8594007486124",
-  "price": "1790"
+  "price": "1890"
  },
  "kmotr-polican-krajeny-75g-53050": {
   "name": "Kmotr Poličan Krájený 75g (bal./10ks)",
@@ -8852,20 +8872,20 @@
  "kmotr-lovecky-salam-krajeny-75g-53004": {
   "name": "Kmotr Lovecký Salám Krájený 75g (bal./10ks)",
   "ean": "8594007486100",
-  "price": "2190"
+  "price": "1890"
  },
  "kmotr-herkules-krajeny-75g-53073": {
   "name": "Kmotr Herkules Krájený 75g (bal./10ks)",
   "ean": "8594007486094",
-  "price": "1790"
+  "price": "1890"
  },
  "kmotr-duo-kmotr-75g-53010": {
   "name": "Kmotr Duo Kmotr 75g (bal/10ks)",
   "ean": "8594007486148",
-  "price": "1790"
+  "price": "2390"
  },
  "leco-sunka-od-kosti-nejvyssi-jakosti-shaved-100g-840": {
-  "name": "LECO Šunka Od Kosti Nejvyšší Jakosti Shaved 100g (bal./12ks)",
+  "name": "LECO Šunka Od Kosti Nejvyšš í Jakosti Shaved 100g 95% (bal./12ks)",
   "ean": "8594026123369",
   "price": "2490"
  },
@@ -8892,7 +8912,7 @@
  "leco-kruti-sunka-deti-100g-770": {
   "name": "LECO KRŮTÍ Šunka Pro Děti 100g (bal./15ks)",
   "ean": "8594026122072",
-  "price": "2790"
+  "price": "2690"
  },
  "leco-sunka-deti-100g-707": {
   "name": "LECO Šunka Pro Děti 100g (bal./15ks)",
@@ -8907,12 +8927,12 @@
  "leco-anglicka-slanina-special-200g": {
   "name": "LECO Anglická Sla. Speciál 200g (bal./10ks)",
   "ean": "8594026122010",
-  "price": "4090"
+  "price": "4190"
  },
  "leco-anglicka-slanina-100g-780": {
   "name": "LECO Anglická Slanina 100g (bal./15ks)",
   "ean": "8594026124052",
-  "price": "2190"
+  "price": "2390"
  },
  "leco-anglicka-slanina-shaved-100g-705": {
   "name": "LECO Anglická Slanina Shaved 100g (bal./12kus)",
