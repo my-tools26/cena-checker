@@ -18,9 +18,9 @@ var AKCE_WS_FILTERS = [['makro', 'Ⓜ Makro'], ['jip', '🄹 JIP'], ['tamda', '�
   ['bidfood', '🅑 Bidfood'], ['ptt', '🅟 PTT Global'], ['dathang', '🅳 dathang'],
   ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena'], ['juniorpapir', '🅹 JUNIORpapír']];
 var RETAIL_FILTERS = ['Lidl', 'Kaufland', 'Billa', 'Penny', 'Tesco', 'Albert',
-  'Globus', 'COOP', 'Košík'];
+  'Globus', 'COOP'];
 /* Cac chuoi bo han khoi web (11/2026): khong hien deal cua ho o bat cu dau */
-var DROPPED_SHOPS = ['ratio', 'hruska', 'flop', 'cba'];
+var DROPPED_SHOPS = ['ratio', 'hruska', 'flop', 'cba', 'kosik'];
 /* So nut ban le hien san; con lai an sau nut "…" (muc 6) */
 var RETAIL_SHOWN = 6;
 /* Dong nghia tim kiem: 1 tu Viet -> nhieu tu Sec (OR). VD banh mi -> rohlik + chleb */
@@ -1310,7 +1310,7 @@ window.addEventListener('hashchange', route);
 initScanner();
 renderCats();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.0';
+if (el) el.textContent = 'v1.7.0.1';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
