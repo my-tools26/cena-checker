@@ -349,7 +349,17 @@ function shopBadge(name) {
     if (s.indexOf(C[i][0]) >= 0) { bg = C[i][1]; fg = C[i][2]; break; }
   // 1 dong, dai qua thi "..." (CSS); title = ca cau khi re chuot vao
   return "<span class='sbadge' title='" + esc(name).replace(/'/g, '&#39;') +
-    "' style='background:" + bg + ";color:" + fg + "'>" + esc(name) + '</span>';
+    "' style='background:" + bg + ";color:" + fg + "'>" + esc(shortShop(name)) + '</span>';
+}
+/* Ten sieu thi rut gon tren nhan (title van giu ten day du) */
+var SHORT_SHOPS = [[/^albert hypermarket/i, 'Albert hyp.'], [/^albert supermarket/i, 'Albert sup.'],
+  [/^tesco supermarket/i, 'Tesco sup.'], [/^penny market/i, 'Penny'],
+  [/^rossmann drogerie/i, 'Rossmann'], [/^tamda foods/i, 'Tamda'], [/^ptt global/i, 'PTT'],
+  [/^dathang\.cz/i, 'dathang'], [/^linsan24h/i, 'Linsan'], [/^juniorpap[ií]r/i, 'JUNIOR']];
+function shortShop(name) {
+  for (var i = 0; i < SHORT_SHOPS.length; i++)
+    if (SHORT_SHOPS[i][0].test(name)) return name.replace(SHORT_SHOPS[i][0], SHORT_SHOPS[i][1]);
+  return name;
 }
 /* Dien thoai khong co re chuot: cham vao nhan de mo/thu ca cau */
 document.addEventListener('click', function (e) {
@@ -479,7 +489,11 @@ function renderRail() {
   if (!box) return;
   loadRetail().then(function (d) {
     var items = retailOnly(d.items || []);
-    function first(p) { return p[2].slice().sort(function (a, b) { return a[1] - b[1]; })[0]; }
+    // deal co % giam cao nhat (cung deal ma bestPct lay %) -> gia va % luon khop nhau
+    function first(p) {
+      function pct(x) { var m = /(\d+)/.exec(x[3] || ''); return m ? +m[1] : 0; }
+      return p[2].slice().sort(function (a, b) { return pct(b) - pct(a) || a[1] - b[1]; })[0];
+    }
     function link(p) { return '#/q/' + encodeURIComponent(p[0]); }
     var top = items.filter(function (p) { return bestPct(p) > 0; })
       .sort(function (a, b) { return bestPct(b) - bestPct(a); }).slice(0, 4);
@@ -492,7 +506,7 @@ function renderRail() {
       var o = first(p);
       return "<a class='t3' href='" + link(p) + "'><span class='rk num'>−" + bestPct(p) + "%</span>" +
         "<span class='nm'>" + iconFor(p[0]) + esc(p[0]) + '<small>' + o[1].toFixed(2) + ' Kč · ' +
-        esc(canonShop(o[0]).replace(/\s*\(.*$/, '')) + '</small></span></a>';
+        esc(shortShop(canonShop(o[0]).replace(/\s*\(.*$/, ''))) + '</small></span></a>';
     }).join('') + '</div>';
     if (exp.length) html += "<div class='rbox rexp'><h5>⏰ Sắp hết khuyến mãi</h5>" + exp.map(function (x) {
       return "<a class='ex' href='" + link(x.p) + "'><span>" + iconFor(x.p[0]) + esc(x.p[0]) + '</span>' +
@@ -1310,7 +1324,7 @@ window.addEventListener('hashchange', route);
 initScanner();
 renderCats();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.1';
+if (el) el.textContent = 'v1.7.0.2';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
