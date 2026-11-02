@@ -1,146 +1,162 @@
-
- :root{--bg:#ecece7;--text:#2c2c2a;--text-strong:#1c1c1a;--card:#f7f6f2;--card2:#e4e2da;
-  --line:#dddbd2;--muted:#7a786f;--muted2:#8a887e;--accent:#b96a1e;--acc-strong:#8a4d10;
-  --acc-bg:#f5e3cd;--acc-bg2:#efe7d8;--btn-txt:#fff;--accent-hover:#a55d15;
-  --input-border:#c4b394;--chip-border:#c4c2b8;--exp-bg:#f7d4d4;--exp-txt:#8a1f1f;--gold:#8a6d1a}
- html.dark{--bg:#161614;--text:#e6e4dd;--text-strong:#f0efe8;--card:#232320;--card2:#2f2a22;
-  --line:#35352f;--muted:#8f8f88;--muted2:#9a9a92;--accent:#f0a35e;--acc-strong:#f0a35e;
-  --acc-bg:#3a2a15;--acc-bg2:#2e2418;--btn-txt:#161614;--accent-hover:#ffbe82;
-  --input-border:#7a5a30;--chip-border:#4a4a44;--exp-bg:#5a1f1f;--exp-txt:#ffb4a8;--gold:#e8c15a}
- body{font-family:Segoe UI,Arial,sans-serif;max-width:1100px;margin:20px auto;padding:0 16px;background:var(--bg);color:var(--text)}
+ /* Cena Checker v1.7 — bo cuc "demo 2": thanh tren + cot danh muc trai + danh sach
+    dong co thanh so gia + cot phai (Giam sau nhat / Sap het KM). Di dong: tab day.
+    Giao dien cu: git tag giao-dien-goc-v1.6.0.40 */
+ :root{--bg:#eef1f4;--card:#fff;--card2:#f6f8fa;--line:#e2e7ee;--text:#1b2433;--text-strong:#0e1726;
+  --muted:#6b7686;--muted2:#8a94a3;--accent:#1f5eff;--acc-strong:#1747c7;--acc-bg:#e8efff;--acc-bg2:#f1f5ff;
+  --btn-txt:#fff;--accent-hover:#1747c7;--input-border:#d3dae4;--chip-border:#d3dae4;
+  --good:#0b9b6a;--good-bg:#e1f6ee;--bar:#c3ccd8;--red:#e5383b;--red-bg:#fde7e7;--amber:#b7700b;
+  --exp-bg:#fde7e7;--exp-txt:#c62828;--gold:#b7700b;--top:#fff}
+ html.dark{--bg:#0b111c;--card:#141c2b;--card2:#1a2334;--line:#243046;--text:#d9e1ee;--text-strong:#fff;
+  --muted:#8693a8;--muted2:#7d8aa0;--accent:#6b97ff;--acc-strong:#8fb0ff;--acc-bg:#1b2a4d;--acc-bg2:#18233b;
+  --btn-txt:#0b111c;--accent-hover:#8fb0ff;--input-border:#2c3a54;--chip-border:#2c3a54;
+  --good:#34d399;--good-bg:#0f3a2d;--bar:#3a4862;--red:#ff6b6e;--red-bg:#4a1d22;--amber:#f0b44c;
+  --exp-bg:#4a1d22;--exp-txt:#ffb4ae;--gold:#f0b44c;--top:#101827}
+ *{box-sizing:border-box}
+ body{margin:0;font-family:'Inter Tight',Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);font-size:15px}
  a{color:var(--accent)}
- h1{color:var(--accent);margin-bottom:4px} h2{background:var(--acc-bg);color:var(--acc-strong);padding:8px 12px;border-radius:6px;margin-top:28px}
- h3{margin:24px 0 8px;color:var(--accent)}
- table{border-collapse:collapse;width:100%;background:var(--card);margin-bottom:12px;border-radius:10px;overflow:hidden}
- th{background:var(--card2);text-align:left;padding:8px;color:var(--muted)} td{padding:8px;border-top:1px solid var(--line);vertical-align:top}
- tr.best{background:var(--acc-bg)}
- .p{font-weight:bold;color:var(--acc-strong);white-space:nowrap} .s{font-weight:bold}
- .d{color:var(--acc-strong);font-weight:bold;white-space:nowrap} .a{color:var(--muted);font-size:.9em}
- .o{color:var(--muted);font-size:.85em} .n{max-width:260px}
- .searchbox{display:flex;gap:6px;margin:16px 0}
- input[type=text]{flex:1;min-width:0;font-size:1.1em;padding:10px;border:2px solid var(--input-border);border-radius:8px;background:var(--card);color:var(--text)}
- @media(max-width:600px){.searchbox button{padding:10px 12px;font-size:1em;white-space:nowrap}}
- select{background:var(--card);color:var(--text);border:1px solid var(--chip-border);border-radius:6px;padding:3px 6px}
- button,.bigbtn{font-size:1.1em;padding:12px 20px;background:var(--accent);color:var(--btn-txt);border:none;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-block}
+ .num,.pv,.pbig{font-family:'JetBrains Mono',ui-monospace,Consolas,monospace;font-variant-numeric:tabular-nums}
+ h1{font-size:1.25em;letter-spacing:-.02em;color:var(--text-strong);margin:4px 0 10px}
+ #main h2{font-size:1.1em !important;letter-spacing:-.02em;color:var(--text-strong);margin:22px 0 10px;padding:0;background:none}
+ #main h2:first-child{margin-top:4px}
+ h3{margin:20px 0 8px;color:var(--text-strong)}
+ button,.bigbtn{font:inherit;font-size:1em;padding:10px 18px;background:var(--accent);color:var(--btn-txt);border:none;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-block}
  button:hover,.bigbtn:hover{background:var(--accent-hover)}
- .chips{margin:10px 0} .chips a{display:inline-block;margin:4px 6px 0 0;padding:6px 14px;background:var(--card);border:1px solid var(--input-border);color:var(--accent);border-radius:20px;text-decoration:none;font-size:.95em}
- .chips a:hover{background:var(--acc-bg2)}
+ select{background:var(--card);color:var(--text);border:1px solid var(--chip-border);border-radius:6px;padding:3px 6px}
  .muted{color:var(--muted)} .muted a{color:var(--accent)}
- .back{margin-bottom:12px;display:inline-block}
- .cols{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
- .col{flex:1;min-width:340px}
- .colhead{font-size:1.2em;font-weight:bold;padding:10px 14px;border-radius:8px;color:#fff;margin-bottom:4px}
- .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:18px}
- .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
- .card .top{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:6px}
- .sbadge{border-radius:6px;padding:2px 8px;font-size:.78em;font-weight:bold;white-space:nowrap}
- .expb{background:var(--exp-bg);color:var(--exp-txt);border-radius:10px;padding:2px 8px;font-size:.72em;white-space:nowrap}
- .vald{font-size:.72em;color:var(--muted);white-space:nowrap}
- .card .nm{font-weight:bold;font-size:.93em;margin:0 0 2px;line-height:1.3;color:var(--text-strong)}
- .card .sub{color:var(--muted2);font-size:.78em;margin:0 0 8px;min-height:1.1em}
- .card .pr{font-size:1.45em;font-weight:bold;color:var(--acc-strong);white-space:nowrap}
- .pctb{background:var(--acc-bg);color:var(--acc-strong);border-radius:6px;padding:1px 7px;font-size:.78em;font-weight:bold}
- .chipbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;align-items:center}
- .chipbar label{color:var(--muted)}
- .chip{border:1px solid var(--chip-border);border-radius:20px;padding:6px 14px;font-size:.88em;cursor:pointer;background:var(--card);color:var(--muted)}
- .chip.on{background:var(--acc-bg);color:var(--acc-strong);border-color:var(--acc-bg)}
- .appbar{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:8px 0;margin-bottom:14px;flex-wrap:wrap}
- .appbar .logo{font-size:1.15em;font-weight:bold;color:var(--accent);text-decoration:none}
- .navtabs{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
- .navtabs a{padding:6px 13px;border-radius:8px;font-size:.92em;color:var(--muted);text-decoration:none}
- .navtabs a.on{background:var(--acc-bg);color:var(--acc-strong)}
- .navtabs a:hover{background:var(--acc-bg2);color:var(--accent)}
- #themebtn{background:none;border:1px solid var(--chip-border);color:var(--muted);border-radius:16px;padding:4px 12px;font-size:.9em;cursor:pointer}
- .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:8px;margin:14px 0}
- .catbtn{display:none;width:100%;text-align:left;background:var(--card);color:var(--accent);border:1px solid var(--input-border);border-radius:10px;padding:11px 14px;margin:14px 0 0;font-size:1em;font-weight:bold}
- @media(max-width:600px){
-  .catbtn{display:none}
-  .tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin:8px 0 0}
-  .tiles .tile{padding:8px 2px;font-size:.7em}
-  .tiles .tile .em{font-size:1.4em;margin-bottom:2px}
- }
- .tile{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 6px;text-align:center;text-decoration:none;color:var(--text);font-size:.85em}
- .tile:hover{border-color:var(--input-border);background:var(--acc-bg2)}
- .tile .em{font-size:1.6em;display:block;margin-bottom:4px}
- .rlist{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card);margin-bottom:16px}
- .rrow{display:flex;align-items:center;gap:10px;padding:10px 14px;border-top:1px solid var(--line)}
- .rrow:first-child{border-top:none}
- .rrow.win{background:var(--acc-bg)}
- .rrow .rk{font-size:1.05em;font-weight:bold;color:var(--muted);min-width:24px;text-align:center}
- .rrow.win .rk{color:var(--gold)}
- .rrow .inf{flex:1;min-width:0}
- .rrow .inf p{margin:0}
- .rrow .pn{font-size:.95em;font-weight:bold;line-height:1.3;color:var(--text-strong)}
- .rrow .pm{font-size:.8em;color:var(--muted2)}
- .rrow .per{font-size:1.15em;font-weight:bold;color:var(--acc-strong);white-space:nowrap}
- .tagb{border-radius:6px;padding:1px 6px;font-size:.72em;font-weight:normal;white-space:nowrap;vertical-align:1px}
- .mx td.w{background:var(--acc-bg)}
- .mx td.w .mxp{color:var(--acc-strong);font-size:1.1em}
- .mx .mxp{display:block;font-weight:bold;color:var(--text-strong);white-space:nowrap}
- .mx a.it{color:var(--text-strong);text-decoration:none;font-weight:bold}
- .mx a.it:hover{color:var(--accent)}
- .viewtabs{display:flex;gap:6px;margin:0}
- .viewtabs button{flex:0 0 auto;font-size:.9em;padding:7px 16px;border-radius:20px;border:1px solid var(--input-border);background:var(--card);color:var(--muted);cursor:pointer}
- .viewtabs button.on{background:var(--accent);color:var(--btn-txt);border-color:var(--accent);font-weight:bold}
- .filterwrap{display:none;margin:2px 0 14px}
- .filterwrap.open{display:block}
- .storefilter{margin:8px 0 0;padding:10px 12px;border:1px solid var(--input-border);border-radius:12px;background:var(--card)}
- .strow{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-bottom:6px}
- .stg{font-size:.82em;color:var(--muted);margin-right:4px;min-width:64px}
- .stp{font-size:.8em;padding:3px 10px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--accent);cursor:pointer}
- .stp.off{opacity:.45;text-decoration:line-through;color:var(--muted)}
- .mxwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
- .mxwrap table.mx{min-width:100%}
- /* Cot CO DINH (ten 30%, 3 cot gia chia deu ~23%) - truoc day bang tu gian theo noi
-    dung: cot "Re nhat" phinh to, cot ten bi ep xuong 5-6 dong */
- .mx{table-layout:fixed;width:100%}
- .mx td, .mx th{overflow-wrap:break-word;vertical-align:top;overflow:hidden}
- /* nhan sieu thi dai ("Penny Market (+3 Kč záloha na láhev...)") PHAI xuong
-    dong trong o, khong tran sang cot ben canh (ca may tinh lan dien thoai) */
- /* nhan sieu thi: 1 DONG, dai qua thi "..." - re chuot (title) / cham (.open) xem ca cau */
- .mx .sbadge{display:inline-block;max-width:100%;box-sizing:border-box;vertical-align:top;
-   white-space:nowrap !important;overflow:hidden;text-overflow:ellipsis;line-height:1.35;cursor:default}
- .mx .sbadge.open{white-space:normal !important;overflow:visible}
- .sfgroup{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0;align-items:center}
+ .a{color:var(--muted);font-size:.88em}
+ .p{font-weight:bold;color:var(--acc-strong);white-space:nowrap}
+ .foot{text-align:center;color:var(--muted2);font-size:.8em;margin:30px 0 10px}
+
+ /* ---- thanh tren ---- */
+ .appbar{background:var(--top);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+ .bar{max-width:1360px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:10px 20px}
+ .logo{font-weight:800;letter-spacing:-.03em;font-size:1.15em;white-space:nowrap;color:var(--text-strong);text-decoration:none}
+ .logo b{color:var(--accent)}
+ .searchbox{flex:1;display:flex;align-items:center;gap:6px;background:var(--bg);border-radius:12px;padding:4px 4px 4px 12px;max-width:640px;margin:0}
+ .searchbox .sic{opacity:.6}
+ .searchbox input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:1em;padding:9px 0;outline:0;color:var(--text)}
+ .searchbox .gobtn{padding:8px 16px;font-weight:700;border-radius:9px}
+ #scanbtn{padding:8px 12px;font-weight:700;border-radius:9px;background:var(--good)}
+ .navtabs{display:flex;gap:2px;margin-left:auto}
+ .navtabs a{padding:8px 14px;border-radius:9px;font-weight:600;color:var(--muted);text-decoration:none;font-size:.93em}
+ .navtabs a.on{color:var(--accent);background:var(--acc-bg)}
+ .navtabs a:hover{color:var(--accent)}
+ #themebtn{background:none;border:1px solid var(--chip-border);color:var(--muted);border-radius:16px;padding:5px 11px;font-size:.9em}
+
+ /* ---- bo cuc 3 cot ---- */
+ .layout{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:200px minmax(0,1fr) 290px;gap:18px;padding:18px 20px 40px}
+ .center{min-width:0}
+ .catlist{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px;position:sticky;top:76px;align-self:start}
+ .catlist h5,.rail h5{margin:6px 10px 8px;font-size:.7em;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+ .catlist a{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;font-weight:500;font-size:.92em;color:var(--text);text-decoration:none}
+ .catlist a:hover{background:var(--card2)}
+ .catlist a span{width:24px;text-align:center;font-size:1.1em}
+ .catlist a.on{background:var(--text-strong);color:var(--bg)}
+ .rail{display:flex;flex-direction:column;gap:16px;align-self:start;position:sticky;top:76px}
+ .rail:empty{display:none}
+ .rbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px 8px 10px}
+ .t3{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;background:var(--card2);margin:0 2px 6px;text-decoration:none;color:var(--text)}
+ .t3:hover{background:var(--acc-bg2)}
+ .t3 .rk{font-weight:800;font-size:1.15em;color:var(--red);min-width:50px}
+ .t3 .nm{font-size:.84em;font-weight:600;line-height:1.25}
+ .t3 .nm small{display:block;color:var(--muted);font-weight:500;margin-top:2px}
+ .ex{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:7px 10px;font-size:.84em;border-bottom:1px dashed var(--line);text-decoration:none;color:var(--text)}
+ .ex:last-child{border:0}
+ .ex:hover{color:var(--accent)}
+ .ex .when{font-size:.78em;font-weight:700;color:var(--amber);white-space:nowrap}
+ .ex .when.today{color:var(--red)}
+
+ /* ---- danh sach mat hang (moi hang: ten + toi da 3 thanh so gia) ---- */
+ .plist{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:12px}
+ .prow{display:grid;grid-template-columns:36px minmax(0,1.15fr) minmax(0,2fr) 128px;gap:14px;align-items:center;padding:13px 16px;border-top:1px solid var(--line)}
+ .prow:first-child{border-top:0}
+ .prow:hover{background:var(--card2)}
+ .pi{font-size:1.45em;text-align:center}
+ .pn b{color:var(--text-strong);font-weight:600;line-height:1.3}
+ .pn .a{display:block;margin-top:2px}
+ .pbars{display:flex;flex-direction:column;gap:6px;min-width:0}
+ .pb{display:grid;grid-template-columns:minmax(0,118px) minmax(30px,1fr) auto;gap:8px;align-items:center;font-size:.84em}
+ .pb .ps{min-width:0}
+ .pb .pt{height:8px;border-radius:4px;background:var(--card2);overflow:hidden}
+ .pb .pt i{display:block;height:100%;border-radius:4px;background:var(--bar)}
+ .pb.best .pt i{background:var(--good)}
+ .pb .pv{text-align:right;font-weight:700;color:var(--text-strong);white-space:nowrap}
+ .pb.best .pv{color:var(--good)}
+ .pb .pd{grid-column:1/-1;font-size:.86em;color:var(--muted);margin-top:-3px;display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+ .pb .pd:empty{display:none}
+ .pbest{text-align:right}
+ .pbig{font-size:1.4em;font-weight:700;letter-spacing:-.03em;color:var(--text-strong);white-space:nowrap}
+ .pbig small{font-size:.55em;color:var(--muted);margin-left:2px}
+ .psave{display:inline-block;font-size:.72em;font-weight:700;padding:2px 7px;border-radius:5px;margin-top:4px;background:var(--good-bg);color:var(--good)}
+ .sbadge{display:inline-block;max-width:100%;border-radius:5px;padding:2px 7px;font-size:.84em;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;cursor:default}
+ .sbadge.open{white-space:normal;overflow:visible}
+ html.dark .sbadge{filter:saturate(.85) brightness(.92)}
+ .expb{background:var(--exp-bg);color:var(--exp-txt);border-radius:5px;padding:1px 7px;font-size:.92em;font-weight:700;white-space:nowrap}
+ .pctb{background:var(--red-bg);color:var(--red);border-radius:5px;padding:1px 7px;font-size:.92em;font-weight:700;white-space:nowrap}
+ .hidshop{color:var(--muted2);font-style:italic}
+
+ /* ---- bo loc ---- */
+ .sfgroup{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 10px;align-items:center}
  .sfgroup .sfrow{display:contents}
- .sfrow .stp{font-size:.72em;padding:2px 7px}
- /* May tinh: du cho hien HET cua hang -> an nut "..." va bung san nhom con lai.
-    !important de thang inline style display:none do JS dat. */
- @media(min-width:641px){
-  .morebtn{display:none !important}
-  .moreshops{display:contents !important}
+ .stp{font:inherit;font-size:.78em;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid var(--chip-border);background:var(--card);color:var(--text);cursor:pointer}
+ .stp:hover{background:var(--acc-bg2)}
+ .stp.off{opacity:.4;text-decoration:line-through;color:var(--muted)}
+ @media(min-width:641px){.morebtn{display:none !important}.moreshops{display:contents !important}}
+ .viewtabs{display:none !important}
+ .filterwrap{display:none;margin:0 0 14px}
+ .filterwrap.open{display:block}
+ .storefilter{padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+ .strow{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-bottom:6px}
+ .stg{font-size:.8em;color:var(--muted);margin-right:4px;min-width:70px}
+ .stact{margin-top:2px}
+ .stact button{font-size:.78em;padding:4px 10px;margin-right:6px;border-radius:999px;border:1px solid var(--chip-border);background:var(--bg);color:var(--muted)}
+ .stnote{margin:6px 0 0;font-size:.76em;color:var(--muted2);line-height:1.35}
+ #filterbtn{display:none;margin:0 0 8px;padding:6px 12px;font-size:.85em;border:1px solid var(--chip-border);border-radius:999px;background:var(--card);color:var(--accent)}
+ .mobnav{display:none}
+
+ /* ---- may tinh bang ---- */
+ @media(max-width:1150px){
+  .layout{grid-template-columns:190px minmax(0,1fr)}
+  .rail{grid-column:1/-1;grid-row:1;position:static;flex-direction:row;flex-wrap:wrap}
+  .rail .rbox{flex:1;min-width:260px}
  }
- @media(max-width:640px){
-  .sfgroup{display:block}
-  /* PHAI wrap: khi bam "..." cac nut con lai xuong dong, khong tran ra ngoai man hinh */
-  .sfgroup .sfrow{display:flex;margin:3px 0;gap:3px;flex-wrap:wrap;align-items:center}
-  .sfrow .stp{flex:0 1 auto;text-align:center;padding:4px 6px;min-width:0}
-  /* bang gia gon lai de 5 cot gan lot man dien thoai - can chi tiet thi zoom 2 ngon */
-  .mx{font-size:.74em}
-  .mx td, .mx th{padding:5px 3px}
-  .mx td.w .mxp{font-size:1em}
-  .mx .mxp{white-space:normal}   /* "546.50 Kč vč. DPH" xuong dong trong o hep */
-  /* badge ten sieu thi PHAI duoc xuong dong ("Penny Market" -> 2 dong):
-     nowrap la thu pham chinh lam bang rong 423px > man 390px */
-  .sbadge{font-size:.85em;padding:1px 4px;display:inline-block;white-space:normal;line-height:1.2}
-  /* trong o gia: badge / ⏰ / gia xep DOC nhu ben Ban buon -> cot hep lai */
-  .mx td .expb{display:block;width:fit-content;margin:2px 0;font-size:.65em}
-  .mx td .pctb{display:block;width:fit-content;font-size:.7em;padding:1px 4px;margin-top:2px}
-  .mx td .vald{display:none}
-  /* Trang search tren MOBILE: an tiles + h1 "Kết quả:" de ket qua len cao,
-     khong phai vuot xuong sau khi quet ma vach. Desktop giu nguyen. */
-  body.is-search #main > .tiles,
-  body.is-search #main > h1{display:none}
-  /* Mobile MOI trang: khong tu bung bang sieu thi khi focus search;
-     phai bam nut '🏪 Loc' de mo (.mforce). */
+
+ /* ---- dien thoai ---- */
+ @media(max-width:760px){
+  body{font-size:14.5px}
+  .bar{flex-wrap:wrap;gap:8px 10px;padding:9px 12px}
+  .searchbox{order:3;flex-basis:100%;max-width:none}
+  .navtabs{display:none}
+  #themebtn{margin-left:auto}
+  .layout{display:flex;flex-direction:column;gap:10px;padding:10px 10px 84px}
+  .catlist,.rail{align-self:stretch;min-width:0}
+  .catlist{position:static;display:flex;overflow-x:auto;gap:4px;padding:5px;scrollbar-width:none;border-radius:12px}
+  .catlist::-webkit-scrollbar{display:none}
+  .catlist h5{display:none}
+  .catlist a{flex:0 0 auto;white-space:nowrap;background:var(--card2);padding:7px 11px}
+  .rail{order:-1;position:static;flex-direction:column;gap:10px}
+  body:not(.is-home) .rail{display:none}
+  /* gon lai de danh sach mat hang som hien: top giam gia 2 cot, sap het chi 3 mon */
+  .rtop{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .rtop h5{grid-column:1/-1;margin-bottom:2px}
+  .rtop .t3{margin:0;flex-direction:column;align-items:flex-start;gap:3px;padding:8px}
+  .rtop .t3 .rk{min-width:0;font-size:1.05em}
+  .rtop .t3 .nm{font-size:.8em;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .rexp .ex:nth-of-type(n+4){display:none}
+  body.is-search .catlist{display:none}
+  .center{order:2}
+  .prow{grid-template-columns:30px minmax(0,1fr) auto;gap:6px 10px;padding:12px}
+  .prow .pbars{grid-column:1/-1;grid-row:2}
+  .prow .pbest{grid-column:3;grid-row:1}
+  .pb{grid-template-columns:minmax(0,108px) minmax(24px,1fr) auto}
+  .pbig{font-size:1.25em}
   .filterwrap.open{display:none}
   .filterwrap.open.mforce{display:block}
+  body.q-focused #filterbtn{display:inline-block}
+  .sfgroup{display:block}
+  .sfgroup .sfrow{display:flex;margin:3px 0;gap:4px;flex-wrap:wrap}
+  .mobnav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--top);border-top:1px solid var(--line);justify-content:space-around;padding:6px 0 calc(6px + env(safe-area-inset-bottom))}
+  .mobnav a{display:flex;flex-direction:column;align-items:center;gap:1px;font-size:.72em;font-weight:600;color:var(--muted);text-decoration:none;padding:2px 16px;border-radius:10px}
+  .mobnav a span{font-size:1.35em}
+  .mobnav a.on{color:var(--accent);background:var(--acc-bg)}
  }
- /* Ban giu HTML nhung an UI: viewtabs 'Tat ca/Sieu thi/Ban buon' - de phong khi can khoi phuc */
- .viewtabs{display:none !important}
- /* Nut '🏪 Loc' - mac dinh an, chi hien khi focus/click vao o search VA man hinh mobile */
- #filterbtn{display:none;margin:6px 0 4px;padding:6px 12px;font-size:.85em;border:1px solid var(--chip-border);border-radius:16px;background:var(--card);color:var(--accent);cursor:pointer}
- @media(max-width:640px){body.q-focused #filterbtn{display:inline-block}}
- .stact{margin-top:2px}
- .stact button{font-size:.78em;padding:3px 10px;margin-right:6px;border-radius:14px;border:1px solid var(--input-border);background:var(--bg);color:var(--muted);cursor:pointer}
- .stnote{margin:6px 0 0;font-size:.76em;color:var(--muted2);line-height:1.35}

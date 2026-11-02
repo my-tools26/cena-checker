@@ -5,52 +5,65 @@
 <script>if(localStorage.getItem('cctheme')==='dark')document.documentElement.classList.add('dark');</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#161614">
+<meta name="theme-color" content="#0e1726">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Cena Checker</title>
-<link rel="stylesheet" href="style.css?v=1.6.0.43">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1.7.0.0">
 </head>
 <body>
 
-<div class="appbar">
-  <a class="logo" href="#/">🛒 Cena Checker</a>
+<header class="appbar"><div class="bar">
+  <a class="logo" href="#/">🛒 Cena<b>Checker</b></a>
+  <form class="searchbox" id="searchform">
+    <span class="sic">🔍</span>
+    <input type="text" id="q" autocomplete="off" autocorrect="off" autocapitalize="off"
+           spellcheck="false" placeholder="Gõ mặt hàng: sữa tươi / đùi gà / gạo thơm...">
+    <button type="button" id="scanbtn" title="Quét mã vạch bằng camera">📷 Quét</button>
+    <button type="submit" class="gobtn">Tìm</button>
+  </form>
   <nav class="navtabs">
     <a href="#/" data-nav="/">Trang chủ</a>
     <a href="#/akce" data-nav="/akce">Akce</a>
     <a href="#/banbuon" data-nav="/banbuon">Bán buôn</a>
   </nav>
   <button id="themebtn" title="Đổi nền sáng/tối">🌙</button>
-</div>
+</div></header>
 
-<div class="wrap">
-  <form class="searchbox" id="searchform">
-    <input type="text" id="q" autocomplete="off" autocorrect="off" autocapitalize="off"
-           spellcheck="false" placeholder="Gõ mặt hàng: sữa tươi / đùi gà / gạo thơm...">
-    <button type="button" id="scanbtn" title="Quét mã vạch bằng camera"
-            style="padding:12px 16px;background:#2b5fa7">📷</button>
-    <button type="submit">🔍 Tìm</button>
-  </form>
+<div class="layout">
+  <nav class="catlist" id="cats"></nav>
 
-  <button type="button" id="filterbtn">🏪 Lọc siêu thị</button>
+  <div class="center">
+    <button type="button" id="filterbtn">🏪 Lọc siêu thị</button>
 
-  <div id="filterwrap" class="filterwrap">
-    <div class="viewtabs" id="viewtabs">
-      <button data-v="all">Tất cả</button>
-      <button data-v="retail">🏪 Siêu thị</button>
-      <button data-v="wholesale">📦 Bán buôn</button>
+    <div id="filterwrap" class="filterwrap">
+      <div class="viewtabs" id="viewtabs">
+        <button data-v="all">Tất cả</button>
+        <button data-v="retail">🏪 Siêu thị</button>
+        <button data-v="wholesale">📦 Bán buôn</button>
+      </div>
+      <div id="storefilter" class="storefilter">
+        <div class="strow"><span class="stg">🏪 Bán lẻ</span><button class="stp" data-k="lidl">Lidl</button><button class="stp" data-k="kaufland">Kaufland</button><button class="stp" data-k="billa">Billa</button><button class="stp" data-k="penny">Penny</button><button class="stp" data-k="tesco">Tesco</button><button class="stp" data-k="albert">Albert</button><button class="stp" data-k="globus">Globus</button><button class="stp" data-k="coop">COOP</button><button class="stp" data-k="kosik">Košík</button></div>
+        <div class="strow"><span class="stg">📦 Bán buôn</span><button class="stp" data-k="makro">Makro</button><button class="stp" data-k="jip">JIP</button><button class="stp" data-k="tamda">Tamda</button><button class="stp" data-k="bidfood">Bidfood</button><button class="stp" data-k="dathang">dathang</button><button class="stp" data-k="linsan">Linsan</button><button class="stp" data-k="bombacena">Bombacena</button><button class="stp" data-k="ptt">PTT Global</button></div>
+        <div class="stact"><button id="stall">✓ Chọn hết</button><button id="stnone">✗ Bỏ hết</button></div>
+        <p class="stnote">💡 Nhắc: đã ẩn siêu thị? Đừng quên bấm <b>“✓ Chọn hết”</b> để hiện lại tất cả siêu thị.</p>
+      </div>
     </div>
-    <div id="storefilter" class="storefilter">
-      <div class="strow"><span class="stg">🏪 Bán lẻ</span><button class="stp" data-k="lidl">Lidl</button><button class="stp" data-k="kaufland">Kaufland</button><button class="stp" data-k="billa">Billa</button><button class="stp" data-k="penny">Penny</button><button class="stp" data-k="tesco">Tesco</button><button class="stp" data-k="albert">Albert</button><button class="stp" data-k="globus">Globus</button><button class="stp" data-k="coop">COOP</button><button class="stp" data-k="hruska">Hruška</button><button class="stp" data-k="flop">Flop</button><button class="stp" data-k="ratio">Ratio</button><button class="stp" data-k="kosik">Košík</button></div>
-      <div class="strow"><span class="stg">📦 Bán buôn</span><button class="stp" data-k="makro">Makro</button><button class="stp" data-k="jip">JIP</button><button class="stp" data-k="tamda">Tamda</button><button class="stp" data-k="bidfood">Bidfood</button><button class="stp" data-k="dathang">dathang</button><button class="stp" data-k="linsan">Linsan</button><button class="stp" data-k="bombacena">Bombacena</button><button class="stp" data-k="ptt">PTT Global</button></div>
-      <div class="stact"><button id="stall">✓ Chọn hết</button><button id="stnone">✗ Bỏ hết</button></div>
-      <p class="stnote">💡 Nhắc: đã ẩn siêu thị? Đừng quên bấm <b>“✓ Chọn hết”</b> để hiện lại tất cả siêu thị.</p>
-    </div>
+
+    <div id="main"><p class="muted">Đang tải…</p></div>
+    <p class="foot">Cena Checker <span id="appver"></span></p>
   </div>
 
-  <div id="main"><p class="muted">Đang tải…</p></div>
-  <p style="text-align:center;color:var(--muted2);font-size:.8em;margin:30px 0 10px">
-    Cena Checker <span id="appver"></span></p>
+  <aside class="rail" id="rail"></aside>
 </div>
+
+<nav class="mobnav">
+  <a href="#/" data-nav="/"><span>🏠</span>Trang chủ</a>
+  <a href="#/akce" data-nav="/akce"><span>🔥</span>Akce</a>
+  <a href="#/banbuon" data-nav="/banbuon"><span>📦</span>Bán buôn</a>
+</nav>
 
 <div id="scanbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;padding:16px;text-align:center">
   <p style="color:#fff;font-size:1em;margin:6px 0">Giơ camera vào mã vạch — nằm ngang hay dọc đều đọc được</p>
@@ -62,6 +75,6 @@
   </div>
 </div>
 
-<script src="app.js?v=1.6.0.43"></script>
+<script src="app.js?v=1.7.0.0"></script>
 </body>
 </html>

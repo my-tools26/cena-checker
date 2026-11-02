@@ -18,7 +18,9 @@ var AKCE_WS_FILTERS = [['makro', 'Ⓜ Makro'], ['jip', '🄹 JIP'], ['tamda', '�
   ['bidfood', '🅑 Bidfood'], ['ptt', '🅟 PTT Global'], ['dathang', '🅳 dathang'],
   ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena'], ['juniorpapir', '🅹 JUNIORpapír']];
 var RETAIL_FILTERS = ['Lidl', 'Kaufland', 'Billa', 'Penny', 'Tesco', 'Albert',
-  'Globus', 'COOP', 'Hruška', 'Flop', 'Ratio', 'Košík'];
+  'Globus', 'COOP', 'Košík'];
+/* Cac chuoi bo han khoi web (11/2026): khong hien deal cua ho o bat cu dau */
+var DROPPED_SHOPS = ['ratio', 'hruska', 'flop', 'cba'];
 /* So nut ban le hien san; con lai an sau nut "…" (muc 6) */
 var RETAIL_SHOWN = 6;
 /* Dong nghia tim kiem: 1 tu Viet -> nhieu tu Sec (OR). VD banh mi -> rohlik + chleb */
@@ -272,7 +274,10 @@ function loadRetail() {
   return getJSON('data/retail.json').then(function (d) {
     // Loc bo deal het han >1 ngay ngay khi load; item con >=1 deal thi giu
     var items = (d.items || []).map(function (p) {
-      var deals = p[2].filter(function (dd) { return !isExpiredDeal(dd[4]); });
+      var deals = p[2].filter(function (dd) {
+        return !isExpiredDeal(dd[4]) &&
+          DROPPED_SHOPS.indexOf(stripAccents(dd[0]).split(/[\s.]/)[0]) < 0;
+      });
       return deals.length ? [p[0], p[1], deals].concat(p.slice(3)) : null;  // giu danh muc (p[3])
     }).filter(Boolean);
     d.items = items;
@@ -348,7 +353,7 @@ function shopBadge(name) {
 }
 /* Dien thoai khong co re chuot: cham vao nhan de mo/thu ca cau */
 document.addEventListener('click', function (e) {
-  var b = e.target.closest && e.target.closest('.mx .sbadge');
+  var b = e.target.closest && e.target.closest('.plist .sbadge');
   if (b) b.classList.toggle('open');
 });
 /* Icon theo tu khoa trong ten (giong ICON_RULES ben Python) */
@@ -432,33 +437,69 @@ function rowHTML(name, amount, offers) {
     }
   }
   offers = shown;
-  var tds = '';
-  for (var i = 0; i < 3; i++) {
-    var o = offers[i];
-    if (!o) { tds += "<td class='a'>—</td>"; continue; }
+  // v1.7: moi nha 1 thanh ngang (dai theo gia, xanh = re nhat) thay cho 3 cot bang
+  var max = Math.max.apply(null, offers.map(function (o) { return o.price; }));
+  var bars = offers.map(function (o, i) {
     var per = o.unit || unitPrice(o.amount || amount, o.price, o.pack);
-    var ks = (o.pack > 1) ? "<span class='a'> · " + (o.price / o.pack).toFixed(2) + ' Kč/ks</span>' : '';
-    var dph = o.wholesale ? " <span class='a' style='font-weight:normal;font-size:.75em'>vč. DPH</span>" : '';
-    var netLine = (o.wholesale && o.net) ? "<span class='a'>" + o.net.toFixed(2) + ' Kč bez DPH' + (per ? ' · ' : '') + '</span>' : '';
-    var pct = o.pct ? " <span class='pctb'>" + esc(o.pct) + '</span>' : '';
+    var det = [];
     var d = o.valid ? expShort(o.valid) : null;
-    var exp = d ? " <span class='expb'>⏰ " + esc(d) + '</span>' : '';
-    tds += "<td" + (i === 0 ? " class='w'" : '') + " data-shop='" + esc(o.slug || '') + "'>" +
-      shopBadge(o.shop) + exp + "<span class='mxp'>" + o.price.toFixed(2) + ' Kč' + dph + pct +
-      '</span>' + netLine + (per ? "<span class='a'>" + esc(per) + '</span>' : '') + ks + '</td>';
-  }
-  return '<tr><td>' + iconFor(name) + '<b>' + esc(name) + '</b>' +
-    (amount ? " <span class='a'>" + esc(amount) + '</span>' : '') + '</td>' + tds + '</tr>';
+    if (d) det.push("<span class='expb'>⏰ " + esc(d) + '</span>');
+    if (o.pct) det.push("<span class='pctb'>" + esc(o.pct) + '</span>');
+    if (per) det.push('<span>' + esc(per) + '</span>');
+    if (o.pack > 1) det.push('<span>' + (o.price / o.pack).toFixed(2) + ' Kč/ks</span>');
+    if (o.wholesale) det.push('<span>vč. DPH' + (o.net ? ' · ' + o.net.toFixed(2) + ' Kč bez DPH' : '') + '</span>');
+    return "<div class='pb" + (i === 0 ? ' best' : '') + "' data-shop='" + esc(o.slug || '') + "'>" +
+      "<span class='ps'>" + shopBadge(o.shop) + '</span>' +
+      "<span class='pt'><i style='width:" + Math.max(14, Math.round(o.price / max * 100)) + "%'></i></span>" +
+      "<span class='pv'>" + o.price.toFixed(2) + '</span>' +
+      "<div class='pd'>" + det.join('') + '</div></div>';
+  }).join('');
+  var b = offers[0], save = max - b.price;
+  return "<div class='prow'><div class='pi'>" + iconFor(name).trim() + '</div>' +
+    "<div class='pn'><b>" + esc(name) + '</b>' + (amount ? "<span class='a'>" + esc(amount) + '</span>' : '') + '</div>' +
+    "<div class='pbars'>" + bars + '</div>' +
+    "<div class='pbest' data-shop='" + esc(b.slug || '') + "'><div class='pbig'>" + b.price.toFixed(2) + '<small>Kč</small></div>' +
+    (save > 0.005 ? "<span class='psave'>rẻ hơn " + save.toFixed(2) + '</span>' : '') + '</div></div>';
 }
 function tableHTML(rows) {
-  return "<div class='mxwrap'><table class='mx'><tr><th style='width:30%'>Mặt hàng</th>" +
-    "<th style='background:var(--acc-bg);color:var(--acc-strong)'>✅ Rẻ nhất</th>" +
-    '<th>#2</th><th>#3</th></tr>' + rows.join('') + '</table></div>';
+  return "<div class='plist'>" + rows.join('') + '</div>';
 }
-function tilesHTML() {
-  return '<div class="tiles">' + TILES.map(function (t) {
-    return '<a class="tile" href="#/cat/' + t[2] + '"><span class="em">' + t[0] + '</span>' + t[1] + '</a>';
-  }).join('') + '</div>';
+/* Danh muc gio nam o cot trai co dinh (#cats, ve 1 lan) -> khong chen vao #main nua */
+function tilesHTML() { return ''; }
+function renderCats() {
+  var box = document.getElementById('cats');
+  if (!box) return;
+  box.innerHTML = '<h5>Danh mục</h5>' + TILES.map(function (t) {
+    return '<a href="#/cat/' + t[2] + '" data-cat="' + t[2] + '"><span>' + t[0] + '</span>' + t[1] + '</a>';
+  }).join('');
+}
+/* Cot phai: "Giam sau nhat" + "Sap het KM" tinh tu retail.json (ban le) */
+function renderRail() {
+  var box = document.getElementById('rail');
+  if (!box) return;
+  loadRetail().then(function (d) {
+    var items = retailOnly(d.items || []);
+    function first(p) { return p[2].slice().sort(function (a, b) { return a[1] - b[1]; })[0]; }
+    function link(p) { return '#/q/' + encodeURIComponent(p[0]); }
+    var top = items.filter(function (p) { return bestPct(p) > 0; })
+      .sort(function (a, b) { return bestPct(b) - bestPct(a); }).slice(0, 4);
+    var exp = items.filter(hasExpiring).map(function (p) {
+      var w = p[2].map(function (x) { return expShort(x[4]); }).filter(Boolean);
+      return { p: p, today: w.indexOf('hôm nay') >= 0 };
+    }).sort(function (a, b) { return (b.today ? 1 : 0) - (a.today ? 1 : 0); }).slice(0, 6);
+    var html = '';
+    if (top.length) html += "<div class='rbox rtop'><h5>🔥 Giảm sâu nhất</h5>" + top.map(function (p) {
+      var o = first(p);
+      return "<a class='t3' href='" + link(p) + "'><span class='rk num'>−" + bestPct(p) + "%</span>" +
+        "<span class='nm'>" + iconFor(p[0]) + esc(p[0]) + '<small>' + o[1].toFixed(2) + ' Kč · ' +
+        esc(canonShop(o[0]).replace(/\s*\(.*$/, '')) + '</small></span></a>';
+    }).join('') + '</div>';
+    if (exp.length) html += "<div class='rbox rexp'><h5>⏰ Sắp hết khuyến mãi</h5>" + exp.map(function (x) {
+      return "<a class='ex' href='" + link(x.p) + "'><span>" + iconFor(x.p[0]) + esc(x.p[0]) + '</span>' +
+        "<span class='when" + (x.today ? ' today' : '') + "'>" + (x.today ? 'hôm nay' : 'ngày mai') + '</span></a>';
+    }).join('') + '</div>';
+    box.innerHTML = html;
+  });
 }
 
 /* ---------- gom du lieu -> hang ---------- */
@@ -1204,6 +1245,11 @@ function route() {
   });
   // Trang search: them class 'is-search' -> CSS mobile an tiles + h1 de ket qua len cao
   document.body.classList.toggle('is-search', h.indexOf('/q/') === 0);
+  // Di dong: cot "Giam sau nhat / Sap het KM" chi hien o Trang chu
+  document.body.classList.toggle('is-home', h === '/');
+  document.querySelectorAll('[data-cat]').forEach(function (a) {
+    a.classList.toggle('on', h === '/cat/' + a.getAttribute('data-cat'));
+  });
   if (h.indexOf('/q/') === 0) {
     var q = decodeURIComponent(h.slice(3));
     var qEl = $('#q');
@@ -1262,8 +1308,9 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 
 window.addEventListener('hashchange', route);
 initScanner();
+renderCats();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.6.0.43';
+if (el) el.textContent = 'v1.7.0.0';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
@@ -1276,10 +1323,10 @@ if (el) el.textContent = 'v1.6.0.43';
   function save(a) { localStorage.setItem(KEY, JSON.stringify(a)); }
   function apply() {
     var h = hidden();
-    document.querySelectorAll('td[data-shop]').forEach(function (td) {
+    document.querySelectorAll('#main [data-shop]').forEach(function (td) {
       var s = norm(td.getAttribute('data-shop'));
       var hide = h.some(function (k) { return s.indexOf(k) >= 0; });
-      if (hide) { if (!td.dataset.orig) td.dataset.orig = td.innerHTML; td.innerHTML = "<span class='a'>ẩn</span>"; }
+      if (hide) { if (!td.dataset.orig) td.dataset.orig = td.innerHTML; td.innerHTML = "<span class='a hidshop'>ẩn</span>"; }
       else if (td.dataset.orig) { td.innerHTML = td.dataset.orig; td.removeAttribute('data-orig'); }
     });
   }
@@ -1364,4 +1411,4 @@ fetch('data/meta.json?t=' + Date.now(), { cache: 'no-store' })
   .then(function (m) { DATA.cb = (m && m.built || '').replace(/\D/g, ''); })
   .catch(function () {})
   .then(function () { return loadDict(); })
-  .then(route);
+  .then(function () { route(); renderRail(); });
