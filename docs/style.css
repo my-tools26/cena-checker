@@ -68,27 +68,28 @@
 
  /* ---- danh sach mat hang (moi hang: ten + toi da 3 thanh so gia) ---- */
  .plist{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:12px}
- .prow{display:grid;grid-template-columns:36px minmax(0,1.15fr) minmax(0,2fr) 128px;gap:14px;align-items:center;padding:13px 16px;border-top:1px solid var(--line)}
+ .prow{display:grid;grid-template-columns:36px minmax(0,1.15fr) minmax(0,2fr) 128px;gap:18px;align-items:center;padding:18px 20px;border-top:1px solid var(--line)}
  .prow:first-child{border-top:0}
  .prow:hover{background:var(--card2)}
  .pi{font-size:1.45em;text-align:center}
  .pn b{color:var(--text-strong);font-weight:600;line-height:1.3}
  .pn .a{display:block;margin-top:2px}
- .pbars{display:flex;flex-direction:column;gap:6px;min-width:0}
- .pb{display:grid;grid-template-columns:minmax(0,118px) minmax(30px,1fr) auto;gap:8px;align-items:center;font-size:.84em}
+ .pbars{display:flex;flex-direction:column;gap:12px;min-width:0}
+ .pb{display:grid;grid-template-columns:minmax(0,104px) minmax(30px,1fr) auto;gap:4px 12px;align-items:center;font-size:.84em}
  .pb .ps{min-width:0}
- .pb .pt{height:8px;border-radius:4px;background:var(--card2);overflow:hidden}
- .pb .pt i{display:block;height:100%;border-radius:4px;background:var(--bar)}
- .pb.best .pt i{background:var(--good)}
- .pb .pv{text-align:right;font-weight:700;color:var(--text-strong);white-space:nowrap}
- .pb.best .pv{color:var(--good)}
- .pb .pd{grid-column:1/-1;font-size:.86em;color:var(--muted);margin-top:-3px;display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+ .pb .pt{height:6px;border-radius:3px;background:var(--card2);overflow:hidden}
+ .pb .pt i{display:block;height:100%;border-radius:3px;background:var(--bar);opacity:.7}
+ .pb.best .pt i{background:var(--good);opacity:1}
+ .pb .pv{text-align:right;font-weight:600;color:var(--muted);white-space:nowrap}
+ .pb.best .pv{color:var(--good);font-weight:700}
+ .pb .pd{grid-column:1/-1;font-size:.86em;color:var(--muted);display:flex;flex-wrap:wrap;gap:2px 12px;align-items:center}
+ .pb .pd .expb,.pb .pd .pctb{background:none;padding:0;font-weight:600}
  .pb .pd:empty{display:none}
  .pbest{text-align:right}
  .pbig{font-size:1.4em;font-weight:700;letter-spacing:-.03em;color:var(--text-strong);white-space:nowrap}
  .pbig small{font-size:.55em;color:var(--muted);margin-left:2px}
  .psave{display:inline-block;font-size:.72em;font-weight:700;padding:2px 7px;border-radius:5px;margin-top:4px;background:var(--good-bg);color:var(--good)}
- .sbadge{display:inline-block;max-width:100%;border-radius:5px;padding:2px 7px;font-size:.84em;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;cursor:default}
+ .sbadge{display:inline-block;max-width:100%;border-radius:5px;padding:2px 8px;font-size:.84em;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;cursor:default}
  .sbadge.open{white-space:normal;overflow:visible}
  html.dark .sbadge{filter:saturate(.85) brightness(.92)}
  .expb{background:var(--exp-bg);color:var(--exp-txt);border-radius:5px;padding:1px 7px;font-size:.92em;font-weight:700;white-space:nowrap}
@@ -145,7 +146,7 @@
   .rexp .ex:nth-of-type(n+4){display:none}
   body.is-search .catlist{display:none}
   .center{order:2}
-  .prow{grid-template-columns:30px minmax(0,1fr) auto;gap:6px 10px;padding:12px}
+  .prow{grid-template-columns:30px minmax(0,1fr) auto;gap:12px 10px;padding:16px 14px}
   .prow .pbars{grid-column:1/-1;grid-row:2}
   .prow .pbest{grid-column:3;grid-row:1}
   .pb{grid-template-columns:minmax(0,108px) minmax(24px,1fr) auto}

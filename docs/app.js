@@ -357,6 +357,8 @@ var SHORT_SHOPS = [[/^albert hypermarket/i, 'Albert hyp.'], [/^albert supermarke
   [/^rossmann drogerie/i, 'Rossmann'], [/^tamda foods/i, 'Tamda'], [/^ptt global/i, 'PTT'],
   [/^dathang\.cz/i, 'dathang'], [/^linsan24h/i, 'Linsan'], [/^juniorpap[ií]r/i, 'JUNIOR']];
 function shortShop(name) {
+  // bo phan "(baleno, max...)" tren nhan cho gon — van con trong title
+  name = name.replace(/\s*\(.*$/, '');
   for (var i = 0; i < SHORT_SHOPS.length; i++)
     if (SHORT_SHOPS[i][0].test(name)) return name.replace(SHORT_SHOPS[i][0], SHORT_SHOPS[i][1]);
   return name;
@@ -1324,7 +1326,7 @@ window.addEventListener('hashchange', route);
 initScanner();
 renderCats();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.2';
+if (el) el.textContent = 'v1.7.0.3';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
