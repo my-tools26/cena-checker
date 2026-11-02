@@ -151,9 +151,9 @@
   .prow .pbest{grid-column:3;grid-row:1}
   .pb{grid-template-columns:minmax(0,108px) minmax(24px,1fr) auto}
   .pbig{font-size:1.25em}
-  .filterwrap.open{display:none}
-  .filterwrap.open.mforce{display:block}
-  body.q-focused #filterbtn{display:inline-block}
+  .bar>.filterwrap{order:4;flex-basis:100%;margin:0 0 2px}
+  .bar>.filterwrap .storefilter{padding:8px 10px;max-height:55vh;overflow-y:auto}
+  #filterbtn{display:none !important}
   .sfgroup{display:block}
   .sfgroup .sfrow{display:flex;margin:3px 0;gap:4px;flex-wrap:wrap}
   .mobnav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--top);border-top:1px solid var(--line);justify-content:space-around;padding:6px 0 calc(6px + env(safe-area-inset-bottom))}

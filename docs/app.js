@@ -1326,7 +1326,7 @@ window.addEventListener('hashchange', route);
 initScanner();
 renderCats();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.3';
+if (el) el.textContent = 'v1.7.0.4';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
@@ -1364,6 +1364,17 @@ if (el) el.textContent = 'v1.7.0.3';
     var all = []; panel.querySelectorAll('.stp').forEach(function (b) { all.push(b.getAttribute('data-k')); });
     save(all); paint(); apply();
   });
+  // Dien thoai: dua bo loc len ngay duoi o tim kiem (trong thanh tren), may tinh giu cho cu
+  var form = document.getElementById('searchform'), mainEl = document.getElementById('main');
+  var mq = window.matchMedia('(max-width:760px)');
+  function place() {
+    if (mq.matches) form.parentNode.insertBefore(panel, form.nextSibling);
+    else mainEl.parentNode.insertBefore(panel, mainEl);
+  }
+  if (form && mainEl) {
+    place();
+    if (mq.addEventListener) mq.addEventListener('change', place); else mq.addListener(place);
+  }
   function show() { panel.classList.add('open'); document.body.classList.add('q-focused'); }
   function hide() { panel.classList.remove('open'); panel.classList.remove('mforce'); document.body.classList.remove('q-focused'); }
   input.addEventListener('focus', show);
