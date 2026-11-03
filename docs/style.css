@@ -133,6 +133,8 @@
   .catlist,.rail{align-self:stretch;min-width:0}
   .catlist{position:static;display:flex;overflow-x:auto;gap:4px;padding:5px;scrollbar-width:none;border-radius:12px}
   .catlist::-webkit-scrollbar{display:none}
+  .catlist{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+  .catlist.atend{-webkit-mask-image:none;mask-image:none}
   .catlist h5{display:none}
   .catlist a{flex:0 0 auto;white-space:nowrap;background:var(--card2);padding:7px 11px}
   .rail{order:-1;position:static;flex-direction:column;gap:10px}

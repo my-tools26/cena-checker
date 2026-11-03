@@ -1325,8 +1325,40 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 renderCats();
+/* Dien thoai: danh muc keo ngang -> mo dan mep phai + "nhich" nhe 1 lan de bao con keo duoc */
+(function () {
+  var box = document.getElementById('cats');
+  if (!box || !window.matchMedia('(max-width:760px)').matches) return;
+  function edge() { box.classList.toggle('atend', box.scrollLeft + box.clientWidth >= box.scrollWidth - 4); }
+  box.addEventListener('scroll', edge, { passive: true });
+  edge();
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  // tu ve bang requestAnimationFrame (scrollTo smooth co trinh duyet bo qua)
+  function glide(from, to, ms, done) {
+    var t0 = null;
+    function step(t) {
+      if (t0 === null) t0 = t;
+      var k = Math.min(1, (t - t0) / ms), e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+      box.scrollLeft = from + (to - from) * e;
+      if (k < 1) requestAnimationFrame(step); else if (done) done();
+    }
+    requestAnimationFrame(step);
+  }
+  function nudge() {
+    if (box.scrollLeft > 0 || box.scrollWidth <= box.clientWidth) return;
+    glide(0, 64, 450, function () { setTimeout(function () { glide(64, 0, 500); }, 150); });
+  }
+  // nhich khi thanh danh muc lot vao man hinh (trang chu no nam duoi phan giam gia)
+  if (!window.IntersectionObserver) { setTimeout(nudge, 900); return; }
+  var io = new IntersectionObserver(function (es) {
+    if (!es[0].isIntersecting) return;
+    io.disconnect();
+    setTimeout(nudge, 400);
+  }, { threshold: 0.9 });
+  io.observe(box);
+})();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.5';
+if (el) el.textContent = 'v1.7.0.6';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
