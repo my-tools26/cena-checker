@@ -198,6 +198,25 @@ def build_ean_shards(catalog):
         rec = shards.setdefault(alias[:3], {}).setdefault(alias, [src[0], []])
         if not rec[1]:
             rec[0], rec[1] = src[0], list(src[1])
+    # === Ma DAY tren web (ean_taught.json: {ma: ten mon trong catalog}) ===
+    # Nguoi dung quet khong ra -> chon dung mon -> Google Sheet -> thu_ma_day.py.
+    # Chi lap cho ma CHUA co gia that (khong de du lieu kho).
+    taught = (load("ean_taught.json") or {}).get("items", {})
+    if taught:
+        byname = {}
+        for it in catalog:
+            byname.setdefault(it[0], []).append(it)
+        nt = 0
+        for code, nm in taught.items():
+            rows = byname.get(nm)
+            if not rows or not code.isdigit():
+                continue
+            rec = shards.setdefault(code[:3], {}).setdefault(code, [nm, []])
+            if rec[1]:
+                continue
+            rec[0], rec[1] = nm, [[it[3], it[1], it[2], it[4]] for it in rows]
+            nt += 1
+        print(f"  ma day tren web: {nt}/{len(taught)} ma")
     # === GHEP GIA cho ma CHI CO TEN (chua gan gia) ===
     # ~49% ma chi co ten (Luigi's Box, hoac kho khong ghi ma vach trong bang gia).
     # Ghep theo THUONG HIEU (tu dau) + DUNG TICH, chan nham bien the -> quet ra

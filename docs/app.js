@@ -859,6 +859,8 @@ function pageSearch(query) {
 
 function searchByEan(code, head, el) {
   return eanLookupAll(code).then(function (hit) {
+    return hit || taughtHit(code);       // ma nguoi dung da "day" (may nay)
+  }).then(function (hit) {
     if (!hit) {
       return eanFallbackOFF(code, head, el);   // Lop 3: tra Open Food Facts + goi y
     }
@@ -995,7 +997,9 @@ function eanFallbackOFF(code, head, el) {
   return offLookup(code).then(function (info) {
     if (!info) {
       el.innerHTML = tilesHTML() + head + "<p>Không tìm thấy mã vạch <b>" +
-        esc(code) + '</b> trong dữ liệu (kho + Open Food Facts đều không có).</p>';
+        esc(code) + '</b> trong dữ liệu (kho + Open Food Facts đều không có).</p>' +
+        teachHTML(code);
+      wireTeach(code, '');
       return;
     }
     var label = info.name + (info.qty ? ' ' + info.qty : '') +
@@ -1004,7 +1008,11 @@ function eanFallbackOFF(code, head, el) {
       esc(label) + '</b><br>Mã <b>' + esc(code) +
       '</b> chưa có kho nào ghi — gợi ý theo tên:</p>';
     var toks = suggestToks(info);
-    if (!toks.length) { el.innerHTML = tilesHTML() + base; return; }
+    if (!toks.length) {
+      el.innerHTML = tilesHTML() + base + teachHTML(code);
+      wireTeach(code, '');
+      return;
+    }
     return Promise.all([loadCatalog(), loadRetail()]).then(function (r) {
       var cat = r[0], rd = r[1], sim = [], ret = [];
       // noi long dan: 3 tu -> 2 -> 1, dung ngay khi co ket qua
@@ -1019,9 +1027,84 @@ function eanFallbackOFF(code, head, el) {
         sim.length + '</h2>' + tableHTML(groupRows(sim.slice(0, 30)));
       if (!ret.length && !sim.length)
         html += "<p class='muted'>Chưa có kho nào bán sản phẩm cùng tên.</p>";
-      el.innerHTML = tilesHTML() + html;
+      el.innerHTML = tilesHTML() + teachHTML(code) + html;
+      wireTeach(code, toks.slice(0, 2).join(' '));
     });
   });
+}
+
+/* ===== DAY MA: quet khong ra -> nguoi dung go ten, chon dung mon -> nho ngay
+   tren may (localStorage) + gui ve Google Sheet chung; routine hang ngay gop
+   vao du lieu (thu_ma_day.py -> ean_taught.json -> build_static) de MOI NGUOI
+   quet deu ra. Dung cho hang kho khong ghi ma vach (dathang, Bombacena...). ===== */
+var TEACH_URL = '';                       // URL Web App cua Google Apps Script
+var TEACH_KEY = 'ccTaught';
+function taughtMap() {
+  try { return JSON.parse(localStorage.getItem(TEACH_KEY) || '{}'); } catch (e) { return {}; }
+}
+/* Tra ma da day: Google Sheet CHUNG (ai day cung co hieu luc ngay cho moi nguoi,
+   khong cho routine) -> roi moi toi ban dem tren may. */
+function taughtName(code) {
+  var local = taughtMap()[code] || null;
+  if (!TEACH_URL) return Promise.resolve(local);
+  return fetch(TEACH_URL + '?ean=' + encodeURIComponent(code))
+    .then(function (r) { return r.json(); })
+    .then(function (d) { return (d && d.name) || local; })
+    .catch(function () { return local; });
+}
+function taughtHit(code) {
+  return taughtName(code).then(function (nm) { return nm ? taughtRec(code, nm) : null; });
+}
+function taughtRec(code, nm) {
+  return loadCatalog().then(function (cat) {
+    var offers = cat.filter(function (it) { return it[0] === nm; })
+      .map(function (it) { return [it[3], it[1], it[2], it[4]]; });
+    return offers.length ? { code: code, rec: [nm, offers], nameMatched: false } : null;
+  });
+}
+function teachHTML(code) {
+  return "<div class='teach'><b>🧠 Dạy mã này cho Cena</b>" +
+    "<p class='muted'>Gõ tên món (vd <i>jessa active</i>) rồi bấm <b>✔ Đúng món</b> — " +
+    'lần sau quét mã <b>' + esc(code) + '</b> là ra ngay, cho cả mọi người.</p>' +
+    "<input id='teachq' type='search' placeholder='Tên sản phẩm…' autocomplete='off'>" +
+    "<div id='teachres'></div></div>";
+}
+function wireTeach(code, prefill) {
+  var inp = document.getElementById('teachq'), box = document.getElementById('teachres');
+  if (!inp) return;
+  var timer = null;
+  function run() {
+    var q = stripAccents(inp.value.trim());
+    if (q.length < 2) { box.innerHTML = ''; return; }
+    loadCatalog().then(function (cat) {
+      var seen = {}, rows = [];
+      searchCatalog(cat, q).forEach(function (it) {
+        if (seen[it[0]] || rows.length >= 12) return;
+        seen[it[0]] = 1; rows.push(it);
+      });
+      box.innerHTML = rows.length ? rows.map(function (it, i) {
+        return "<div class='trow'><span>" + esc(it[0]) + '<small>' +
+          esc([it[2], SHOP[it[3]]].filter(Boolean).join(' · ')) + '</small></span>' +
+          "<button data-i='" + i + "'>✔ Đúng món</button></div>";
+      }).join('') : "<p class='muted'>Không thấy món nào khớp.</p>";
+      Array.prototype.forEach.call(box.querySelectorAll('button'), function (b) {
+        b.onclick = function () {
+          var it = rows[+b.getAttribute('data-i')];
+          var m = taughtMap(); m[code] = it[0];
+          try { localStorage.setItem(TEACH_KEY, JSON.stringify(m)); } catch (e) { /* bo qua */ }
+          if (TEACH_URL) {
+            fetch(TEACH_URL, { method: 'POST', mode: 'no-cors',
+              headers: { 'Content-Type': 'text/plain' },
+              body: JSON.stringify({ ean: code, name: it[0], shop: SHOP[it[3]] || '' }) })
+              .catch(function () { /* da luu tren may */ });
+          }
+          pageSearch(code);
+        };
+      });
+    });
+  }
+  inp.oninput = function () { clearTimeout(timer); timer = setTimeout(run, 250); };
+  if (prefill) { inp.value = prefill; run(); }
 }
 function searchCatalog(cat, q) {
   var terms = q.split(/\s+/).filter(Boolean);
@@ -1357,7 +1440,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.10';
+if (el) el.textContent = 'v1.7.0.11';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
