@@ -485,7 +485,7 @@ function renderCats() {
     return '<a href="#/cat/' + t[2] + '" data-cat="' + t[2] + '"><span>' + t[0] + '</span>' + t[1] + '</a>';
   }).join('');
 }
-/* Cot phai: "Giam sau nhat" + "Sap het KM" tinh tu retail.json (ban le) */
+/* Cot phai: "Giam sau" + "Sap het KM" tinh tu retail.json (ban le) */
 function renderRail() {
   var box = document.getElementById('rail');
   if (!box) return;
@@ -497,14 +497,21 @@ function renderRail() {
       return p[2].slice().sort(function (a, b) { return pct(b) - pct(a) || a[1] - b[1]; })[0];
     }
     function link(p) { return '#/q/' + encodeURIComponent(p[0]); }
-    var top = items.filter(function (p) { return bestPct(p) > 0; })
-      .sort(function (a, b) { return bestPct(b) - bestPct(a); }).slice(0, 4);
+    // "Giam sau": goi y NGAU NHIEN 4 mon giam tu 30% tro len (moi lan mo trang 1 bo khac),
+    // khong phai luc nao cung 4 mon sau nhat; it qua thi lay theo % cao nhat
+    var deep = items.filter(function (p) { return bestPct(p) >= 30; });
+    for (var i = deep.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1)), t = deep[i]; deep[i] = deep[j]; deep[j] = t;
+    }
+    function byPct(a, b) { return bestPct(b) - bestPct(a); }
+    var top = deep.length >= 4 ? deep.slice(0, 4).sort(byPct)
+      : items.filter(function (p) { return bestPct(p) > 0; }).sort(byPct).slice(0, 4);
     var exp = items.filter(hasExpiring).map(function (p) {
       var w = p[2].map(function (x) { return expShort(x[4]); }).filter(Boolean);
       return { p: p, today: w.indexOf('hôm nay') >= 0 };
     }).sort(function (a, b) { return (b.today ? 1 : 0) - (a.today ? 1 : 0); }).slice(0, 6);
     var html = '';
-    if (top.length) html += "<div class='rbox rtop'><h5>🔥 Giảm sâu nhất</h5>" + top.map(function (p) {
+    if (top.length) html += "<div class='rbox rtop'><h5>🔥 Giảm sâu</h5>" + top.map(function (p) {
       var o = first(p);
       return "<a class='t3' href='" + link(p) + "'><span class='rk num'>−" + bestPct(p) + "%</span>" +
         "<span class='nm'>" + iconFor(p[0]) + esc(p[0]) + '<small>' + o[1].toFixed(2) + ' Kč · ' +
@@ -1344,7 +1351,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.7';
+if (el) el.textContent = 'v1.7.0.8';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
