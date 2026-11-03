@@ -133,8 +133,12 @@
   .catlist,.rail{align-self:stretch;min-width:0}
   .catlist{position:static;display:flex;overflow-x:auto;gap:4px;padding:5px;scrollbar-width:none;border-radius:12px}
   .catlist::-webkit-scrollbar{display:none}
-  .catlist{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
-  .catlist.atend{-webkit-mask-image:none;mask-image:none}
+  /* mui ten "›" dinh mep phai (sticky) + nhich 1 lan -> bao keo ngang duoc */
+  .catlist::after{content:'›';position:-webkit-sticky;position:sticky;right:-5px;flex:0 0 50px;margin:-5px -5px -5px -50px;align-self:stretch;display:flex;align-items:center;justify-content:flex-end;padding-right:12px;border-radius:0 12px 12px 0;font-size:1.6em;font-weight:700;line-height:1;color:var(--accent);background:linear-gradient(90deg,transparent,var(--card) 55%);pointer-events:none;transition:opacity .2s}
+  .catlist.atend::after{opacity:0}
+  .catlist.nudge a{animation:catnudge 1.5s ease-in-out .2s both}
+  @keyframes catnudge{0%,100%{transform:translateX(0)}30%{transform:translateX(-46px)}55%{transform:translateX(0)}72%{transform:translateX(-16px)}}
+  @media(prefers-reduced-motion:reduce){.catlist.nudge a{animation:none}}
   .catlist h5{display:none}
   .catlist a{flex:0 0 auto;white-space:nowrap;background:var(--card2);padding:7px 11px}
   .rail{order:-1;position:static;flex-direction:column;gap:10px}

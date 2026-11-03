@@ -1325,40 +1325,26 @@ if (document.documentElement.classList.contains('dark')) $('#themebtn').textCont
 window.addEventListener('hashchange', route);
 initScanner();
 renderCats();
-/* Dien thoai: danh muc keo ngang -> mo dan mep phai + "nhich" nhe 1 lan de bao con keo duoc */
+/* Dien thoai: danh muc keo ngang -> mui ten "›" mep phai + "nhich" nhe 1 lan de bao con keo duoc.
+   Nhich bang CSS animation (class .nudge) — iPhone Safari khong chay ban cuon bang JS */
 (function () {
   var box = document.getElementById('cats');
   if (!box || !window.matchMedia('(max-width:760px)').matches) return;
   function edge() { box.classList.toggle('atend', box.scrollLeft + box.clientWidth >= box.scrollWidth - 4); }
   box.addEventListener('scroll', edge, { passive: true });
   edge();
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  // tu ve bang requestAnimationFrame (scrollTo smooth co trinh duyet bo qua)
-  function glide(from, to, ms, done) {
-    var t0 = null;
-    function step(t) {
-      if (t0 === null) t0 = t;
-      var k = Math.min(1, (t - t0) / ms), e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
-      box.scrollLeft = from + (to - from) * e;
-      if (k < 1) requestAnimationFrame(step); else if (done) done();
-    }
-    requestAnimationFrame(step);
+  // nhich khi thanh danh muc nam tron trong man hinh (trang chu no nam duoi phan giam gia)
+  function check() {
+    var r = box.getBoundingClientRect();
+    if (r.top < 0 || r.bottom > window.innerHeight || r.height === 0) return;
+    window.removeEventListener('scroll', check);
+    if (box.scrollLeft === 0 && box.scrollWidth > box.clientWidth) box.classList.add('nudge');
   }
-  function nudge() {
-    if (box.scrollLeft > 0 || box.scrollWidth <= box.clientWidth) return;
-    glide(0, 64, 450, function () { setTimeout(function () { glide(64, 0, 500); }, 150); });
-  }
-  // nhich khi thanh danh muc lot vao man hinh (trang chu no nam duoi phan giam gia)
-  if (!window.IntersectionObserver) { setTimeout(nudge, 900); return; }
-  var io = new IntersectionObserver(function (es) {
-    if (!es[0].isIntersecting) return;
-    io.disconnect();
-    setTimeout(nudge, 400);
-  }, { threshold: 0.9 });
-  io.observe(box);
+  window.addEventListener('scroll', check, { passive: true });
+  setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.6';
+if (el) el.textContent = 'v1.7.0.7';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
