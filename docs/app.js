@@ -508,7 +508,11 @@ function renderRail() {
       : items.filter(function (p) { return bestPct(p) > 0; }).sort(byPct).slice(0, 4);
     var exp = items.filter(hasExpiring).map(function (p) {
       var w = p[2].map(function (x) { return expShort(x[4]); }).filter(Boolean);
-      return { p: p, today: w.indexOf('hôm nay') >= 0 };
+      var today = w.indexOf('hôm nay') >= 0;
+      // gia hien ra = deal sap het (hom nay uu tien), re nhat trong so do
+      var o = p[2].filter(function (x) { return expShort(x[4]) === (today ? 'hôm nay' : 'ngày mai'); })
+        .sort(function (a, b) { return a[1] - b[1]; })[0];
+      return { p: p, today: today, o: o };
     }).sort(function (a, b) { return (b.today ? 1 : 0) - (a.today ? 1 : 0); }).slice(0, 6);
     var html = '';
     if (top.length) html += "<div class='rbox rtop'><h5>🔥 Giảm sâu</h5>" + top.map(function (p) {
@@ -518,7 +522,9 @@ function renderRail() {
         esc(shortShop(canonShop(o[0]).replace(/\s*\(.*$/, ''))) + '</small></span></a>';
     }).join('') + '</div>';
     if (exp.length) html += "<div class='rbox rexp'><h5>⏰ Sắp hết khuyến mãi</h5>" + exp.map(function (x) {
-      return "<a class='ex' href='" + link(x.p) + "'><span>" + iconFor(x.p[0]) + esc(x.p[0]) + '</span>' +
+      return "<a class='ex' href='" + link(x.p) + "'><span>" + iconFor(x.p[0]) + esc(x.p[0]) +
+        (x.o ? '<small>' + x.o[1].toFixed(2) + ' Kč · ' +
+          esc(shortShop(canonShop(x.o[0]).replace(/\s*\(.*$/, ''))) + '</small>' : '') + '</span>' +
         "<span class='when" + (x.today ? ' today' : '') + "'>" + (x.today ? 'hôm nay' : 'ngày mai') + '</span></a>';
     }).join('') + '</div>';
     box.innerHTML = html;
@@ -1351,7 +1357,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.8';
+if (el) el.textContent = 'v1.7.0.9';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
