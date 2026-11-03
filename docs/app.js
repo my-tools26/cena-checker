@@ -1326,7 +1326,7 @@ window.addEventListener('hashchange', route);
 initScanner();
 renderCats();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.4';
+if (el) el.textContent = 'v1.7.0.5';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
