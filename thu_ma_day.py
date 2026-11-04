@@ -23,7 +23,12 @@ for row in rows:
     code = re.sub(r"\D", "", str(row.get("ean", "")))
     name = str(row.get("name", "")).strip()
     if 8 <= len(code) <= 14 and name:
-        items[code] = name
+        try:
+            price = round(float(str(row.get("price", "")).replace(",", ".")), 2)
+        except ValueError:
+            price = None
+        items[code] = {"name": name, "price": price, "weight": str(row.get("weight", "")).strip(),
+                       "origin": str(row.get("origin", "")).strip()}
 with atomic_open("ean_taught.json") as f:
     json.dump({"_note": "Ma vach nguoi dung day tren web (Google Sheet). Tu sinh boi "
                         "thu_ma_day.py - dung sua tay.", "items": items},

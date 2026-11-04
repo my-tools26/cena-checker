@@ -200,7 +200,7 @@ def build_ean_shards(catalog):
         rec = shards.setdefault(alias[:3], {}).setdefault(alias, [src[0], []])
         if not rec[1]:
             rec[0], rec[1] = src[0], list(src[1])
-    # === Ma DAY tren web (ean_taught.json: {ma: ten mon trong catalog}) ===
+    # === Ma DAY tren web (ean_taught.json: {ma: {name, price, weight, origin}}) ===
     # Nguoi dung quet khong ra -> chon dung mon -> Google Sheet -> thu_ma_day.py.
     # Chi lap cho ma CHUA co gia that (khong de du lieu kho).
     taught = (load("ean_taught.json") or {}).get("items", {})
@@ -209,7 +209,8 @@ def build_ean_shards(catalog):
         for it in catalog:
             byname.setdefault(it[0], []).append(it)
         nt = 0
-        for code, nm in taught.items():
+        for code, v in taught.items():
+            nm = v["name"]
             rows = byname.get(nm)
             if not rows or not code.isdigit():
                 continue
@@ -259,6 +260,16 @@ def build_ean_shards(catalog):
                 rec.append(1)          # danh dau: gia suy theo ten
                 enriched += 1
     print(f"  ghep gia theo ten cho {enriched} ma chi co ten")
+    # Ma day cua mon KHONG co trong catalog: giu gia + thong tin nguoi dung gui (rec[3]).
+    # Lam SAU buoc ghep gia theo ten de khong bi gan nham gia kho.
+    if taught:
+        for code, v in taught.items():
+            if not code.isdigit() or v["name"] in byname or not v.get("price"):
+                continue
+            rec = shards.setdefault(code[:3], {}).setdefault(code, [v["name"], []])
+            if not rec[1]:
+                rec[:] = [v["name"], [], 0, {"p": v["price"], "w": v.get("weight", ""),
+                                             "o": v.get("origin", "")}]
 
     # Chia nho THICH UNG: manh nao qua dong (ma Sec deu bat dau 859) thi tach
     # sau them 1-2 chu so nua, de moi lan quet chi tai vai chuc KB.

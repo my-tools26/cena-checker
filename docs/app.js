@@ -233,13 +233,14 @@ function eanLookupAll(code) {
       return getJSON('data/ean/' + p + '.json').catch(function () { return {}; })
         .then(function (m) { return { p: p, m: m }; });
     })).then(function (parts) {
-      var name = '', byShop = {}, hitCode = null, byName = false, exact = false;
+      var name = '', byShop = {}, hitCode = null, byName = false, exact = false, taught = null;
       parts.forEach(function (part) {
         need[part.p].forEach(function (c) {
           var rec = part.m[c];
           if (!rec) return;
           if (!hitCode) hitCode = c;
           if (!name && rec[0]) name = rec[0];
+          if (rec[3] && !taught) taught = { price: rec[3].p, weight: rec[3].w, origin: rec[3].o };
           if (rec[2] === 1) byName = true; else if (rec[1] && rec[1].length) exact = true;
           (rec[1] || []).forEach(function (o) {
             var ex = byShop[o[0]];
@@ -250,7 +251,7 @@ function eanLookupAll(code) {
       if (!hitCode) return null;
       var offers = Object.keys(byShop).map(function (k) { return byShop[k]; });
       // nameMatched = gia suy theo ten (build-time), khong phai trung ma vach that
-      return { code: hitCode, rec: [name, offers], nameMatched: byName && !exact };
+      return { code: hitCode, rec: [name, offers], nameMatched: byName && !exact, taught: taught };
     });
   });
 }
@@ -877,7 +878,8 @@ function searchByEan(code, head, el) {
         (hit.nameMatched ? "<p class='muted' style='font-size:.8em'>Mã vạch này chỉ " +
           'có ở một nơi; các kho khác ghép theo tên + đúng dung tích.</p>' : '');
     } else {
-      html += "<p class='muted'>Nhận diện được tên nhưng chưa có giá kho nào.</p>";
+      html += hit.taught && hit.taught.price ? taughtCard(hit.taught)
+        : "<p class='muted'>Nhận diện được tên nhưng chưa có giá kho nào.</p>";
     }
     // Tim gia SIEU THI theo ten (retail.json nho ~120KB).
     // KHONG tai catalog 2MB o day - manh EAN da co du gia kho cua dung ma nay;
@@ -1011,7 +1013,7 @@ function eanFallbackOFF(code, head, el) {
     var toks = suggestToks(info);
     if (!toks.length) {
       el.innerHTML = tilesHTML() + base + teachHTML(code);
-      wireTeach(code, '');
+      wireTeach(code, info.name, info.qty);
       return;
     }
     return Promise.all([loadCatalog(), loadRetail()]).then(function (r) {
@@ -1029,14 +1031,14 @@ function eanFallbackOFF(code, head, el) {
       if (!ret.length && !sim.length)
         html += "<p class='muted'>Chưa có kho nào bán sản phẩm cùng tên.</p>";
       el.innerHTML = tilesHTML() + teachHTML(code) + html;
-      wireTeach(code, toks.slice(0, 2).join(' '));
+      wireTeach(code, info.name, info.qty);
     });
   });
 }
 
-/* ===== DAY MA (CO DUYET): quet khong ra -> nguoi dung go ten, chon dung mon -> gui vao
-   Google Sheet o trang thai CHO DUYET + nho tren may nguoi day (chi may do thay). Chu shop
-   tick cot Duyet tren Sheet -> routine hang ngay chi lay dong DA DUYET (thu_ma_day.py ->
+/* ===== DAY MA (CO DUYET): quet khong ra -> nguoi dung dien Ten + Gia (bat buoc), Trong luong,
+   Xuat xu -> gui vao Google Sheet o trang thai CHO DUYET + nho tren may nguoi day (chi may do
+   thay). Chu shop tick cot approved -> routine hang ngay chi lay dong DA DUYET (thu_ma_day.py ->
    ean_taught.json -> build_static) -> luc do MOI NGUOI quet moi ra. ===== */
 var TEACH_URL = 'https://script.google.com/macros/s/AKfycbz7sNqWCvqbk3TXt3ZWFovc2qILC1fRZ2FSMG-y0OQ87tKZrvLVPKbTFtoQz_bG-cvRZQ/exec';                       // URL Web App cua Google Apps Script
 var TEACH_KEY = 'ccTaught';
@@ -1044,70 +1046,104 @@ function taughtMap() {
   try { return JSON.parse(localStorage.getItem(TEACH_KEY) || '{}'); } catch (e) { return {}; }
 }
 function taughtHit(code) {
-  var nm = taughtMap()[code];
-  return nm ? taughtRec(code, nm) : null;
+  var v = taughtMap()[code];
+  return v ? taughtRec(code, typeof v === 'string' ? { name: v } : v) : null;
 }
-function taughtRec(code, nm) {
+function taughtRec(code, v) {
   return loadCatalog().then(function (cat) {
-    var offers = cat.filter(function (it) { return it[0] === nm; })
+    var offers = cat.filter(function (it) { return it[0] === v.name; })
       .map(function (it) { return [it[3], it[1], it[2], it[4]]; });
-    return offers.length ? { code: code, rec: [nm, offers], nameMatched: false, pending: true } : null;
+    return offers.length || v.price
+      ? { code: code, rec: [v.name, offers], nameMatched: false, pending: true, taught: v } : null;
   });
+}
+function taughtCard(t) {
+  return "<p class='taughtinfo'>📝 Người dùng gửi: <b>" + Number(t.price).toFixed(2).replace('.', ',') + ' Kč</b>' +
+    (t.weight ? ' · ' + esc(t.weight) : '') + (t.origin ? ' · Xuất xứ: ' + esc(t.origin) : '') + '</p>';
 }
 function teachHTML(code) {
   if (!TEACH_URL) return '';              // chua co Sheet -> khong hien (day cung khong luu duoc)
   return "<div class='teach'><b>🧠 Dạy mã này cho Cena</b>" +
-    "<p class='muted'>Gõ tên món (vd <i>jessa active</i>) rồi bấm <b>✔ Đúng món</b>. Mã <b>" +
-    esc(code) + '</b> sẽ được gửi đi chờ duyệt, duyệt xong mọi người quét đều ra.</p>' +
-    "<input id='teachq' type='search' placeholder='Tên sản phẩm…' autocomplete='off'>" +
-    "<div id='teachres'></div></div>";
+    "<p class='muted'>Điền thông tin sản phẩm. Mã <b>" + esc(code) +
+    '</b> sẽ được gửi đi chờ duyệt, duyệt xong mọi người quét đều ra.</p>' +
+    "<form id='teachform' novalidate autocomplete='off'>" +
+    "<label>Tên sản phẩm <span class='req'>*</span><input id='teachq' maxlength='200'></label>" +
+    "<div id='teachres'></div>" +
+    "<div class='tcols'><label>Giá (Kč) <span class='req'>*</span>" +
+    "<input id='teachprice' inputmode='decimal' maxlength='10' placeholder='vd 25,90'></label>" +
+    "<label>Trọng lượng<input id='teachweight' maxlength='30' placeholder='vd 500 g'></label></div>" +
+    "<label>Xuất xứ<input id='teachorigin' maxlength='60' placeholder='vd Việt Nam'></label>" +
+    "<button type='submit'>Gửi đi chờ duyệt</button><p id='teachmsg' class='teachmsg'></p>" +
+    '</form></div>';
 }
-function wireTeach(code, prefill) {
+function wireTeach(code, prefill, weight) {
+  var form = document.getElementById('teachform');
+  if (!form) return;
   var inp = document.getElementById('teachq'), box = document.getElementById('teachres');
-  if (!inp) return;
-  var timer = null;
+  var pr = document.getElementById('teachprice'), wt = document.getElementById('teachweight');
+  var og = document.getElementById('teachorigin'), msg = document.getElementById('teachmsg');
+  var send = form.querySelector('button[type=submit]');
+  var timer = null, chosen = null;
   function run() {
     var q = stripAccents(inp.value.trim());
     if (q.length < 2) { box.innerHTML = ''; return; }
     loadCatalog().then(function (cat) {
       var seen = {}, rows = [];
       searchCatalog(cat, q).forEach(function (it) {
-        if (seen[it[0]] || rows.length >= 12) return;
+        if (seen[it[0]] || rows.length >= 6) return;
         seen[it[0]] = 1; rows.push(it);
       });
-      box.innerHTML = rows.length ? rows.map(function (it, i) {
+      box.innerHTML = rows.map(function (it, i) {
         return "<div class='trow'><span>" + esc(it[0]) + '<small>' +
           esc([it[2], SHOP[it[3]]].filter(Boolean).join(' · ')) + '</small></span>' +
-          "<button data-i='" + i + "'>✔ Đúng món</button></div>";
-      }).join('') : "<p class='muted'>Không thấy món nào khớp.</p>";
+          "<button type='button' data-i='" + i + "'>Chọn</button></div>";
+      }).join('');
       Array.prototype.forEach.call(box.querySelectorAll('button'), function (b) {
-        b.onclick = function () {
+        b.onclick = function () {       // chon mon co san -> sau khi duyet ma gan vao gia kho cua mon
           var it = rows[+b.getAttribute('data-i')];
-          box.innerHTML = "<p class='muted'>Đang gửi…</p>";
-          // Sheet tra {ok:true} = da nhan, {dup:'pending'|'approved'} = ma nay da co (moi ma 1 lan)
-          fetch(TEACH_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain' },
-            body: JSON.stringify({ ean: code, name: it[0], shop: SHOP[it[3]] || '' }) })
-            .then(function (r) { return r.json(); })
-            .then(function (d) {
-              if (d.dup) {
-                box.innerHTML = "<p class='teachmsg'>" + (d.dup === 'approved'
-                  ? '✅ Mã <b>' + esc(code) + '</b> đã được duyệt, sẽ lên web ở lần cập nhật tới.'
-                  : '🕓 Mã <b>' + esc(code) + '</b> đã gửi rồi, đang chờ duyệt.') + '</p>';
-                return;
-              }
-              if (!d.ok) throw new Error('rejected');
-              var m = taughtMap(); m[code] = it[0];
-              try { localStorage.setItem(TEACH_KEY, JSON.stringify(m)); } catch (e) { /* bo qua */ }
-              pageSearch(code);
-            })
-            .catch(function () {
-              box.innerHTML = "<p class='teachmsg'>⚠️ Chưa gửi được. Kiểm tra mạng rồi thử lại.</p>";
-            });
+          inp.value = it[0]; chosen = it; box.innerHTML = '';
+          if (!wt.value && it[2]) wt.value = it[2];
+          pr.focus();
         };
       });
     });
   }
-  inp.oninput = function () { clearTimeout(timer); timer = setTimeout(run, 250); };
+  inp.oninput = function () { chosen = null; clearTimeout(timer); timer = setTimeout(run, 250); };
+  form.onsubmit = function (e) {
+    e.preventDefault();
+    var name = inp.value.trim(), p = parseFloat(pr.value.replace(',', '.').trim());
+    var okP = p > 0 && p < 100000;
+    if (name.length < 2 || !okP) {
+      msg.textContent = '⚠️ Vui lòng điền Tên sản phẩm và Giá.';
+      (name.length < 2 ? inp : pr).focus();
+      return;
+    }
+    var data = { ean: code, name: name, price: p, weight: wt.value.trim(), origin: og.value.trim(),
+                 shop: chosen ? SHOP[chosen[3]] || '' : '' };
+    send.disabled = true; msg.textContent = 'Đang gửi…';
+    // Sheet tra {ok:true} = da nhan, {dup:'pending'|'approved'} = ma nay da co (moi ma 1 lan)
+    fetch(TEACH_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify(data) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.dup) {
+          msg.textContent = d.dup === 'approved'
+            ? '✅ Mã ' + code + ' đã được duyệt, sẽ lên web ở lần cập nhật tới.'
+            : '🕓 Mã ' + code + ' đã gửi rồi, đang chờ duyệt.';
+          return;
+        }
+        if (!d.ok) throw new Error('rejected');
+        var m = taughtMap();
+        m[code] = { name: name, price: p, weight: data.weight, origin: data.origin };
+        try { localStorage.setItem(TEACH_KEY, JSON.stringify(m)); } catch (err) { /* bo qua */ }
+        pageSearch(code);
+      })
+      .catch(function () {
+        send.disabled = false;
+        msg.textContent = '⚠️ Chưa gửi được. Kiểm tra mạng rồi thử lại.';
+      });
+  };
+  if (weight) wt.value = weight;
   if (prefill) { inp.value = prefill; run(); }
 }
 function searchCatalog(cat, q) {
@@ -1444,7 +1480,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.20';
+if (el) el.textContent = 'v1.7.0.21';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
