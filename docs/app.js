@@ -868,7 +868,8 @@ function searchByEan(code, head, el) {
       return { shop: SHOP[o[0]], slug: SHOP_SLUG[o[0]], price: o[1], amount: o[2],
                pack: o[3] || 1, wholesale: true };
     });
-    var html = head + "<p class='muted'>📦 Mã vạch: <b>" + esc(name) + '</b></p>';
+    var pendNote = hit.pending ? "<p class='muted'>🕓 Mã này bạn vừa dạy, đang chờ duyệt. Hiện chỉ máy của bạn thấy.</p>" : '';
+    var html = head + "<p class='muted'>📦 Mã vạch: <b>" + esc(name) + '</b></p>' + pendNote;
     if (offers.length) {
       html += "<h2 style='font-size:.95em'>" + (hit.nameMatched
         ? "≈ Cùng tên & dung tích ở các kho" : "✅ Đúng mã vạch quét") + '</h2>' +
@@ -944,7 +945,7 @@ function searchByEan(code, head, el) {
             for (var i2 = 0; i2 < offers.length; i2++) if (offers[i2].slug === o.slug) { ex = offers[i2]; break; }
             if (!ex) offers.push(o); else if (o.price < ex.price) { ex.price = o.price; ex.amount = o.amount; ex.pack = o.pack; }
           });
-          html = head + "<p class='muted'>📦 Mã vạch: <b>" + esc(name) + '</b></p>' +
+          html = head + "<p class='muted'>📦 Mã vạch: <b>" + esc(name) + '</b></p>' + pendNote +
             "<h2 style='font-size:.95em'>✅ Sản phẩm vừa quét — giá các kho</h2>" +
             tableHTML([rowHTML(name, offers[0].amount, offers)]) +
             "<p class='muted' style='font-size:.8em'>Kho không ghi mã vạch được ghép " +
@@ -1033,39 +1034,31 @@ function eanFallbackOFF(code, head, el) {
   });
 }
 
-/* ===== DAY MA: quet khong ra -> nguoi dung go ten, chon dung mon -> nho ngay
-   tren may (localStorage) + gui ve Google Sheet chung; routine hang ngay gop
-   vao du lieu (thu_ma_day.py -> ean_taught.json -> build_static) de MOI NGUOI
-   quet deu ra. Dung cho hang kho khong ghi ma vach (dathang, Bombacena...). ===== */
+/* ===== DAY MA (CO DUYET): quet khong ra -> nguoi dung go ten, chon dung mon -> gui vao
+   Google Sheet o trang thai CHO DUYET + nho tren may nguoi day (chi may do thay). Chu shop
+   tick cot Duyet tren Sheet -> routine hang ngay chi lay dong DA DUYET (thu_ma_day.py ->
+   ean_taught.json -> build_static) -> luc do MOI NGUOI quet moi ra. ===== */
 var TEACH_URL = '';                       // URL Web App cua Google Apps Script
 var TEACH_KEY = 'ccTaught';
 function taughtMap() {
   try { return JSON.parse(localStorage.getItem(TEACH_KEY) || '{}'); } catch (e) { return {}; }
 }
-/* Tra ma da day: Google Sheet CHUNG (ai day cung co hieu luc ngay cho moi nguoi,
-   khong cho routine) -> roi moi toi ban dem tren may. */
-function taughtName(code) {
-  var local = taughtMap()[code] || null;
-  if (!TEACH_URL) return Promise.resolve(local);
-  return fetch(TEACH_URL + '?ean=' + encodeURIComponent(code))
-    .then(function (r) { return r.json(); })
-    .then(function (d) { return (d && d.name) || local; })
-    .catch(function () { return local; });
-}
 function taughtHit(code) {
-  return taughtName(code).then(function (nm) { return nm ? taughtRec(code, nm) : null; });
+  var nm = taughtMap()[code];
+  return nm ? taughtRec(code, nm) : null;
 }
 function taughtRec(code, nm) {
   return loadCatalog().then(function (cat) {
     var offers = cat.filter(function (it) { return it[0] === nm; })
       .map(function (it) { return [it[3], it[1], it[2], it[4]]; });
-    return offers.length ? { code: code, rec: [nm, offers], nameMatched: false } : null;
+    return offers.length ? { code: code, rec: [nm, offers], nameMatched: false, pending: true } : null;
   });
 }
 function teachHTML(code) {
+  if (!TEACH_URL) return '';              // chua co Sheet -> khong hien (day cung khong luu duoc)
   return "<div class='teach'><b>🧠 Dạy mã này cho Cena</b>" +
-    "<p class='muted'>Gõ tên món (vd <i>jessa active</i>) rồi bấm <b>✔ Đúng món</b> — " +
-    'lần sau quét mã <b>' + esc(code) + '</b> là ra ngay, cho cả mọi người.</p>' +
+    "<p class='muted'>Gõ tên món (vd <i>jessa active</i>) rồi bấm <b>✔ Đúng món</b>. Mã <b>" +
+    esc(code) + '</b> sẽ được gửi đi chờ duyệt, duyệt xong mọi người quét đều ra.</p>' +
     "<input id='teachq' type='search' placeholder='Tên sản phẩm…' autocomplete='off'>" +
     "<div id='teachres'></div></div>";
 }
@@ -1440,7 +1433,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.14';
+if (el) el.textContent = 'v1.7.0.15';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {

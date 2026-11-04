@@ -1,7 +1,7 @@
-# Tai cac ma vach nguoi dung "day" tren web (Google Sheet qua Apps Script doGet)
+# Tai cac ma vach nguoi dung "day" tren web DA DUOC DUYET (Sheet chi tra dong da tick)
 # -> ean_taught.json {"items": {ma: ten mon trong catalog}}. build_static.py doc file nay.
-# URL lay tu TEACH_URL trong docs/app.js (1 cho duy nhat). Dong moi hon ghi de dong cu,
-# nen sua sai = day lai ma do, hoac xoa dong tren Sheet.
+# URL lay tu TEACH_URL trong docs/app.js (1 cho duy nhat). Bo tick/xoa dong tren Sheet
+# -> lan chay sau ma do tu mat. Dong moi hon ghi de dong cu.
 import json, re, sys, urllib.request
 from safeio import atomic_open
 
