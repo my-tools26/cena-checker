@@ -240,7 +240,9 @@ function eanLookupAll(code) {
           if (!rec) return;
           if (!hitCode) hitCode = c;
           if (!name && rec[0]) name = rec[0];
-          if (rec[3] && !taught) taught = { price: rec[3].p, weight: rec[3].w, origin: rec[3].o };
+          if (rec[3] && !taught) {
+            taught = { price: rec[3].p, weight: rec[3].w, origin: rec[3].o, category: rec[3].c };
+          }
           if (rec[2] === 1) byName = true; else if (rec[1] && rec[1].length) exact = true;
           (rec[1] || []).forEach(function (o) {
             var ex = byShop[o[0]];
@@ -840,6 +842,17 @@ function pageCat(cat, keepOrder) {
       (items.length ? tableHTML(retailRows(items.slice(0, 60), lower))
         : "<p class='muted'>Tuần này không có khuyến mãi nhóm này.</p>");
     wireFilters('retail_off', 'data-rshop', function () { pageCat(cat, true); });
+    // Mon nguoi dung gui da duoc duyet, gan vao dung danh muc nay
+    getJSON('data/taught.json').catch(function () { return []; }).then(function (list) {
+      var mine = (list || []).filter(function (x) { return x[5] === t[1]; });
+      if (!mine.length || !DATA.catCache || DATA.catCache.cat !== cat) return;
+      el.insertAdjacentHTML('beforeend', "<h2 style='font-size:.95em'>📝 Hàng người dùng gửi — " +
+        mine.length + '</h2><div class=\'taughtlist\'>' + mine.map(function (x) {
+          return "<a class='ex' href='#/q/" + encodeURIComponent(x[0]) + "'><span>" + esc(x[1]) +
+            (x[3] ? '<small>' + esc(x[3]) + '</small>' : '') + '</span><span class=\'num\'>' +
+            Number(x[2]).toFixed(2).replace('.', ',') + ' Kč</span></a>';
+        }).join('') + '</div>');
+    });
   });
 }
 
@@ -1059,7 +1072,8 @@ function taughtRec(code, v) {
 }
 function taughtCard(t) {
   return "<p class='taughtinfo'>📝 Người dùng gửi: <b>" + Number(t.price).toFixed(2).replace('.', ',') + ' Kč</b>' +
-    (t.weight ? ' · ' + esc(t.weight) : '') + (t.origin ? ' · Xuất xứ: ' + esc(t.origin) : '') + '</p>';
+    (t.weight ? ' · ' + esc(t.weight) : '') + (t.origin ? ' · Xuất xứ: ' + esc(t.origin) : '') +
+    (t.category ? ' · Danh mục: ' + esc(t.category) : '') + '</p>';
 }
 function teachHTML(code) {
   if (!TEACH_URL) return '';              // chua co Sheet -> khong hien (day cung khong luu duoc)
@@ -1069,6 +1083,10 @@ function teachHTML(code) {
     "<form id='teachform' novalidate autocomplete='off'>" +
     "<label>Tên sản phẩm <span class='req'>*</span><input id='teachq' maxlength='200'></label>" +
     "<div id='teachres'></div>" +
+    "<label>Danh mục <span class='req'>*</span><select id='teachcat'><option value=''>Chọn danh mục…</option>" +
+    TILES.map(function (t) {
+      return "<option value='" + esc(t[1]) + "'>" + t[0] + ' ' + esc(t[1]) + '</option>';
+    }).join('') + '</select></label>' +
     "<div class='tcols'><label>Giá (Kč) <span class='req'>*</span>" +
     "<input id='teachprice' inputmode='decimal' maxlength='10' placeholder='vd 25,90'></label>" +
     "<label>Trọng lượng<input id='teachweight' maxlength='30' placeholder='vd 500 g'></label></div>" +
@@ -1082,6 +1100,7 @@ function wireTeach(code, prefill, weight) {
   var inp = document.getElementById('teachq'), box = document.getElementById('teachres');
   var pr = document.getElementById('teachprice'), wt = document.getElementById('teachweight');
   var og = document.getElementById('teachorigin'), msg = document.getElementById('teachmsg');
+  var ct = document.getElementById('teachcat');
   var send = form.querySelector('button[type=submit]');
   var timer = null, chosen = null;
   function run() {
@@ -1113,12 +1132,13 @@ function wireTeach(code, prefill, weight) {
     e.preventDefault();
     var name = inp.value.trim(), p = parseFloat(pr.value.replace(',', '.').trim());
     var okP = p > 0 && p < 100000;
-    if (name.length < 2 || !okP) {
-      msg.textContent = '⚠️ Vui lòng điền Tên sản phẩm và Giá.';
-      (name.length < 2 ? inp : pr).focus();
+    if (name.length < 2 || !ct.value || !okP) {
+      msg.textContent = '⚠️ Vui lòng điền Tên sản phẩm, Danh mục và Giá.';
+      (name.length < 2 ? inp : !ct.value ? ct : pr).focus();
       return;
     }
-    var data = { ean: code, name: name, price: p, weight: wt.value.trim(), origin: og.value.trim(),
+    var data = { ean: code, name: name, category: ct.value, price: p, weight: wt.value.trim(),
+                 origin: og.value.trim(),
                  shop: chosen ? SHOP[chosen[3]] || '' : '' };
     send.disabled = true; msg.textContent = 'Đang gửi…';
     // Sheet tra {ok:true} = da nhan, {dup:'pending'|'approved'} = ma nay da co (moi ma 1 lan)
@@ -1134,7 +1154,8 @@ function wireTeach(code, prefill, weight) {
         }
         if (!d.ok) throw new Error('rejected');
         var m = taughtMap();
-        m[code] = { name: name, price: p, weight: data.weight, origin: data.origin };
+        m[code] = { name: name, price: p, weight: data.weight, origin: data.origin,
+                    category: data.category };
         try { localStorage.setItem(TEACH_KEY, JSON.stringify(m)); } catch (err) { /* bo qua */ }
         pageSearch(code);
       })
@@ -1480,7 +1501,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.21';
+if (el) el.textContent = 'v1.7.0.22';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {

@@ -200,7 +200,7 @@ def build_ean_shards(catalog):
         rec = shards.setdefault(alias[:3], {}).setdefault(alias, [src[0], []])
         if not rec[1]:
             rec[0], rec[1] = src[0], list(src[1])
-    # === Ma DAY tren web (ean_taught.json: {ma: {name, price, weight, origin}}) ===
+    # === Ma DAY tren web (ean_taught.json: {ma: {name, price, weight, origin, category}}) ===
     # Nguoi dung quet khong ra -> chon dung mon -> Google Sheet -> thu_ma_day.py.
     # Chi lap cho ma CHUA co gia that (khong de du lieu kho).
     taught = (load("ean_taught.json") or {}).get("items", {})
@@ -269,7 +269,7 @@ def build_ean_shards(catalog):
             rec = shards.setdefault(code[:3], {}).setdefault(code, [v["name"], []])
             if not rec[1]:
                 rec[:] = [v["name"], [], 0, {"p": v["price"], "w": v.get("weight", ""),
-                                             "o": v.get("origin", "")}]
+                                             "o": v.get("origin", ""), "c": v.get("category", "")}]
 
     # Chia nho THICH UNG: manh nao qua dong (ma Sec deu bat dau 859) thi tach
     # sau them 1-2 chu so nua, de moi lan quet chi tai vai chuc KB.
@@ -495,6 +495,14 @@ def main():
 
     print("== Ma vach ==")
     build_ean_shards(catalog)
+
+    # Mon nguoi dung gui da duyet -> hien trong trang danh muc tren web
+    taught = (load("ean_taught.json") or {}).get("items", {})
+    with atomic_open(os.path.join(OUT, "taught.json")) as f:
+        json.dump([[k, v["name"], v.get("price"), v.get("weight", ""), v.get("origin", ""),
+                    v.get("category", "")] for k, v in sorted(taught.items())
+                   if v.get("category") and v.get("price")],
+                  f, ensure_ascii=False, separators=(",", ":"))
 
     print("== Tu dien ==")
     with atomic_open(os.path.join(OUT, "dict.json")) as f:

@@ -28,7 +28,8 @@ for row in rows:
         except ValueError:
             price = None
         items[code] = {"name": name, "price": price, "weight": str(row.get("weight", "")).strip(),
-                       "origin": str(row.get("origin", "")).strip()}
+                       "origin": str(row.get("origin", "")).strip(),
+                       "category": str(row.get("category", "")).strip()}
 with atomic_open("ean_taught.json") as f:
     json.dump({"_note": "Ma vach nguoi dung day tren web (Google Sheet). Tu sinh boi "
                         "thu_ma_day.py - dung sua tay.", "items": items},

@@ -3,19 +3,22 @@
 // Deploy > New deployment > Web app (Execute as: Me, Who has access: Anyone).
 // Put the resulting /exec URL into TEACH_URL in docs/app.js.
 //
-//   POST {ean, name, price, weight, origin, shop} -> appends a PENDING row. name + price required.
+//   POST {ean, name, category, price, weight, origin, shop} -> appends a PENDING row.
+//                             name, category and price are required.
 //                             Each barcode only once: repeat -> {dup: 'pending' | 'approved'}
-//   GET                    -> {rows: [{ean, name, price, weight, origin}]} APPROVED rows only,
+//   GET                    -> {rows: [{ean, name, category, price, weight, origin}]} APPROVED rows only,
 //                             for thu_ma_day.py
 //
 // Review: tick "approved" to accept a row, delete the row to reject it. Only ticked rows reach
 // the website (next daily data update). Unticking or deleting a row removes it again.
 
-var HEAD_ = ['time', 'ean', 'name', 'price', 'weight', 'origin', 'shop', 'approved'];
+var HEAD_ = ['time', 'ean', 'name', 'category', 'price', 'weight', 'origin', 'shop', 'approved'];
 
 function sheet_() {
   var sh = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
-  if (sh.getRange(1, 8).getValue() !== 'approved') sh.getRange(1, 1, 1, 8).setValues([HEAD_]);
+  // Sheet made before the category column existed: shift existing rows, keeping their data
+  if (sh.getRange(1, 4).getValue() === 'price') sh.insertColumnBefore(4);
+  if (sh.getRange(1, 9).getValue() !== 'approved') sh.getRange(1, 1, 1, 9).setValues([HEAD_]);
   return sh;
 }
 
@@ -35,8 +38,9 @@ function doPost(e) {
   try { d = JSON.parse(e.postData.contents); } catch (err) { return json_({ ok: false }); }
   var ean = String(d.ean || '').replace(/\D/g, '');
   var name = txt_(d.name, 200);
+  var category = txt_(d.category, 40);
   var price = Number(String(d.price || '').replace(',', '.'));
-  if (ean.length < 8 || ean.length > 14 || !name || !(price > 0 && price < 100000)) {
+  if (ean.length < 8 || ean.length > 14 || !name || !category || !(price > 0 && price < 100000)) {
     return json_({ ok: false });
   }
   var lock = LockService.getScriptLock();
@@ -45,12 +49,12 @@ function doPost(e) {
     var sh = sheet_();
     var v = sh.getDataRange().getValues();
     for (var i = 1; i < v.length; i++) {           // each barcode only once, whatever the item
-      if (String(v[i][1]) === ean) return json_({ dup: v[i][7] === true ? 'approved' : 'pending' });
+      if (String(v[i][1]) === ean) return json_({ dup: v[i][8] === true ? 'approved' : 'pending' });
     }
     // leading apostrophe keeps the barcode as text (no 4.06E+12)
-    sh.appendRow([new Date(), "'" + ean, name, price, txt_(d.weight, 30), txt_(d.origin, 60),
-                  txt_(d.shop, 60), false]);
-    sh.getRange(sh.getLastRow(), 8).insertCheckboxes();
+    sh.appendRow([new Date(), "'" + ean, name, category, price, txt_(d.weight, 30),
+                  txt_(d.origin, 60), txt_(d.shop, 60), false]);
+    sh.getRange(sh.getLastRow(), 9).insertCheckboxes();
   } finally {
     lock.releaseLock();
   }
@@ -59,8 +63,8 @@ function doPost(e) {
 
 function doGet() {
   var v = sheet_().getDataRange().getValues().slice(1);
-  return json_({ rows: v.filter(function (r) { return r[7] === true; }).map(function (r) {
-    return { ean: String(r[1]), name: String(r[2]), price: r[3], weight: String(r[4]),
-             origin: String(r[5]) };
+  return json_({ rows: v.filter(function (r) { return r[8] === true; }).map(function (r) {
+    return { ean: String(r[1]), name: String(r[2]), category: String(r[3]), price: r[4],
+             weight: String(r[5]), origin: String(r[6]) };
   }) });
 }
