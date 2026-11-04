@@ -6,16 +6,17 @@
 'use strict';
 
 var SHOP = ['Tamda Foods', 'Makro', 'Bidfood', 'dathang.cz',
-            'Linsan24h', 'Bombacena', 'PTT Global', 'JIP', 'JUNIORpapír'];
+            'Linsan24h', 'Bombacena', 'PTT Global', 'JIP', 'JUNIORpapír', 'ITMCO'];
 var SHOP_SLUG = ['tamda', 'makro', 'bidfood', 'dathang', 'linsan',
-                 'bombacena', 'ptt', 'jip', 'juniorpapir'];
+                 'bombacena', 'ptt', 'jip', 'juniorpapir', 'itmco'];
 var WHOLESALE_FILTERS = [['tamda', '🅣 Tamda'], ['makro', 'Ⓜ Makro'],
   ['jip', '🄹 JIP'], ['bidfood', '🅑 Bidfood'], ['dathang', '🅳 dathang'],
-  ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena'], ['ptt', '🅟 PTT Global']];
+  ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena'], ['ptt', '🅟 PTT Global'],
+  ['itmco', '🅸 ITMCO']];
 /* Loc ban buon hien tren trang Akce (co JIP vi JIP co deal akce tu kupi) */
 var AKCE_WS_FILTERS = [['makro', 'Ⓜ Makro'], ['jip', '🄹 JIP'], ['tamda', '🅣 Tamda'],
   ['bidfood', '🅑 Bidfood'], ['ptt', '🅟 PTT Global'], ['dathang', '🅳 dathang'],
-  ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena']];
+  ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena'], ['itmco', '🅸 ITMCO']];
 var RETAIL_FILTERS = ['Lidl', 'Kaufland', 'Billa', 'Penny', 'Tesco', 'Albert',
   'Globus', 'COOP'];
 /* Cac chuoi bo han khoi web (11/2026): khong hien deal cua ho o bat cu dau */
@@ -346,7 +347,7 @@ function shopBadge(name) {
     ['linsan', '#E6E1FF', '#3A2F7A'], ['bombacena', '#FFE9D6', '#7A4300'],
     ['ptt', '#E3F0FF', '#1A4E8A'], ['kosik', '#E8F0D8', '#3F5C0B'],
     ['hruska', '#FFE7D6', '#7A3E00'], ['coop', '#DDEEFF', '#0A3D7A'],
-    ['junior', '#EAE6DC', '#4A4335']];
+    ['junior', '#EAE6DC', '#4A4335'], ['itmco', '#FCE4E4', '#8A1F1F']];
   for (var i = 0; i < C.length; i++)
     if (s.indexOf(C[i][0]) >= 0) { bg = C[i][1]; fg = C[i][2]; break; }
   // 1 dong, dai qua thi "..." (CSS); title = ca cau khi re chuot vao
@@ -656,7 +657,7 @@ function pageGioithieu() {
     "<b>Bán buôn</b> (giá catalog B2B, cào trực tiếp từ site chính thức): Tamda Foods " +
     "(tamdafoods.eu + tamdaexpress.eu), Makro (sortiment.makro.cz), JIP (jip-eshop.cz), " +
     "Bidfood (mujbidfood.cz), dathang.cz, Linsan24h (linsan24h.cz), Bombacena " +
-    "(bombacena.eu), PTT Global (pttglobal.eu).</p>" +
+    "(bombacena.eu), PTT Global (pttglobal.eu), ITMCO (itmco.cz).</p>" +
     "<h2 style='font-size:1.1em;margin-top:20px'>⚖️ Miễn trừ trách nhiệm</h2>" +
     "<p>· Dữ liệu giá được tổng hợp <b>tự động</b> từ các nguồn công khai (tờ rơi/catalog " +
     "chính thức của các chuỗi) và <b>chỉ mang tính tham khảo</b> — giá thực tế tại cửa " +
@@ -664,7 +665,7 @@ function pageGioithieu() {
     "nhánh, hoặc hết hạn tờ rơi.<br>" +
     "· Trang này <b>không liên kết, không đại diện, không phải đại lý</b> của bất kỳ " +
     "chuỗi siêu thị nào (Kupi.cz, Tamda Foods, Makro, JIP, Bidfood, dathang, Linsan, " +
-    "Bombacena, PTT Global, Lidl, Kaufland, Billa, Penny, Tesco, Albert, " +
+    "Bombacena, PTT Global, ITMCO, Lidl, Kaufland, Billa, Penny, Tesco, Albert, " +
     "Globus, COOP, Hruška, Flop, Ratio, Košík, hay bất kỳ đơn vị nào).<br>" +
     "· Các tên gọi, thương hiệu, logo (nếu có) thuộc quyền sở hữu của chủ sở hữu tương ứng.<br>" +
     "· Chúng tôi <b>không chịu trách nhiệm</b> cho quyết định mua sắm, tổn thất tài " +
@@ -1500,7 +1501,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.28';
+if (el) el.textContent = 'v1.7.0.29';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {

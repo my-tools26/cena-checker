@@ -32,6 +32,7 @@ SHOPS = [
     ("ptt", "PTT Global"),         # 6
     ("jip", "JIP"),                # 7
     ("juniorpapir", "JUNIORpapír"),  # 8
+    ("itmco", "ITMCO"),            # 9
 ]
 
 
@@ -89,6 +90,7 @@ def build_catalog():
         ("bombacena_prices.json", 5, None),
         ("pttglobal_prices.json", 6, None),
         ("jip_prices.json", 7, None),
+        ("itmco_prices.json", 9, None),
         # ("juniorpapir_prices.json", 8, None),  # an khoi web theo yeu cau chu shop (11/2026)
     ]
     meta = {}
@@ -121,7 +123,7 @@ def build_catalog():
     if man:
         slug2id = {"tamda": 0, "makro": 1, "bidfood": 2, "dathang": 3,
                    "linsan": 4, "bombacena": 5, "ptt": 6, "jip": 7,
-                   "juniorpapir": 8}
+                   "juniorpapir": 8, "itmco": 9}
         for it in man.get("items", []):
             sid = slug2id.get(it.get("slug"), 4)
             items.append([it["name"], round(float(it["price"]), 2),
