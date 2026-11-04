@@ -103,6 +103,8 @@ def build_catalog():
             if not name or not price:
                 continue
             ean = it.get("ean") or ""
+            if len(set(str(ean))) == 1:     # ma rac kho ghi sai (000000000000, 1111111111)
+                ean = ""
             row = [name, round(float(price), 2), it.get("amount", "") or "",
                    sid, int(it.get("pack") or 1), ean]
             # them field 7 = gia net (bez DPH) neu co (Makro chu yeu)
@@ -157,7 +159,7 @@ def build_ean_shards(catalog):
     n = 0
     if db:
         for code, v in db.get("items", {}).items():
-            if not code or not code.isdigit():
+            if not code or not code.isdigit() or len(set(code)) == 1:
                 continue
             shards.setdefault(code[:3], {})[code] = [v.get("name", ""), []]
             n += 1
@@ -177,7 +179,7 @@ def build_ean_shards(catalog):
         _d = load(_fn)
         for it in (_d or {}).get("items", []):
             eb = (it.get("ean_bal") or "").strip()
-            if not eb or not eb.isdigit():
+            if not eb or not eb.isdigit() or len(set(eb)) == 1:
                 continue
             e = (it.get("ean") or "").strip()
             src = shards.get(e[:3], {}).get(e) if e and e.isdigit() else None
