@@ -89,7 +89,7 @@ def build_catalog():
         ("bombacena_prices.json", 5, None),
         ("pttglobal_prices.json", 6, None),
         ("jip_prices.json", 7, None),
-        ("juniorpapir_prices.json", 8, None),
+        # ("juniorpapir_prices.json", 8, None),  # an khoi web theo yeu cau chu shop (11/2026)
     ]
     meta = {}
     for fn, sid, _ in srcs:

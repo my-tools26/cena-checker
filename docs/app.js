@@ -11,12 +11,11 @@ var SHOP_SLUG = ['tamda', 'makro', 'bidfood', 'dathang', 'linsan',
                  'bombacena', 'ptt', 'jip', 'juniorpapir'];
 var WHOLESALE_FILTERS = [['tamda', '🅣 Tamda'], ['makro', 'Ⓜ Makro'],
   ['jip', '🄹 JIP'], ['bidfood', '🅑 Bidfood'], ['dathang', '🅳 dathang'],
-  ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena'], ['ptt', '🅟 PTT Global'],
-  ['juniorpapir', '🅹 JUNIORpapír']];
+  ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena'], ['ptt', '🅟 PTT Global']];
 /* Loc ban buon hien tren trang Akce (co JIP vi JIP co deal akce tu kupi) */
 var AKCE_WS_FILTERS = [['makro', 'Ⓜ Makro'], ['jip', '🄹 JIP'], ['tamda', '🅣 Tamda'],
   ['bidfood', '🅑 Bidfood'], ['ptt', '🅟 PTT Global'], ['dathang', '🅳 dathang'],
-  ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena'], ['juniorpapir', '🅹 JUNIORpapír']];
+  ['linsan', '🅻 Linsan'], ['bombacena', '🅱 Bombacena']];
 var RETAIL_FILTERS = ['Lidl', 'Kaufland', 'Billa', 'Penny', 'Tesco', 'Albert',
   'Globus', 'COOP'];
 /* Cac chuoi bo han khoi web (11/2026): khong hien deal cua ho o bat cu dau */
@@ -657,7 +656,7 @@ function pageGioithieu() {
     "<b>Bán buôn</b> (giá catalog B2B, cào trực tiếp từ site chính thức): Tamda Foods " +
     "(tamdafoods.eu + tamdaexpress.eu), Makro (sortiment.makro.cz), JIP (jip-eshop.cz), " +
     "Bidfood (mujbidfood.cz), dathang.cz, Linsan24h (linsan24h.cz), Bombacena " +
-    "(bombacena.eu), PTT Global (pttglobal.eu), JUNIORpapír (juniorpapir.cz).</p>" +
+    "(bombacena.eu), PTT Global (pttglobal.eu).</p>" +
     "<h2 style='font-size:1.1em;margin-top:20px'>⚖️ Miễn trừ trách nhiệm</h2>" +
     "<p>· Dữ liệu giá được tổng hợp <b>tự động</b> từ các nguồn công khai (tờ rơi/catalog " +
     "chính thức của các chuỗi) và <b>chỉ mang tính tham khảo</b> — giá thực tế tại cửa " +
@@ -665,13 +664,13 @@ function pageGioithieu() {
     "nhánh, hoặc hết hạn tờ rơi.<br>" +
     "· Trang này <b>không liên kết, không đại diện, không phải đại lý</b> của bất kỳ " +
     "chuỗi siêu thị nào (Kupi.cz, Tamda Foods, Makro, JIP, Bidfood, dathang, Linsan, " +
-    "Bombacena, PTT Global, JUNIORpapír, Lidl, Kaufland, Billa, Penny, Tesco, Albert, " +
+    "Bombacena, PTT Global, Lidl, Kaufland, Billa, Penny, Tesco, Albert, " +
     "Globus, COOP, Hruška, Flop, Ratio, Košík, hay bất kỳ đơn vị nào).<br>" +
     "· Các tên gọi, thương hiệu, logo (nếu có) thuộc quyền sở hữu của chủ sở hữu tương ứng.<br>" +
     "· Chúng tôi <b>không chịu trách nhiệm</b> cho quyết định mua sắm, tổn thất tài " +
     "chính, hay bất kỳ hậu quả nào phát sinh từ việc sử dụng thông tin trên trang này. " +
     "Người dùng nên tự kiểm tra giá tại cửa hàng trước khi mua.<br>" +
-    "· Giá bán buôn (Tamda Express, Makro, JIP, Bidfood, PTT Global, JUNIORpapír, dathang) " +
+    "· Giá bán buôn (Tamda Express, Makro, JIP, Bidfood, PTT Global, dathang) " +
     "là <b>giá B2B</b> — cần tài khoản kinh doanh của các chuỗi này để mua.<br>" +
     "· Dữ liệu được cập nhật định kỳ (bán lẻ hàng ngày, bán buôn mỗi tuần). " +
     "Ngày cập nhật hiện tại xem ở phần cuối mỗi bảng.</p>" +
@@ -1501,7 +1500,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.23';
+if (el) el.textContent = 'v1.7.0.24';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
