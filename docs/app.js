@@ -1500,7 +1500,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.27';
+if (el) el.textContent = 'v1.7.0.28';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
