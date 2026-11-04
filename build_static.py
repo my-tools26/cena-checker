@@ -106,7 +106,7 @@ def build_catalog():
             if len(set(str(ean))) == 1:     # ma rac kho ghi sai (000000000000, 1111111111)
                 ean = ""
             row = [name, round(float(price), 2), it.get("amount", "") or "",
-                   sid, int(it.get("pack") or 1), ean]
+                   sid, 1 if sid == 7 else int(it.get("pack") or 1), ean]  # JIP: gia da la gia 1 cai
             # them field 7 = gia net (bez DPH) neu co (Makro chu yeu)
             pn = it.get("price_net")
             if pn:
@@ -408,6 +408,17 @@ def kupi_categories(cena, slugs):
     return cache
 
 
+def drop_bogus_deals(prods):
+    """Giam tu 90% tro len la deal rac cua nguon (vd do choi 999 Kc -93%) -> bo deal do."""
+    out = []
+    for p in prods:
+        ok = [d for d in p[2] if int((re.search(r"\d+", d[3] or "") or [0])[0]) < 90]
+        if ok:
+            p[2] = ok
+            out.append(p)
+    return out
+
+
 def build_retail():
     """Cao gia khuyen mai ban le tu kupi.cz -> JSON (trinh duyet khong tu goi duoc)."""
     sys.path.insert(0, HERE)
@@ -480,6 +491,7 @@ def build_retail():
     for i, p in enumerate(prods):
         c = cats_of.get(slug_of.get(i, ""), "") or guess_category(p[0])
         p.append(c)
+    prods = drop_bogus_deals(prods)
     print(f"  ban le: {len(prods)} mat hang "
           f"(khong phan loai duoc: {sum(1 for p in prods if not p[3])})")
     return prods
