@@ -3,7 +3,8 @@
 // Deploy > New deployment > Web app (Execute as: Me, Who has access: Anyone).
 // Put the resulting /exec URL into TEACH_URL in docs/app.js.
 //
-//   POST {ean, name, shop} -> appends a PENDING row (time, ean, name, shop, approved checkbox)
+//   POST {ean, name, shop} -> appends a PENDING row (time, ean, name, shop, approved checkbox).
+//                             Each barcode only once: repeat -> {dup: 'pending' | 'approved'}
 //   GET                    -> {rows: [{ean, name}]} APPROVED rows only, for thu_ma_day.py
 //
 // Review: tick "approved" to accept a row, delete the row to reject it. Only ticked rows reach
@@ -31,8 +32,8 @@ function doPost(e) {
   try {
     var sh = sheet_();
     var v = sh.getDataRange().getValues();
-    for (var i = 1; i < v.length; i++) {           // same code + item already listed -> skip
-      if (String(v[i][1]) === ean && String(v[i][2]) === name) return json_({ ok: true });
+    for (var i = 1; i < v.length; i++) {           // each barcode only once, whatever the item
+      if (String(v[i][1]) === ean) return json_({ dup: v[i][4] === true ? 'approved' : 'pending' });
     }
     // leading apostrophe keeps the barcode as text (no 4.06E+12)
     sh.appendRow([new Date(), "'" + ean, name, String(d.shop || '').slice(0, 60), false]);

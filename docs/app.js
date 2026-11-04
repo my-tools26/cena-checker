@@ -1083,15 +1083,26 @@ function wireTeach(code, prefill) {
       Array.prototype.forEach.call(box.querySelectorAll('button'), function (b) {
         b.onclick = function () {
           var it = rows[+b.getAttribute('data-i')];
-          var m = taughtMap(); m[code] = it[0];
-          try { localStorage.setItem(TEACH_KEY, JSON.stringify(m)); } catch (e) { /* bo qua */ }
-          if (TEACH_URL) {
-            fetch(TEACH_URL, { method: 'POST', mode: 'no-cors',
-              headers: { 'Content-Type': 'text/plain' },
-              body: JSON.stringify({ ean: code, name: it[0], shop: SHOP[it[3]] || '' }) })
-              .catch(function () { /* da luu tren may */ });
-          }
-          pageSearch(code);
+          box.innerHTML = "<p class='muted'>Đang gửi…</p>";
+          // Sheet tra {ok:true} = da nhan, {dup:'pending'|'approved'} = ma nay da co (moi ma 1 lan)
+          fetch(TEACH_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify({ ean: code, name: it[0], shop: SHOP[it[3]] || '' }) })
+            .then(function (r) { return r.json(); })
+            .then(function (d) {
+              if (d.dup) {
+                box.innerHTML = "<p class='teachmsg'>" + (d.dup === 'approved'
+                  ? '✅ Mã <b>' + esc(code) + '</b> đã được duyệt, sẽ lên web ở lần cập nhật tới.'
+                  : '🕓 Mã <b>' + esc(code) + '</b> đã gửi rồi, đang chờ duyệt.') + '</p>';
+                return;
+              }
+              if (!d.ok) throw new Error('rejected');
+              var m = taughtMap(); m[code] = it[0];
+              try { localStorage.setItem(TEACH_KEY, JSON.stringify(m)); } catch (e) { /* bo qua */ }
+              pageSearch(code);
+            })
+            .catch(function () {
+              box.innerHTML = "<p class='teachmsg'>⚠️ Chưa gửi được. Kiểm tra mạng rồi thử lại.</p>";
+            });
         };
       });
     });
@@ -1433,7 +1444,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.16';
+if (el) el.textContent = 'v1.7.0.17';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
