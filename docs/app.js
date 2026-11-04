@@ -1038,7 +1038,7 @@ function eanFallbackOFF(code, head, el) {
    Google Sheet o trang thai CHO DUYET + nho tren may nguoi day (chi may do thay). Chu shop
    tick cot Duyet tren Sheet -> routine hang ngay chi lay dong DA DUYET (thu_ma_day.py ->
    ean_taught.json -> build_static) -> luc do MOI NGUOI quet moi ra. ===== */
-var TEACH_URL = 'https://script.google.com/macros/s/AKfycbzlW2fEE7403cJ3mZJq93dEJv8ZwpWXwwXPdmpHBTUtBUBZrkBN3n_pGynZcwbrIPsMMg/exec';                       // URL Web App cua Google Apps Script
+var TEACH_URL = 'https://script.google.com/macros/s/AKfycbz7sNqWCvqbk3TXt3ZWFovc2qILC1fRZ2FSMG-y0OQ87tKZrvLVPKbTFtoQz_bG-cvRZQ/exec';                       // URL Web App cua Google Apps Script
 var TEACH_KEY = 'ccTaught';
 function taughtMap() {
   try { return JSON.parse(localStorage.getItem(TEACH_KEY) || '{}'); } catch (e) { return {}; }
@@ -1444,7 +1444,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.17';
+if (el) el.textContent = 'v1.7.0.18';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
