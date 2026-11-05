@@ -667,7 +667,7 @@
  "dutinky-ps-black-250ks": {
   "name": "DUTINKY PS BLACK 250KS",
   "ean": "4007793120232",
-  "price": "4500"
+  "price": "5200"
  },
  "dutinky-ps-black-100ks": {
   "name": "DUTINKY PS BLACK 100KS",
@@ -694,49 +694,9 @@
   "ean": "8595682192980",
   "price": "59300"
  },
- "veev-now-ultra-1100-watermelon-18mg": {
-  "name": "VEEV NOW ULTRA 1100 WATERMELON 18MG",
-  "ean": "8595701551415",
-  "price": "14500"
- },
- "veev-now-ultra-1100-strawberry-18mg": {
-  "name": "VEEV NOW ULTRA 1100 STRAWBERRY 18MG",
-  "ean": "8595701551439",
-  "price": "14500"
- },
- "veev-now-ultra-1100-sour-apple-18mg": {
-  "name": "VEEV NOW ULTRA 1100 SOUR APPLE 18MG",
-  "ean": "8595701551453",
-  "price": "14500"
- },
- "veev-now-ultra-1100-pass-fruit-kiwi-gua-18mg": {
-  "name": "VEEV NOW ULTRA 1100 PASS.FRUIT KIWI GUA. 18MG",
-  "ean": "8595701551392",
-  "price": "14500"
- },
- "veev-now-ultra-1100-mango-18mg": {
-  "name": "VEEV NOW ULTRA 1100 MANGO 18MG",
-  "ean": "8595701551408",
-  "price": "14500"
- },
- "veev-now-ultra-1100-grape-18mg": {
-  "name": "VEEV NOW ULTRA 1100 GRAPE 18MG",
-  "ean": "8595701551446",
-  "price": "14500"
- },
  "veev-now-ultra-1100-gold-tobacco-18mg": {
   "name": "VEEV NOW ULTRA 1100 GOLD TOBACCO 18MG",
   "ean": "8595701551378",
-  "price": "14500"
- },
- "veev-now-ultra-1100-classic-mint-18mg": {
-  "name": "VEEV NOW ULTRA 1100 CLASSIC MINT 18MG",
-  "ean": "8595701551385",
-  "price": "14500"
- },
- "veev-now-ultra-1100-blue-raspberry-18mg": {
-  "name": "VEEV NOW ULTRA 1100 BLUE RASPBERRY 18MG",
-  "ean": "8595701551422",
   "price": "14500"
  },
  "nautilus-snack-susene-krajene-ploutve-kalamaru-50g": {
@@ -992,12 +952,12 @@
  "agricol-policanka-majoneza-230ml": {
   "name": "Agricol-Poličanka majonéza-230ml",
   "ean": "8594007642513",
-  "price": "2190"
+  "price": "2490"
  },
  "agricol-tatarska-omacka-230ml": {
   "name": "Agricol-Tatarská omáčka 230ml",
   "ean": "8594007642506",
-  "price": "2190"
+  "price": "2490"
  },
  "kiri-a-krup-35g": {
   "name": "Kiri a Křup 35g",
@@ -2515,7 +2475,7 @@
   "price": "3390"
  },
  "capri-sun-fun-alarm-200ml-x-10ks": {
-  "name": "Capri sun 200ml Monster alarm",
+  "name": "Capri-Sun 200ml Monster alarm",
   "ean": "4000177019252",
   "price": "750"
  },
@@ -4275,19 +4235,19 @@
   "price": "2190"
  },
  "brick-trubicky-150g-vanilka": {
-  "name": "Brick trubicky 150g vanilka &#8211; 16ks/kart",
+  "name": "Brick trubičky 150g Vanilka &#8211; 16ks/kart",
   "ean": "8594045603071",
-  "price": "2190"
+  "price": "2290"
  },
  "brick-trubicky-150g-kakao": {
-  "name": "Brick trubicky 150g Chocolate &#8211; 16ks/kart",
+  "name": "Brick trubičky 150g Chocolate &#8211; 16ks/kart",
   "ean": "8594045603057",
-  "price": "2190"
+  "price": "2290"
  },
  "brick-trubicky-150g-kokos": {
-  "name": "Brick trubicky 150g kokos &#8211; 16ks/kart",
+  "name": "Brick trubičky 150g Kokos &#8211; 16ks/kart",
   "ean": "8594045603033",
-  "price": "2190"
+  "price": "2290"
  },
  "skittles-smoothies-14-x-38g": {
   "name": "Skittles 14 x 38g Smoothies",
@@ -4375,7 +4335,7 @@
   "price": "4590"
  },
  "viva-veprova-konzerva-400g": {
-  "name": "Viva Veprova konzerva 400g",
+  "name": "Viva konzerva Vepřové 400g",
   "ean": "8594044447218",
   "price": "3290"
  },
@@ -4675,7 +4635,7 @@
   "price": "2090"
  },
  "capri-sonne-multivitamin-330ml": {
-  "name": "Capri-sun  0,33L multivitamin",
+  "name": "Capri sun 0,33L Multivitamin &#8211; 15ks/kart",
   "ean": "40983177162316",
   "price": "1990"
  },
@@ -5825,7 +5785,7 @@
   "price": "3490"
  },
  "capri-sun-330ml-mango-maracuja": {
-  "name": "Capri-Sun 0,33L mango-maracuja",
+  "name": "Capri sun 0,33L Mango + maracuja &#8211; 15ks/kart",
   "ean": "4000177172650",
   "price": "1990"
  },
@@ -5850,7 +5810,7 @@
   "price": "750"
  },
  "capri-sun-330ml-visen-granatove-jablko": {
-  "name": "Capri-Sun 0,33L višeň-granátové jablko",
+  "name": "Capri Sun 0,33L višeň-granátové jablko",
   "ean": "4000177172629",
   "price": "1990"
  },
@@ -7977,17 +7937,17 @@
  "jadel-uzeny-95g": {
   "name": "Jadel Uzený 105g",
   "ean": "8594009130575",
-  "price": "3190"
+  "price": "3590"
  },
  "jadel-prirodni-syr-110g": {
   "name": "Jadel přírodní sýr 110g",
   "ean": "8594009130568",
-  "price": "3050"
+  "price": "3390"
  },
  "jadel-koreneny-110g": {
   "name": "Jadel Kořeněný 110g",
   "ean": "8594009130582",
-  "price": "3190"
+  "price": "3590"
  },
  "korbac-prirodni-55g-5ks": {
   "name": "Korbáč přírodní 55g 5ks               ",
@@ -7997,7 +7957,7 @@
  "korbac-uzeny-55g-5ks": {
   "name": "Korbáč uzený 55g 5ks         ",
   "ean": "8594035090782",
-  "price": "2250"
+  "price": "2390"
  },
  "brick-ts-zampionovy-100g": {
   "name": "Brick TS Žampionový 100g",
@@ -8472,7 +8432,7 @@
  "agricol-tatarka-95g-1100086": {
   "name": "Agricol Tatarka 95g",
   "ean": "8594007640045",
-  "price": "790"
+  "price": "850"
  },
  "agricol-majolka-policanka-95g-1100085": {
   "name": "Agricol Majolka &#8211; poličanka 95g",

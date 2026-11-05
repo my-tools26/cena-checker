@@ -1,7 +1,221 @@
 {
- "date": "2026-11-02",
+ "date": "2026-11-05",
  "shop": "dathang",
  "items": [
+  {
+   "name": "Brick trubičky 150g Matcha – 16ks/kart",
+   "price": 22.9,
+   "amount": "150 g",
+   "unit": "",
+   "ean": "8594045606751"
+  },
+  {
+   "name": "Brick trubičky 150g Creamy – 16ks/kart",
+   "price": 22.9,
+   "amount": "150 g",
+   "unit": ""
+  },
+  {
+   "name": "CA – Oyakata Inst. nudle kelímek 93g kuřecí Yakitori – 8ks/kart",
+   "price": 29.9,
+   "amount": "93 g",
+   "unit": ""
+  },
+  {
+   "name": "CA – Oyakata Inst. nudle kelímek 97g Hot Chicken & Cheese – 8ks/kart",
+   "price": 29.9,
+   "amount": "97 g",
+   "unit": "",
+   "ean": "5901384510473"
+  },
+  {
+   "name": "CA – Oyakata Inst. nudle kelímek 90g Curry – 8ks/kart",
+   "price": 29.9,
+   "amount": "90 g",
+   "unit": ""
+  },
+  {
+   "name": "CA – Oyakata Inst. nudle kelímek 93g hovězí Wasabi – 8ks/kart",
+   "price": 29.9,
+   "amount": "93 g",
+   "unit": ""
+  },
+  {
+   "name": "CA – Oyakata Inst. nudle kelímek 93g Korean Barbecue – 8ks/kart",
+   "price": 29.9,
+   "amount": "93 g",
+   "unit": ""
+  },
+  {
+   "name": "CA – Oyakata Inst. nudle kelímek 93g Pad Thai – 8ks/kart",
+   "price": 29.9,
+   "amount": "93 g",
+   "unit": ""
+  },
+  {
+   "name": "CA – Oyakata Inst. nudle kelímek 93g Classic – 8ks/kart",
+   "price": 29.9,
+   "amount": "93 g",
+   "unit": ""
+  },
+  {
+   "name": "CA – Oyakata Inst. nudle kelímek 96g kuře Teriyaki – 8ks/kart",
+   "price": 29.9,
+   "amount": "96 g",
+   "unit": ""
+  },
+  {
+   "name": "CA – YumYum Inst. nudle 60g kachní – 30ks/kart",
+   "price": 12.9,
+   "amount": "60 g",
+   "unit": ""
+  },
+  {
+   "name": "CA – YumYum Inst. nudle 60g grilovaného kuřete – 30ks/kart",
+   "price": 12.9,
+   "amount": "60 g",
+   "unit": "",
+   "ean": "8852018101284"
+  },
+  {
+   "name": "CA – YumYum Inst. nudle 60g krevetové – 30ks/kart",
+   "price": 12.9,
+   "amount": "60 g",
+   "unit": ""
+  },
+  {
+   "name": "CA – YumYum Inst. nudle 60g japonské kuře – 30ks/kart",
+   "price": 12.9,
+   "amount": "60 g",
+   "unit": "",
+   "ean": "8852018101154"
+  },
+  {
+   "name": "CA – YumYum Inst. nudle 70g Tom Yum – 30ks/kart",
+   "price": 12.9,
+   "amount": "70 g",
+   "unit": ""
+  },
+  {
+   "name": "CA – YumYum Inst. nudle 60g hovězí – 30ks/kart",
+   "price": 12.9,
+   "amount": "60 g",
+   "unit": ""
+  },
+  {
+   "name": "CA – YumYum Inst. nudle 60g kuřecí – 30ks/kart",
+   "price": 12.9,
+   "amount": "60 g",
+   "unit": ""
+  },
+  {
+   "name": "VEEV ONE 1000 KIT SEA MINT 18MG",
+   "price": 155.0,
+   "amount": "",
+   "unit": ""
+  },
+  {
+   "name": "Milka Thank You malý 44g – 12ks/kart",
+   "price": 29.9,
+   "amount": "44 g",
+   "unit": ""
+  },
+  {
+   "name": "Capri sun 0,33L Ostružina + malina – 15ks/kart",
+   "price": 19.9,
+   "amount": "0,33 l",
+   "unit": ""
+  },
+  {
+   "name": "Capri sun 0,33L Mango + broskev – 15ks/kart",
+   "price": 19.9,
+   "amount": "0,33 l",
+   "unit": ""
+  },
+  {
+   "name": "Milka Love You 44g – 12ks/kart",
+   "price": 44.9,
+   "amount": "44 g",
+   "unit": ""
+  },
+  {
+   "name": "Kunín Probio2 meruńka 140g",
+   "price": 11.9,
+   "amount": "140 g",
+   "unit": ""
+  },
+  {
+   "name": "Kunín Probio2 jahoda bílý 140g",
+   "price": 11.9,
+   "amount": "140 g",
+   "unit": ""
+  },
+  {
+   "name": "Kunín Probio2 jogurt bílý 140g",
+   "price": 11.9,
+   "amount": "140 g",
+   "unit": ""
+  },
+  {
+   "name": "Šunkofléky,okurka 430g",
+   "price": 66.9,
+   "amount": "430 g",
+   "unit": ""
+  },
+  {
+   "name": "Znojemské vepřové kostky, rýže 430g",
+   "price": 66.9,
+   "amount": "430 g",
+   "unit": ""
+  },
+  {
+   "name": "Segedínský guláš,houskový knedlík 340g",
+   "price": 66.9,
+   "amount": "340 g",
+   "unit": ""
+  },
+  {
+   "name": "Francouzské brambory,okurek 430g",
+   "price": 66.9,
+   "amount": "430 g",
+   "unit": ""
+  },
+  {
+   "name": "Kuřecí stroganov, dušená rýže 430g",
+   "price": 66.9,
+   "amount": "430 g",
+   "unit": ""
+  },
+  {
+   "name": "Čínské nudle s kuřecím masem 430g",
+   "price": 66.9,
+   "amount": "430 g",
+   "unit": ""
+  },
+  {
+   "name": "Špagety s pikantní masovou směsí 430g",
+   "price": 66.9,
+   "amount": "430 g",
+   "unit": ""
+  },
+  {
+   "name": "Kuřecí Work, dušená rýže 430g",
+   "price": 66.9,
+   "amount": "430 g",
+   "unit": ""
+  },
+  {
+   "name": "Srbské kuřecí rizoto se sýrem 430g",
+   "price": 66.9,
+   "amount": "430 g",
+   "unit": ""
+  },
+  {
+   "name": "PAP.MASCOTTE GREEN CUT CORNERS (50)",
+   "price": 375.0,
+   "amount": "",
+   "unit": ""
+  },
   {
    "name": "E-LIQUID SYX MIX BERRIES 16,5MG",
    "price": 176.0,
@@ -3621,11 +3835,10 @@
    "unit": ""
   },
   {
-   "name": "VELO MINI ICE BERRIES 10MG",
+   "name": "VELO MINI ICE BERRIES 10MG-NEW",
    "price": 593.0,
    "amount": "",
-   "unit": "",
-   "ean": "4779053621543"
+   "unit": ""
   },
   {
    "name": "ALZZIN. ZAP. CLIPPER CP11 Z-BUNNYS 24/BAL(280640)",
@@ -4364,7 +4577,7 @@
   },
   {
    "name": "UA Jaivir Griliáš 100g Popcornový griliášek – 40ks/kart",
-   "price": 18.9,
+   "price": 19.9,
    "amount": "100 g",
    "unit": "",
    "ean": "4820007051395"
@@ -6603,12 +6816,6 @@
    "ean": "5310206001967"
   },
   {
-   "name": "VELO WATERMELON ICE 8MG",
-   "price": 683.3,
-   "amount": "",
-   "unit": ""
-  },
-  {
    "name": "Prantl Šunková klobása prémium mini 300g",
    "price": 39.9,
    "amount": "300 g",
@@ -8073,7 +8280,7 @@
   },
   {
    "name": "UA Jaivir Griliáš 100g Rýžový griliášek – 40ks/kart",
-   "price": 18.9,
+   "price": 19.9,
    "amount": "100 g",
    "unit": "",
    "ean": "4820007050398"
@@ -9934,13 +10141,13 @@
   },
   {
    "name": "Max sport Protein 60g Pistácie",
-   "price": 23.5,
+   "price": 21.9,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Max sport Protein 60g Banán",
-   "price": 23.5,
+   "price": 21.9,
    "amount": "60 g",
    "unit": ""
   },
@@ -11938,7 +12145,7 @@
   },
   {
    "name": "Max sport Protein 60g Nut",
-   "price": 23.5,
+   "price": 21.9,
    "amount": "60 g",
    "unit": ""
   },
@@ -16437,7 +16644,7 @@
   },
   {
    "name": "DUTINKY PS BLACK 250KS",
-   "price": 45.0,
+   "price": 52.0,
    "amount": "250 ks",
    "unit": "",
    "ean": "4007793120232"
@@ -16939,15 +17146,15 @@
    "unit": ""
   },
   {
-   "name": "Brick trubicky 150g slaný karamel – 16ks/kart",
-   "price": 21.9,
+   "name": "Brick trubičky 150g Slaný karamel – 16ks/kart",
+   "price": 22.9,
    "amount": "150 g",
    "unit": "",
    "ean": "8594045606737"
   },
   {
-   "name": "Brick trubicky 150g Citrón – 16ks/kart",
-   "price": 21.9,
+   "name": "Brick trubičky 150g Citrón – 16ks/kart",
+   "price": 22.9,
    "amount": "150 g",
    "unit": "",
    "ean": "8594045606713"
@@ -17150,67 +17357,11 @@
    "ean": "8595682192980"
   },
   {
-   "name": "VEEV NOW ULTRA 1100 WATERMELON 18MG",
-   "price": 145.0,
-   "amount": "",
-   "unit": "",
-   "ean": "8595701551415"
-  },
-  {
-   "name": "VEEV NOW ULTRA 1100 STRAWBERRY 18MG",
-   "price": 145.0,
-   "amount": "",
-   "unit": "",
-   "ean": "8595701551439"
-  },
-  {
-   "name": "VEEV NOW ULTRA 1100 SOUR APPLE 18MG",
-   "price": 145.0,
-   "amount": "",
-   "unit": "",
-   "ean": "8595701551453"
-  },
-  {
-   "name": "VEEV NOW ULTRA 1100 PASS.FRUIT KIWI GUA. 18MG",
-   "price": 145.0,
-   "amount": "",
-   "unit": "",
-   "ean": "8595701551392"
-  },
-  {
-   "name": "VEEV NOW ULTRA 1100 MANGO 18MG",
-   "price": 145.0,
-   "amount": "",
-   "unit": "",
-   "ean": "8595701551408"
-  },
-  {
-   "name": "VEEV NOW ULTRA 1100 GRAPE 18MG",
-   "price": 145.0,
-   "amount": "",
-   "unit": "",
-   "ean": "8595701551446"
-  },
-  {
    "name": "VEEV NOW ULTRA 1100 GOLD TOBACCO 18MG",
    "price": 145.0,
    "amount": "",
    "unit": "",
    "ean": "8595701551378"
-  },
-  {
-   "name": "VEEV NOW ULTRA 1100 CLASSIC MINT 18MG",
-   "price": 145.0,
-   "amount": "",
-   "unit": "",
-   "ean": "8595701551385"
-  },
-  {
-   "name": "VEEV NOW ULTRA 1100 BLUE RASPBERRY 18MG",
-   "price": 145.0,
-   "amount": "",
-   "unit": "",
-   "ean": "8595701551422"
   },
   {
    "name": "Pringles 165g Cheese – 19ks/kart",
@@ -17855,38 +18006,38 @@
   },
   {
    "name": "Max sport Protein 60g Caramel",
-   "price": 23.5,
+   "price": 21.9,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Max sport Protein 60g Kokos",
-   "price": 23.5,
+   "price": 21.9,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Max sport Protein 60g Nougat",
-   "price": 23.5,
+   "price": 21.9,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Max sport Protein 60g Vanilka",
-   "price": 23.5,
+   "price": 21.9,
    "amount": "60 g",
    "unit": "",
    "ean": "8588003339379"
   },
   {
    "name": "Max sport Protein 60g Lemon",
-   "price": 23.5,
+   "price": 21.9,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Max sport Protein 60g Oreo",
-   "price": 23.5,
+   "price": 21.9,
    "amount": "60 g",
    "unit": ""
   },
@@ -20113,14 +20264,14 @@
   },
   {
    "name": "Agricol-Poličanka majonéza-230ml",
-   "price": 21.9,
+   "price": 24.9,
    "amount": "230 ml",
    "unit": "",
    "ean": "8594007642513"
   },
   {
    "name": "Agricol-Tatarská omáčka 230ml",
-   "price": 21.9,
+   "price": 24.9,
    "amount": "230 ml",
    "unit": "",
    "ean": "8594007642506"
@@ -23621,33 +23772,33 @@
    "ean": "8595646208696"
   },
   {
-   "name": "Max sport Protein 60g Borůvka",
-   "price": 23.5,
+   "name": "Max sport Protein 60g Černý rybíz",
+   "price": 21.9,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Max sport Protein 60g Cherry",
-   "price": 23.5,
+   "price": 21.9,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Max sport Protein 60g Chocolate",
-   "price": 23.5,
+   "price": 21.9,
    "amount": "60 g",
    "unit": ""
   },
   {
    "name": "Max sport Protein 60g Jahoda",
-   "price": 23.5,
+   "price": 21.9,
    "amount": "60 g",
    "unit": "",
    "ean": "8588003339393"
   },
   {
    "name": "Max sport Protein 60g Mango",
-   "price": 23.5,
+   "price": 21.9,
    "amount": "60 g",
    "unit": ""
   },
@@ -23842,7 +23993,7 @@
    "unit": ""
   },
   {
-   "name": "Capri-sun 0,33L Orange + Peach",
+   "name": "Capri sun 0,33L Orange + Peach – 15ks/kart",
    "price": 19.9,
    "amount": "0,33 l",
    "unit": "",
@@ -24445,7 +24596,7 @@
    "ean": "8594044441728"
   },
   {
-   "name": "Viva Vepř. masem konzerva 180g",
+   "name": "Viva konzerva Vepřové 180g",
    "price": 23.9,
    "amount": "180 g",
    "unit": ""
@@ -24947,21 +25098,21 @@
    "unit": ""
   },
   {
-   "name": "Capri sun 200ml Multi Zero",
+   "name": "Capri-Sun 200ml Multi Zero",
    "price": 7.5,
    "amount": "200 ml",
    "unit": "",
    "ean": "4000177030042"
   },
   {
-   "name": "Capri sun 200ml Cherry",
+   "name": "Capri-Sun 200ml Cherry",
    "price": 7.5,
    "amount": "200 ml",
    "unit": "",
    "ean": "4000177408308"
   },
   {
-   "name": "Capri sun 200ml Jungle",
+   "name": "Capri-Sun 200ml Jungle",
    "price": 7.5,
    "amount": "200 ml",
    "unit": "",
@@ -33592,7 +33743,7 @@
   },
   {
    "name": "Brick trubičky 150g Hazelnut – 16ks/kart",
-   "price": 21.9,
+   "price": 22.9,
    "amount": "150 g",
    "unit": "",
    "ean": "8594045603095"
@@ -37448,7 +37599,7 @@
    "ean": "85695622910216"
   },
   {
-   "name": "Capri sun 200ml Monster alarm",
+   "name": "Capri-Sun 200ml Monster alarm",
    "price": 7.5,
    "amount": "200 ml",
    "unit": "",
@@ -40061,22 +40212,22 @@
    "ean": "4014500515878"
   },
   {
-   "name": "Brick trubicky 150g vanilka – 16ks/kart",
-   "price": 21.9,
+   "name": "Brick trubičky 150g Vanilka – 16ks/kart",
+   "price": 22.9,
    "amount": "150 g",
    "unit": "",
    "ean": "8594045603071"
   },
   {
-   "name": "Brick trubicky 150g Chocolate – 16ks/kart",
-   "price": 21.9,
+   "name": "Brick trubičky 150g Chocolate – 16ks/kart",
+   "price": 22.9,
    "amount": "150 g",
    "unit": "",
    "ean": "8594045603057"
   },
   {
-   "name": "Brick trubicky 150g kokos – 16ks/kart",
-   "price": 21.9,
+   "name": "Brick trubičky 150g Kokos – 16ks/kart",
+   "price": 22.9,
    "amount": "150 g",
    "unit": "",
    "ean": "8594045603033"
@@ -40201,14 +40352,14 @@
    "ean": "8594044440714"
   },
   {
-   "name": "Viva Veprova konzerva 400g",
+   "name": "Viva konzerva Vepřové 400g",
    "price": 32.9,
    "amount": "400 g",
    "unit": "",
    "ean": "8594044447218"
   },
   {
-   "name": "Viva Hovězí konzrva 400g",
+   "name": "Viva konzerva Hovězí 400g",
    "price": 49.9,
    "amount": "400 g",
    "unit": "",
@@ -40644,11 +40795,10 @@
    "ean": "8850987122378"
   },
   {
-   "name": "Capri-sun 0,33L multivitamin",
+   "name": "Capri sun 0,33L Multivitamin – 15ks/kart",
    "price": 19.9,
    "amount": "0,33 l",
-   "unit": "",
-   "ean": "40983177162316"
+   "unit": ""
   },
   {
    "name": "Monster 0,5L Mixxd punch",
@@ -42350,11 +42500,10 @@
    "ean": "8595034224642"
   },
   {
-   "name": "Capri-Sun 0,33L mango-maracuja",
+   "name": "Capri sun 0,33L Mango + maracuja – 15ks/kart",
    "price": 19.9,
    "amount": "0,33 l",
-   "unit": "",
-   "ean": "4000177172650"
+   "unit": ""
   },
   {
    "name": "Capri-Sun 200ml Safari fruits",
@@ -42385,7 +42534,7 @@
    "ean": "20030780100007"
   },
   {
-   "name": "Capri-Sun 0,33L višeň-granátové jablko",
+   "name": "Capri Sun 0,33L višeň-granátové jablko",
    "price": 19.9,
    "amount": "0,33 l",
    "unit": "",
@@ -45372,21 +45521,21 @@
   },
   {
    "name": "Jadel Uzený 105g",
-   "price": 31.9,
+   "price": 35.9,
    "amount": "105 g",
    "unit": "",
    "ean": "8594009130575"
   },
   {
    "name": "Jadel přírodní sýr 110g",
-   "price": 30.5,
+   "price": 33.9,
    "amount": "110 g",
    "unit": "",
    "ean": "8594009130568"
   },
   {
    "name": "Jadel Kořeněný 110g",
-   "price": 31.9,
+   "price": 35.9,
    "amount": "110 g",
    "unit": "",
    "ean": "8594009130582"
@@ -45400,7 +45549,7 @@
   },
   {
    "name": "Korbáč uzený 55g 5ks",
-   "price": 22.5,
+   "price": 23.9,
    "amount": "55 g",
    "unit": "",
    "ean": "8594035090782"
@@ -46064,7 +46213,7 @@
   },
   {
    "name": "Agricol Tatarka 95g",
-   "price": 7.9,
+   "price": 8.5,
    "amount": "95 g",
    "unit": "",
    "ean": "8594007640045"
