@@ -1,5 +1,5 @@
 {
- "date": "2026-11-03",
+ "date": "2026-11-06",
  "shop": "bombacena",
  "items": [
   {
@@ -21,38 +21,38 @@
    "ean_bal": "5900497342247"
   },
   {
-   "name": "Alaska 18g Cocoa (8*48ks)",
-   "price": 3.39,
+   "name": "Alaska 18g Cocoa (48ks*8disp)",
+   "price": 3.18,
    "amount": "18 g",
    "unit": "",
-   "href": "/cs/akce?url=alaska-18g-cocoa-8-48ks&do=detail",
+   "href": "/cs/akce?url=alaska-18g-cocoa-48ks-8disp&do=detail",
    "ean": "8588005524018",
    "ean_bal": "8588005524025"
   },
   {
-   "name": "Alaska 18g Coconut (8*48ks)",
-   "price": 3.39,
+   "name": "Alaska 18g Coconut (48ks*8disp)",
+   "price": 3.18,
    "amount": "18 g",
    "unit": "",
-   "href": "/cs/akce?url=alaska-18g-coconut-8-48ks&do=detail",
+   "href": "/cs/akce?url=alaska-18g-coconut-48ks-8disp&do=detail",
    "ean": "8588005524131",
    "ean_bal": "8588005524148"
   },
   {
-   "name": "Alaska 18g Hazelnut (8*48ks)",
-   "price": 3.39,
+   "name": "Alaska 18g Hazelnut (48ks*8disp)",
+   "price": 3.18,
    "amount": "18 g",
    "unit": "",
-   "href": "/cs/akce?url=alaska-18g-hazelnut-8-48ks&do=detail",
+   "href": "/cs/akce?url=alaska-18g-hazelnut-48ks-8disp&do=detail",
    "ean": "8588005524100",
    "ean_bal": "8588005524117"
   },
   {
-   "name": "Alaska 18g Milk (8*48ks)",
-   "price": 3.39,
+   "name": "Alaska 18g Milk (48ks*8disp)",
+   "price": 3.18,
    "amount": "18 g",
    "unit": "",
-   "href": "/cs/akce?url=alaska-18g-milk-8-48ks&do=detail",
+   "href": "/cs/akce?url=alaska-18g-milk-48ks-8disp&do=detail",
    "ean": "8588005524049",
    "ean_bal": "8588005524056"
   },
@@ -363,6 +363,253 @@
    "ean_bal": "8594033175221"
   },
   {
+   "name": "Bonduelle 212ml 170g Creatif…",
+   "price": 19.3,
+   "amount": "212 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-212ml-170g-creatif-mexico-12&do=detail",
+   "ean": "3083680715454"
+  },
+  {
+   "name": "Bonduelle 212ml 200g Hrášek v…",
+   "price": 17.95,
+   "amount": "212 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-212ml-200g-hrasek-v-mirnem-slanem-nalevu-12&do=detail",
+   "ean": "3083680538404",
+   "ean_bal": "3083680565332"
+  },
+  {
+   "name": "Bonduelle 212ml Gold Zlatá…",
+   "price": 19.21,
+   "amount": "212 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-212ml-gold-zlata-kukurice-12&do=detail",
+   "ean": "3083680074094",
+   "ean_bal": "3083680625227"
+  },
+  {
+   "name": "Bonduelle 212ml Klíčky Fazole…",
+   "price": 19.3,
+   "amount": "212 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-212ml-klicky-fazole-mungo-12&do=detail",
+   "ean": "3083680019750",
+   "ean_bal": "3083680465809"
+  },
+  {
+   "name": "Bonduelle 212ml Žampiony krájené …",
+   "price": 21.24,
+   "amount": "212 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-212ml-zampiony-krajene-12&do=detail",
+   "ean": "3083681009811",
+   "ean_bal": "3083681049275"
+  },
+  {
+   "name": "Bonduelle 250g Good Lunch Bulgur …",
+   "price": 47.04,
+   "amount": "250 g",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-250g-good-lunch-bulgur-6ks&do=detail",
+   "ean": "3083681139716",
+   "ean_bal": "3083681144475"
+  },
+  {
+   "name": "Bonduelle 250g Good Lunch Mexican…",
+   "price": 47.04,
+   "amount": "250 g",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-250g-good-lunch-mexican-style-6ks&do=detail",
+   "ean": "3083681181036",
+   "ean_bal": "3083681181043"
+  },
+  {
+   "name": "Bonduelle 250g Good Lunch Quinoa …",
+   "price": 47.04,
+   "amount": "250 g",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-250g-good-lunch-quinoa-6ks&do=detail",
+   "ean": "3083681139709",
+   "ean_bal": "3083681144451"
+  },
+  {
+   "name": "Bonduelle 250g Good Lunch Rýže …",
+   "price": 47.04,
+   "amount": "250 g",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-250g-good-lunch-ryze-6ks&do=detail",
+   "ean": "3083681163155",
+   "ean_bal": "3083681163186"
+  },
+  {
+   "name": "Bonduelle 250g Good Lunch Špalda …",
+   "price": 47.04,
+   "amount": "250 g",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-250g-good-lunch-spalda-6ks&do=detail",
+   "ean": "3083681139723",
+   "ean_bal": "3083681144499"
+  },
+  {
+   "name": "Bonduelle 425ml 340g Créatif Texas…",
+   "price": 28.57,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-340g-creatif-texas-12&do=detail",
+   "ean": "3083680715409"
+  },
+  {
+   "name": "Bonduelle 425ml 400g Bon Menu…",
+   "price": 26.68,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-400g-bon-menu-barbecue-12&do=detail",
+   "ean": "3083681031157",
+   "ean_bal": "3083681031195"
+  },
+  {
+   "name": "Bonduelle 425ml 400g Bon Menu…",
+   "price": 28.57,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-400g-bon-menu-chilli-12&do=detail",
+   "ean": "3083680090742",
+   "ean_bal": "3083680480208"
+  },
+  {
+   "name": "Bonduelle 425ml 400g Bon Menu Hot…",
+   "price": 28.57,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-400g-bon-menu-hot-tomato-12&do=detail",
+   "ean": "3083680001793",
+   "ean_bal": "3083680480185"
+  },
+  {
+   "name": "Bonduelle 425ml 400g Bon Menu…",
+   "price": 28.57,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-400g-bon-menu-india-12&do=detail",
+   "ean": "3083681165296",
+   "ean_bal": "3083681165302"
+  },
+  {
+   "name": "Bonduelle 425ml 400g Bon Menu Kari…",
+   "price": 28.57,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-400g-bon-menu-kari-12&do=detail",
+   "ean": "3083681031171",
+   "ean_bal": "3083681031201"
+  },
+  {
+   "name": "Bonduelle 425ml 400g Bon Menu…",
+   "price": 28.57,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-400g-bon-menu-mexicana-12&do=detail",
+   "ean": "3083680495882",
+   "ean_bal": "3083680559324"
+  },
+  {
+   "name": "Bonduelle 425ml 400g Bon Menu Mild…",
+   "price": 28.57,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-400g-bon-menu-mild-tomato-12&do=detail",
+   "ean": "3083680483407",
+   "ean_bal": "3083681092806"
+  },
+  {
+   "name": "Bonduelle 425ml 400g Duo Créatif…",
+   "price": 28.52,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-400g-duo-creatif-hrasek-mrkev-12&do=detail",
+   "ean": "3083680481878",
+   "ean_bal": "3083680629478"
+  },
+  {
+   "name": "Bonduelle 425ml 400g Trio Créatif …",
+   "price": 28.57,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-400g-trio-creatif-12&do=detail",
+   "ean": "3083680685535",
+   "ean_bal": "3083681006285"
+  },
+  {
+   "name": "Bonduelle 425ml Cizrna Vapeur (12)",
+   "price": 26.63,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-cizrna-vapeur-12&do=detail",
+   "ean": "3083681003949"
+  },
+  {
+   "name": "Bonduelle 425ml Čočka Vapeur (12)",
+   "price": 28.57,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-cocka-vapeur-12&do=detail",
+   "ean": "3083681003963",
+   "ean_bal": "3083681032444"
+  },
+  {
+   "name": "Bonduelle 425ml Créatif Mexico (12)",
+   "price": 28.57,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-creatif-mexico-12&do=detail",
+   "ean": "3083680715447"
+  },
+  {
+   "name": "Bonduelle 425ml Gold Zlatá…",
+   "price": 26.19,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-gold-zlata-kukurice-12&do=detail",
+   "ean": "3083680086936",
+   "ean_bal": "3083680625210"
+  },
+  {
+   "name": "Bonduelle 425ml Hrášek v mírném…",
+   "price": 25.03,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-hrasek-v-mirnem-slanem-nalevu-12&do=detail",
+   "ean": "3083680047364",
+   "ean_bal": "3083681109306"
+  },
+  {
+   "name": "Bonduelle 425ml Mladá mrkev extra…",
+   "price": 28.57,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-mlada-mrkev-extra-jemna-12&do=detail",
+   "ean": "3083680026154"
+  },
+  {
+   "name": "Bonduelle 425ml Zelené fazolové…",
+   "price": 25.03,
+   "amount": "425 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-425ml-zelene-fazolove-lusky-krajene-12&do=detail",
+   "ean": "3083680072694",
+   "ean_bal": "3083680566049"
+  },
+  {
+   "name": "Bonduelle 580ml Sklo Zlatá…",
+   "price": 36.66,
+   "amount": "580 ml",
+   "unit": "",
+   "href": "/cs/akce?url=bonduelle-580ml-sklo-zlata-kukurice-6ks&do=detail",
+   "ean": "3083680015424",
+   "ean_bal": "3083680480239"
+  },
+  {
    "name": "Bonux gel 0,9L Color Pure Magnolia…",
    "price": 48.15,
    "amount": "0,9 l",
@@ -415,7 +662,7 @@
   },
   {
    "name": "Bonux prášek 390g Color Caring…",
-   "price": 29.1,
+   "price": 25.5,
    "amount": "390 g",
    "unit": "",
    "href": "/cs/akce?url=bonux-prasek-390g-color-caring-lavender-6pd-box-14-88&do=detail",
@@ -424,7 +671,7 @@
   },
   {
    "name": "Bonux prášek 390g Color Pure…",
-   "price": 29.1,
+   "price": 25.5,
    "amount": "390 g",
    "unit": "",
    "href": "/cs/akce?url=bonux-prasek-390g-color-pure-magnolia-6pd-box-14-88&do=detail",
@@ -1945,6 +2192,15 @@
    "ean_bal": "18594042911824"
   },
   {
+   "name": "Golden Snack 300g Sladký Popcorn …",
+   "price": 68.0,
+   "amount": "300 g",
+   "unit": "",
+   "href": "/cs/akce?url=golden-snack-300g-sladky-popcorn-12ks&do=detail",
+   "ean": "8594042911674",
+   "ean_bal": "18594042912043"
+  },
+  {
    "name": "Golden Snack Cibulové kroužky 70g …",
    "price": 12.92,
    "amount": "70 g",
@@ -2950,7 +3206,7 @@
   },
   {
    "name": "HET HAN Pampers vlhč.ubrousky 52-…",
-   "price": 40.0,
+   "price": 30.0,
    "amount": "",
    "unit": "",
    "href": "/cs/akce?url=het-han-pampers-vlhc-ubrousky-52-fresh-clean-3-4ks-exp-23-8-25&do=detail",
@@ -3698,7 +3954,7 @@
   },
   {
    "name": "Milky Way 21,5g CZ (60/294)",
-   "price": 9.0,
+   "price": 8.5,
    "amount": "21,5 g",
    "unit": "",
    "href": "/cs/akce?url=milky-way-21-5g-cz-60-294&do=detail",
@@ -4448,11 +4704,18 @@
    "ean": "8612002829057"
   },
   {
-   "name": "Taška s motivem (Tui hoa) (500ks)",
+   "name": "Taška s motivem (Tui hoa hinh) …",
+   "price": 1.8,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/akce?url=taska-s-motivem-tui-hoa-hinh-500ks&do=detail"
+  },
+  {
+   "name": "Taška Vánoce (Tui hoa) (500ks)",
    "price": 1.8,
    "amount": "500 ks",
    "unit": "",
-   "href": "/cs/akce?url=taska-s-motivem-tui-hoa-500ks&do=detail"
+   "href": "/cs/akce?url=taska-vanoce-tui-hoa-500ks&do=detail"
   },
   {
    "name": "Tchibo Eduscho 100g Family (30/90)",
@@ -4678,13 +4941,6 @@
    "unit": "",
    "href": "/cs/akce?url=trolli-super-kick-18g-60ks-6disp&do=detail",
    "ean": "4070455990023"
-  },
-  {
-   "name": "Tui hoa hinh Noel/ Vánoce (500ks)",
-   "price": 1.8,
-   "amount": "500 ks",
-   "unit": "",
-   "href": "/cs/akce?url=tui-hoa-hinh-noel-vanoce-500ks&do=detail"
   },
   {
    "name": "UKRA Brandy Old Kakheti 0,5L 3YO…",
@@ -5621,6 +5877,14 @@
    "ean": "8588007524542"
   },
   {
+   "name": "HET HAN Argan 300ml Oil…",
+   "price": 15.0,
+   "amount": "300 ml",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-argan-300ml-oil-conditioner-6ks&do=detail",
+   "ean": "5060120164087"
+  },
+  {
    "name": "HET HAN Ariel prášek 1,5kg…",
    "price": 25.0,
    "amount": "1,5 kg",
@@ -5665,6 +5929,22 @@
    "amount": "",
    "unit": "",
    "href": "/cs/vyprodej?url=het-han-asia-yopokki-topokki-banh-gao-garlic-teriyaki-120g-coc-30ks-21884-exp-29-3-2&do=detail"
+  },
+  {
+   "name": "HET HAN Axe Mýdlo 100g Clean Fresh…",
+   "price": 5.0,
+   "amount": "100 g",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-axe-mydlo-100g-clean-fresh-6ks&do=detail",
+   "ean": "850005911395"
+  },
+  {
+   "name": "HET HAN Axe Mýdlo 100g Dark…",
+   "price": 5.0,
+   "amount": "100 g",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-axe-mydlo-100g-dark-temptation-6ks&do=detail",
+   "ean": "8886467010170"
   },
   {
    "name": "HET HAN Bacardi 0,25L Coca 5%…",
@@ -5928,6 +6208,31 @@
    "unit": "",
    "href": "/cs/vyprodej?url=het-han-devore-500ml-sprchovy-gel-orange-fizz-a-lucni-kvety-6-180&do=detail",
    "ean": "8594003932083"
+  },
+  {
+   "name": "HET HAN Discreet Intimky Vložky…",
+   "price": 10.0,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-discreet-intimky-vlozky-normal-multiform18ks-18ks&do=detail",
+   "ean": "8006540567432"
+  },
+  {
+   "name": "HET HAN Disney Surprise 0,3L…",
+   "price": 8.0,
+   "amount": "0,3 l",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-disney-surprise-0-3l-ladybug-apple-12-144-exp-24-8-26&do=detail",
+   "ean": "8594023921050",
+   "ean_bal": "8594023921098"
+  },
+  {
+   "name": "HET HAN Dove Mýdlo tuhé 90g Pink …",
+   "price": 5.0,
+   "amount": "90 g",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-dove-mydlo-tuhe-90g-pink-48ks&do=detail",
+   "ean": "8720181219450"
   },
   {
    "name": "HET HAN DrWitt 0,75L Collagen…",
@@ -6205,6 +6510,14 @@
    "ean_bal": "7702018331178"
   },
   {
+   "name": "HET HAN Glade gel. osvěžovač 150g…",
+   "price": 10.0,
+   "amount": "150 g",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-glade-gel-osvezovac-150g-fresh-lemon-8ks&do=detail",
+   "ean": "5000204826586"
+  },
+  {
    "name": "HET HAN Golden Snack Cracker 80g…",
    "price": 5.0,
    "amount": "80 g",
@@ -6368,6 +6681,13 @@
    "href": "/cs/vyprodej?url=het-han-lays-55g-strong-chicken-wings-14-64-exp-29-11-26&do=detail",
    "ean": "8606017379003",
    "ean_bal": "5900259097590"
+  },
+  {
+   "name": "HET HAN Lentilky 110g Mega CZ …",
+   "price": 16.0,
+   "amount": "110 g",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-lentilky-110g-mega-cz-20ks-exp-11-26&do=detail"
   },
   {
    "name": "HET HAN Lion 42g EU Black&White …",
@@ -7068,6 +7388,22 @@
    "ean": "8595723300664"
   },
   {
+   "name": "HET HAN Pledge Čistící sprej 250ml…",
+   "price": 25.0,
+   "amount": "250 ml",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-pledge-cistici-sprej-250ml-multi-jasmin-5v1-6ks&do=detail",
+   "ean": "5000204689297"
+  },
+  {
+   "name": "HET HAN Pledge Čistící sprej 250ml…",
+   "price": 25.0,
+   "amount": "250 ml",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-pledge-cistici-sprej-250ml-wood-classic-5v1-6ks&do=detail",
+   "ean": "5000204690088"
+  },
+  {
    "name": "HET HAN PomBar 110g Original (18…",
    "price": 8.0,
    "amount": "110 g",
@@ -7527,6 +7863,15 @@
    "ean": "8585027985582"
   },
   {
+   "name": "HET HAN Tayas Orient 1kg- Mix (8ks…",
+   "price": 44.0,
+   "amount": "1 kg",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-tayas-orient-1kg-mix-8ks-3616-exp-5-26&do=detail",
+   "ean": "8690997114112",
+   "ean_bal": "08690997236166"
+  },
+  {
    "name": "HET HAN Toffifee 125g (15ks) EXP 8…",
    "price": 11.0,
    "amount": "125 g",
@@ -7674,6 +8019,98 @@
    "ean": "8588000610020"
   },
   {
+   "name": "Jameson 0,7L Caskmates Stout…",
+   "price": 620.0,
+   "amount": "0,7 l",
+   "unit": "",
+   "href": "/cs/novinky?url=jameson-0-7l-caskmates-stout-edition-40-6-68&do=detail"
+  },
+  {
+   "name": "Asia Ranli Shougong 100g- Matcha …",
+   "price": 18.5,
+   "amount": "100 g",
+   "unit": "",
+   "href": "/cs/novinky?url=asia-ranli-shougong-100g-matcha-banh-bong-lan-tam-giac-40ks&do=detail"
+  },
+  {
+   "name": "Asia Ranli Shougong 100g- Liči …",
+   "price": 18.5,
+   "amount": "100 g",
+   "unit": "",
+   "href": "/cs/novinky?url=asia-ranli-shougong-100g-lici-banh-bong-lan-tam-giac-40ks&do=detail"
+  },
+  {
+   "name": "Asia Ranli Shougong 100g-…",
+   "price": 18.5,
+   "amount": "100 g",
+   "unit": "",
+   "href": "/cs/novinky?url=asia-ranli-shougong-100g-strawberry-banh-bong-lan-tam-giac-40ks&do=detail"
+  },
+  {
+   "name": "Lexus Bonboniera 0,5kg Coconut (12…",
+   "price": 74.91,
+   "amount": "0,5 kg",
+   "unit": "",
+   "href": "/cs/novinky?url=lexus-bonboniera-0-5kg-coconut-12-72&do=detail",
+   "ean": "8699462600990"
+  },
+  {
+   "name": "Reese's 51g Fast Break (18ks*12b)",
+   "price": 23.38,
+   "amount": "51 g",
+   "unit": "",
+   "href": "/cs/novinky?url=reese-s-51g-fast-break-18ks-12b&do=detail",
+   "ean": "034000152568"
+  },
+  {
+   "name": "Le Coq 0,33L Lemon Sprittz…",
+   "price": 34.9,
+   "amount": "0,33 l",
+   "unit": "",
+   "href": "/cs/novinky?url=le-coq-0-33l-lemon-sprittz-cocktail-24-54&do=detail",
+   "ean": "4740098003694"
+  },
+  {
+   "name": "Le Coq 0,33L Appletini cocktail …",
+   "price": 34.9,
+   "amount": "0,33 l",
+   "unit": "",
+   "href": "/cs/novinky?url=le-coq-0-33l-appletini-cocktail-24-54&do=detail",
+   "ean": "4740098004493"
+  },
+  {
+   "name": "Why Not 280ml Matcha Drink Banana …",
+   "price": 29.9,
+   "amount": "280 ml",
+   "unit": "",
+   "href": "/cs/novinky?url=why-not-280ml-matcha-drink-banana-12ks&do=detail",
+   "ean": "5904006352321"
+  },
+  {
+   "name": "Why Not 280ml Matcha Drink Vanilla…",
+   "price": 29.9,
+   "amount": "280 ml",
+   "unit": "",
+   "href": "/cs/novinky?url=why-not-280ml-matcha-drink-vanilla-12ks&do=detail",
+   "ean": "5904006352338"
+  },
+  {
+   "name": "Why Not 280ml Matcha Drink…",
+   "price": 29.9,
+   "amount": "280 ml",
+   "unit": "",
+   "href": "/cs/novinky?url=why-not-280ml-matcha-drink-strawberry-12ks&do=detail",
+   "ean": "5904006352345"
+  },
+  {
+   "name": "Why Not 280ml Matcha Drink…",
+   "price": 29.9,
+   "amount": "280 ml",
+   "unit": "",
+   "href": "/cs/novinky?url=why-not-280ml-matcha-drink-original-12ks&do=detail",
+   "ean": "5904006352314"
+  },
+  {
    "name": "HAN NGAN Manner 110g Knuspino…",
    "price": 10.0,
    "amount": "110 g",
@@ -7731,7 +8168,7 @@
   },
   {
    "name": "Coca Cola 0,33L CZ Creamy Vanilla…",
-   "price": 11.5,
+   "price": 11.75,
    "amount": "0,33 l",
    "unit": "",
    "href": "/cs/novinky?url=coca-cola-0-33l-cz-creamy-vanilla-zero-24-110&do=detail",
@@ -7740,7 +8177,7 @@
   },
   {
    "name": "Coca Cola 0,33L CZ Creamy Vanilla …",
-   "price": 11.5,
+   "price": 11.75,
    "amount": "0,33 l",
    "unit": "",
    "href": "/cs/novinky?url=coca-cola-0-33l-cz-creamy-vanilla-24-110&do=detail",
@@ -8790,7 +9227,7 @@
   },
   {
    "name": "Thanh Loc Banh Da Nem 250g (20kg) …",
-   "price": 27.3,
+   "price": 25.55,
    "amount": "250 g",
    "unit": "",
    "href": "/cs/novinky?url=thanh-loc-banh-da-nem-250g-20kg-80ks&do=detail"
@@ -10044,7 +10481,7 @@
   },
   {
    "name": "Monster 0,5L CZ Bad Apple (12/144)",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/novinky?url=monster-0-5l-cz-bad-apple-12-144&do=detail",
@@ -10340,7 +10777,7 @@
   },
   {
    "name": "Monster 0,5L CZ Original (4ks*6)",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/novinky?url=monster-0-5l-cz-original-4ks-6&do=detail"
@@ -10578,7 +11015,7 @@
   },
   {
    "name": "Monster 0,5L CZ Aussie Lemonade …",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/novinky?url=monster-0-5l-cz-aussie-lemonade-24-72&do=detail"
@@ -11257,7 +11694,7 @@
   },
   {
    "name": "Reese's 68g Minis Peanut Butter…",
-   "price": 48.6,
+   "price": 35.91,
    "amount": "68 g",
    "unit": "",
    "href": "/cs/novinky?url=reese-s-68g-minis-peanut-butter-cups-16ks-65888&do=detail",
@@ -11790,7 +12227,7 @@
   },
   {
    "name": "Dove Mýdlo tuhé 90g Replenishing…",
-   "price": 20.7,
+   "price": 23.92,
    "amount": "90 g",
    "unit": "",
    "href": "/cs/novinky?url=dove-mydlo-tuhe-90g-replenishing-dragon-fruit-s-kokosem-48ks&do=detail",
@@ -11798,7 +12235,7 @@
   },
   {
    "name": "Dove Mýdlo Tuhé 90g Relaxing s…",
-   "price": 20.7,
+   "price": 23.92,
    "amount": "90 g",
    "unit": "",
    "href": "/cs/novinky?url=dove-mydlo-tuhe-90g-relaxing-s-kokos-a-jasmin-48ks&do=detail",
@@ -12267,7 +12704,7 @@
   },
   {
    "name": "UKRA Gorobchik Elitne 130g Slun.…",
-   "price": 23.55,
+   "price": 25.55,
    "amount": "130 g",
    "unit": "",
    "href": "/cs/novinky?url=ukra-gorobchik-elitne-130g-slun-seminka-prazena-14ks-vang&do=detail",
@@ -12540,7 +12977,7 @@
   },
   {
    "name": "Coca Cola 0,33L CZ Zero Zero (24…",
-   "price": 12.5,
+   "price": 11.75,
    "amount": "0,33 l",
    "unit": "",
    "href": "/cs/novinky?url=coca-cola-0-33l-cz-zero-zero-24-110&do=detail",
@@ -13914,7 +14351,7 @@
   },
   {
    "name": "Coca Cola 2L CZ Zero (6/64)",
-   "price": 34.9,
+   "price": 34.4,
    "amount": "2 l",
    "unit": "",
    "href": "/cs/novinky?url=coca-cola-2l-cz-zero-6-64&do=detail",
@@ -13923,7 +14360,7 @@
   },
   {
    "name": "Coca Cola 2L CZ Original (6/64)",
-   "price": 34.9,
+   "price": 34.4,
    "amount": "2 l",
    "unit": "",
    "href": "/cs/novinky?url=coca-cola-2l-cz-original-6-64&do=detail",
@@ -14046,7 +14483,7 @@
   },
   {
    "name": "Red Bull 0,25L CZ Ice Edition…",
-   "price": 27.9,
+   "price": 26.9,
    "amount": "0,25 l",
    "unit": "",
    "href": "/cs/novinky?url=red-bull-0-25l-cz-ice-edition-vanilla-iced-berry-12-216&do=detail"
@@ -15206,11 +15643,11 @@
    "ean": "5053990190140"
   },
   {
-   "name": "Nudle Hao Hao 68g Chilli a Křupavá…",
-   "price": 17.25,
+   "name": "Nudle Hao Hao Handy Cup 68g Saté…",
+   "price": 16.65,
    "amount": "68 g",
    "unit": "",
-   "href": "/cs/novinky?url=nudle-hao-hao-68g-chilli-a-krupava-cibule-sa-te-12ks-coc&do=detail",
+   "href": "/cs/novinky?url=nudle-hao-hao-handy-cup-68g-sate-cibule-12ks-coc&do=detail",
    "ean": "8934563636135",
    "ean_bal": "8934563031817"
   },
@@ -15224,11 +15661,11 @@
    "ean_bal": "8934563031718"
   },
   {
-   "name": "Nudle Hao Hao 68g Kuřecí (16ks) Coc",
-   "price": 17.25,
+   "name": "Nudle Hao Hao Handy Cup 68g Kuřecí…",
+   "price": 16.65,
    "amount": "68 g",
    "unit": "",
-   "href": "/cs/novinky?url=nudle-hao-hao-68g-kureci-16ks-coc&do=detail",
+   "href": "/cs/novinky?url=nudle-hao-hao-handy-cup-68g-kureci-16ks-coc&do=detail",
    "ean": "8934563617141"
   },
   {
@@ -15490,7 +15927,7 @@
   },
   {
    "name": "Tesori D`oriente Aviváž 760m…",
-   "price": 65.27,
+   "price": 64.72,
    "amount": "",
    "unit": "",
    "href": "/cs/novinky?url=tesori-d-oriente-avivaz-760m-japanese-rituals-12ks&do=detail",
@@ -15506,7 +15943,7 @@
   },
   {
    "name": "Tesori D`oriente Aviváž 760ml…",
-   "price": 65.27,
+   "price": 61.23,
    "amount": "760 ml",
    "unit": "",
    "href": "/cs/novinky?url=tesori-d-oriente-avivaz-760ml-thalasso-therapy-12ks&do=detail",
@@ -15514,7 +15951,7 @@
   },
   {
    "name": "Tesori D`oriente Aviváž 760ml…",
-   "price": 65.27,
+   "price": 61.23,
    "amount": "760 ml",
    "unit": "",
    "href": "/cs/novinky?url=tesori-d-oriente-avivaz-760ml-persian-12ks&do=detail",
@@ -15530,7 +15967,7 @@
   },
   {
    "name": "Tesori D`oriente Aviváž 760ml…",
-   "price": 65.27,
+   "price": 64.72,
    "amount": "760 ml",
    "unit": "",
    "href": "/cs/novinky?url=tesori-d-oriente-avivaz-760ml-hammam-12ks&do=detail",
@@ -15538,7 +15975,7 @@
   },
   {
    "name": "Tesori D`oriente Aviváž 760ml…",
-   "price": 61.21,
+   "price": 61.23,
    "amount": "760 ml",
    "unit": "",
    "href": "/cs/novinky?url=tesori-d-oriente-avivaz-760ml-byzantium-12ks&do=detail",
@@ -15546,7 +15983,7 @@
   },
   {
    "name": "Tesori D`oriente Aviváž 760ml…",
-   "price": 65.27,
+   "price": 61.23,
    "amount": "760 ml",
    "unit": "",
    "href": "/cs/novinky?url=tesori-d-oriente-avivaz-760ml-ayurveda-12ks&do=detail",
@@ -16320,7 +16757,7 @@
   },
   {
    "name": "Glico Pocky 31g Rose (120ks) 09/26",
-   "price": 22.75,
+   "price": 20.3,
    "amount": "31 g",
    "unit": "",
    "href": "/cs/novinky?url=glico-pocky-31g-rose-120ks-09-26&do=detail",
@@ -17188,14 +17625,14 @@
   },
   {
    "name": "Kinder 18,2g EU Duplo Spekulatius …",
-   "price": 65.5,
+   "price": 6.65,
    "amount": "18,2 g",
    "unit": "",
    "href": "/cs/novinky?url=kinder-18-2g-eu-duplo-spekulatius-10ks-28disp&do=detail"
   },
   {
    "name": "Kinder 18,2g EU Duplo White (10ks…",
-   "price": 65.5,
+   "price": 6.65,
    "amount": "18,2 g",
    "unit": "",
    "href": "/cs/novinky?url=kinder-18-2g-eu-duplo-white-10ks-28disp&do=detail"
@@ -17210,7 +17647,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Moisture…",
-   "price": 50.6,
+   "price": 50.59,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/novinky?url=schauma-sampon-400ml-moisture-shine-5ks&do=detail",
@@ -17344,7 +17781,7 @@
   },
   {
    "name": "Milka 90g Lotus Biscoff (24ks)",
-   "price": 23.51,
+   "price": 23.0,
    "amount": "90 g",
    "unit": "",
    "href": "/cs/novinky?url=milka-90g-lotus-biscoff-24ks&do=detail",
@@ -17415,14 +17852,14 @@
   },
   {
    "name": "Glico Pocky 39g Milk Chocolate (10…",
-   "price": 22.75,
+   "price": 20.3,
    "amount": "39 g",
    "unit": "",
    "href": "/cs/novinky?url=glico-pocky-39g-milk-chocolate-10-120ks&do=detail"
   },
   {
    "name": "Glico Pocky 39g Milk (10/120ks)",
-   "price": 22.75,
+   "price": 20.3,
    "amount": "39 g",
    "unit": "",
    "href": "/cs/novinky?url=glico-pocky-39g-milk-10-120ks&do=detail"
@@ -17655,7 +18092,7 @@
   },
   {
    "name": "Monster 0,5L CZ Rio Punch (12/144)",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/novinky?url=monster-0-5l-cz-rio-punch-12-144&do=detail",
@@ -17663,14 +18100,14 @@
   },
   {
    "name": "Monster 0,5L CZ Rehab Peach (12…",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/novinky?url=monster-0-5l-cz-rehab-peach-12-144-vl&do=detail"
   },
   {
    "name": "Monster 0,5L CZ Ultra Black (12ks)…",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/novinky?url=monster-0-5l-cz-ultra-black-12ks-vl&do=detail",
@@ -18969,7 +19406,7 @@
   },
   {
    "name": "Merci 250g EU Black & White (10ks)",
-   "price": 83.0,
+   "price": 86.65,
    "amount": "250 g",
    "unit": "",
    "href": "/cs/novinky?url=merci-250g-eu-black-white-10ks&do=detail"
@@ -19780,7 +20217,7 @@
   },
   {
    "name": "VÝPRODEJ Sport Isotonic 0,75L Red…",
-   "price": 9.9,
+   "price": 7.0,
    "amount": "0,75 l",
    "unit": "",
    "href": "/cs/novinky?url=vyprodej-sport-isotonic-0-75l-red-orange-6-145&do=detail",
@@ -20247,7 +20684,7 @@
   },
   {
    "name": "Kinder 18,2g EU Duplo (10ks*28disp)",
-   "price": 65.5,
+   "price": 6.65,
    "amount": "18,2 g",
    "unit": "",
    "href": "/cs/novinky?url=kinder-18-2g-eu-duplo-10ks-28disp&do=detail",
@@ -20349,7 +20786,7 @@
   },
   {
    "name": "Monster 0,5L CZ Valentino Rossi …",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/novinky?url=monster-0-5l-cz-valentino-rossi-12-144&do=detail",
@@ -20896,7 +21333,7 @@
   },
   {
    "name": "Monster 0,5L CZ Zero Original (12…",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/novinky?url=monster-0-5l-cz-zero-original-12-144&do=detail",
@@ -20905,14 +21342,14 @@
   },
   {
    "name": "Monster 0,5L CZ Aussie Lemonade …",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/novinky?url=monster-0-5l-cz-aussie-lemonade-12-144&do=detail"
   },
   {
    "name": "Monster 0,5L CZ Ultra Rosa (12/144)",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/novinky?url=monster-0-5l-cz-ultra-rosa-12-144&do=detail",
@@ -20921,7 +21358,7 @@
   },
   {
    "name": "Monster 0,5L CZ Ultra Gold (12/144)",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/novinky?url=monster-0-5l-cz-ultra-gold-12-144&do=detail",
@@ -21196,7 +21633,7 @@
   },
   {
    "name": "Monster 0,5L CZ Ultra Peachy Keen …",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/novinky?url=monster-0-5l-cz-ultra-peachy-keen-12-144&do=detail",
@@ -21205,7 +21642,7 @@
   },
   {
    "name": "Monster 0,5L CZ Lando Norris (24…",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/novinky?url=monster-0-5l-cz-lando-norris-24-72&do=detail",
@@ -21364,7 +21801,7 @@
   },
   {
    "name": "VÝPRODEJ To The Moon 0,25L Aloe…",
-   "price": 8.9,
+   "price": 8.0,
    "amount": "0,25 l",
    "unit": "",
    "href": "/cs/novinky?url=vyprodej-to-the-moon-0-25l-aloe-vera-original-plech-24ks&do=detail",
@@ -21373,7 +21810,7 @@
   },
   {
    "name": "VÝPRODEJ To The Moon 0,25L Aloe…",
-   "price": 8.9,
+   "price": 8.0,
    "amount": "0,25 l",
    "unit": "",
    "href": "/cs/novinky?url=vyprodej-to-the-moon-0-25l-aloe-vera-citron-plech-24ks&do=detail",
@@ -21382,7 +21819,7 @@
   },
   {
    "name": "VÝPRODEJ To The Moon 0,25L Aloe…",
-   "price": 8.9,
+   "price": 8.0,
    "amount": "0,25 l",
    "unit": "",
    "href": "/cs/novinky?url=vyprodej-to-the-moon-0-25l-aloe-vera-jablko-plech-24ks&do=detail",
@@ -21814,7 +22251,7 @@
   },
   {
    "name": "Savo 1,2L Razant (6ks)",
-   "price": 81.0,
+   "price": 75.78,
    "amount": "1,2 l",
    "unit": "",
    "href": "/cs/novinky?url=savo-1-2l-razant-6ks&do=detail",
@@ -23356,7 +23793,7 @@
   },
   {
    "name": "Raffaello 260g (24ks)",
-   "price": 105.0,
+   "price": 103.0,
    "amount": "260 g",
    "unit": "",
    "href": "/cs/novinky?url=raffaello-260g-24ks&do=detail"
@@ -23617,11 +24054,11 @@
    "href": "/cs/novinky?url=asia-ranli-shougong-100g-cheese-banh-bong-lan-40ks&do=detail"
   },
   {
-   "name": "Asia Ranli Shougong 100g- Avokádo …",
+   "name": "Asia Ranli Shougong 100g- Mango …",
    "price": 18.5,
    "amount": "100 g",
    "unit": "",
-   "href": "/cs/novinky?url=asia-ranli-shougong-100g-avokado-banh-bong-lan-40ks&do=detail"
+   "href": "/cs/novinky?url=asia-ranli-shougong-100g-mango-banh-bong-lan-tam-giac-40ks&do=detail"
   },
   {
    "name": "Fizi Juicy Bonbon 96g Banán (24ks)",
@@ -24939,14 +25376,6 @@
    "unit": "",
    "href": "/cs/novinky?url=airwick-250ml-freshmatic-sparking-peach-apricot-6ks&do=detail",
    "ean": "5999109544193"
-  },
-  {
-   "name": "Dove Mýdlo tuhé 90g Pink (48ks)",
-   "price": 20.52,
-   "amount": "90 g",
-   "unit": "",
-   "href": "/cs/novinky?url=dove-mydlo-tuhe-90g-pink-48ks&do=detail",
-   "ean": "8720181219450"
   },
   {
    "name": "Clin 500ml Window Glass Pro Nature…",
@@ -26665,15 +27094,6 @@
    "ean": "85929760"
   },
   {
-   "name": "Bonduelle 250g Good Lunch Mexican…",
-   "price": 48.5,
-   "amount": "250 g",
-   "unit": "",
-   "href": "/cs/novinky?url=bonduelle-250g-good-lunch-mexican-style-6ks&do=detail",
-   "ean": "3083681181036",
-   "ean_bal": "3083681181043"
-  },
-  {
    "name": "HAN NGAN Vepy 45g Kukuřičné Mini…",
    "price": 10.0,
    "amount": "45 g",
@@ -27540,6 +27960,13 @@
    "ean_bal": "18852018111129"
   },
   {
+   "name": "Nudle Yum Yum 60g Smažený Cheese …",
+   "price": 13.6,
+   "amount": "60 g",
+   "unit": "",
+   "href": "/cs/novinky?url=nudle-yum-yum-60g-smazeny-cheese-30ks&do=detail"
+  },
+  {
    "name": "Miléne 500ml Mýdlo tekuté Mléko a…",
    "price": 21.71,
    "amount": "500 ml",
@@ -27621,13 +28048,11 @@
    "ean_bal": "18852018111211"
   },
   {
-   "name": "Nudle Yum Yum 60g Červené Kari a…",
-   "price": 11.9,
+   "name": "Nudle Yum Yum 60g Smažené Teriyaki…",
+   "price": 13.6,
    "amount": "60 g",
    "unit": "",
-   "href": "/cs/novinky?url=nudle-yum-yum-60g-cervene-kari-a-kachny-30ks&do=detail",
-   "ean": "8852018101253",
-   "ean_bal": "18852018111297"
+   "href": "/cs/novinky?url=nudle-yum-yum-60g-smazene-teriyaki-30ks&do=detail"
   },
   {
    "name": "Nudle Yum Yum 60g Krevetová (30ks)",
@@ -27843,59 +28268,51 @@
    "ean": "3800201510660"
   },
   {
-   "name": "Tui Rac (Sáčky) Den PYTEL Na Odpad…",
+   "name": "Pytle na odpad (Tui Rac) 150L…",
    "price": 43.9,
-   "amount": "",
+   "amount": "150 l",
    "unit": "",
-   "href": "/cs/novinky?url=tui-rac-sacky-den-pytel-na-odpad-150l-70cm-x-110cm&do=detail",
+   "href": "/cs/novinky?url=pytle-na-odpad-tui-rac-150l-cerny-10ks&do=detail",
    "ean": "8595669375702"
   },
   {
-   "name": "Tui Rac (Sáčky) den 120L (VI PACK)…",
+   "name": "Pytle na odpad (Tui Rac) 120L…",
    "price": 10.5,
    "amount": "120 l",
    "unit": "",
-   "href": "/cs/novinky?url=tui-rac-sacky-den-120l-vi-pack-50ks&do=detail",
+   "href": "/cs/novinky?url=pytle-na-odpad-tui-rac-120l-cerny-vi-pack-50ks&do=detail",
    "ean": "8595669375696"
   },
   {
-   "name": "Tui Rac (Sáčky) den 60L (VI PACK) …",
-   "price": 7.9,
+   "name": "Pytle na odpad (Tui Rac) 60L Černý…",
+   "price": 8.28,
    "amount": "60 l",
    "unit": "",
-   "href": "/cs/novinky?url=tui-rac-sacky-den-60l-vi-pack-50ks&do=detail",
+   "href": "/cs/novinky?url=pytle-na-odpad-tui-rac-60l-cerny-vi-pack-50ks&do=detail",
    "ean": "8595669375689"
   },
   {
-   "name": "Tui Rac (Sáčky) Xanh 120L (VI PACK…",
+   "name": "Pytle na odpad (Tui Rac) 120L…",
    "price": 10.5,
    "amount": "120 l",
    "unit": "",
-   "href": "/cs/novinky?url=tui-rac-sacky-xanh-120l-vi-pack-50ks&do=detail",
+   "href": "/cs/novinky?url=pytle-na-odpad-tui-rac-120l-modry-vi-pack-50ks&do=detail",
    "ean": "8931893263475"
   },
   {
-   "name": "Tui Rac (Sáčky) Xanh 35L (VI PACK)…",
-   "price": 7.9,
+   "name": "Pytle na odpad (Tui Rac) 35L Modrý…",
+   "price": 8.28,
    "amount": "35 l",
    "unit": "",
-   "href": "/cs/novinky?url=tui-rac-sacky-xanh-35l-vi-pack-50ks&do=detail",
+   "href": "/cs/novinky?url=pytle-na-odpad-tui-rac-35l-modry-vi-pack-50ks&do=detail",
    "ean": "8595669375665"
   },
   {
-   "name": "Tui Rac (Sáčky) Xanh rut day 60L …",
-   "price": 9.9,
+   "name": "Pytle na odpad (Tui Rac) 60L Modrý…",
+   "price": 10.48,
    "amount": "60 l",
    "unit": "",
-   "href": "/cs/novinky?url=tui-rac-sacky-xanh-rut-day-60l-vi-pack-50ks&do=detail",
-   "ean": "8595669375634"
-  },
-  {
-   "name": "Tui Rac (Sáčky) xanh 60L (VI PACK…",
-   "price": 7.9,
-   "amount": "60 l",
-   "unit": "",
-   "href": "/cs/novinky?url=tui-rac-sacky-xanh-60l-vi-pack-50ks&do=detail",
+   "href": "/cs/novinky?url=pytle-na-odpad-tui-rac-60l-modry-vi-pack-50ks&do=detail",
    "ean": "8595669375672"
   },
   {
@@ -28449,14 +28866,6 @@
    "ean": "6970221438057"
   },
   {
-   "name": "Bonduelle 425ml Cizrna Vapeur (12)",
-   "price": 27.45,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=bonduelle-425ml-cizrna-vapeur-12&do=detail",
-   "ean": "3083681003949"
-  },
-  {
    "name": "Dan Cake 500g Toast Toustový chléb…",
    "price": 27.95,
    "amount": "500 g",
@@ -28589,7 +28998,7 @@
   },
   {
    "name": "Glico Pocky 40g Cookies & Cream …",
-   "price": 22.75,
+   "price": 20.3,
    "amount": "40 g",
    "unit": "",
    "href": "/cs/novinky?url=glico-pocky-40g-cookies-cream-10-120ks&do=detail",
@@ -30036,7 +30445,7 @@
   },
   {
    "name": "Doritos 90g Sriracha (14/56)",
-   "price": 19.0,
+   "price": 27.6,
    "amount": "90 g",
    "unit": "",
    "href": "/cs/novinky?url=doritos-90g-sriracha-14-56&do=detail",
@@ -30617,15 +31026,6 @@
    "href": "/cs/novinky?url=disney-surprise-0-3l-barbie-strawberry-12-144&do=detail",
    "ean": "8594023923214",
    "ean_bal": "8594023921715"
-  },
-  {
-   "name": "Disney Surprise 0,3L Ladybug …",
-   "price": 10.0,
-   "amount": "0,3 l",
-   "unit": "",
-   "href": "/cs/novinky?url=disney-surprise-0-3l-ladybug-apple-12-144-exp-24-8-26&do=detail",
-   "ean": "8594023921050",
-   "ean_bal": "8594023921098"
   },
   {
    "name": "Disney Surprise 0,3L HotWheels …",
@@ -32161,7 +32561,7 @@
   },
   {
    "name": "Fresh Air 19ml Elek. náplň…",
-   "price": 37.0,
+   "price": 36.35,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=fresh-air-19ml-elek-napln-lavender-6ks&do=detail",
@@ -32210,7 +32610,7 @@
   },
   {
    "name": "Fresh Air 19ml Elek. náplň Aroma…",
-   "price": 37.0,
+   "price": 35.02,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=fresh-air-19ml-elek-napln-aroma-therapy-6ks&do=detail",
@@ -34061,15 +34461,6 @@
    "ean_bal": "18595139761438"
   },
   {
-   "name": "Bonduelle 425ml 400g Bon Menu…",
-   "price": 29.45,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=bonduelle-425ml-400g-bon-menu-india-12&do=detail",
-   "ean": "3083681165296",
-   "ean_bal": "3083681165302"
-  },
-  {
    "name": "Bonduelle 425ml Bon Menu Morocco …",
    "price": 27.45,
    "amount": "425 ml",
@@ -35866,7 +36257,7 @@
   },
   {
    "name": "Kinder 18,2g CZ Duplo White (40ks)",
-   "price": 6.2,
+   "price": 6.65,
    "amount": "18,2 g",
    "unit": "",
    "href": "/cs/novinky?url=kinder-18-2g-cz-duplo-white-40ks&do=detail",
@@ -36019,22 +36410,6 @@
    "unit": "",
    "href": "/cs/novinky?url=pledge-cistici-sprej-250ml-wood-lavender-5v1-6ks&do=detail",
    "ean": "5000204690057"
-  },
-  {
-   "name": "Pledge Čistící sprej 250ml Wood…",
-   "price": 61.55,
-   "amount": "250 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=pledge-cistici-sprej-250ml-wood-classic-5v1-6ks&do=detail",
-   "ean": "5000204690088"
-  },
-  {
-   "name": "Pledge Čistící sprej 250ml Multi…",
-   "price": 61.55,
-   "amount": "250 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=pledge-cistici-sprej-250ml-multi-jasmin-5v1-6ks&do=detail",
-   "ean": "5000204689297"
   },
   {
    "name": "Pledge Čistící sprej 250ml Multi…",
@@ -37152,14 +37527,6 @@
    "ean": "8594013934312"
   },
   {
-   "name": "Bonduelle 425ml Mladá mrkev extra…",
-   "price": 29.45,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=bonduelle-425ml-mlada-mrkev-extra-jemna-12&do=detail",
-   "ean": "3083680026154"
-  },
-  {
    "name": "Nera Kritis 0,33L Peppa Pig…",
    "price": 8.2,
    "amount": "0,33 l",
@@ -37774,14 +38141,6 @@
    "ean": "5060120164063"
   },
   {
-   "name": "Argan 300ml Oil Conditioner (6ks)",
-   "price": 39.8,
-   "amount": "300 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=argan-300ml-oil-conditioner-6ks&do=detail",
-   "ean": "5060120164087"
-  },
-  {
    "name": "Hennessy 0,35L VS Cognac 40% (6ks)",
    "price": 420.0,
    "amount": "0,35 l",
@@ -37882,7 +38241,7 @@
   },
   {
    "name": "Protex Mýdlo tuhé 90g Moisure…",
-   "price": 16.4,
+   "price": 16.44,
    "amount": "90 g",
    "unit": "",
    "href": "/cs/novinky?url=protex-mydlo-tuhe-90g-moisure-mourising-6ks&do=detail",
@@ -40412,14 +40771,6 @@
    "ean": "9000100806824"
   },
   {
-   "name": "Pepino Kondom 12ks Classic (12ks…",
-   "price": 78.0,
-   "amount": "12 ks",
-   "unit": "",
-   "href": "/cs/novinky?url=pepino-kondom-12ks-classic-12ks-bal&do=detail",
-   "ean": "8592442900113"
-  },
-  {
    "name": "Pepino Kondom 3ks Lubricated (24…",
    "price": 27.4,
    "amount": "3 ks",
@@ -41457,7 +41808,7 @@
    "price": 18.5,
    "amount": "100 g",
    "unit": "",
-   "href": "/cs/novinky?url=asia-ranli-shougong-100g-cokolada-banh-bong-lan-40ks&do=detail"
+   "href": "/cs/novinky?url=asia-ranli-shougong-100g-cokolada-banh-bong-lan-tam-giac-40ks&do=detail"
   },
   {
    "name": "Akashi 0,5L Single Malt 46%…",
@@ -41663,7 +42014,7 @@
   },
   {
    "name": "Milka 90g Rice Crispy (21/300)",
-   "price": 23.51,
+   "price": 23.0,
    "amount": "90 g",
    "unit": "",
    "href": "/cs/novinky?url=milka-90g-rice-crispy-21-300&do=detail"
@@ -42000,66 +42351,12 @@
    "ean": "8801047221456"
   },
   {
-   "name": "Bonduelle 250g Good Lunch Rýže …",
-   "price": 48.5,
-   "amount": "250 g",
-   "unit": "",
-   "href": "/cs/novinky?url=bonduelle-250g-good-lunch-ryze-6ks&do=detail",
-   "ean": "3083681163155",
-   "ean_bal": "3083681163186"
-  },
-  {
-   "name": "Bonduelle 250g Good Lunch Špalda …",
-   "price": 48.5,
-   "amount": "250 g",
-   "unit": "",
-   "href": "/cs/novinky?url=bonduelle-250g-good-lunch-spalda-6ks&do=detail",
-   "ean": "3083681139723",
-   "ean_bal": "3083681144499"
-  },
-  {
-   "name": "Bonduelle 250g Good Lunch Bulgur …",
-   "price": 48.5,
-   "amount": "250 g",
-   "unit": "",
-   "href": "/cs/novinky?url=bonduelle-250g-good-lunch-bulgur-6ks&do=detail",
-   "ean": "3083681139716",
-   "ean_bal": "3083681144475"
-  },
-  {
-   "name": "Bonduelle 250g Good Lunch Quinoa …",
-   "price": 48.5,
-   "amount": "250 g",
-   "unit": "",
-   "href": "/cs/novinky?url=bonduelle-250g-good-lunch-quinoa-6ks&do=detail",
-   "ean": "3083681139709",
-   "ean_bal": "3083681144451"
-  },
-  {
-   "name": "Bonduelle 212ml Klíčky Fazole…",
-   "price": 19.9,
-   "amount": "212 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=bonduelle-212ml-klicky-fazole-mungo-12&do=detail",
-   "ean": "3083680019750",
-   "ean_bal": "3083680465809"
-  },
-  {
    "name": "Bonduelle 212ml Créatif Duo (12)",
    "price": 19.9,
    "amount": "212 ml",
    "unit": "",
    "href": "/cs/novinky?url=bonduelle-212ml-creatif-duo-12&do=detail",
    "ean": "3083680594417"
-  },
-  {
-   "name": "Bonduelle 425ml 400g Bon Menu…",
-   "price": 29.45,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=bonduelle-425ml-400g-bon-menu-chilli-12&do=detail",
-   "ean": "3083680090742",
-   "ean_bal": "3083680480208"
   },
   {
    "name": "Bohemia Chips 60g Solené (18/48)",
@@ -43783,7 +44080,7 @@
    "price": 28.5,
    "amount": "130 g",
    "unit": "",
-   "href": "/cs/novinky?url=bohemia-chips-130g-cerstvy-syr-a-jarni-cibulka-18-28&do=detail",
+   "href": "/cs/novinky?url=bohemia-chips-130g-cerstvy-syr-a-jarni-cibulka-10-56&do=detail",
    "ean": "8595606210523",
    "ean_bal": "8595606210530"
   },
@@ -43876,13 +44173,13 @@
    "ean_bal": "3263281762174"
   },
   {
-   "name": "Divine 0,5L Likér Apple 16,5% (6…",
+   "name": "Divine 0,5L Likér Apple 15% (6/100)",
    "price": 119.0,
    "amount": "0,5 l",
    "unit": "",
-   "href": "/cs/novinky?url=divine-0-5l-liker-apple-16-5-6-100&do=detail",
-   "ean": "3263285155576",
-   "ean_bal": "3263289992610"
+   "href": "/cs/novinky?url=divine-0-5l-liker-apple-15-6-100&do=detail",
+   "ean": "3263280129305",
+   "ean_bal": "3263281765410"
   },
   {
    "name": "Durex Kondom 3ks Performa/Extended…",
@@ -44679,7 +44976,7 @@
   },
   {
    "name": "Monster 0,5L CZ Nitro Super Dry …",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/novinky?url=monster-0-5l-cz-nitro-super-dry-12-120&do=detail",
@@ -45102,7 +45399,7 @@
   },
   {
    "name": "JohnyBee Dipper Worms (60g*12ks…",
-   "price": 222.47,
+   "price": 18.54,
    "amount": "60 g",
    "unit": "",
    "href": "/cs/novinky?url=johnybee-dipper-worms-60g-12ks-12disp&do=detail",
@@ -45609,7 +45906,7 @@
   },
   {
    "name": "Pringles 185g XMAS Texas BBQ (19…",
-   "price": 48.6,
+   "price": 46.9,
    "amount": "185 g",
    "unit": "",
    "href": "/cs/novinky?url=pringles-185g-xmas-texas-bbq-19-48&do=detail",
@@ -46295,15 +46592,6 @@
    "unit": "",
    "href": "/cs/novinky?url=melaninova-miska-pro-psy-velikost-m&do=detail",
    "ean": "8595184949211"
-  },
-  {
-   "name": "Golden Snack 300g Sladký Popcorn …",
-   "price": 68.76,
-   "amount": "300 g",
-   "unit": "",
-   "href": "/cs/novinky?url=golden-snack-300g-sladky-popcorn-12ks&do=detail",
-   "ean": "8594042911674",
-   "ean_bal": "18594042912043"
   },
   {
    "name": "JohnyBee Cobra Candy (16g*12ks…",
@@ -48356,27 +48644,11 @@
   },
   {
    "name": "Asia Mang la nguyen 1000g (12ks)",
-   "price": 62.0,
+   "price": 57.75,
    "amount": "1000 g",
    "unit": "",
    "href": "/cs/novinky?url=asia-mang-la-nguyen-1000g-12ks&do=detail",
    "ean": "8936068850030"
-  },
-  {
-   "name": "Axe Mýdlo 100g Dark Temptation …",
-   "price": 12.52,
-   "amount": "100 g",
-   "unit": "",
-   "href": "/cs/novinky?url=axe-mydlo-100g-dark-temptation-6ks&do=detail",
-   "ean": "8886467010170"
-  },
-  {
-   "name": "Axe Mýdlo 100g Clean Fresh (6ks)",
-   "price": 12.52,
-   "amount": "100 g",
-   "unit": "",
-   "href": "/cs/novinky?url=axe-mydlo-100g-clean-fresh-6ks&do=detail",
-   "ean": "850005911395"
   },
   {
    "name": "Axe 400ml Sportblast Shower Gel …",
@@ -50524,7 +50796,7 @@
   },
   {
    "name": "TP Soft & Exclusive 2vrst. 4ks…",
-   "price": 19.89,
+   "price": 20.11,
    "amount": "4 ks",
    "unit": "",
    "href": "/cs/novinky?url=tp-soft-exclusive-2vrst-4ks-rainbow-modry-xanh-24-20&do=detail",
@@ -51216,7 +51488,7 @@
    "price": 18.5,
    "amount": "120 g",
    "unit": "",
-   "href": "/cs/novinky?url=asia-ranli-shougong-120g-banh-bong-lan-32ks&do=detail",
+   "href": "/cs/novinky?url=asia-ranli-shougong-120g-banh-bong-lan-vuong-32ks&do=detail",
    "ean": "6974682243199"
   },
   {
@@ -51521,7 +51793,7 @@
   },
   {
    "name": "Freshmaker 100ks Klip vlhč.…",
-   "price": 22.57,
+   "price": 22.37,
    "amount": "100 ks",
    "unit": "",
    "href": "/cs/novinky?url=freshmaker-100ks-klip-vlhc-ubrousky-ovoce-mix-24ks&do=detail",
@@ -51923,175 +52195,6 @@
    "unit": "",
    "href": "/cs/novinky?url=gliss-sampon-250ml-color-protect-shine-6ks&do=detail",
    "ean": "5410091712402"
-  },
-  {
-   "name": "Gliss Šampon 250ml Bio-tech…",
-   "price": 52.01,
-   "amount": "250 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=gliss-sampon-250ml-bio-tech-restore-6ks&do=detail",
-   "ean": "6192430015830"
-  },
-  {
-   "name": "Gliss Šampon 250ml Internse…",
-   "price": 52.01,
-   "amount": "250 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=gliss-sampon-250ml-internse-therapy-6ks&do=detail",
-   "ean": "6281031259702"
-  },
-  {
-   "name": "Gliss Šampon 250ml Balance & Care …",
-   "price": 52.01,
-   "amount": "250 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=gliss-sampon-250ml-balance-care-6ks&do=detail",
-   "ean": "3178041344869"
-  },
-  {
-   "name": "Axe 250ml 6 in 1 Clean Fresh…",
-   "price": 52.8,
-   "amount": "250 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=axe-250ml-6-in-1-clean-fresh-sprchovy-gel-6ks-1824&do=detail",
-   "ean": "8714100016794",
-   "ean_bal": "8714100474990"
-  },
-  {
-   "name": "Sence vatové tyčinky 200ks balvna…",
-   "price": 18.0,
-   "amount": "200 ks",
-   "unit": "",
-   "href": "/cs/novinky?url=sence-vatove-tycinky-200ks-balvna-bambus-48ks&do=detail",
-   "ean": "8720289262846"
-  },
-  {
-   "name": "At Home gel crystal 150g Spring…",
-   "price": 22.5,
-   "amount": "150 g",
-   "unit": "",
-   "href": "/cs/novinky?url=at-home-gel-crystal-150g-spring-flowers-24ks&do=detail",
-   "ean": "8718692410466"
-  },
-  {
-   "name": "At Home gel crystal 150g Levandule…",
-   "price": 22.5,
-   "amount": "150 g",
-   "unit": "",
-   "href": "/cs/novinky?url=at-home-gel-crystal-150g-levandule-24ks&do=detail",
-   "ean": "8718692410428"
-  },
-  {
-   "name": "At Home gel crystal 150g Beach…",
-   "price": 22.5,
-   "amount": "150 g",
-   "unit": "",
-   "href": "/cs/novinky?url=at-home-gel-crystal-150g-beach-waves-24ks&do=detail",
-   "ean": "8718692410442"
-  },
-  {
-   "name": "Nivea Sun Sensitive 200ml…",
-   "price": 150.0,
-   "amount": "200 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=nivea-sun-sensitive-200ml-opalovaci-mleko-f30-6ks&do=detail",
-   "ean": "4005900694225"
-  },
-  {
-   "name": "Meridol ZP 75ml Original (12ks)",
-   "price": 59.81,
-   "amount": "75 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=meridol-zp-75ml-original-12ks&do=detail",
-   "ean": "8718951138513"
-  },
-  {
-   "name": "Johnsons 300ml Baby Tělové mléko …",
-   "price": 42.0,
-   "amount": "300 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=johnsons-300ml-baby-telove-mleko-12ks&do=detail",
-   "ean": "3574661427898"
-  },
-  {
-   "name": "Colgate kartáček 360° Optic White…",
-   "price": 34.5,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/novinky?url=colgate-kartacek-360-optic-white-medium-12ks&do=detail",
-   "ean": "6001067017332"
-  },
-  {
-   "name": "Vanish Gold 470g Oxi Action Pink …",
-   "price": 87.5,
-   "amount": "470 g",
-   "unit": "",
-   "href": "/cs/novinky?url=vanish-gold-470g-oxi-action-pink-6ks&do=detail",
-   "ean": "5011417559895"
-  },
-  {
-   "name": "Vanish Gold 470g Oxi Action…",
-   "price": 51.35,
-   "amount": "470 g",
-   "unit": "",
-   "href": "/cs/novinky?url=vanish-gold-470g-oxi-action-crystal-white-6ks&do=detail",
-   "ean": "5011417562505"
-  },
-  {
-   "name": "Syoss Conditioner 440ml Balancing …",
-   "price": 69.0,
-   "amount": "440 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=syoss-conditioner-440ml-balancing-6ks&do=detail",
-   "ean": "4015100402353"
-  },
-  {
-   "name": "Pantene kondicioner 250ml Colour …",
-   "price": 56.0,
-   "amount": "250 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=pantene-kondicioner-250ml-colour-6ks&do=detail",
-   "ean": "4084500378568"
-  },
-  {
-   "name": "Schauma Šampon 350ml Women Color…",
-   "price": 42.0,
-   "amount": "350 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=schauma-sampon-350ml-women-color-glanz-12ks&do=detail",
-   "ean": "4015100299670"
-  },
-  {
-   "name": "Str8 400ml Rise Shower Gel (6ks)",
-   "price": 52.9,
-   "amount": "400 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=str8-400ml-rise-shower-gel-6ks&do=detail",
-   "ean": "5201314150077"
-  },
-  {
-   "name": "Str8 400ml FR34K Shower Gel (6ks)",
-   "price": 50.44,
-   "amount": "400 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=str8-400ml-fr34k-shower-gel-6ks&do=detail",
-   "ean": "5201314145011"
-  },
-  {
-   "name": "Str8 400ml Faith Shower Gel (6ks)",
-   "price": 55.0,
-   "amount": "400 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=str8-400ml-faith-shower-gel-6ks&do=detail",
-   "ean": "5201314121695"
-  },
-  {
-   "name": "Str8 400ml Ahead Shower Gel (6ks)",
-   "price": 49.95,
-   "amount": "400 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=str8-400ml-ahead-shower-gel-6ks&do=detail",
-   "ean": "5201314149989"
   },
   {
    "name": "7UP 0,33L EU (24/108)",
@@ -52567,7 +52670,7 @@
   },
   {
    "name": "Coca Cola 0,33L CZ Zero (24/110)",
-   "price": 13.3,
+   "price": 11.75,
    "amount": "0,33 l",
    "unit": "",
    "href": "/cs/nealko?url=coca-cola-0-33l-cz-zero-24-110&do=detail",
@@ -54087,7 +54190,7 @@
   },
   {
    "name": "Monster 0,5L CZ Juiced Monarch (12…",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/nealko?url=monster-0-5l-cz-juiced-monarch-12-144&do=detail",
@@ -54096,7 +54199,7 @@
   },
   {
    "name": "Monster 0,5L CZ Juiced Pacific…",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/nealko?url=monster-0-5l-cz-juiced-pacific-punch-12-120-vl&do=detail",
@@ -54105,7 +54208,7 @@
   },
   {
    "name": "Monster 0,5L CZ Juiced Pipeline…",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/nealko?url=monster-0-5l-cz-juiced-pipeline-punch-12-144&do=detail",
@@ -54113,7 +54216,7 @@
   },
   {
    "name": "Monster 0,5L CZ Khaotic (12/144)",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/nealko?url=monster-0-5l-cz-khaotic-12-144&do=detail",
@@ -54121,7 +54224,7 @@
   },
   {
    "name": "Monster 0,5L CZ Lewis Hamilton…",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/nealko?url=monster-0-5l-cz-lewis-hamilton-zero-top-speed-12-144&do=detail",
@@ -54130,7 +54233,7 @@
   },
   {
    "name": "Monster 0,5L CZ Mule Ginger Brew …",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/nealko?url=monster-0-5l-cz-mule-ginger-brew-12-120&do=detail",
@@ -54157,7 +54260,7 @@
   },
   {
    "name": "Monster 0,5L CZ Ultra Fiesta Mango…",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/nealko?url=monster-0-5l-cz-ultra-fiesta-mango-12-144&do=detail",
@@ -54166,7 +54269,7 @@
   },
   {
    "name": "Monster 0,5L CZ Ultra Paradise (12…",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/nealko?url=monster-0-5l-cz-ultra-paradise-12-144&do=detail",
@@ -54175,7 +54278,7 @@
   },
   {
    "name": "Monster 0,5L CZ Ultra Violet (12…",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/nealko?url=monster-0-5l-cz-ultra-violet-12-144-vl&do=detail",
@@ -54184,7 +54287,7 @@
   },
   {
    "name": "Monster 0,5L CZ Ultra Watermelon …",
-   "price": 24.4,
+   "price": 24.2,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/nealko?url=monster-0-5l-cz-ultra-watermelon-12-144-vl&do=detail",
@@ -55271,7 +55374,7 @@
   },
   {
    "name": "Red Bull 0,25L EU Apricot…",
-   "price": 30.25,
+   "price": 29.9,
    "amount": "0,25 l",
    "unit": "",
    "href": "/cs/nealko?url=red-bull-0-25l-eu-apricot-strawberry-12ks&do=detail",
@@ -55451,7 +55554,7 @@
   },
   {
    "name": "Relax 1L TP Fruit Ananas (12/65)",
-   "price": 18.9,
+   "price": 19.5,
    "amount": "1 l",
    "unit": "",
    "href": "/cs/nealko?url=relax-1l-tp-fruit-ananas-12-65&do=detail",
@@ -55459,7 +55562,7 @@
   },
   {
    "name": "Relax 1L TP Fruit Jablko (12/65)",
-   "price": 18.9,
+   "price": 19.5,
    "amount": "1 l",
    "unit": "",
    "href": "/cs/nealko?url=relax-1l-tp-fruit-jablko-12-65&do=detail",
@@ -55468,7 +55571,7 @@
   },
   {
    "name": "Relax 1L TP Fruit Mango (12/65)",
-   "price": 18.9,
+   "price": 19.5,
    "amount": "1 l",
    "unit": "",
    "href": "/cs/nealko?url=relax-1l-tp-fruit-mango-12-65&do=detail",
@@ -55477,7 +55580,7 @@
   },
   {
    "name": "Relax 1L TP Fruit Multivitamin (12…",
-   "price": 18.9,
+   "price": 19.5,
    "amount": "1 l",
    "unit": "",
    "href": "/cs/nealko?url=relax-1l-tp-fruit-multivitamin-12-65&do=detail",
@@ -55486,7 +55589,7 @@
   },
   {
    "name": "Relax 1L TP Fruit Pomeranč (12/65)",
-   "price": 18.9,
+   "price": 19.5,
    "amount": "1 l",
    "unit": "",
    "href": "/cs/nealko?url=relax-1l-tp-fruit-pomeranc-12-65&do=detail",
@@ -64927,6 +65030,15 @@
    "ean": "8410031938807"
   },
   {
+   "name": "Chupa Chups 11g Cotton Candy (12ks)",
+   "price": 9.65,
+   "amount": "11 g",
+   "unit": "",
+   "href": "/cs/cukrovinky?url=chupa-chups-11g-cotton-candy-12ks&do=detail",
+   "ean": "4602606007597",
+   "ean_bal": "4602606002790"
+  },
+  {
    "name": "Chupa Chups 2,4kg Lízátko Wheel …",
    "price": 1158.95,
    "amount": "2,4 kg",
@@ -66693,6 +66805,15 @@
    "ean_bal": "4001686340257"
   },
   {
+   "name": "Haribo 160g CZ Miami Sauer (Fizz) …",
+   "price": 26.98,
+   "amount": "160 g",
+   "unit": "",
+   "href": "/cs/cukrovinky?url=haribo-160g-cz-miami-sauer-fizz-30ks&do=detail",
+   "ean": "8426617365653",
+   "ean_bal": "8426617365646"
+  },
+  {
    "name": "Haribo 160g CZ Milchbaeren (28ks)",
    "price": 26.98,
    "amount": "160 g",
@@ -66971,15 +67092,6 @@
    "href": "/cs/cukrovinky?url=haribo-175g-cz-maovit-happy-fruttis-30ks&do=detail",
    "ean": "4001686535561",
    "ean_bal": "4001686535363"
-  },
-  {
-   "name": "Haribo 175g CZ Miami Sauer (Fizz) …",
-   "price": 26.98,
-   "amount": "175 g",
-   "unit": "",
-   "href": "/cs/cukrovinky?url=haribo-175g-cz-miami-sauer-fizz-30ks&do=detail",
-   "ean": "8426617365653",
-   "ean_bal": "8426617365646"
   },
   {
    "name": "Haribo 175g CZ Phantasia (30ks)",
@@ -69366,7 +69478,7 @@
   },
   {
    "name": "Kinder 18,2g CZ Duplo (10ks*28disp)",
-   "price": 59.0,
+   "price": 6.65,
    "amount": "18,2 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=kinder-18-2g-cz-duplo-10ks-28disp&do=detail",
@@ -71428,6 +71540,24 @@
    "ean_bal": "8994504302338"
   },
   {
+   "name": "Mentos 140g Feeling Berry Good …",
+   "price": 33.2,
+   "amount": "140 g",
+   "unit": "",
+   "href": "/cs/cukrovinky?url=mentos-140g-feeling-berry-good-7ks&do=detail",
+   "ean": "8723400833208",
+   "ean_bal": "8723400833215"
+  },
+  {
+   "name": "Mentos 140g Fruit Mix (7ks)",
+   "price": 33.2,
+   "amount": "140 g",
+   "unit": "",
+   "href": "/cs/cukrovinky?url=mentos-140g-fruit-mix-7ks&do=detail",
+   "ean": "8723400833659",
+   "ean_bal": "8723400833666"
+  },
+  {
    "name": "Mentos 30g Gum PF Fruit Lemon …",
    "price": 19.04,
    "amount": "30 g",
@@ -71522,7 +71652,7 @@
   },
   {
    "name": "Merci 250g EU Modrý (Xanh) (10ks)",
-   "price": 83.0,
+   "price": 86.65,
    "amount": "250 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=merci-250g-eu-modry-xanh-10ks&do=detail",
@@ -71547,7 +71677,7 @@
   },
   {
    "name": "Merci 250g EU Zelený (10ks)",
-   "price": 83.0,
+   "price": 86.65,
    "amount": "250 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=merci-250g-eu-zeleny-10ks&do=detail",
@@ -71936,7 +72066,7 @@
   },
   {
    "name": "Milka 85g Extra Cocoa Hazelnut…",
-   "price": 25.5,
+   "price": 23.0,
    "amount": "85 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=milka-85g-extra-cocoa-hazelnut-creme-27ks&do=detail",
@@ -71944,7 +72074,7 @@
   },
   {
    "name": "Milka 87,5g Milkinis (20ks)",
-   "price": 23.51,
+   "price": 23.0,
    "amount": "87,5 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=milka-87-5g-milkinis-20ks&do=detail",
@@ -71953,7 +72083,7 @@
   },
   {
    "name": "Milka 87g LU (18ks)",
-   "price": 23.51,
+   "price": 23.0,
    "amount": "87 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=milka-87g-lu-18ks&do=detail",
@@ -71962,7 +72092,7 @@
   },
   {
    "name": "Milka 90g Triple Caramel (20ks)",
-   "price": 23.51,
+   "price": 23.0,
    "amount": "90 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=milka-90g-triple-caramel-20ks&do=detail",
@@ -71971,7 +72101,7 @@
   },
   {
    "name": "Milka 90g Triple Choco Cocoa 5408 …",
-   "price": 23.51,
+   "price": 23.0,
    "amount": "90 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=milka-90g-triple-choco-cocoa-5408-20ks&do=detail",
@@ -71980,7 +72110,7 @@
   },
   {
    "name": "Milka 95g Bubbly Milk (14ks)",
-   "price": 23.51,
+   "price": 23.0,
    "amount": "95 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=milka-95g-bubbly-milk-14ks&do=detail",
@@ -71989,7 +72119,7 @@
   },
   {
    "name": "Milka 95g Bubbly White (15ks)",
-   "price": 23.51,
+   "price": 23.0,
    "amount": "95 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=milka-95g-bubbly-white-15ks&do=detail",
@@ -72269,34 +72399,34 @@
   },
   {
    "name": "Nimm2 100g Smilegummi Fruit &…",
-   "price": 7.0,
+   "price": 14.68,
    "amount": "100 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=nimm2-100g-smilegummi-fruit-youghurt-18ks&do=detail",
+   "href": "/cs/cukrovinky?url=nimm2-100g-smilegummi-fruit-youghurt-24ks&do=detail",
    "ean": "4014400913057",
    "ean_bal": "4014400381085"
   },
   {
-   "name": "Nimm2 100g Smilegummi Fruit (18ks)",
-   "price": 19.2,
+   "name": "Nimm2 100g Smilegummi Fruit (24ks)",
+   "price": 14.68,
    "amount": "100 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=nimm2-100g-smilegummi-fruit-18ks&do=detail",
+   "href": "/cs/cukrovinky?url=nimm2-100g-smilegummi-fruit-24ks&do=detail",
    "ean": "4014400907278",
    "ean_bal": "4014400381061"
   },
   {
-   "name": "Nimm2 100g Smilegummi Sour (18ks)",
-   "price": 19.2,
+   "name": "Nimm2 100g Smilegummi Sour (24ks)",
+   "price": 14.68,
    "amount": "100 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=nimm2-100g-smilegummi-sour-18ks&do=detail",
+   "href": "/cs/cukrovinky?url=nimm2-100g-smilegummi-sour-24ks&do=detail",
    "ean": "4014400911039",
    "ean_bal": "4014400381078"
   },
   {
    "name": "Nimm2 100g Smilegummi Youghurt …",
-   "price": 19.2,
+   "price": 14.68,
    "amount": "100 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=nimm2-100g-smilegummi-youghurt-18ks&do=detail",
@@ -72305,34 +72435,61 @@
   },
   {
    "name": "Nimm2 90g Smilegummi Apple Buddies…",
-   "price": 7.0,
+   "price": 14.68,
    "amount": "90 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-apple-buddies-18ks&do=detail",
+   "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-apple-buddies-24ks&do=detail",
    "ean": "4014400920710",
    "ean_bal": "4014400382990"
   },
   {
-   "name": "Nimm2 90g Smilegummi Heroes (18ks)",
-   "price": 19.2,
+   "name": "Nimm2 90g Smilegummi Cola Buddies …",
+   "price": 14.68,
    "amount": "90 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-heroes-18ks&do=detail",
+   "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-cola-buddies-24ks&do=detail",
+   "ean": "4014400934137",
+   "ean_bal": "4014400389296"
+  },
+  {
+   "name": "Nimm2 90g Smilegummi Fluffies …",
+   "price": 14.68,
+   "amount": "90 g",
+   "unit": "",
+   "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-fluffies-24ks&do=detail",
+   "ean": "4014400936346",
+   "ean_bal": "4014400680379"
+  },
+  {
+   "name": "Nimm2 90g Smilegummi Funfari (24ks)",
+   "price": 14.68,
+   "amount": "90 g",
+   "unit": "",
+   "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-funfari-24ks&do=detail",
+   "ean": "4014400931426",
+   "ean_bal": "4014400388244"
+  },
+  {
+   "name": "Nimm2 90g Smilegummi Heroes (24ks)",
+   "price": 14.68,
+   "amount": "90 g",
+   "unit": "",
+   "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-heroes-24ks&do=detail",
    "ean": "4014400922950",
    "ean_bal": "4014400383966"
   },
   {
    "name": "Nimm2 90g Smilegummi Milk Buddies …",
-   "price": 9.9,
+   "price": 14.68,
    "amount": "90 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-milk-buddies-18ks&do=detail",
+   "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-milk-buddies-24ks&do=detail",
    "ean": "4014400919288",
    "ean_bal": "4014400382679"
   },
   {
    "name": "Nimm2 90g Smilegummi Milk Ghosts …",
-   "price": 19.2,
+   "price": 14.68,
    "amount": "90 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-milk-ghosts-18ks&do=detail",
@@ -72340,22 +72497,40 @@
    "ean_bal": "4014400383386"
   },
   {
-   "name": "Nimm2 90g Smilegummi Softies…",
-   "price": 19.2,
+   "name": "Nimm2 90g Smilegummi Shakies (18ks)",
+   "price": 14.68,
    "amount": "90 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-softies-fruitimix-18ks&do=detail",
+   "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-shakies-18ks&do=detail",
+   "ean": "4014400936490",
+   "ean_bal": "4014400680584"
+  },
+  {
+   "name": "Nimm2 90g Smilegummi Softies…",
+   "price": 14.68,
+   "amount": "90 g",
+   "unit": "",
+   "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-softies-fruitimix-28ks&do=detail",
    "ean": "4014400917062",
    "ean_bal": "4014400381931"
   },
   {
    "name": "Nimm2 90g Smilegummi Softies…",
-   "price": 19.2,
+   "price": 14.68,
    "amount": "90 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-softies-yoghurt-18ks&do=detail",
+   "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-softies-yoghurt-24ks&do=detail",
    "ean": "4014400917109",
    "ean_bal": "4014400382013"
+  },
+  {
+   "name": "Nimm2 90g Softies Red Fruits (28ks)",
+   "price": 14.68,
+   "amount": "90 g",
+   "unit": "",
+   "href": "/cs/cukrovinky?url=nimm2-90g-softies-red-fruits-28ks&do=detail",
+   "ean": "4014400923599",
+   "ean_bal": "4014400680867"
   },
   {
    "name": "Nugeta 340g Arašídová Chocoland (8…",
@@ -73885,7 +74060,7 @@
   },
   {
    "name": "Raffaello 150g T15 (6ks) EU",
-   "price": 79.0,
+   "price": 71.85,
    "amount": "150 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=raffaello-150g-t15-6ks-eu&do=detail"
@@ -73915,11 +74090,11 @@
    "ean_bal": "4008400182827"
   },
   {
-   "name": "Raffaello 40g T4 (64ks)",
-   "price": 19.0,
+   "name": "Raffaello 40g T4 (16ks*4disp)",
+   "price": 18.9,
    "amount": "40 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=raffaello-40g-t4-64ks&do=detail",
+   "href": "/cs/cukrovinky?url=raffaello-40g-t4-16ks-4disp&do=detail",
    "ean": "5413548040646",
    "ean_bal": "05413548040653"
   },
@@ -73959,7 +74134,7 @@
   },
   {
    "name": "Reese's 39,5g 2-White Peanut…",
-   "price": 21.5,
+   "price": 20.53,
    "amount": "39,5 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=reese-s-39-5g-2-white-peanut-butter-cups-24ks-12b-15963&do=detail",
@@ -73968,7 +74143,7 @@
   },
   {
    "name": "Reese's 39g Big Cup (1,4 OZ) (16ks…",
-   "price": 19.5,
+   "price": 18.85,
    "amount": "39 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=reese-s-39g-big-cup-1-4-oz-16ks-18b&do=detail",
@@ -73994,7 +74169,7 @@
   },
   {
    "name": "Reese's 47g Nutrageous (1,7 OZ) …",
-   "price": 24.6,
+   "price": 23.37,
    "amount": "47 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=reese-s-47g-nutrageous-1-7-oz-18ks-16b&do=detail",
@@ -75289,15 +75464,6 @@
    "ean": "8690997121974"
   },
   {
-   "name": "Tayas Orient 1kg- Mix (8ks) 3616",
-   "price": 91.0,
-   "amount": "1 kg",
-   "unit": "",
-   "href": "/cs/cukrovinky?url=tayas-orient-1kg-mix-8ks-3616&do=detail",
-   "ean": "8690997114112",
-   "ean_bal": "08690997236166"
-  },
-  {
    "name": "Tayas Orient 80g- Almond (3ks)",
    "price": 12.56,
    "amount": "80 g",
@@ -75418,7 +75584,7 @@
   },
   {
    "name": "Toblerone 100g Milk (Mléčná) (20ks)",
-   "price": 41.8,
+   "price": 42.98,
    "amount": "100 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=toblerone-100g-milk-mlecna-20ks&do=detail",
@@ -76666,32 +76832,6 @@
    "ean_bal": "8593893766990"
   },
   {
-   "name": "Zozole 75g Hello Zelo Sticks želé…",
-   "price": 13.05,
-   "amount": "75 g",
-   "unit": "",
-   "href": "/cs/cukrovinky?url=zozole-75g-hello-zelo-sticks-zele-ovocne-16ks&do=detail",
-   "ean": "5900353700143",
-   "ean_bal": "5900353300145"
-  },
-  {
-   "name": "Zozole 75g Hello Zelo Strawberry…",
-   "price": 13.05,
-   "amount": "75 g",
-   "unit": "",
-   "href": "/cs/cukrovinky?url=zozole-75g-hello-zelo-strawberry-zele-16ks&do=detail",
-   "ean": "5900353701522",
-   "ean_bal": "5900353301586"
-  },
-  {
-   "name": "Zozole 75g Hello Zelo Watermelon…",
-   "price": 13.05,
-   "amount": "75 g",
-   "unit": "",
-   "href": "/cs/cukrovinky?url=zozole-75g-hello-zelo-watermelon-zele-16ks&do=detail",
-   "ean": "5900353701539"
-  },
-  {
    "name": "Zozole 75g Muss Painter Bubble Gum…",
    "price": 8.57,
    "amount": "75 g",
@@ -76991,7 +77131,7 @@
   },
   {
    "name": "Asia Che Tan Cuong (che vang) 100g…",
-   "price": 31.9,
+   "price": 21.3,
    "amount": "100 g",
    "unit": "",
    "href": "/cs/trvanlive?url=asia-che-tan-cuong-che-vang-100g-150ks&do=detail",
@@ -77492,147 +77632,6 @@
    "ean_bal": "8594001566662"
   },
   {
-   "name": "Bonduelle 212ml 170g Creatif…",
-   "price": 19.9,
-   "amount": "212 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-212ml-170g-creatif-mexico-12&do=detail",
-   "ean": "3083680715454"
-  },
-  {
-   "name": "Bonduelle 212ml 200g Hrášek v…",
-   "price": 18.5,
-   "amount": "212 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-212ml-200g-hrasek-v-mirnem-slanem-nalevu-12&do=detail",
-   "ean": "3083680538404",
-   "ean_bal": "3083680565332"
-  },
-  {
-   "name": "Bonduelle 212ml Gold Zlatá…",
-   "price": 19.8,
-   "amount": "212 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-212ml-gold-zlata-kukurice-12&do=detail",
-   "ean": "3083680074094",
-   "ean_bal": "3083680625227"
-  },
-  {
-   "name": "Bonduelle 212ml Žampiony krájené …",
-   "price": 21.9,
-   "amount": "212 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-212ml-zampiony-krajene-12&do=detail",
-   "ean": "3083681009811",
-   "ean_bal": "3083681049275"
-  },
-  {
-   "name": "Bonduelle 425ml 340g Créatif Texas…",
-   "price": 29.45,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-425ml-340g-creatif-texas-12&do=detail",
-   "ean": "3083680715409"
-  },
-  {
-   "name": "Bonduelle 425ml 400g Bon Menu…",
-   "price": 27.5,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-425ml-400g-bon-menu-barbecue-12&do=detail",
-   "ean": "3083681031157",
-   "ean_bal": "3083681031195"
-  },
-  {
-   "name": "Bonduelle 425ml 400g Bon Menu Hot…",
-   "price": 29.45,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-425ml-400g-bon-menu-hot-tomato-12&do=detail",
-   "ean": "3083680001793",
-   "ean_bal": "3083680480185"
-  },
-  {
-   "name": "Bonduelle 425ml 400g Bon Menu Kari…",
-   "price": 29.45,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-425ml-400g-bon-menu-kari-12&do=detail",
-   "ean": "3083681031171",
-   "ean_bal": "3083681031201"
-  },
-  {
-   "name": "Bonduelle 425ml 400g Bon Menu…",
-   "price": 29.45,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-425ml-400g-bon-menu-mexicana-12&do=detail",
-   "ean": "3083680495882",
-   "ean_bal": "3083680559324"
-  },
-  {
-   "name": "Bonduelle 425ml 400g Bon Menu Mild…",
-   "price": 29.45,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-425ml-400g-bon-menu-mild-tomato-12&do=detail",
-   "ean": "3083680483407",
-   "ean_bal": "3083681092806"
-  },
-  {
-   "name": "Bonduelle 425ml 400g Duo Créatif…",
-   "price": 29.4,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-425ml-400g-duo-creatif-hrasek-mrkev-12&do=detail",
-   "ean": "3083680481878",
-   "ean_bal": "3083680629478"
-  },
-  {
-   "name": "Bonduelle 425ml 400g Trio Créatif …",
-   "price": 29.45,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-425ml-400g-trio-creatif-12&do=detail",
-   "ean": "3083680685535",
-   "ean_bal": "3083681006285"
-  },
-  {
-   "name": "Bonduelle 425ml Čočka Vapeur (12)",
-   "price": 29.45,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-425ml-cocka-vapeur-12&do=detail",
-   "ean": "3083681003963",
-   "ean_bal": "3083681032444"
-  },
-  {
-   "name": "Bonduelle 425ml Créatif Mexico (12)",
-   "price": 29.45,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-425ml-creatif-mexico-12&do=detail",
-   "ean": "3083680715447"
-  },
-  {
-   "name": "Bonduelle 425ml Gold Zlatá…",
-   "price": 27.0,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-425ml-gold-zlata-kukurice-12&do=detail",
-   "ean": "3083680086936",
-   "ean_bal": "3083680625210"
-  },
-  {
-   "name": "Bonduelle 425ml Hrášek v mírném…",
-   "price": 25.8,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-425ml-hrasek-v-mirnem-slanem-nalevu-12&do=detail",
-   "ean": "3083680047364",
-   "ean_bal": "3083681109306"
-  },
-  {
    "name": "Bonduelle 425ml Klasik Créatif (12)",
    "price": 26.0,
    "amount": "425 ml",
@@ -77640,24 +77639,6 @@
    "href": "/cs/trvanlive?url=bonduelle-425ml-klasik-creatif-12&do=detail",
    "ean": "3083680002929",
    "ean_bal": "3083680088954"
-  },
-  {
-   "name": "Bonduelle 425ml Zelené fazolové…",
-   "price": 25.8,
-   "amount": "425 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-425ml-zelene-fazolove-lusky-krajene-12&do=detail",
-   "ean": "3083680072694",
-   "ean_bal": "3083680566049"
-  },
-  {
-   "name": "Bonduelle 580ml Sklo Zlatá…",
-   "price": 37.79,
-   "amount": "580 ml",
-   "unit": "",
-   "href": "/cs/trvanlive?url=bonduelle-580ml-sklo-zlata-kukurice-6ks&do=detail",
-   "ean": "3083680015424",
-   "ean_bal": "3083680480239"
   },
   {
    "name": "Caro 200g Original (6ks)",
@@ -79812,20 +79793,20 @@
    "href": "/cs/trvanlive?url=nudle-nongshim-chapaghetti-coc-12ks&do=detail"
   },
   {
-   "name": "Nudle Oh Ricey! Pho 70g Kuřecí …",
-   "price": 21.85,
-   "amount": "70 g",
-   "unit": "",
-   "href": "/cs/trvanlive?url=nudle-oh-ricey-pho-70g-kureci-miska-12ks&do=detail",
-   "ean_bal": "8934563023119"
-  },
-  {
    "name": "Nudle Oh Ricey! Pho 71g Hovězí …",
    "price": 21.85,
    "amount": "71 g",
    "unit": "",
    "href": "/cs/trvanlive?url=nudle-oh-ricey-pho-71g-hovezi-miska-12ks&do=detail",
    "ean_bal": "8934563023218"
+  },
+  {
+   "name": "Nudle Oh Ricey! Pho 71g Kuřecí …",
+   "price": 21.85,
+   "amount": "71 g",
+   "unit": "",
+   "href": "/cs/trvanlive?url=nudle-oh-ricey-pho-71g-kureci-miska-12ks&do=detail",
+   "ean_bal": "8934563023119"
   },
   {
    "name": "Nudle Oh Ricey! Pho Hovězí 63g …",
@@ -80361,7 +80342,7 @@
   },
   {
    "name": "Nudle Vifon Hoang Gia 120g Mleté…",
-   "price": 22.5,
+   "price": 23.5,
    "amount": "120 g",
    "unit": "",
    "href": "/cs/trvanlive?url=nudle-vifon-hoang-gia-120g-mlete-maso-mi-thit-bam-18ks&do=detail",
@@ -80370,7 +80351,7 @@
   },
   {
    "name": "Nudle Vifon Hoang Gia 120g Pho…",
-   "price": 22.5,
+   "price": 23.5,
    "amount": "120 g",
    "unit": "",
    "href": "/cs/trvanlive?url=nudle-vifon-hoang-gia-120g-pho-hovezi-18ks&do=detail",
@@ -83061,7 +83042,7 @@
   },
   {
    "name": "Asia BamBoo Tree Kokosová Voda-…",
-   "price": 69.0,
+   "price": 55.0,
    "amount": "",
    "unit": "",
    "href": "/cs/podpultovky?url=asia-bamboo-tree-kokosova-voda-nuoc-dua-1l-12ks&do=detail",
@@ -83221,7 +83202,7 @@
   },
   {
    "name": "Asia Bánh Tráng Cuon Cay Tre 400g…",
-   "price": 65.0,
+   "price": 49.65,
    "amount": "400 g",
    "unit": "",
    "href": "/cs/podpultovky?url=asia-banh-trang-cuon-cay-tre-400g-tron-ryzovy-papir-36ks&do=detail"
@@ -83432,7 +83413,7 @@
   },
   {
    "name": "Asia Lac Nhan Hong 500g (40ks)",
-   "price": 50.4,
+   "price": 54.0,
    "amount": "500 g",
    "unit": "",
    "href": "/cs/podpultovky?url=asia-lac-nhan-hong-500g-40ks&do=detail",
@@ -83558,7 +83539,7 @@
   },
   {
    "name": "Asia Rýže/Gao Nep Cai Hoa Vang 1kg…",
-   "price": 54.2,
+   "price": 56.7,
    "amount": "1 kg",
    "unit": "",
    "href": "/cs/podpultovky?url=asia-ryze-gao-nep-cai-hoa-vang-1kg-30ks&do=detail",
@@ -83627,7 +83608,7 @@
   },
   {
    "name": "Asia Thach Hop HoaQua 1003g (6ks)",
-   "price": 150.0,
+   "price": 122.0,
    "amount": "1003 g",
    "unit": "",
    "href": "/cs/podpultovky?url=asia-thach-hop-hoaqua-1003g-6ks&do=detail",
@@ -83949,7 +83930,7 @@
   },
   {
    "name": "Glico Pocky 33g Matcha Green Tea …",
-   "price": 22.75,
+   "price": 20.3,
    "amount": "33 g",
    "unit": "",
    "href": "/cs/podpultovky?url=glico-pocky-33g-matcha-green-tea-10-120ks&do=detail",
@@ -83958,7 +83939,7 @@
   },
   {
    "name": "Glico Pocky 45g Strawberry (Jahoda…",
-   "price": 22.75,
+   "price": 20.3,
    "amount": "45 g",
    "unit": "",
    "href": "/cs/podpultovky?url=glico-pocky-45g-strawberry-jahoda-10-120ks&do=detail",
@@ -83966,7 +83947,7 @@
   },
   {
    "name": "Glico Pocky 47g Chocolate (10…",
-   "price": 22.75,
+   "price": 20.3,
    "amount": "47 g",
    "unit": "",
    "href": "/cs/podpultovky?url=glico-pocky-47g-chocolate-10-120ks&do=detail",
@@ -83974,7 +83955,7 @@
   },
   {
    "name": "Glico Pocky 47g Double Chocolate …",
-   "price": 22.75,
+   "price": 20.3,
    "amount": "47 g",
    "unit": "",
    "href": "/cs/podpultovky?url=glico-pocky-47g-double-chocolate-10-120ks&do=detail",
@@ -90959,6 +90940,15 @@
    "ean": "5900785871213"
   },
   {
+   "name": "Axe 250ml 6 in 1 Clean Fresh…",
+   "price": 52.8,
+   "amount": "250 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=axe-250ml-6-in-1-clean-fresh-sprchovy-gel-6ks-1824&do=detail",
+   "ean": "8714100016794",
+   "ean_bal": "8714100474990"
+  },
+  {
    "name": "Axe 250ml Africa Sprchový Gel (6ks)",
    "price": 41.35,
    "amount": "250 ml",
@@ -92381,6 +92371,14 @@
    "ean_bal": "6001067580393"
   },
   {
+   "name": "Colgate kartáček 360° Optic White…",
+   "price": 34.5,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/drogerie?url=colgate-kartacek-360-optic-white-medium-12ks&do=detail",
+   "ean": "6001067017332"
+  },
+  {
    "name": "Colgate kartáček 3ks Extra Clean …",
    "price": 31.5,
    "amount": "3 ks",
@@ -93032,14 +93030,6 @@
    "unit": "",
    "href": "/cs/drogerie?url=discreet-intimky-vlozky-normal-20ks-18ks&do=detail",
    "ean": "4015400165804"
-  },
-  {
-   "name": "Discreet Intimky Vložky Normal…",
-   "price": 25.6,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/drogerie?url=discreet-intimky-vlozky-normal-multiform18ks-18ks&do=detail",
-   "ean": "8006540567432"
   },
   {
    "name": "Discreet Intimky Vložky Waterlily…",
@@ -94606,7 +94596,7 @@
   },
   {
    "name": "Fa 250ml Divine Moments Shower Gel…",
-   "price": 35.65,
+   "price": 33.1,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/drogerie?url=fa-250ml-divine-moments-shower-gel-6ks&do=detail",
@@ -95695,7 +95685,7 @@
   },
   {
    "name": "Fresh Air 100ks Klip vlhč.…",
-   "price": 25.05,
+   "price": 26.84,
    "amount": "100 ks",
    "unit": "",
    "href": "/cs/drogerie?url=fresh-air-100ks-klip-vlhc-ubrousky-aloe-vera-12ks&do=detail",
@@ -95703,7 +95693,7 @@
   },
   {
    "name": "Fresh Air 100ks Klip vlhč.…",
-   "price": 25.05,
+   "price": 26.84,
    "amount": "100 ks",
    "unit": "",
    "href": "/cs/drogerie?url=fresh-air-100ks-klip-vlhc-ubrousky-aroma-12ks&do=detail",
@@ -95751,7 +95741,7 @@
   },
   {
    "name": "Fresh Air 100ks Klip vlhč.…",
-   "price": 25.05,
+   "price": 26.84,
    "amount": "100 ks",
    "unit": "",
    "href": "/cs/drogerie?url=fresh-air-100ks-klip-vlhc-ubrousky-meloun-12ks&do=detail",
@@ -95799,7 +95789,7 @@
   },
   {
    "name": "Fresh Air 120ks Klip vlhč.…",
-   "price": 27.13,
+   "price": 26.9,
    "amount": "120 ks",
    "unit": "",
    "href": "/cs/drogerie?url=fresh-air-120ks-klip-vlhc-ubrousky-aroma-therapy-12ks&do=detail"
@@ -95813,7 +95803,7 @@
   },
   {
    "name": "Fresh Air 120ks Klip vlhč.…",
-   "price": 27.13,
+   "price": 29.03,
    "amount": "120 ks",
    "unit": "",
    "href": "/cs/drogerie?url=fresh-air-120ks-klip-vlhc-ubrousky-gerbera-12ks&do=detail",
@@ -95902,7 +95892,7 @@
   },
   {
    "name": "Freshmaker Kapesní vlhč. ubrousky…",
-   "price": 4.45,
+   "price": 4.42,
    "amount": "",
    "unit": "",
    "href": "/cs/drogerie?url=freshmaker-kapesni-vlhc-ubrousky-15ks-fruit-36-288&do=detail",
@@ -95919,7 +95909,7 @@
   },
   {
    "name": "Freshmaker Kapesní vlhč. ubrousky…",
-   "price": 11.22,
+   "price": 11.11,
    "amount": "",
    "unit": "",
    "href": "/cs/drogerie?url=freshmaker-kapesni-vlhc-ubrousky-20ks-make-up-12ks&do=detail",
@@ -96234,6 +96224,22 @@
    "ean_bal": "9000101659153"
   },
   {
+   "name": "Gliss Šampon 250ml Balance & Care …",
+   "price": 52.01,
+   "amount": "250 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=gliss-sampon-250ml-balance-care-6ks&do=detail",
+   "ean": "3178041344869"
+  },
+  {
+   "name": "Gliss Šampon 250ml Bio-tech…",
+   "price": 52.01,
+   "amount": "250 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=gliss-sampon-250ml-bio-tech-restore-6ks&do=detail",
+   "ean": "6192430015830"
+  },
+  {
    "name": "Gliss Šampon 250ml Blonde Hair…",
    "price": 52.01,
    "amount": "250 ml",
@@ -96250,6 +96256,14 @@
    "href": "/cs/drogerie?url=gliss-sampon-250ml-colour-perfector-6ks&do=detail",
    "ean": "4015000195324",
    "ean_bal": "9000101276053"
+  },
+  {
+   "name": "Gliss Šampon 250ml Internse…",
+   "price": 52.01,
+   "amount": "250 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=gliss-sampon-250ml-internse-therapy-6ks&do=detail",
+   "ean": "6281031259702"
   },
   {
    "name": "Gliss Šampon 250ml Oil Nutritive …",
@@ -96916,6 +96930,14 @@
    "ean": "8006540750063"
   },
   {
+   "name": "Johnsons 300ml Baby Tělové mléko …",
+   "price": 42.0,
+   "amount": "300 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=johnsons-300ml-baby-telove-mleko-12ks&do=detail",
+   "ean": "3574661427898"
+  },
+  {
    "name": "Johnsons 500ml Baby Tělové mléko s…",
    "price": 60.0,
    "amount": "500 ml",
@@ -97243,7 +97265,7 @@
   },
   {
    "name": "Lara 120 klip vlhč. ubrousky Rose …",
-   "price": 28.65,
+   "price": 29.89,
    "amount": "",
    "unit": "",
    "href": "/cs/drogerie?url=lara-120-klip-vlhc-ubrousky-rose-12ks-lr105&do=detail",
@@ -98335,6 +98357,14 @@
    "ean": "8595653700107"
   },
   {
+   "name": "Meridol ZP 75ml Original (12ks)",
+   "price": 59.81,
+   "amount": "75 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=meridol-zp-75ml-original-12ks&do=detail",
+   "ean": "8718951138513"
+  },
+  {
    "name": "Mr.Proper 1l Čistič univerzální…",
    "price": 48.0,
    "amount": "1 l",
@@ -99390,6 +99420,14 @@
    "href": "/cs/drogerie?url=nivea-soft-repair-care-72h-300ml-3ks&do=detail",
    "ean": "4005900463074",
    "ean_bal": "4005900463081"
+  },
+  {
+   "name": "Nivea Sun Sensitive 200ml…",
+   "price": 150.0,
+   "amount": "200 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=nivea-sun-sensitive-200ml-opalovaci-mleko-f30-6ks&do=detail",
+   "ean": "4005900694225"
   },
   {
    "name": "Ob Tampon Pro Comfort Mini 16 (6ks)",
@@ -100963,6 +101001,14 @@
    "ean_bal": "8001841740409"
   },
   {
+   "name": "Pantene kondicioner 250ml Colour …",
+   "price": 56.0,
+   "amount": "250 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=pantene-kondicioner-250ml-colour-6ks&do=detail",
+   "ean": "4084500378568"
+  },
+  {
    "name": "Pantene kondicioner 90ml Repair &…",
    "price": 23.85,
    "amount": "90 ml",
@@ -101132,7 +101178,7 @@
   },
   {
    "name": "Papilion 100 Klip vlhč. ubrousky…",
-   "price": 25.72,
+   "price": 26.84,
    "amount": "",
    "unit": "",
    "href": "/cs/drogerie?url=papilion-100-klip-vlhc-ubrousky-lavender-18ks&do=detail",
@@ -101724,7 +101770,7 @@
   },
   {
    "name": "Protex Mýdlo tuhé 90g Charcoal …",
-   "price": 16.4,
+   "price": 15.52,
    "amount": "90 g",
    "unit": "",
    "href": "/cs/drogerie?url=protex-mydlo-tuhe-90g-charcoal-6ks&do=detail",
@@ -101764,7 +101810,7 @@
   },
   {
    "name": "Protex Mýdlo tuhé 90g Propolis …",
-   "price": 16.4,
+   "price": 15.52,
    "amount": "90 g",
    "unit": "",
    "href": "/cs/drogerie?url=protex-mydlo-tuhe-90g-propolis-6ks&do=detail",
@@ -102078,7 +102124,7 @@
   },
   {
    "name": "Rexona Deo Sprej 150ml Men Stay…",
-   "price": 53.0,
+   "price": 43.7,
    "amount": "150 ml",
    "unit": "",
    "href": "/cs/drogerie?url=rexona-deo-sprej-150ml-men-stay-fresh-marine-6ks&do=detail",
@@ -102105,7 +102151,7 @@
   },
   {
    "name": "Rexona Deo Sprej 150ml White…",
-   "price": 63.86,
+   "price": 63.32,
    "amount": "150 ml",
    "unit": "",
    "href": "/cs/drogerie?url=rexona-deo-sprej-150ml-white-flowers-lychee-6ks&do=detail",
@@ -102114,7 +102160,7 @@
   },
   {
    "name": "Rexona Deo Sprej 150ml Women…",
-   "price": 39.28,
+   "price": 41.16,
    "amount": "150 ml",
    "unit": "",
    "href": "/cs/drogerie?url=rexona-deo-sprej-150ml-women-active-protection-fresh-6ks&do=detail",
@@ -102131,7 +102177,7 @@
   },
   {
    "name": "Rexona Deo Sprej 150ml Women Aloe…",
-   "price": 53.0,
+   "price": 41.16,
    "amount": "150 ml",
    "unit": "",
    "href": "/cs/drogerie?url=rexona-deo-sprej-150ml-women-aloe-vera-6ks&do=detail",
@@ -102174,7 +102220,7 @@
   },
   {
    "name": "Rexona Deo Sprej 150ml Women…",
-   "price": 53.0,
+   "price": 41.16,
    "amount": "150 ml",
    "unit": "",
    "href": "/cs/drogerie?url=rexona-deo-sprej-150ml-women-invisible-pure-6ks&do=detail",
@@ -102209,7 +102255,7 @@
   },
   {
    "name": "Rexona Deo Sprej 150ml Women Stay…",
-   "price": 53.0,
+   "price": 36.9,
    "amount": "150 ml",
    "unit": "",
    "href": "/cs/drogerie?url=rexona-deo-sprej-150ml-women-stay-fresh-blie-poppy-apple-6ks&do=detail",
@@ -102334,7 +102380,7 @@
   },
   {
    "name": "Savo 1,2L Dezinfekční prostředek…",
-   "price": 45.2,
+   "price": 42.59,
    "amount": "1,2 l",
    "unit": "",
    "href": "/cs/drogerie?url=savo-1-2l-dezinfekcni-prostredek-original-6ks&do=detail",
@@ -102343,7 +102389,7 @@
   },
   {
    "name": "Savo 1,2L Perex Květinová Vůně …",
-   "price": 61.42,
+   "price": 60.89,
    "amount": "1,2 l",
    "unit": "",
    "href": "/cs/drogerie?url=savo-1-2l-perex-kvetinova-vune-6ks&do=detail",
@@ -102351,7 +102397,7 @@
   },
   {
    "name": "Savo 1,2L Perex Svěží vůně (6ks)",
-   "price": 64.99,
+   "price": 60.89,
    "amount": "1,2 l",
    "unit": "",
    "href": "/cs/drogerie?url=savo-1-2l-perex-svezi-vune-6ks&do=detail",
@@ -102360,7 +102406,7 @@
   },
   {
    "name": "Savo 1,2L Prim Květinová Vůně (6ks)",
-   "price": 54.7,
+   "price": 49.9,
    "amount": "1,2 l",
    "unit": "",
    "href": "/cs/drogerie?url=savo-1-2l-prim-kvetinova-vune-6ks&do=detail",
@@ -102369,7 +102415,7 @@
   },
   {
    "name": "Savo 1,2L Prim Svěží Vůně (6ks)",
-   "price": 48.99,
+   "price": 49.91,
    "amount": "1,2 l",
    "unit": "",
    "href": "/cs/drogerie?url=savo-1-2l-prim-svezi-vune-6ks&do=detail",
@@ -102458,7 +102504,7 @@
   },
   {
    "name": "Schauma Šampon 350ml 7 Krauter …",
-   "price": 47.0,
+   "price": 36.9,
    "amount": "350 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-350ml-7-krauter-12ks&do=detail",
@@ -102466,7 +102512,7 @@
   },
   {
    "name": "Schauma Šampon 350ml Acaj + Hat …",
-   "price": 34.4,
+   "price": 36.9,
    "amount": "350 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-350ml-acaj-hat-12ks&do=detail",
@@ -102474,7 +102520,7 @@
   },
   {
    "name": "Schauma Šampon 350ml Apfel &…",
-   "price": 34.4,
+   "price": 36.9,
    "amount": "350 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-350ml-apfel-brenne-12ks&do=detail",
@@ -102482,7 +102528,7 @@
   },
   {
    "name": "Schauma Šampon 350ml Argan Oil …",
-   "price": 34.4,
+   "price": 36.9,
    "amount": "350 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-350ml-argan-oil-12ks&do=detail",
@@ -102490,7 +102536,7 @@
   },
   {
    "name": "Schauma Šampon 350ml For Men (12ks)",
-   "price": 42.0,
+   "price": 36.9,
    "amount": "350 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-350ml-for-men-12ks&do=detail",
@@ -102498,7 +102544,7 @@
   },
   {
    "name": "Schauma Šampon 350ml Karbon Kraft…",
-   "price": 39.9,
+   "price": 36.9,
    "amount": "350 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-350ml-karbon-kraft-5-12ks&do=detail",
@@ -102506,7 +102552,7 @@
   },
   {
    "name": "Schauma Šampon 350ml Men Anti…",
-   "price": 42.4,
+   "price": 36.9,
    "amount": "350 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-350ml-men-anti-schuppenx3-6ks&do=detail",
@@ -102514,7 +102560,7 @@
   },
   {
    "name": "Schauma Šampon 350ml Men Sport…",
-   "price": 42.4,
+   "price": 36.9,
    "amount": "350 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-350ml-men-sport-power-6ks&do=detail",
@@ -102522,15 +102568,23 @@
   },
   {
    "name": "Schauma Šampon 350ml Strawberry &…",
-   "price": 34.4,
+   "price": 36.9,
    "amount": "350 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-350ml-strawberry-banan-12ks&do=detail",
    "ean": "4015100300550"
   },
   {
+   "name": "Schauma Šampon 350ml Women Color…",
+   "price": 36.9,
+   "amount": "350 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=schauma-sampon-350ml-women-color-glanz-12ks&do=detail",
+   "ean": "4015100299670"
+  },
+  {
    "name": "Schauma Šampon 350ml Women Fresh…",
-   "price": 42.4,
+   "price": 36.9,
    "amount": "350 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-350ml-women-fresh-it-up-6ks&do=detail",
@@ -102538,7 +102592,7 @@
   },
   {
    "name": "Schauma Šampon 350ml Women…",
-   "price": 42.4,
+   "price": 36.9,
    "amount": "350 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-350ml-women-mandelmilch-6ks&do=detail",
@@ -102546,7 +102600,7 @@
   },
   {
    "name": "Schauma Šampon 350ml Women Repair…",
-   "price": 42.4,
+   "price": 36.9,
    "amount": "350 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-350ml-women-repair-pflege-6ks&do=detail",
@@ -102554,7 +102608,7 @@
   },
   {
    "name": "Schauma Šampon 350ml Women Seiden…",
-   "price": 42.4,
+   "price": 36.9,
    "amount": "350 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-350ml-women-seiden-kamm-6ks&do=detail",
@@ -102571,7 +102625,7 @@
   },
   {
    "name": "Schauma Šampon 400ml 7 Bluten-OL",
-   "price": 36.22,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-7-bluten-ol&do=detail",
@@ -102579,7 +102633,7 @@
   },
   {
    "name": "Schauma Šampon 400ml 7 Krauter …",
-   "price": 36.68,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-7-krauter-5ks-4&do=detail",
@@ -102587,7 +102641,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Anti-Dandruff",
-   "price": 36.22,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-anti-dandruff&do=detail",
@@ -102596,7 +102650,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Color Shine-…",
-   "price": 52.9,
+   "price": 49.51,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-color-shine-pomegranate-5ks-4&do=detail",
@@ -102623,7 +102677,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Fresh it up …",
-   "price": 52.9,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-fresh-it-up-5ks&do=detail",
@@ -102632,7 +102686,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Frucht &…",
-   "price": 52.9,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-frucht-vitamin-6ks&do=detail",
@@ -102640,7 +102694,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Hair…",
-   "price": 38.65,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-hair-activator-koffein-5ks&do=detail",
@@ -102648,7 +102702,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Men Hair…",
-   "price": 42.4,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-men-hair-activator-5ks&do=detail",
@@ -102656,7 +102710,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Men Mint…",
-   "price": 42.4,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-men-mint-fresh-6ks&do=detail",
@@ -102664,7 +102718,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Men Sport…",
-   "price": 34.39,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-men-sport-power-5ks&do=detail",
@@ -102672,7 +102726,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Multi Repair…",
-   "price": 37.4,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-multi-repair-6-5ks&do=detail",
@@ -102681,7 +102735,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Nourish &…",
-   "price": 49.9,
+   "price": 49.97,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-nourish-shine-strawberry-5ks&do=detail",
@@ -102690,7 +102744,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Power Volumen…",
-   "price": 36.23,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-power-volumen-48h&do=detail",
@@ -102707,7 +102761,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Pro-Vitamin…",
-   "price": 36.68,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-pro-vitamin-b5-5ks-4&do=detail",
@@ -102715,7 +102769,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Repair & Care…",
-   "price": 37.4,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-repair-care-5ks&do=detail",
@@ -102724,7 +102778,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Rose Oil 2v1 …",
-   "price": 37.4,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-rose-oil-2v1-5ks&do=detail",
@@ -102733,7 +102787,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Smoothie Acai…",
-   "price": 36.22,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-smoothie-acai-berry-almondmilk&do=detail",
@@ -102742,7 +102796,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Women 6in1…",
-   "price": 38.6,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-women-6in1-repair-5ks&do=detail",
@@ -102750,7 +102804,7 @@
   },
   {
    "name": "Schauma Šampon 400ml Women Color…",
-   "price": 36.22,
+   "price": 36.9,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-400ml-women-color-glanz-6ks&do=detail",
@@ -102766,7 +102820,7 @@
   },
   {
    "name": "Schauma Šampon 480ml 7Bluten Oil …",
-   "price": 35.0,
+   "price": 36.9,
    "amount": "480 ml",
    "unit": "",
    "href": "/cs/drogerie?url=schauma-sampon-480ml-7bluten-oil-12ks&do=detail",
@@ -102970,7 +103024,7 @@
   },
   {
    "name": "Sofin aviváž 0.8l Sensitive (10…",
-   "price": 36.03,
+   "price": 36.0,
    "amount": "0.8 l",
    "unit": "",
    "href": "/cs/drogerie?url=sofin-avivaz-0-8l-sensitive-10-100&do=detail",
@@ -103023,6 +103077,38 @@
    "unit": "",
    "href": "/cs/drogerie?url=str8-250ml-rise-shower-gel-6ks&do=detail",
    "ean": "5201314093220"
+  },
+  {
+   "name": "Str8 400ml Ahead Shower Gel (6ks)",
+   "price": 49.95,
+   "amount": "400 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=str8-400ml-ahead-shower-gel-6ks&do=detail",
+   "ean": "5201314149989"
+  },
+  {
+   "name": "Str8 400ml Faith Shower Gel (6ks)",
+   "price": 55.0,
+   "amount": "400 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=str8-400ml-faith-shower-gel-6ks&do=detail",
+   "ean": "5201314121695"
+  },
+  {
+   "name": "Str8 400ml FR34K Shower Gel (6ks)",
+   "price": 50.44,
+   "amount": "400 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=str8-400ml-fr34k-shower-gel-6ks&do=detail",
+   "ean": "5201314145011"
+  },
+  {
+   "name": "Str8 400ml Rise Shower Gel (6ks)",
+   "price": 52.9,
+   "amount": "400 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=str8-400ml-rise-shower-gel-6ks&do=detail",
+   "ean": "5201314150077"
   },
   {
    "name": "Str8 75ml Parfém. Deo Ahead (6ks)",
@@ -103273,6 +103359,14 @@
    "href": "/cs/drogerie?url=syoss-barva-na-vlasy-9-52-3ks&do=detail",
    "ean": "9000101098334",
    "ean_bal": "9000101098389"
+  },
+  {
+   "name": "Syoss Conditioner 440ml Balancing …",
+   "price": 69.0,
+   "amount": "440 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=syoss-conditioner-440ml-balancing-6ks&do=detail",
+   "ean": "4015100402353"
   },
   {
    "name": "Syoss Conditioner 500ml Balancing …",
@@ -103697,7 +103791,7 @@
   },
   {
    "name": "Taft Lak 250ml Perfect Flex - 4 …",
-   "price": 72.5,
+   "price": 66.13,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/drogerie?url=taft-lak-250ml-perfect-flex-4-10ks-8865&do=detail",
@@ -103740,7 +103834,7 @@
   },
   {
    "name": "Taft Lak 250ml Power Invisible - 5…",
-   "price": 63.22,
+   "price": 66.13,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/drogerie?url=taft-lak-250ml-power-invisible-5-non-sticky&do=detail",
@@ -103767,7 +103861,7 @@
   },
   {
    "name": "Taft Lak 250ml Shine-4 (10ks) 8830",
-   "price": 72.5,
+   "price": 66.13,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/drogerie?url=taft-lak-250ml-shine-4-10ks-8830&do=detail",
@@ -103954,6 +104048,22 @@
    "unit": "",
    "href": "/cs/drogerie?url=uterky-uklidove-3ks-50ks&do=detail",
    "ean": "8595653700060"
+  },
+  {
+   "name": "Vanish Gold 470g Oxi Action…",
+   "price": 51.35,
+   "amount": "470 g",
+   "unit": "",
+   "href": "/cs/drogerie?url=vanish-gold-470g-oxi-action-crystal-white-6ks&do=detail",
+   "ean": "5011417562505"
+  },
+  {
+   "name": "Vanish Gold 470g Oxi Action Pink …",
+   "price": 87.5,
+   "amount": "470 g",
+   "unit": "",
+   "href": "/cs/drogerie?url=vanish-gold-470g-oxi-action-pink-6ks&do=detail",
+   "ean": "5011417559895"
   },
   {
    "name": "Vanish Líquido 1l Tekutý…",
@@ -105644,6 +105754,30 @@
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=arola-150g-perfume-gel-osvezovac-ruby-vanilla-8ks&do=detail",
    "ean": "5900785962027"
+  },
+  {
+   "name": "At Home gel crystal 150g Beach…",
+   "price": 22.5,
+   "amount": "150 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=at-home-gel-crystal-150g-beach-waves-24ks&do=detail",
+   "ean": "8718692410442"
+  },
+  {
+   "name": "At Home gel crystal 150g Levandule…",
+   "price": 22.5,
+   "amount": "150 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=at-home-gel-crystal-150g-levandule-24ks&do=detail",
+   "ean": "8718692410428"
+  },
+  {
+   "name": "At Home gel crystal 150g Spring…",
+   "price": 22.5,
+   "amount": "150 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=at-home-gel-crystal-150g-spring-flowers-24ks&do=detail",
+   "ean": "8718692410466"
   },
   {
    "name": "At Home gel. osvěžovač 150g Beach…",
@@ -108041,7 +108175,7 @@
   },
   {
    "name": "Fresh Air 260ml Apple and Cinnamon…",
-   "price": 26.0,
+   "price": 27.13,
    "amount": "260 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=fresh-air-260ml-apple-and-cinnamon-6-48ks&do=detail",
@@ -108057,7 +108191,7 @@
   },
   {
    "name": "Fresh Air 260ml Bouquet (6/48ks)",
-   "price": 26.0,
+   "price": 27.13,
    "amount": "260 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=fresh-air-260ml-bouquet-6-48ks&do=detail",
@@ -108169,7 +108303,7 @@
   },
   {
    "name": "Fresh Air 260ml Lemon Fresh (6…",
-   "price": 26.0,
+   "price": 27.13,
    "amount": "260 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=fresh-air-260ml-lemon-fresh-6-48ks&do=detail",
@@ -108512,7 +108646,7 @@
   },
   {
    "name": "Fresh Air 300ml Ocean (24ks)",
-   "price": 18.9,
+   "price": 21.01,
    "amount": "300 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=fresh-air-300ml-ocean-24ks&do=detail",
@@ -108544,7 +108678,7 @@
   },
   {
    "name": "Fresh Air 300ml Strawberry (24ks)",
-   "price": 18.9,
+   "price": 21.01,
    "amount": "300 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=fresh-air-300ml-strawberry-24ks&do=detail",
@@ -108560,7 +108694,7 @@
   },
   {
    "name": "Fresh Air 300ml Tutti Frutti (24ks)",
-   "price": 18.9,
+   "price": 21.01,
    "amount": "300 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=fresh-air-300ml-tutti-frutti-24ks&do=detail",
@@ -108636,14 +108770,6 @@
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=fresh-air-400ml-rock-roses-24ks&do=detail"
-  },
-  {
-   "name": "Glade gel. osvěžovač 150g Fresh…",
-   "price": 32.0,
-   "amount": "150 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=glade-gel-osvezovac-150g-fresh-lemon-8ks&do=detail",
-   "ean": "5000204826586"
   },
   {
    "name": "Glade gel. osvěžovač 150g…",
@@ -108951,6 +109077,62 @@
    "ean": "4000290001004"
   },
   {
+   "name": "Pytle na odpad (Tui Rac) 120L (TOP…",
+   "price": 10.8,
+   "amount": "120 l",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=pytle-na-odpad-tui-rac-120l-top-50ks&do=detail",
+   "ean": "5907714900372"
+  },
+  {
+   "name": "Pytle na odpad (Tui Rac) 130L (5ks)",
+   "price": 57.0,
+   "amount": "130 l",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=pytle-na-odpad-tui-rac-130l-5ks&do=detail"
+  },
+  {
+   "name": "Pytle na odpad (Tui Rac) 150L …",
+   "price": 35.0,
+   "amount": "150 l",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=pytle-na-odpad-tui-rac-150l-10ks&do=detail",
+   "ean": "8588007729046"
+  },
+  {
+   "name": "Pytle na odpad (Tui Rac) 35L (TOP)…",
+   "price": 8.28,
+   "amount": "35 l",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=pytle-na-odpad-tui-rac-35l-top-50ks&do=detail",
+   "ean": "5907714900389"
+  },
+  {
+   "name": "Pytle na odpad (Tui Rac) 35L Silné…",
+   "price": 20.7,
+   "amount": "35 l",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=pytle-na-odpad-tui-rac-35l-silne-50ks&do=detail",
+   "ean": "8595653700336"
+  },
+  {
+   "name": "Pytle na odpad (Tui Rac) 60L (TOP)…",
+   "price": 8.28,
+   "amount": "60 l",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=pytle-na-odpad-tui-rac-60l-top-50ks&do=detail",
+   "ean": "5907714900105",
+   "ean_bal": "5907714900204"
+  },
+  {
+   "name": "Pytle na odpad (Tui Rac) 60L Silné…",
+   "price": 20.7,
+   "amount": "60 l",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=pytle-na-odpad-tui-rac-60l-silne-50ks&do=detail",
+   "ean": "8595653700343"
+  },
+  {
    "name": "Red Rings Náplast 20ks- Bílá/mieng…",
    "price": 16.8,
    "amount": "20 ks",
@@ -109102,6 +109284,14 @@
    "ean": "8720604318050"
   },
   {
+   "name": "Sence vatové tyčinky 200ks balvna…",
+   "price": 18.0,
+   "amount": "200 ks",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=sence-vatove-tycinky-200ks-balvna-bambus-48ks&do=detail",
+   "ean": "8720289262846"
+  },
+  {
    "name": "Super Cobra 400ml proti hmyzu…",
    "price": 48.28,
    "amount": "400 ml",
@@ -109234,6 +109424,15 @@
    "ean": "2466000000040"
   },
   {
+   "name": "Taška Děkujeme (Tui hoa) (1000ks)",
+   "price": 0.46,
+   "amount": "1000 ks",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=taska-dekujeme-tui-hoa-1000ks&do=detail",
+   "ean": "8598884827100",
+   "ean_bal": "859884820200"
+  },
+  {
    "name": "Taška HDPE 3kg (Tui Banh My) (20ks)",
    "price": 12.75,
    "amount": "3 kg",
@@ -109249,71 +109448,6 @@
    "href": "/cs/domacnost-a-zahrada?url=taska-hdpe-5kg-tui-banh-my-20ks&do=detail",
    "ean": "8591684516205",
    "ean_bal": "8591684826205"
-  },
-  {
-   "name": "Taška Tui Děkujeme (1000ks)",
-   "price": 0.46,
-   "amount": "1000 ks",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=taska-tui-dekujeme-1000ks&do=detail",
-   "ean": "8598884827100",
-   "ean_bal": "859884820200"
-  },
-  {
-   "name": "Tui Rac (Sáčky) do koše obyčejné…",
-   "price": 35.0,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=tui-rac-sacky-do-kose-obycejne-150l-10ks&do=detail",
-   "ean": "8588007729046"
-  },
-  {
-   "name": "Tui Rac (Sáčky) do koše stahovací,…",
-   "price": 20.4,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=tui-rac-sacky-do-kose-stahovaci-extra-silne-35l-15ks-50ks&do=detail",
-   "ean": "8595653700336"
-  },
-  {
-   "name": "Tui Rac (Sáčky) do koše stahovací,…",
-   "price": 20.4,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=tui-rac-sacky-do-kose-stahovaci-extra-silne-60l-10ks-50ks&do=detail",
-   "ean": "8595653700343"
-  },
-  {
-   "name": "Tui Rac (TOP) Sáčky do koše…",
-   "price": 10.8,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=tui-rac-top-sacky-do-kose-obycejne-120l-50ks&do=detail",
-   "ean": "5907714900372"
-  },
-  {
-   "name": "Tui Rac (TOP) Sáčky do koše…",
-   "price": 8.45,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=tui-rac-top-sacky-do-kose-obycejne-35l-50ks&do=detail",
-   "ean": "5907714900389"
-  },
-  {
-   "name": "Tui Rac (TOP) Sáčky do koše…",
-   "price": 8.45,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=tui-rac-top-sacky-do-kose-obycejne-60l-50ks&do=detail",
-   "ean": "5907714900105",
-   "ean_bal": "5907714900204"
-  },
-  {
-   "name": "Tui Rac- Sáčky do koše obyčejné…",
-   "price": 55.0,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=tui-rac-sacky-do-kose-obycejne-130l-5ks&do=detail"
   },
   {
    "name": "Vánoční balící papír 10m x 70cm …",
