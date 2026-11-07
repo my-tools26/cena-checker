@@ -91,9 +91,10 @@
  .pi{font-size:1.45em;text-align:center}
  .pn b{color:var(--text-strong);font-weight:600;line-height:1.3}
  .pn .a{display:block;margin-top:2px}
- .cpn{cursor:copy;border-radius:4px;transition:background .2s,color .2s;-webkit-tap-highlight-color:transparent}
- .cpn.ok{background:color-mix(in srgb,var(--good) 18%,transparent);color:var(--good)}
- @media(hover:hover){
+ /* copy ten: CHI may tinh co chuot; dien thoai khong co */
+ @media(hover:hover) and (pointer:fine){
+  .cpn{cursor:copy;border-radius:4px;transition:background .2s,color .2s}
+  .cpn.ok{background:color-mix(in srgb,var(--good) 18%,transparent);color:var(--good)}
   .cpn::after{content:'⧉';margin-left:6px;font-size:.8em;font-weight:400;color:var(--muted);opacity:0;transition:opacity .15s}
   .prow:hover .cpn::after{opacity:.75}
   .cpn:hover{color:var(--accent)}

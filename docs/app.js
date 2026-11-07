@@ -510,7 +510,7 @@ function toast(msg) {
 }
 document.addEventListener('click', function (e) {
   var b = e.target.closest && e.target.closest('.cpn');
-  if (!b) return;
+  if (!b || !matchMedia('(hover:hover) and (pointer:fine)').matches) return;   // dien thoai: khong copy
   e.preventDefault(); e.stopPropagation();
   var s = b.getAttribute('data-copy');
   copyText(s).then(function () {
@@ -1544,7 +1544,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.34';
+if (el) el.textContent = 'v1.7.0.35';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
