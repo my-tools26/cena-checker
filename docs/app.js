@@ -471,14 +471,15 @@ function rowHTML(name, amount, offers) {
   }).join('');
   var b = offers[0], save = max - b.price;
   return "<div class='prow'><div class='pi'>" + iconFor(name).trim() + '</div>' +
-    "<div class='pn'><b class='cpn' title='Bấm để copy tên' data-copy='" + esc(copyName(name)) + "'>" +
-    esc(name) + '</b>' +
+    "<div class='pn'><b>" + esc(name) + '</b>' +
+    "<button type='button' class='cpb' title='Copy tên (bỏ trọng lượng)' aria-label='Copy tên' data-copy='" +
+    esc(copyName(name)) + "'>⧉</button>" +
     (amount ? "<span class='a'>" + esc(amount) + '</span>' : '') + '</div>' +
     "<div class='pbars'>" + bars + '</div>' +
     "<div class='pbest' data-shop='" + esc(b.slug || '') + "'><div class='pbig'>" + b.price.toFixed(2) + '<small>Kč</small></div>' +
     (save > 0.005 ? "<span class='psave'>rẻ hơn " + save.toFixed(2) + '</span>' : '') + '</div></div>';
 }
-/* Bam vao TEN mat hang = copy ten BO trong luong/dung tich/quy cach thung
+/* Nut copy canh TEN mat hang (chi may tinh, hien khi re chuot) = copy ten BO trong luong/dung tich/quy cach thung
    ("Olando 0,5L Tuzemák 37,5% (12/102)" -> "Olando Tuzemák 37,5%") */
 function copyName(name) {
   return String(name || '')
@@ -509,7 +510,7 @@ function toast(msg) {
   _toastT = setTimeout(function () { t.classList.remove('show'); }, 1600);
 }
 document.addEventListener('click', function (e) {
-  var b = e.target.closest && e.target.closest('.cpn');
+  var b = e.target.closest && e.target.closest('.cpb');
   if (!b || !matchMedia('(hover:hover) and (pointer:fine)').matches) return;   // dien thoai: khong copy
   e.preventDefault(); e.stopPropagation();
   var s = b.getAttribute('data-copy');
@@ -1544,7 +1545,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.35';
+if (el) el.textContent = 'v1.7.0.36';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {

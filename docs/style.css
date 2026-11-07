@@ -93,12 +93,12 @@
  .pn .a{display:block;margin-top:2px}
  /* copy ten: CHI may tinh co chuot; dien thoai khong co */
  @media(hover:hover) and (pointer:fine){
-  .cpn{cursor:copy;border-radius:4px;transition:background .2s,color .2s}
-  .cpn.ok{background:color-mix(in srgb,var(--good) 18%,transparent);color:var(--good)}
-  .cpn::after{content:'⧉';margin-left:6px;font-size:.8em;font-weight:400;color:var(--muted);opacity:0;transition:opacity .15s}
-  .prow:hover .cpn::after{opacity:.75}
-  .cpn:hover{color:var(--accent)}
+  .cpb{display:inline-block;margin-left:6px;padding:0 5px;border:0;border-radius:5px;background:none;color:var(--muted);font:inherit;font-size:.85em;line-height:1.4;cursor:pointer;opacity:0;transition:opacity .15s,background .2s,color .2s;vertical-align:baseline}
+  .prow:hover .cpb,.cpb:focus-visible{opacity:.8}
+  .cpb:hover{opacity:1;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent)}
+  .cpb.ok{opacity:1;color:var(--good);background:color-mix(in srgb,var(--good) 18%,transparent)}
  }
+ @media not all and (hover:hover) and (pointer:fine){.cpb{display:none}}
  #toast{position:fixed;left:50%;bottom:calc(76px + env(safe-area-inset-bottom));transform:translate(-50%,12px);max-width:calc(100vw - 32px);padding:10px 16px;border-radius:12px;background:var(--text-strong);color:var(--bg);font-size:.88em;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:999}
  #toast.show{opacity:1;transform:translate(-50%,0)}
  .pbars{display:flex;flex-direction:column;gap:12px;min-width:0}
