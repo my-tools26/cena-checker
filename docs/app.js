@@ -471,11 +471,45 @@ function rowHTML(name, amount, offers) {
   }).join('');
   var b = offers[0], save = max - b.price;
   return "<div class='prow'><div class='pi'>" + iconFor(name).trim() + '</div>' +
-    "<div class='pn'><b>" + esc(name) + '</b>' + (amount ? "<span class='a'>" + esc(amount) + '</span>' : '') + '</div>' +
+    "<div class='pn'><b>" + esc(name) + '</b>' +
+    "<button class='cpy' type='button' title='Copy tên (không kèm trọng lượng)' data-copy='" +
+    esc(copyName(name)) + "'>⧉</button>" +
+    (amount ? "<span class='a'>" + esc(amount) + '</span>' : '') + '</div>' +
     "<div class='pbars'>" + bars + '</div>' +
     "<div class='pbest' data-shop='" + esc(b.slug || '') + "'><div class='pbig'>" + b.price.toFixed(2) + '<small>Kč</small></div>' +
     (save > 0.005 ? "<span class='psave'>rẻ hơn " + save.toFixed(2) + '</span>' : '') + '</div></div>';
 }
+/* Nut copy: ten mat hang BO trong luong/dung tich/quy cach thung
+   ("Olando 0,5L Tuzemák 37,5% (12/102)" -> "Olando Tuzemák 37,5%") */
+function copyName(name) {
+  return String(name || '')
+    .replace(/\(\s*[\d\s.,*x×\/+-]*\)/gi, ' ')                    // (12/102), (16*6)
+    .replace(/\b\d+\s*[x×*]\s*(?=\d)/gi, ' ')                       // 16 x 200 ml, 8×12
+    .replace(/\b\d+(?:[.,]\d+)?\s*(?:kg|dkg|g|ml|cl|l|ks|stuck|st)\b\.?/gi, ' ')
+    .replace(/\s+[-–,]\s*$/, '').replace(/\s{2,}/g, ' ').trim() || String(name || '').trim();
+}
+function copyLegacy(s) {                                 // iPhone/trinh duyet cu
+  var t = document.createElement('textarea');
+  t.value = s; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+  document.body.appendChild(t); t.select(); t.setSelectionRange(0, s.length);
+  try { document.execCommand('copy'); } finally { document.body.removeChild(t); }
+}
+function copyText(s) {
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(s).catch(function () { copyLegacy(s); });
+  }
+  copyLegacy(s);
+  return Promise.resolve();
+}
+document.addEventListener('click', function (e) {
+  var b = e.target.closest && e.target.closest('.cpy');
+  if (!b) return;
+  e.preventDefault(); e.stopPropagation();
+  copyText(b.getAttribute('data-copy')).then(function () {
+    b.textContent = '✓'; b.classList.add('ok');
+    setTimeout(function () { b.textContent = '⧉'; b.classList.remove('ok'); }, 1200);
+  });
+});
 function tableHTML(rows) {
   return "<div class='plist'>" + rows.join('') + '</div>';
 }
@@ -1501,7 +1535,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.32';
+if (el) el.textContent = 'v1.7.0.33';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {

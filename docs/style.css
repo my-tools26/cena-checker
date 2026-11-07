@@ -91,6 +91,9 @@
  .pi{font-size:1.45em;text-align:center}
  .pn b{color:var(--text-strong);font-weight:600;line-height:1.3}
  .pn .a{display:block;margin-top:2px}
+ .cpy{margin-left:6px;padding:1px 7px;font-size:.85em;line-height:1.4;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--muted);cursor:pointer;vertical-align:1px}
+ .cpy:hover{color:var(--accent);border-color:var(--accent)}
+ .cpy.ok{color:var(--good);border-color:var(--good)}
  .pbars{display:flex;flex-direction:column;gap:12px;min-width:0}
  .pb{display:grid;grid-template-columns:minmax(0,104px) minmax(30px,1fr) auto;gap:4px 12px;align-items:center;font-size:.84em}
  .pb .ps{min-width:0}
