@@ -438,7 +438,7 @@ function unitPrice(amount, price, pack) {
   if (u === 'ks') { return (per / v).toFixed(2) + ' Kč/ks'; }
   return '';
 }
-/* 1 hang bang: ten + toi da 3 o gia re nhat */
+/* 1 hang bang: ten + 3 o gia re nhat + cac kho con lai (mo rong) */
 function rowHTML(name, amount, offers) {
   offers = offers.slice().sort(function (a, b) { return a.price - b.price; });
   // Dam bao deal SAP HET akce co mat trong 3 cot hien thi (giong ben Python):
@@ -451,6 +451,8 @@ function rowHTML(name, amount, offers) {
         .sort(function (a, b) { return a.price - b.price; });
     }
   }
+  // Cac kho con lai (ngoai top 3): van hien, gon trong 1 dong mo rong
+  var rest = offers.filter(function (o) { return shown.indexOf(o) < 0; });
   offers = shown;
   // v1.7: moi nha 1 thanh ngang (dai theo gia, xanh = re nhat) thay cho 3 cot bang
   var max = Math.max.apply(null, offers.map(function (o) { return o.price; }));
@@ -475,7 +477,13 @@ function rowHTML(name, amount, offers) {
     "<button type='button' class='cpb' title='Copy tên (bỏ trọng lượng)' aria-label='Copy tên' data-copy='" +
     esc(copyName(name)) + "'>⧉</button>" +
     (amount ? "<span class='a'>" + esc(amount) + '</span>' : '') + '</div>' +
-    "<div class='pbars'>" + bars + '</div>' +
+    "<div class='pbars'>" + bars + (rest.length ? "<details class='pmore'><summary>+ " + rest.length +
+      ' kho khác cũng có</summary>' + rest.map(function (o) {
+        var per = o.unit || unitPrice(o.amount || amount, o.price, o.pack);
+        return "<div class='pmr' data-shop='" + esc(o.slug || '') + "'><span class='ps'>" + shopBadge(o.shop) +
+          '</span>' + (per ? "<span class='pmu'>" + esc(per) + '</span>' : '<span></span>') +
+          "<span class='pv'>" + o.price.toFixed(2) + '</span></div>';
+      }).join('') + '</details>' : '') + '</div>' +
     "<div class='pbest' data-shop='" + esc(b.slug || '') + "'><div class='pbig'>" + b.price.toFixed(2) + '<small>Kč</small></div>' +
     (save > 0.005 ? "<span class='psave'>rẻ hơn " + save.toFixed(2) + '</span>' : '') + '</div></div>';
 }
@@ -1545,7 +1553,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.37';
+if (el) el.textContent = 'v1.7.0.38';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {

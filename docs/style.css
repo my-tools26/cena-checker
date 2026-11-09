@@ -112,6 +112,14 @@
  .pb .pd{grid-column:1/-1;font-size:.86em;color:var(--muted);display:flex;flex-wrap:wrap;gap:2px 12px;align-items:center}
  .pb .pd .expb,.pb .pd .pctb{background:none;padding:0;font-weight:600}
  .pb .pd:empty{display:none}
+ .pmore{font-size:.84em;margin-top:-4px}
+ .pmore summary{cursor:pointer;color:var(--accent);font-weight:600;list-style:none;padding:2px 0}
+ .pmore summary::-webkit-details-marker{display:none}
+ .pmore summary::after{content:' ▾'}
+ .pmore[open] summary::after{content:' ▴'}
+ .pmr{display:grid;grid-template-columns:minmax(0,104px) 1fr auto;gap:4px 12px;align-items:center;padding:6px 0;border-top:1px dashed var(--line,rgba(127,127,127,.25))}
+ .pmr .pmu{color:var(--muted);font-size:.9em}
+ .pmr .pv{text-align:right;font-weight:600;color:var(--muted);white-space:nowrap}
  .pbest{text-align:right}
  .pbig{font-size:1.4em;font-weight:700;letter-spacing:-.03em;color:var(--text-strong);white-space:nowrap}
  .pbig small{font-size:.55em;color:var(--muted);margin-left:2px}
