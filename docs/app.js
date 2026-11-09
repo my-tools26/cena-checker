@@ -439,12 +439,13 @@ function unitPrice(amount, price, pack) {
   return '';
 }
 /* 1 hang bang: ten + 3 o gia re nhat + cac kho con lai (mo rong) */
-function rowHTML(name, amount, offers) {
+function rowHTML(name, amount, offers, all) {
   offers = offers.slice().sort(function (a, b) { return a.price - b.price; });
+  // all = ket qua QUET MA: hien HET cac kho thanh thanh ngang (re nhat o tren)
   // Dam bao deal SAP HET akce co mat trong 3 cot hien thi (giong ben Python):
   // cot 1 van la re nhat, deal sap het chen vao cot cuoi neu chua co
-  var shown = offers.slice(0, 3);
-  if (shown.length === 3 && !shown.some(function (o) { return o.valid && expShort(o.valid); })) {
+  var shown = all ? offers.slice() : offers.slice(0, 3);
+  if (!all && shown.length === 3 && !shown.some(function (o) { return o.valid && expShort(o.valid); })) {
     var ed = offers.find(function (o) { return o.valid && expShort(o.valid); });
     if (ed) {
       shown = shown.slice(0, 2).concat([ed])
@@ -939,7 +940,7 @@ function searchByEan(code, head, el) {
     if (offers.length) {
       html += "<h2 style='font-size:.95em'>" + (hit.nameMatched
         ? "≈ Cùng tên & dung tích ở các kho" : "✅ Đúng mã vạch quét") + '</h2>' +
-        tableHTML([rowHTML(name, offers[0].amount, offers)]) +
+        tableHTML([rowHTML(name, offers[0].amount, offers, true)]) +
         (hit.nameMatched ? "<p class='muted' style='font-size:.8em'>Mã vạch này chỉ " +
           'có ở một nơi; các kho khác ghép theo tên + đúng dung tích.</p>' : '');
     } else {
@@ -1014,7 +1015,7 @@ function searchByEan(code, head, el) {
           });
           html = head + "<p class='muted'>📦 Mã vạch: <b>" + esc(name) + '</b></p>' + pendNote +
             "<h2 style='font-size:.95em'>✅ Sản phẩm vừa quét — giá các kho</h2>" +
-            tableHTML([rowHTML(name, offers[0].amount, offers)]) +
+            tableHTML([rowHTML(name, offers[0].amount, offers, true)]) +
             "<p class='muted' style='font-size:.8em'>Kho không ghi mã vạch được ghép " +
             'theo tên + đúng dung tích.</p>';
           base = html + (ret.length ? "<h2 style='font-size:.95em'>🏪 Giá siêu thị (khuyến mãi)</h2>" +
@@ -1553,7 +1554,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.38';
+if (el) el.textContent = 'v1.7.0.39';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
