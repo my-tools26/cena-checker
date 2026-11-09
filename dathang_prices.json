@@ -1,7 +1,43 @@
 {
- "date": "2026-11-05",
+ "date": "2026-11-09",
  "shop": "dathang",
  "items": [
+  {
+   "name": "UA KS pšeničné suchariky 110g Krab (1/30ks)",
+   "price": 12.9,
+   "amount": "110 g",
+   "unit": ""
+  },
+  {
+   "name": "Leco-Spišské párky 200g",
+   "price": 47.9,
+   "amount": "200 g",
+   "unit": ""
+  },
+  {
+   "name": "Leco-Vídeňské párky 200g",
+   "price": 45.9,
+   "amount": "200 g",
+   "unit": ""
+  },
+  {
+   "name": "Leco-Spišské párky 1000g",
+   "price": 199.9,
+   "amount": "1000 g",
+   "unit": ""
+  },
+  {
+   "name": "Leco-Vídeňské párky 1000g",
+   "price": 179.9,
+   "amount": "1000 g",
+   "unit": ""
+  },
+  {
+   "name": "JD Gross 125g Dark choco 85%",
+   "price": 39.9,
+   "amount": "125 g",
+   "unit": ""
+  },
   {
    "name": "Brick trubičky 150g Matcha – 16ks/kart",
    "price": 22.9,
@@ -157,64 +193,65 @@
    "unit": ""
   },
   {
-   "name": "Šunkofléky,okurka 430g",
+   "name": "JD-Šunkofléky,okurka 430g",
    "price": 66.9,
    "amount": "430 g",
    "unit": ""
   },
   {
-   "name": "Znojemské vepřové kostky, rýže 430g",
+   "name": "JD-Znojemské vepřové kostky, rýže 430g",
    "price": 66.9,
    "amount": "430 g",
    "unit": ""
   },
   {
-   "name": "Segedínský guláš,houskový knedlík 340g",
+   "name": "JD-Segedínský guláš,houskový knedlík 340g",
    "price": 66.9,
    "amount": "340 g",
    "unit": ""
   },
   {
-   "name": "Francouzské brambory,okurek 430g",
+   "name": "JD-Francouzské brambory, okurek 430g",
    "price": 66.9,
    "amount": "430 g",
    "unit": ""
   },
   {
-   "name": "Kuřecí stroganov, dušená rýže 430g",
+   "name": "JD-Kuřecí stroganov, dušená rýže 430g",
    "price": 66.9,
    "amount": "430 g",
    "unit": ""
   },
   {
-   "name": "Čínské nudle s kuřecím masem 430g",
+   "name": "JD-Čínské nudle s kuřecím masem 430g",
    "price": 66.9,
    "amount": "430 g",
    "unit": ""
   },
   {
-   "name": "Špagety s pikantní masovou směsí 430g",
+   "name": "JD-Špagety s pikantní masovou směsí 430g",
    "price": 66.9,
    "amount": "430 g",
    "unit": ""
   },
   {
-   "name": "Kuřecí Work, dušená rýže 430g",
+   "name": "JD-Kuřecí Work, dušená rýže 430g",
    "price": 66.9,
    "amount": "430 g",
    "unit": ""
   },
   {
-   "name": "Srbské kuřecí rizoto se sýrem 430g",
+   "name": "JD-Srbské kuřecí rizoto se sýrem 430g",
    "price": 66.9,
    "amount": "430 g",
    "unit": ""
   },
   {
-   "name": "PAP.MASCOTTE GREEN CUT CORNERS (50)",
+   "name": "PAPÍRKY MASCOTTE GREEN CUT CORNERS (50)",
    "price": 375.0,
    "amount": "",
-   "unit": ""
+   "unit": "",
+   "ean": "8710993003644"
   },
   {
    "name": "E-LIQUID SYX MIX BERRIES 16,5MG",
@@ -224,11 +261,10 @@
    "ean": "8595721108330"
   },
   {
-   "name": "E-LIQUID SYX RASPBERRY LEMON 10ML 20MG",
+   "name": "E-LIQUID SYX RASPBERRY 10ML 20MG",
    "price": 176.0,
    "amount": "10 ml",
-   "unit": "",
-   "ean": "8595721110548"
+   "unit": ""
   },
   {
    "name": "UA Kvas Taras 1,5L Vánoční",
@@ -275,7 +311,7 @@
    "unit": ""
   },
   {
-   "name": "PAP.MASCOTTE ORIGINAL SLIM (50KS)",
+   "name": "PAPÍRKY MASCOTTE ORIGINAL SLIM (50KS)",
    "price": 769.0,
    "amount": "50 ks",
    "unit": ""
@@ -357,14 +393,14 @@
   },
   {
    "name": "UA Kaluri Sušené filety cejna 40g – 20ks/kart",
-   "price": 54.9,
+   "price": 49.9,
    "amount": "40 g",
    "unit": "",
    "ean": "4740590074307"
   },
   {
    "name": "UA Kaluri sušený sleď baltský 100g – 20ks/kart",
-   "price": 49.9,
+   "price": 44.9,
    "amount": "100 g",
    "unit": "",
    "ean": "4740590072174"
@@ -645,8 +681,7 @@
    "name": "Tatra Salko zahuštěné slazené mléko karemel 397g",
    "price": 45.9,
    "amount": "397 g",
-   "unit": "",
-   "ean": "8594006847490"
+   "unit": ""
   },
   {
    "name": "Glico Pocky 40g Double Choco – 10ks/kart",
@@ -797,7 +832,7 @@
   },
   {
    "name": "Ladovy vánoční perníčky 225g – 10ks/kart",
-   "price": 34.9,
+   "price": 29.9,
    "amount": "225 g",
    "unit": "",
    "ean": "5901356030749"
@@ -1256,7 +1291,7 @@
    "ean": "9002490275396"
   },
   {
-   "name": "E-LIQUID SYX WATERNELON KIWI 16,5MG",
+   "name": "E-LIQUID SYX WATERMELON KIWI 16,5MG",
    "price": 176.0,
    "amount": "",
    "unit": ""
@@ -1287,6 +1322,13 @@
    "amount": "",
    "unit": "",
    "ean": "8595721108279"
+  },
+  {
+   "name": "E-LIQUID SYX RASPBERRY LEMON 10ML 20MG",
+   "price": 176.0,
+   "amount": "10 ml",
+   "unit": "",
+   "ean": "8595721110548"
   },
   {
    "name": "E-LIQUID SYX COCONUT MELON 16,5MG",
@@ -4646,73 +4688,6 @@
    "ean": "8595078817473"
   },
   {
-   "name": "Sovora Popcorn tube 70g Caramel – 12ks/kart",
-   "price": 27.9,
-   "amount": "70 g",
-   "unit": ""
-  },
-  {
-   "name": "Sovora Popcorn tube 70g Fruit mix – 12ks/kart",
-   "price": 27.9,
-   "amount": "70 g",
-   "unit": "",
-   "ean": "4820120755736"
-  },
-  {
-   "name": "Sovora Popcorn tube 70g Strawberry – 12ks/kart",
-   "price": 27.9,
-   "amount": "70 g",
-   "unit": "",
-   "ean": "4820120755712"
-  },
-  {
-   "name": "Sovora Popcorn tube 70g Banana – 12ks/kart",
-   "price": 27.9,
-   "amount": "70 g",
-   "unit": "",
-   "ean": "4720120755675"
-  },
-  {
-   "name": "Sovora Popcorn tube 70g Cherry – 12ks/kart",
-   "price": 27.9,
-   "amount": "70 g",
-   "unit": ""
-  },
-  {
-   "name": "Sovora Popcorn tube 70g Apple – 12ks/kart",
-   "price": 27.9,
-   "amount": "70 g",
-   "unit": "",
-   "ean": "4820120755798"
-  },
-  {
-   "name": "Sovora Popcorn tube 70g Chocolate – 12ks/kart",
-   "price": 27.9,
-   "amount": "70 g",
-   "unit": ""
-  },
-  {
-   "name": "Sovora Popcorn tube 70g Cherry & Chocolate – 12ks/kart",
-   "price": 27.9,
-   "amount": "70 g",
-   "unit": "",
-   "ean": "4820120755750"
-  },
-  {
-   "name": "Sovora Popcorn tube 70g Bubble Gum – 12ks/kart",
-   "price": 27.9,
-   "amount": "70 g",
-   "unit": "",
-   "ean": "4820120755651"
-  },
-  {
-   "name": "Sovora Popcorn tube 70g Salted Caramel – 12ks/kart",
-   "price": 27.9,
-   "amount": "70 g",
-   "unit": "",
-   "ean": "4820120757136"
-  },
-  {
    "name": "Mentos CleanBreath 21g Berry",
    "price": 21.9,
    "amount": "21 g",
@@ -5222,12 +5197,6 @@
    "name": "Macaroon Jelly Candy 20g – 20ks/kart",
    "price": 7.9,
    "amount": "20 g",
-   "unit": ""
-  },
-  {
-   "name": "UA Biola Aperol 0,5L – 12ks//kart",
-   "price": 20.9,
-   "amount": "0,5 l",
    "unit": ""
   },
   {
@@ -11288,8 +11257,7 @@
    "name": "ELF BAR 1000 KIWI PASSION FRUIT GUAVA 20MG/ML",
    "price": 137.0,
    "amount": "",
-   "unit": "",
-   "ean": "8592303002529"
+   "unit": ""
   },
   {
    "name": "ELF BAR 1000 APPLE PEACH 20MG/ML",
@@ -11821,8 +11789,7 @@
    "name": "Guarana plech 0,5L Mango",
    "price": 17.9,
    "amount": "0,5 l",
-   "unit": "",
-   "ean": "8595723300978"
+   "unit": ""
   },
   {
    "name": "Guarana plech 0,5L Kiwi + apple",
@@ -11843,7 +11810,7 @@
    "price": 17.9,
    "amount": "0,5 l",
    "unit": "",
-   "ean": "8595723300985"
+   "ean": "8595723300916"
   },
   {
    "name": "CA – Vifon cháo thịt bò 70gx50",
@@ -12380,18 +12347,6 @@
   {
    "name": "UA Beermix 500ml plech – Broskev",
    "price": 27.9,
-   "amount": "500 ml",
-   "unit": ""
-  },
-  {
-   "name": "UA Hike Vibe Mojito 500ml plech",
-   "price": 27.9,
-   "amount": "500 ml",
-   "unit": ""
-  },
-  {
-   "name": "UA Hike Vibe Income Tax 500ml plech",
-   "price": 24.9,
    "amount": "500 ml",
    "unit": ""
   },
@@ -13966,8 +13921,7 @@
    "name": "Guarana plech 0,5L Classic",
    "price": 17.9,
    "amount": "0,5 l",
-   "unit": "",
-   "ean": "8595723300947"
+   "unit": ""
   },
   {
    "name": "Müller Riso mléčná rýže ZERO višen 200g",
@@ -14407,8 +14361,7 @@
    "name": "Moravia PANÝR sýr nejen na grilování 200g",
    "price": 79.9,
    "amount": "200 g",
-   "unit": "",
-   "ean": "8594006323802"
+   "unit": ""
   },
   {
    "name": "MIX nealko 0,33L 0% – Sex On The Beach Cocktail",
@@ -14890,8 +14843,7 @@
    "name": "Dobrá voda YESs 0,5l Jablko",
    "price": 13.9,
    "amount": "0,5 l",
-   "unit": "",
-   "ean": "8595723200780"
+   "unit": ""
   },
   {
    "name": "Tortillove 240g celozrnné – 20ks/kart",
@@ -15532,14 +15484,14 @@
   },
   {
    "name": "Milka 270g Nutty Choco Wafer",
-   "price": 67.9,
+   "price": 69.9,
    "amount": "270 g",
    "unit": "",
    "ean": "7622201677176"
   },
   {
    "name": "Milka 300g Strawberry Cheesecake – 12ks/kart",
-   "price": 67.9,
+   "price": 69.9,
    "amount": "300 g",
    "unit": "",
    "ean": "7622210653215"
@@ -20956,8 +20908,7 @@
    "name": "SYX BAR GUAVA GRANADILLA 16,5MG/ML",
    "price": 135.0,
    "amount": "",
-   "unit": "",
-   "ean": "8595721109535"
+   "unit": ""
   },
   {
    "name": "SYX BAR GRAPE 16,5MG/ML",
@@ -21897,8 +21848,7 @@
    "name": "Relax Banán Jablko 1L",
    "price": 24.9,
    "amount": "1 l",
-   "unit": "",
-   "ean": "8594057631659"
+   "unit": ""
   },
   {
    "name": "Mentos CleanBreath 21g Peppermint",
@@ -24195,14 +24145,14 @@
   },
   {
    "name": "Milka Piškoty s želé pomerančové 147g – 24ks/kart",
-   "price": 35.9,
+   "price": 32.9,
    "amount": "147 g",
    "unit": "",
    "ean": "7622300603281"
   },
   {
    "name": "Milka Piškoty s želé malinové 147g – 24ks/kart",
-   "price": 35.9,
+   "price": 32.9,
    "amount": "147 g",
    "unit": "",
    "ean": "7622300603298"
@@ -26687,15 +26637,13 @@
    "name": "Magnesia PET 0,7L PLUS Focus",
    "price": 22.5,
    "amount": "0,7 l",
-   "unit": "",
-   "ean": "8594001025749"
+   "unit": ""
   },
   {
    "name": "Magnesia PET 0,7L PLUS Boost",
    "price": 22.5,
    "amount": "0,7 l",
-   "unit": "",
-   "ean": "8594001026371"
+   "unit": ""
   },
   {
    "name": "Orbit 384g dóza – Peppermint",
@@ -29220,8 +29168,7 @@
    "name": "Ferrero Rocher 200g",
    "price": 99.9,
    "amount": "200 g",
-   "unit": "",
-   "ean": "8000500003787"
+   "unit": ""
   },
   {
    "name": "Lipton plech 0.33l Lemon x 24",
@@ -29576,15 +29523,13 @@
    "name": "Grand sud merlot rosé 1L x 6",
    "price": 110.0,
    "amount": "1 l",
-   "unit": "",
-   "ean": "3263280102179"
+   "unit": ""
   },
   {
    "name": "Grand Sud merlot 1L x 6",
    "price": 110.0,
    "amount": "1 l",
-   "unit": "",
-   "ean": "3263280102179"
+   "unit": ""
   },
   {
    "name": "Grand sud Chardonnay 1Litr x 6",
@@ -32629,8 +32574,7 @@
    "name": "ELF BAR 600 KIWI PASSION FRUIT GUAVA 2%NICOTINE",
    "price": 132.0,
    "amount": "",
-   "unit": "",
-   "ean": "8592303002529"
+   "unit": ""
   },
   {
    "name": "ELF BAR 600 STRAWBERRY ICE 2%NICOTINE",
@@ -35933,8 +35877,7 @@
    "name": "Glico Pocky 33g Matcha – 10ks/kart",
    "price": 22.9,
    "amount": "33 g",
-   "unit": "",
-   "ean": "8851019210223"
+   "unit": ""
   },
   {
    "name": "Glico Pocky 47g Chocolate – 10ks/kart",
@@ -36318,8 +36261,7 @@
    "name": "Lipton plech 0.33l Green.Tea x 24ks",
    "price": 15.5,
    "amount": "0.33 l",
-   "unit": "",
-   "ean": "5997264103910"
+   "unit": ""
   },
   {
    "name": "Kofola PET 2L",
