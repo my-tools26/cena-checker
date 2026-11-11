@@ -1,5 +1,5 @@
 {
- "date": "2026-11-06",
+ "date": "2026-11-11",
  "shop": "bombacena",
  "items": [
   {
@@ -1673,6 +1673,24 @@
    "href": "/cs/akce?url=fjk-90g-sardinky-filety-ve-slunecnicovem-oleji&do=detail",
    "ean": "8595241524689",
    "ean_bal": "8595241524696"
+  },
+  {
+   "name": "Flipz 90g Milk Chocolate Usa (6…",
+   "price": 28.6,
+   "amount": "90 g",
+   "unit": "",
+   "href": "/cs/akce?url=flipz-90g-milk-chocolate-usa-6-180&do=detail",
+   "ean": "5000168022758",
+   "ean_bal": "05000396053449"
+  },
+  {
+   "name": "Flipz 90g Salted Caramel Usa (6…",
+   "price": 28.6,
+   "amount": "90 g",
+   "unit": "",
+   "href": "/cs/akce?url=flipz-90g-salted-caramel-usa-6-120&do=detail",
+   "ean": "5000168215792",
+   "ean_bal": "05000396053425"
   },
   {
    "name": "Gambrinus 0,5L 12° Patron Plech (4…",
@@ -3651,31 +3669,8 @@
    "ean": "8588007524863"
   },
   {
-   "name": "Lexus 120g Triangl Santa-…",
-   "price": 47.53,
-   "amount": "120 g",
-   "unit": "",
-   "href": "/cs/akce?url=lexus-120g-triangl-santa-liskooriskove-18ks-tam-giac-do&do=detail",
-   "ean": "8699462607982"
-  },
-  {
-   "name": "Lexus 120g Triangl- Lískooříškové …",
-   "price": 47.53,
-   "amount": "120 g",
-   "unit": "",
-   "href": "/cs/akce?url=lexus-120g-triangl-liskooriskove-18ks-tam-giac-xanh&do=detail"
-  },
-  {
-   "name": "Lexus 120g vánoční stromeček-…",
-   "price": 47.53,
-   "amount": "120 g",
-   "unit": "",
-   "href": "/cs/akce?url=lexus-120g-vanocni-stromecek-liskooriskove-24ks-cay-thong&do=detail",
-   "ean": "8684154700416"
-  },
-  {
    "name": "Lexus Bonboniera 0,5kg Coffee (12…",
-   "price": 74.91,
+   "price": 75.5,
    "amount": "0,5 kg",
    "unit": "",
    "href": "/cs/akce?url=lexus-bonboniera-0-5kg-coffee-12-72&do=detail",
@@ -3683,14 +3678,14 @@
   },
   {
    "name": "Lexus Bonboniera 0,5kg Dubai Style…",
-   "price": 74.91,
+   "price": 75.5,
    "amount": "0,5 kg",
    "unit": "",
    "href": "/cs/akce?url=lexus-bonboniera-0-5kg-dubai-style-12-72&do=detail"
   },
   {
    "name": "Lexus Bonboniera 0,5kg Hazelnut …",
-   "price": 74.91,
+   "price": 75.5,
    "amount": "0,5 kg",
    "unit": "",
    "href": "/cs/akce?url=lexus-bonboniera-0-5kg-hazelnut-12-72&do=detail",
@@ -3698,14 +3693,14 @@
   },
   {
    "name": "Lexus Bonboniera 0,5kg Milk Cream …",
-   "price": 74.91,
+   "price": 75.5,
    "amount": "0,5 kg",
    "unit": "",
    "href": "/cs/akce?url=lexus-bonboniera-0-5kg-milk-cream-12-72&do=detail"
   },
   {
-   "name": "Lexus Bonboniera 0,5kg ORANGE (12…",
-   "price": 74.91,
+   "name": "Lexus Bonboniera 0,5kg Orange (12…",
+   "price": 75.5,
    "amount": "0,5 kg",
    "unit": "",
    "href": "/cs/akce?url=lexus-bonboniera-0-5kg-orange-12-72&do=detail",
@@ -3713,25 +3708,48 @@
   },
   {
    "name": "Lexus Bonboniera 0,5kg Peanut (12…",
-   "price": 74.91,
+   "price": 75.5,
    "amount": "0,5 kg",
    "unit": "",
    "href": "/cs/akce?url=lexus-bonboniera-0-5kg-peanut-12-72&do=detail",
    "ean": "8699462609061"
   },
   {
-   "name": "Lexus Bonboniera 0,5kg SANTA (12…",
+   "name": "Lexus Bonboniera 0,5kg Santa (12…",
    "price": 75.5,
    "amount": "0,5 kg",
    "unit": "",
    "href": "/cs/akce?url=lexus-bonboniera-0-5kg-santa-12-72&do=detail"
   },
   {
-   "name": "Lexus Bonboniera 0,5kg STRAWBERRY …",
-   "price": 74.91,
+   "name": "Lexus Bonboniera 0,5kg Strawberry …",
+   "price": 75.5,
    "amount": "0,5 kg",
    "unit": "",
    "href": "/cs/akce?url=lexus-bonboniera-0-5kg-strawberry-12-72&do=detail"
+  },
+  {
+   "name": "Lexus Triangl 120g Lískooříškové …",
+   "price": 43.5,
+   "amount": "120 g",
+   "unit": "",
+   "href": "/cs/akce?url=lexus-triangl-120g-liskooriskove-18ks-tam-giac-xanh&do=detail"
+  },
+  {
+   "name": "Lexus Triangl 120g Santa…",
+   "price": 43.5,
+   "amount": "120 g",
+   "unit": "",
+   "href": "/cs/akce?url=lexus-triangl-120g-santa-liskooriskove-18ks-tam-giac-do&do=detail",
+   "ean": "8699462607982"
+  },
+  {
+   "name": "Lexus Triangl 120g vánoční…",
+   "price": 43.5,
+   "amount": "120 g",
+   "unit": "",
+   "href": "/cs/akce?url=lexus-triangl-120g-vanocni-stromecek-liskooriskove-24ks-cay-thong&do=detail",
+   "ean": "8684154700416"
   },
   {
    "name": "Maestro 0,75L Sangiovese Primitivo…",
@@ -4672,12 +4690,13 @@
    "ean_bal": "8720181472633"
   },
   {
-   "name": "Taška Dárková (Tui Qua) L (30*38cm…",
+   "name": "Taška Dárková (Tui Qua) L (30*41cm…",
    "price": 15.0,
    "amount": "",
    "unit": "",
-   "href": "/cs/akce?url=taska-darkova-tui-qua-l-30-38cm-12ks&do=detail",
-   "ean": "8596331181003"
+   "href": "/cs/akce?url=taska-darkova-tui-qua-l-30-41cm-12ks&do=detail",
+   "ean": "8596331181003",
+   "ean_bal": "8596331117002"
   },
   {
    "name": "Taška Dárková (Tui Qua) M (25*31cm…",
@@ -4700,7 +4719,7 @@
    "price": 7.66,
    "amount": "",
    "unit": "",
-   "href": "/cs/akce?url=taska-darkova-tui-qua-xs-12-14cm-12ks&do=detail",
+   "href": "/cs/akce?url=taska-darkova-tui-qua-xs-12-14cm-12ks-tbl-2829e-1&do=detail",
    "ean": "8612002829057"
   },
   {
@@ -5893,12 +5912,108 @@
    "ean": "5413149634015"
   },
   {
+   "name": "HET HAN Arola Osvěžovač do skříně…",
+   "price": 10.0,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-arola-osvezovac-do-skrine-fresh-breeze-9-90-exp-2023&do=detail",
+   "ean": "5900785871213"
+  },
+  {
+   "name": "HET HAN Arola Osvěžovač do skříně…",
+   "price": 10.0,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-arola-osvezovac-do-skrine-pink-grapefruit-9-90-exp-2023&do=detail",
+   "ean": "5900785871220"
+  },
+  {
+   "name": "HET HAN Arola Osvěžovač do skříně…",
+   "price": 10.0,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-arola-osvezovac-do-skrine-proti-molum-lavender-12ks-exp-2023&do=detail",
+   "ean": "5900785915221"
+  },
+  {
+   "name": "HET HAN Arola Pohlcovač pachů do…",
+   "price": 10.0,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-arola-pohlcovac-pachu-do-lednicky-magic-cool-12ks-exp-2023&do=detail",
+   "ean": "5900785871015"
+  },
+  {
+   "name": "HET HAN Arola Vůně do vysavače 3ks…",
+   "price": 10.0,
+   "amount": "3 ks",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-arola-vune-do-vysavace-3ks-forest-24ks-exp-2023&do=detail",
+   "ean": "5900785951007"
+  },
+  {
+   "name": "HET HAN Arola Vůně do vysavače 3ks…",
+   "price": 10.0,
+   "amount": "3 ks",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-arola-vune-do-vysavace-3ks-lavender-24ks-exp-2023&do=detail",
+   "ean": "5900785951038"
+  },
+  {
+   "name": "HET HAN Arola Vůně do vysavače 3ks…",
+   "price": 10.0,
+   "amount": "3 ks",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-arola-vune-do-vysavace-3ks-lemon-24ks-exp-2023&do=detail",
+   "ean": "5900785951106"
+  },
+  {
+   "name": "HET HAN Arola Vůně do vysavače 3ks…",
+   "price": 10.0,
+   "amount": "3 ks",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-arola-vune-do-vysavace-3ks-lilac-24ks-exp-2023&do=detail",
+   "ean": "5900785951014"
+  },
+  {
+   "name": "HET HAN Arola Vůně do vysavače 3ks…",
+   "price": 10.0,
+   "amount": "3 ks",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-arola-vune-do-vysavace-3ks-lily-of-the-valley-24ks-exp-2023&do=detail",
+   "ean": "5900785951021"
+  },
+  {
+   "name": "HET HAN Arola Vůně do vysavače 3ks…",
+   "price": 10.0,
+   "amount": "3 ks",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-arola-vune-do-vysavace-3ks-sea-24ks-exp-2023&do=detail",
+   "ean": "5900785951205"
+  },
+  {
+   "name": "HET HAN Arola Vůně do vysavače 3ks…",
+   "price": 10.0,
+   "amount": "3 ks",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-arola-vune-do-vysavace-3ks-vanilla-24ks-exp-2023&do=detail",
+   "ean": "5900785951045"
+  },
+  {
    "name": "HET HAN Asia ABC Thach Que tui…",
    "price": 10.0,
    "amount": "",
    "unit": "",
    "href": "/cs/vyprodej?url=het-han-asia-abc-thach-que-tui-408g-20ks-24que-exp-8-25&do=detail",
    "ean": "8935061800509"
+  },
+  {
+   "name": "HET HAN Asia kinh do Cosy (10ks),…",
+   "price": 38.0,
+   "amount": "10 ks",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-asia-kinh-do-cosy-10ks-exp-27-10-26&do=detail",
+   "ean": "8934680113861"
   },
   {
    "name": "HET HAN Asia Sriracha Owl Chilli…",
@@ -6484,15 +6599,6 @@
    "ean": "4251415302098"
   },
   {
-   "name": "HET HAN Gambrinus 0,5L 12° Patron…",
-   "price": 16.5,
-   "amount": "0,5 l",
-   "unit": "",
-   "href": "/cs/vyprodej?url=het-han-gambrinus-0-5l-12-patron-plech-4-6-72-exp-14-9&do=detail",
-   "ean": "8594404012124",
-   "ean_bal": "8594404012155"
-  },
-  {
    "name": "HET HAN Ghost snack 70g Kečup …",
    "price": 6.0,
    "amount": "70 g",
@@ -6516,6 +6622,13 @@
    "unit": "",
    "href": "/cs/vyprodej?url=het-han-glade-gel-osvezovac-150g-fresh-lemon-8ks&do=detail",
    "ean": "5000204826586"
+  },
+  {
+   "name": "HET HAN Glico Pocky 39g Milk…",
+   "price": 8.0,
+   "amount": "39 g",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-glico-pocky-39g-milk-chocolate-10-120ks-exp-13-11-26&do=detail"
   },
   {
    "name": "HET HAN Golden Snack Cracker 80g…",
@@ -6598,6 +6711,15 @@
    "href": "/cs/vyprodej?url=het-han-johnybee-party-balloon-popping-8g-16ks-6disp-exp-03-25&do=detail",
    "ean": "6952581462828",
    "ean_bal": "6952581462811"
+  },
+  {
+   "name": "HET HAN Jolly Time Popcorn 100g…",
+   "price": 7.0,
+   "amount": "100 g",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-jolly-time-popcorn-100g-crispy-n-white-usa-18-8-exp&do=detail",
+   "ean": "028190009610",
+   "ean_bal": "10028190809668"
   },
   {
    "name": "HET HAN Jupík 0,33L Jablko Pet …",
@@ -6688,6 +6810,14 @@
    "amount": "110 g",
    "unit": "",
    "href": "/cs/vyprodej?url=het-han-lentilky-110g-mega-cz-20ks-exp-11-26&do=detail"
+  },
+  {
+   "name": "HET HAN Lexus Bonboniera 0,5kg…",
+   "price": 35.0,
+   "amount": "0,5 kg",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-lexus-bonboniera-0-5kg-coffee-12-72-exp-11-26&do=detail",
+   "ean": "8699462601997"
   },
   {
    "name": "HET HAN Lion 42g EU Black&White …",
@@ -6842,6 +6972,15 @@
    "unit": "",
    "href": "/cs/vyprodej?url=het-han-mbd-gummy-watermelon-10g-60ks-12displej&do=detail",
    "ean_bal": "6971486423604"
+  },
+  {
+   "name": "HET HAN Merci 100g CZ Čokoláda…",
+   "price": 17.0,
+   "amount": "100 g",
+   "unit": "",
+   "href": "/cs/vyprodej?url=het-han-merci-100g-cz-cokolada-hazelnut-zelena-15ks-exp-10-26&do=detail",
+   "ean": "4014400914252",
+   "ean_bal": "4014400140026"
   },
   {
    "name": "HET HAN Merci 112g CZ…",
@@ -8019,6 +8158,276 @@
    "ean": "8588000610020"
   },
   {
+   "name": "Lambrusco Uccellino 1,5L Rosso …",
+   "price": 90.5,
+   "amount": "1,5 l",
+   "unit": "",
+   "href": "/cs/novinky?url=lambrusco-uccellino-1-5l-rosso-hong-1-5l-6ks&do=detail",
+   "ean": "8001929316984"
+  },
+  {
+   "name": "Lambrusco Uccellino 1,5L Rosato …",
+   "price": 90.5,
+   "amount": "1,5 l",
+   "unit": "",
+   "href": "/cs/novinky?url=lambrusco-uccellino-1-5l-rosato-hong-1-5l-6ks&do=detail",
+   "ean": "8001929316991"
+  },
+  {
+   "name": "Lambrusco Uccellino 1,5L Bianco …",
+   "price": 90.5,
+   "amount": "1,5 l",
+   "unit": "",
+   "href": "/cs/novinky?url=lambrusco-uccellino-1-5l-bianco-trang-1-5l-6ks&do=detail",
+   "ean": "8001929317004",
+   "ean_bal": "8001929417001"
+  },
+  {
+   "name": "Lambrusco Uccellino 0,75L Rosso …",
+   "price": 56.9,
+   "amount": "0,75 l",
+   "unit": "",
+   "href": "/cs/novinky?url=lambrusco-uccellino-0-75l-rosso-do-750ml-6ks&do=detail",
+   "ean": "8001929316953",
+   "ean_bal": "8001929416950"
+  },
+  {
+   "name": "Lambrusco Uccellino 0,75L Rosato …",
+   "price": 56.9,
+   "amount": "0,75 l",
+   "unit": "",
+   "href": "/cs/novinky?url=lambrusco-uccellino-0-75l-rosato-hong-750ml-6ks&do=detail",
+   "ean": "8001929316960",
+   "ean_bal": "8001929416967"
+  },
+  {
+   "name": "Hamé 115g Tresčí játra (12ks)",
+   "price": 48.4,
+   "amount": "115 g",
+   "unit": "",
+   "href": "/cs/novinky?url=hame-115g-tresci-jatra-12ks&do=detail",
+   "ean": "8595139729028"
+  },
+  {
+   "name": "Lambrusco Uccellino 0,75L Bianco …",
+   "price": 56.9,
+   "amount": "0,75 l",
+   "unit": "",
+   "href": "/cs/novinky?url=lambrusco-uccellino-0-75l-bianco-trang-750ml-6ks&do=detail",
+   "ean": "8001929316977",
+   "ean_bal": "8001929416974"
+  },
+  {
+   "name": "EuroSweets Choca Dumpling Jelly…",
+   "price": 16.5,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/novinky?url=eurosweets-choca-dumpling-jelly-45g-worm-24ks-12&do=detail"
+  },
+  {
+   "name": "EuroSweets Choca Dumpling Jelly…",
+   "price": 16.5,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/novinky?url=eurosweets-choca-dumpling-jelly-45g-fruit-24ks-12&do=detail"
+  },
+  {
+   "name": "EuroSweets Choca Dumpling Jelly…",
+   "price": 16.5,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/novinky?url=eurosweets-choca-dumpling-jelly-45g-bear-24ks-12&do=detail"
+  },
+  {
+   "name": "Lexus Bonboniera 1kg Mint (8ks)",
+   "price": 119.0,
+   "amount": "1 kg",
+   "unit": "",
+   "href": "/cs/novinky?url=lexus-bonboniera-1kg-mint-8ks&do=detail"
+  },
+  {
+   "name": "Lexus Bonboniera 1kg Mango (8ks)",
+   "price": 119.0,
+   "amount": "1 kg",
+   "unit": "",
+   "href": "/cs/novinky?url=lexus-bonboniera-1kg-mango-8ks&do=detail"
+  },
+  {
+   "name": "Lexus Bonboniera 1kg Pistachio …",
+   "price": 119.0,
+   "amount": "1 kg",
+   "unit": "",
+   "href": "/cs/novinky?url=lexus-bonboniera-1kg-pistachio-8ks&do=detail"
+  },
+  {
+   "name": "Lexus Bonboniera 1kg Coconut (8ks)",
+   "price": 119.0,
+   "amount": "1 kg",
+   "unit": "",
+   "href": "/cs/novinky?url=lexus-bonboniera-1kg-coconut-8ks&do=detail"
+  },
+  {
+   "name": "Lexus Bonboniera 1kg Orange (8ks)",
+   "price": 119.0,
+   "amount": "1 kg",
+   "unit": "",
+   "href": "/cs/novinky?url=lexus-bonboniera-1kg-orange-8ks&do=detail"
+  },
+  {
+   "name": "Lexus Bonboniera 1kg Strawberry …",
+   "price": 119.0,
+   "amount": "1 kg",
+   "unit": "",
+   "href": "/cs/novinky?url=lexus-bonboniera-1kg-strawberry-8ks&do=detail"
+  },
+  {
+   "name": "Lexus Bonboniera 1kg Peanut (8ks)",
+   "price": 119.0,
+   "amount": "1 kg",
+   "unit": "",
+   "href": "/cs/novinky?url=lexus-bonboniera-1kg-peanut-8ks&do=detail"
+  },
+  {
+   "name": "Lexus Bonboniera 1kg Mix (8ks)",
+   "price": 119.0,
+   "amount": "1 kg",
+   "unit": "",
+   "href": "/cs/novinky?url=lexus-bonboniera-1kg-mix-8ks&do=detail"
+  },
+  {
+   "name": "Lexus Bonboniera 1kg Hazelnut (8ks)",
+   "price": 119.0,
+   "amount": "1 kg",
+   "unit": "",
+   "href": "/cs/novinky?url=lexus-bonboniera-1kg-hazelnut-8ks&do=detail"
+  },
+  {
+   "name": "Lexus Bonboniera 1kg Caramel (8ks)",
+   "price": 119.0,
+   "amount": "1 kg",
+   "unit": "",
+   "href": "/cs/novinky?url=lexus-bonboniera-1kg-caramel-8ks&do=detail"
+  },
+  {
+   "name": "Lexus Bonboniera 1kg Coffee (8ks)",
+   "price": 119.0,
+   "amount": "1 kg",
+   "unit": "",
+   "href": "/cs/novinky?url=lexus-bonboniera-1kg-coffee-8ks&do=detail"
+  },
+  {
+   "name": "Lexus Bonboniera 1kg Milk Cream …",
+   "price": 119.0,
+   "amount": "1 kg",
+   "unit": "",
+   "href": "/cs/novinky?url=lexus-bonboniera-1kg-milk-cream-8ks&do=detail"
+  },
+  {
+   "name": "D-Retro 200g Biscuits Snow (8ks)",
+   "price": 38.0,
+   "amount": "200 g",
+   "unit": "",
+   "href": "/cs/novinky?url=d-retro-200g-biscuits-snow-8ks&do=detail",
+   "ean": "3800201510554"
+  },
+  {
+   "name": "D-Retro 200g Biscuits Snow Walnuts…",
+   "price": 38.0,
+   "amount": "200 g",
+   "unit": "",
+   "href": "/cs/novinky?url=d-retro-200g-biscuits-snow-walnuts-8ks&do=detail",
+   "ean": "3800201510578"
+  },
+  {
+   "name": "Bulgari 150g Marshmallow Srdíčka …",
+   "price": 34.09,
+   "amount": "150 g",
+   "unit": "",
+   "href": "/cs/novinky?url=bulgari-150g-marshmallow-srdicka-12ks&do=detail",
+   "ean": "8006908014097"
+  },
+  {
+   "name": "Bulgari 150g Marshmallow…",
+   "price": 34.09,
+   "amount": "150 g",
+   "unit": "",
+   "href": "/cs/novinky?url=bulgari-150g-marshmallow-sedmikrasky-12ks&do=detail",
+   "ean": "8006908016558"
+  },
+  {
+   "name": "HAN NGAN Lexus Bonboniera 0,5kg…",
+   "price": 50.0,
+   "amount": "0,5 kg",
+   "unit": "",
+   "href": "/cs/novinky?url=han-ngan-lexus-bonboniera-0-5kg-coffee-12-72-exp-14-1-27&do=detail",
+   "ean": "8699462601997"
+  },
+  {
+   "name": "Bartek 115g Svíčka ve skle…",
+   "price": 47.0,
+   "amount": "115 g",
+   "unit": "",
+   "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-cinnamon-delights-12-krt&do=detail",
+   "ean": "5901685086905"
+  },
+  {
+   "name": "Bartek 115g Svíčka ve skle…",
+   "price": 47.0,
+   "amount": "115 g",
+   "unit": "",
+   "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-blessing-of-angels-12-krt&do=detail",
+   "ean_bal": "5901685086875"
+  },
+  {
+   "name": "Bartek 115g Svíčka ve skle…",
+   "price": 47.0,
+   "amount": "115 g",
+   "unit": "",
+   "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-midnight-village-12-krt&do=detail",
+   "ean": "5901685086707"
+  },
+  {
+   "name": "Radegast 0,5L 12° Plech (24/72)",
+   "price": 21.98,
+   "amount": "0,5 l",
+   "unit": "",
+   "href": "/cs/novinky?url=radegast-0-5l-12-plech-24-72&do=detail",
+   "ean": "8594404010328"
+  },
+  {
+   "name": "UKRA Brandy Shustov 0,5L 3YO Le…",
+   "price": 205.0,
+   "amount": "0,5 l",
+   "unit": "",
+   "href": "/cs/novinky?url=ukra-brandy-shustov-0-5l-3yo-le-grand-royal-40-8s&do=detail",
+   "ean": "4820000949408"
+  },
+  {
+   "name": "HAN NGAN QLove 120g Blossom Garden…",
+   "price": 42.5,
+   "amount": "120 g",
+   "unit": "",
+   "href": "/cs/novinky?url=han-ngan-qlove-120g-blossom-garden-assorted-mixed-sacek-24ks-45769-exp-1-27&do=detail",
+   "ean": "4712928345762"
+  },
+  {
+   "name": "Fontaine de la Reine 0,5L (12/133)",
+   "price": 5.4,
+   "amount": "0,5 l",
+   "unit": "",
+   "href": "/cs/novinky?url=fontaine-de-la-reine-0-5l-12-133&do=detail",
+   "ean": "3476220000323",
+   "ean_bal": "3476220000330"
+  },
+  {
+   "name": "HAN NGAN QLove 120g Creme Brulee…",
+   "price": 10.0,
+   "amount": "120 g",
+   "unit": "",
+   "href": "/cs/novinky?url=han-ngan-qlove-120g-creme-brulee-sacek-24ks-45745-exp-1-27&do=detail",
+   "ean": "8437000209980"
+  },
+  {
    "name": "Jameson 0,7L Caskmates Stout…",
    "price": 620.0,
    "amount": "0,7 l",
@@ -8048,7 +8457,7 @@
   },
   {
    "name": "Lexus Bonboniera 0,5kg Coconut (12…",
-   "price": 74.91,
+   "price": 79.5,
    "amount": "0,5 kg",
    "unit": "",
    "href": "/cs/novinky?url=lexus-bonboniera-0-5kg-coconut-12-72&do=detail",
@@ -8122,7 +8531,7 @@
    "price": 11.5,
    "amount": "0,25 l",
    "unit": "",
-   "href": "/cs/novinky?url=ukra-x-energy-drink-0-25l-classic-24&do=detail",
+   "href": "/cs/novinky?url=ukra-x-energy-drink-0-25l-classic-24-108&do=detail",
    "ean": "5905689314408"
   },
   {
@@ -8130,7 +8539,7 @@
    "price": 11.5,
    "amount": "0,25 l",
    "unit": "",
-   "href": "/cs/novinky?url=ukra-x-energy-drink-0-25l-mojito-24&do=detail",
+   "href": "/cs/novinky?url=ukra-x-energy-drink-0-25l-mojito-24-108&do=detail",
    "ean": "5905689314361"
   },
   {
@@ -8168,7 +8577,7 @@
   },
   {
    "name": "Coca Cola 0,33L CZ Creamy Vanilla…",
-   "price": 11.75,
+   "price": 12.5,
    "amount": "0,33 l",
    "unit": "",
    "href": "/cs/novinky?url=coca-cola-0-33l-cz-creamy-vanilla-zero-24-110&do=detail",
@@ -8177,7 +8586,7 @@
   },
   {
    "name": "Coca Cola 0,33L CZ Creamy Vanilla …",
-   "price": 11.75,
+   "price": 12.5,
    "amount": "0,33 l",
    "unit": "",
    "href": "/cs/novinky?url=coca-cola-0-33l-cz-creamy-vanilla-24-110&do=detail",
@@ -8442,7 +8851,7 @@
   },
   {
    "name": "Coca Cola 0,33L EU Cherry (24/108)…",
-   "price": 12.5,
+   "price": 11.5,
    "amount": "0,33 l",
    "unit": "",
    "href": "/cs/novinky?url=coca-cola-0-33l-eu-cherry-24-108-lon-lun&do=detail"
@@ -9413,11 +9822,11 @@
    "ean": "8594008046426"
   },
   {
-   "name": "Nen OL1 Bílý/White (10ks)",
-   "price": 10.25,
-   "amount": "10 ks",
+   "name": "Svíčky Admit (Nen) OL1 Bílý (White…",
+   "price": 9.5,
+   "amount": "",
    "unit": "",
-   "href": "/cs/novinky?url=nen-ol1-bily-white-10ks&do=detail"
+   "href": "/cs/novinky?url=svicky-admit-nen-ol1-bily-white-10ks&do=detail"
   },
   {
    "name": "Capri Sun 0,33L Elektrolyty…",
@@ -9594,7 +10003,7 @@
    "price": 18.5,
    "amount": "100 g",
    "unit": "",
-   "href": "/cs/novinky?url=asia-ranli-shougong-100g-marakuja-banh-bong-lan-32ks&do=detail"
+   "href": "/cs/novinky?url=asia-ranli-shougong-100g-marakuja-banh-bong-lan-banh-vuong-32ks&do=detail"
   },
   {
    "name": "Pravda Vodka 0,7L Espresso+2…",
@@ -10051,7 +10460,7 @@
   },
   {
    "name": "PomBar 155g Crizzlies Sour Cream &…",
-   "price": 48.52,
+   "price": 46.5,
    "amount": "155 g",
    "unit": "",
    "href": "/cs/novinky?url=pombar-155g-crizzlies-sour-cream-onion-15-40&do=detail",
@@ -10060,7 +10469,7 @@
   },
   {
    "name": "PomBar 155g Crizzlies Original (15…",
-   "price": 48.52,
+   "price": 46.5,
    "amount": "155 g",
    "unit": "",
    "href": "/cs/novinky?url=pombar-155g-crizzlies-original-15-40&do=detail",
@@ -10205,21 +10614,21 @@
    "price": 18.5,
    "amount": "100 g",
    "unit": "",
-   "href": "/cs/novinky?url=asia-ranli-shougong-100g-banan-banh-bong-lan-32ks&do=detail"
+   "href": "/cs/novinky?url=asia-ranli-shougong-100g-banan-banh-bong-lan-banh-vuong-32ks&do=detail"
   },
   {
    "name": "Asia Ranli Shougong 100g- Mango …",
    "price": 18.5,
    "amount": "100 g",
    "unit": "",
-   "href": "/cs/novinky?url=asia-ranli-shougong-100g-mango-banh-bong-lan-32ks&do=detail"
+   "href": "/cs/novinky?url=asia-ranli-shougong-100g-mango-banh-bong-lan-banh-vuong-32ks&do=detail"
   },
   {
    "name": "Asia Ranli Shougong 100g- Liči …",
    "price": 18.5,
    "amount": "100 g",
    "unit": "",
-   "href": "/cs/novinky?url=asia-ranli-shougong-100g-lici-banh-bong-lan-32ks&do=detail"
+   "href": "/cs/novinky?url=asia-ranli-shougong-100g-lici-banh-bong-lan-banh-vuong-32ks&do=detail"
   },
   {
    "name": "Pringles 165g Santa Secret (19/48)",
@@ -11231,12 +11640,12 @@
    "ean": "8700216605281"
   },
   {
-   "name": "Jar Kapsle na nádobí 30MM (3ks)",
+   "name": "Jar Kapsle na nádobí 30MM 31ks …",
    "price": 26.45,
-   "amount": "3 ks",
+   "amount": "31 ks",
    "unit": "",
-   "href": "/cs/novinky?url=jar-kapsle-na-nadobi-30mm-3ks&do=detail",
-   "ean": "8006530408790"
+   "href": "/cs/novinky?url=jar-kapsle-na-nadobi-30mm-31ks-5ks&do=detail",
+   "ean": "8006530100977"
   },
   {
    "name": "Lenor perličky 195g Japanese…",
@@ -12789,7 +13198,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Sekt a…",
-   "price": 61.11,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-sekt-a-maliny-6ks&do=detail",
@@ -12797,7 +13206,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Pivoňka a…",
-   "price": 63.86,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-pivonka-a-jasminovy-kvet-6ks&do=detail",
@@ -12805,7 +13214,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň…",
-   "price": 63.86,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-levandulova-louka-a-modre-kvety-6ks&do=detail",
@@ -12813,7 +13222,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň…",
-   "price": 61.11,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-eukalyptus-a-cedrove-drevo-6ks&do=detail",
@@ -12821,7 +13230,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Broskvový…",
-   "price": 61.11,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-broskvovy-kvet-6ks&do=detail",
@@ -12977,7 +13386,7 @@
   },
   {
    "name": "Coca Cola 0,33L CZ Zero Zero (24…",
-   "price": 11.75,
+   "price": 12.5,
    "amount": "0,33 l",
    "unit": "",
    "href": "/cs/novinky?url=coca-cola-0-33l-cz-zero-zero-24-110&do=detail",
@@ -17382,6 +17791,14 @@
    "ean": "8700216722933"
   },
   {
+   "name": "Lenor perličky150g Gold Orchid 12PD",
+   "price": 72.58,
+   "amount": "150 g",
+   "unit": "",
+   "href": "/cs/novinky?url=lenor-perlicky150g-gold-orchid-12pd&do=detail",
+   "ean": "8700216708562"
+  },
+  {
    "name": "USA Sprite 0,355L Winter Cranberry…",
    "price": 22.9,
    "amount": "0,355 l",
@@ -17608,11 +18025,11 @@
    "ean_bal": "8594029221437"
   },
   {
-   "name": "Admit WK150 Červený/Red 140G*10ks",
-   "price": 12.9,
-   "amount": "140 g",
+   "name": "Svíčky Admit WK150 Červený (Red)…",
+   "price": 11.6,
+   "amount": "",
    "unit": "",
-   "href": "/cs/novinky?url=admit-wk150-cerveny-red-140g-10ks&do=detail",
+   "href": "/cs/novinky?url=svicky-admit-wk150-cerveny-red-140g-10ks&do=detail",
    "ean": "5903856970112"
   },
   {
@@ -17733,7 +18150,7 @@
   },
   {
    "name": "Palette Barva na vlasy 9-1 (10ks)",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/novinky?url=palette-barva-na-vlasy-9-1-10ks&do=detail",
@@ -17748,7 +18165,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Linen &…",
-   "price": 69.4,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-linen-white-orchid-6ks&do=detail",
@@ -17849,13 +18266,6 @@
    "unit": "",
    "href": "/cs/novinky?url=ariel-gel-2-25l-color-50pd-4-48&do=detail",
    "ean": "8700216691475"
-  },
-  {
-   "name": "Glico Pocky 39g Milk Chocolate (10…",
-   "price": 20.3,
-   "amount": "39 g",
-   "unit": "",
-   "href": "/cs/novinky?url=glico-pocky-39g-milk-chocolate-10-120ks&do=detail"
   },
   {
    "name": "Glico Pocky 39g Milk (10/120ks)",
@@ -18131,7 +18541,7 @@
   },
   {
    "name": "Nivea Mýdlo tuhé 90g Creme Soft …",
-   "price": 19.3,
+   "price": 22.8,
    "amount": "90 g",
    "unit": "",
    "href": "/cs/novinky?url=nivea-mydlo-tuhe-90g-creme-soft-6ks&do=detail",
@@ -18139,7 +18549,7 @@
   },
   {
    "name": "Nivea Mýdlo tuhé 90g Creme Care …",
-   "price": 19.3,
+   "price": 22.8,
    "amount": "90 g",
    "unit": "",
    "href": "/cs/novinky?url=nivea-mydlo-tuhe-90g-creme-care-6ks&do=detail",
@@ -19228,7 +19638,7 @@
   },
   {
    "name": "Ajax 1L Ultra Lavender (12ks)",
-   "price": 38.82,
+   "price": 37.23,
    "amount": "1 l",
    "unit": "",
    "href": "/cs/novinky?url=ajax-1l-ultra-lavender-12ks&do=detail",
@@ -20065,19 +20475,19 @@
    "ean": "4000196031051"
   },
   {
-   "name": "QLove 120g Strawberry Traditional…",
+   "name": "HAN NGAN QLove 120g Strawberry…",
    "price": 50.9,
    "amount": "120 g",
    "unit": "",
-   "href": "/cs/novinky?url=qlove-120g-strawberry-traditional-sacek-24ks&do=detail",
+   "href": "/cs/novinky?url=han-ngan-qlove-120g-strawberry-traditional-sacek-24ks-exp-1-27&do=detail",
    "ean": "4712928345694"
   },
   {
-   "name": "QLove 120g Traditional Sáček (24ks…",
+   "name": "HAN NGAN QLove 120g Traditional…",
    "price": 50.9,
    "amount": "120 g",
    "unit": "",
-   "href": "/cs/novinky?url=qlove-120g-traditional-sacek-24ks-45684&do=detail",
+   "href": "/cs/novinky?url=han-ngan-qlove-120g-traditional-sacek-24ks-45684-exp-1-27&do=detail",
    "ean": "4712928345687"
   },
   {
@@ -20146,7 +20556,7 @@
   },
   {
    "name": "Playboy S. Gel 250ml My Rules …",
-   "price": 53.99,
+   "price": 55.87,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/novinky?url=playboy-s-gel-250ml-my-rules-12ks&do=detail",
@@ -20154,7 +20564,7 @@
   },
   {
    "name": "Playboy S. Gel 250ml Golden Era …",
-   "price": 53.99,
+   "price": 55.87,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/novinky?url=playboy-s-gel-250ml-golden-era-12ks&do=detail",
@@ -20337,14 +20747,14 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Sparkling…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-sparkling-rose-raspberry-6ks&do=detail"
   },
   {
    "name": "Airwick 19ml Elek. náplň Pumpkin &…",
-   "price": 69.4,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-pumpkin-winter-spice-6ks&do=detail",
@@ -20352,7 +20762,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Winter…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-winter-punch-spices-6ks&do=detail",
@@ -20360,7 +20770,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Ocean…",
-   "price": 69.4,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-ocean-waves-sea-salt-6ks&do=detail",
@@ -20368,7 +20778,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Cherry…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-cherry-blosson-raspberry-6ks&do=detail",
@@ -20376,7 +20786,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Vanilka a…",
-   "price": 69.4,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-vanilka-a-bambucke-maslo-6ks&do=detail",
@@ -20588,15 +20998,15 @@
    "ean": "3616307160902"
   },
   {
-   "name": "Nen TLA30 (33ks) 31g",
-   "price": 33.5,
-   "amount": "33 ks",
+   "name": "Svíčky Admit čajové (Nen) TLA30…",
+   "price": 32.0,
+   "amount": "",
    "unit": "",
-   "href": "/cs/novinky?url=nen-tla30-33ks-31g&do=detail"
+   "href": "/cs/novinky?url=svicky-admit-cajove-nen-tla30-31g-30ks&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle Royal…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-royal-wings-12-krt&do=detail",
@@ -20604,7 +21014,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Winter…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-winter-teddy-bear-12-krt&do=detail",
@@ -20836,7 +21246,7 @@
   },
   {
    "name": "Merci 250g EU Intense Selection …",
-   "price": 83.0,
+   "price": 86.65,
    "amount": "250 g",
    "unit": "",
    "href": "/cs/novinky?url=merci-250g-eu-intense-selection-10ks-nau&do=detail",
@@ -20844,7 +21254,7 @@
   },
   {
    "name": "Merci 250g EU Mousse Selection …",
-   "price": 83.0,
+   "price": 86.65,
    "amount": "250 g",
    "unit": "",
    "href": "/cs/novinky?url=merci-250g-eu-mousse-selection-10ks-tim&do=detail",
@@ -22928,7 +23338,7 @@
   },
   {
    "name": "Lenor aviváž 987ml Desirable 47pd …",
-   "price": 90.5,
+   "price": 96.36,
    "amount": "987 ml",
    "unit": "",
    "href": "/cs/novinky?url=lenor-avivaz-987ml-desirable-47pd-12-144&do=detail",
@@ -22936,7 +23346,7 @@
   },
   {
    "name": "Lenor aviváž 987ml Sicilia 47pd …",
-   "price": 90.5,
+   "price": 83.53,
    "amount": "987 ml",
    "unit": "",
    "href": "/cs/novinky?url=lenor-avivaz-987ml-sicilia-47pd-12-144&do=detail",
@@ -22944,7 +23354,7 @@
   },
   {
    "name": "Lenor aviváž 987ml Capri 47pd (12…",
-   "price": 90.5,
+   "price": 83.53,
    "amount": "987 ml",
    "unit": "",
    "href": "/cs/novinky?url=lenor-avivaz-987ml-capri-47pd-12-144&do=detail",
@@ -22992,7 +23402,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic White…",
-   "price": 75.8,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-250ml-freshmatic-white-flowers-6ks&do=detail",
@@ -23255,7 +23665,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Dubai…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-dubai-chocolate-12-krt&do=detail"
@@ -23816,7 +24226,7 @@
   },
   {
    "name": "Ariel gel 1,125L Color 25pd (4/80)",
-   "price": 111.13,
+   "price": 110.16,
    "amount": "1,125 l",
    "unit": "",
    "href": "/cs/novinky?url=ariel-gel-1-125l-color-25pd-4-80&do=detail",
@@ -23971,7 +24381,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-flowering-madness-12-krt&do=detail",
@@ -23997,7 +24407,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Mango &…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-mango-fruits-12-krt&do=detail",
@@ -24006,7 +24416,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Floral…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-floral-garden-12-krt&do=detail",
@@ -24051,7 +24461,7 @@
    "price": 18.5,
    "amount": "100 g",
    "unit": "",
-   "href": "/cs/novinky?url=asia-ranli-shougong-100g-cheese-banh-bong-lan-40ks&do=detail"
+   "href": "/cs/novinky?url=asia-ranli-shougong-100g-cheese-banh-bong-lan-banh-vuong-40ks&do=detail"
   },
   {
    "name": "Asia Ranli Shougong 100g- Mango …",
@@ -24863,7 +25273,7 @@
   },
   {
    "name": "Damla 900g Multifruit (8ks)",
-   "price": 91.0,
+   "price": 84.0,
    "amount": "900 g",
    "unit": "",
    "href": "/cs/novinky?url=damla-900g-multifruit-8ks&do=detail"
@@ -25363,7 +25773,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Spring…",
-   "price": 75.8,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-250ml-freshmatic-spring-breeze-island-vanilla-6ks&do=detail",
@@ -25371,7 +25781,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Sparking…",
-   "price": 58.6,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-250ml-freshmatic-sparking-peach-apricot-6ks&do=detail",
@@ -25387,7 +25797,7 @@
   },
   {
    "name": "Palette Barva na vlasy 6-88 (10ks)",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/novinky?url=palette-barva-na-vlasy-6-88-10ks&do=detail"
@@ -25464,11 +25874,11 @@
    "href": "/cs/novinky?url=fizi-coco-320ml-boris-ultra-4x6ks&do=detail"
   },
   {
-   "name": "Orbit 14g EU Strong Mint (30ks…",
+   "name": "Het Han Orbit 14g EU Strong Mint …",
    "price": 8.0,
    "amount": "14 g",
    "unit": "",
-   "href": "/cs/novinky?url=orbit-14g-eu-strong-mint-30ks-20disp&do=detail",
+   "href": "/cs/novinky?url=het-han-orbit-14g-eu-strong-mint-30ks-20disp-exp-11-26&do=detail",
    "ean": "4009900465373"
   },
   {
@@ -25560,7 +25970,7 @@
   },
   {
    "name": "Crazy Wolf 0,25L Apple (15ks)",
-   "price": 9.85,
+   "price": 9.0,
    "amount": "0,25 l",
    "unit": "",
    "href": "/cs/novinky?url=crazy-wolf-0-25l-apple-15ks&do=detail"
@@ -25591,35 +26001,35 @@
   },
   {
    "name": "Palette Barva na vlasy 5-1 (10ks)",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/novinky?url=palette-barva-na-vlasy-5-1-10ks&do=detail"
   },
   {
    "name": "Palette Barva na vlasy 7-1 (10ks)",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/novinky?url=palette-barva-na-vlasy-7-1-10ks&do=detail"
   },
   {
    "name": "Palette Barva na vlasy 7-21 (10ks)",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/novinky?url=palette-barva-na-vlasy-7-21-10ks&do=detail"
   },
   {
    "name": "Palette Barva na vlasy 12-21 (10ks)",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/novinky?url=palette-barva-na-vlasy-12-21-10ks&do=detail"
   },
   {
    "name": "Palette Barva na vlasy 10-19 (10ks)",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/novinky?url=palette-barva-na-vlasy-10-19-10ks&do=detail"
@@ -25772,7 +26182,7 @@
   },
   {
    "name": "Crazy Wolf 0,25L Tropical (15ks)",
-   "price": 9.85,
+   "price": 9.0,
    "amount": "0,25 l",
    "unit": "",
    "href": "/cs/novinky?url=crazy-wolf-0-25l-tropical-15ks&do=detail"
@@ -25828,7 +26238,7 @@
   },
   {
    "name": "Lenor aviváž 987ml Gold Orchid &…",
-   "price": 90.5,
+   "price": 70.66,
    "amount": "987 ml",
    "unit": "",
    "href": "/cs/novinky?url=lenor-avivaz-987ml-gold-orchid-vanilla-47pd-12-144&do=detail",
@@ -25836,7 +26246,7 @@
   },
   {
    "name": "Lenor aviváž 987ml Ruby Jasmine…",
-   "price": 90.5,
+   "price": 96.36,
    "amount": "987 ml",
    "unit": "",
    "href": "/cs/novinky?url=lenor-avivaz-987ml-ruby-jasmine-47pd-12-144&do=detail",
@@ -25844,7 +26254,7 @@
   },
   {
    "name": "Lenor aviváž 987ml Diamond & Lotus…",
-   "price": 90.5,
+   "price": 70.66,
    "amount": "987 ml",
    "unit": "",
    "href": "/cs/novinky?url=lenor-avivaz-987ml-diamond-lotus-47pd-12-144&do=detail",
@@ -25852,7 +26262,7 @@
   },
   {
    "name": "Lenor aviváž 987ml Floral Bouquet…",
-   "price": 71.28,
+   "price": 70.66,
    "amount": "987 ml",
    "unit": "",
    "href": "/cs/novinky?url=lenor-avivaz-987ml-floral-bouquet-47pd-12-144&do=detail",
@@ -26909,15 +27319,15 @@
    "ean_bal": "8594187145125"
   },
   {
-   "name": "Elvan Truffle 1kg COFFEE (8/72)",
-   "price": 118.0,
+   "name": "Elvan Truffle 1kg Coffee (8/72)",
+   "price": 115.0,
    "amount": "1 kg",
    "unit": "",
    "href": "/cs/novinky?url=elvan-truffle-1kg-coffee-8-72&do=detail"
   },
   {
    "name": "Elvan Truffle 1kg Caramel (8/60)",
-   "price": 118.0,
+   "price": 115.0,
    "amount": "1 kg",
    "unit": "",
    "href": "/cs/novinky?url=elvan-truffle-1kg-caramel-8-60&do=detail",
@@ -26925,7 +27335,7 @@
   },
   {
    "name": "Elvan Truffle 1kg Coconut (8/60)",
-   "price": 118.0,
+   "price": 115.0,
    "amount": "1 kg",
    "unit": "",
    "href": "/cs/novinky?url=elvan-truffle-1kg-coconut-8-60&do=detail",
@@ -26933,7 +27343,7 @@
   },
   {
    "name": "Elvan Truffle 1kg Strawberry (8/60)",
-   "price": 118.0,
+   "price": 115.0,
    "amount": "1 kg",
    "unit": "",
    "href": "/cs/novinky?url=elvan-truffle-1kg-strawberry-8-60&do=detail",
@@ -26941,7 +27351,7 @@
   },
   {
    "name": "Elvan Truffle 1kg Hazelnut (8/60)",
-   "price": 118.0,
+   "price": 115.0,
    "amount": "1 kg",
    "unit": "",
    "href": "/cs/novinky?url=elvan-truffle-1kg-hazelnut-8-60&do=detail",
@@ -28367,7 +28777,7 @@
   },
   {
    "name": "Crazy Wolf 0,25L Kaktus (15ks)",
-   "price": 9.85,
+   "price": 9.0,
    "amount": "0,25 l",
    "unit": "",
    "href": "/cs/novinky?url=crazy-wolf-0-25l-kaktus-15ks&do=detail"
@@ -28544,7 +28954,7 @@
   },
   {
    "name": "Lipton 0,33L EU Peach (24/110) Lon…",
-   "price": 10.7,
+   "price": 11.0,
    "amount": "0,33 l",
    "unit": "",
    "href": "/cs/novinky?url=lipton-0-33l-eu-peach-24-110-lon-cao&do=detail",
@@ -28884,7 +29294,7 @@
   },
   {
    "name": "Mieszko Eukalyptus 150g bon. Lemon…",
-   "price": 17.1,
+   "price": 16.0,
    "amount": "150 g",
    "unit": "",
    "href": "/cs/novinky?url=mieszko-eukalyptus-150g-bon-lemon-26-64&do=detail",
@@ -29172,7 +29582,7 @@
   },
   {
    "name": "Gillette Holítka Blue2 strojky 5k …",
-   "price": 39.66,
+   "price": 39.31,
    "amount": "",
    "unit": "",
    "href": "/cs/novinky?url=gillette-holitka-blue2-strojky-5k-24ks&do=detail",
@@ -29196,11 +29606,11 @@
    "ean_bal": "8595606210592"
   },
   {
-   "name": "Bohemia 135g Arašídy Extra Pražené…",
-   "price": 38.9,
+   "name": "HAN NGAN Bohemia 135g Arašídy…",
+   "price": 16.0,
    "amount": "135 g",
    "unit": "",
-   "href": "/cs/novinky?url=bohemia-135g-arasidy-extra-prazene-12-190&do=detail",
+   "href": "/cs/novinky?url=han-ngan-bohemia-135g-arasidy-extra-prazene-12-190-exp-27-11-26&do=detail",
    "ean": "8595606210561",
    "ean_bal": "8595606210578"
   },
@@ -29375,28 +29785,28 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Peony…",
-   "price": 50.1,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-peony-pink-sunset-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle For a…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-for-a-loved-one-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle Orchid…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-orchid-phalaenopsis-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle Teddy…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-teddy-bear-shiny-heart-12-krt&do=detail",
@@ -29404,7 +29814,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-chocolate-paradise-12-krt&do=detail",
@@ -33654,7 +34064,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-christmas-gingerbread-town-12-krt&do=detail"
@@ -34346,33 +34756,6 @@
    "ean_bal": "8594057635398"
   },
   {
-   "name": "Lenor perličky 210g Cotton Fresh …",
-   "price": 118.0,
-   "amount": "210 g",
-   "unit": "",
-   "href": "/cs/novinky?url=lenor-perlicky-210g-cotton-fresh-6-144&do=detail",
-   "ean": "8001841182193",
-   "ean_bal": "8001090870216"
-  },
-  {
-   "name": "Lenor perličky 210g Dewy Blossom …",
-   "price": 118.0,
-   "amount": "210 g",
-   "unit": "",
-   "href": "/cs/novinky?url=lenor-perlicky-210g-dewy-blossom-6-144&do=detail",
-   "ean": "8006540995495",
-   "ean_bal": "8006540995457"
-  },
-  {
-   "name": "Lenor perličky 210g Ruby Jasmin (6…",
-   "price": 118.0,
-   "amount": "210 g",
-   "unit": "",
-   "href": "/cs/novinky?url=lenor-perlicky-210g-ruby-jasmin-6-144&do=detail",
-   "ean": "8006540780978",
-   "ean_bal": "8006540780961"
-  },
-  {
    "name": "Lenor aviváž 1200ml Clendula 48pd …",
    "price": 95.5,
    "amount": "1200 ml",
@@ -34855,14 +35238,6 @@
    "unit": "",
    "href": "/cs/novinky?url=super-cobra-400ml-proti-hmyzu-wasp-killer-red-12ks&do=detail",
    "ean": "3179630012534"
-  },
-  {
-   "name": "Naturella Intimky Normal Camomile …",
-   "price": 80.0,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/novinky?url=naturella-intimky-normal-camomile-74ks&do=detail",
-   "ean": "8006540100806"
   },
   {
    "name": "Naturella Intimky Normal Camomile …",
@@ -35880,7 +36255,8 @@
    "price": 15.9,
    "amount": "0,5 l",
    "unit": "",
-   "href": "/cs/novinky?url=ukra-non-stop-0-5l-staalker-fialovy-24-63&do=detail"
+   "href": "/cs/novinky?url=ukra-non-stop-0-5l-staalker-cerveny-24-63&do=detail",
+   "ean": "4820252126336"
   },
   {
    "name": "UKRA Non Stop 0,25L Staalker …",
@@ -38159,7 +38535,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Spring…",
-   "price": 54.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-spring-breeze-island-vanilla-6ks&do=detail",
@@ -38544,19 +38920,19 @@
    "ean": "8720847373243"
   },
   {
-   "name": "Wellaflex Lak 250ml Volume&Repair…",
+   "name": "Wellaflex Lak 250ml Vol & Repair-5…",
    "price": 70.66,
    "amount": "250 ml",
    "unit": "",
-   "href": "/cs/novinky?url=wellaflex-lak-250ml-volume-repair-5-6ks&do=detail",
+   "href": "/cs/novinky?url=wellaflex-lak-250ml-vol-repair-5-6ks&do=detail",
    "ean": "4064666045160"
   },
   {
-   "name": "Wellaflex Lak 250ml Volume 2DNY…",
+   "name": "Wellaflex Lak 250ml Vol 2DNY Extra…",
    "price": 70.66,
    "amount": "250 ml",
    "unit": "",
-   "href": "/cs/novinky?url=wellaflex-lak-250ml-volume-2dny-extra-5-6ks&do=detail",
+   "href": "/cs/novinky?url=wellaflex-lak-250ml-vol-2dny-extra-5-6ks&do=detail",
    "ean": "4064666045115"
   },
   {
@@ -41794,14 +42170,14 @@
    "price": 18.5,
    "amount": "100 g",
    "unit": "",
-   "href": "/cs/novinky?url=asia-ranli-shougong-100g-matcha-banh-bong-lan-32ks&do=detail"
+   "href": "/cs/novinky?url=asia-ranli-shougong-100g-matcha-banh-bong-lan-banh-vuong-32ks&do=detail"
   },
   {
    "name": "Asia Ranli Shougong 100g-…",
    "price": 18.5,
    "amount": "100 g",
    "unit": "",
-   "href": "/cs/novinky?url=asia-ranli-shougong-100g-strawberry-banh-bong-lan-32ks&do=detail"
+   "href": "/cs/novinky?url=asia-ranli-shougong-100g-strawberry-banh-bong-lan-banh-vuong-32ks&do=detail"
   },
   {
    "name": "Asia Ranli Shougong 100g- čokoláda…",
@@ -42046,7 +42422,7 @@
   },
   {
    "name": "Nutella 193g Biscuits (10ks)",
-   "price": 57.7,
+   "price": 61.8,
    "amount": "193 g",
    "unit": "",
    "href": "/cs/novinky?url=nutella-193g-biscuits-10ks&do=detail",
@@ -44924,43 +45300,43 @@
    "ean_bal": "8699141132316"
   },
   {
-   "name": "Svíčky čaj. TL A36 Opium (28ks)",
-   "price": 53.4,
-   "amount": "28 ks",
-   "unit": "",
-   "href": "/cs/novinky?url=svicky-caj-tl-a36-opium-28ks&do=detail"
-  },
-  {
-   "name": "Svíčky čaj. TL A36 Apple Cinnamon …",
-   "price": 53.4,
+   "name": "Svíčky Admit čajové TLA36 Opium …",
+   "price": 50.2,
    "amount": "",
    "unit": "",
-   "href": "/cs/novinky?url=svicky-caj-tl-a36-apple-cinnamon-28ks&do=detail"
+   "href": "/cs/novinky?url=svicky-admit-cajove-tla36-opium-36ks&do=detail"
+  },
+  {
+   "name": "Svíčky Admit čajové TLA36 Apple…",
+   "price": 50.2,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/novinky?url=svicky-admit-cajove-tla36-apple-cinnamon-36ks&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-oriental-wood-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle Pumpkin…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-pumpkin-season-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-tropical-salad-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 50.1,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-blueberry-blend-crema-12-krt&do=detail"
@@ -45368,14 +45744,14 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Cotton &…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-cotton-crisp-air-6ks&do=detail"
   },
   {
    "name": "Airwick 19ml Elek. náplň Flower…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-flower-meadow-spring-breeze-6ks&do=detail"
@@ -46230,7 +46606,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-greentea-pudding-12-krt&do=detail"
@@ -47119,76 +47495,12 @@
    "ean": "5900785939012"
   },
   {
-   "name": "Arola Vůně do vysavače 3ks Vanilla…",
-   "price": 10.0,
-   "amount": "3 ks",
-   "unit": "",
-   "href": "/cs/novinky?url=arola-vune-do-vysavace-3ks-vanilla-24ks&do=detail",
-   "ean": "5900785951045"
-  },
-  {
-   "name": "Arola Vůně do vysavače 3ks Sea …",
-   "price": 10.0,
-   "amount": "3 ks",
-   "unit": "",
-   "href": "/cs/novinky?url=arola-vune-do-vysavace-3ks-sea-24ks&do=detail",
-   "ean": "5900785951205"
-  },
-  {
-   "name": "Arola Vůně do vysavače 3ks…",
-   "price": 10.0,
-   "amount": "3 ks",
-   "unit": "",
-   "href": "/cs/novinky?url=arola-vune-do-vysavace-3ks-lavender-24ks&do=detail",
-   "ean": "5900785951038"
-  },
-  {
-   "name": "Arola Vůně do vysavače 3ks Forest …",
-   "price": 10.0,
-   "amount": "3 ks",
-   "unit": "",
-   "href": "/cs/novinky?url=arola-vune-do-vysavace-3ks-forest-24ks&do=detail",
-   "ean": "5900785951007"
-  },
-  {
    "name": "Arola Vůně do vysavače 3ks Flower …",
    "price": 10.0,
    "amount": "3 ks",
    "unit": "",
    "href": "/cs/novinky?url=arola-vune-do-vysavace-3ks-flower-24ks&do=detail",
    "ean": "5900785951304"
-  },
-  {
-   "name": "Arola Vůně do vysavače 3ks Lily of…",
-   "price": 10.0,
-   "amount": "3 ks",
-   "unit": "",
-   "href": "/cs/novinky?url=arola-vune-do-vysavace-3ks-lily-of-the-valley-24ks&do=detail",
-   "ean": "5900785951021"
-  },
-  {
-   "name": "Arola Vůně do vysavače 3ks Lemon …",
-   "price": 10.0,
-   "amount": "3 ks",
-   "unit": "",
-   "href": "/cs/novinky?url=arola-vune-do-vysavace-3ks-lemon-24ks&do=detail",
-   "ean": "5900785951106"
-  },
-  {
-   "name": "Arola Vůně do vysavače 3ks Lilac …",
-   "price": 10.0,
-   "amount": "3 ks",
-   "unit": "",
-   "href": "/cs/novinky?url=arola-vune-do-vysavace-3ks-lilac-24ks&do=detail",
-   "ean": "5900785951014"
-  },
-  {
-   "name": "Arola Pohlcovač pachů do ledničky…",
-   "price": 15.2,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/novinky?url=arola-pohlcovac-pachu-do-lednicky-magic-cool-12ks&do=detail",
-   "ean": "5900785871015"
   },
   {
    "name": "Studentská Pečeť 31g Oplatka…",
@@ -47218,28 +47530,12 @@
    "ean_bal": "8593893788473"
   },
   {
-   "name": "Arola Osvěžovač do skříně proti…",
-   "price": 19.5,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/novinky?url=arola-osvezovac-do-skrine-proti-molum-lavender-12ks&do=detail",
-   "ean": "5900785915221"
-  },
-  {
    "name": "Arola Osvěžovač do skříně Pure…",
    "price": 15.4,
    "amount": "",
    "unit": "",
    "href": "/cs/novinky?url=arola-osvezovac-do-skrine-pure-oxygen-9-90&do=detail",
    "ean": "5900785871206"
-  },
-  {
-   "name": "Arola Osvěžovač do skříně Pink…",
-   "price": 15.4,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/novinky?url=arola-osvezovac-do-skrine-pink-grapefruit-9-90&do=detail",
-   "ean": "5900785871220"
   },
   {
    "name": "GF Vůně do auta Závěska Vanilla …",
@@ -48346,11 +48642,11 @@
    "ean": "5908241723892"
   },
   {
-   "name": "Svíčky čaj. TL A36 Christmas (28ks)",
-   "price": 53.4,
-   "amount": "28 ks",
+   "name": "Svíčky Admit čajové TLA36…",
+   "price": 50.2,
+   "amount": "",
    "unit": "",
-   "href": "/cs/novinky?url=svicky-caj-tl-a36-christmas-28ks&do=detail",
+   "href": "/cs/novinky?url=svicky-admit-cajove-tla36-christmas-36ks&do=detail",
    "ean": "5904378968342"
   },
   {
@@ -48465,65 +48761,65 @@
    "ean": "1230000131384"
   },
   {
-   "name": "Admit Svíčka ve skle 85g Autumn …",
+   "name": "Svíčka Admit ve skle 85g Autumn …",
    "price": 25.49,
    "amount": "85 g",
    "unit": "",
-   "href": "/cs/novinky?url=admit-svicka-ve-skle-85g-autumn-12-krt&do=detail"
+   "href": "/cs/novinky?url=svicka-admit-ve-skle-85g-autumn-12-krt&do=detail"
   },
   {
-   "name": "Admit Svíčka ve skle 85g Berry (12…",
+   "name": "Svíčka Admit ve skle 85g Berry (12…",
    "price": 25.49,
    "amount": "85 g",
    "unit": "",
-   "href": "/cs/novinky?url=admit-svicka-ve-skle-85g-berry-12-krt&do=detail"
+   "href": "/cs/novinky?url=svicka-admit-ve-skle-85g-berry-12-krt&do=detail"
   },
   {
-   "name": "Admit Svíčka ve skle 85g Cherubs …",
+   "name": "Svíčka Admit ve skle 85g Cherubs …",
    "price": 25.49,
    "amount": "85 g",
    "unit": "",
-   "href": "/cs/novinky?url=admit-svicka-ve-skle-85g-cherubs-12-krt&do=detail",
+   "href": "/cs/novinky?url=svicka-admit-ve-skle-85g-cherubs-12-krt&do=detail",
    "ean": "5901969630527"
   },
   {
-   "name": "Admit Svíčka ve skle 85g Christmas…",
+   "name": "Svíčka Admit ve skle 85g Christmas…",
    "price": 25.49,
    "amount": "85 g",
    "unit": "",
-   "href": "/cs/novinky?url=admit-svicka-ve-skle-85g-christmas-balls-12-krt&do=detail",
+   "href": "/cs/novinky?url=svicka-admit-ve-skle-85g-christmas-balls-12-krt&do=detail",
    "ean": "5901969639261"
   },
   {
-   "name": "Admit Svíčka ve skle 85g Snowman …",
+   "name": "Svíčka Admit ve skle 85g Snowman …",
    "price": 25.49,
    "amount": "85 g",
    "unit": "",
-   "href": "/cs/novinky?url=admit-svicka-ve-skle-85g-snowman-12-krt&do=detail",
+   "href": "/cs/novinky?url=svicka-admit-ve-skle-85g-snowman-12-krt&do=detail",
    "ean": "5901969633863"
   },
   {
-   "name": "Admit Svíčka ve skle 85g Violet…",
+   "name": "Svíčka Admit ve skle 85g Violet…",
    "price": 25.49,
    "amount": "85 g",
    "unit": "",
-   "href": "/cs/novinky?url=admit-svicka-ve-skle-85g-violet-design-12-krt&do=detail",
+   "href": "/cs/novinky?url=svicka-admit-ve-skle-85g-violet-design-12-krt&do=detail",
    "ean": "5901969630558"
   },
   {
-   "name": "Admit Svíčka ve skle 85g Christmas…",
+   "name": "Svíčka Admit ve skle 85g Christmas…",
    "price": 25.49,
    "amount": "85 g",
    "unit": "",
-   "href": "/cs/novinky?url=admit-svicka-ve-skle-85g-christmas-tree-12-krt&do=detail",
+   "href": "/cs/novinky?url=svicka-admit-ve-skle-85g-christmas-tree-12-krt&do=detail",
    "ean": "5901969633832"
   },
   {
-   "name": "Admit Svíčka ve skle 85g Christmas…",
+   "name": "Svíčka Admit ve skle 85g Christmas…",
    "price": 25.49,
    "amount": "85 g",
    "unit": "",
-   "href": "/cs/novinky?url=admit-svicka-ve-skle-85g-christmas-witraz-12-krt&do=detail",
+   "href": "/cs/novinky?url=svicka-admit-ve-skle-85g-christmas-witraz-12-krt&do=detail",
    "ean": "5908260617868"
   },
   {
@@ -48853,7 +49149,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Paradise…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-paradise-island-sicilian-bergamot-orange-blossom-6ks&do=detail",
@@ -48862,14 +49158,14 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Life Sc.…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-life-sc-white-flowers-melon-vanilla-6ks&do=detail"
   },
   {
    "name": "Airwick 19ml Elek. náplň Vanilla…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-vanilla-cookie-6-krt&do=detail",
@@ -48878,7 +49174,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Paradise…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-paradise-island-maldives-mango-peach-spritz-6ks&do=detail",
@@ -48887,7 +49183,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Sea Mist …",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-sea-mist-blue-minerals-6ks&do=detail",
@@ -48896,7 +49192,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Fresh…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-19ml-elek-napln-fresh-rasp-blooming-citrus-6ks&do=detail",
@@ -48905,7 +49201,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Matcha…",
-   "price": 50.1,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-matcha-greentea-12-krt&do=detail",
@@ -48913,35 +49209,35 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-lavender-fields-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle Garden…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-garden-candle-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-lavender-kiss-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle Home…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-home-sweet-home-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle Cherry…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-cherry-blossom-12-krt&do=detail",
@@ -48949,7 +49245,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Teddy…",
-   "price": 50.1,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-teddy-bear-12-krt&do=detail",
@@ -48957,21 +49253,21 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-blooming-season-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-fruitfull-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle Dream &…",
-   "price": 50.1,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-dream-calmness-12-krt&do=detail"
@@ -48985,35 +49281,35 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Coffee…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-coffee-roasted-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-wellness-beauty-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 50.1,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-tropical-twist-mixed-r-p-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle Fruit…",
-   "price": 50.1,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-fruit-muffins-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-lavender-12-krt&do=detail"
@@ -50086,7 +50382,7 @@
   },
   {
    "name": "TP Soft & Exclusive 3vrst. 8ks (8…",
-   "price": 39.94,
+   "price": 39.59,
    "amount": "8 ks",
    "unit": "",
    "href": "/cs/novinky?url=tp-soft-exclusive-3vrst-8ks-8-240&do=detail",
@@ -50095,7 +50391,7 @@
   },
   {
    "name": "TP Soft & Exclusive 3vrst. 4ks (16…",
-   "price": 19.92,
+   "price": 19.75,
    "amount": "4 ks",
    "unit": "",
    "href": "/cs/novinky?url=tp-soft-exclusive-3vrst-4ks-16-480&do=detail",
@@ -50440,7 +50736,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Winter…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-winter-reindeers-12-krt&do=detail",
@@ -50448,28 +50744,28 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Holiday…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-holiday-cakes-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 50.1,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-christmas-eve-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle Secrets…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-secrets-of-the-raphael-angel-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle Golden…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-golden-christmas-12-krt&do=detail",
@@ -50477,28 +50773,28 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Warm -…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-warm-cosy-home-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-christmas-flower-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 50.1,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-scaninavian-christmas-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-christmas-stories-12-krt&do=detail",
@@ -50506,7 +50802,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 50.1,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-christmas-sweet-12-krt&do=detail",
@@ -50514,14 +50810,14 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-cinnamon-orange-pomegranat-12-krt&do=detail"
   },
   {
    "name": "Bartek 115g Svíčka ve skle Winter…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/novinky?url=bartek-115g-svicka-ve-skle-winter-owis-12-krt&do=detail",
@@ -50568,6 +50864,13 @@
    "unit": "",
    "href": "/cs/novinky?url=cozy-455ml-tra-dao-sa-broskev-24ks-10-26&do=detail",
    "ean": "8936010532106"
+  },
+  {
+   "name": "HAN NGAN Fizi Jelly 62g Lychee …",
+   "price": 15.65,
+   "amount": "62 g",
+   "unit": "",
+   "href": "/cs/novinky?url=han-ngan-fizi-jelly-62g-lychee-30ks-thach-exp-12-26&do=detail"
   },
   {
    "name": "Cozy 455ml Tra Vai (Liči) (24ks)",
@@ -51247,7 +51550,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Sandal…",
-   "price": 45.42,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-250ml-freshmatic-sandal-wood-6ks&do=detail",
@@ -51256,7 +51559,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Vanilla …",
-   "price": 58.6,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-250ml-freshmatic-vanilla-6ks&do=detail",
@@ -51265,7 +51568,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Morning…",
-   "price": 45.4,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-250ml-freshmatic-morning-dew-6ks&do=detail",
@@ -51274,7 +51577,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Summer…",
-   "price": 45.4,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/novinky?url=airwick-250ml-freshmatic-summer-berries-6ks&do=detail",
@@ -51776,427 +52079,6 @@
    "href": "/cs/novinky?url=papilion-120-klip-vlh-ubrousky-tropic-flowers-18ks&do=detail"
   },
   {
-   "name": "Liola 72ks Klip dětské vlhč.…",
-   "price": 15.2,
-   "amount": "72 ks",
-   "unit": "",
-   "href": "/cs/novinky?url=liola-72ks-klip-detske-vlhc-ubrousky-36ks&do=detail",
-   "ean": "8697817873099"
-  },
-  {
-   "name": "Freshmaker 72ks Klip dětské vlhč.…",
-   "price": 18.9,
-   "amount": "72 ks",
-   "unit": "",
-   "href": "/cs/novinky?url=freshmaker-72ks-klip-detske-vlhc-ubrousky-mix-fialovy-modry-24ks&do=detail",
-   "ean": "8697817871521"
-  },
-  {
-   "name": "Freshmaker 100ks Klip vlhč.…",
-   "price": 22.37,
-   "amount": "100 ks",
-   "unit": "",
-   "href": "/cs/novinky?url=freshmaker-100ks-klip-vlhc-ubrousky-ovoce-mix-24ks&do=detail",
-   "ean": "8697817871842"
-  },
-  {
-   "name": "Freshmaker 100ks Klip vlhč.…",
-   "price": 22.57,
-   "amount": "100 ks",
-   "unit": "",
-   "href": "/cs/novinky?url=freshmaker-100ks-klip-vlhc-ubrousky-hermanek-24ks&do=detail",
-   "ean": "8697817871323"
-  },
-  {
-   "name": "Cit aviváž 2L Vanilla Field (žlutá…",
-   "price": 44.46,
-   "amount": "2 l",
-   "unit": "",
-   "href": "/cs/novinky?url=cit-avivaz-2l-vanilla-field-zluta-6ks&do=detail",
-   "ean": "8595030069223"
-  },
-  {
-   "name": "Cit aviváž 2L Lavender Field …",
-   "price": 44.46,
-   "amount": "2 l",
-   "unit": "",
-   "href": "/cs/novinky?url=cit-avivaz-2l-lavender-field-fialova-6ks&do=detail",
-   "ean": "8595030069230"
-  },
-  {
-   "name": "Cit aviváž 2L Brisk Wind (bílá) …",
-   "price": 44.46,
-   "amount": "2 l",
-   "unit": "",
-   "href": "/cs/novinky?url=cit-avivaz-2l-brisk-wind-bila-6ks&do=detail",
-   "ean": "8595030057169"
-  },
-  {
-   "name": "Cit aviváž 2L Summer Fresh (zelená…",
-   "price": 44.46,
-   "amount": "2 l",
-   "unit": "",
-   "href": "/cs/novinky?url=cit-avivaz-2l-summer-fresh-zelena-6ks&do=detail",
-   "ean": "8595030057152"
-  },
-  {
-   "name": "Cit aviváž 2L Spring Fresh (modrá)…",
-   "price": 44.46,
-   "amount": "2 l",
-   "unit": "",
-   "href": "/cs/novinky?url=cit-avivaz-2l-spring-fresh-modra-6ks&do=detail",
-   "ean": "8595030057183"
-  },
-  {
-   "name": "Ait Zapalovač Citties Bat lua …",
-   "price": 4.5,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/novinky?url=ait-zapalovac-citties-bat-lua-50ks-n110&do=detail",
-   "ean_bal": "8594029211971"
-  },
-  {
-   "name": "Clipper zapalovač Retro Rugby …",
-   "price": 16.3,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/novinky?url=clipper-zapalovac-retro-rugby-24ks&do=detail",
-   "ean": "8412766115560"
-  },
-  {
-   "name": "Clipper zapalovač Not My Fault …",
-   "price": 16.3,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/novinky?url=clipper-zapalovac-not-my-fault-24ks&do=detail",
-   "ean": "8412766115492"
-  },
-  {
-   "name": "Clipper zapalovač Wild Animals 4 …",
-   "price": 16.3,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/novinky?url=clipper-zapalovac-wild-animals-4-24ks&do=detail",
-   "ean": "8412766115522"
-  },
-  {
-   "name": "Clipper zapalovač Retro Style 3 …",
-   "price": 16.3,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/novinky?url=clipper-zapalovac-retro-style-3-24ks&do=detail",
-   "ean": "8412766115539"
-  },
-  {
-   "name": "Clipper zapalovač Melting Psycho …",
-   "price": 16.3,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/novinky?url=clipper-zapalovac-melting-psycho-24ks&do=detail"
-  },
-  {
-   "name": "Clipper zapalovač stojan mix …",
-   "price": 16.3,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/novinky?url=clipper-zapalovac-stojan-mix-192ks&do=detail"
-  },
-  {
-   "name": "Villa Italia 0,75L Prosecco D.O.C…",
-   "price": 123.4,
-   "amount": "0,75 l",
-   "unit": "",
-   "href": "/cs/novinky?url=villa-italia-0-75l-prosecco-d-o-c-10-5-6ks&do=detail",
-   "ean": "8594045652659"
-  },
-  {
-   "name": "Nudle Samyang 140g Buldak Hot…",
-   "price": 32.0,
-   "amount": "140 g",
-   "unit": "",
-   "href": "/cs/novinky?url=nudle-samyang-140g-buldak-hot-chicken-x3-spicy-40ks&do=detail",
-   "ean": "8801073142978"
-  },
-  {
-   "name": "Cit WC čistič 2v1 750ml Oceán …",
-   "price": 26.8,
-   "amount": "750 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=cit-wc-cistic-2v1-750ml-ocean-12ks&do=detail",
-   "ean": "8595030045302"
-  },
-  {
-   "name": "Cit WC čistič 2v1 750ml Citron …",
-   "price": 26.8,
-   "amount": "750 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=cit-wc-cistic-2v1-750ml-citron-12ks&do=detail",
-   "ean": "8595030045005"
-  },
-  {
-   "name": "Cit WC čistič 2v1 750ml Eukalyptus…",
-   "price": 26.8,
-   "amount": "750 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=cit-wc-cistic-2v1-750ml-eukalyptus-12ks&do=detail",
-   "ean": "8595030045104"
-  },
-  {
-   "name": "Asia Lotte Choco Pie 360g Kakao …",
-   "price": 92.52,
-   "amount": "360 g",
-   "unit": "",
-   "href": "/cs/novinky?url=asia-lotte-choco-pie-360g-kakao-8ks&do=detail",
-   "ean": "8936036025170"
-  },
-  {
-   "name": "Vital Dog 100g vanička Hovězí…",
-   "price": 7.4,
-   "amount": "100 g",
-   "unit": "",
-   "href": "/cs/novinky?url=vital-dog-100g-vanicka-hovezi-adult-16&do=detail",
-   "ean": "1556287624563"
-  },
-  {
-   "name": "Gillette Pěna 200+100ml Sensitive …",
-   "price": 50.41,
-   "amount": "100 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=gillette-pena-200-100ml-sensitive-6ks&do=detail",
-   "ean": "7702018617234",
-   "ean_bal": "7702018617227"
-  },
-  {
-   "name": "Gillette Pěna 200ml Sensitive…",
-   "price": 46.0,
-   "amount": "200 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=gillette-pena-200ml-sensitive-revitalizing-6ks&do=detail",
-   "ean": "8001090873279",
-   "ean_bal": "8001090873262"
-  },
-  {
-   "name": "Gillette Pěna 200ml Series…",
-   "price": 47.9,
-   "amount": "200 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=gillette-pena-200ml-series-sensitive-6ks&do=detail",
-   "ean": "8001090870926",
-   "ean_bal": "8001090870674"
-  },
-  {
-   "name": "Gillette Pěna 200ml Series…",
-   "price": 54.05,
-   "amount": "200 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=gillette-pena-200ml-series-sensitive-cool-6ks&do=detail",
-   "ean": "8001090872098",
-   "ean_bal": "8001090872067"
-  },
-  {
-   "name": "Gillette Pěna 200ml Series…",
-   "price": 46.0,
-   "amount": "200 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=gillette-pena-200ml-series-conditioning-6ks&do=detail",
-   "ean": "8001090871404",
-   "ean_bal": "8001090871411"
-  },
-  {
-   "name": "Gillette Gel 200ml Series…",
-   "price": 60.7,
-   "amount": "200 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=gillette-gel-200ml-series-sensitive-revitalizing-6ks&do=detail",
-   "ean": "7702018619658",
-   "ean_bal": "7702018619641"
-  },
-  {
-   "name": "Gillette Gel 200ml Series Ultra…",
-   "price": 68.1,
-   "amount": "200 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=gillette-gel-200ml-series-ultra-cleansing-charcoal-6ks&do=detail",
-   "ean": "7702018619757",
-   "ean_bal": "7702018619740"
-  },
-  {
-   "name": "Gillette Gel 200ml Series…",
-   "price": 74.1,
-   "amount": "200 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=gillette-gel-200ml-series-sensitive-6ks&do=detail",
-   "ean": "3014260214692",
-   "ean_bal": "7702018981984"
-  },
-  {
-   "name": "Gillette Gel 200ml March3 Extra…",
-   "price": 68.18,
-   "amount": "200 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=gillette-gel-200ml-march3-extra-comfort-6ks&do=detail",
-   "ean": "7702018290994",
-   "ean_bal": "7702018290987"
-  },
-  {
-   "name": "Old Spice 400ml Spr.Gel White Wolf…",
-   "price": 62.9,
-   "amount": "400 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=old-spice-400ml-spr-gel-white-wolf-6ks&do=detail",
-   "ean": "8700216130622",
-   "ean_bal": "8700216130646"
-  },
-  {
-   "name": "Old Spice 400ml Spr.gel Oasis (6ks)",
-   "price": 73.4,
-   "amount": "400 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=old-spice-400ml-spr-gel-oasis-6ks&do=detail",
-   "ean": "8006540838761",
-   "ean_bal": "8006540838785"
-  },
-  {
-   "name": "Old Spice 150ml White Wolf Deo…",
-   "price": 62.9,
-   "amount": "150 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=old-spice-150ml-white-wolf-deo-sprej-6-396&do=detail",
-   "ean": "8700216133074",
-   "ean_bal": "8700216133081"
-  },
-  {
-   "name": "Old Spice 150ml Oasis Deo sprej (6…",
-   "price": 62.9,
-   "amount": "150 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=old-spice-150ml-oasis-deo-sprej-6-396&do=detail",
-   "ean": "8006540785874",
-   "ean_bal": "8006540785850"
-  },
-  {
-   "name": "Old Spice 50ml White Wolf Deo…",
-   "price": 62.9,
-   "amount": "50 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=old-spice-50ml-white-wolf-deo-stick-6ks&do=detail",
-   "ean": "8700216130424",
-   "ean_bal": "8700216130400"
-  },
-  {
-   "name": "Old Spice 50ml Oasis Deo Stick …",
-   "price": 66.09,
-   "amount": "50 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=old-spice-50ml-oasis-deo-stick-6ks&do=detail",
-   "ean": "8006540839362",
-   "ean_bal": "8006540839379"
-  },
-  {
-   "name": "Pantene Šampon 400ml Aqua Light (6…",
-   "price": 69.99,
-   "amount": "400 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=pantene-sampon-400ml-aqua-light-6-324&do=detail",
-   "ean": "5410076561223",
-   "ean_bal": "5410076561247"
-  },
-  {
-   "name": "Pantene kondicioner 200ml Aqua…",
-   "price": 49.8,
-   "amount": "200 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=pantene-kondicioner-200ml-aqua-light-6-288&do=detail",
-   "ean": "8001841740454",
-   "ean_bal": "8001841740461"
-  },
-  {
-   "name": "H&S Šampon na vlasy 400ml 2v1 Anti…",
-   "price": 90.0,
-   "amount": "400 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=h-s-sampon-na-vlasy-400ml-2v1-anti-hairfall-caffeine-6ks&do=detail",
-   "ean": "8006540833605",
-   "ean_bal": "8006540833599"
-  },
-  {
-   "name": "H&S Šampon na vlasy 400ml Menthol …",
-   "price": 79.0,
-   "amount": "400 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=h-s-sampon-na-vlasy-400ml-menthol-6ks&do=detail",
-   "ean": "4015600745936",
-   "ean_bal": "4015600745943"
-  },
-  {
-   "name": "Bersi Snack 120g Jalapeňo Čedar …",
-   "price": 19.95,
-   "amount": "120 g",
-   "unit": "",
-   "href": "/cs/novinky?url=bersi-snack-120g-jalapeno-cedar-20ks&do=detail",
-   "ean": "8594001193790"
-  },
-  {
-   "name": "Fernet Stock 0,05L Mini Citrus 27%…",
-   "price": 38.9,
-   "amount": "0,05 l",
-   "unit": "",
-   "href": "/cs/novinky?url=fernet-stock-0-05l-mini-citrus-27-30-182&do=detail",
-   "ean": "8594005015630"
-  },
-  {
-   "name": "Fernet Stock 0,05L Mini Originál…",
-   "price": 38.9,
-   "amount": "0,05 l",
-   "unit": "",
-   "href": "/cs/novinky?url=fernet-stock-0-05l-mini-original-38-30-182&do=detail",
-   "ean": "8594005017832"
-  },
-  {
-   "name": "Fa Mýdlo tekuté 250ml Hygiene &…",
-   "price": 39.9,
-   "amount": "250 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=fa-mydlo-tekute-250ml-hygiene-frische-6ks&do=detail",
-   "ean": "4015100182941",
-   "ean_bal": "4053158923406"
-  },
-  {
-   "name": "Fa Mýdlo tekuté 250ml Passions …",
-   "price": 39.9,
-   "amount": "250 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=fa-mydlo-tekute-250ml-passions-6ks&do=detail",
-   "ean": "4015000997522",
-   "ean_bal": "4015100043259"
-  },
-  {
-   "name": "Fa Mýdlo tekuté 250ml Sanft &…",
-   "price": 39.9,
-   "amount": "250 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=fa-mydlo-tekute-250ml-sanft-pflegend-kokos-6ks&do=detail",
-   "ean": "4015100182934",
-   "ean_bal": "4053158923390"
-  },
-  {
-   "name": "Fa Mýdlo tekuté 250ml Honig Rossen…",
-   "price": 39.9,
-   "amount": "250 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=fa-mydlo-tekute-250ml-honig-rossen-duft-6ks&do=detail",
-   "ean": "4015100190144",
-   "ean_bal": "4053158925295"
-  },
-  {
-   "name": "Gliss Šampon 250ml Color Protect &…",
-   "price": 52.01,
-   "amount": "250 ml",
-   "unit": "",
-   "href": "/cs/novinky?url=gliss-sampon-250ml-color-protect-shine-6ks&do=detail",
-   "ean": "5410091712402"
-  },
-  {
    "name": "7UP 0,33L EU (24/108)",
    "price": 10.7,
    "amount": "0,33 l",
@@ -52670,7 +52552,7 @@
   },
   {
    "name": "Coca Cola 0,33L CZ Zero (24/110)",
-   "price": 11.75,
+   "price": 12.5,
    "amount": "0,33 l",
    "unit": "",
    "href": "/cs/nealko?url=coca-cola-0-33l-cz-zero-24-110&do=detail",
@@ -52842,7 +52724,7 @@
   },
   {
    "name": "Crazy Wolf 0,25L Cassis Taste/ tim…",
-   "price": 9.85,
+   "price": 9.0,
    "amount": "0,25 l",
    "unit": "",
    "href": "/cs/nealko?url=crazy-wolf-0-25l-cassis-taste-tim-24ks&do=detail",
@@ -52850,14 +52732,14 @@
   },
   {
    "name": "Crazy Wolf 0,25L Himbeer (Tim) …",
-   "price": 9.85,
+   "price": 9.0,
    "amount": "0,25 l",
    "unit": "",
    "href": "/cs/nealko?url=crazy-wolf-0-25l-himbeer-tim-15ks&do=detail"
   },
   {
    "name": "Crazy Wolf 0,25L Lime Taste (24ks)",
-   "price": 9.85,
+   "price": 9.0,
    "amount": "0,25 l",
    "unit": "",
    "href": "/cs/nealko?url=crazy-wolf-0-25l-lime-taste-24ks&do=detail",
@@ -52865,14 +52747,14 @@
   },
   {
    "name": "Crazy Wolf 0,25L Meloun (Dua Hau) …",
-   "price": 9.85,
+   "price": 9.0,
    "amount": "0,25 l",
    "unit": "",
    "href": "/cs/nealko?url=crazy-wolf-0-25l-meloun-dua-hau-15ks&do=detail"
   },
   {
    "name": "Crazy Wolf 0,25L Original (24ks)",
-   "price": 9.85,
+   "price": 9.0,
    "amount": "0,25 l",
    "unit": "",
    "href": "/cs/nealko?url=crazy-wolf-0-25l-original-24ks&do=detail",
@@ -53254,7 +53136,7 @@
   },
   {
    "name": "Fanta 0,33L CZ Orange (24/110)",
-   "price": 11.5,
+   "price": 12.4,
    "amount": "0,33 l",
    "unit": "",
    "href": "/cs/nealko?url=fanta-0-33l-cz-orange-24-110&do=detail",
@@ -54526,7 +54408,7 @@
   },
   {
    "name": "Mr.Brown 0,24L CZ Cappuccino (24…",
-   "price": 29.9,
+   "price": 27.9,
    "amount": "0,24 l",
    "unit": "",
    "href": "/cs/nealko?url=mr-brown-0-24l-cz-cappuccino-24-112&do=detail",
@@ -55888,7 +55770,7 @@
   },
   {
    "name": "Sprite 0,33L CZ (24/110)",
-   "price": 13.3,
+   "price": 12.9,
    "amount": "0,33 l",
    "unit": "",
    "href": "/cs/nealko?url=sprite-0-33l-cz-24-110&do=detail",
@@ -57503,7 +57385,7 @@
   },
   {
    "name": "Božkov 0,5L Vodka 37,5% (15/55)",
-   "price": 154.0,
+   "price": 148.0,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/alko?url=bozkov-0-5l-vodka-37-5-15-55&do=detail",
@@ -58745,6 +58627,22 @@
    "unit": "",
    "href": "/cs/alko?url=famous-grouse-0-05l-mini-scotch-whisky-40-12-550&do=detail",
    "ean": "50792511"
+  },
+  {
+   "name": "Fernet Stock 0,05L Mini Citrus 27%…",
+   "price": 38.9,
+   "amount": "0,05 l",
+   "unit": "",
+   "href": "/cs/alko?url=fernet-stock-0-05l-mini-citrus-27-30-182&do=detail",
+   "ean": "8594005015630"
+  },
+  {
+   "name": "Fernet Stock 0,05L Mini Originál…",
+   "price": 38.9,
+   "amount": "0,05 l",
+   "unit": "",
+   "href": "/cs/alko?url=fernet-stock-0-05l-mini-original-38-30-182&do=detail",
+   "ean": "8594005017832"
   },
   {
    "name": "Fernet Stock 0,25L Bavorák Citrus…",
@@ -60518,55 +60416,55 @@
    "ean_bal": "5000281050553"
   },
   {
-   "name": "Lambrusco Dell'Emilia 0,75L Bianco…",
+   "name": "Lambrusco La Collombara 0,75L…",
    "price": 46.5,
    "amount": "0,75 l",
    "unit": "",
-   "href": "/cs/alko?url=lambrusco-dell-emilia-0-75l-bianco-trang-750ml-6ks&do=detail",
+   "href": "/cs/alko?url=lambrusco-la-collombara-0-75l-bianco-trang-750ml-6ks&do=detail",
    "ean": "8003295002300",
    "ean_bal": "02080032951001"
   },
   {
-   "name": "Lambrusco Dell'Emilia 0,75L Rosato…",
+   "name": "Lambrusco La Collombara 0,75L…",
    "price": 46.5,
    "amount": "0,75 l",
    "unit": "",
-   "href": "/cs/alko?url=lambrusco-dell-emilia-0-75l-rosato-hong-6ks&do=detail",
+   "href": "/cs/alko?url=lambrusco-la-collombara-0-75l-rosato-hong-6ks&do=detail",
    "ean": "8003295002867",
    "ean_bal": "02080032951009"
   },
   {
-   "name": "Lambrusco Dell'Emilia 0,75L Rosso …",
+   "name": "Lambrusco La Collombara 0,75L…",
    "price": 46.5,
    "amount": "0,75 l",
    "unit": "",
-   "href": "/cs/alko?url=lambrusco-dell-emilia-0-75l-rosso-do-6ks&do=detail",
+   "href": "/cs/alko?url=lambrusco-la-collombara-0-75l-rosso-do-6ks&do=detail",
    "ean": "8003295002317",
    "ean_bal": "02080032950010"
   },
   {
-   "name": "Lambrusco Dell'Emilia 1,5L Bianco …",
+   "name": "Lambrusco La Collombara 1,5L…",
    "price": 79.0,
    "amount": "1,5 l",
    "unit": "",
-   "href": "/cs/alko?url=lambrusco-dell-emilia-1-5l-bianco-trang-6ks&do=detail",
+   "href": "/cs/alko?url=lambrusco-la-collombara-1-5l-bianco-trang-6ks&do=detail",
    "ean": "8003295002324"
   },
   {
-   "name": "Lambrusco Dell'Emilia 1,5L Rosato …",
+   "name": "Lambrusco La Collombara 1,5L…",
    "price": 79.0,
    "amount": "1,5 l",
    "unit": "",
-   "href": "/cs/alko?url=lambrusco-dell-emilia-1-5l-rosato-hong-6ks&do=detail",
+   "href": "/cs/alko?url=lambrusco-la-collombara-1-5l-rosato-hong-6ks&do=detail",
    "ean": "8003295005196",
    "ean_bal": "02080032951034"
   },
   {
-   "name": "Lambrusco Dell'Emilia 1,5L Rosso …",
+   "name": "Lambrusco La Collombara 1,5L Rosso…",
    "price": 79.0,
    "amount": "1,5 l",
    "unit": "",
-   "href": "/cs/alko?url=lambrusco-dell-emilia-1-5l-rosso-do-6ks&do=detail",
+   "href": "/cs/alko?url=lambrusco-la-collombara-1-5l-rosso-do-6ks&do=detail",
    "ean": "8003295002331"
   },
   {
@@ -61644,7 +61542,7 @@
   },
   {
    "name": "R.Jelínek 0,5L Moravská Hruška 38%…",
-   "price": 166.0,
+   "price": 154.0,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/alko?url=r-jelinek-0-5l-moravska-hruska-38-12-48&do=detail",
@@ -61661,7 +61559,7 @@
   },
   {
    "name": "R.Jelínek 0,5L Moravská Švestka…",
-   "price": 165.0,
+   "price": 154.0,
    "amount": "0,5 l",
    "unit": "",
    "href": "/cs/alko?url=r-jelinek-0-5l-moravska-svestka-bila-38-12-48&do=detail",
@@ -62717,6 +62615,14 @@
    "href": "/cs/alko?url=vesely-verbir-2l-cerveny-6-48&do=detail",
    "ean": "8594031250333",
    "ean_bal": "8594031253914"
+  },
+  {
+   "name": "Villa Italia 0,75L Prosecco D.O.C…",
+   "price": 123.4,
+   "amount": "0,75 l",
+   "unit": "",
+   "href": "/cs/alko?url=villa-italia-0-75l-prosecco-d-o-c-10-5-6ks&do=detail",
+   "ean": "8594045652659"
   },
   {
    "name": "Vinacz 1L Cabernet Saugvinon…",
@@ -64359,6 +64265,14 @@
    "ean": "8690146053347"
   },
   {
+   "name": "Bersi Snack 120g Jalapeňo Čedar …",
+   "price": 19.95,
+   "amount": "120 g",
+   "unit": "",
+   "href": "/cs/cukrovinky?url=bersi-snack-120g-jalapeno-cedar-20ks&do=detail",
+   "ean": "8594001193790"
+  },
+  {
    "name": "Bibigo Rong biển (Mořské řasy) 50g…",
    "price": 51.13,
    "amount": "50 g",
@@ -64839,20 +64753,20 @@
    "ean": "6955210105912"
   },
   {
-   "name": "Bulgari Marshmallow 1,08kg Maxi…",
-   "price": 299.0,
-   "amount": "1,08 kg",
+   "name": "Bulgari 150g Marshmallow Cupcakes …",
+   "price": 34.09,
+   "amount": "150 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=bulgari-marshmallow-1-08kg-maxi-jahody-60ks-6disp&do=detail",
-   "ean": "8006908002773"
+   "href": "/cs/cukrovinky?url=bulgari-150g-marshmallow-cupcakes-12ks&do=detail",
+   "ean": "8006908016534"
   },
   {
-   "name": "Bulgari Marshmallow 1,44kg Mini…",
-   "price": 193.81,
-   "amount": "1,44 kg",
+   "name": "Bulgari 150g Marshmallow Ostružiny…",
+   "price": 34.09,
+   "amount": "150 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=bulgari-marshmallow-1-44kg-mini-zmrzliny-240ks-6disp&do=detail",
-   "ean": "8006908001738"
+   "href": "/cs/cukrovinky?url=bulgari-150g-marshmallow-ostruziny-12ks&do=detail",
+   "ean": "8006908016572"
   },
   {
    "name": "Candy Planet Vajíčko Surprise Egg…",
@@ -66121,24 +66035,6 @@
    "ean_bal": "8682091102980"
   },
   {
-   "name": "Flipz 90g Milk Chocolate Usa (6…",
-   "price": 30.2,
-   "amount": "90 g",
-   "unit": "",
-   "href": "/cs/cukrovinky?url=flipz-90g-milk-chocolate-usa-6-180&do=detail",
-   "ean": "5000168022758",
-   "ean_bal": "05000396053449"
-  },
-  {
-   "name": "Flipz 90g Salted Caramel Usa (6…",
-   "price": 30.2,
-   "amount": "90 g",
-   "unit": "",
-   "href": "/cs/cukrovinky?url=flipz-90g-salted-caramel-usa-6-120&do=detail",
-   "ean": "5000168215792",
-   "ean_bal": "05000396053425"
-  },
-  {
    "name": "Fripsy 120g Chilli (12ks)",
    "price": 14.0,
    "amount": "120 g",
@@ -66577,6 +66473,15 @@
    "unit": "",
    "href": "/cs/cukrovinky?url=halls-33-5g-cz-watermelon-12-20ks&do=detail",
    "ean": "7622210642530"
+  },
+  {
+   "name": "HAN NGAN Jolly Time Popcorn 85g…",
+   "price": 10.0,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/cukrovinky?url=han-ngan-jolly-time-popcorn-85g-healthy-pop-butter-usa-18-8-exp-12-26&do=detail",
+   "ean": "028190009955",
+   "ean_bal": "10028190807817"
   },
   {
    "name": "HAN NGAN Lexus Bonboniera 0,5kg…",
@@ -69228,15 +69133,6 @@
    "ean_bal": "10028190807596"
   },
   {
-   "name": "Jolly Time Popcorn 100g Crispy'n…",
-   "price": 22.9,
-   "amount": "100 g",
-   "unit": "",
-   "href": "/cs/cukrovinky?url=jolly-time-popcorn-100g-crispy-n-white-usa-18-8&do=detail",
-   "ean": "028190009610",
-   "ean_bal": "10028190809668"
-  },
-  {
    "name": "Jolly Time Popcorn 100g Sweet'n…",
    "price": 22.9,
    "amount": "100 g",
@@ -69253,15 +69149,6 @@
    "href": "/cs/cukrovinky?url=jolly-time-popcorn-100g-the-big-cheez-usa-18-8&do=detail",
    "ean": "028190009627",
    "ean_bal": "10028190809699"
-  },
-  {
-   "name": "Jolly Time Popcorn 85g Healthy Pop…",
-   "price": 22.9,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/cukrovinky?url=jolly-time-popcorn-85g-healthy-pop-butter-usa-18-8&do=detail",
-   "ean": "028190009955",
-   "ean_bal": "10028190807817"
   },
   {
    "name": "Kaštany 45g Bílá čokoláda (48ks)",
@@ -69579,11 +69466,11 @@
    "ean_bal": "4008400223612"
   },
   {
-   "name": "Kinder 21g EU Riegel (10ks/28)",
-   "price": 62.7,
+   "name": "Kinder 21g EU Riegel (10ks*28disp)",
+   "price": 6.27,
    "amount": "21 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=kinder-21g-eu-riegel-10ks-28&do=detail",
+   "href": "/cs/cukrovinky?url=kinder-21g-eu-riegel-10ks-28disp&do=detail",
    "ean": "4008400221021",
    "ean_bal": "4008400221120"
   },
@@ -71601,15 +71488,6 @@
    "ean_bal": "4014400140033"
   },
   {
-   "name": "Merci 100g CZ Čokoláda Hazelnut …",
-   "price": 39.9,
-   "amount": "100 g",
-   "unit": "",
-   "href": "/cs/cukrovinky?url=merci-100g-cz-cokolada-hazelnut-zelena-15ks&do=detail",
-   "ean": "4014400914252",
-   "ean_bal": "4014400140026"
-  },
-  {
    "name": "Merci 100g CZ Čokoláda Milk (Modrá…",
    "price": 47.05,
    "amount": "100 g",
@@ -71725,7 +71603,7 @@
   },
   {
    "name": "Mieszko Eukalyptus 150g bon. Extra…",
-   "price": 17.1,
+   "price": 16.0,
    "amount": "150 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=mieszko-eukalyptus-150g-bon-extra-strong-modry-26-64&do=detail",
@@ -71733,7 +71611,7 @@
   },
   {
    "name": "Mieszko Eukalyptus 150g bon.…",
-   "price": 17.1,
+   "price": 16.0,
    "amount": "150 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=mieszko-eukalyptus-150g-bon-zelene-26-64&do=detail",
@@ -72498,7 +72376,7 @@
   },
   {
    "name": "Nimm2 90g Smilegummi Shakies (18ks)",
-   "price": 14.68,
+   "price": 13.59,
    "amount": "90 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=nimm2-90g-smilegummi-shakies-18ks&do=detail",
@@ -74082,7 +73960,7 @@
   },
   {
    "name": "Raffaello 230g (8ks) CZ",
-   "price": 95.0,
+   "price": 93.0,
    "amount": "230 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=raffaello-230g-8ks-cz&do=detail",
@@ -74886,29 +74764,29 @@
    "ean_bal": "9002859063428"
   },
   {
-   "name": "Sedita Tatranky Kakao 33g (42ks)",
-   "price": 7.0,
+   "name": "Sedita Tatranky 33g Kakao (42ks)",
+   "price": 5.65,
    "amount": "33 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=sedita-tatranky-kakao-33g-42ks&do=detail",
+   "href": "/cs/cukrovinky?url=sedita-tatranky-33g-kakao-42ks&do=detail",
    "ean": "8584004041259",
    "ean_bal": "18584004041256"
   },
   {
-   "name": "Sedita Tatranky Lískooříšek 33g …",
-   "price": 7.0,
+   "name": "Sedita Tatranky 33g Lískooříšek …",
+   "price": 5.65,
    "amount": "33 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=sedita-tatranky-liskoorisek-33g-42ks&do=detail",
+   "href": "/cs/cukrovinky?url=sedita-tatranky-33g-liskoorisek-42ks&do=detail",
    "ean": "8584004041198",
    "ean_bal": "18584004041195"
   },
   {
-   "name": "Sedita Tatranky Mléčné 33g (42ks)",
-   "price": 7.0,
+   "name": "Sedita Tatranky 33g Mléčné (42ks)",
+   "price": 5.65,
    "amount": "33 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=sedita-tatranky-mlecne-33g-42ks&do=detail",
+   "href": "/cs/cukrovinky?url=sedita-tatranky-33g-mlecne-42ks&do=detail",
    "ean": "8584004041297",
    "ean_bal": "18584004041294"
   },
@@ -75012,38 +74890,38 @@
    "href": "/cs/cukrovinky?url=sir-charles-zele-300g-schoko-bananen-15ks&do=detail"
   },
   {
-   "name": "Skatt Brambůrky 210g Česnek (10/50)",
+   "name": "Skatt Brambůrky 210g Česnek (15/30)",
    "price": 32.2,
    "amount": "210 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=skatt-bramburky-210g-cesnek-10-50&do=detail",
+   "href": "/cs/cukrovinky?url=skatt-bramburky-210g-cesnek-15-30&do=detail",
    "ean": "8594039750101",
    "ean_bal": "8594039750101"
   },
   {
-   "name": "Skatt Brambůrky 210g Slanina (10…",
+   "name": "Skatt Brambůrky 210g Slanina (15…",
    "price": 32.2,
    "amount": "210 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=skatt-bramburky-210g-slanina-10-50&do=detail",
+   "href": "/cs/cukrovinky?url=skatt-bramburky-210g-slanina-15-30&do=detail",
    "ean": "8594039750163",
    "ean_bal": "8594039750163"
   },
   {
-   "name": "Skatt Brambůrky 210g Solené (10/50)",
+   "name": "Skatt Brambůrky 210g Solené (15/30)",
    "price": 32.2,
    "amount": "210 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=skatt-bramburky-210g-solene-10-50&do=detail",
+   "href": "/cs/cukrovinky?url=skatt-bramburky-210g-solene-15-30&do=detail",
    "ean": "8594039750095",
    "ean_bal": "8594039750095"
   },
   {
-   "name": "Skatt Brambůrky 210g Sýrové (10/50)",
+   "name": "Skatt Brambůrky 210g Sýrové (15/30)",
    "price": 32.2,
    "amount": "210 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=skatt-bramburky-210g-syrove-10-50&do=detail",
+   "href": "/cs/cukrovinky?url=skatt-bramburky-210g-syrove-15-30&do=detail",
    "ean": "8594039750118"
   },
   {
@@ -75065,20 +74943,20 @@
    "ean_bal": "8594039750071"
   },
   {
-   "name": "Skatt Brambůrky 90g Solené (20/50)",
+   "name": "Skatt Brambůrky 90g Solené (15/48)",
    "price": 16.5,
    "amount": "90 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=skatt-bramburky-90g-solene-20-50&do=detail",
+   "href": "/cs/cukrovinky?url=skatt-bramburky-90g-solene-15-48&do=detail",
    "ean": "8594039750057",
    "ean_bal": "8594039750057"
   },
   {
-   "name": "Skatt Brambůrky 90g Sýrové (20/50)",
+   "name": "Skatt Brambůrky 90g Sýrové (15/48)",
    "price": 16.5,
    "amount": "90 g",
    "unit": "",
-   "href": "/cs/cukrovinky?url=skatt-bramburky-90g-syrove-20-50&do=detail",
+   "href": "/cs/cukrovinky?url=skatt-bramburky-90g-syrove-15-48&do=detail",
    "ean": "8594039750088",
    "ean_bal": "8594039750088"
   },
@@ -75999,7 +75877,7 @@
   },
   {
    "name": "Trolli Mini Burger 9g (60ks*6disp)",
-   "price": 3.15,
+   "price": 3.28,
    "amount": "9 g",
    "unit": "",
    "href": "/cs/cukrovinky?url=trolli-mini-burger-9g-60ks-6disp&do=detail",
@@ -79056,7 +78934,7 @@
   },
   {
    "name": "MeiNing 180g Krůtí maso (10/255)",
-   "price": 30.58,
+   "price": 28.2,
    "amount": "180 g",
    "unit": "",
    "href": "/cs/trvanlive?url=meining-180g-kruti-maso-10-255&do=detail",
@@ -79065,7 +78943,7 @@
   },
   {
    "name": "MeiNing 180g Kuřecí maso (10/255)",
-   "price": 30.58,
+   "price": 25.63,
    "amount": "180 g",
    "unit": "",
    "href": "/cs/trvanlive?url=meining-180g-kureci-maso-10-255&do=detail",
@@ -79092,7 +78970,7 @@
   },
   {
    "name": "MeiNing 400g Krutí maso ve vlastní…",
-   "price": 46.65,
+   "price": 38.51,
    "amount": "400 g",
    "unit": "",
    "href": "/cs/trvanlive?url=meining-400g-kruti-maso-ve-vlastni-stave-8-180&do=detail",
@@ -79101,7 +78979,7 @@
   },
   {
    "name": "MeiNing 400g Kuřecí maso ve…",
-   "price": 46.65,
+   "price": 38.51,
    "amount": "400 g",
    "unit": "",
    "href": "/cs/trvanlive?url=meining-400g-kureci-maso-ve-vlastni-stave-8-180&do=detail",
@@ -79110,7 +78988,7 @@
   },
   {
    "name": "MeiNing 400g Vepřové maso ve…",
-   "price": 42.37,
+   "price": 38.51,
    "amount": "400 g",
    "unit": "",
    "href": "/cs/trvanlive?url=meining-400g-veprove-maso-ve-vlastni-stave-8-180&do=detail",
@@ -80018,6 +79896,14 @@
    "unit": "",
    "href": "/cs/trvanlive?url=nudle-samyang-135g-buldak-habanero-lime-chicken-spicy-tim-40ks&do=detail",
    "ean": "8801073143777"
+  },
+  {
+   "name": "Nudle Samyang 140g Buldak Hot…",
+   "price": 32.0,
+   "amount": "140 g",
+   "unit": "",
+   "href": "/cs/trvanlive?url=nudle-samyang-140g-buldak-hot-chicken-x3-spicy-40ks&do=detail",
+   "ean": "8801073142978"
   },
   {
    "name": "Nudle Samyang 140g Chacharoni …",
@@ -82191,7 +82077,7 @@
   },
   {
    "name": "Viva 120g Kuřecí maso ve vl. šťávě…",
-   "price": 17.92,
+   "price": 16.11,
    "amount": "120 g",
    "unit": "",
    "href": "/cs/trvanlive?url=viva-120g-kureci-maso-ve-vl-stave-16ks&do=detail",
@@ -82272,7 +82158,7 @@
   },
   {
    "name": "Viva 120g Šunka s vejci (16/192)",
-   "price": 17.92,
+   "price": 15.46,
    "amount": "120 g",
    "unit": "",
    "href": "/cs/trvanlive?url=viva-120g-sunka-s-vejci-16-192&do=detail",
@@ -82281,7 +82167,7 @@
   },
   {
    "name": "Viva 120g Šunkové maso (16/192)",
-   "price": 17.92,
+   "price": 15.46,
    "amount": "120 g",
    "unit": "",
    "href": "/cs/trvanlive?url=viva-120g-sunkove-maso-16-192&do=detail",
@@ -82470,7 +82356,7 @@
   },
   {
    "name": "Viva 400g Hovězí konzerva light (8…",
-   "price": 48.5,
+   "price": 42.77,
    "amount": "400 g",
    "unit": "",
    "href": "/cs/trvanlive?url=viva-400g-hovezi-konzerva-light-8-80&do=detail",
@@ -82578,7 +82464,7 @@
   },
   {
    "name": "Viva 400g Směs na rizoto (8/180)",
-   "price": 35.84,
+   "price": 32.08,
    "amount": "400 g",
    "unit": "",
    "href": "/cs/trvanlive?url=viva-400g-smes-na-rizoto-8-180&do=detail",
@@ -82587,7 +82473,7 @@
   },
   {
    "name": "Viva 400g Směs na špagety (8/180)",
-   "price": 35.84,
+   "price": 31.8,
    "amount": "400 g",
    "unit": "",
    "href": "/cs/trvanlive?url=viva-400g-smes-na-spagety-8-180&do=detail",
@@ -82596,7 +82482,7 @@
   },
   {
    "name": "Viva 400g Staročeský guláš (8/180)",
-   "price": 34.87,
+   "price": 32.08,
    "amount": "400 g",
    "unit": "",
    "href": "/cs/trvanlive?url=viva-400g-starocesky-gulas-8-180&do=detail",
@@ -83388,14 +83274,6 @@
    "ean": "8938522597024"
   },
   {
-   "name": "Asia kinh do Cosy (10ks)",
-   "price": 98.0,
-   "amount": "10 ks",
-   "unit": "",
-   "href": "/cs/podpultovky?url=asia-kinh-do-cosy-10ks&do=detail",
-   "ean": "8934680113861"
-  },
-  {
    "name": "Asia La Fruit 300g (Banh Bong Lan…",
    "price": 96.42,
    "amount": "300 g",
@@ -83434,6 +83312,14 @@
    "href": "/cs/podpultovky?url=asia-lotte-choco-pie-336g-original-8ks&do=detail",
    "ean": "8936036020380",
    "ean_bal": "18936036020387"
+  },
+  {
+   "name": "Asia Lotte Choco Pie 360g Kakao …",
+   "price": 92.52,
+   "amount": "360 g",
+   "unit": "",
+   "href": "/cs/podpultovky?url=asia-lotte-choco-pie-360g-kakao-8ks&do=detail",
+   "ean": "8936036025170"
   },
   {
    "name": "Asia Lotte Choco Pie Black Sugar…",
@@ -83607,20 +83493,12 @@
    "ean": "8938529758183"
   },
   {
-   "name": "Asia Thach Hop HoaQua 1003g (6ks)",
+   "name": "Asia Thach Hop Hoa Qua 1003g (6ks)",
    "price": 122.0,
    "amount": "1003 g",
    "unit": "",
-   "href": "/cs/podpultovky?url=asia-thach-hop-hoaqua-1003g-6ks&do=detail",
+   "href": "/cs/podpultovky?url=asia-thach-hop-hoa-qua-1003g-6ks&do=detail",
    "ean": "8938501660022"
-  },
-  {
-   "name": "Asia Thach Hop KhoaiMon 1003g (6ks)",
-   "price": 146.09,
-   "amount": "1003 g",
-   "unit": "",
-   "href": "/cs/podpultovky?url=asia-thach-hop-khoaimon-1003g-6ks&do=detail",
-   "ean": "8938501660145"
   },
   {
    "name": "Asia Thach Nanaco Vi Liči (20ks)",
@@ -83961,6 +83839,21 @@
    "href": "/cs/podpultovky?url=glico-pocky-47g-double-chocolate-10-120ks&do=detail",
    "ean": "8990044000161",
    "ean_bal": "8990044000161"
+  },
+  {
+   "name": "HAN NGAN Asia Thach Hop Khoai Mon…",
+   "price": 97.0,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/podpultovky?url=han-ngan-asia-thach-hop-khoai-mon-1003g-6ks-exp-23-12-26&do=detail",
+   "ean": "8938501660145"
+  },
+  {
+   "name": "HAN NGAN Glico Pocky 47g Double…",
+   "price": 16.0,
+   "amount": "47 g",
+   "unit": "",
+   "href": "/cs/podpultovky?url=han-ngan-glico-pocky-47g-double-chocolate-10-120ks-exp-12-26&do=detail"
   },
   {
    "name": "Hata Ramune 200ml Ananas",
@@ -89503,6 +89396,14 @@
    "ean": "1556287624655"
   },
   {
+   "name": "Vital Dog 100g vanička Hovězí…",
+   "price": 7.4,
+   "amount": "100 g",
+   "unit": "",
+   "href": "/cs/pet-food?url=vital-dog-100g-vanicka-hovezi-adult-16&do=detail",
+   "ean": "1556287624563"
+  },
+  {
    "name": "VitalBite 0,5kg Semi-Moist Hovězí",
    "price": 37.59,
    "amount": "0,5 kg",
@@ -90932,14 +90833,6 @@
    "ean_bal": "8006540940297"
   },
   {
-   "name": "Arola Osvěžovač do skříně Fresh…",
-   "price": 25.4,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/drogerie?url=arola-osvezovac-do-skrine-fresh-breeze-9-90&do=detail",
-   "ean": "5900785871213"
-  },
-  {
    "name": "Axe 250ml 6 in 1 Clean Fresh…",
    "price": 52.8,
    "amount": "250 ml",
@@ -90950,7 +90843,7 @@
   },
   {
    "name": "Axe 250ml Africa Sprchový Gel (6ks)",
-   "price": 41.35,
+   "price": 40.99,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/drogerie?url=axe-250ml-africa-sprchovy-gel-6ks&do=detail",
@@ -92257,6 +92150,70 @@
    "ean": "8595030069704"
   },
   {
+   "name": "Cit aviváž 2L Brisk Wind (bílá) …",
+   "price": 44.46,
+   "amount": "2 l",
+   "unit": "",
+   "href": "/cs/drogerie?url=cit-avivaz-2l-brisk-wind-bila-6ks&do=detail",
+   "ean": "8595030057169"
+  },
+  {
+   "name": "Cit aviváž 2L Lavender Field …",
+   "price": 44.46,
+   "amount": "2 l",
+   "unit": "",
+   "href": "/cs/drogerie?url=cit-avivaz-2l-lavender-field-fialova-6ks&do=detail",
+   "ean": "8595030069230"
+  },
+  {
+   "name": "Cit aviváž 2L Spring Fresh (modrá)…",
+   "price": 44.46,
+   "amount": "2 l",
+   "unit": "",
+   "href": "/cs/drogerie?url=cit-avivaz-2l-spring-fresh-modra-6ks&do=detail",
+   "ean": "8595030057183"
+  },
+  {
+   "name": "Cit aviváž 2L Summer Fresh (zelená…",
+   "price": 44.46,
+   "amount": "2 l",
+   "unit": "",
+   "href": "/cs/drogerie?url=cit-avivaz-2l-summer-fresh-zelena-6ks&do=detail",
+   "ean": "8595030057152"
+  },
+  {
+   "name": "Cit aviváž 2L Vanilla Field (žlutá…",
+   "price": 44.46,
+   "amount": "2 l",
+   "unit": "",
+   "href": "/cs/drogerie?url=cit-avivaz-2l-vanilla-field-zluta-6ks&do=detail",
+   "ean": "8595030069223"
+  },
+  {
+   "name": "Cit WC čistič 2v1 750ml Citron …",
+   "price": 26.8,
+   "amount": "750 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=cit-wc-cistic-2v1-750ml-citron-12ks&do=detail",
+   "ean": "8595030045005"
+  },
+  {
+   "name": "Cit WC čistič 2v1 750ml Eukalyptus…",
+   "price": 26.8,
+   "amount": "750 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=cit-wc-cistic-2v1-750ml-eukalyptus-12ks&do=detail",
+   "ean": "8595030045104"
+  },
+  {
+   "name": "Cit WC čistič 2v1 750ml Oceán …",
+   "price": 26.8,
+   "amount": "750 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=cit-wc-cistic-2v1-750ml-ocean-12ks&do=detail",
+   "ean": "8595030045302"
+  },
+  {
    "name": "Clin 500ml Window Glass Anti Fog…",
    "price": 49.7,
    "amount": "500 ml",
@@ -92335,15 +92292,6 @@
    "ean": "8697040101945"
   },
   {
-   "name": "Colgate kartáček 2-5 Let (12ks)",
-   "price": 12.5,
-   "amount": "12 ks",
-   "unit": "",
-   "href": "/cs/drogerie?url=colgate-kartacek-2-5-let-12ks&do=detail",
-   "ean": "6001067018049",
-   "ean_bal": "6001067518044"
-  },
-  {
    "name": "Colgate kartáček 360° Charcoal…",
    "price": 34.5,
    "amount": "",
@@ -92385,14 +92333,6 @@
    "unit": "",
    "href": "/cs/drogerie?url=colgate-kartacek-3ks-extra-clean-36ks&do=detail",
    "ean": "6001067024446"
-  },
-  {
-   "name": "Colgate kartáček Cibaca 1-2-3 …",
-   "price": 5.75,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/drogerie?url=colgate-kartacek-cibaca-1-2-3-13ks&do=detail",
-   "ean": "8901314309426"
   },
   {
    "name": "Colgate kartáček Classic Deep…",
@@ -92480,14 +92420,6 @@
    "unit": "",
    "href": "/cs/drogerie?url=colgate-kartacek-zig-zag-soft-12ks&do=detail",
    "ean": "6001067004936"
-  },
-  {
-   "name": "Colgate kartáček Zig Zag Trio X3…",
-   "price": 26.45,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/drogerie?url=colgate-kartacek-zig-zag-trio-x3-family-6x6&do=detail",
-   "ean": "8935236000710"
   },
   {
    "name": "Colgate ZP 100ml Advanced White …",
@@ -93064,7 +92996,7 @@
   },
   {
    "name": "Domestos WC čistič 750ml Extended…",
-   "price": 34.34,
+   "price": 36.28,
    "amount": "750 ml",
    "unit": "",
    "href": "/cs/drogerie?url=domestos-wc-cistic-750ml-extended-power-atlantic-fresh-20ks&do=detail",
@@ -95435,6 +95367,15 @@
    "ean_bal": "9000101220728"
   },
   {
+   "name": "Fa Mýdlo tekuté 250ml Honig Rossen…",
+   "price": 39.9,
+   "amount": "250 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=fa-mydlo-tekute-250ml-honig-rossen-duft-6ks&do=detail",
+   "ean": "4015100190144",
+   "ean_bal": "4053158925295"
+  },
+  {
    "name": "Fa Mýdlo tekuté 250ml Hygiene &…",
    "price": 39.9,
    "amount": "250 ml",
@@ -95462,12 +95403,39 @@
    "ean_bal": "9000101011654"
   },
   {
+   "name": "Fa Mýdlo tekuté 250ml Hygiene &…",
+   "price": 39.9,
+   "amount": "250 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=fa-mydlo-tekute-250ml-hygiene-frische-6ks&do=detail",
+   "ean": "4015100182941",
+   "ean_bal": "4053158923406"
+  },
+  {
    "name": "Fa Mýdlo tekuté 250ml Kids (12ks)",
    "price": 39.9,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/drogerie?url=fa-mydlo-tekute-250ml-kids-12ks&do=detail",
    "ean": "4015100187588"
+  },
+  {
+   "name": "Fa Mýdlo tekuté 250ml Passions …",
+   "price": 39.9,
+   "amount": "250 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=fa-mydlo-tekute-250ml-passions-6ks&do=detail",
+   "ean": "4015000997522",
+   "ean_bal": "4015100043259"
+  },
+  {
+   "name": "Fa Mýdlo tekuté 250ml Sanft &…",
+   "price": 39.9,
+   "amount": "250 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=fa-mydlo-tekute-250ml-sanft-pflegend-kokos-6ks&do=detail",
+   "ean": "4015100182934",
+   "ean_bal": "4053158923390"
   },
   {
    "name": "Fa Mýdlo tekuté 250ml Soft &…",
@@ -95882,6 +95850,30 @@
    "ean": "8681628150661"
   },
   {
+   "name": "Freshmaker 100ks Klip vlhč.…",
+   "price": 22.57,
+   "amount": "100 ks",
+   "unit": "",
+   "href": "/cs/drogerie?url=freshmaker-100ks-klip-vlhc-ubrousky-hermanek-24ks&do=detail",
+   "ean": "8697817871323"
+  },
+  {
+   "name": "Freshmaker 100ks Klip vlhč.…",
+   "price": 22.37,
+   "amount": "100 ks",
+   "unit": "",
+   "href": "/cs/drogerie?url=freshmaker-100ks-klip-vlhc-ubrousky-ovoce-mix-24ks&do=detail",
+   "ean": "8697817871842"
+  },
+  {
+   "name": "Freshmaker 72ks Klip dětské vlhč.…",
+   "price": 18.9,
+   "amount": "72 ks",
+   "unit": "",
+   "href": "/cs/drogerie?url=freshmaker-72ks-klip-detske-vlhc-ubrousky-mix-fialovy-modry-24ks&do=detail",
+   "ean": "8697817871521"
+  },
+  {
    "name": "Freshmaker kapesní vlhč. ubrousky…",
    "price": 4.24,
    "amount": "",
@@ -95976,6 +95968,15 @@
    "ean": "7702018837830"
   },
   {
+   "name": "Gillette Gel 200ml March3 Extra…",
+   "price": 68.18,
+   "amount": "200 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=gillette-gel-200ml-march3-extra-comfort-6ks&do=detail",
+   "ean": "7702018290994",
+   "ean_bal": "7702018290987"
+  },
+  {
    "name": "Gillette Gel 200ml Series…",
    "price": 69.8,
    "amount": "200 ml",
@@ -96003,6 +96004,15 @@
   },
   {
    "name": "Gillette Gel 200ml Series…",
+   "price": 74.1,
+   "amount": "200 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=gillette-gel-200ml-series-sensitive-6ks&do=detail",
+   "ean": "3014260214692",
+   "ean_bal": "7702018981984"
+  },
+  {
+   "name": "Gillette Gel 200ml Series…",
    "price": 63.8,
    "amount": "200 ml",
    "unit": "",
@@ -96018,6 +96028,24 @@
    "href": "/cs/drogerie?url=gillette-gel-200ml-series-sensitive-cool-6ks&do=detail",
    "ean": "7702018457786",
    "ean_bal": "7702018457779"
+  },
+  {
+   "name": "Gillette Gel 200ml Series…",
+   "price": 60.7,
+   "amount": "200 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=gillette-gel-200ml-series-sensitive-revitalizing-6ks&do=detail",
+   "ean": "7702018619658",
+   "ean_bal": "7702018619641"
+  },
+  {
+   "name": "Gillette Gel 200ml Series Ultra…",
+   "price": 68.1,
+   "amount": "200 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=gillette-gel-200ml-series-ultra-cleansing-charcoal-6ks&do=detail",
+   "ean": "7702018619757",
+   "ean_bal": "7702018619740"
   },
   {
    "name": "Gillette Gel 75ml Champion Ultra…",
@@ -96139,12 +96167,57 @@
    "ean_bal": "7702018426188"
   },
   {
+   "name": "Gillette Pěna 200+100ml Sensitive …",
+   "price": 50.41,
+   "amount": "100 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=gillette-pena-200-100ml-sensitive-6ks&do=detail",
+   "ean": "7702018617234",
+   "ean_bal": "7702018617227"
+  },
+  {
    "name": "Gillette Pěna 200ml Classic Shave…",
    "price": 47.14,
    "amount": "200 ml",
    "unit": "",
    "href": "/cs/drogerie?url=gillette-pena-200ml-classic-shave-foam-6ks&do=detail",
    "ean": "7702018980925"
+  },
+  {
+   "name": "Gillette Pěna 200ml Sensitive…",
+   "price": 46.0,
+   "amount": "200 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=gillette-pena-200ml-sensitive-revitalizing-6ks&do=detail",
+   "ean": "8001090873279",
+   "ean_bal": "8001090873262"
+  },
+  {
+   "name": "Gillette Pěna 200ml Series…",
+   "price": 46.0,
+   "amount": "200 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=gillette-pena-200ml-series-conditioning-6ks&do=detail",
+   "ean": "8001090871404",
+   "ean_bal": "8001090871411"
+  },
+  {
+   "name": "Gillette Pěna 200ml Series…",
+   "price": 47.9,
+   "amount": "200 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=gillette-pena-200ml-series-sensitive-6ks&do=detail",
+   "ean": "8001090870926",
+   "ean_bal": "8001090870674"
+  },
+  {
+   "name": "Gillette Pěna 200ml Series…",
+   "price": 54.05,
+   "amount": "200 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=gillette-pena-200ml-series-sensitive-cool-6ks&do=detail",
+   "ean": "8001090872098",
+   "ean_bal": "8001090872067"
   },
   {
    "name": "Gillette Pěna 250ml 3xPack Peau…",
@@ -96247,6 +96320,14 @@
    "href": "/cs/drogerie?url=gliss-sampon-250ml-blonde-hair-perfector-6ks&do=detail",
    "ean": "9000101617481",
    "ean_bal": "9000101617603"
+  },
+  {
+   "name": "Gliss Šampon 250ml Color Protect &…",
+   "price": 52.01,
+   "amount": "250 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=gliss-sampon-250ml-color-protect-shine-6ks&do=detail",
+   "ean": "5410091712402"
   },
   {
    "name": "Gliss Šampon 250ml Colour…",
@@ -96480,8 +96561,17 @@
    "ean": "8001841842707"
   },
   {
+   "name": "H&S Šampon na vlasy 400ml 2v1 Anti…",
+   "price": 90.0,
+   "amount": "400 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=h-s-sampon-na-vlasy-400ml-2v1-anti-hairfall-caffeine-6ks&do=detail",
+   "ean": "8006540833605",
+   "ean_bal": "8006540833599"
+  },
+  {
    "name": "H&S Šampon na vlasy 400ml Apple…",
-   "price": 79.0,
+   "price": 90.25,
    "amount": "400 ml",
    "unit": "",
    "href": "/cs/drogerie?url=h-s-sampon-na-vlasy-400ml-apple-fresh-6ks&do=detail",
@@ -96550,6 +96640,15 @@
    "href": "/cs/drogerie?url=h-s-sampon-na-vlasy-400ml-lisci-setosi-6ks&do=detail",
    "ean": "4084500106055",
    "ean_bal": "04084500106062"
+  },
+  {
+   "name": "H&S Šampon na vlasy 400ml Menthol …",
+   "price": 79.0,
+   "amount": "400 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=h-s-sampon-na-vlasy-400ml-menthol-6ks&do=detail",
+   "ean": "4015600745936",
+   "ean_bal": "4015600745943"
   },
   {
    "name": "H&S Šampon na vlasy 400ml…",
@@ -97771,15 +97870,6 @@
    "ean": "8700216708456"
   },
   {
-   "name": "Lenor perličky 210g Amethyst…",
-   "price": 118.0,
-   "amount": "210 g",
-   "unit": "",
-   "href": "/cs/drogerie?url=lenor-perlicky-210g-amethyst-flower-6-144&do=detail",
-   "ean": "8001841182223",
-   "ean_bal": "8001841182216"
-  },
-  {
    "name": "Linteo kapesníčky 2vrstv. 100ks…",
    "price": 21.71,
    "amount": "100 ks",
@@ -98057,6 +98147,14 @@
    "unit": "",
    "href": "/cs/drogerie?url=linteo-vlhceny-wc-papir-s-kyselinou-mlecnou-60ks-20ks&do=detail",
    "ean": "8594158374578"
+  },
+  {
+   "name": "Liola 72ks Klip dětské vlhč.…",
+   "price": 15.2,
+   "amount": "72 ks",
+   "unit": "",
+   "href": "/cs/drogerie?url=liola-72ks-klip-detske-vlhc-ubrousky-36ks&do=detail",
+   "ean": "8697817873099"
   },
   {
    "name": "Liola Kapesní vlhč. ubrousky 36ks …",
@@ -98463,7 +98561,7 @@
   },
   {
    "name": "Naturella Vložky Classic Standard…",
-   "price": 24.35,
+   "price": 24.14,
    "amount": "",
    "unit": "",
    "href": "/cs/drogerie?url=naturella-vlozky-classic-standard-10ks-24ks&do=detail",
@@ -98487,7 +98585,7 @@
   },
   {
    "name": "Naturella Vložky Ultra Normal 10ks…",
-   "price": 27.83,
+   "price": 27.59,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=naturella-vlozky-ultra-normal-10ks-24ks&do=detail",
@@ -99563,6 +99661,15 @@
    "ean_bal": "8006540377338"
   },
   {
+   "name": "Old Spice 150ml Oasis Deo sprej (6…",
+   "price": 62.9,
+   "amount": "150 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=old-spice-150ml-oasis-deo-sprej-6-396&do=detail",
+   "ean": "8006540785874",
+   "ean_bal": "8006540785850"
+  },
+  {
    "name": "Old Spice 150ml Original Deo sprej…",
    "price": 62.9,
    "amount": "150 ml",
@@ -99606,6 +99713,15 @@
    "href": "/cs/drogerie?url=old-spice-150ml-white-water-deo-sprej-6-396&do=detail",
    "ean": "4084500479821",
    "ean_bal": "4084500479838"
+  },
+  {
+   "name": "Old Spice 150ml White Wolf Deo…",
+   "price": 62.9,
+   "amount": "150 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=old-spice-150ml-white-wolf-deo-sprej-6-396&do=detail",
+   "ean": "8700216133074",
+   "ean_bal": "8700216133081"
   },
   {
    "name": "Old Spice 150ml Wolf Thorn Deo…",
@@ -99788,6 +99904,15 @@
    "ean_bal": "8700216875622"
   },
   {
+   "name": "Old Spice 400ml Spr.gel Oasis (6ks)",
+   "price": 73.4,
+   "amount": "400 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=old-spice-400ml-spr-gel-oasis-6ks&do=detail",
+   "ean": "8006540838761",
+   "ean_bal": "8006540838785"
+  },
+  {
    "name": "Old Spice 400ml Spr.gel Original …",
    "price": 67.49,
    "amount": "400 ml",
@@ -99813,6 +99938,15 @@
    "href": "/cs/drogerie?url=old-spice-400ml-spr-gel-rock-6ks&do=detail",
    "ean": "8001841326207",
    "ean_bal": "8001841326214"
+  },
+  {
+   "name": "Old Spice 400ml Spr.Gel White Wolf…",
+   "price": 62.9,
+   "amount": "400 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=old-spice-400ml-spr-gel-white-wolf-6ks&do=detail",
+   "ean": "8700216130622",
+   "ean_bal": "8700216130646"
   },
   {
    "name": "Old Spice 400ml Spr.Gel Wolf Thorn…",
@@ -99940,6 +100074,15 @@
    "ean_bal": "8006540424155"
   },
   {
+   "name": "Old Spice 50ml Oasis Deo Stick …",
+   "price": 66.09,
+   "amount": "50 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=old-spice-50ml-oasis-deo-stick-6ks&do=detail",
+   "ean": "8006540839362",
+   "ean_bal": "8006540839379"
+  },
+  {
    "name": "Old Spice 50ml Original Deo Stick …",
    "price": 62.9,
    "amount": "50 ml",
@@ -99992,6 +100135,15 @@
    "href": "/cs/drogerie?url=old-spice-50ml-timber-deo-stick-6ks&do=detail",
    "ean": "4084500940444",
    "ean_bal": "4084500940451"
+  },
+  {
+   "name": "Old Spice 50ml White Wolf Deo…",
+   "price": 62.9,
+   "amount": "50 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=old-spice-50ml-white-wolf-deo-stick-6ks&do=detail",
+   "ean": "8700216130424",
+   "ean_bal": "8700216130400"
   },
   {
    "name": "Old Spice 50ml Whitewater Deo…",
@@ -100102,7 +100254,7 @@
   },
   {
    "name": "Palette Barva na vlasy 0-00 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-0-00-10ks-e20&do=detail",
@@ -100111,7 +100263,7 @@
   },
   {
    "name": "Palette Barva na vlasy 1-0 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-1-0-10ks-n1&do=detail",
@@ -100120,7 +100272,7 @@
   },
   {
    "name": "Palette Barva na vlasy 1-1 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-1-1-10ks-c1&do=detail",
@@ -100129,7 +100281,7 @@
   },
   {
    "name": "Palette Barva na vlasy 10-1 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-10-1-10ks-c10&do=detail",
@@ -100138,7 +100290,7 @@
   },
   {
    "name": "Palette Barva na vlasy 10-2 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-10-2-10ks-a10&do=detail",
@@ -100147,7 +100299,7 @@
   },
   {
    "name": "Palette Barva na vlasy 12-46 (10ks…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-12-46-10ks-bw12&do=detail",
@@ -100155,7 +100307,7 @@
   },
   {
    "name": "Palette Barva na vlasy 3-0 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-3-0-10ks-n2&do=detail",
@@ -100164,7 +100316,7 @@
   },
   {
    "name": "Palette Barva na vlasy 3-65 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-3-65-10ks-w2&do=detail",
@@ -100173,7 +100325,7 @@
   },
   {
    "name": "Palette Barva na vlasy 3-68 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-3-68-10ks-r2&do=detail",
@@ -100182,7 +100334,7 @@
   },
   {
    "name": "Palette Barva na vlasy 4-0 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-4-0-10ks-n3&do=detail",
@@ -100191,7 +100343,7 @@
   },
   {
    "name": "Palette Barva na vlasy 4-5 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-4-5-10ks-g3&do=detail",
@@ -100200,7 +100352,7 @@
   },
   {
    "name": "Palette Barva na vlasy 4-88 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-4-88-10ks-rf3&do=detail",
@@ -100208,7 +100360,7 @@
   },
   {
    "name": "Palette Barva na vlasy 4-89 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-4-89-10ks-rfe3&do=detail",
@@ -100217,7 +100369,7 @@
   },
   {
    "name": "Palette Barva na vlasy 5-0 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-5-0-10ks-n4&do=detail",
@@ -100226,7 +100378,7 @@
   },
   {
    "name": "Palette Barva na vlasy 5-68 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-5-68-10ks-r4&do=detail",
@@ -100235,7 +100387,7 @@
   },
   {
    "name": "Palette Barva na vlasy 6-0 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-6-0-10ks-n5&do=detail",
@@ -100244,7 +100396,7 @@
   },
   {
    "name": "Palette Barva na vlasy 6-65 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-6-65-10ks-w5&do=detail",
@@ -100253,7 +100405,7 @@
   },
   {
    "name": "Palette Barva na vlasy 6-80 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-6-80-10ks-rn5&do=detail",
@@ -100261,7 +100413,7 @@
   },
   {
    "name": "Palette Barva na vlasy 6-88 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-6-88-10ks-ri5&do=detail",
@@ -100270,7 +100422,7 @@
   },
   {
    "name": "Palette Barva na vlasy 6-99 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-6-99-10ks-v5&do=detail",
@@ -100278,7 +100430,7 @@
   },
   {
    "name": "Palette Barva na vlasy 7-0 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-7-0-10ks-n6&do=detail",
@@ -100287,7 +100439,7 @@
   },
   {
    "name": "Palette Barva na vlasy 7-65 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-7-65-10ks-lg5&do=detail",
@@ -100296,7 +100448,7 @@
   },
   {
    "name": "Palette Barva na vlasy 7-887 (10ks…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-7-887-10ks-rv6&do=detail",
@@ -100304,7 +100456,7 @@
   },
   {
    "name": "Palette Barva na vlasy 8-0 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-8-0-10ks-n7&do=detail",
@@ -100313,7 +100465,7 @@
   },
   {
    "name": "Palette Barva na vlasy 8-21 (10ks)",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-8-21-10ks&do=detail",
@@ -100321,7 +100473,7 @@
   },
   {
    "name": "Palette Barva na vlasy 8-46 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-8-46-10ks-bw7&do=detail",
@@ -100329,7 +100481,7 @@
   },
   {
    "name": "Palette Barva na vlasy 8-77 (10ks)…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-8-77-10ks-ki7&do=detail",
@@ -100337,7 +100489,7 @@
   },
   {
    "name": "Palette Barva na vlasy 9.5-1 (10ks…",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-9-5-1-10ks-c9&do=detail",
@@ -100346,7 +100498,7 @@
   },
   {
    "name": "Palette Barva na vlasy 9.5-21 …",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-9-5-21-10ks&do=detail",
@@ -100354,14 +100506,14 @@
   },
   {
    "name": "Palette Barva na vlasy R17 (10ks)",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-r17-10ks&do=detail"
   },
   {
    "name": "Palette Barva na vlasy RI6(10ks)",
-   "price": 42.0,
+   "price": 43.5,
    "amount": "10 ks",
    "unit": "",
    "href": "/cs/drogerie?url=palette-barva-na-vlasy-ri6-10ks&do=detail",
@@ -100956,6 +101108,15 @@
    "ean": "3838952015226"
   },
   {
+   "name": "Pantene kondicioner 200ml Aqua…",
+   "price": 49.8,
+   "amount": "200 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=pantene-kondicioner-200ml-aqua-light-6-288&do=detail",
+   "ean": "8001841740454",
+   "ean_bal": "8001841740461"
+  },
+  {
    "name": "Pantene kondicioner 200ml…",
    "price": 49.8,
    "amount": "200 ml",
@@ -101106,6 +101267,15 @@
    "href": "/cs/drogerie?url=pantene-sampon-400ml-extra-volume-6-324&do=detail",
    "ean": "5410076561469",
    "ean_bal": "5410076561483"
+  },
+  {
+   "name": "Pantene Šampon 400ml Aqua Light (6…",
+   "price": 69.99,
+   "amount": "400 ml",
+   "unit": "",
+   "href": "/cs/drogerie?url=pantene-sampon-400ml-aqua-light-6-324&do=detail",
+   "ean": "5410076561223",
+   "ean_bal": "5410076561247"
   },
   {
    "name": "Pantene Šampon 400ml Lively Colour…",
@@ -102424,7 +102594,7 @@
   },
   {
    "name": "Savo WC gel 700ml Citrón (12ks)",
-   "price": 39.5,
+   "price": 43.84,
    "amount": "700 ml",
    "unit": "",
    "href": "/cs/drogerie?url=savo-wc-gel-700ml-citron-12ks&do=detail",
@@ -102440,7 +102610,7 @@
   },
   {
    "name": "Savo WC gel 700ml Turbo (12ks)",
-   "price": 39.5,
+   "price": 43.8,
    "amount": "700 ml",
    "unit": "",
    "href": "/cs/drogerie?url=savo-wc-gel-700ml-turbo-12ks&do=detail",
@@ -104130,429 +104300,6 @@
    "ean": "8004050036738"
   },
   {
-   "name": "Admit Svíčka hřbitovní náplň TB…",
-   "price": 8.5,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-napln-tb-100g-15-bal&do=detail",
-   "ean": "5903856970402"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní náplň TB…",
-   "price": 13.9,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-napln-tb-180g-15-bal&do=detail",
-   "ean": "5901960052656"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní náplň TB…",
-   "price": 14.9,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-napln-tb-230g-15-bal&do=detail",
-   "ean": "5904378969370"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní náplň TB…",
-   "price": 7.5,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-napln-tb-90g-15-bal&do=detail",
-   "ean": "5903856975124"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní náplň WK100…",
-   "price": 8.5,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-napln-wk100-90g-15-bal&do=detail",
-   "ean": "5901960052595"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní náplň WK150…",
-   "price": 10.5,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-napln-wk150-140g-15-bal&do=detail",
-   "ean": "5903856970112"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní s víčkem…",
-   "price": 20.5,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-s-vickem-labd-4-35g-red-white-10-bal&do=detail",
-   "ean": "5901960052625"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní s víčkem…",
-   "price": 9.9,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-s-vickem-labs-80g-15-bal&do=detail",
-   "ean": "5903856977272"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní s víčkem…",
-   "price": 14.2,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-s-vickem-labv-120g-do-15ks&do=detail",
-   "ean": "5903856971607"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní s víčkem…",
-   "price": 14.2,
-   "amount": "",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-s-vickem-labv-120g-trang-15ks&do=detail",
-   "ean": "5903856971607"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní sklo 100g…",
-   "price": 25.9,
-   "amount": "100 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-sklo-100g-la83k-6-bal&do=detail",
-   "ean": "5901960052830"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní sklo 120g…",
-   "price": 37.5,
-   "amount": "120 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-sklo-120g-laz420-6-bal&do=detail",
-   "ean": "5908260638030"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní sklo 140g…",
-   "price": 20.9,
-   "amount": "140 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-sklo-140g-la21zn-8-bal&do=detail",
-   "ean": "5904378967680"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní sklo 30g…",
-   "price": 8.5,
-   "amount": "30 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-sklo-30g-la11-10-bal&do=detail",
-   "ean": "5901960052113"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní sklo 30g…",
-   "price": 13.9,
-   "amount": "30 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-sklo-30g-la310-11-bal&do=detail",
-   "ean": "5901969637175"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní sklo 30g…",
-   "price": 14.9,
-   "amount": "30 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-sklo-30g-la360-11-bal&do=detail",
-   "ean": "5903856977234"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní sklo 30g…",
-   "price": 7.5,
-   "amount": "30 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-sklo-30g-la72k-10-bal&do=detail",
-   "ean": "5903856925822"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní sklo 50g…",
-   "price": 17.9,
-   "amount": "50 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-sklo-50g-la152-6-bal&do=detail",
-   "ean": "5903856973854"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní sklo 50g…",
-   "price": 16.9,
-   "amount": "50 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-sklo-50g-la21k-8-bal&do=detail",
-   "ean": "5903856977241"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní sklo 80g…",
-   "price": 25.9,
-   "amount": "80 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-sklo-80g-la273-6-bal&do=detail",
-   "ean": "5901969638547"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní sklo 80g…",
-   "price": 12.5,
-   "amount": "80 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-sklo-80g-la72z-10-bal&do=detail",
-   "ean": "5904378967710"
-  },
-  {
-   "name": "Admit Svíčka hřbitovní sklo 80g…",
-   "price": 31.9,
-   "amount": "80 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-hrbitovni-sklo-80g-la89-6-bal&do=detail",
-   "ean": "5908260653200"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Anti…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-anti-tobacco-12-krt&do=detail",
-   "ean": "5901969630152"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Beauty &…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-beauty-spa-12-krt&do=detail",
-   "ean": "5908260617837"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Black…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-black-currant-mango-12-krt&do=detail",
-   "ean": "5908260621827"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Cherry …",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-cherry-12-krt&do=detail",
-   "ean": "5904378969349"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Cinnamon …",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-cinnamon-12-krt&do=detail",
-   "ean": "5901969630534"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Coffee …",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-coffee-12-krt&do=detail",
-   "ean": "5901969630589"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Cotton…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-cotton-fresh-12-krt&do=detail"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Cranberry…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-cranberry-12-krt&do=detail",
-   "ean": "5908260617240"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Crocus …",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-crocus-12-krt&do=detail",
-   "ean": "5901969630596"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-eucaliptus-12-krt&do=detail"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Forest…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-forest-fruits-12-krt&do=detail",
-   "ean": "5908260621841"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Green…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-green-apple-12-krt&do=detail"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Green Tea…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-green-tea-12-krt&do=detail",
-   "ean": "5901969630107"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Hazelnut …",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-hazelnut-12-krt&do=detail",
-   "ean": "5908260617233"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Honey…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-honey-meloun-12-krt&do=detail"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Lavender …",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-lavender-12-krt&do=detail",
-   "ean": "5901969630633"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Lemon (12…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-lemon-12-krt&do=detail",
-   "ean": "5901969630541"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Mulled…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-mulled-wine-12-krt&do=detail",
-   "ean": "5901969630572"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Opium (12…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-opium-12-krt&do=detail",
-   "ean": "5901969633283"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Orange …",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-orange-12-krt&do=detail",
-   "ean": "5904378969356"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Pine (12…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-pine-12-krt&do=detail",
-   "ean": "5901969630718"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Red…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-red-currant-plum-12-krt&do=detail",
-   "ean": "5908260620172"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Red Tea …",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-red-tea-12-krt&do=detail"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Rose (12…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-rose-12-krt&do=detail",
-   "ean": "5901969630695"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Sea (12…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-sea-12-krt&do=detail"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-strawberry-12-krt&do=detail",
-   "ean": "5901969630732"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Tea Break…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-tea-break-12-krt&do=detail"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Tulips …",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-tulips-12-krt&do=detail",
-   "ean": "5901969630749"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g Vanilla …",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-vanilla-12-krt&do=detail",
-   "ean": "5901969630138"
-  },
-  {
-   "name": "Admit Svíčka ve skle 85g White Tea…",
-   "price": 25.49,
-   "amount": "85 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-svicka-ve-skle-85g-white-tea-12-krt&do=detail",
-   "ean": "5901969630114"
-  },
-  {
-   "name": "Admit WK150 Bílý/White 140G*15ks",
-   "price": 12.9,
-   "amount": "140 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-wk150-bily-white-140g-15ks&do=detail"
-  },
-  {
-   "name": "Admit WK150 Červený/Red 140G*15ks",
-   "price": 12.9,
-   "amount": "140 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=admit-wk150-cerveny-red-140g-15ks&do=detail"
-  },
-  {
    "name": "Airwick 19ml Elek. komplet…",
    "price": 89.0,
    "amount": "19 ml",
@@ -104649,7 +104396,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Aruba…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-aruba-meloun-6ks&do=detail",
@@ -104658,7 +104405,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Crisp…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-crisp-linen-lilac-6ks&do=detail",
@@ -104666,7 +104413,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň FarmHouse…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-farmhouse-svarene-vino-6-krt&do=detail",
@@ -104675,7 +104422,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň FarmHouse…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-farmhouse-zimni-bobule-6-krt&do=detail",
@@ -104684,7 +104431,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Green…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-green-apple-6s&do=detail",
@@ -104692,7 +104439,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Island…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-island-mango-6ks&do=detail",
@@ -104700,7 +104447,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Jemný…",
-   "price": 66.4,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-jemny-saten-a-mesicni-lilie-6ks&do=detail",
@@ -104709,7 +104456,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Lesní…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-lesni-potok-forest-waters-6ks&do=detail",
@@ -104718,14 +104465,14 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Life Sc .…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-life-sc-linen-in-the-air-6ks-55122&do=detail"
   },
   {
    "name": "Airwick 19ml Elek. náplň Linen in…",
-   "price": 54.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-linen-in-the-air-6ks&do=detail",
@@ -104734,7 +104481,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Lush…",
-   "price": 54.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-lush-hideway-6ks-62755&do=detail",
@@ -104743,7 +104490,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Magnolia …",
-   "price": 69.4,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-magnolia-cherry-blosson-6ks&do=detail",
@@ -104751,14 +104498,14 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Magnolia …",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-magnolia-6ks-38791&do=detail"
   },
   {
    "name": "Airwick 19ml Elek. náplň Magnolie …",
-   "price": 66.4,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-magnolie-kvety-tresni-6ks&do=detail",
@@ -104767,7 +104514,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Mystical…",
-   "price": 54.6,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-mystical-garden-6ks&do=detail",
@@ -104776,7 +104523,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Orange &…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-orange-cinnamon-6ks&do=detail",
@@ -104785,7 +104532,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Paradise…",
-   "price": 54.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-paradise-retreat-6ks&do=detail",
@@ -104794,7 +104541,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Purple…",
-   "price": 54.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-purple-lavender-meadow-6ks&do=detail",
@@ -104803,7 +104550,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Radostné…",
-   "price": 66.4,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-radostne-leto-6ks&do=detail",
@@ -104812,7 +104559,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Sweet…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-sweet-cookie-12-krt&do=detail",
@@ -104821,14 +104568,14 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Vanilla &…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-vanilla-honig-6ks-2037&do=detail"
   },
   {
    "name": "Airwick 19ml Elek. náplň White…",
-   "price": 54.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-white-flower-6ks-2037&do=detail",
@@ -104837,7 +104584,7 @@
   },
   {
    "name": "Airwick 19ml Elek. náplň Wild Rose…",
-   "price": 58.0,
+   "price": 53.0,
    "amount": "19 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-19ml-elek-napln-wild-rose-6ks&do=detail",
@@ -104908,7 +104655,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Anti…",
-   "price": 58.6,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-anti-tobacco-6ks&do=detail",
@@ -104916,7 +104663,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Beach…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-beach-escapes-6ks&do=detail",
@@ -104924,7 +104671,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Bile…",
-   "price": 65.27,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-bile-kvety-6ks&do=detail",
@@ -104932,7 +104679,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Cherry…",
-   "price": 58.64,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-cherry-blossom-6ks&do=detail",
@@ -104941,7 +104688,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Cool…",
-   "price": 58.6,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-cool-linen-white-lilac-6ks&do=detail",
@@ -104950,7 +104697,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Freesia &…",
-   "price": 70.9,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-freesia-jas-6ks&do=detail",
@@ -104958,28 +104705,28 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Fruit…",
-   "price": 49.22,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-fruit-cocktail-6ks&do=detail"
   },
   {
    "name": "Airwick 250ml Freshmatic Lavender …",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-lavender-4ks&do=detail"
   },
   {
    "name": "Airwick 250ml Freshmatic Lavender …",
-   "price": 70.9,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-lavender-6ks&do=detail"
   },
   {
    "name": "Airwick 250ml Freshmatic lesní…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-lesni-plod-6ks&do=detail",
@@ -104988,7 +104735,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Life Sc.…",
-   "price": 56.34,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-life-sc-turquiose-oasis-6ks-6448&do=detail",
@@ -104997,7 +104744,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Linen In…",
-   "price": 65.27,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-linen-in-the-air-6ks&do=detail",
@@ -105006,7 +104753,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Magnolia …",
-   "price": 75.8,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-magnolia-cherry-blossom-6ks&do=detail",
@@ -105015,7 +104762,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Mango …",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-mango-6ks&do=detail",
@@ -105024,7 +104771,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic…",
-   "price": 65.27,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-mediterranean-sun-6ks&do=detail",
@@ -105033,7 +104780,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Mulled…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-mulled-wine-6ks&do=detail",
@@ -105042,7 +104789,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Mystical…",
-   "price": 55.66,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-mystical-garden-6ks&do=detail",
@@ -105051,7 +104798,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic náplň…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-napln-farmhouse-homemade-cookies-6ks&do=detail",
@@ -105060,7 +104807,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic náplň…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-napln-farmhouse-svarene-vino-6ks&do=detail",
@@ -105068,7 +104815,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic náplň…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-napln-farmhouse-zimni-bobule-6ks&do=detail",
@@ -105077,7 +104824,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic náplň LS…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-napln-ls-tajemna-zahrada-6ks&do=detail",
@@ -105086,7 +104833,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic náplň…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-napln-maui-mangove-splichnuti&do=detail",
@@ -105094,7 +104841,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Orchidee…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-orchidee-sauvage-et-soie-precieuse-hoa-lan-6ks&do=detail",
@@ -105103,7 +104850,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Paradise…",
-   "price": 58.6,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-paradise-retreat-6ks&do=detail",
@@ -105112,7 +104859,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Pink…",
-   "price": 58.6,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-pink-sweet-pea-4ks&do=detail",
@@ -105121,7 +104868,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Pure…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-pure-cherry-bloss-6ks&do=detail",
@@ -105130,7 +104877,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Pure…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-pure-cherry-bloss-4ks&do=detail",
@@ -105139,7 +104886,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Pure…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-pure-cotton-6ks&do=detail",
@@ -105148,7 +104895,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Pure…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-pure-lavender-6ks&do=detail",
@@ -105157,7 +104904,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Pure Soft…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-pure-soft-cotton-4ks&do=detail",
@@ -105165,7 +104912,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Pure…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-pure-spring-dew-6ks&do=detail",
@@ -105174,7 +104921,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Recharge…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-recharge-cannelle-epices-ef-cannelle-que-hoi-6ks&do=detail",
@@ -105183,7 +104930,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Smooth…",
-   "price": 58.6,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-smooth-satin-moonlily-6ks&do=detail",
@@ -105192,7 +104939,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Soft…",
-   "price": 58.6,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-soft-cotton-6ks&do=detail",
@@ -105200,7 +104947,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Sparking…",
-   "price": 45.42,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-sparking-citrus-6ks&do=detail",
@@ -105209,7 +104956,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Spring…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-spring-delight-6ks&do=detail",
@@ -105218,7 +104965,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Summer…",
-   "price": 58.6,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-summer-delight-6ks&do=detail",
@@ -105227,7 +104974,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Vanilla &…",
-   "price": 65.27,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-vanilla-caramel-6ks&do=detail",
@@ -105236,7 +104983,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic Vanilla/…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-vanilla-recharge-bois-6ks&do=detail",
@@ -105245,7 +104992,7 @@
   },
   {
    "name": "Airwick 250ml Freshmatic White…",
-   "price": 64.0,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-freshmatic-white-vanilla-bean-4ks&do=detail",
@@ -105254,7 +105001,7 @@
   },
   {
    "name": "Airwick 250ml Vanila & Orchidee …",
-   "price": 54.9,
+   "price": 54.0,
    "amount": "250 ml",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=airwick-250ml-vanila-orchidee-6ks&do=detail",
@@ -105433,6 +105180,14 @@
    "amount": "50 ks",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=ait-zapalovac-cesko-bat-lua-50ks-n143&do=detail"
+  },
+  {
+   "name": "Ait Zapalovač Citties Bat lua …",
+   "price": 4.5,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=ait-zapalovac-citties-bat-lua-50ks-n110&do=detail",
+   "ean_bal": "8594029211971"
   },
   {
    "name": "Ait Zapalovač Grafiti Bat lua …",
@@ -105853,7 +105608,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Angel…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-angel-wings-12-krt&do=detail",
@@ -105862,7 +105617,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Anti…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-anti-tobacco-deep-emotions-12-krt&do=detail",
@@ -105871,7 +105626,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Anti…",
-   "price": 50.1,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-anti-tobacco-wonderfull-fragrance-12-krt&do=detail",
@@ -105879,7 +105634,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-chocolate-orange-cherry-12-krt&do=detail",
@@ -105887,7 +105642,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 50.1,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-christmas-charming-12-krt&do=detail",
@@ -105895,7 +105650,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-christmas-flavours-12-krt&do=detail",
@@ -105904,7 +105659,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-christmas-gingerbread-12-krt&do=detail",
@@ -105913,7 +105668,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-christmas-orange-12-krt&do=detail",
@@ -105922,7 +105677,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-christmas-spices-12-krt&do=detail",
@@ -105931,7 +105686,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-christmas-time-12-krt&do=detail",
@@ -105940,7 +105695,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Coffee…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-coffee-spices-12-krt&do=detail",
@@ -105949,7 +105704,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Floral…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-floral-ar-cotton-12-krt&do=detail",
@@ -105957,7 +105712,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Flowers…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-flowers-hearts-12-krt&do=detail",
@@ -105966,7 +105721,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Glamour…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-glamour-christmas-12-krt&do=detail",
@@ -105974,7 +105729,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-lavender-basket-12-krt&do=detail",
@@ -105983,7 +105738,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Tutti…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-tutti-frutti-12-krt&do=detail",
@@ -105992,7 +105747,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Warm…",
-   "price": 50.1,
+   "price": 47.0,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-warm-evening-12-krt&do=detail",
@@ -106000,7 +105755,7 @@
   },
   {
    "name": "Bartek 115g Svíčka ve skle Winter…",
-   "price": 46.9,
+   "price": 49.69,
    "amount": "115 g",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=bartek-115g-svicka-ve-skle-winter-tutti-frutti-12-krt&do=detail",
@@ -106015,19 +105770,19 @@
    "ean": "8595067300504"
   },
   {
-   "name": "Bateria Slaný R03 (AAA) (15*4ks/20)",
+   "name": "Bateria Slaný R03 (AAA) (15*4ks…",
    "price": 2.9,
    "amount": "4 ks",
    "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=bateria-slany-r03-aaa-15-4ks-20&do=detail",
+   "href": "/cs/domacnost-a-zahrada?url=bateria-slany-r03-aaa-15-4ks-20disp&do=detail",
    "ean": "8595067301709"
   },
   {
-   "name": "Bateria Slaný R06 (AA) (15*4ks/20)",
+   "name": "Bateria Slaný R06 (AA) (15*4ks…",
    "price": 2.9,
    "amount": "4 ks",
    "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=bateria-slany-r06-aa-15-4ks-20&do=detail",
+   "href": "/cs/domacnost-a-zahrada?url=bateria-slany-r06-aa-15-4ks-20disp&do=detail",
    "ean": "8595067300528"
   },
   {
@@ -107299,12 +107054,27 @@
    "ean_bal": "8412766071408"
   },
   {
+   "name": "Clipper zapalovač Melting Psycho …",
+   "price": 16.3,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=clipper-zapalovac-melting-psycho-24ks&do=detail"
+  },
+  {
    "name": "Clipper zapalovač New Order (24ks)",
    "price": 16.3,
    "amount": "24 ks",
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=clipper-zapalovac-new-order-24ks&do=detail",
    "ean_bal": "8412766079060"
+  },
+  {
+   "name": "Clipper zapalovač Not My Fault …",
+   "price": 16.3,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=clipper-zapalovac-not-my-fault-24ks&do=detail",
+   "ean": "8412766115492"
   },
   {
    "name": "Clipper zapalovač Optic Illusions…",
@@ -107331,6 +107101,22 @@
    "ean_bal": "8412766071361"
   },
   {
+   "name": "Clipper zapalovač Retro Rugby …",
+   "price": 16.3,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=clipper-zapalovac-retro-rugby-24ks&do=detail",
+   "ean": "8412766115560"
+  },
+  {
+   "name": "Clipper zapalovač Retro Style 3 …",
+   "price": 16.3,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=clipper-zapalovac-retro-style-3-24ks&do=detail",
+   "ean": "8412766115539"
+  },
+  {
    "name": "Clipper zapalovač Skull n Flower …",
    "price": 16.3,
    "amount": "",
@@ -107353,6 +107139,13 @@
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=clipper-zapalovac-sticker-skulls-48ks&do=detail",
    "ean_bal": "8412765508905"
+  },
+  {
+   "name": "Clipper zapalovač stojan mix …",
+   "price": 16.3,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=clipper-zapalovac-stojan-mix-192ks&do=detail"
   },
   {
    "name": "Clipper zapalovač Summer Skulls+LB…",
@@ -107401,6 +107194,14 @@
    "unit": "",
    "href": "/cs/domacnost-a-zahrada?url=clipper-zapalovac-weed-boarding-lb-24ks&do=detail",
    "ean_bal": "8412766071316"
+  },
+  {
+   "name": "Clipper zapalovač Wild Animals 4 …",
+   "price": 16.3,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=clipper-zapalovac-wild-animals-4-24ks&do=detail",
+   "ean": "8412766115522"
   },
   {
    "name": "Clipper zapalovač Yokai Ducks …",
@@ -108142,6 +107943,14 @@
    "ean": "8697659245993"
   },
   {
+   "name": "Fino houbička na telefon 3ks (30ks)",
+   "price": 10.0,
+   "amount": "3 ks",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=fino-houbicka-na-telefon-3ks-30ks&do=detail",
+   "ean": "5900536278865"
+  },
+  {
    "name": "Fresh Air 260ml Anti Stress (6…",
    "price": 26.0,
    "amount": "260 ml",
@@ -108836,94 +108645,6 @@
    "ean": "8594158371911"
   },
   {
-   "name": "Nen OL1 Bílý/White (12ks)",
-   "price": 10.25,
-   "amount": "12 ks",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=nen-ol1-bily-white-12ks&do=detail",
-   "ean": "5908260606183"
-  },
-  {
-   "name": "Nen OL1 Červený/Red (12ks)",
-   "price": 10.25,
-   "amount": "12 ks",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=nen-ol1-cerveny-red-12ks&do=detail",
-   "ean": "5908260606183"
-  },
-  {
-   "name": "Nen OL4 Bílý/White *10ks",
-   "price": 15.5,
-   "amount": "10 ks",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=nen-ol4-bily-white-10ks&do=detail",
-   "ean": "5903856972055"
-  },
-  {
-   "name": "Nen OL4 Červený/Red *10ks",
-   "price": 15.5,
-   "amount": "10 ks",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=nen-ol4-cerveny-red-10ks&do=detail",
-   "ean": "5903856972055"
-  },
-  {
-   "name": "Nen TLA100 (12ks)",
-   "price": 119.0,
-   "amount": "12 ks",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=nen-tla100-12ks&do=detail",
-   "ean": "5904378961787"
-  },
-  {
-   "name": "Nen TLA30 (36ks)",
-   "price": 32.9,
-   "amount": "36 ks",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=nen-tla30-36ks&do=detail",
-   "ean": "5904378961800"
-  },
-  {
-   "name": "Nen TLA50 (24ks)",
-   "price": 55.5,
-   "amount": "24 ks",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=nen-tla50-24ks&do=detail",
-   "ean_bal": "5904378961794"
-  },
-  {
-   "name": "Nen WK30 Bílé/white (30g*10ks)",
-   "price": 33.9,
-   "amount": "30 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=nen-wk30-bile-white-30g-10ks&do=detail",
-   "ean": "5901960052618"
-  },
-  {
-   "name": "Nen WK30 červené/red (30g*10ks*30)",
-   "price": 33.9,
-   "amount": "30 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=nen-wk30-cervene-red-30g-10ks-30&do=detail",
-   "ean": "5901960052618"
-  },
-  {
-   "name": "Nen WK60 bílé/white (50g*5ks*30)",
-   "price": 24.5,
-   "amount": "50 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=nen-wk60-bile-white-50g-5ks-30&do=detail",
-   "ean": "5901960052601"
-  },
-  {
-   "name": "Nen WK60 červené/red (50g*5ks*30)",
-   "price": 24.5,
-   "amount": "50 g",
-   "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=nen-wk60-cervene-red-50g-5ks-30&do=detail",
-   "ean": "5901960052601"
-  },
-  {
    "name": "Paloma Car Deo Happy Bag/Túi (35ks)",
    "price": 25.0,
    "amount": "35 ks",
@@ -109316,6 +109037,399 @@
    "ean": "3179630009831"
   },
   {
+   "name": "Svíčka Admit hřbitovní náplň TB…",
+   "price": 8.5,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-napln-tb-100g-15-bal&do=detail",
+   "ean": "5903856970402"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní náplň TB…",
+   "price": 13.9,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-napln-tb-180g-15-bal&do=detail",
+   "ean": "5901960052656"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní náplň TB…",
+   "price": 14.9,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-napln-tb-230g-15-bal&do=detail",
+   "ean": "5904378969370"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní náplň TB…",
+   "price": 7.5,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-napln-tb-90g-15-bal&do=detail",
+   "ean": "5903856975124"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní náplň WK100…",
+   "price": 8.5,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-napln-wk100-90g-15-bal&do=detail",
+   "ean": "5901960052595"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní náplň WK150…",
+   "price": 10.5,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-napln-wk150-140g-15-bal&do=detail",
+   "ean": "5903856970112"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní s víčkem…",
+   "price": 20.5,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-s-vickem-labd-4-35g-red-white-10-bal&do=detail",
+   "ean": "5901960052625"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní s víčkem…",
+   "price": 9.9,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-s-vickem-labs-80g-15-bal&do=detail",
+   "ean": "5903856977272"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní sklo 100g…",
+   "price": 25.9,
+   "amount": "100 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-sklo-100g-la83k-6-bal&do=detail",
+   "ean": "5901960052830"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní sklo 120g…",
+   "price": 37.5,
+   "amount": "120 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-sklo-120g-laz420-6-bal&do=detail",
+   "ean": "5908260638030"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní sklo 140g…",
+   "price": 20.9,
+   "amount": "140 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-sklo-140g-la21zn-8-bal&do=detail",
+   "ean": "5904378967680"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní sklo 30g…",
+   "price": 8.5,
+   "amount": "30 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-sklo-30g-la11-10-bal&do=detail",
+   "ean": "5901960052113"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní sklo 30g…",
+   "price": 13.9,
+   "amount": "30 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-sklo-30g-la310-11-bal&do=detail",
+   "ean": "5901969637175"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní sklo 30g…",
+   "price": 14.9,
+   "amount": "30 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-sklo-30g-la360-11-bal&do=detail",
+   "ean": "5903856977234"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní sklo 30g…",
+   "price": 7.5,
+   "amount": "30 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-sklo-30g-la72k-10-bal&do=detail",
+   "ean": "5903856925822"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní sklo 50g…",
+   "price": 17.9,
+   "amount": "50 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-sklo-50g-la152-6-bal&do=detail",
+   "ean": "5903856973854"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní sklo 50g…",
+   "price": 16.9,
+   "amount": "50 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-sklo-50g-la21k-8-bal&do=detail",
+   "ean": "5903856977241"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní sklo 80g…",
+   "price": 25.9,
+   "amount": "80 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-sklo-80g-la273-6-bal&do=detail",
+   "ean": "5901969638547"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní sklo 80g…",
+   "price": 12.5,
+   "amount": "80 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-sklo-80g-la72z-10-bal&do=detail",
+   "ean": "5904378967710"
+  },
+  {
+   "name": "Svíčka Admit hřbitovní sklo 80g…",
+   "price": 31.9,
+   "amount": "80 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-hrbitovni-sklo-80g-la89-6-bal&do=detail",
+   "ean": "5908260653200"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Anti…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-anti-tobacco-12-krt&do=detail",
+   "ean": "5901969630152"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Beauty &…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-beauty-spa-12-krt&do=detail",
+   "ean": "5908260617837"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Black…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-black-currant-mango-12-krt&do=detail",
+   "ean": "5908260621827"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Cherry …",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-cherry-12-krt&do=detail",
+   "ean": "5904378969349"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Cinnamon …",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-cinnamon-12-krt&do=detail",
+   "ean": "5901969630534"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Coffee …",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-coffee-12-krt&do=detail",
+   "ean": "5901969630589"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Cotton…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-cotton-fresh-12-krt&do=detail"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Cranberry…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-cranberry-12-krt&do=detail",
+   "ean": "5908260617240"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Crocus …",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-crocus-12-krt&do=detail",
+   "ean": "5901969630596"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-eucaliptus-12-krt&do=detail"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Forest…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-forest-fruits-12-krt&do=detail",
+   "ean": "5908260621841"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Green…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-green-apple-12-krt&do=detail"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Green Tea…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-green-tea-12-krt&do=detail",
+   "ean": "5901969630107"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Hazelnut …",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-hazelnut-12-krt&do=detail",
+   "ean": "5908260617233"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Honey…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-honey-meloun-12-krt&do=detail"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Lavender …",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-lavender-12-krt&do=detail",
+   "ean": "5901969630633"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Lemon (12…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-lemon-12-krt&do=detail",
+   "ean": "5901969630541"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Mulled…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-mulled-wine-12-krt&do=detail",
+   "ean": "5901969630572"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Opium (12…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-opium-12-krt&do=detail",
+   "ean": "5901969633283"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Orange …",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-orange-12-krt&do=detail",
+   "ean": "5904378969356"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Pine (12…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-pine-12-krt&do=detail",
+   "ean": "5901969630718"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Red…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-red-currant-plum-12-krt&do=detail",
+   "ean": "5908260620172"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Red Tea …",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-red-tea-12-krt&do=detail"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Rose (12…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-rose-12-krt&do=detail",
+   "ean": "5901969630695"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Sea (12…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-sea-12-krt&do=detail"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-strawberry-12-krt&do=detail",
+   "ean": "5901969630732"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Tea Break…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-tea-break-12-krt&do=detail"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Tulips …",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-tulips-12-krt&do=detail",
+   "ean": "5901969630749"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g Vanilla …",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-vanilla-12-krt&do=detail",
+   "ean": "5901969630138"
+  },
+  {
+   "name": "Svíčka Admit ve skle 85g White Tea…",
+   "price": 25.49,
+   "amount": "85 g",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicka-admit-ve-skle-85g-white-tea-12-krt&do=detail",
+   "ean": "5901969630114"
+  },
+  {
    "name": "Svíčka na baterie čajová White 3,5…",
    "price": 6.5,
    "amount": "",
@@ -109332,88 +109446,206 @@
    "ean": "6943315590313"
   },
   {
-   "name": "Svíčky čaj. TL A36 Anti-Tabacco …",
-   "price": 53.4,
+   "name": "Svíčky Admit (Nen) OL1 Bílý (White…",
+   "price": 9.5,
    "amount": "",
    "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=svicky-caj-tl-a36-anti-tabacco-28ks&do=detail",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-nen-ol1-bily-white-12ks&do=detail",
+   "ean": "5908260606183"
+  },
+  {
+   "name": "Svíčky Admit (Nen) OL1 Červený …",
+   "price": 9.5,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-nen-ol1-cerveny-red-12ks&do=detail",
+   "ean": "5908260606183"
+  },
+  {
+   "name": "Svíčky Admit (Nen) OL4 Bílý (White…",
+   "price": 14.5,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-nen-ol4-bily-white-10ks&do=detail",
+   "ean": "5903856972055"
+  },
+  {
+   "name": "Svíčky Admit (Nen) OL4 Červený …",
+   "price": 14.5,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-nen-ol4-cerveny-red-10ks&do=detail",
+   "ean": "5903856972055"
+  },
+  {
+   "name": "Svíčky Admit (Nen) WK30 Bílé …",
+   "price": 33.0,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-nen-wk30-bile-white-30g-10ks-30sacku&do=detail",
+   "ean": "5901960052618"
+  },
+  {
+   "name": "Svíčky Admit (Nen) WK30 Červené …",
+   "price": 33.0,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-nen-wk30-cervene-red-30g-10ks-30sacku&do=detail",
+   "ean": "5901960052618"
+  },
+  {
+   "name": "Svíčky Admit (Nen) WK60 Bílé …",
+   "price": 21.9,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-nen-wk60-bile-white-50g-5ks-30sacku&do=detail",
+   "ean": "5901960052601"
+  },
+  {
+   "name": "Svíčky Admit (Nen) WK60 Červená …",
+   "price": 21.9,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-nen-wk60-cervena-red-50g-5ks-30sacku&do=detail",
+   "ean": "5901960052601"
+  },
+  {
+   "name": "Svíčky Admit čajové (Nen) TLA100 …",
+   "price": 96.0,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-cajove-nen-tla100-100ks&do=detail",
+   "ean": "5904378961787"
+  },
+  {
+   "name": "Svíčky Admit čajové (Nen) TLA30 …",
+   "price": 32.0,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-cajove-nen-tla30-30ks&do=detail",
+   "ean": "5904378961800"
+  },
+  {
+   "name": "Svíčky Admit čajové (Nen) TLA50 …",
+   "price": 51.8,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-cajove-nen-tla50-50ks&do=detail",
+   "ean_bal": "5904378961794"
+  },
+  {
+   "name": "Svíčky Admit čajové TLA36 Anti…",
+   "price": 50.2,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-cajove-tla36-anti-tabacco-36ks&do=detail",
    "ean": "5904378965389"
   },
   {
-   "name": "Svíčky čaj. TL A36 Cinnamon (28ks)",
-   "price": 53.4,
-   "amount": "28 ks",
+   "name": "Svíčky Admit čajové TLA36 Cinnamon…",
+   "price": 50.2,
+   "amount": "",
    "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=svicky-caj-tl-a36-cinnamon-28ks&do=detail",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-cajove-tla36-cinnamon-36ks&do=detail",
    "ean": "5904378968335"
   },
   {
-   "name": "Svíčky čaj. TL A36 Coffee (28ks)",
-   "price": 53.4,
-   "amount": "28 ks",
+   "name": "Svíčky Admit čajové TLA36 Coffee …",
+   "price": 50.2,
+   "amount": "",
    "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=svicky-caj-tl-a36-coffee-28ks&do=detail",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-cajove-tla36-coffee-36ks&do=detail",
    "ean": "5904378960827",
    "ean_bal": "5904378961114"
   },
   {
-   "name": "Svíčky čaj. TL A36 Green Tea (28ks)",
-   "price": 53.4,
-   "amount": "28 ks",
+   "name": "Svíčky Admit čajové TLA36 Green…",
+   "price": 50.2,
+   "amount": "",
    "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=svicky-caj-tl-a36-green-tea-28ks&do=detail",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-cajove-tla36-green-tea-36ks&do=detail",
    "ean": "5904378965433"
   },
   {
-   "name": "Svíčky čaj. TL A36 Jablko (28ks)",
-   "price": 53.4,
-   "amount": "28 ks",
+   "name": "Svíčky Admit čajové TLA36 Jablko …",
+   "price": 50.2,
+   "amount": "",
    "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=svicky-caj-tl-a36-jablko-28ks&do=detail",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-cajove-tla36-jablko-36ks&do=detail",
    "ean": "5904378960889"
   },
   {
-   "name": "Svíčky čaj. TL A36 Jahoda (28ks)",
-   "price": 53.4,
-   "amount": "28 ks",
+   "name": "Svíčky Admit čajové TLA36 Jahoda …",
+   "price": 50.2,
+   "amount": "",
    "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=svicky-caj-tl-a36-jahoda-28ks&do=detail",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-cajove-tla36-jahoda-36ks&do=detail",
    "ean": "5901969634389"
   },
   {
-   "name": "Svíčky čaj. TL A36 Lavender(28ks)",
-   "price": 53.4,
-   "amount": "28 ks",
+   "name": "Svíčky Admit čajové TLA36 Lavender…",
+   "price": 50.2,
+   "amount": "",
    "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=svicky-caj-tl-a36-lavender-28ks&do=detail",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-cajove-tla36-lavender-36ks&do=detail",
    "ean": "5901969634372"
   },
   {
-   "name": "Svíčky čaj. TL A36 Pomeranče (28ks)",
-   "price": 53.4,
-   "amount": "28 ks",
+   "name": "Svíčky Admit čajové TLA36…",
+   "price": 50.2,
+   "amount": "",
    "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=svicky-caj-tl-a36-pomerance-28ks&do=detail",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-cajove-tla36-pomerance-36ks&do=detail",
    "ean": "5904378960780",
    "ean_bal": "5904378961091"
   },
   {
-   "name": "Svíčky čaj. TL A36 Vanilka (28ks)",
-   "price": 53.4,
-   "amount": "28 ks",
+   "name": "Svíčky Admit čajové TLA36 Vanilka …",
+   "price": 50.2,
+   "amount": "",
    "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=svicky-caj-tl-a36-vanilka-28ks&do=detail",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-cajove-tla36-vanilka-36ks&do=detail",
    "ean": "5904378960841",
    "ean_bal": "5904378961121"
   },
   {
-   "name": "Svíčky čaj. TL A36 Višeň (28ks)",
-   "price": 53.4,
-   "amount": "28 ks",
+   "name": "Svíčky Admit čajové TLA36 Višeň …",
+   "price": 50.2,
+   "amount": "",
    "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=svicky-caj-tl-a36-visen-28ks&do=detail",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-cajove-tla36-visen-36ks&do=detail",
    "ean": "5904378960865",
    "ean_bal": "5904378961138"
+  },
+  {
+   "name": "Svíčky Admit hřbitovní s víčkem…",
+   "price": 13.0,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-hrbitovni-s-vickem-labv-120g-bily-15ks&do=detail",
+   "ean": "5903856971607"
+  },
+  {
+   "name": "Svíčky Admit hřbitovní s víčkem…",
+   "price": 13.0,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-hrbitovni-s-vickem-labv-120g-cerveny-15ks&do=detail",
+   "ean": "5903856971607"
+  },
+  {
+   "name": "Svíčky Admit WK150 Bílý (White)…",
+   "price": 11.6,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-wk150-bily-white-140g-15ks&do=detail"
+  },
+  {
+   "name": "Svíčky Admit WK150 Červený (Red)…",
+   "price": 11.6,
+   "amount": "",
+   "unit": "",
+   "href": "/cs/domacnost-a-zahrada?url=svicky-admit-wk150-cerveny-red-140g-15ks&do=detail"
   },
   {
    "name": "Taška Dárková na víno (Tui Qua) …",
@@ -109424,11 +109656,11 @@
    "ean": "2466000000040"
   },
   {
-   "name": "Taška Děkujeme (Tui hoa) (1000ks)",
+   "name": "Taška Děkujeme (1000ks)",
    "price": 0.46,
    "amount": "1000 ks",
    "unit": "",
-   "href": "/cs/domacnost-a-zahrada?url=taska-dekujeme-tui-hoa-1000ks&do=detail",
+   "href": "/cs/domacnost-a-zahrada?url=taska-dekujeme-1000ks&do=detail",
    "ean": "8598884827100",
    "ean_bal": "859884820200"
   },
