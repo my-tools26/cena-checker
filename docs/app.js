@@ -578,7 +578,12 @@ function renderRail() {
       var o = p[2].filter(function (x) { return expShort(x[4]) === (today ? 'hôm nay' : 'ngày mai'); })
         .sort(function (a, b) { return a[1] - b[1]; })[0];
       return { p: p, today: today, o: o };
-    }).sort(function (a, b) { return (b.today ? 1 : 0) - (a.today ? 1 : 0); }).slice(0, 6);
+    });
+    // Luan phien: moi lan mo trang 1 bo 6 mon NGAU NHIEN (khong co dinh), mon het "hom nay" xep truoc
+    for (var k = exp.length - 1; k > 0; k--) {
+      var r = Math.floor(Math.random() * (k + 1)), tt = exp[k]; exp[k] = exp[r]; exp[r] = tt;
+    }
+    exp = exp.slice(0, 6).sort(function (a, b) { return (b.today ? 1 : 0) - (a.today ? 1 : 0); });
     var html = '';
     if (top.length) html += "<div class='rbox rtop'><h5>🔥 Giảm sâu</h5>" + top.map(function (p) {
       var o = first(p);
@@ -1564,7 +1569,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.46';
+if (el) el.textContent = 'v1.7.0.47';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
