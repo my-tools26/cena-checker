@@ -542,6 +542,34 @@ function renderCats() {
   }).join('');
 }
 /* Cot phai: "Giam sau" + "Sap het KM" tinh tu retail.json (ban le) */
+/* Bam 1 mon trong "Sap het khuyen mai": mo khung xem gia ngay tai cho, KHONG dien
+   ten vao o tim kiem / khong mo bo loc sieu thi */
+var RAIL_EXP = [];
+function openPeek(p) {
+  var box = document.getElementById('peek');
+  if (!box) {
+    box = document.createElement('div'); box.id = 'peek';
+    box.innerHTML = "<div class='pk-bg'></div><div class='pk-card' role='dialog' aria-modal='true'>" +
+      "<button type='button' class='pk-x' aria-label='Đóng'>✕</button><div class='pk-body'></div></div>";
+    document.body.appendChild(box);
+    box.addEventListener('click', function (e) {
+      if (e.target.closest('.pk-x') || e.target.classList.contains('pk-bg')) box.classList.remove('show');
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') box.classList.remove('show'); });
+  }
+  var rows = retailRows([p], new Set());
+  box.querySelector('.pk-body').innerHTML = "<h3>⏰ Sắp hết khuyến mãi</h3>" +
+    (rows.length ? tableHTML(rows) : "<p class='muted'>Không còn giá.</p>");
+  box.classList.add('show');
+}
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('.rexp .ex[data-ri]');
+  if (!a || e.ctrlKey || e.metaKey || e.shiftKey || e.button) return;
+  var x = RAIL_EXP[+a.getAttribute('data-ri')];
+  if (!x) return;
+  e.preventDefault();
+  openPeek(x.p);
+});
 function renderRail() {
   var box = document.getElementById('rail');
   if (!box) return;
@@ -577,8 +605,9 @@ function renderRail() {
         "<span class='nm'>" + iconFor(p[0]) + esc(p[0]) + '<small>' + o[1].toFixed(2) + ' Kč · ' +
         esc(shortShop(canonShop(o[0]).replace(/\s*\(.*$/, ''))) + '</small></span></a>';
     }).join('') + '</div>';
-    if (exp.length) html += "<div class='rbox rexp'><h5>⏰ Sắp hết khuyến mãi</h5>" + exp.map(function (x) {
-      return "<a class='ex' href='" + link(x.p) + "'><span>" + iconFor(x.p[0]) + esc(x.p[0]) +
+    RAIL_EXP = exp;
+    if (exp.length) html += "<div class='rbox rexp'><h5>⏰ Sắp hết khuyến mãi</h5>" + exp.map(function (x, i) {
+      return "<a class='ex' data-ri='" + i + "' href='" + link(x.p) + "'><span>" + iconFor(x.p[0]) + esc(x.p[0]) +
         (x.o ? '<small>' + x.o[1].toFixed(2) + ' Kč · ' +
           esc(shortShop(canonShop(x.o[0]).replace(/\s*\(.*$/, ''))) + '</small>' : '') + '</span>' +
         "<span class='when" + (x.today ? ' today' : '') + "'>" + (x.today ? 'hôm nay' : 'ngày mai') + '</span></a>';
@@ -1554,7 +1583,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.44';
+if (el) el.textContent = 'v1.7.0.45';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {

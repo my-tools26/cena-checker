@@ -99,6 +99,13 @@
   .cpb.ok{opacity:1;color:var(--good);background:color-mix(in srgb,var(--good) 18%,transparent)}
  }
  @media not all and (hover:hover) and (pointer:fine){.cpb{display:none}}
+ #peek{display:none;position:fixed;inset:0;z-index:998}
+ #peek.show{display:block}
+ #peek .pk-bg{position:absolute;inset:0;background:rgba(0,0,0,.45)}
+ #peek .pk-card{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(720px,calc(100vw - 32px));max-height:calc(100vh - 64px);overflow:auto;background:var(--bg);border-radius:16px;padding:16px 18px;box-shadow:0 16px 48px rgba(0,0,0,.3)}
+ #peek .pk-card h3{margin:0 32px 10px 0;font-size:1em}
+ #peek .pk-x{position:absolute;top:10px;right:10px;border:0;background:none;color:var(--muted);font-size:1.1em;cursor:pointer;padding:4px 8px;border-radius:8px}
+ #peek .pk-x:hover{background:var(--card2);color:var(--text-strong)}
  #toast{position:fixed;left:50%;bottom:calc(76px + env(safe-area-inset-bottom));transform:translate(-50%,12px);max-width:calc(100vw - 32px);padding:10px 16px;border-radius:12px;background:var(--text-strong);color:var(--bg);font-size:.88em;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:999}
  #toast.show{opacity:1;transform:translate(-50%,0)}
  .pbars{display:flex;flex-direction:column;gap:12px;min-width:0}
