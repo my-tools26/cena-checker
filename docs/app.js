@@ -1569,7 +1569,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.47';
+if (el) el.textContent = 'v1.7.0.48';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
