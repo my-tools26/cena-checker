@@ -1,5 +1,5 @@
 {
-  "updated": "05.11.2026",
+  "updated": "12.11.2026",
   "note": "Giá từ nakup.itesco.cz (quét qua Chrome). 'CC' = giá Clubcard.",
   "items": [
     {
@@ -29,21 +29,13 @@
     {
       "name": "Madeta Jihočeské trvanlivé mléko plnotučné 3,5%",
       "amount": "1 l",
-      "price": 16.9,
-      "unit": "16,90 Kč/l",
-      "cc": true,
-      "valid": "do 10.11.2026 (bez CC 27,90 Kč)"
-    },
-    {
-      "name": "Madeta Jihočeské trvanlivé mléko plnotučné 3,5%",
-      "amount": "1 l",
       "price": 27.9,
       "unit": "27,90 Kč/l",
       "cc": false,
       "valid": ""
     },
     {
-      "name": "Pragolaktos trvanlivé mléko odstředěné 0,3%",
+      "name": "Pragolaktos Trvanlivé mléko odstředěné 0,3%",
       "amount": "1 l",
       "price": 14.9,
       "unit": "14,90 Kč/l",
@@ -51,7 +43,7 @@
       "valid": ""
     },
     {
-      "name": "Pragolaktos trvanlivé mléko polotučné 1,5%",
+      "name": "Pragolaktos Trvanlivé mléko polotučné 1,5%",
       "amount": "0,5 l",
       "price": 13.9,
       "unit": "27,80 Kč/l",
@@ -59,7 +51,7 @@
       "valid": ""
     },
     {
-      "name": "Pragolaktos trvanlivé mléko plnotučné bez laktózy 3,5%",
+      "name": "Pragolaktos Trvanlivé mléko plnotučné bez laktózy 3,5%",
       "amount": "1 l",
       "price": 29.9,
       "unit": "29,90 Kč/l",
@@ -67,7 +59,7 @@
       "valid": ""
     },
     {
-      "name": "Pragolaktos trvanlivé mléko plnotučné bez laktózy 3,5%",
+      "name": "Pragolaktos Trvanlivé mléko plnotučné bez laktózy 3,5%",
       "amount": "0,5 l",
       "price": 19.9,
       "unit": "39,80 Kč/l",
@@ -75,23 +67,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco mléko UHT polotučné 1,5%",
-      "amount": "1 l",
-      "price": 21.9,
-      "unit": "21,90 Kč/l",
-      "cc": false,
-      "valid": ""
-    },
-    {
-      "name": "Tesco mléko UHT plnotučné 3,5%",
-      "amount": "1 l",
-      "price": 24.9,
-      "unit": "24,90 Kč/l",
-      "cc": false,
-      "valid": ""
-    },
-    {
-      "name": "Tesco čerstvé polotučné mléko 1,5%",
+      "name": "Tesco Čerstvé polotučné mléko 1,5%",
       "amount": "1 l",
       "price": 19.9,
       "unit": "19,90 Kč/l",
@@ -99,15 +75,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco čerstvé polotučné mléko 1,5% (varianta 2)",
-      "amount": "1 l",
-      "price": 21.9,
-      "unit": "21,90 Kč/l",
-      "cc": false,
-      "valid": ""
-    },
-    {
-      "name": "Tesco čerstvé plnotučné mléko 3,5%",
+      "name": "Tesco Čerstvé plnotučné mléko 3,5%",
       "amount": "1 l",
       "price": 23.9,
       "unit": "23,90 Kč/l",
@@ -115,10 +83,18 @@
       "valid": ""
     },
     {
-      "name": "Tesco čerstvé plnotučné mléko 3,5% (varianta 2)",
+      "name": "Olma Čerstvé mléko polotučné 1,5%",
       "amount": "1 l",
-      "price": 24.9,
-      "unit": "24,90 Kč/l",
+      "price": 34.9,
+      "unit": "34,90 Kč/l",
+      "cc": false,
+      "valid": ""
+    },
+    {
+      "name": "Olma Selské čerstvé mléko plnotučné 3,9%",
+      "amount": "1 l",
+      "price": 39.9,
+      "unit": "39,90 Kč/l",
       "cc": false,
       "valid": ""
     },
@@ -139,34 +115,18 @@
       "valid": ""
     },
     {
-      "name": "Olma čerstvé mléko polotučné 1,5%",
+      "name": "Tesco Čerstvé polotučné mléko 1,5% (varianta 2)",
       "amount": "1 l",
-      "price": 26.9,
-      "unit": "26,90 Kč/l",
-      "cc": true,
-      "valid": "do 10.11.2026 (bez CC 34,90 Kč)"
-    },
-    {
-      "name": "Olma čerstvé mléko polotučné 1,5%",
-      "amount": "1 l",
-      "price": 34.9,
-      "unit": "34,90 Kč/l",
+      "price": 21.9,
+      "unit": "21,90 Kč/l",
       "cc": false,
       "valid": ""
     },
     {
-      "name": "Olma Selské čerstvé mléko plnotučné 3,9%",
+      "name": "Tesco Čerstvé plnotučné mléko 3,5% (varianta 2)",
       "amount": "1 l",
-      "price": 32.9,
-      "unit": "32,90 Kč/l",
-      "cc": true,
-      "valid": "do 10.11.2026 (bez CC 39,90 Kč)"
-    },
-    {
-      "name": "Olma Selské čerstvé mléko plnotučné 3,9%",
-      "amount": "1 l",
-      "price": 39.9,
-      "unit": "39,90 Kč/l",
+      "price": 24.9,
+      "unit": "24,90 Kč/l",
       "cc": false,
       "valid": ""
     },
@@ -179,23 +139,7 @@
       "valid": ""
     },
     {
-      "name": "Olma mléko s vysokým obsahem bílkovin",
-      "amount": "1 l",
-      "price": 33.9,
-      "unit": "33,90 Kč/l",
-      "cc": true,
-      "valid": "do 10.11.2026 (bez CC 46,90 Kč)"
-    },
-    {
-      "name": "Olma mléko s vysokým obsahem bílkovin",
-      "amount": "1 l",
-      "price": 46.9,
-      "unit": "46,90 Kč/l",
-      "cc": false,
-      "valid": ""
-    },
-    {
-      "name": "Bon Lait kozí mléko čerstvé",
+      "name": "Bon Lait Kozí mléko čerstvé",
       "amount": "500 ml",
       "price": 52.9,
       "unit": "105,80 Kč/l",
@@ -203,31 +147,15 @@
       "valid": ""
     },
     {
-      "name": "Tesco čerstvá vejce z podestýlky S",
-      "amount": "30 ks",
-      "price": 99.9,
-      "unit": "3,33 Kč/ks",
-      "cc": false,
-      "valid": "–28%, do 6.11.2026 (předtím 139,90 Kč)"
-    },
-    {
-      "name": "Čerstvá vejce od Kunína podestýlková M",
-      "amount": "10 ks",
-      "price": 89.9,
-      "unit": "8,99 Kč/ks",
+      "name": "Olma Mléko s vysokým obsahem bílkovin",
+      "amount": "1 l",
+      "price": 46.9,
+      "unit": "46,90 Kč/l",
       "cc": false,
       "valid": ""
     },
     {
-      "name": "Tesco čerstvá vejce z halového chovu M",
-      "amount": "6 ks",
-      "price": 54.9,
-      "unit": "9,15 Kč/ks",
-      "cc": false,
-      "valid": ""
-    },
-    {
-      "name": "Tesco čerstvá vejce z halového chovu L",
+      "name": "Tesco Čerstvá vejce z halového chovu L",
       "amount": "10 ks",
       "price": 84.9,
       "unit": "8,49 Kč/ks",
@@ -235,7 +163,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco čerstvá vejce XL",
+      "name": "Tesco Čerstvá vejce XL",
       "amount": "10 ks",
       "price": 89.9,
       "unit": "8,99 Kč/ks",
@@ -243,7 +171,23 @@
       "valid": ""
     },
     {
-      "name": "Tesco čerstvá vejce M",
+      "name": "Čerstvá vejce od Kunína podestýlková M10",
+      "amount": "10 ks",
+      "price": 89.9,
+      "unit": "8,99 Kč/ks",
+      "cc": false,
+      "valid": ""
+    },
+    {
+      "name": "Tesco Čerstvá vejce z halového chovu M",
+      "amount": "6 ks",
+      "price": 54.9,
+      "unit": "9,15 Kč/ks",
+      "cc": false,
+      "valid": ""
+    },
+    {
+      "name": "Tesco Čerstvá vejce M",
       "amount": "6 ks",
       "price": 74.9,
       "unit": "12,48 Kč/ks",
@@ -251,15 +195,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco čerstvá bio vejce M",
-      "amount": "6 ks",
-      "price": 79.9,
-      "unit": "13,32 Kč/ks",
-      "cc": false,
-      "valid": ""
-    },
-    {
-      "name": "Tesco čerstvá křepelčí vejce",
+      "name": "Tesco Čerstvá křepelčí vejce",
       "amount": "18 ks",
       "price": 69.9,
       "unit": "3,88 Kč/ks",
@@ -267,20 +203,28 @@
       "valid": ""
     },
     {
-      "name": "Tesco máslo 82%",
+      "name": "Tesco Čerstvá bio vejce M",
+      "amount": "6 ks",
+      "price": 79.9,
+      "unit": "13,32 Kč/ks",
+      "cc": false,
+      "valid": ""
+    },
+    {
+      "name": "Tesco Máslo 82% tuku",
       "amount": "250 g",
-      "price": 24.9,
-      "unit": "99,60 Kč/kg",
+      "price": 36.9,
+      "unit": "147,60 Kč/kg",
       "cc": false,
       "valid": ""
     },
     {
       "name": "Madeta Jihočeské máslo",
       "amount": "250 g",
-      "price": 54.9,
-      "unit": "219,60 Kč/kg",
-      "cc": false,
-      "valid": ""
+      "price": 44.9,
+      "unit": "179,60 Kč/kg",
+      "cc": true,
+      "valid": "do 17.11.2026 (bez CC 54,90 Kč)"
     },
     {
       "name": "Madeta Jihočeské máslo",
@@ -291,7 +235,7 @@
       "valid": ""
     },
     {
-      "name": "Milko máslo",
+      "name": "Milko Máslo",
       "amount": "250 g",
       "price": 52.9,
       "unit": "211,60 Kč/kg",
@@ -307,6 +251,14 @@
       "valid": ""
     },
     {
+      "name": "Madeta Jihočeské máslo",
+      "amount": "250 g",
+      "price": 54.9,
+      "unit": "219,60 Kč/kg",
+      "cc": false,
+      "valid": ""
+    },
+    {
       "name": "Alfa Přepuštěné máslo",
       "amount": "200 g",
       "price": 99.9,
@@ -315,15 +267,7 @@
       "valid": ""
     },
     {
-      "name": "Zlatý Sýr Eidam 45% (pultový)",
-      "amount": "1 kg",
-      "price": 169.0,
-      "unit": "169,00 Kč/kg",
-      "cc": true,
-      "valid": "do 10.11.2026 (bez CC 209,00 Kč/kg)"
-    },
-    {
-      "name": "Zlatý Sýr Eidam 45% (pultový)",
+      "name": "Zlatý Sýr Eidam 45% (pult)",
       "amount": "1 kg",
       "price": 209.0,
       "unit": "209,00 Kč/kg",
@@ -331,7 +275,15 @@
       "valid": ""
     },
     {
-      "name": "Eidam 30% (pultový)",
+      "name": "Eidam 30% (pult)",
+      "amount": "1 kg",
+      "price": 119.0,
+      "unit": "119,00 Kč/kg",
+      "cc": true,
+      "valid": "do 24.11.2026 (bez CC 179,00 Kč/kg)"
+    },
+    {
+      "name": "Eidam 30% (pult)",
       "amount": "1 kg",
       "price": 179.0,
       "unit": "179,00 Kč/kg",
@@ -339,7 +291,7 @@
       "valid": ""
     },
     {
-      "name": "Jihočeský eidam uzený 44% (pultový)",
+      "name": "Jihočeský eidam uzený 44% (pult)",
       "amount": "1 kg",
       "price": 299.0,
       "unit": "299,00 Kč/kg",
@@ -387,6 +339,22 @@
       "valid": ""
     },
     {
+      "name": "Krajanka Eidam sýr plátky",
+      "amount": "100 g",
+      "price": 21.9,
+      "unit": "219,00 Kč/kg",
+      "cc": true,
+      "valid": "do 17.11.2026 (bez CC 24,90 Kč)"
+    },
+    {
+      "name": "Krajanka Eidam sýr plátky",
+      "amount": "100 g",
+      "price": 24.9,
+      "unit": "249,00 Kč/kg",
+      "cc": false,
+      "valid": ""
+    },
+    {
       "name": "Tesco Edam 30% plátky",
       "amount": "100 g",
       "price": 18.9,
@@ -429,29 +397,29 @@
     {
       "name": "Kuřecí prsní řízky volné",
       "amount": "1 kg",
-      "price": 219.9,
-      "unit": "219,90 Kč/kg",
+      "price": 109.9,
+      "unit": "109,90 Kč/kg",
       "cc": false,
-      "valid": ""
+      "valid": "akce -50% do 17.11.2026 (předtím 219,90 Kč/kg)"
     },
     {
-      "name": "Tesco kuřecí prsní řízek",
+      "name": "Tesco Kuřecí prsní řízek RB",
       "amount": "1 kg",
-      "price": 219.9,
-      "unit": "219,90 Kč/kg",
+      "price": 109.9,
+      "unit": "109,90 Kč/kg",
       "cc": false,
-      "valid": ""
+      "valid": "akce -50% do 17.11.2026 (předtím 219,90 Kč/kg)"
     },
     {
-      "name": "Tesco kuřecí prsní řízek RB",
-      "amount": "1 kg",
-      "price": 219.9,
-      "unit": "219,90 Kč/kg",
-      "cc": false,
-      "valid": ""
+      "name": "Tesco Pomalu vařená kuřecí prsa",
+      "amount": "500 g",
+      "price": 94.9,
+      "unit": "189,80 Kč/kg",
+      "cc": true,
+      "valid": "do 17.11.2026 (bez CC 114,90 Kč)"
     },
     {
-      "name": "Tesco pomalu vařená kuřecí prsa",
+      "name": "Tesco Pomalu vařená kuřecí prsa",
       "amount": "500 g",
       "price": 114.9,
       "unit": "229,80 Kč/kg",
@@ -459,7 +427,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco kuřecí stehna",
+      "name": "Tesco Kuřecí stehna",
       "amount": "1 kg",
       "price": 119.9,
       "unit": "119,90 Kč/kg",
@@ -467,15 +435,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco kuřecí spodní stehna (i RB)",
-      "amount": "1 kg",
-      "price": 89.9,
-      "unit": "89,90 Kč/kg",
-      "cc": true,
-      "valid": "do 10.11.2026 (bez CC 109,90 Kč/kg)"
-    },
-    {
-      "name": "Tesco kuřecí spodní stehna (i RB)",
+      "name": "Tesco Kuřecí spodní stehna",
       "amount": "1 kg",
       "price": 109.9,
       "unit": "109,90 Kč/kg",
@@ -483,15 +443,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco kuřecí horní stehna (i RB)",
-      "amount": "1 kg",
-      "price": 89.9,
-      "unit": "89,90 Kč/kg",
-      "cc": true,
-      "valid": "do 10.11.2026 (bez CC 109,90 Kč/kg)"
-    },
-    {
-      "name": "Tesco kuřecí horní stehna (i RB)",
+      "name": "Tesco Kuřecí horní stehna RB",
       "amount": "1 kg",
       "price": 109.9,
       "unit": "109,90 Kč/kg",
@@ -499,7 +451,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco kuřecí stehna bez kosti a kůže (i RB)",
+      "name": "Tesco Kuřecí stehna bez kosti a kůže",
       "amount": "1 kg",
       "price": 199.9,
       "unit": "199,90 Kč/kg",
@@ -507,7 +459,23 @@
       "valid": ""
     },
     {
-      "name": "Tesco uzená kuřecí stehna",
+      "name": "Tesco Kuřecí stehna bez kosti a kůže RB",
+      "amount": "1 kg",
+      "price": 199.9,
+      "unit": "199,90 Kč/kg",
+      "cc": false,
+      "valid": ""
+    },
+    {
+      "name": "Tesco Uzená kuřecí stehna",
+      "amount": "340 g",
+      "price": 36.9,
+      "unit": "108,53 Kč/kg",
+      "cc": true,
+      "valid": "do 24.11.2026 (bez CC 44,90 Kč)"
+    },
+    {
+      "name": "Tesco Uzená kuřecí stehna",
       "amount": "340 g",
       "price": 44.9,
       "unit": "132,06 Kč/kg",
@@ -515,7 +483,15 @@
       "valid": ""
     },
     {
-      "name": "Tesco kuřecí křídla",
+      "name": "Tesco Kuřecí křídla",
+      "amount": "1 kg",
+      "price": 79.9,
+      "unit": "79,90 Kč/kg",
+      "cc": true,
+      "valid": "do 17.11.2026 (bez CC 109,90 Kč/kg)"
+    },
+    {
+      "name": "Tesco Kuřecí křídla",
       "amount": "1 kg",
       "price": 109.9,
       "unit": "109,90 Kč/kg",
@@ -523,7 +499,15 @@
       "valid": ""
     },
     {
-      "name": "Tesco uzená kuřecí křídla",
+      "name": "Tesco Uzená kuřecí křídla",
+      "amount": "300 g",
+      "price": 44.9,
+      "unit": "149,67 Kč/kg",
+      "cc": true,
+      "valid": "do 24.11.2026 (bez CC 58,90 Kč)"
+    },
+    {
+      "name": "Tesco Uzená kuřecí křídla",
       "amount": "300 g",
       "price": 58.9,
       "unit": "196,33 Kč/kg",
@@ -531,15 +515,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco kuřecí křídla ve sladké chilli marinádě",
-      "amount": "500 g",
-      "price": 89.9,
-      "unit": "179,80 Kč/kg",
-      "cc": true,
-      "valid": "do 10.11.2026 (bez CC 114,90 Kč)"
-    },
-    {
-      "name": "Tesco kuřecí křídla ve sladké chilli marinádě",
+      "name": "Tesco Kuřecí křídla ve sladké chilli marinádě",
       "amount": "500 g",
       "price": 114.9,
       "unit": "229,80 Kč/kg",
@@ -547,12 +523,20 @@
       "valid": ""
     },
     {
-      "name": "Tesco kuřecí játra",
+      "name": "Tesco Kuřecí játra",
       "amount": "1 kg",
       "price": 89.9,
       "unit": "89,90 Kč/kg",
       "cc": false,
       "valid": ""
+    },
+    {
+      "name": "Vepřová pečeně bez kosti",
+      "amount": "1 kg",
+      "price": 79.9,
+      "unit": "79,90 Kč/kg",
+      "cc": false,
+      "valid": "akce -59% do 17.11.2026 (předtím 198,90 Kč/kg)"
     },
     {
       "name": "Vepřová kýta bez kosti",
@@ -563,20 +547,12 @@
       "valid": ""
     },
     {
-      "name": "Vepřová plec bez kosti",
-      "amount": "1 kg",
-      "price": 79.9,
-      "unit": "79,90 Kč/kg",
-      "cc": false,
-      "valid": "–44%, do 10.11.2026 (předtím 144,90 Kč/kg)"
-    },
-    {
       "name": "Vepřová krkovice bez kosti",
       "amount": "1 kg",
-      "price": 74.9,
-      "unit": "74,90 Kč/kg",
+      "price": 194.9,
+      "unit": "194,90 Kč/kg",
       "cc": false,
-      "valid": "–61%, do 10.11.2026 (předtím 194,90 Kč/kg)"
+      "valid": ""
     },
     {
       "name": "Vepřové koleno s kostí",
@@ -587,15 +563,31 @@
       "valid": ""
     },
     {
-      "name": "Tesco vepřové koleno",
+      "name": "Tesco Vepřový bok s kostí",
       "amount": "1 kg",
-      "price": 114.9,
-      "unit": "114,90 Kč/kg",
-      "cc": false,
-      "valid": ""
+      "price": 89.9,
+      "unit": "89,90 Kč/kg",
+      "cc": true,
+      "valid": "do 17.11.2026"
     },
     {
-      "name": "Tesco vepřový bok s kostí",
+      "name": "Tesco Mleté maso vepřové",
+      "amount": "500 g",
+      "price": 84.9,
+      "unit": "169,80 Kč/kg",
+      "cc": true,
+      "valid": "do 17.11.2026 (bez CC 99,90 Kč)"
+    },
+    {
+      "name": "Tesco Mleté maso vepřové",
+      "amount": "800 g",
+      "price": 99.9,
+      "unit": "124,88 Kč/kg",
+      "cc": true,
+      "valid": "do 01.12.2026 (bez CC 114,90 Kč)"
+    },
+    {
+      "name": "Tesco Vepřový bok s kostí",
       "amount": "1 kg",
       "price": 129.9,
       "unit": "129,90 Kč/kg",
@@ -603,15 +595,23 @@
       "valid": ""
     },
     {
-      "name": "Tesco vepřová panenka",
+      "name": "Tesco Vepřové koleno",
       "amount": "1 kg",
-      "price": 179.9,
-      "unit": "179,90 Kč/kg",
+      "price": 79.9,
+      "unit": "79,90 Kč/kg",
       "cc": true,
-      "valid": "do 10.11.2026 (bez CC 259,90 Kč/kg)"
+      "valid": "do 17.11.2026 (bez CC 114,90 Kč/kg)"
     },
     {
-      "name": "Tesco vepřová panenka",
+      "name": "Tesco Vepřové koleno",
+      "amount": "1 kg",
+      "price": 114.9,
+      "unit": "114,90 Kč/kg",
+      "cc": false,
+      "valid": ""
+    },
+    {
+      "name": "Tesco Vepřová panenka",
       "amount": "1 kg",
       "price": 259.9,
       "unit": "259,90 Kč/kg",
@@ -619,7 +619,15 @@
       "valid": ""
     },
     {
-      "name": "Tesco vepřová játra",
+      "name": "Tesco Vepřová játra",
+      "amount": "1 kg",
+      "price": 69.9,
+      "unit": "69,90 Kč/kg",
+      "cc": true,
+      "valid": "do 17.11.2026 (bez CC 81,90 Kč/kg)"
+    },
+    {
+      "name": "Tesco Vepřová játra",
       "amount": "1 kg",
       "price": 81.9,
       "unit": "81,90 Kč/kg",
@@ -627,15 +635,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco mleté maso vepřové",
-      "amount": "800 g",
-      "price": 99.9,
-      "unit": "124,88 Kč/kg",
-      "cc": true,
-      "valid": "do 1.12.2026 (bez CC 114,90 Kč)"
-    },
-    {
-      "name": "Tesco mleté maso vepřové",
+      "name": "Tesco Mleté maso vepřové",
       "amount": "800 g",
       "price": 114.9,
       "unit": "143,62 Kč/kg",
@@ -643,7 +643,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco mleté maso vepřové",
+      "name": "Tesco Mleté maso vepřové",
       "amount": "500 g",
       "price": 99.9,
       "unit": "199,80 Kč/kg",
@@ -651,7 +651,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco vepřové maso na guláš z plece",
+      "name": "Tesco Vepřové maso na guláš z plece",
       "amount": "500 g",
       "price": 114.9,
       "unit": "229,80 Kč/kg",
@@ -659,15 +659,15 @@
       "valid": ""
     },
     {
-      "name": "Tesco vepřová krkovice bez kosti plátky",
+      "name": "Tesco Vepřová krkovice bez kosti plátky",
       "amount": "800 g",
       "price": 149.9,
       "unit": "187,38 Kč/kg",
       "cc": true,
-      "valid": "do 1.12.2026 (bez CC 174,90 Kč)"
+      "valid": "do 01.12.2026 (bez CC 174,90 Kč)"
     },
     {
-      "name": "Tesco vepřová krkovice bez kosti plátky",
+      "name": "Tesco Vepřová krkovice bez kosti plátky",
       "amount": "800 g",
       "price": 174.9,
       "unit": "218,62 Kč/kg",
@@ -675,15 +675,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco vepřová pečeně bez kosti plátky",
-      "amount": "720 g",
-      "price": 129.9,
-      "unit": "180,42 Kč/kg",
-      "cc": true,
-      "valid": "do 10.11.2026 (bez CC 149,90 Kč)"
-    },
-    {
-      "name": "Tesco vepřová pečeně bez kosti plátky",
+      "name": "Tesco Vepřová pečeně bez kosti plátky",
       "amount": "720 g",
       "price": 149.9,
       "unit": "208,19 Kč/kg",
@@ -691,7 +683,31 @@
       "valid": ""
     },
     {
-      "name": "Tesco vepřové medailonky",
+      "name": "Tesco Vepřová kýta bez kosti plátky",
+      "amount": "600 g",
+      "price": 95.9,
+      "unit": "159,83 Kč/kg",
+      "cc": true,
+      "valid": "do 17.11.2026 (bez CC 119,90 Kč)"
+    },
+    {
+      "name": "Tesco Vepřová kýta bez kosti plátky",
+      "amount": "600 g",
+      "price": 119.9,
+      "unit": "199,83 Kč/kg",
+      "cc": false,
+      "valid": ""
+    },
+    {
+      "name": "Tesco Vepřová žebírka",
+      "amount": "1 kg",
+      "price": 159.9,
+      "unit": "159,90 Kč/kg",
+      "cc": false,
+      "valid": ""
+    },
+    {
+      "name": "Tesco Vepřové medailonky",
       "amount": "360 g",
       "price": 89.9,
       "unit": "249,72 Kč/kg",
@@ -699,7 +715,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco jasmínová rýže",
+      "name": "Tesco Jasmínová rýže",
       "amount": "500 g",
       "price": 24.9,
       "unit": "49,80 Kč/kg",
@@ -707,23 +723,7 @@
       "valid": ""
     },
     {
-      "name": "Tesco jasmínová rýže ve varných sáčcích",
-      "amount": "500 g",
-      "price": 31.9,
-      "unit": "63,80 Kč/kg",
-      "cc": false,
-      "valid": ""
-    },
-    {
-      "name": "Menu Gold rýže jasmínová",
-      "amount": "500 g",
-      "price": 41.9,
-      "unit": "83,80 Kč/kg",
-      "cc": false,
-      "valid": ""
-    },
-    {
-      "name": "Menu Gold rýže jasmínová",
+      "name": "Menu Gold Rýže jasmínová",
       "amount": "1 kg",
       "price": 78.9,
       "unit": "78,90 Kč/kg",
@@ -731,23 +731,15 @@
       "valid": ""
     },
     {
-      "name": "Menu Gold rýže jasmínová",
+      "name": "Menu Gold Rýže jasmínová",
       "amount": "2 kg",
-      "price": 149.9,
-      "unit": "74,95 Kč/kg",
-      "cc": false,
-      "valid": ""
+      "price": 109.9,
+      "unit": "54,95 Kč/kg",
+      "cc": true,
+      "valid": "do 24.11.2026 (bez CC 149,90 Kč)"
     },
     {
-      "name": "Menu Gold Hom Mali thajská jasmínová rýže",
-      "amount": "500 g",
-      "price": 47.9,
-      "unit": "95,80 Kč/kg",
-      "cc": false,
-      "valid": ""
-    },
-    {
-      "name": "Giana rýže jasmínová",
+      "name": "Giana Rýže jasmínová",
       "amount": "5 kg",
       "price": 289.9,
       "unit": "57,98 Kč/kg",
@@ -755,7 +747,39 @@
       "valid": ""
     },
     {
-      "name": "Lagris jasmínová rýže",
+      "name": "Tesco Jasmínová rýže ve varných sáčcích",
+      "amount": "500 g",
+      "price": 31.9,
+      "unit": "63,80 Kč/kg",
+      "cc": false,
+      "valid": ""
+    },
+    {
+      "name": "Menu Gold Rýže jasmínová",
+      "amount": "500 g",
+      "price": 34.9,
+      "unit": "69,80 Kč/kg",
+      "cc": true,
+      "valid": "do 24.11.2026 (bez CC 41,90 Kč)"
+    },
+    {
+      "name": "Menu Gold Rýže jasmínová",
+      "amount": "500 g",
+      "price": 41.9,
+      "unit": "83,80 Kč/kg",
+      "cc": false,
+      "valid": ""
+    },
+    {
+      "name": "Menu Gold Rýže jasmínová",
+      "amount": "2 kg",
+      "price": 149.9,
+      "unit": "74,95 Kč/kg",
+      "cc": false,
+      "valid": ""
+    },
+    {
+      "name": "Lagris Jasmínová rýže",
       "amount": "500 g",
       "price": 53.9,
       "unit": "107,80 Kč/kg",
@@ -763,34 +787,10 @@
       "valid": ""
     },
     {
-      "name": "Orient Gourmet jasmínová rýže dlouhozrnná",
+      "name": "Orient Gourmet Jasmínová rýže dlouhozrnná",
       "amount": "1 kg",
       "price": 99.9,
       "unit": "99,90 Kč/kg",
-      "cc": false,
-      "valid": ""
-    },
-    {
-      "name": "White Elephant thajská jasmínová rýže",
-      "amount": "1 kg",
-      "price": 93.9,
-      "unit": "93,90 Kč/kg",
-      "cc": false,
-      "valid": ""
-    },
-    {
-      "name": "White Elephant thajská jasmínová rýže",
-      "amount": "2 kg",
-      "price": 144.9,
-      "unit": "72,45 Kč/kg",
-      "cc": true,
-      "valid": "do 23.11.2026 (bez CC 184,90 Kč)"
-    },
-    {
-      "name": "White Elephant thajská jasmínová rýže",
-      "amount": "2 kg",
-      "price": 184.9,
-      "unit": "92,45 Kč/kg",
       "cc": false,
       "valid": ""
     }
