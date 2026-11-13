@@ -37,12 +37,22 @@ var TILES = [['🍎', 'Rau quả', 'ovoce'], ['🥩', 'Thịt cá', 'maso'],
   ['🧴', 'Drogerie', 'drogerie'], ['🐶', 'Thú cưng', 'mazlicci'],
   // 4 o moi (them 10/2026; Dong lanh + Do an san gop thanh 'Do mat/lanh'): truoc day cac mon nay bi xep nham vao o khac
   ['🍷', 'Rượu', 'alkohol'], ['🥫', 'Đồ hộp', 'konzervy'],
-  ['🍝', 'Đồ khô & gia vị', 'vareni'], ['❄️', 'Đồ mát/lạnh', 'mrazene']];
+  ['🍝', 'Đồ khô & gia vị', 'vareni'], ['❄️', 'Đồ mát/lạnh', 'mrazene'],
+  // 11/2026: do gia dung (tui rac, giay bac, giay nuong, nen...) - truoc day khong co o nao
+  ['🏠', 'Domácí', 'domaci']];
+/* Do gia dung: kupi khong gan danh muc cho cac mon nay -> nhan theo ten */
+var DOMACI_WORDS = ['sacky', 'sacek', 'alobal', 'papir na peceni', 'pecici papir', 'folie',
+  'svicka', 'svicky', 'kelimk', 'talir', 'pribor', 'houbick', 'hadr', 'uterk', 'kbelik',
+  'zarovk', 'baterie', 'ubrus', 'vinuta', 'smetak', 'mop'];
+function isDomaci(name) {
+  var n = stripAccents(name || '');
+  return DOMACI_WORDS.some(function (w) { return n.indexOf(w) >= 0; });
+}
 /* Danh muc chuan kupi ("goc/con", phan tu thu 4 trong retail.json) -> o tren web.
    Thay cho doan theo chuoi con trong ten (CAT_WORDS) da xep nham vd "Bageta s
    cibulkou", "Kompot jahody" vao Rau qua. */
 function retailTile(c, name) {
-  if (!c) return '';
+  if (!c || c.split('/')[0] === 'domacnost') return isDomaci(name) || c ? 'domaci' : '';
   var top = c.split('/')[0], sub = c.split('/')[1] || '';
   // kupi xep cider vao "pivo-ochucene" (bia huong vi) -> dua sang Ruou
   if (top === 'alkohol' && /cider|cidr/i.test(name || '')) return 'alkohol';
@@ -80,7 +90,8 @@ var CAT_WORDS = {
   alkohol: ['vino', 'vodka', 'rum', 'whisk', 'liker', 'gin', 'sekt', 'prosecco', 'cider'],
   konzervy: ['konzerv', 'kompot', 'sterilov', 'nakladan', 'loupan', 'pastik'],
   vareni: ['ryze', 'testovin', 'olej', 'koreni', 'mouka', 'cukr', 'kecup', 'majonez', 'ocet'],
-  mrazene: ['mrazen', 'zmrzlin', 'hranolk', 'pizza', 'lahudk', 'pomazank', 'hotov', 'salat s']
+  mrazene: ['mrazen', 'zmrzlin', 'hranolk', 'pizza', 'lahudk', 'pomazank', 'hotov', 'salat s'],
+  domaci: DOMACI_WORDS
 };
 /* BO SUNG: go TEN NHOM (khong dau) + cac tu tuong tu -> tim CA NHOM (OR theo
    CAT_WORDS). Vd "rau qua","trai cay","hoa qua" deu ra nhom rau qua. Chi them
@@ -1569,7 +1580,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.48';
+if (el) el.textContent = 'v1.7.0.49';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
