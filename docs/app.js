@@ -582,19 +582,21 @@ function renderRail() {
     function byPct(a, b) { return bestPct(b) - bestPct(a); }
     var top = deep.length >= 4 ? deep.slice(0, 4).sort(byPct)
       : items.filter(function (p) { return bestPct(p) > 0; }).sort(byPct).slice(0, 4);
-    var exp = items.filter(hasExpiring).map(function (p) {
-      var w = p[2].map(function (x) { return expShort(x[4]); }).filter(Boolean);
-      var today = w.indexOf('hôm nay') >= 0;
-      // gia hien ra = deal sap het (hom nay uu tien), re nhat trong so do
-      var o = p[2].filter(function (x) { return expShort(x[4]) === (today ? 'hôm nay' : 'ngày mai'); })
+    // Mon con <= 7 ngay khuyen mai (khung khong bi trong khi hom nay/ngay mai khong co mon nao het)
+    var exp = items.map(function (p) {
+      var ds = p[2].filter(function (x) { return !notStarted(x[4]); })
+        .map(function (x) { return daysLeft(x[4]); })
+        .filter(function (d) { return d !== null && d >= 0 && d <= RAIL_EXP_MAX_DAYS; });
+      if (!ds.length) return null;
+      var dl = Math.min.apply(null, ds);
+      // gia hien ra = deal het som nhat, re nhat trong so do
+      var o = p[2].filter(function (x) { return !notStarted(x[4]) && daysLeft(x[4]) === dl; })
         .sort(function (a, b) { return a[1] - b[1]; })[0];
-      return { p: p, today: today, o: o };
-    });
-    // Luan phien: moi lan mo trang 1 bo 6 mon NGAU NHIEN (khong co dinh), mon het "hom nay" xep truoc
-    for (var k = exp.length - 1; k > 0; k--) {
-      var r = Math.floor(Math.random() * (k + 1)), tt = exp[k]; exp[k] = exp[r]; exp[r] = tt;
-    }
-    exp = exp.slice(0, 6).sort(function (a, b) { return (b.today ? 1 : 0) - (a.today ? 1 : 0); });
+      return { p: p, dl: dl, today: dl === 0, o: o, r: Math.random() };
+    }).filter(Boolean);
+    // Uu tien ngay cuoi: het som hon xep truoc; cung so ngay thi luan phien ngau nhien moi lan mo trang
+    exp = exp.sort(function (a, b) { return a.dl - b.dl || a.r - b.r; }).slice(0, 6);
+    function whenTxt(dl) { return dl === 0 ? 'hôm nay' : dl === 1 ? 'ngày mai' : 'còn ' + dl + ' ngày'; }
     var html = '';
     if (top.length) html += "<div class='rbox rtop'><h5>🔥 Giảm sâu</h5>" + top.map(function (p) {
       var o = first(p);
@@ -606,7 +608,7 @@ function renderRail() {
       return "<a class='ex' href='" + link(x.p) + "'><span>" + iconFor(x.p[0]) + esc(x.p[0]) +
         (x.o ? '<small>' + x.o[1].toFixed(2) + ' Kč · ' +
           esc(shortShop(canonShop(x.o[0]).replace(/\s*\(.*$/, ''))) + '</small>' : '') + '</span>' +
-        "<span class='when" + (x.today ? ' today' : '') + "'>" + (x.today ? 'hôm nay' : 'ngày mai') + '</span></a>';
+        "<span class='when" + (x.today ? ' today' : '') + "'>" + whenTxt(x.dl) + '</span></a>';
     }).join('') + '</div>';
     box.innerHTML = html;
   });
@@ -638,6 +640,29 @@ function bestPct(p) {
   });
   return mx;
 }
+/* So ngay con lai den het akce (0 = hom nay, 1 = ngay mai...); null = khong doc duoc */
+function daysLeft(valid) {
+  var v = stripAccents(valid || '');
+  if (v.indexOf('dnes konci') >= 0) return 0;
+  if (v.indexOf('zitra konci') >= 0) return 1;
+  var m = (valid || '').match(/(\d{1,2})\.\s*(\d{1,2})\./g);
+  if (!m || !m.length) return null;
+  var last = /(\d{1,2})\.\s*(\d{1,2})\./.exec(m[m.length - 1]);
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  var end = new Date(today.getFullYear(), +last[2] - 1, +last[1]);
+  var diff = Math.round((end - today) / 86400000);
+  if (diff < -200) diff += 365;          // het han sang nam moi (vd hom nay 28.12, het 3.1)
+  return diff;
+}
+/* Deal chua bat dau (vd "po 16. 11. – út 17. 11." khi hom nay moi 14.11) */
+function notStarted(valid) {
+  var m = (valid || '').match(/(\d{1,2})\.\s*(\d{1,2})\./g);
+  if (!m || m.length < 2) return false;
+  var f = /(\d{1,2})\.\s*(\d{1,2})\./.exec(m[0]);
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  return new Date(today.getFullYear(), +f[2] - 1, +f[1]) > today;
+}
+var RAIL_EXP_MAX_DAYS = 7;              // "Sap het KM": lay mon con <= 7 ngay
 function hasExpiring(p) {
   return p[2].some(function (d) { return d[4] && expShort(d[4]); });
 }
@@ -1580,7 +1605,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.50';
+if (el) el.textContent = 'v1.7.0.51';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
