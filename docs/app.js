@@ -1116,7 +1116,7 @@ function eanFallbackOFF(code, head, el) {
   return offLookup(code).then(function (info) {
     if (!info) {
       el.innerHTML = tilesHTML() + head + "<p>Không tìm thấy mã vạch <b>" +
-        esc(code) + '</b> trong dữ liệu (kho + Open Food Facts đều không có).</p>' +
+        esc(code) + '</b> trong dữ liệu.</p>' +
         teachHTML(code);
       wireTeach(code, '');
       return;
@@ -1605,7 +1605,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.51';
+if (el) el.textContent = 'v1.7.0.52';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
