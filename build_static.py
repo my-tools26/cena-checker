@@ -113,6 +113,11 @@ def build_catalog():
             pn = it.get("price_net")
             if pn:
                 row.append(round(float(pn), 2))
+            # field 8 = het hang (dathang: is_in_stock=false)
+            if it.get("oos"):
+                if len(row) < 7:
+                    row.append(None)
+                row.append(1)
             items.append(row)
         meta[fn] = {"n": len(items) - n0, "date": d.get("date", ""),
                     "valid": d.get("valid", "")}
@@ -171,7 +176,7 @@ def build_ean_shards(catalog):
         if not e or not e.isdigit():
             continue
         rec = shards.setdefault(e[:3], {}).setdefault(e, [it[0], []])
-        rec[1].append([it[3], it[1], it[2], it[4]])  # kho, gia, quy cach, so chiec
+        rec[1].append([it[3], it[1], it[2], it[4]] + ([1] if len(it) > 7 and it[7] else []))  # kho, gia, quy cach, so chiec[, het hang]
         if not rec[0]:
             rec[0] = it[0]
     # === Ma "baleni" (ma bich) -> tro ve cung san pham voi ma "kus" ===
@@ -219,7 +224,7 @@ def build_ean_shards(catalog):
             rec = shards.setdefault(code[:3], {}).setdefault(code, [nm, []])
             if rec[1]:
                 continue
-            rec[0], rec[1] = nm, [[it[3], it[1], it[2], it[4]] for it in rows]
+            rec[0], rec[1] = nm, [[it[3], it[1], it[2], it[4]] + ([1] if len(it) > 7 and it[7] else []) for it in rows]
             nt += 1
         print(f"  ma day tren web: {nt}/{len(taught)} ma")
     # === GHEP GIA cho ma CHI CO TEN (chua gan gia) ===
@@ -256,7 +261,7 @@ def build_ean_shards(catalog):
                     continue
                 cur = best.get(it[3])
                 if cur is None or it[1] < cur[1]:
-                    best[it[3]] = [it[3], it[1], it[2], it[4]]
+                    best[it[3]] = [it[3], it[1], it[2], it[4]] + ([1] if len(it) > 7 and it[7] else [])
             if best:
                 rec[1] = list(best.values())
                 rec.append(1)          # danh dau: gia suy theo ten

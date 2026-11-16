@@ -472,6 +472,7 @@ function rowHTML(name, amount, offers, all) {
     var per = o.unit || unitPrice(o.amount || amount, o.price, o.pack);
     var det = [];
     var d = o.valid ? expShort(o.valid) : null;
+    if (o.oos) det.push("<span class='oosb'>Hết hàng</span>");
     if (d) det.push("<span class='expb'>⏰ " + esc(d) + '</span>');
     if (o.pct) det.push("<span class='pctb'>" + esc(o.pct) + '</span>');
     if (per) det.push('<span>' + esc(per) + '</span>');
@@ -493,7 +494,7 @@ function rowHTML(name, amount, offers, all) {
       ' kho khác cũng có</summary>' + rest.map(function (o) {
         var per = o.unit || unitPrice(o.amount || amount, o.price, o.pack);
         return "<div class='pmr' data-shop='" + esc(o.slug || '') + "'><span class='ps'>" + shopBadge(o.shop) +
-          '</span>' + (per ? "<span class='pmu'>" + esc(per) + '</span>' : '<span></span>') +
+          '</span>' + "<span class='pmu'>" + (o.oos ? "<span class='oosb'>Hết hàng</span> " : '') + esc(per || '') + '</span>' +
           "<span class='pv'>" + o.price.toFixed(2) + '</span></div>';
       }).join('') + '</details>' : '') + '</div>' +
     "<div class='pbest' data-shop='" + esc(b.slug || '') + "'><div class='pbig'>" + b.price.toFixed(2) + '<small>Kč</small></div>' +
@@ -617,7 +618,7 @@ function renderRail() {
 /* ---------- gom du lieu -> hang ---------- */
 function catalogOffers(item) {
   return { shop: SHOP[item[3]], slug: SHOP_SLUG[item[3]], price: item[1],
-           amount: item[2], pack: item[4] || 1, net: item[6] || null, wholesale: true };
+           amount: item[2], pack: item[4] || 1, net: item[6] || null, oos: !!item[7], wholesale: true };
 }
 /* Trang chu chi hien gia BAN LE: bo deal cua kho ban buon (giong WHOLESALE_KEYWORDS) */
 var WHOLESALE_KW = ['jip', 'makro', 'tamda', 'bidfood'];
@@ -983,7 +984,7 @@ function searchByEan(code, head, el) {
     }
     var name = hit.rec[0], offers = (hit.rec[1] || []).map(function (o) {
       return { shop: SHOP[o[0]], slug: SHOP_SLUG[o[0]], price: o[1], amount: o[2],
-               pack: o[3] || 1, wholesale: true };
+               pack: o[3] || 1, oos: !!o[4], wholesale: true };
     });
     var pendNote = hit.pending ? "<p class='muted'>🕓 Mã này bạn vừa dạy, đang chờ duyệt. Hiện chỉ máy của bạn thấy.</p>" : '';
     var html = head + "<p class='muted'>📦 Mã vạch: <b>" + esc(name) + '</b></p>' + pendNote;
@@ -1270,6 +1271,13 @@ function wireTeach(code, prefill, weight) {
   if (weight) wt.value = weight;
   if (prefill) { inp.value = prefill; run(); }
 }
+/* Ten co "-" hay "_" ("PE-PO", "Coca-Cola"): go lien "pepo" van ra */
+function termHit(n, t) {
+  if (n.indexOf(t) >= 0) return true;
+  if (!/[-_]/.test(n) && !/[-_]/.test(t)) return false;
+  var t2 = t.replace(/[-_]/g, '');
+  return !!t2 && n.replace(/[-_]/g, '').indexOf(t2) >= 0;
+}
 function searchCatalog(cat, q) {
   var terms = q.split(/\s+/).filter(Boolean);
   if (!terms.length) return [];
@@ -1277,7 +1285,7 @@ function searchCatalog(cat, q) {
   for (var i = 0; i < cat.length && out.length < 400; i++) {
     var n = stripAccents(cat[i][0]);
     var ok = true;
-    for (var j = 0; j < terms.length; j++) if (n.indexOf(terms[j]) < 0) { ok = false; break; }
+    for (var j = 0; j < terms.length; j++) if (!termHit(n, terms[j])) { ok = false; break; }
     if (ok) out.push(cat[i]);
   }
   return out;
@@ -1286,7 +1294,7 @@ function searchRetail(d, q) {
   var terms = q.split(/\s+/).filter(Boolean);
   return (d.items || []).filter(function (p) {
     var n = stripAccents(p[0]);
-    return terms.every(function (t) { return n.indexOf(t) >= 0; });
+    return terms.every(function (t) { return termHit(n, t); });
   });
 }
 /* gom cac mat hang cung ten -> 1 hang nhieu kho */
@@ -1308,7 +1316,7 @@ function searchCatalogAll(cat, q) {
   if (!terms.length) return [];
   return cat.filter(function (it) {
     var n = stripAccents(it[0]);
-    for (var j = 0; j < terms.length; j++) if (n.indexOf(terms[j]) < 0) return false;
+    for (var j = 0; j < terms.length; j++) if (!termHit(n, terms[j])) return false;
     return true;
   });
 }
@@ -1605,7 +1613,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.54';
+if (el) el.textContent = 'v1.7.0.55';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {

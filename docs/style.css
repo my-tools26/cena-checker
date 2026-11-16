@@ -127,7 +127,8 @@
  .sbadge{display:inline-block;max-width:100%;border-radius:5px;padding:2px 8px;font-size:.84em;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;cursor:default}
  .sbadge.open{white-space:normal;overflow:visible}
  html.dark .sbadge{filter:saturate(.85) brightness(.92)}
- .expb{background:var(--exp-bg);color:var(--exp-txt);border-radius:5px;padding:1px 7px;font-size:.92em;font-weight:700;white-space:nowrap}
+ .oosb,.pb .pd .oosb{color:#d92d20;font-weight:700;white-space:nowrap}
+.expb{background:var(--exp-bg);color:var(--exp-txt);border-radius:5px;padding:1px 7px;font-size:.92em;font-weight:700;white-space:nowrap}
  .pctb{background:var(--red-bg);color:var(--red);border-radius:5px;padding:1px 7px;font-size:.92em;font-weight:700;white-space:nowrap}
  .hidshop{color:var(--muted2);font-style:italic}
 
