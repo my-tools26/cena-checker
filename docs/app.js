@@ -1613,7 +1613,7 @@ renderCats();
   setTimeout(check, 600);
 })();
 var el = document.getElementById('appver');
-if (el) el.textContent = 'v1.7.0.55';
+if (el) el.textContent = 'v1.7.0.56';
 
 /* ---------- filter panel (focus search -> open) ---------- */
 (function () {
