@@ -217,7 +217,7 @@
  "snicker-365g-creamy-peanut-24ks-kart": {
   "name": "Snicker 36,5g Creamy Peanut &#8211; 24ks/kart",
   "ean": "5900951310447",
-  "price": "1390"
+  "price": "1190"
  },
  "flint-craft-tomato-spicy-80g-1-35kus": {
   "name": "UA Flint Craft Tomato Spicy 80g (xanh+đỏ) &#8211; 35ks/kart",
@@ -307,12 +307,12 @@
  "nautilus-snack-seafood-fish-stix-36g1-100": {
   "name": "UA Nautilus Seafood Fish Stix 36g(1/100)",
   "ean": "6922571302168",
-  "price": "2490"
+  "price": "1990"
  },
  "nautilus-snack-seafood-fish-cuts-with-chili-36g1-100": {
   "name": "UA Nautilus Seafood Fish Cuts 36g(1/100)",
   "ean": "6922571302052",
-  "price": "2490"
+  "price": "1990"
  },
  "nautilus-snack-seafood-jerky-smoked-calamari-1-100": {
   "name": "UA Nautilus Seafood Jerky Smoked Calamari (1/100)",
@@ -378,11 +378,6 @@
   "name": "Orion čokoláda na vaření 100g &#8211; 19ks/kart",
   "ean": "8593893760479",
   "price": "2690"
- },
- "margot-gold-70g-x-40": {
-  "name": "Margot Gold 70g x 40",
-  "ean": "85957251",
-  "price": "1450"
  },
  "fjk-rajcatka-susena-krajena-v-oleji-210-ml": {
   "name": "FJK Rajčátka sušená krájená v oleji 210 ml",
@@ -3045,7 +3040,7 @@
   "price": "8550"
  },
  "tarapaca-cabernet-merlot-750ml": {
-  "name": "Tarapaca 750ml Cabernet Merlot",
+  "name": "Tarapaca 750ml Cabernet Sauvignon Merlot",
   "ean": "7804340909565",
   "price": "11500"
  },
@@ -3072,7 +3067,7 @@
  "orion-tyc-bananky-v-cokolade-45g": {
   "name": "Orion Tyč Banánky v čokoládě 45g &#8211; 48ks/krt",
   "ean": "85924802",
-  "price": "1350"
+  "price": "1390"
  },
  "riunite-prosecco-frizante-spago-750ml-x-6": {
   "name": "Riunite Prosecco 0,75L Frizante spago",
@@ -3302,7 +3297,7 @@
  "t-rgd-blue-30g-132-00-z-tt": {
   "name": "TABÁK RGD BLUE 30G",
   "ean": "8595234371368",
-  "price": "20300"
+  "price": "22000"
  },
  "t-pueblo-blue-30g-172-00-z-tt": {
   "name": "TABÁK PUEBLO BLUE 30G",
@@ -4472,12 +4467,12 @@
  "jolly-time-crispy-n-white-100g": {
   "name": "Jolly Time Popcorn 100g Crispy n white &#8211; 18ks/kart",
   "ean": "028190009610",
-  "price": "2290"
+  "price": "2390"
  },
  "jolly-time-blast-o-butter-100g": {
   "name": "Jolly Time Popcorn 100g Blast o butter &#8211; 18ks/kart",
   "ean": "028190009849",
-  "price": "2290"
+  "price": "2390"
  },
  "viva-texasky-gulas-400g": {
   "name": "Viva Texaský guláš 400g",
@@ -4607,7 +4602,7 @@
  "vifon-hoag-gia-mi-thit-bam-120g-x-18": {
   "name": "CA &#8211; Vifon Hoang Gia mi thit bam 120g x 18",
   "ean": "8594195260179",
-  "price": "2500"
+  "price": "2750"
  },
  "vifon-hoang-gia-mi-bo-120g-x18": {
   "name": "CA &#8211; Vifon Hoang Gia mi bo 120g x18",
@@ -4757,7 +4752,7 @@
  "jolly-time-popcorn-big-cheez-100g": {
   "name": "Jolly Time Popcorn 100g The Big Cheez &#8211; 18ks/kart",
   "ean": "2000004060008",
-  "price": "2290"
+  "price": "2390"
  },
  "haribo-phantasia-175g-cz": {
   "name": "Haribo  175g EU Phantasia",
@@ -4825,7 +4820,7 @@
   "price": "11500"
  },
  "tarapaca-cabernet-sauvignon-075l-x-6": {
-  "name": "Tarapaca 750ml Cabernet Sauvignon.",
+  "name": "Tarapaca 750ml Cabernet Sauvignon",
   "ean": "7804340909510",
   "price": "11500"
  },
@@ -6047,17 +6042,17 @@
  "lh-suseny-livanec-banh-da-trang-454g": {
   "name": "CA &#8211; Sušený lívanec (Bánh đa trắng) 454g",
   "ean": "2000001100004",
-  "price": "4690"
+  "price": "4990"
  },
  "lh-suseny-livanec-banh-da-tom-454g": {
   "name": "CA &#8211; Sušený lívanec (Bánh đa tôm) 454g",
   "ean": "8935054880143",
-  "price": "4690"
+  "price": "4990"
  },
  "lh-suseny-livanec-banh-da-den-454g": {
   "name": "CA &#8211; Sušený lívanec (Bánh đa đen) 454g",
   "ean": "8935054880112",
-  "price": "4690"
+  "price": "4990"
  },
  "lh-ot-dam-giam-198g": {
   "name": "CA &#8211; Ot dam giam 198g",
@@ -7827,12 +7822,12 @@
  "moravia-horacky-syr-100g": {
   "name": "Moravia Horácký Sýr 100g",
   "ean": "8594006322058",
-  "price": "2290"
+  "price": "2690"
  },
  "moravia-farmarsky-syr-100g": {
   "name": "Moravia Farmářský Sýr 100g",
   "ean": "8594006322072",
-  "price": "2390"
+  "price": "2690"
  },
  "moravia-eidam-45-uzeny-100g": {
   "name": "Moravia Eidam 45% Uzený 100g",
