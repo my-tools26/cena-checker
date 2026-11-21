@@ -1,4 +1,9 @@
 {
+ "ca-banh-goute-8x36g": {
+  "name": "CA &#8211; Banh Goute HAT 8x36g",
+  "ean": "8936036024135",
+  "price": "8990"
+ },
  "ua-flint-craft-pikantni-klobasy-80g-8ks-kart": {
   "name": "UA Flint Craft Pikantní klobásy 80g &#8211; 8ks/kart",
   "ean": "4823127317822",
@@ -163,11 +168,6 @@
   "name": "Prosecco Italia Frizzante 0,75L",
   "ean": "4334035037493",
   "price": "7990"
- },
- "king-compact-strato-142-00-r": {
-  "name": "CIG.KING COMPACT STRATO 142.00 R",
-  "ean": "3800162422798",
-  "price": "134275"
  },
  "king-blue-s-line-145-00-r": {
   "name": "CIG.KING BLUE S-LINE 150.00U",
@@ -1167,12 +1167,12 @@
  "opavia-zlate-polomacene-horke-100g": {
   "name": "Opavia zlate polomáčené hořké 100g &#8211; 36ks/kart",
   "ean": "8593894001175",
-  "price": "1990"
+  "price": "1850"
  },
  "opavia-polomacen-mlecne-100g-x-48ks": {
   "name": "Opavia polomáčen mléčné 100g &#8211; 36ks/kart",
   "ean": "8593894904087",
-  "price": "1990"
+  "price": "1850"
  },
  "ca-pho-kho-ha-noi-500g": {
   "name": "CA &#8211;  Pho Kho Ha Noi 500g",
@@ -2132,17 +2132,17 @@
  "bohemia-slane-tycinky-190g": {
   "name": "Bohemia 160g Tyčinky Solené &#8211; 24ks/kart",
   "ean": "8594002934200",
-  "price": "2990"
+  "price": "2790"
  },
  "bohemia-z-pece-syrove-tycinky-190g": {
   "name": "Bohemia 160g Tyčinky Sýrové &#8211; 24ks/kart",
   "ean": "8594002935320",
-  "price": "2990"
+  "price": "2790"
  },
  "bohemia-z-pece-bramborove-tycinky-190g": {
   "name": "Bohemia 160g Tyčinky Bramborové &#8211; 24ks/kart",
   "ean": "8594002935344",
-  "price": "2990"
+  "price": "2790"
  },
  "bom-par-original-50g": {
   "name": "Bohemia Pom-bar 50g original",
@@ -5868,11 +5868,6 @@
   "name": "Red Bull 0,355L  CZ",
   "ean": "9002490207144",
   "price": "4190"
- },
- "th-pho-kho-oh-ricey-18x500g": {
-  "name": "CA &#8211;  Pho kho OH RICEY 500g",
-  "ean": "8934563207014",
-  "price": "7000"
  },
  "th-mi-tom-lau-thai-vi-tom-30x83g": {
   "name": "CA &#8211; Mi tom LAU THAI vi Tom 30x83g",
