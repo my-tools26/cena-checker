@@ -1,5 +1,5 @@
 {
- "date": "2026-11-17",
+ "date": "2026-11-24",
  "shop": "linsan",
  "items": [
   {
@@ -34,7 +34,7 @@
   },
   {
    "name": "Tarapaca 0,75L Pinot Grigio Viňa",
-   "price": 117.01,
+   "price": 112.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8008863062960",
@@ -138,7 +138,7 @@
   },
   {
    "name": "Coca 1L Sprite",
-   "price": 22.98,
+   "price": 23.98,
    "amount": "1 l",
    "unit": "",
    "sku_key": "5000112652482",
@@ -146,7 +146,7 @@
   },
   {
    "name": "Coca 1L Zero",
-   "price": 22.98,
+   "price": 23.98,
    "amount": "1 l",
    "unit": "",
    "sku_key": "5449000133328",
@@ -154,7 +154,7 @@
   },
   {
    "name": "Coca 1L Červený",
-   "price": 22.98,
+   "price": 23.98,
    "amount": "1 l",
    "unit": "",
    "sku_key": "5449000054227",
@@ -162,7 +162,7 @@
   },
   {
    "name": "Coca 1L Fanta Pomeranč",
-   "price": 22.98,
+   "price": 23.98,
    "amount": "1 l",
    "unit": "",
    "sku_key": "5449000006271",
@@ -426,7 +426,7 @@
   },
   {
    "name": "Kubík water 500ml Jablka",
-   "price": 11.99,
+   "price": 11.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "5901067461108",
@@ -434,7 +434,7 @@
   },
   {
    "name": "Kubík water 500ml Malina",
-   "price": 11.99,
+   "price": 11.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "5901067400237",
@@ -442,7 +442,7 @@
   },
   {
    "name": "Kubík water 500ml Hruška",
-   "price": 11.99,
+   "price": 11.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "5901067475211",
@@ -450,7 +450,7 @@
   },
   {
    "name": "Kubík water 500ml Jahoda",
-   "price": 11.99,
+   "price": 11.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "5901067474108",
@@ -634,7 +634,7 @@
   },
   {
    "name": "Kofola 1L Original",
-   "price": 21.98,
+   "price": 22.98,
    "amount": "1 l",
    "unit": "",
    "sku_key": "8594003842153",
@@ -642,7 +642,7 @@
   },
   {
    "name": "Kofola 0,5L Original",
-   "price": 17.98,
+   "price": 18.98,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8594003849626",
@@ -698,7 +698,7 @@
   },
   {
    "name": "Evian 500ml",
-   "price": 16.55,
+   "price": 15.98,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "3068320124377",
@@ -858,7 +858,7 @@
   },
   {
    "name": "Kozel Plech 0,5L SVĚTLÝ 10° 4 x 6ks",
-   "price": 18.98,
+   "price": 17.98,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8594404000572",
@@ -866,7 +866,7 @@
   },
   {
    "name": "Tarapaca 0,75L Carmenere",
-   "price": 117.01,
+   "price": 112.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "7804340902504",
@@ -874,7 +874,7 @@
   },
   {
    "name": "Tarapaca 0,75L Rosé",
-   "price": 117.01,
+   "price": 112.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "7804340600400",
@@ -882,7 +882,7 @@
   },
   {
    "name": "Tarapaca 0,75L Sauvignon blanc",
-   "price": 117.01,
+   "price": 112.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "7804340909541",
@@ -890,7 +890,7 @@
   },
   {
    "name": "Tarapaca 0,75L Merlot",
-   "price": 117.01,
+   "price": 112.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "7804340902535",
@@ -898,7 +898,7 @@
   },
   {
    "name": "Tarapaca 0,75L Chardonnay",
-   "price": 117.01,
+   "price": 112.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "7804340600004",
@@ -1218,7 +1218,7 @@
   },
   {
    "name": "Bohemia chips 60g Slanina",
-   "price": 18.55,
+   "price": 17.55,
    "amount": "60 g",
    "unit": "",
    "sku_key": "8595606206144",
@@ -1226,7 +1226,7 @@
   },
   {
    "name": "Bohemia chips 60g Solené",
-   "price": 18.55,
+   "price": 17.55,
    "amount": "60 g",
    "unit": "",
    "sku_key": "8595606206106",
@@ -1234,7 +1234,7 @@
   },
   {
    "name": "Bohemia chips Vroubky 55g Pizza",
-   "price": 18.55,
+   "price": 17.55,
    "amount": "55 g",
    "unit": "",
    "sku_key": "8595606206229",
@@ -1242,7 +1242,7 @@
   },
   {
    "name": "Bohemia chips 60g Paprika",
-   "price": 18.55,
+   "price": 17.55,
    "amount": "60 g",
    "unit": "",
    "sku_key": "8595606206120",
@@ -1258,7 +1258,7 @@
   },
   {
    "name": "Bohemia chips Vroubky 120g Sýr a Cibulka",
-   "price": 27.98,
+   "price": 29.55,
    "amount": "120 g",
    "unit": "",
    "sku_key": "8595606208667",
@@ -1410,7 +1410,7 @@
   },
   {
    "name": "Muffin 280g Marble",
-   "price": 41.98,
+   "price": 43.98,
    "amount": "280 g",
    "unit": "",
    "sku_key": "8410722531805",
@@ -1578,7 +1578,7 @@
   },
   {
    "name": "Skittles 38g Crazy Sours (zelená)",
-   "price": 8.25,
+   "price": 8.55,
    "amount": "38 g",
    "unit": "",
    "sku_key": "5000159376792",
@@ -1586,7 +1586,7 @@
   },
   {
    "name": "Skittles 38g Fruits (červená)",
-   "price": 8.25,
+   "price": 8.55,
    "amount": "38 g",
    "unit": "",
    "sku_key": "5000159376655",
@@ -1690,7 +1690,7 @@
   },
   {
    "name": "Corny Banany 50g/24ks",
-   "price": 11.98,
+   "price": 11.55,
    "amount": "50 g",
    "unit": "",
    "sku_key": "4011800548513",
@@ -1698,7 +1698,7 @@
   },
   {
    "name": "Corny Kokos 50g/24ks",
-   "price": 11.98,
+   "price": 11.55,
    "amount": "50 g",
    "unit": "",
    "sku_key": "8592084405892",
@@ -1706,7 +1706,7 @@
   },
   {
    "name": "Corny Dark chocolate 50g/24ks",
-   "price": 11.98,
+   "price": 11.55,
    "amount": "50 g",
    "unit": "",
    "sku_key": "4011800573515",
@@ -1714,7 +1714,7 @@
   },
   {
    "name": "Corny Nuts 50g/24ks",
-   "price": 11.98,
+   "price": 11.55,
    "amount": "50 g",
    "unit": "",
    "sku_key": "4011800547516",
@@ -1722,7 +1722,7 @@
   },
   {
    "name": "Corny Cranberry 50g/24ks",
-   "price": 11.98,
+   "price": 11.55,
    "amount": "50 g",
    "unit": "",
    "sku_key": "4011800567514",
@@ -1762,7 +1762,7 @@
   },
   {
    "name": "Kitkat CZ Fingers 41,5g DET Hazelnut",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "41,5 g",
    "unit": "",
    "sku_key": "8445290542229",
@@ -1866,7 +1866,7 @@
   },
   {
    "name": "Bounty 57g Bílý",
-   "price": 13.55,
+   "price": 13.98,
    "amount": "57 g",
    "unit": "",
    "sku_key": "40111216",
@@ -1874,7 +1874,7 @@
   },
   {
    "name": "Twix 50g",
-   "price": 12.98,
+   "price": 13.65,
    "amount": "50 g",
    "unit": "",
    "sku_key": "5000159459228",
@@ -1882,7 +1882,7 @@
   },
   {
    "name": "Twix xtra 75g",
-   "price": 16.55,
+   "price": 16.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "5900951028502",
@@ -1890,7 +1890,7 @@
   },
   {
    "name": "Mars 51g",
-   "price": 12.98,
+   "price": 13.65,
    "amount": "51 g",
    "unit": "",
    "sku_key": "5000159503273",
@@ -1906,7 +1906,7 @@
   },
   {
    "name": "Mars 2Pack 70g",
-   "price": 16.55,
+   "price": 16.98,
    "amount": "70 g",
    "unit": "",
    "sku_key": "5900951134937",
@@ -1914,7 +1914,7 @@
   },
   {
    "name": "Snickers CZ 50g 40ks/b",
-   "price": 12.98,
+   "price": 13.65,
    "amount": "50 g",
    "unit": "",
    "sku_key": "5000159461122",
@@ -1922,7 +1922,7 @@
   },
   {
    "name": "Snickers 2pack 75g 24ks/b",
-   "price": 16.55,
+   "price": 16.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "5900951027307",
@@ -2074,7 +2074,7 @@
   },
   {
    "name": "Lays 60g Salted",
-   "price": 16.98,
+   "price": 17.98,
    "amount": "60 g",
    "unit": "",
    "sku_key": "5900259093141",
@@ -2082,7 +2082,7 @@
   },
   {
    "name": "KK arasidy 150g vakuo",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "150 g",
    "unit": "",
    "sku_key": "8594007536096",
@@ -2090,7 +2090,7 @@
   },
   {
    "name": "KK arasidy 100g Vakuo",
-   "price": 19.98,
+   "price": 19.55,
    "amount": "100 g",
    "unit": "",
    "sku_key": "8594007536089",
@@ -2098,7 +2098,7 @@
   },
   {
    "name": "KK arasidy 75g vakuo",
-   "price": 16.55,
+   "price": 15.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "8594007536072",
@@ -2138,7 +2138,7 @@
   },
   {
    "name": "Halls 33,5g CoolWave (modrá)",
-   "price": 10.98,
+   "price": 9.98,
    "amount": "33,5 g",
    "unit": "",
    "sku_key": "5010455601016",
@@ -2146,7 +2146,7 @@
   },
   {
    "name": "Halls 33,5g Extra strong (černá)",
-   "price": 10.98,
+   "price": 9.98,
    "amount": "33,5 g",
    "unit": "",
    "sku_key": "7622210939302",
@@ -2154,7 +2154,7 @@
   },
   {
    "name": "Halls 33,5g Honey - lemon (žlutá)",
-   "price": 10.98,
+   "price": 9.98,
    "amount": "33,5 g",
    "unit": "",
    "sku_key": "5010455601023",
@@ -2162,7 +2162,7 @@
   },
   {
    "name": "Halls 33,5g Lime Fresh Flavour (zelená)",
-   "price": 10.98,
+   "price": 9.98,
    "amount": "33,5 g",
    "unit": "",
    "sku_key": "7622210641564",
@@ -2170,7 +2170,7 @@
   },
   {
    "name": "Halls 33.5g Forest Fruit Flavour (Fialova)",
-   "price": 10.98,
+   "price": 9.98,
    "amount": "33.5 g",
    "unit": "",
    "sku_key": "5010455601030",
@@ -2242,7 +2242,7 @@
   },
   {
    "name": "Toffifee 125g - 5ks",
-   "price": 32.98,
+   "price": 34.98,
    "amount": "125 g",
    "unit": "",
    "sku_key": "4014400400007",
@@ -2258,7 +2258,7 @@
   },
   {
    "name": "Racio Polomáčené 100g rýžové (zelená) 4ks/b",
-   "price": 15.98,
+   "price": 16.98,
    "amount": "100 g",
    "unit": "",
    "sku_key": "8594000093800",
@@ -2434,7 +2434,7 @@
   },
   {
    "name": "Zlaté Polomáčené 100g Mléčná",
-   "price": 19.55,
+   "price": 17.98,
    "amount": "100 g",
    "unit": "",
    "sku_key": "8593894904087",
@@ -2506,7 +2506,7 @@
   },
   {
    "name": "Piacelli 200g",
-   "price": 29.98,
+   "price": 30.98,
    "amount": "200 g",
    "unit": "",
    "sku_key": "9002859043161",
@@ -2514,7 +2514,7 @@
   },
   {
    "name": "Racio Polomáčené 100g kukuřice (žlutá) 4ks/b",
-   "price": 15.98,
+   "price": 16.98,
    "amount": "100 g",
    "unit": "",
    "sku_key": "8594000097853",
@@ -2522,7 +2522,7 @@
   },
   {
    "name": "Racio Polomáčené 100g rýže - kakao (červená) 20ks/b",
-   "price": 15.98,
+   "price": 16.98,
    "amount": "100 g",
    "unit": "",
    "sku_key": "8594000093787",
@@ -2634,7 +2634,7 @@
   },
   {
    "name": "Zlaté Oplatky 146g Citron",
-   "price": 27.98,
+   "price": 26.98,
    "amount": "146 g",
    "unit": "",
    "sku_key": "8593894911092",
@@ -2642,7 +2642,7 @@
   },
   {
    "name": "Zlaté Oplatky 146g Čokoladové",
-   "price": 27.98,
+   "price": 26.98,
    "amount": "146 g",
    "unit": "",
    "sku_key": "8593894911061",
@@ -2650,7 +2650,7 @@
   },
   {
    "name": "Zlaté Oplatky 146g Ořechy",
-   "price": 27.98,
+   "price": 26.98,
    "amount": "146 g",
    "unit": "",
    "sku_key": "8593894911030",
@@ -2714,7 +2714,7 @@
   },
   {
    "name": "Maretti 70g Tomato Olives",
-   "price": 15.55,
+   "price": 15.98,
    "amount": "70 g",
    "unit": "",
    "sku_key": "3800205875109",
@@ -2722,7 +2722,7 @@
   },
   {
    "name": "Maretti 70g Pizza",
-   "price": 15.55,
+   "price": 15.98,
    "amount": "70 g",
    "unit": "",
    "sku_key": "3800205871255",
@@ -2730,7 +2730,7 @@
   },
   {
    "name": "Maretti 70g Roasted Česnek",
-   "price": 15.55,
+   "price": 15.98,
    "amount": "70 g",
    "unit": "",
    "sku_key": "3800205870517",
@@ -2794,7 +2794,7 @@
   },
   {
    "name": "Corny Chocolate 50g/24ks",
-   "price": 11.98,
+   "price": 11.55,
    "amount": "50 g",
    "unit": "",
    "sku_key": "4011800546519",
@@ -2834,7 +2834,7 @@
   },
   {
    "name": "Bohemia chips 60g Špíz",
-   "price": 18.55,
+   "price": 17.55,
    "amount": "60 g",
    "unit": "",
    "sku_key": "8595606206182",
@@ -2866,7 +2866,7 @@
   },
   {
    "name": "Lipton 0,5L Lemon",
-   "price": 18.98,
+   "price": 17.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "5900497600507",
@@ -2874,7 +2874,7 @@
   },
   {
    "name": "Lipton 0,5L Green Tea - Zelený čaj",
-   "price": 18.98,
+   "price": 17.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "5997264159313",
@@ -2882,7 +2882,7 @@
   },
   {
    "name": "Lipton 0,5L Peach",
-   "price": 18.98,
+   "price": 17.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "5900497610506",
@@ -2890,7 +2890,7 @@
   },
   {
    "name": "Kubík water 500ml citron",
-   "price": 11.99,
+   "price": 11.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "5901067475105",
@@ -3026,7 +3026,7 @@
   },
   {
    "name": "Maretti 70g Mixed cheess (Sýr)",
-   "price": 15.55,
+   "price": 15.98,
    "amount": "70 g",
    "unit": "",
    "sku_key": "3800205875604",
@@ -3042,7 +3042,7 @@
   },
   {
    "name": "Frisco VRATNÁ LÁHEV 0,33Lx12ks Brusinka",
-   "price": 21.55,
+   "price": 19.55,
    "amount": "12 ks",
    "unit": "",
    "sku_key": "85951631",
@@ -3154,7 +3154,7 @@
   },
   {
    "name": "Lipton 330ml Icetea Peach",
-   "price": 14.98,
+   "price": 14.55,
    "amount": "330 ml",
    "unit": "",
    "sku_key": "8594008044583",
@@ -3162,7 +3162,7 @@
   },
   {
    "name": "Lipton 330ml Icetea Green tea",
-   "price": 14.98,
+   "price": 14.55,
    "amount": "330 ml",
    "unit": "",
    "sku_key": "8594008044576",
@@ -3170,7 +3170,7 @@
   },
   {
    "name": "Lipton 330ml Icetea Lemon",
-   "price": 14.98,
+   "price": 14.55,
    "amount": "330 ml",
    "unit": "",
    "sku_key": "8594008048567",
@@ -3218,7 +3218,7 @@
   },
   {
    "name": "Zlaté Polomáčené 100g Hořká",
-   "price": 19.55,
+   "price": 17.98,
    "amount": "100 g",
    "unit": "",
    "sku_key": "8593894001175",
@@ -3226,7 +3226,7 @@
   },
   {
    "name": "Cielo 0,75L Chardonnay",
-   "price": 79.98,
+   "price": 82.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8008900001075",
@@ -3234,7 +3234,7 @@
   },
   {
    "name": "Cielo 0,75L Souvignon",
-   "price": 79.98,
+   "price": 82.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8008900005899",
@@ -3242,7 +3242,7 @@
   },
   {
    "name": "Cielo 0,75L Merlot",
-   "price": 79.98,
+   "price": 82.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8008900004212",
@@ -3250,7 +3250,7 @@
   },
   {
    "name": "Cielo 0,75L Cabernet Sauvignon",
-   "price": 79.98,
+   "price": 82.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8008900001037",
@@ -3298,7 +3298,7 @@
   },
   {
    "name": "Eiskaffee 0,5L krabice hochwald",
-   "price": 21.55,
+   "price": 18.98,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "4003490069089",
@@ -3338,7 +3338,7 @@
   },
   {
    "name": "NescafeXpress 250ml Cappuccino white",
-   "price": 24.98,
+   "price": 25.98,
    "amount": "250 ml",
    "unit": "",
    "sku_key": "8445290634542",
@@ -3346,7 +3346,7 @@
   },
   {
    "name": "NescafeXpress 250ml Americano",
-   "price": 24.98,
+   "price": 25.98,
    "amount": "250 ml",
    "unit": "",
    "sku_key": "8445290633941",
@@ -3370,7 +3370,7 @@
   },
   {
    "name": "KK arašídy 227g Plechovka",
-   "price": 49.98,
+   "price": 46.98,
    "amount": "227 g",
    "unit": "",
    "sku_key": "8594007536119",
@@ -3449,7 +3449,7 @@
   },
   {
    "name": "Bohemia Sekt 0,75L Demi 11%",
-   "price": 144.98,
+   "price": 139.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8594000940012",
@@ -3489,7 +3489,7 @@
   },
   {
    "name": "Tokaji polosladké 0,75l Harslevelu",
-   "price": 63.98,
+   "price": 59.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "5998812738042",
@@ -3497,7 +3497,7 @@
   },
   {
    "name": "Tokaji polosladké 0,75l Furmint",
-   "price": 63.98,
+   "price": 59.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "5998812738035",
@@ -3505,7 +3505,7 @@
   },
   {
    "name": "Bohemia Sekt 0,75L Brut",
-   "price": 144.98,
+   "price": 139.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8594000940098",
@@ -3745,7 +3745,7 @@
   },
   {
    "name": "Caprio 2L Pomeranč 6ks/b",
-   "price": 26.55,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "sku_key": "5900334007377",
@@ -3753,7 +3753,7 @@
   },
   {
    "name": "Caprio 2L Multivitamin 6ks/b",
-   "price": 26.55,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "sku_key": "5900334007407",
@@ -3816,7 +3816,7 @@
   },
   {
    "name": "Tarapaca 0,75L Syrah",
-   "price": 117.01,
+   "price": 112.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "7804340902702",
@@ -3824,7 +3824,7 @@
   },
   {
    "name": "Lipton 1.5L Lemon",
-   "price": 24.98,
+   "price": 24.55,
    "amount": "1.5 l",
    "unit": "",
    "sku_key": "5900497601504",
@@ -3832,7 +3832,7 @@
   },
   {
    "name": "Next 0,75L Shiraz Cabernet",
-   "price": 74.98,
+   "price": 77.0,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8594045653311",
@@ -3840,7 +3840,7 @@
   },
   {
    "name": "Tarapaca 0.75L Cabernet Sauvignon",
-   "price": 117.01,
+   "price": 112.98,
    "amount": "0.75 l",
    "unit": "",
    "sku_key": "7804340909510",
@@ -3959,7 +3959,7 @@
   },
   {
    "name": "Caprio 2L Apple 6ks/b",
-   "price": 26.55,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "sku_key": "5900334013545",
@@ -3983,7 +3983,7 @@
   },
   {
    "name": "Next 0,75L Semillon Chardonnay",
-   "price": 74.98,
+   "price": 77.0,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8594045653250",
@@ -4007,7 +4007,7 @@
   },
   {
    "name": "NescafeXpress 250ml Karamel Latte",
-   "price": 24.98,
+   "price": 25.98,
    "amount": "250 ml",
    "unit": "",
    "sku_key": "8445290634566",
@@ -4031,7 +4031,7 @@
   },
   {
    "name": "Next 0.75L Merlot",
-   "price": 74.98,
+   "price": 77.0,
    "amount": "0.75 l",
    "unit": "",
    "sku_key": "8594045653304",
@@ -4071,7 +4071,7 @@
   },
   {
    "name": "Campo 0.75L CabernetSauvignon",
-   "price": 69.98,
+   "price": 72.98,
    "amount": "0.75 l",
    "unit": "",
    "sku_key": "8594045652109",
@@ -4079,7 +4079,7 @@
   },
   {
    "name": "Campo 0.75L Merlot",
-   "price": 69.98,
+   "price": 72.98,
    "amount": "0.75 l",
    "unit": "",
    "sku_key": "8594045652604",
@@ -4087,7 +4087,7 @@
   },
   {
    "name": "Campo 0.75L Chardonnay",
-   "price": 69.98,
+   "price": 72.98,
    "amount": "0.75 l",
    "unit": "",
    "sku_key": "8594045652116",
@@ -4103,7 +4103,7 @@
   },
   {
    "name": "RC Cola 1,5L",
-   "price": 25.98,
+   "price": 23.98,
    "amount": "1,5 l",
    "unit": "",
    "sku_key": "8594003845642",
@@ -4111,7 +4111,7 @@
   },
   {
    "name": "Dětské piškoty 110g Opavia",
-   "price": 21.98,
+   "price": 19.98,
    "amount": "110 g",
    "unit": "",
    "sku_key": "8593894902670",
@@ -4119,7 +4119,7 @@
   },
   {
    "name": "Dětské piškoty 220g Opavia",
-   "price": 34.98,
+   "price": 32.98,
    "amount": "220 g",
    "unit": "",
    "sku_key": "8593894902656",
@@ -4255,7 +4255,7 @@
   },
   {
    "name": "NescafeXpress 250ml Latte Machiato",
-   "price": 24.98,
+   "price": 25.98,
    "amount": "250 ml",
    "unit": "",
    "sku_key": "8445290634528",
@@ -4263,7 +4263,7 @@
   },
   {
    "name": "Budvar Plech 4*6*500ml 12* Ležák",
-   "price": 19.55,
+   "price": 20.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8594403707991",
@@ -4350,7 +4350,7 @@
   },
   {
    "name": "Corny Brownie 50g/24ks",
-   "price": 11.98,
+   "price": 11.55,
    "amount": "50 g",
    "unit": "",
    "sku_key": "8592084408961",
@@ -4438,7 +4438,7 @@
   },
   {
    "name": "Bohemia chips 130g Špíz",
-   "price": 27.98,
+   "price": 29.55,
    "amount": "130 g",
    "unit": "",
    "sku_key": "8595606207066",
@@ -4534,7 +4534,7 @@
   },
   {
    "name": "Caprio 2L Ananas",
-   "price": 26.55,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "sku_key": "5900334130778",
@@ -4630,7 +4630,7 @@
   },
   {
    "name": "OKF Coco 0.5L Kokos",
-   "price": 23.98,
+   "price": 23.55,
    "amount": "0.5 l",
    "unit": "",
    "sku_key": "8809041426815",
@@ -4678,7 +4678,7 @@
   },
   {
    "name": "Figaro Čoko Piškoty 147g - Meruňková",
-   "price": 33.98,
+   "price": 34.98,
    "amount": "147 g",
    "unit": "",
    "sku_key": "5906747308711",
@@ -4686,7 +4686,7 @@
   },
   {
    "name": "Figaro Čoko Piškoty 147g - Malina",
-   "price": 33.98,
+   "price": 34.98,
    "amount": "147 g",
    "unit": "",
    "sku_key": "5906747308742",
@@ -4694,7 +4694,7 @@
   },
   {
    "name": "Figaro Čoko Piškoty 147g - Lesní ovoce",
-   "price": 33.98,
+   "price": 34.98,
    "amount": "147 g",
    "unit": "",
    "sku_key": "5906747319892",
@@ -4702,7 +4702,7 @@
   },
   {
    "name": "Figaro Čoko Piškoty 147g - Višňová",
-   "price": 33.98,
+   "price": 34.98,
    "amount": "147 g",
    "unit": "",
    "sku_key": "5906747308803",
@@ -4774,7 +4774,7 @@
   },
   {
    "name": "Bohemia Sekt 0,75 Demi Rosé",
-   "price": 144.98,
+   "price": 139.98,
    "amount": "",
    "unit": "",
    "sku_key": "8594000940050",
@@ -4894,7 +4894,7 @@
   },
   {
    "name": "OKF Aloe King 0,5L Jahoda",
-   "price": 23.98,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "884394000903",
@@ -4990,7 +4990,7 @@
   },
   {
    "name": "Tarapaca 0,75L Cabernet Sau.Merlot",
-   "price": 117.01,
+   "price": 112.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "7804340909565",
@@ -5078,7 +5078,7 @@
   },
   {
    "name": "Bohemia Sekt 0,75 Nealkoholický",
-   "price": 144.98,
+   "price": 139.98,
    "amount": "",
    "unit": "",
    "sku_key": "8594000940227",
@@ -5126,7 +5126,7 @@
   },
   {
    "name": "Bohemia chips Vroubky 55g Sůl",
-   "price": 18.55,
+   "price": 17.55,
    "amount": "55 g",
    "unit": "",
    "sku_key": "8595606206205",
@@ -5150,7 +5150,7 @@
   },
   {
    "name": "Top Topic 1,5L",
-   "price": 24.98,
+   "price": 23.55,
    "amount": "1,5 l",
    "unit": "",
    "sku_key": "8595231213920",
@@ -5198,7 +5198,7 @@
   },
   {
    "name": "Bebe 130g Kakaové",
-   "price": 18.98,
+   "price": 20.98,
    "amount": "130 g",
    "unit": "",
    "sku_key": "8593893902312",
@@ -5206,7 +5206,7 @@
   },
   {
    "name": "Bebe 130g Cereální (zelená)",
-   "price": 18.98,
+   "price": 20.98,
    "amount": "130 g",
    "unit": "",
    "sku_key": "8593893902381",
@@ -5214,7 +5214,7 @@
   },
   {
    "name": "Bebe 130g Jemné (červená)",
-   "price": 18.98,
+   "price": 20.98,
    "amount": "130 g",
    "unit": "",
    "sku_key": "8593893902305",
@@ -5246,7 +5246,7 @@
   },
   {
    "name": "Emco Mysli Sušenky 60g - Jablečné",
-   "price": 12.55,
+   "price": 12.98,
    "amount": "60 g",
    "unit": "",
    "sku_key": "8595229907930",
@@ -5254,7 +5254,7 @@
   },
   {
    "name": "Emco Mysli Sušenky 60g - Borůvková",
-   "price": 12.55,
+   "price": 12.98,
    "amount": "60 g",
    "unit": "",
    "sku_key": "8595229900436",
@@ -5262,7 +5262,7 @@
   },
   {
    "name": "Emco Mysli Sušenky 60g - Čokoládové",
-   "price": 12.55,
+   "price": 12.98,
    "amount": "60 g",
    "unit": "",
    "sku_key": "8594017144779",
@@ -5270,7 +5270,7 @@
   },
   {
    "name": "Emco Mysli Sušenky 60g - Kokosové",
-   "price": 12.55,
+   "price": 12.98,
    "amount": "60 g",
    "unit": "",
    "sku_key": "8594017144816",
@@ -5278,7 +5278,7 @@
   },
   {
    "name": "Emco Mysli Sušenky 60g - Oříškové",
-   "price": 12.55,
+   "price": 12.98,
    "amount": "60 g",
    "unit": "",
    "sku_key": "8594017144793",
@@ -5406,7 +5406,7 @@
   },
   {
    "name": "Old Porter 0,75L Rich Sweet Wine",
-   "price": 129.98,
+   "price": 135.99,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8410006032202",
@@ -5414,7 +5414,7 @@
   },
   {
    "name": "Old Porter 0,75L White Sweet Wine",
-   "price": 129.98,
+   "price": 135.99,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8410006235603",
@@ -5510,7 +5510,7 @@
   },
   {
    "name": "Racio Cornies 115g Kukuřičné s Mořskou Solí",
-   "price": 16.98,
+   "price": 17.98,
    "amount": "115 g",
    "unit": "",
    "sku_key": "8595573400194",
@@ -5518,7 +5518,7 @@
   },
   {
    "name": "Racio Cornies 115g Kukuřičné se Semínkem",
-   "price": 16.98,
+   "price": 17.98,
    "amount": "115 g",
    "unit": "",
    "sku_key": "8595573400217",
@@ -5590,7 +5590,7 @@
   },
   {
    "name": "Bohemia chips Vroubky 120g Pizza",
-   "price": 27.98,
+   "price": 29.55,
    "amount": "120 g",
    "unit": "",
    "sku_key": "8595606204119",
@@ -5726,7 +5726,7 @@
   },
   {
    "name": "Caprio 2L Jablko, LIČI",
-   "price": 26.55,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "sku_key": "8594057637279",
@@ -5734,7 +5734,7 @@
   },
   {
    "name": "Caprio 2L Jablko Malina",
-   "price": 26.55,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "sku_key": "5900334007384",
@@ -5742,7 +5742,7 @@
   },
   {
    "name": "Caprio 2L Hruška - Pear",
-   "price": 26.55,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "sku_key": "5900334000101",
@@ -5838,7 +5838,7 @@
   },
   {
    "name": "OKF Aloe King 0,5L Liči Lychee",
-   "price": 23.98,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8809041426587",
@@ -5918,7 +5918,7 @@
   },
   {
    "name": "Kozel Plech 0,5L Ležák 11° - ZELENÁ 4x6ks",
-   "price": 20.55,
+   "price": 19.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8594404005782",
@@ -5926,7 +5926,7 @@
   },
   {
    "name": "Kozel Sklo 0,5L Světlý 10* - 4%",
-   "price": 14.98,
+   "price": 14.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8594404001401",
@@ -6014,7 +6014,7 @@
   },
   {
    "name": "Tiger 500ml ENERGY",
-   "price": 14.98,
+   "price": 15.56,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8594057637859",
@@ -6382,7 +6382,7 @@
   },
   {
    "name": "Zelí Bílé 640g - VIVA",
-   "price": 24.98,
+   "price": 23.98,
    "amount": "640 g",
    "unit": "",
    "sku_key": "8594044443746",
@@ -6454,7 +6454,7 @@
   },
   {
    "name": "Bohemia chips Vroubky 120g Solené",
-   "price": 27.98,
+   "price": 29.55,
    "amount": "120 g",
    "unit": "",
    "sku_key": "8595606204096",
@@ -6566,7 +6566,7 @@
   },
   {
    "name": "Bebe 130g Mléčné",
-   "price": 18.98,
+   "price": 20.98,
    "amount": "130 g",
    "unit": "",
    "sku_key": "8593894804127",
@@ -6622,7 +6622,7 @@
   },
   {
    "name": "PANZANI OM 425g Bolognese SB",
-   "price": 59.98,
+   "price": 69.98,
    "amount": "425 g",
    "unit": "",
    "sku_key": "3038354210803",
@@ -6654,7 +6654,7 @@
   },
   {
    "name": "Panzani Testoviny 500g Kolinka - Chifferini",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "500 g",
    "unit": "",
    "sku_key": "3038359004971",
@@ -6662,7 +6662,7 @@
   },
   {
    "name": "Panzani Testoviny 500g Farfalle",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "500 g",
    "unit": "",
    "sku_key": "3038351689800",
@@ -6670,7 +6670,7 @@
   },
   {
    "name": "Panzani Testoviny 500g Spagheti",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "500 g",
    "unit": "",
    "sku_key": "3038351165007",
@@ -6678,7 +6678,7 @@
   },
   {
    "name": "Tokaji polosladké 0,75l Sárgamuskotály",
-   "price": 63.98,
+   "price": 59.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "5998812712127",
@@ -6773,7 +6773,7 @@
   },
   {
    "name": "Hamé Kečup 300g - Sladký",
-   "price": 25.98,
+   "price": 27.98,
    "amount": "300 g",
    "unit": "",
    "sku_key": "85915473",
@@ -6781,7 +6781,7 @@
   },
   {
    "name": "Hamé Kečup 300g - Ostrý",
-   "price": 25.98,
+   "price": 27.98,
    "amount": "300 g",
    "unit": "",
    "sku_key": "85915480",
@@ -6877,7 +6877,7 @@
   },
   {
    "name": "RioMare 160g Insa. BEANS",
-   "price": 61.98,
+   "price": 55.98,
    "amount": "160 g",
    "unit": "",
    "sku_key": "8004030023017",
@@ -6885,7 +6885,7 @@
   },
   {
    "name": "RioMare 160g Insa. MESSICANA",
-   "price": 61.98,
+   "price": 55.98,
    "amount": "160 g",
    "unit": "",
    "sku_key": "8004030026018",
@@ -6893,7 +6893,7 @@
   },
   {
    "name": "RioMare 160g Insa. CORN",
-   "price": 61.98,
+   "price": 55.98,
    "amount": "160 g",
    "unit": "",
    "sku_key": "8004030022010",
@@ -6901,7 +6901,7 @@
   },
   {
    "name": "RioMare 160g Insa. COU COUS",
-   "price": 61.98,
+   "price": 55.98,
    "amount": "160 g",
    "unit": "",
    "sku_key": "8004030860001",
@@ -6989,7 +6989,7 @@
   },
   {
    "name": "Heineken Plech 500ml",
-   "price": 21.98,
+   "price": 20.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "5998818173724",
@@ -7109,7 +7109,7 @@
   },
   {
    "name": "RioMare 160g Tonno di Oliva",
-   "price": 61.98,
+   "price": 55.98,
    "amount": "160 g",
    "unit": "",
    "sku_key": "8004030044005",
@@ -7117,7 +7117,7 @@
   },
   {
    "name": "RioMare 160g Tonno al Naturale",
-   "price": 61.98,
+   "price": 55.98,
    "amount": "160 g",
    "unit": "",
    "sku_key": "80040446",
@@ -7237,7 +7237,7 @@
   },
   {
    "name": "Zámecký Výběr 1L Modrý Portugal",
-   "price": 49.98,
+   "price": 47.98,
    "amount": "1 l",
    "unit": "",
    "sku_key": "8594172963000",
@@ -7245,7 +7245,7 @@
   },
   {
    "name": "Zámecký Výběr 1L Merlot",
-   "price": 49.98,
+   "price": 47.98,
    "amount": "1 l",
    "unit": "",
    "sku_key": "8594172963024",
@@ -7253,7 +7253,7 @@
   },
   {
    "name": "Zámecký Výběr 1L Chardonnay",
-   "price": 49.98,
+   "price": 47.98,
    "amount": "1 l",
    "unit": "",
    "sku_key": "8588007687865",
@@ -7261,7 +7261,7 @@
   },
   {
    "name": "Zámecký Výběr 1L Muller Thurgau",
-   "price": 49.98,
+   "price": 47.98,
    "amount": "1 l",
    "unit": "",
    "sku_key": "8588007687896",
@@ -7269,7 +7269,7 @@
   },
   {
    "name": "Zámecký Výběr 1L Cabernet Sauvignon",
-   "price": 49.98,
+   "price": 47.98,
    "amount": "1 l",
    "unit": "",
    "sku_key": "8594172962072",
@@ -7277,7 +7277,7 @@
   },
   {
    "name": "Zámecký Výběr 1L Veltlinské Zelené",
-   "price": 49.98,
+   "price": 47.98,
    "amount": "1 l",
    "unit": "",
    "sku_key": "8588007687926",
@@ -7349,7 +7349,7 @@
   },
   {
    "name": "Bohemia chips 130g Paprika",
-   "price": 27.98,
+   "price": 29.55,
    "amount": "130 g",
    "unit": "",
    "sku_key": "8595606207028",
@@ -7493,7 +7493,7 @@
   },
   {
    "name": "Zelí Kysané 720ml (640g) VIVA",
-   "price": 25.98,
+   "price": 24.98,
    "amount": "720 ml",
    "unit": "",
    "sku_key": "8594044440646",
@@ -7621,7 +7621,7 @@
   },
   {
    "name": "Delissa 33g Mléčná",
-   "price": 7.55,
+   "price": 6.98,
    "amount": "33 g",
    "unit": "",
    "sku_key": "7613036268691",
@@ -7629,7 +7629,7 @@
   },
   {
    "name": "Delissa 33g Vanilkova",
-   "price": 7.55,
+   "price": 6.98,
    "amount": "33 g",
    "unit": "",
    "sku_key": "7613036268530",
@@ -7637,7 +7637,7 @@
   },
   {
    "name": "Delissa 33g Oříšková",
-   "price": 7.55,
+   "price": 6.98,
    "amount": "33 g",
    "unit": "",
    "sku_key": "7613036268677",
@@ -7757,7 +7757,7 @@
   },
   {
    "name": "Magnesia Plus Boost 0.7L Min.Mandar.+limeta+zazvor PET",
-   "price": 22.98,
+   "price": 23.55,
    "amount": "0.7 l",
    "unit": "",
    "sku_key": "8594001026371",
@@ -7765,7 +7765,7 @@
   },
   {
    "name": "JOJO 80g Marshmallow",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8593893738256",
@@ -7773,7 +7773,7 @@
   },
   {
    "name": "JOJO 80g Kyselé Rybičky",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8593893739291",
@@ -7781,7 +7781,7 @@
   },
   {
    "name": "JOJO 80g Kyselé Žížalky",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8593893738201",
@@ -7789,7 +7789,7 @@
   },
   {
    "name": "JOJO 80g Hrošíci Plnené",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8593893706033",
@@ -7797,7 +7797,7 @@
   },
   {
    "name": "JOJO 80g Medvídci",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8593893738690",
@@ -7805,7 +7805,7 @@
   },
   {
    "name": "Kitkat CZ Chunky 40g White",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "40 g",
    "unit": "",
    "sku_key": "7613037251883",
@@ -7813,7 +7813,7 @@
   },
   {
    "name": "KitKat CZ Chunky 40g Červená - Milk",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "40 g",
    "unit": "",
    "sku_key": "3800020423349",
@@ -7837,7 +7837,7 @@
   },
   {
    "name": "Maretti 70g Salami Pepperoni",
-   "price": 15.55,
+   "price": 15.98,
    "amount": "70 g",
    "unit": "",
    "sku_key": "3800205873358",
@@ -7909,7 +7909,7 @@
   },
   {
    "name": "Birell Plech ORIGINAL 0,5L Nealkoholické Pivo 4x6ks",
-   "price": 19.55,
+   "price": 19.98,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8586001762113",
@@ -7957,7 +7957,7 @@
   },
   {
    "name": "JOJO 80g Vexta",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8593893738225",
@@ -7965,7 +7965,7 @@
   },
   {
    "name": "JOJO 80g Delfínci",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8593893738652",
@@ -8237,7 +8237,7 @@
   },
   {
    "name": "Cielo 0,75L Rosato Veneto (Rosé)",
-   "price": 79.98,
+   "price": 82.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8008900006018",
@@ -8245,7 +8245,7 @@
   },
   {
    "name": "Tuňákový salát GIANA - 185g Mexico",
-   "price": 41.98,
+   "price": 39.98,
    "amount": "185 g",
    "unit": "",
    "sku_key": "8594012793378",
@@ -8253,7 +8253,7 @@
   },
   {
    "name": "Tuňákový salát GIANA - 185g Italiano",
-   "price": 41.98,
+   "price": 39.98,
    "amount": "185 g",
    "unit": "",
    "sku_key": "8595241503349",
@@ -8261,7 +8261,7 @@
   },
   {
    "name": "Tuňákový salát GIANA - 185g Western",
-   "price": 41.98,
+   "price": 39.98,
    "amount": "185 g",
    "unit": "",
    "sku_key": "8595241502717",
@@ -8269,7 +8269,7 @@
   },
   {
    "name": "Tuňákový salát GIANA - 185g Exotic",
-   "price": 41.98,
+   "price": 39.98,
    "amount": "185 g",
    "unit": "",
    "sku_key": "8594012796539",
@@ -8277,7 +8277,7 @@
   },
   {
    "name": "Tuňákový salát GIANA - 185g Texas",
-   "price": 41.98,
+   "price": 39.98,
    "amount": "185 g",
    "unit": "",
    "sku_key": "8595241502731",
@@ -8301,7 +8301,7 @@
   },
   {
    "name": "Corny White choco 40g/24ks",
-   "price": 11.98,
+   "price": 11.55,
    "amount": "40 g",
    "unit": "",
    "sku_key": "8592084411138",
@@ -8389,7 +8389,7 @@
   },
   {
    "name": "Prosecco Treviso Frizzante 0,75L Frivolo",
-   "price": 124.98,
+   "price": 135.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8008900006377",
@@ -8589,7 +8589,7 @@
   },
   {
    "name": "Top Topic 1,5L Malina",
-   "price": 24.98,
+   "price": 23.55,
    "amount": "1,5 l",
    "unit": "",
    "sku_key": "8595231213951",
@@ -8797,7 +8797,7 @@
   },
   {
    "name": "Panzani Těstoviny 500g Penne Rigate",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "500 g",
    "unit": "",
    "sku_key": "3038359004957",
@@ -8981,7 +8981,7 @@
   },
   {
    "name": "Jahodový kompot 425ml GIANA",
-   "price": 27.98,
+   "price": 29.98,
    "amount": "425 ml",
    "unit": "",
    "sku_key": "8594012791503",
@@ -8989,7 +8989,7 @@
   },
   {
    "name": "Meruňky 425ml GIANA",
-   "price": 29.98,
+   "price": 31.98,
    "amount": "425 ml",
    "unit": "",
    "sku_key": "8594012794283",
@@ -9013,7 +9013,7 @@
   },
   {
    "name": "Ananas plátky 580ml GIANA",
-   "price": 41.98,
+   "price": 44.98,
    "amount": "580 ml",
    "unit": "",
    "sku_key": "8594012791763",
@@ -9021,7 +9021,7 @@
   },
   {
    "name": "Ananas kousky 580ml GIANA",
-   "price": 37.98,
+   "price": 39.98,
    "amount": "580 ml",
    "unit": "",
    "sku_key": "8594012791701",
@@ -9141,7 +9141,7 @@
   },
   {
    "name": "Mandarinky 314ml GIANA",
-   "price": 27.98,
+   "price": 29.98,
    "amount": "314 ml",
    "unit": "",
    "sku_key": "8594012791657",
@@ -9237,7 +9237,7 @@
   },
   {
    "name": "Hrušky 425ml Ve sladkém Nálevu GIANA",
-   "price": 27.98,
+   "price": 29.98,
    "amount": "425 ml",
    "unit": "",
    "sku_key": "8594012795730",
@@ -9277,7 +9277,7 @@
   },
   {
    "name": "JOJO 80g MixlePixle - MIX",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8593893747791",
@@ -9285,7 +9285,7 @@
   },
   {
    "name": "JOJO 80g MixlePixle - KYSELÉ",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8593893747777",
@@ -9301,7 +9301,7 @@
   },
   {
    "name": "Zelí Červené 640g VIVA",
-   "price": 24.98,
+   "price": 23.98,
    "amount": "640 g",
    "unit": "",
    "sku_key": "8594044448840",
@@ -9581,7 +9581,7 @@
   },
   {
    "name": "Disney Surprise 300ml Multifruit Cars",
-   "price": 19.98,
+   "price": 18.98,
    "amount": "300 ml",
    "unit": "",
    "sku_key": "8594023921043C"
@@ -9596,7 +9596,7 @@
   },
   {
    "name": "Zámecký Výběr 1L Sauvignon Blanc",
-   "price": 49.98,
+   "price": 47.98,
    "amount": "1 l",
    "unit": "",
    "sku_key": "8594172963079",
@@ -9604,7 +9604,7 @@
   },
   {
    "name": "Corny Marshmallow Chocolate Bícuit 50g/24ks",
-   "price": 11.98,
+   "price": 11.55,
    "amount": "50 g",
    "unit": "",
    "sku_key": "8592084411732",
@@ -9636,7 +9636,7 @@
   },
   {
    "name": "Kofola 0.5L Meloun",
-   "price": 17.98,
+   "price": 18.98,
    "amount": "0.5 l",
    "unit": "",
    "sku_key": "8595231213425",
@@ -9660,7 +9660,7 @@
   },
   {
    "name": "Delissa 33g Hořká - Čokoládová",
-   "price": 7.55,
+   "price": 6.98,
    "amount": "33 g",
    "unit": "",
    "sku_key": "7613036268653",
@@ -9748,7 +9748,7 @@
   },
   {
    "name": "Kozel Sklo 0,5L Medium 11° - 4,6% ZELENÁ",
-   "price": 16.98,
+   "price": 17.98,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8594404005096",
@@ -9756,7 +9756,7 @@
   },
   {
    "name": "Panzani Těstoviny 500g Makarony",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "500 g",
    "unit": "",
    "sku_key": "3038359007392",
@@ -9764,7 +9764,7 @@
   },
   {
    "name": "Strongbow Plech 440ml Tropical 4,5%",
-   "price": 19.98,
+   "price": 21.98,
    "amount": "440 ml",
    "unit": "",
    "sku_key": "8586000987791",
@@ -9772,7 +9772,7 @@
   },
   {
    "name": "Strongbow Plech 440ml Red Berries 4,5%",
-   "price": 19.98,
+   "price": 21.98,
    "amount": "440 ml",
    "unit": "",
    "sku_key": "8586000988101",
@@ -9780,7 +9780,7 @@
   },
   {
    "name": "Strongbow Plech 440ml Gold Apple 4,5%",
-   "price": 19.98,
+   "price": 21.98,
    "amount": "440 ml",
    "unit": "",
    "sku_key": "8586000987760",
@@ -9828,7 +9828,7 @@
   },
   {
    "name": "Tiger 500ml SPEED REFLEX",
-   "price": 14.98,
+   "price": 16.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8595646200188",
@@ -9876,7 +9876,7 @@
   },
   {
    "name": "Corny Slaný Caramel 40g",
-   "price": 11.98,
+   "price": 11.55,
    "amount": "40 g",
    "unit": "",
    "sku_key": "4011800403805",
@@ -9908,7 +9908,7 @@
   },
   {
    "name": "Caprio 2L Party Mix Ananas Mango",
-   "price": 26.55,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "sku_key": "8594057638931",
@@ -10052,7 +10052,7 @@
   },
   {
    "name": "Nimm2Smilegummi 90g Softies",
-   "price": 18.55,
+   "price": 16.55,
    "amount": "90 g",
    "unit": "",
    "sku_key": "4014400917062",
@@ -10060,7 +10060,7 @@
   },
   {
    "name": "Nimm2Smilegummi 100g Sour",
-   "price": 18.55,
+   "price": 16.55,
    "amount": "100 g",
    "unit": "",
    "sku_key": "4014400911039",
@@ -10068,7 +10068,7 @@
   },
   {
    "name": "Nimm2Smilegummi 90g Apple Buddies",
-   "price": 18.55,
+   "price": 16.55,
    "amount": "90 g",
    "unit": "",
    "sku_key": "4014400920710",
@@ -10076,7 +10076,7 @@
   },
   {
    "name": "Nimm2Smilegummi 90g Milk Buddies",
-   "price": 18.55,
+   "price": 16.55,
    "amount": "90 g",
    "unit": "",
    "sku_key": "4014400919288",
@@ -10084,7 +10084,7 @@
   },
   {
    "name": "Nimm2Smilegummi 90g Milk Ghosts",
-   "price": 18.55,
+   "price": 16.55,
    "amount": "90 g",
    "unit": "",
    "sku_key": "4014400921588",
@@ -10116,7 +10116,7 @@
   },
   {
    "name": "Nimm2Smilegummi 100g Fruit",
-   "price": 18.55,
+   "price": 16.55,
    "amount": "100 g",
    "unit": "",
    "sku_key": "4014400907278",
@@ -10124,7 +10124,7 @@
   },
   {
    "name": "Prosecco Cielo 0.75L DOC",
-   "price": 124.98,
+   "price": 128.99,
    "amount": "0.75 l",
    "unit": "",
    "sku_key": "8008900007312",
@@ -10156,7 +10156,7 @@
   },
   {
    "name": "Strongbow Plech 440ml Dark Fruit 4,5%",
-   "price": 19.98,
+   "price": 21.98,
    "amount": "440 ml",
    "unit": "",
    "sku_key": "8586000987784",
@@ -10292,7 +10292,7 @@
   },
   {
    "name": "Nimm2Smilegummi 90g Heroes",
-   "price": 18.55,
+   "price": 16.55,
    "amount": "90 g",
    "unit": "",
    "sku_key": "4014400922950",
@@ -12265,7 +12265,7 @@
   },
   {
    "name": "Lays 130g Lays Stix ketchup",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "130 g",
    "unit": "",
    "sku_key": "5900259099457",
@@ -12433,7 +12433,7 @@
   },
   {
    "name": "Orbit White 14g Spearmint",
-   "price": 11.55,
+   "price": 11.98,
    "amount": "14 g",
    "unit": "",
    "sku_key": "4009900395977",
@@ -12449,7 +12449,7 @@
   },
   {
    "name": "Orbit White 14g Classic",
-   "price": 11.55,
+   "price": 11.98,
    "amount": "14 g",
    "unit": "",
    "sku_key": "4009900363488",
@@ -13151,7 +13151,7 @@
   },
   {
    "name": "Tiger 500ml Mango Power",
-   "price": 14.98,
+   "price": 16.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8595646201086",
@@ -13271,7 +13271,7 @@
   },
   {
    "name": "Twix 46g WHITE - Limited",
-   "price": 12.98,
+   "price": 13.65,
    "amount": "46 g",
    "unit": "",
    "sku_key": "5000159486965",
@@ -13534,7 +13534,7 @@
   },
   {
    "name": "Kitkat CZ Chunky 42g Peanut Butter",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "42 g",
    "unit": "",
    "sku_key": "3800020487655",
@@ -13550,7 +13550,7 @@
   },
   {
    "name": "RioMare 160g Insa. Texana e Tonno",
-   "price": 61.98,
+   "price": 55.98,
    "amount": "160 g",
    "unit": "",
    "sku_key": "8004030845046",
@@ -13646,7 +13646,7 @@
   },
   {
    "name": "Vitana Polévka do hrnečku 22g Sýrová s houstičkami",
-   "price": 9.98,
+   "price": 9.75,
    "amount": "22 g",
    "unit": "",
    "sku_key": "8593837253678",
@@ -13654,7 +13654,7 @@
   },
   {
    "name": "Vitana Poctivá Polévka 78g Hovězí",
-   "price": 24.98,
+   "price": 23.98,
    "amount": "78 g",
    "unit": "",
    "sku_key": "8593837270002",
@@ -13662,7 +13662,7 @@
   },
   {
    "name": "Vitana Poctivá Polévka 88g S játrovými knedlíčky",
-   "price": 24.98,
+   "price": 23.98,
    "amount": "88 g",
    "unit": "",
    "sku_key": "8593837269976",
@@ -13670,7 +13670,7 @@
   },
   {
    "name": "Bask 400g Bramborové těsto",
-   "price": 27.98,
+   "price": 29.98,
    "amount": "400 g",
    "unit": "",
    "sku_key": "8593837226696",
@@ -13678,7 +13678,7 @@
   },
   {
    "name": "Vitana Polévka do hrnečku 14g Kuřecí s nudlemi",
-   "price": 9.98,
+   "price": 9.75,
    "amount": "14 g",
    "unit": "",
    "sku_key": "8593837244010",
@@ -13686,7 +13686,7 @@
   },
   {
    "name": "Vitana Polévka do hrnečku 17g Česnečka s houstičkami",
-   "price": 9.98,
+   "price": 9.75,
    "amount": "17 g",
    "unit": "",
    "sku_key": "8593837244041",
@@ -13694,7 +13694,7 @@
   },
   {
    "name": "Vitana Polévka do hrnečku 20g Hovězí s celetýnskými nudlemi",
-   "price": 9.98,
+   "price": 9.75,
    "amount": "20 g",
    "unit": "",
    "sku_key": "8593837244003",
@@ -13702,7 +13702,7 @@
   },
   {
    "name": "Vitana Polévka do hrnečku 18g Gulášová",
-   "price": 9.98,
+   "price": 9.75,
    "amount": "18 g",
    "unit": "",
    "sku_key": "8593837243792",
@@ -13710,7 +13710,7 @@
   },
   {
    "name": "Vitana Polévka do hrnečku 27g Hrášková s houstičkami",
-   "price": 9.98,
+   "price": 9.75,
    "amount": "27 g",
    "unit": "",
    "sku_key": "8593837243983",
@@ -13718,7 +13718,7 @@
   },
   {
    "name": "Vitana Poctivá Polévka 97g Gulášová",
-   "price": 24.98,
+   "price": 23.98,
    "amount": "97 g",
    "unit": "",
    "sku_key": "8593837269945",
@@ -13726,7 +13726,7 @@
   },
   {
    "name": "Vitana 450g Houskové knedlíky",
-   "price": 29.98,
+   "price": 32.98,
    "amount": "450 g",
    "unit": "",
    "sku_key": "8593837870080",
@@ -13734,7 +13734,7 @@
   },
   {
    "name": "Vitana Bistro 72g Kuře na paprice",
-   "price": 25.98,
+   "price": 27.98,
    "amount": "72 g",
    "unit": "",
    "sku_key": "8593837229178",
@@ -13742,7 +13742,7 @@
   },
   {
    "name": "Vitana Bistro 65g Kungpao",
-   "price": 25.98,
+   "price": 27.98,
    "amount": "65 g",
    "unit": "",
    "sku_key": "8593837230365",
@@ -13750,7 +13750,7 @@
   },
   {
    "name": "Vitana Bistro 72g Sýrová omáčka s těstoviny",
-   "price": 25.98,
+   "price": 27.98,
    "amount": "72 g",
    "unit": "",
    "sku_key": "8593837243617",
@@ -13758,7 +13758,7 @@
   },
   {
    "name": "Vitana Poctivá Polévka 85g Slepičí",
-   "price": 24.98,
+   "price": 23.98,
    "amount": "85 g",
    "unit": "",
    "sku_key": "8593837269983",
@@ -13981,7 +13981,7 @@
   },
   {
    "name": "Disney Surprise 300ml Multifruit Hotwheels",
-   "price": 19.98,
+   "price": 18.98,
    "amount": "300 ml",
    "unit": "",
    "sku_key": "8594023921043",
@@ -14037,7 +14037,7 @@
   },
   {
    "name": "Vitana 400g Knedlíky s burizony",
-   "price": 29.98,
+   "price": 32.98,
    "amount": "400 g",
    "unit": "",
    "sku_key": "8593837870042",
@@ -14125,7 +14125,7 @@
   },
   {
    "name": "Vitana Poctivá Polévka 97g Francouzská",
-   "price": 24.98,
+   "price": 23.98,
    "amount": "97 g",
    "unit": "",
    "sku_key": "8593837269938",
@@ -14133,7 +14133,7 @@
   },
   {
    "name": "Vitana Polévka do hrnečku 21g Brokolicová",
-   "price": 9.98,
+   "price": 9.75,
    "amount": "21 g",
    "unit": "",
    "sku_key": "8593837243976",
@@ -14285,7 +14285,7 @@
   },
   {
    "name": "Racio Polomáčené 100g rýžové - tmavá kakao (modrá) 20ks/b",
-   "price": 15.98,
+   "price": 16.98,
    "amount": "100 g",
    "unit": "",
    "sku_key": "8595573401290",
@@ -14373,7 +14373,7 @@
   },
   {
    "name": "JOJO 80g Super Kyselé Kaktusssy",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8593893784581",
@@ -14397,7 +14397,7 @@
   },
   {
    "name": "Lays 55g Strong - Chili Lime",
-   "price": 16.98,
+   "price": 17.98,
    "amount": "55 g",
    "unit": "",
    "sku_key": "5900259096609",
@@ -14405,7 +14405,7 @@
   },
   {
    "name": "Lays 65g Max - Cheese Onion",
-   "price": 16.98,
+   "price": 17.98,
    "amount": "65 g",
    "unit": "",
    "sku_key": "5900259097682",
@@ -14413,7 +14413,7 @@
   },
   {
    "name": "Lays 55g Max - Paprika",
-   "price": 16.98,
+   "price": 17.98,
    "amount": "55 g",
    "unit": "",
    "sku_key": "5900259097767",
@@ -14429,7 +14429,7 @@
   },
   {
    "name": "Tiger 500ml Strawberry Boom",
-   "price": 14.98,
+   "price": 16.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8595646201437",
@@ -14437,7 +14437,7 @@
   },
   {
    "name": "Kubík water 500ml Víšen",
-   "price": 11.99,
+   "price": 11.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8595 646201383"
@@ -14500,7 +14500,7 @@
   },
   {
    "name": "Kubik Water Summer Fruits MANGO SORBET-Citron 0,5L",
-   "price": 11.99,
+   "price": 11.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8595646203882",
@@ -14508,7 +14508,7 @@
   },
   {
    "name": "Kubik Water Summer Fruits VODNÍ MELOUN-Citron 0,5L",
-   "price": 11.99,
+   "price": 11.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8595646203844",
@@ -14516,7 +14516,7 @@
   },
   {
    "name": "Maretti 70g Sour Cream Onion",
-   "price": 15.55,
+   "price": 15.98,
    "amount": "70 g",
    "unit": "",
    "sku_key": "3800205877325",
@@ -14532,7 +14532,7 @@
   },
   {
    "name": "Relax CSD 330ml Kaktus",
-   "price": 11.98,
+   "price": 12.65,
    "amount": "330 ml",
    "unit": "",
    "sku_key": "8595646202489",
@@ -14540,7 +14540,7 @@
   },
   {
    "name": "Relax CSD 330ml Mango",
-   "price": 11.98,
+   "price": 12.65,
    "amount": "330 ml",
    "unit": "",
    "sku_key": "8595646202502",
@@ -14548,7 +14548,7 @@
   },
   {
    "name": "Relax CSD 330ml Meloun",
-   "price": 11.98,
+   "price": 12.65,
    "amount": "330 ml",
    "unit": "",
    "sku_key": "8595646202526",
@@ -14732,7 +14732,7 @@
   },
   {
    "name": "JOJO 80g Srdcovky",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8593893753228",
@@ -14740,7 +14740,7 @@
   },
   {
    "name": "JOJO 80g Šumavské jahudky",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8593893738416",
@@ -14771,7 +14771,7 @@
   },
   {
    "name": "Tiger 500ml Raspberry Mania - Malina",
-   "price": 14.98,
+   "price": 16.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8595646202748",
@@ -14795,7 +14795,7 @@
   },
   {
    "name": "Skittles 38g Smoothies",
-   "price": 8.25,
+   "price": 8.55,
    "amount": "38 g",
    "unit": "",
    "sku_key": "4009900532327",
@@ -14811,7 +14811,7 @@
   },
   {
    "name": "Disney Surprise 300ml Strawberry Barbie",
-   "price": 19.98,
+   "price": 18.98,
    "amount": "300 ml",
    "unit": "",
    "sku_key": "8594023923214D"
@@ -14882,7 +14882,7 @@
   },
   {
    "name": "Milky Way 60 x 21,5g NEW",
-   "price": 10.55,
+   "price": 10.98,
    "amount": "21,5 g",
    "unit": "",
    "sku_key": "5900951025808",
@@ -14890,7 +14890,7 @@
   },
   {
    "name": "Zámecký Výběr 1L Frankovka",
-   "price": 49.98,
+   "price": 47.98,
    "amount": "1 l",
    "unit": "",
    "sku_key": "8588007687773",
@@ -14898,7 +14898,7 @@
   },
   {
    "name": "Hamé Kečup 500g - Jemný",
-   "price": 37.98,
+   "price": 39.98,
    "amount": "500 g",
    "unit": "",
    "sku_key": "8594001696529",
@@ -14906,7 +14906,7 @@
   },
   {
    "name": "Panzani Testoviny 500g Torti",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "500 g",
    "unit": "",
    "sku_key": "3038359004964",
@@ -14930,7 +14930,7 @@
   },
   {
    "name": "OKF Aloe King 0,5L Water Melon - Melounová Šťáva",
-   "price": 23.98,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8809041428932",
@@ -14938,14 +14938,14 @@
   },
   {
    "name": "Disney Surprise 300ml Strawberry Little Pony",
-   "price": 19.98,
+   "price": 18.98,
    "amount": "300 ml",
    "unit": "",
    "sku_key": "GHJGJ"
   },
   {
    "name": "Disney Surprise 300ml Strawberry Peppa Pig",
-   "price": 19.98,
+   "price": 18.98,
    "amount": "300 ml",
    "unit": "",
    "sku_key": "8594023923214",
@@ -15081,7 +15081,7 @@
   },
   {
    "name": "Frizzante Bianco 0,75L Frivolo",
-   "price": 77.98,
+   "price": 81.99,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8008900007831",
@@ -15217,7 +15217,7 @@
   },
   {
    "name": "Birell Plech 0.5L Polotmavý - Citron",
-   "price": 19.55,
+   "price": 20.98,
    "amount": "0.5 l",
    "unit": "",
    "sku_key": "8586001761994",
@@ -15225,7 +15225,7 @@
   },
   {
    "name": "Birell Plech 0.5L Pomelogrep",
-   "price": 19.55,
+   "price": 20.98,
    "amount": "0.5 l",
    "unit": "",
    "sku_key": "8594404009520",
@@ -15233,7 +15233,7 @@
   },
   {
    "name": "Birell Plech 0.5L Limetka Malina",
-   "price": 19.55,
+   "price": 20.98,
    "amount": "0.5 l",
    "unit": "",
    "sku_key": "8586001762137",
@@ -15905,7 +15905,7 @@
   },
   {
    "name": "Twix 46g Caramel Salted - Karamel se Soli",
-   "price": 12.98,
+   "price": 13.55,
    "amount": "46 g",
    "unit": "",
    "sku_key": "5000159527255",
@@ -15929,7 +15929,7 @@
   },
   {
    "name": "Tiger 500ml Kaktus",
-   "price": 14.98,
+   "price": 16.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8595646203332",
@@ -15945,7 +15945,7 @@
   },
   {
    "name": "Relax CSD 330ml Liči",
-   "price": 11.98,
+   "price": 12.65,
    "amount": "330 ml",
    "unit": "",
    "sku_key": "8595646203806",
@@ -15993,7 +15993,7 @@
   },
   {
    "name": "Disney Surprise 300ml Apple Paw Patrol",
-   "price": 19.98,
+   "price": 18.98,
    "amount": "300 ml",
    "unit": "",
    "sku_key": "8594023921050",
@@ -16017,14 +16017,14 @@
   },
   {
    "name": "Caprio 2L Jablko,Limetka, KAKTUS",
-   "price": 26.55,
+   "price": 27.98,
    "amount": "2 l",
    "unit": "",
    "sku_key": "caprioapplemango"
   },
   {
    "name": "Relax CSD 330ml Jahoda",
-   "price": 11.98,
+   "price": 12.65,
    "amount": "330 ml",
    "unit": "",
    "sku_key": "8595646203783",
@@ -16048,7 +16048,7 @@
   },
   {
    "name": "Disney Surprise 300ml Apple Sonic",
-   "price": 19.98,
+   "price": 18.98,
    "amount": "300 ml",
    "unit": "",
    "sku_key": "8594023921050A"
@@ -16071,7 +16071,7 @@
   },
   {
    "name": "Relax CSD 330ml Tutti Frutti",
-   "price": 11.98,
+   "price": 12.65,
    "amount": "330 ml",
    "unit": "",
    "sku_key": "8595646210514",
@@ -16087,7 +16087,7 @@
   },
   {
    "name": "Vitana Polévka do hrnečku 22g Rajská",
-   "price": 9.98,
+   "price": 9.75,
    "amount": "22 g",
    "unit": "",
    "sku_key": "8593837244027",
@@ -16095,7 +16095,7 @@
   },
   {
    "name": "Vitana Polévka do hrnečku 16g Mexická s chilli",
-   "price": 9.98,
+   "price": 9.75,
    "amount": "16 g",
    "unit": "",
    "sku_key": "8593837254576",
@@ -16207,7 +16207,7 @@
   },
   {
    "name": "Dr Witt 0,75L Granatové jablko a Acai - ruzove",
-   "price": 16.55,
+   "price": 15.55,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595646202861",
@@ -16215,7 +16215,7 @@
   },
   {
    "name": "Dr Witt 0,75L Mango, Citron a zelený čaj - zluty",
-   "price": 16.55,
+   "price": 15.55,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595646202847",
@@ -16223,7 +16223,7 @@
   },
   {
    "name": "Dr Witt 0,75L Černý rybíz, brusinka a ibišek",
-   "price": 16.55,
+   "price": 15.55,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595646202885",
@@ -16231,7 +16231,7 @@
   },
   {
    "name": "Dr Witt 0,75L Pomeranč, Pomelo - oranzovy",
-   "price": 16.55,
+   "price": 15.55,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595646204001",
@@ -16399,7 +16399,7 @@
   },
   {
    "name": "Hamé Kečup Jemný 900g",
-   "price": 49.98,
+   "price": 52.98,
    "amount": "900 g",
    "unit": "",
    "sku_key": "8595139784805",
@@ -16495,7 +16495,7 @@
   },
   {
    "name": "Relax CSD 330ml Cola - Malina",
-   "price": 11.98,
+   "price": 12.65,
    "amount": "330 ml",
    "unit": "",
    "sku_key": "8595646204544",
@@ -16503,7 +16503,7 @@
   },
   {
    "name": "Tiger 500ml Watermelon",
-   "price": 14.98,
+   "price": 16.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8595646204803",
@@ -16726,7 +16726,7 @@
   },
   {
    "name": "Mutěnice BiB 3L Chardonnay",
-   "price": 114.95,
+   "price": 109.98,
    "amount": "3 l",
    "unit": "",
    "sku_key": "8594121270678",
@@ -16734,7 +16734,7 @@
   },
   {
    "name": "Mutěnice BiB 3L Veltlínské zelené",
-   "price": 114.95,
+   "price": 109.98,
    "amount": "3 l",
    "unit": "",
    "sku_key": "8594121270838",
@@ -16742,7 +16742,7 @@
   },
   {
    "name": "Mutěnice BiB 3L Pinot Gris",
-   "price": 114.95,
+   "price": 109.98,
    "amount": "3 l",
    "unit": "",
    "sku_key": "8594121270593",
@@ -16750,7 +16750,7 @@
   },
   {
    "name": "Mutěnice BiB 3L Souvignon Blanc",
-   "price": 114.95,
+   "price": 109.98,
    "amount": "3 l",
    "unit": "",
    "sku_key": "8594121270739",
@@ -16758,7 +16758,7 @@
   },
   {
    "name": "Tiger 500ml Newschool Classic",
-   "price": 14.98,
+   "price": 16.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8588001651565",
@@ -16766,7 +16766,7 @@
   },
   {
    "name": "Mutěnice BiB 3L Merlot",
-   "price": 114.95,
+   "price": 109.98,
    "amount": "3 l",
    "unit": "",
    "sku_key": "8594121270708",
@@ -16862,7 +16862,7 @@
   },
   {
    "name": "Dr Witt 0,75L Collagen - Jahoda",
-   "price": 16.55,
+   "price": 15.55,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595646204773",
@@ -17116,7 +17116,7 @@
   },
   {
    "name": "Tiger 500ml Bubble Gum",
-   "price": 14.98,
+   "price": 16.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8588001651527",
@@ -17140,7 +17140,7 @@
   },
   {
    "name": "Lays 130g Barbecue Ribs",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "130 g",
    "unit": "",
    "sku_key": "5900259106599",
@@ -17283,7 +17283,7 @@
   },
   {
    "name": "Mochi BambooHause 210g Peanut",
-   "price": 42.98,
+   "price": 39.98,
    "amount": "210 g",
    "unit": "",
    "sku_key": "4714221130953",
@@ -17291,7 +17291,7 @@
   },
   {
    "name": "Mochi BambooHause 210g Red Bean",
-   "price": 42.98,
+   "price": 39.98,
    "amount": "210 g",
    "unit": "",
    "sku_key": "4714221131059",
@@ -17299,7 +17299,7 @@
   },
   {
    "name": "Mochi BambooHause 210g Sesame",
-   "price": 42.98,
+   "price": 39.98,
    "amount": "210 g",
    "unit": "",
    "sku_key": "4714221130960",
@@ -17307,7 +17307,7 @@
   },
   {
    "name": "Mochi BambooHause 210g Taro",
-   "price": 42.98,
+   "price": 39.98,
    "amount": "210 g",
    "unit": "",
    "sku_key": "4714221131219",
@@ -17315,7 +17315,7 @@
   },
   {
    "name": "Mochi BH. 180g Double Filling - Banana",
-   "price": 49.98,
+   "price": 46.98,
    "amount": "180 g",
    "unit": "",
    "sku_key": "4710623830712",
@@ -17323,7 +17323,7 @@
   },
   {
    "name": "Mochi BH. 180g Double Filling - Blueberry",
-   "price": 49.98,
+   "price": 46.98,
    "amount": "180 g",
    "unit": "",
    "sku_key": "4710623830705",
@@ -17331,7 +17331,7 @@
   },
   {
    "name": "Mochi BH. 180g Double Filling - Cantaloupe",
-   "price": 49.98,
+   "price": 46.98,
    "amount": "180 g",
    "unit": "",
    "sku_key": "4710623830699",
@@ -17339,7 +17339,7 @@
   },
   {
    "name": "Mochi BH. 180g Double Filling - Mango",
-   "price": 49.98,
+   "price": 46.98,
    "amount": "180 g",
    "unit": "",
    "sku_key": "4710623830675",
@@ -17347,7 +17347,7 @@
   },
   {
    "name": "Mochi BH. 180g Double Filling - Strawberry",
-   "price": 49.98,
+   "price": 46.98,
    "amount": "180 g",
    "unit": "",
    "sku_key": "4710623830682",
@@ -17499,7 +17499,7 @@
   },
   {
    "name": "Bohemia Sekt 0.75L ICE",
-   "price": 144.98,
+   "price": 139.98,
    "amount": "0.75 l",
    "unit": "",
    "sku_key": "8594000940746",
@@ -17507,7 +17507,7 @@
   },
   {
    "name": "Bohemia Sekt 0.75L ICE PINK",
-   "price": 144.98,
+   "price": 139.98,
    "amount": "0.75 l",
    "unit": "",
    "sku_key": "8594000940890",
@@ -17547,7 +17547,7 @@
   },
   {
    "name": "Kitkat CZ Fingers 41,5g DET WHITE - bílé",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "41,5 g",
    "unit": "",
    "sku_key": "7613035511033",
@@ -17555,7 +17555,7 @@
   },
   {
    "name": "Knoppers 40g Nutbar",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "40 g",
    "unit": "",
    "sku_key": "40144450",
@@ -17563,7 +17563,7 @@
   },
   {
    "name": "Knoppers 40g Peanutbar",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "40 g",
    "unit": "",
    "sku_key": "40144467",
@@ -17571,7 +17571,7 @@
   },
   {
    "name": "Knoppers 40g Coconutbar",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "40 g",
    "unit": "",
    "sku_key": "40144474",
@@ -17733,7 +17733,7 @@
   },
   {
    "name": "DUPETKY pecene Hořčice Med Cibule 160g",
-   "price": 30.98,
+   "price": 29.98,
    "amount": "160 g",
    "unit": "",
    "sku_key": "5949040203314",
@@ -17741,7 +17741,7 @@
   },
   {
    "name": "DUPETKY Pecene 180g Solené",
-   "price": 30.98,
+   "price": 29.98,
    "amount": "180 g",
    "unit": "",
    "sku_key": "5949040202645",
@@ -17749,7 +17749,7 @@
   },
   {
    "name": "DUPETKY Pecene 180g Sezam",
-   "price": 30.98,
+   "price": 29.98,
    "amount": "180 g",
    "unit": "",
    "sku_key": "5949040202669",
@@ -17821,7 +17821,7 @@
   },
   {
    "name": "Birell Plech Energy 0,5L Zelený čaj Broskev",
-   "price": 19.55,
+   "price": 20.98,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8594404025353",
@@ -17829,7 +17829,7 @@
   },
   {
    "name": "Coca 1,5L Červená CZ Original",
-   "price": 28.55,
+   "price": 29.98,
    "amount": "1,5 l",
    "unit": "",
    "sku_key": "5449000000439",
@@ -17837,7 +17837,7 @@
   },
   {
    "name": "Coca 1,5L Cola Zero CZ",
-   "price": 28.55,
+   "price": 29.98,
    "amount": "1,5 l",
    "unit": "",
    "sku_key": "5449000133335",
@@ -17845,7 +17845,7 @@
   },
   {
    "name": "Coca 1,5L Fanta Orange CZ",
-   "price": 28.55,
+   "price": 29.98,
    "amount": "1,5 l",
    "unit": "",
    "sku_key": "5449000052926",
@@ -17853,7 +17853,7 @@
   },
   {
    "name": "Coca 1,5L Sprite CZ",
-   "price": 28.55,
+   "price": 29.98,
    "amount": "1,5 l",
    "unit": "",
    "sku_key": "5000112531961",
@@ -17861,7 +17861,7 @@
   },
   {
    "name": "Coca 1,5L Cola Vanilla CZSK",
-   "price": 28.55,
+   "price": 29.98,
    "amount": "1,5 l",
    "unit": "",
    "sku_key": "5000112529678",
@@ -17869,7 +17869,7 @@
   },
   {
    "name": "Coca 1,5L Fanta Shokata CZSK",
-   "price": 28.55,
+   "price": 29.98,
    "amount": "1,5 l",
    "unit": "",
    "sku_key": "5000112530292",
@@ -17885,7 +17885,7 @@
   },
   {
    "name": "Mogu Mogu 320ml - Lychee",
-   "price": 16.55,
+   "price": 17.98,
    "amount": "320 ml",
    "unit": "",
    "sku_key": "8850389103159",
@@ -17917,7 +17917,7 @@
   },
   {
    "name": "Mogu Mogu 320ml - Coconut",
-   "price": 16.55,
+   "price": 17.98,
    "amount": "320 ml",
    "unit": "",
    "sku_key": "8850389106273",
@@ -17933,7 +17933,7 @@
   },
   {
    "name": "Mogu Mogu 320ml - Blackcurrant",
-   "price": 16.55,
+   "price": 17.98,
    "amount": "320 ml",
    "unit": "",
    "sku_key": "8850389115367",
@@ -17941,7 +17941,7 @@
   },
   {
    "name": "Mochi BambooHause 210g Matcha",
-   "price": 42.98,
+   "price": 39.98,
    "amount": "210 g",
    "unit": "",
    "sku_key": "4714221131042",
@@ -17949,7 +17949,7 @@
   },
   {
    "name": "Mochi BH. 180g Coconut Pandan - Red Bean",
-   "price": 49.98,
+   "price": 46.98,
    "amount": "180 g",
    "unit": "",
    "sku_key": "4710623830095",
@@ -17957,7 +17957,7 @@
   },
   {
    "name": "Mochi BH. 180g Coconut Pandan - Peanut",
-   "price": 49.98,
+   "price": 46.98,
    "amount": "180 g",
    "unit": "",
    "sku_key": "4710623830262",
@@ -17965,7 +17965,7 @@
   },
   {
    "name": "Mochi BH. 180g Coconut Pandan - Original",
-   "price": 49.98,
+   "price": 46.98,
    "amount": "180 g",
    "unit": "",
    "sku_key": "4710623830279",
@@ -17973,7 +17973,7 @@
   },
   {
    "name": "Lays 110g Oven Baked - Grilled Vegetables",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "110 g",
    "unit": "",
    "sku_key": "5900259127679",
@@ -17981,7 +17981,7 @@
   },
   {
    "name": "Lays 110g Oven Baked - Yoghurt With Herbs",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "110 g",
    "unit": "",
    "sku_key": "5900259128843",
@@ -17989,7 +17989,7 @@
   },
   {
    "name": "Lays 120g Strong - Cheese Jalapeno",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "120 g",
    "unit": "",
    "sku_key": "5900259101938",
@@ -17997,7 +17997,7 @@
   },
   {
    "name": "Lays 110g Oven Baked - Salt",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "110 g",
    "unit": "",
    "sku_key": "5900259099723",
@@ -18125,7 +18125,7 @@
   },
   {
    "name": "Hamé Kečup Ostrý 900g",
-   "price": 49.98,
+   "price": 52.98,
    "amount": "900 g",
    "unit": "",
    "sku_key": "8595139784812",
@@ -18133,7 +18133,7 @@
   },
   {
    "name": "Relax CSD 330ml Cola - Višen",
-   "price": 11.98,
+   "price": 12.65,
    "amount": "330 ml",
    "unit": "",
    "sku_key": "8595646207361",
@@ -18181,7 +18181,7 @@
   },
   {
    "name": "VH MZV Premium Tramín červený polosuché 0,75l",
-   "price": 94.98,
+   "price": 96.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595625602040",
@@ -18189,7 +18189,7 @@
   },
   {
    "name": "VH MZV Premium Rulandské šedé polosuché 0,75l",
-   "price": 94.98,
+   "price": 96.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595625601067",
@@ -18197,7 +18197,7 @@
   },
   {
    "name": "VH MZV Premium Veltlínské zelené suché 0,75l",
-   "price": 94.98,
+   "price": 96.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595625602033",
@@ -18205,7 +18205,7 @@
   },
   {
    "name": "VH MZV Premium Sauvignon suché 0,75l",
-   "price": 94.98,
+   "price": 96.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595625601043",
@@ -18213,7 +18213,7 @@
   },
   {
    "name": "VH MZV Premium Muškát moravský suché 0,75l",
-   "price": 94.98,
+   "price": 96.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595625601050",
@@ -18221,7 +18221,7 @@
   },
   {
    "name": "VH MZV Premium Modrý portugal polosuché 0,75l",
-   "price": 94.98,
+   "price": 96.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595625602729",
@@ -18229,7 +18229,7 @@
   },
   {
    "name": "VH MZV Premium Chardonnay polosuché 0,75l",
-   "price": 94.98,
+   "price": 96.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595625602057",
@@ -18381,7 +18381,7 @@
   },
   {
    "name": "Kukuřičné trubičky 150g Oříšek",
-   "price": 25.98,
+   "price": 26.55,
    "amount": "150 g",
    "unit": "",
    "sku_key": "5900591011513",
@@ -18389,7 +18389,7 @@
   },
   {
    "name": "Kukuřičné trubičky 150g Čokoláda",
-   "price": 25.98,
+   "price": 26.55,
    "amount": "150 g",
    "unit": "",
    "sku_key": "5900591012770",
@@ -18397,7 +18397,7 @@
   },
   {
    "name": "Kukuřičné polštářky 200g Oříšek",
-   "price": 26.98,
+   "price": 27.55,
    "amount": "200 g",
    "unit": "",
    "sku_key": "5900591004201",
@@ -18405,7 +18405,7 @@
   },
   {
    "name": "Kukuřičné polštářky 200gTiramisu",
-   "price": 26.98,
+   "price": 27.55,
    "amount": "",
    "unit": "",
    "sku_key": "5900591010950",
@@ -18413,7 +18413,7 @@
   },
   {
    "name": "Kukuřičné polštářky 200g Čokoláda",
-   "price": 26.98,
+   "price": 27.55,
    "amount": "200 g",
    "unit": "",
    "sku_key": "5900591012725",
@@ -18421,7 +18421,7 @@
   },
   {
    "name": "Kukuřičné polštářky 200g Jahoda",
-   "price": 26.98,
+   "price": 27.55,
    "amount": "200 g",
    "unit": "",
    "sku_key": "5900591011995",
@@ -18429,7 +18429,7 @@
   },
   {
    "name": "Kukuřičné polštářky 200g Karamel",
-   "price": 26.98,
+   "price": 27.55,
    "amount": "200 g",
    "unit": "",
    "sku_key": "5900591010943",
@@ -18469,7 +18469,7 @@
   },
   {
    "name": "Bohemia Chips 130g Čerstvý sýr a Jarní cibulka",
-   "price": 27.98,
+   "price": 29.55,
    "amount": "130 g",
    "unit": "",
    "sku_key": "8595606208223",
@@ -18525,7 +18525,7 @@
   },
   {
    "name": "VH MZV Premium Hibernal polosladké 0,75l",
-   "price": 94.98,
+   "price": 96.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595625602415",
@@ -18581,7 +18581,7 @@
   },
   {
    "name": "Magnesia Plus Antistress 0,7L Mango+Medunka PET",
-   "price": 22.98,
+   "price": 23.55,
    "amount": "0,7 l",
    "unit": "",
    "sku_key": "8594001025763",
@@ -18589,7 +18589,7 @@
   },
   {
    "name": "Magnesia Plus Focus 0,7L Merunka+Marac.+Ženšen PET",
-   "price": 22.98,
+   "price": 23.55,
    "amount": "0,7 l",
    "unit": "",
    "sku_key": "8594001025749",
@@ -18701,7 +18701,7 @@
   },
   {
    "name": "JOJO 80g Vexta Kyselá",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8593893743007",
@@ -18813,7 +18813,7 @@
   },
   {
    "name": "Nimm2Smilegummi 90g Fluffies",
-   "price": 18.55,
+   "price": 16.55,
    "amount": "90 g",
    "unit": "",
    "sku_key": "4014400934151",
@@ -18821,7 +18821,7 @@
   },
   {
    "name": "Nimm2Smilegummi 90g Cola Buddies",
-   "price": 18.55,
+   "price": 16.55,
    "amount": "90 g",
    "unit": "",
    "sku_key": "4014400934137",
@@ -18893,7 +18893,7 @@
   },
   {
    "name": "VH MZV Premium Cuveé Cabernet Sau. + Merlot 0,75l",
-   "price": 94.98,
+   "price": 96.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595625603030",
@@ -18901,7 +18901,7 @@
   },
   {
    "name": "VH MZV Premium Pálava Hibernal polosladké 0,75l",
-   "price": 94.98,
+   "price": 96.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595625602736",
@@ -18917,7 +18917,7 @@
   },
   {
    "name": "VH MZV Premium Tramín Pálava 0,75l",
-   "price": 94.98,
+   "price": 96.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595625603047",
@@ -19405,7 +19405,7 @@
   },
   {
    "name": "Long Chips 75g Sýr a Cibulka",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "4750127300731",
@@ -19413,7 +19413,7 @@
   },
   {
    "name": "Long Chips 75g Grilovaná paprika",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "4750127300632",
@@ -19421,7 +19421,7 @@
   },
   {
    "name": "Long Chips 75g Houby na smetaně",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "4750127000594",
@@ -19429,7 +19429,7 @@
   },
   {
    "name": "Long Chips 75g Krab",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "4750127000372",
@@ -19437,7 +19437,7 @@
   },
   {
    "name": "Long Chips 75g Med a BBQ",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "4750127000266",
@@ -19445,7 +19445,7 @@
   },
   {
    "name": "Long Chips 75g Originál",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "4750127300793",
@@ -19453,7 +19453,7 @@
   },
   {
    "name": "Long Chips 75g Slanina",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "4750127300694",
@@ -19461,7 +19461,7 @@
   },
   {
    "name": "Long Chips 75g Smetana a cibule",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "4750127300601",
@@ -19469,7 +19469,7 @@
   },
   {
    "name": "Long Chips 75g Sýr",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "4750127300618",
@@ -19477,7 +19477,7 @@
   },
   {
    "name": "Long Chips 75g Thai Sweet Chilli",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "4750127300625",
@@ -19573,7 +19573,7 @@
   },
   {
    "name": "Birell Plech Vitality 0,5L Citrus Zázvor",
-   "price": 19.55,
+   "price": 20.98,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8594404024127",
@@ -19645,7 +19645,7 @@
   },
   {
    "name": "Royal Crown Cola plech. 330 ml Classic",
-   "price": 19.55,
+   "price": 20.98,
    "amount": "330 ml",
    "unit": "",
    "sku_key": "8595231213845",
@@ -19653,7 +19653,7 @@
   },
   {
    "name": "Royal Crown Cola plech. 330 ml No Sugar",
-   "price": 19.55,
+   "price": 20.98,
    "amount": "330 ml",
    "unit": "",
    "sku_key": "8595231214880",
@@ -19661,7 +19661,7 @@
   },
   {
    "name": "Royal Crown Cola pet 500ml Classic",
-   "price": 23.98,
+   "price": 24.98,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8595231213852",
@@ -19669,7 +19669,7 @@
   },
   {
    "name": "Royal Crown Cola pet 500ml No Sugar",
-   "price": 23.98,
+   "price": 24.98,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8595231214866",
@@ -19677,7 +19677,7 @@
   },
   {
    "name": "Royal Crown Cola pet 1,33L Classic",
-   "price": 28.55,
+   "price": 29.98,
    "amount": "1,33 l",
    "unit": "",
    "sku_key": "8595231214828",
@@ -19685,7 +19685,7 @@
   },
   {
    "name": "Royal Crown Cola pet 1,33L No Sugar",
-   "price": 28.55,
+   "price": 29.98,
    "amount": "1,33 l",
    "unit": "",
    "sku_key": "8595231214842",
@@ -19805,7 +19805,7 @@
   },
   {
    "name": "Tuc Bake Rolls 80g Česnek",
-   "price": 17.98,
+   "price": 19.98,
    "amount": "80 g",
    "unit": "",
    "sku_key": "7622202202612",
@@ -19813,7 +19813,7 @@
   },
   {
    "name": "Tuc Bake Rolls 80g Sůl",
-   "price": 17.98,
+   "price": 19.98,
    "amount": "80 g",
    "unit": "",
    "sku_key": "7622202202636",
@@ -19821,7 +19821,7 @@
   },
   {
    "name": "Tuc Bake Rolls 80g Pizza",
-   "price": 17.98,
+   "price": 19.98,
    "amount": "80 g",
    "unit": "",
    "sku_key": "7622202202537",
@@ -19829,7 +19829,7 @@
   },
   {
    "name": "Tuc Bake Rolls 80g Slanina",
-   "price": 17.98,
+   "price": 19.98,
    "amount": "80 g",
    "unit": "",
    "sku_key": "7622202204203",
@@ -19837,7 +19837,7 @@
   },
   {
    "name": "Tuc Bake Rolls 80g SmetCibule",
-   "price": 17.98,
+   "price": 19.98,
    "amount": "80 g",
    "unit": "",
    "sku_key": "7622202203503",
@@ -19877,7 +19877,7 @@
   },
   {
    "name": "Dr Witt Vital 0.75L RECOVER",
-   "price": 16.55,
+   "price": 15.55,
    "amount": "0.75 l",
    "unit": "",
    "sku_key": "8595646208276",
@@ -19885,7 +19885,7 @@
   },
   {
    "name": "Dr Witt Vital 0.75L IMMUNO",
-   "price": 16.55,
+   "price": 15.55,
    "amount": "0.75 l",
    "unit": "",
    "sku_key": "8595646208290",
@@ -19893,7 +19893,7 @@
   },
   {
    "name": "Dr Witt Vital 0.75L ANTI-STRESS",
-   "price": 16.55,
+   "price": 15.55,
    "amount": "0.75 l",
    "unit": "",
    "sku_key": "8595646208689",
@@ -20093,7 +20093,7 @@
   },
   {
    "name": "Kitkat CZ Fingers 41,5g DET Dark - Černá",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "41,5 g",
    "unit": "",
    "sku_key": "8445290595713",
@@ -20237,7 +20237,7 @@
   },
   {
    "name": "Dr Witt 0,75 Bílá broskev",
-   "price": 16.55,
+   "price": 15.55,
    "amount": "",
    "unit": "",
    "sku_key": "8595646208337",
@@ -20429,7 +20429,7 @@
   },
   {
    "name": "Frisco VRATNÁ LÁHEV 0,33Lx12ks Mango Limetka",
-   "price": 21.55,
+   "price": 19.55,
    "amount": "12 ks",
    "unit": "",
    "sku_key": "85978546",
@@ -20437,7 +20437,7 @@
   },
   {
    "name": "Frisco VRATNÁ LÁHEV 0,33Lx12ks Lesní ovoce",
-   "price": 21.55,
+   "price": 19.55,
    "amount": "12 ks",
    "unit": "",
    "sku_key": "85978447",
@@ -20445,7 +20445,7 @@
   },
   {
    "name": "Frisco VRATNÁ LÁHEV 0,33Lx12ks Mimosa",
-   "price": 21.55,
+   "price": 19.55,
    "amount": "12 ks",
    "unit": "",
    "sku_key": "85978492",
@@ -20453,7 +20453,7 @@
   },
   {
    "name": "Frisco VRATNÁ LÁHEV 0,33Lx12ks Piňa Colada",
-   "price": 21.55,
+   "price": 19.55,
    "amount": "12 ks",
    "unit": "",
    "sku_key": "85978454",
@@ -21156,7 +21156,7 @@
   },
   {
    "name": "UKR Pivo GARAGE Plech 0,5L Cherry alc.6%",
-   "price": 28.98,
+   "price": 27.98,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "4820250940156",
@@ -21164,7 +21164,7 @@
   },
   {
    "name": "UKR Pivo GARAGE Plech 0,48L Lemon alc.4,4%",
-   "price": 28.98,
+   "price": 27.98,
    "amount": "0,48 l",
    "unit": "",
    "sku_key": "4820250942457",
@@ -21172,7 +21172,7 @@
   },
   {
    "name": "UKR Pivo GARAGE Plech 0,5L Starfruit - More 6%",
-   "price": 28.98,
+   "price": 27.98,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "4820250943638",
@@ -21388,7 +21388,7 @@
   },
   {
    "name": "Pepsi 1,5L ZERO SUGAR Cherry",
-   "price": 26.98,
+   "price": 26.55,
    "amount": "1,5 l",
    "unit": "",
    "sku_key": "8595723300589",
@@ -21540,7 +21540,7 @@
   },
   {
    "name": "Long Chips 75g Lanýž",
-   "price": 23.59,
+   "price": 19.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "4750127000679",
@@ -21548,7 +21548,7 @@
   },
   {
    "name": "Long Chips 75g Šiš Kebab",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "4750127000662",
@@ -21556,7 +21556,7 @@
   },
   {
    "name": "Long Chips 75g Ohnivé Chili",
-   "price": 20.98,
+   "price": 19.98,
    "amount": "75 g",
    "unit": "",
    "sku_key": "4750127000648",
@@ -21668,7 +21668,7 @@
   },
   {
    "name": "DUPETKY Pecene 160g Chilli-lime",
-   "price": 30.98,
+   "price": 29.98,
    "amount": "160 g",
    "unit": "",
    "sku_key": "5949040204878",
@@ -22140,7 +22140,7 @@
   },
   {
    "name": "Hell 250ml Classic - Original",
-   "price": 12.99,
+   "price": 11.55,
    "amount": "250 ml",
    "unit": "",
    "sku_key": "5999884034483",
@@ -22148,7 +22148,7 @@
   },
   {
    "name": "Hell 250ml Strong Apple - Jablko",
-   "price": 12.99,
+   "price": 11.55,
    "amount": "250 ml",
    "unit": "",
    "sku_key": "5999884034612",
@@ -22156,7 +22156,7 @@
   },
   {
    "name": "Hell 250ml Black Cherry",
-   "price": 12.99,
+   "price": 11.55,
    "amount": "250 ml",
    "unit": "",
    "sku_key": "5999571051434",
@@ -22164,7 +22164,7 @@
   },
   {
    "name": "Hell 500ml Goji Berry",
-   "price": 19.99,
+   "price": 17.98,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "5999571054695",
@@ -22180,7 +22180,7 @@
   },
   {
    "name": "Hell 500ml Peach - Lemon",
-   "price": 19.99,
+   "price": 17.98,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "5999571051878",
@@ -22188,7 +22188,7 @@
   },
   {
    "name": "Hell Ice Coffee 250ml Latte",
-   "price": 26.55,
+   "price": 24.98,
    "amount": "250 ml",
    "unit": "",
    "sku_key": "5999860497073",
@@ -22196,7 +22196,7 @@
   },
   {
    "name": "Hell Ice Coffee 250ml Salted Caramel",
-   "price": 26.55,
+   "price": 24.98,
    "amount": "250 ml",
    "unit": "",
    "sku_key": "5999571050611",
@@ -22204,7 +22204,7 @@
   },
   {
    "name": "Hell Ice Coffee 250ml Double Espresso",
-   "price": 26.55,
+   "price": 24.98,
    "amount": "250 ml",
    "unit": "",
    "sku_key": "5999860497646",
@@ -22212,7 +22212,7 @@
   },
   {
    "name": "Hell Ice Coffee 250ml Pink Latte",
-   "price": 26.55,
+   "price": 24.98,
    "amount": "250 ml",
    "unit": "",
    "sku_key": "5999571053223",
@@ -22884,7 +22884,7 @@
   },
   {
    "name": "Hell 500ml Original",
-   "price": 19.99,
+   "price": 17.98,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "5999884034209",
@@ -22948,7 +22948,7 @@
   },
   {
    "name": "Dupetky Pečené 70g +20% Chili-Lime",
-   "price": 15.98,
+   "price": 14.98,
    "amount": "70 g",
    "unit": "",
    "sku_key": "5949040205332",
@@ -23348,7 +23348,7 @@
   },
   {
    "name": "Hell 250ml Strong Watermelon",
-   "price": 12.99,
+   "price": 11.55,
    "amount": "250 ml",
    "unit": "",
    "sku_key": "5999571050673",
@@ -23356,7 +23356,7 @@
   },
   {
    "name": "Hell 250ml Red Grape",
-   "price": 12.99,
+   "price": 11.55,
    "amount": "250 ml",
    "unit": "",
    "sku_key": "5999884034506",
@@ -23644,7 +23644,7 @@
   },
   {
    "name": "Birell Plech Vitality 0.5L Marakuja Maté",
-   "price": 19.55,
+   "price": 20.98,
    "amount": "0.5 l",
    "unit": "",
    "sku_key": "8594404026770",
@@ -23652,7 +23652,7 @@
   },
   {
    "name": "Lipton 0,5L Green Strawberry - Zelený čaj Jahoda",
-   "price": 18.98,
+   "price": 17.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8595723300015",
@@ -23660,7 +23660,7 @@
   },
   {
    "name": "Lipton 1,5L Green Strawberry - Zelený čaj Jahoda",
-   "price": 24.98,
+   "price": 24.55,
    "amount": "1,5 l",
    "unit": "",
    "sku_key": "8595723300039",
@@ -24155,7 +24155,7 @@
   },
   {
    "name": "Sovora Long Chips 70g Bacon Slanina",
-   "price": 14.55,
+   "price": 15.55,
    "amount": "70 g",
    "unit": "",
    "sku_key": "4820120756078",
@@ -24163,7 +24163,7 @@
   },
   {
    "name": "Sovora Long Chips 70g BBQ",
-   "price": 14.55,
+   "price": 15.55,
    "amount": "70 g",
    "unit": "",
    "sku_key": "4820120756054",
@@ -24171,7 +24171,7 @@
   },
   {
    "name": "Sovora Long Chips 70g Crab",
-   "price": 14.55,
+   "price": 15.55,
    "amount": "70 g",
    "unit": "",
    "sku_key": "4820120756139",
@@ -24179,7 +24179,7 @@
   },
   {
    "name": "Sovora Long Chips 70g Cheese",
-   "price": 14.55,
+   "price": 15.55,
    "amount": "70 g",
    "unit": "",
    "sku_key": "4820120756191",
@@ -24195,7 +24195,7 @@
   },
   {
    "name": "Sovora Long Chips 70g Paprika",
-   "price": 14.55,
+   "price": 15.55,
    "amount": "70 g",
    "unit": "",
    "sku_key": "4820120756177",
@@ -24203,7 +24203,7 @@
   },
   {
    "name": "Sovora Long Chips 70g Salt Sůl",
-   "price": 14.55,
+   "price": 15.55,
    "amount": "70 g",
    "unit": "",
    "sku_key": "4820120756030",
@@ -24211,7 +24211,7 @@
   },
   {
    "name": "Sovora Long Chips 70g Sour CreamHerbs",
-   "price": 14.55,
+   "price": 15.55,
    "amount": "70 g",
    "unit": "",
    "sku_key": "4820120756214",
@@ -24403,7 +24403,7 @@
   },
   {
    "name": "Kofola 0,5L PET Nulka",
-   "price": 17.98,
+   "price": 18.98,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8595231223356",
@@ -24531,7 +24531,7 @@
   },
   {
    "name": "Pepsi 1,5L Raspberry Malina",
-   "price": 26.98,
+   "price": 26.55,
    "amount": "1,5 l",
    "unit": "",
    "sku_key": "8595723301814",
@@ -24595,7 +24595,7 @@
   },
   {
    "name": "KitKat CZ Fingers 41,5g Cookie Dough",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "41,5 g",
    "unit": "",
    "sku_key": "3800020401828",
@@ -24603,7 +24603,7 @@
   },
   {
    "name": "KitKat CZ Chunky 40g Farbled",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "40 g",
    "unit": "",
    "sku_key": "3800020403006",
@@ -24611,7 +24611,7 @@
   },
   {
    "name": "KitKat CZ Chunky 40g Funky",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "40 g",
    "unit": "",
    "sku_key": "3800020401538",
@@ -24651,7 +24651,7 @@
   },
   {
    "name": "Tiger 500ml Aura Gold Apple",
-   "price": 14.98,
+   "price": 16.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8595646212228",
@@ -24659,7 +24659,7 @@
   },
   {
    "name": "Tiger 500ml Aura Pink Candy",
-   "price": 14.98,
+   "price": 16.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8595646212266",
@@ -24667,7 +24667,7 @@
   },
   {
    "name": "Tiger 500ml Aura White Grapefruit",
-   "price": 14.98,
+   "price": 16.55,
    "amount": "500 ml",
    "unit": "",
    "sku_key": "8595646212242",
@@ -24723,7 +24723,7 @@
   },
   {
    "name": "Corny Cinnamon Roll 40g/24ks",
-   "price": 11.98,
+   "price": 11.55,
    "amount": "40 g",
    "unit": "",
    "sku_key": "8592084422806",
@@ -24899,7 +24899,7 @@
   },
   {
    "name": "Lipton 0,5L Orange Mango",
-   "price": 19.55,
+   "price": 17.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8595723301661",
@@ -24907,7 +24907,7 @@
   },
   {
    "name": "Lipton 1,5L Orange Mango",
-   "price": 25.55,
+   "price": 24.55,
    "amount": "1,5 l",
    "unit": "",
    "sku_key": "8595723301678",
@@ -25019,7 +25019,7 @@
   },
   {
    "name": "JOJO 80g Boruvky",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8445291494749",
@@ -25043,7 +25043,7 @@
   },
   {
    "name": "Flipz 70g Salted Caramel",
-   "price": 31.98,
+   "price": 29.98,
    "amount": "70 g",
    "unit": "",
    "sku_key": "8690504160304",
@@ -25051,7 +25051,7 @@
   },
   {
    "name": "Flipz 70g Peanut Butter",
-   "price": 31.98,
+   "price": 29.98,
    "amount": "70 g",
    "unit": "",
    "sku_key": "8690504160311",
@@ -25059,7 +25059,7 @@
   },
   {
    "name": "Flipz 70g Strawberry Cheesecake",
-   "price": 31.98,
+   "price": 29.98,
    "amount": "70 g",
    "unit": "",
    "sku_key": "8690504117223",
@@ -25067,7 +25067,7 @@
   },
   {
    "name": "Flipz 70g Milk Chocolate",
-   "price": 31.98,
+   "price": 29.98,
    "amount": "70 g",
    "unit": "",
    "sku_key": "8690504160328",
@@ -25331,7 +25331,7 @@
   },
   {
    "name": "Budvar Plech 24*0,5L Ležák - Tmavý",
-   "price": 14.98,
+   "price": 12.99,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8594403707649",
@@ -25790,7 +25790,7 @@
   },
   {
    "name": "Kitkat CZ Fingers 41,5g DET",
-   "price": 12.98,
+   "price": 11.98,
    "amount": "41,5 g",
    "unit": "",
    "sku_key": "40052465",
@@ -25822,7 +25822,7 @@
   },
   {
    "name": "Lays 60g Green onion",
-   "price": 16.98,
+   "price": 17.98,
    "amount": "60 g",
    "unit": "",
    "sku_key": "5900259093127",
@@ -25830,7 +25830,7 @@
   },
   {
    "name": "Lays 60g Fromage",
-   "price": 16.98,
+   "price": 17.98,
    "amount": "60 g",
    "unit": "",
    "sku_key": "5900259093103",
@@ -25838,7 +25838,7 @@
   },
   {
    "name": "Lays 60g Stix ketchup",
-   "price": 16.98,
+   "price": 17.98,
    "amount": "60 g",
    "unit": "",
    "sku_key": "5900259088239",
@@ -25862,7 +25862,7 @@
   },
   {
    "name": "Zlaté Oplatky 146g Nugatové",
-   "price": 27.98,
+   "price": 26.98,
    "amount": "146 g",
    "unit": "",
    "sku_key": "8593894910934",
@@ -25870,7 +25870,7 @@
   },
   {
    "name": "Maretti 70g Muschroms (Houba)",
-   "price": 15.55,
+   "price": 15.98,
    "amount": "70 g",
    "unit": "",
    "sku_key": "3800205875208",
@@ -25878,7 +25878,7 @@
   },
   {
    "name": "Braník plech. 0,5l světlý (4*6kus)",
-   "price": 13.98,
+   "price": 13.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8593868003563",
@@ -25902,7 +25902,7 @@
   },
   {
    "name": "Staropramen plech. 0.5L originál",
-   "price": 14.55,
+   "price": 14.98,
    "amount": "0.5 l",
    "unit": "",
    "sku_key": "8593868110445",
@@ -25982,7 +25982,7 @@
   },
   {
    "name": "Lipton 1.5L Greentea",
-   "price": 24.98,
+   "price": 24.55,
    "amount": "1.5 l",
    "unit": "",
    "sku_key": "5997264159320",
@@ -25990,7 +25990,7 @@
   },
   {
    "name": "Lipton 1.5L Peach",
-   "price": 24.98,
+   "price": 24.55,
    "amount": "1.5 l",
    "unit": "",
    "sku_key": "5900497611503",
@@ -26125,7 +26125,7 @@
   },
   {
    "name": "OKF Aloe King 0,5L Ananas Pineapple",
-   "price": 23.98,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "884394000934",
@@ -26141,7 +26141,7 @@
   },
   {
    "name": "OKF Aloe King 0,5L Mango",
-   "price": 23.98,
+   "price": 23.55,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "884394000965",
@@ -26173,7 +26173,7 @@
   },
   {
    "name": "Bohemia chips 130g Solené",
-   "price": 27.98,
+   "price": 29.55,
    "amount": "130 g",
    "unit": "",
    "sku_key": "8595606207004",
@@ -26213,7 +26213,7 @@
   },
   {
    "name": "Delissa 33g KOKOSOVA",
-   "price": 7.55,
+   "price": 6.98,
    "amount": "33 g",
    "unit": "",
    "sku_key": "7613036268516",
@@ -26221,7 +26221,7 @@
   },
   {
    "name": "Magnesia Plus Revital 0.7L hroz.vino+aloe vera PET",
-   "price": 22.98,
+   "price": 23.55,
    "amount": "0.7 l",
    "unit": "",
    "sku_key": "8594001026388",
@@ -26365,7 +26365,7 @@
   },
   {
    "name": "Nimm2Smilegummi 90g Softies Yoghurt",
-   "price": 18.55,
+   "price": 16.55,
    "amount": "90 g",
    "unit": "",
    "sku_key": "4014400917109",
@@ -26373,7 +26373,7 @@
   },
   {
    "name": "Bohemia chips 60g Smetana a Cibule",
-   "price": 18.55,
+   "price": 17.55,
    "amount": "60 g",
    "unit": "",
    "sku_key": "8595606206175",
@@ -26389,7 +26389,7 @@
   },
   {
    "name": "Lays 120g Strong Chilli Lime",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "120 g",
    "unit": "",
    "sku_key": "5900259122001",
@@ -26397,7 +26397,7 @@
   },
   {
    "name": "Lays 130g Salted",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "130 g",
    "unit": "",
    "sku_key": "5900259099433",
@@ -26405,7 +26405,7 @@
   },
   {
    "name": "Lays 130g Fromage",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "130 g",
    "unit": "",
    "sku_key": "5900259099396",
@@ -26469,7 +26469,7 @@
   },
   {
    "name": "Bohemia chips 130g Smetana s Cibulí",
-   "price": 27.98,
+   "price": 29.55,
    "amount": "130 g",
    "unit": "",
    "sku_key": "8595606207080",
@@ -26477,7 +26477,7 @@
   },
   {
    "name": "Bohemia chips 130g Slanina",
-   "price": 27.98,
+   "price": 29.55,
    "amount": "130 g",
    "unit": "",
    "sku_key": "8595606207042",
@@ -26517,7 +26517,7 @@
   },
   {
    "name": "Bask 400g Bramborové knedlíky",
-   "price": 27.98,
+   "price": 29.98,
    "amount": "400 g",
    "unit": "",
    "sku_key": "8593837226689",
@@ -26557,7 +26557,7 @@
   },
   {
    "name": "Lays 55g Strong - Hot Chicken Wings",
-   "price": 16.98,
+   "price": 17.98,
    "amount": "55 g",
    "unit": "",
    "sku_key": "5900259097606",
@@ -26565,7 +26565,7 @@
   },
   {
    "name": "Lays 55g Strong - Cheese Cayenne",
-   "price": 16.98,
+   "price": 17.98,
    "amount": "55 g",
    "unit": "",
    "sku_key": "5900259097620",
@@ -26597,7 +26597,7 @@
   },
   {
    "name": "Frizzante Bianco 0,75L CON-TRÉ",
-   "price": 82.98,
+   "price": 86.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8005400944147",
@@ -26693,7 +26693,7 @@
   },
   {
    "name": "Lays 130g Paprika",
-   "price": 29.98,
+   "price": 27.98,
    "amount": "130 g",
    "unit": "",
    "sku_key": "5900259099419",
@@ -26797,7 +26797,7 @@
   },
   {
    "name": "VH MZV Premium Pálava polosuché 0,75l",
-   "price": 94.98,
+   "price": 96.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595625601029",
@@ -26805,7 +26805,7 @@
   },
   {
    "name": "VH MZV Premium Ryzlink vlašský suché 0,75l",
-   "price": 94.98,
+   "price": 96.98,
    "amount": "0,75 l",
    "unit": "",
    "sku_key": "8595625602385",
@@ -26893,7 +26893,7 @@
   },
   {
    "name": "Birell Plech Vitality 0,5L Mango Citron",
-   "price": 19.55,
+   "price": 20.98,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8594404021553",
@@ -26901,7 +26901,7 @@
   },
   {
    "name": "Birell Plech 0,5L Višen Ostružina",
-   "price": 19.55,
+   "price": 20.98,
    "amount": "0,5 l",
    "unit": "",
    "sku_key": "8594404024158",
@@ -26941,7 +26941,7 @@
   },
   {
    "name": "Dr Witt 0,75 Růžový grapefruit",
-   "price": 16.55,
+   "price": 15.55,
    "amount": "",
    "unit": "",
    "sku_key": "8595646208313",
@@ -26949,7 +26949,7 @@
   },
   {
    "name": "Frisco VRATNÁ LÁHEV 0,33Lx12ks Jablečný",
-   "price": 21.55,
+   "price": 19.55,
    "amount": "12 ks",
    "unit": "",
    "sku_key": "85978508",
@@ -27101,7 +27101,7 @@
   },
   {
    "name": "Dr Witt Vital 0.75L Brain Boost Mango + Maracuja",
-   "price": 16.55,
+   "price": 15.55,
    "amount": "0.75 l",
    "unit": "",
    "sku_key": "8595646212105",
@@ -27404,7 +27404,7 @@
   },
   {
    "name": "JOJO 80g Papoušci Papagájiky 01/2017",
-   "price": 15.55,
+   "price": 13.55,
    "amount": "80 g",
    "unit": "",
    "sku_key": "8593893738713",
